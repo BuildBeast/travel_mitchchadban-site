@@ -1,0 +1,22 @@
+---
+const {
+  title = 'There & Back Again',
+  description = 'A literary travel chronicle by Mitch Chadban.',
+  canonical = 'https://travel.mitchchadban.com/'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
