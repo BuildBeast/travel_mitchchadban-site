@@ -100,7 +100,7 @@ body {
 }
 
 .header-web__link {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1;
@@ -208,7 +208,7 @@ body {
 .mobnav__icon::after { bottom: 0; }
 
 .mobnav__label {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.16em;
@@ -284,7 +284,7 @@ body {
   padding-top: 0.9rem;
   padding-bottom: 0.85rem;
   border-top: 0.5px solid rgba(160, 200, 120, 0.08);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 0.9rem;
   font-style: italic;
   line-height: 1.38;
@@ -471,7 +471,7 @@ body {
 }
 
 .hero-subtitle {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 300;
   font-style: italic;
@@ -489,7 +489,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.25em;
@@ -615,7 +615,7 @@ body {
 }
 
 .post-excerpt {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.24rem;
   font-weight: 300;
   font-style: italic;
@@ -679,7 +679,7 @@ body {
 }
 
 .prose p {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.9;
@@ -787,7 +787,7 @@ blockquote p {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 15px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -944,7 +944,7 @@ footer p {
 }
 
 .filter-btn {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 14px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -1007,7 +1007,7 @@ footer p {
 }
 
 .featured-excerpt {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.3rem;
   font-weight: 300;
   font-style: italic;
@@ -1028,7 +1028,7 @@ footer p {
 }
 
 .read-link {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 14px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -1096,7 +1096,7 @@ footer p {
 }
 
 .load-more-btn {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 14px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -1180,7 +1180,7 @@ footer p {
 }
 
 .panel-close {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 13px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -1236,7 +1236,7 @@ footer p {
 }
 
 .card-excerpt {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.15rem;
   font-weight: 300;
   font-style: italic;
@@ -1316,7 +1316,7 @@ footer p {
 }
 
 .post-hero-sub {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 300;
   font-style: italic;
@@ -1372,7 +1372,7 @@ footer p {
 /* ── PROSE ── */
 
 .prose p {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.9;
@@ -1414,7 +1414,7 @@ footer p {
 }
 
 .chapter-number {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 15px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
@@ -1436,7 +1436,7 @@ footer p {
 }
 
 .chapter-epithet {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.25rem;
   font-weight: 300;
   font-style: italic;
@@ -1521,7 +1521,7 @@ footer p {
   padding: 2.5rem 3rem;
   margin: 2.5rem auto;
   max-width: 1100px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .prac-header {
@@ -1666,7 +1666,7 @@ footer p {
 }
 
 .itin-meta {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.25rem;
   font-weight: 300;
   color: rgba(221, 232, 208, 0.6);
@@ -1698,7 +1698,7 @@ footer p {
 .itin-day-row {
   background: #0a0f08;
   padding: 1rem 1.3rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.2rem;
   font-weight: 300;
   color: rgba(221, 232, 208, 0.7);
@@ -1731,7 +1731,7 @@ footer p {
 }
 
 .grand-line {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.25rem;
   font-weight: 300;
   color: rgba(221, 232, 208, 0.7);
@@ -1762,7 +1762,7 @@ footer p {
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 1rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.2rem;
   font-weight: 300;
   color: rgba(221, 232, 208, 0.7);
@@ -1781,7 +1781,7 @@ footer p {
 /* ── TRANSPORT NOTES ── */
 
 .transport-note {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.25rem;
   font-weight: 300;
   color: rgba(221, 232, 208, 0.65);
@@ -1811,7 +1811,7 @@ footer p {
 }
 
 .faq-q {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 400;
   color: rgba(221, 232, 208, 0.88);
@@ -1819,7 +1819,7 @@ footer p {
 }
 
 .faq-a {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.4rem;
   font-weight: 300;
   color: rgba(221, 232, 208, 0.6);
@@ -1870,7 +1870,7 @@ footer p {
 }
 
 .post-excerpt {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.15rem;
   font-weight: 300;
   font-style: italic;
@@ -2710,7 +2710,7 @@ footer p {
 
 .header-web__link {
   display: inline-block;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1;
@@ -2756,7 +2756,7 @@ footer p {
   background: none;
   border: 0;
   padding: 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1;
@@ -2907,7 +2907,7 @@ footer p {
 }
 
 .tour-meta {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.16rem;
   font-weight: 300;
   font-style: italic;
@@ -2988,7 +2988,7 @@ footer p {
   .andalucia-glance-item {
     background: #0a0f08;
     padding: 1.15rem 1.2rem;
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 1rem;
     font-weight: 300;
     color: rgba(221, 232, 208, 0.62);
@@ -3015,7 +3015,7 @@ footer p {
     text-transform: uppercase;
     padding: 3px 9px;
     border: 0.5px solid;
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
   }
   .badge-michelin {
     color: #c47a4a;
@@ -3046,7 +3046,7 @@ footer p {
 body {
   background: #0a0f08;
   color: #dde8d0;
-  font-family: &#x27;Cormorant Garamond&#x27;, Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   overflow-x: hidden;
 }
 
@@ -3082,14 +3082,14 @@ body {
   gap: 1rem;
 }
 .page-label::before, .page-label::after {
-  content: &#x27;&#x27;;
+  content: '';
   display: block;
   width: 30px;
   height: 0.5px;
   background: #3d6b25;
 }
 .post-hero-title {
-  font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: clamp(2.8rem, 6vw, 5.5rem);
   font-weight: 400;
   line-height: 1.05;
@@ -3099,7 +3099,7 @@ body {
 }
 .post-hero-title em { font-style: italic; color: #9ecf72; }
 .post-hero-sub {
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 300;
   font-style: italic;
@@ -3117,7 +3117,7 @@ body {
 }
 .stat { text-align: center; }
 .stat-num {
-  font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 2.2rem;
   color: #9ecf72;
   line-height: 1;
@@ -3137,7 +3137,7 @@ body {
 .opening-prose { padding: 4rem 0 0; max-width: 1100px; margin: 0 auto; }
 
 .prose p {
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.9;
@@ -3148,7 +3148,7 @@ body {
 .prose em { font-style: italic; color: #9ecf72; }
 
 .drop-cap::first-letter {
-  font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 5.5rem;
   font-weight: 400;
   float: left;
@@ -3167,14 +3167,14 @@ body {
   border-top: 0.5px solid rgba(160,200,120,0.1);
 }
 .chapter-number {
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 15px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: #3d6b25;
 }
 .chapter-name {
-  font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 400;
   color: #dde8d0;
@@ -3183,7 +3183,7 @@ body {
 }
 .chapter-name em { font-style: italic; color: #9ecf72; }
 .chapter-epithet {
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.25rem;
   font-weight: 300;
   font-style: italic;
@@ -3208,7 +3208,7 @@ body {
 
 /* ── BEAT LINE ── */
 .beat {
-  font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 1.3rem;
   font-style: italic;
   color: rgba(221,232,208,0.3);
@@ -3220,7 +3220,7 @@ body {
   gap: 1.5rem;
 }
 .beat::before, .beat::after {
-  content: &#x27;&#x27;;
+  content: '';
   flex: 1;
   height: 0.5px;
   background: rgba(160,200,120,0.12);
@@ -3234,7 +3234,7 @@ body {
   max-width: 1100px;
 }
 .pull p {
-  font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 1.7rem;
   font-style: italic;
   color: rgba(221,232,208,0.45);
@@ -3259,7 +3259,7 @@ body {
   padding: 2.5rem 3rem;
   margin: 2.5rem auto;
   max-width: 1100px;
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
 }
 .prac-header {
   display: flex;
@@ -3305,7 +3305,7 @@ body {
 }
 .budget-cell { background: #0a0f08; padding: 1.1rem 1.2rem; }
 .budget-cat { font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(221,232,208,0.5); margin-bottom: 0.4rem; }
-.budget-val { font-family: &#x27;IM Fell English&#x27;, Georgia, serif; font-size: 1.4rem; font-weight: 400; color: rgba(221,232,208,0.88); }
+.budget-val { font-family: 'IM Fell English', Georgia, serif; font-size: 1.4rem; font-weight: 400; color: rgba(221,232,208,0.88); }
 
 /* ── GLANCE GRID ── */
 .bologna-glance {
@@ -3324,7 +3324,7 @@ body {
   padding: 1.8rem 2rem;
 }
 .bologna-glance-label {
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 11px;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -3332,7 +3332,7 @@ body {
   margin-bottom: 0.6rem;
 }
 .bologna-glance-value {
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.25rem;
   font-weight: 300;
   color: rgba(221,232,208,0.72);
@@ -3354,7 +3354,7 @@ body {
   margin-bottom: 0.8rem;
 }
 .bologna-day-copy {
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.2rem;
   font-weight: 300;
   color: rgba(221,232,208,0.6);
@@ -3366,7 +3366,7 @@ body {
 .tours {
   max-width: 1100px;
   margin: 2rem auto;
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
 }
 .tours-label {
   font-size: 11px;
@@ -3379,7 +3379,7 @@ body {
   gap: 1rem;
 }
 .tours-label::after {
-  content: &#x27;&#x27;;
+  content: '';
   flex: 1;
   height: 0.5px;
   background: rgba(160,200,120,0.1);
@@ -3407,7 +3407,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .tour-name {
-  font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 1.35rem;
   font-weight: 400;
   color: #dde8d0;
@@ -3477,12 +3477,12 @@ body {
   gap: 1.2rem;
 }
 .itin-block-title::before, .itin-block-title::after {
-  content: &#x27;&#x27;;
+  content: '';
   width: 40px;
   height: 0.5px;
   background: #3d6b25;
 }
-.itin-meta { font-family: &#x27;Cormorant Garamond&#x27;, serif; font-size: 1.25rem; font-weight: 300; color: rgba(221,232,208,0.6); margin-bottom: 0.5rem; }
+.itin-meta { font-family: "Cormorant Garamond", serif; font-size: 1.25rem; font-weight: 300; color: rgba(221,232,208,0.6); margin-bottom: 0.5rem; }
 .itin-meta strong { font-weight: 400; color: #7db05a; }
 
 /* ── FAQ ── */
@@ -3492,8 +3492,8 @@ body {
 }
 .faq-inner { max-width: 1100px; margin: 0 auto; }
 .faq-item { margin-bottom: 2.5rem; }
-.faq-q { font-family: &#x27;Cormorant Garamond&#x27;, serif; font-size: 1.5rem; font-weight: 400; color: rgba(221,232,208,0.88); margin-bottom: 0.6rem; }
-.faq-a { font-family: &#x27;Cormorant Garamond&#x27;, serif; font-size: 1.4rem; font-weight: 300; color: rgba(221,232,208,0.6); line-height: 1.85; }
+.faq-q { font-family: "Cormorant Garamond", serif; font-size: 1.5rem; font-weight: 400; color: rgba(221,232,208,0.88); margin-bottom: 0.6rem; }
+.faq-a { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; font-weight: 300; color: rgba(221,232,208,0.6); line-height: 1.85; }
 
 /* ── FURTHER READING ── */
 .further-reading {
@@ -3511,7 +3511,7 @@ body {
   gap: 1rem;
 }
 .section-label::after {
-  content: &#x27;&#x27;;
+  content: '';
   flex: 1;
   height: 0.5px;
   background: rgba(160,200,120,0.1);
@@ -3534,7 +3534,7 @@ body {
 .post-card:hover { background: #0e1409; }
 .post-region { font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #5a8a3a; margin-bottom: 1.1rem; }
 .post-title {
-  font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.2;
@@ -3542,7 +3542,7 @@ body {
   margin-bottom: 1rem;
 }
 .post-excerpt {
-  font-family: &#x27;Cormorant Garamond&#x27;, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.15rem;
   font-weight: 300;
   font-style: italic;
@@ -3629,7 +3629,7 @@ body{margin:0;padding:0}
 [id="T2989797706"] .page-content {
 }
 
-/* ── POST-ONLY STYLES (scoped, won&#x27;t affect other pages) ── */
+/* ── POST-ONLY STYLES (scoped, won't affect other pages) ── */
 
   .post-hero {
     padding: 6rem 8rem 4rem;
@@ -3652,7 +3652,7 @@ body{margin:0;padding:0}
   .post-route-strip span { color: #5a8a3a; }
 
   .post-hero-title {
-    font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+    font-family: 'IM Fell English', Georgia, serif;
     font-size: clamp(2.8rem, 6vw, 5.5rem);
     font-weight: 400;
     line-height: 1.05;
@@ -3663,7 +3663,7 @@ body{margin:0;padding:0}
   .post-hero-title em { font-style: italic; color: #9ecf72; }
 
   .post-hero-sub {
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: clamp(1.1rem, 2vw, 1.4rem);
     font-weight: 300;
     font-style: italic;
@@ -3682,7 +3682,7 @@ body{margin:0;padding:0}
   }
   .stat { text-align: center; }
   .stat-num {
-    font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+    font-family: 'IM Fell English', Georgia, serif;
     font-size: 1.8rem;
     color: #9ecf72;
     line-height: 1;
@@ -3709,7 +3709,7 @@ body{margin:0;padding:0}
   }
 
   .drop-cap::first-letter {
-    font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+    font-family: 'IM Fell English', Georgia, serif;
     font-size: 5rem;
     font-weight: 400;
     float: left;
@@ -3729,7 +3729,7 @@ body{margin:0;padding:0}
   }
 
   .chapter-number {
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 10px;
     letter-spacing: 0.4em;
     text-transform: uppercase;
@@ -3737,7 +3737,7 @@ body{margin:0;padding:0}
   }
 
   .chapter-name {
-    font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+    font-family: 'IM Fell English', Georgia, serif;
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 400;
     color: #dde8d0;
@@ -3747,7 +3747,7 @@ body{margin:0;padding:0}
   .chapter-name em { font-style: italic; color: #9ecf72; }
 
   .chapter-epithet {
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 1.05rem;
     font-weight: 300;
     font-style: italic;
@@ -3776,7 +3776,7 @@ body{margin:0;padding:0}
 
   /* ── BEAT LINE ── */
   .beat {
-    font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+    font-family: 'IM Fell English', Georgia, serif;
     font-size: 1.1rem;
     font-style: italic;
     color: rgba(221, 232, 208, 0.3);
@@ -3788,7 +3788,7 @@ body{margin:0;padding:0}
     gap: 1.5rem;
   }
   .beat::before, .beat::after {
-    content: &#x27;&#x27;;
+    content: '';
     flex: 1;
     height: 0.5px;
     background: rgba(160, 200, 120, 0.12);
@@ -3802,7 +3802,7 @@ body{margin:0;padding:0}
     max-width: 820px;
   }
   .pull p {
-    font-family: &#x27;IM Fell English&#x27;, Georgia, serif !important;
+    font-family: 'IM Fell English', Georgia, serif !important;
     font-size: 1.5rem !important;
     font-style: italic;
     color: rgba(221, 232, 208, 0.45) !important;
@@ -3827,7 +3827,7 @@ body{margin:0;padding:0}
     padding: 2.5rem 3rem;
     margin: 2.5rem auto;
     max-width: 820px;
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
   }
 
   .prac-header {
@@ -3947,14 +3947,14 @@ body{margin:0;padding:0}
     gap: 1.2rem;
   }
   .itin-block-title::before, .itin-block-title::after {
-    content: &#x27;&#x27;;
+    content: '';
     width: 40px;
     height: 0.5px;
     background: #3d6b25;
   }
 
   .itin-meta {
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 1rem;
     font-weight: 300;
     color: rgba(221, 232, 208, 0.45);
@@ -3986,7 +3986,7 @@ body{margin:0;padding:0}
   .itin-day-row {
     background: #0a0f08;
     padding: 0.9rem 1.2rem;
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 0.95rem;
     font-weight: 300;
     color: rgba(221, 232, 208, 0.55);
@@ -4014,7 +4014,7 @@ body{margin:0;padding:0}
     margin-bottom: 1.2rem;
   }
   .grand-line {
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 0.95rem;
     font-weight: 300;
     color: rgba(221, 232, 208, 0.55);
@@ -4029,7 +4029,7 @@ body{margin:0;padding:0}
     margin-bottom: 0.2rem;
   }
   .grand-total-num {
-    font-family: &#x27;IM Fell English&#x27;, Georgia, serif;
+    font-family: 'IM Fell English', Georgia, serif;
     font-size: 1.6rem;
     color: #9ecf72;
     border-top: 0.5px solid rgba(160, 200, 120, 0.15);
@@ -4041,7 +4041,7 @@ body{margin:0;padding:0}
     display: grid;
     grid-template-columns: 110px 1fr;
     gap: 1rem;
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 0.95rem;
     font-weight: 300;
     color: rgba(221, 232, 208, 0.55);
@@ -4057,7 +4057,7 @@ body{margin:0;padding:0}
   }
 
   .transport-note {
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 1rem;
     font-weight: 300;
     color: rgba(221, 232, 208, 0.5);
@@ -4077,14 +4077,14 @@ body{margin:0;padding:0}
   .faq-inner { max-width: 820px; margin: 0 auto; }
   .faq-item { margin-bottom: 2.2rem; }
   .faq-q {
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 1.15rem;
     font-weight: 400;
     color: rgba(221, 232, 208, 0.8);
     margin-bottom: 0.5rem;
   }
   .faq-a {
-    font-family: &#x27;Cormorant Garamond&#x27;, serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 1.05rem;
     font-weight: 300;
     color: rgba(221, 232, 208, 0.45);
@@ -4103,56 +4103,56 @@ body{margin:0;padding:0}
     .chapter-break { padding-left: 0; padding-right: 0; }
   }
 
-@import url(&#x27;https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&#x26;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&#x26;display=swap&#x27;);
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
 .page-layout, .page-content { width:100%!important; max-width:100%!important; padding-left:0!important; padding-right:0!important; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:#0a0f08; color:#dde8d0; font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; overflow-x:hidden; }
+body { background:#0a0f08; color:#dde8d0; font-family:'Cormorant Garamond',Georgia,serif; overflow-x:hidden; }
 
 nav { display:flex; justify-content:space-between; align-items:center; padding:1.8rem 8rem; border-bottom:0.5px solid rgba(160,200,120,0.12); background:#0a0f08; position:sticky; top:0; z-index:10; }
-.nav-logo { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:16px; letter-spacing:0.1em; color:#7db05a; text-transform:uppercase; text-decoration:none; }
+.nav-logo { font-family:'IM Fell English',Georgia,serif; font-size:16px; letter-spacing:0.1em; color:#7db05a; text-transform:uppercase; text-decoration:none; }
 .nav-links { display:flex; gap:2.5rem; list-style:none; }
-.nav-links a { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:15px; font-weight:300; letter-spacing:0.14em; color:rgba(221,232,208,0.45); text-decoration:none; text-transform:uppercase; transition:color 0.3s; }
+.nav-links a { font-family:'Cormorant Garamond',serif; font-size:15px; font-weight:300; letter-spacing:0.14em; color:rgba(221,232,208,0.45); text-decoration:none; text-transform:uppercase; transition:color 0.3s; }
 .nav-links a:hover { color:#9ecf72; }
 
 .post-hero { padding:6rem 8rem 4rem; text-align:center; border-bottom:0.5px solid rgba(160,200,120,0.1); }
 .post-route-strip { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:0.6rem; font-size:14px; letter-spacing:0.25em; text-transform:uppercase; color:rgba(221,232,208,0.25); margin-bottom:3rem; }
 .post-route-strip span { color:#5a8a3a; }
-.post-hero-title { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:clamp(2.8rem,6vw,5.5rem); font-weight:400; line-height:1.05; color:#dde8d0; margin-bottom:0.4em; letter-spacing:-0.01em; }
+.post-hero-title { font-family:'IM Fell English',Georgia,serif; font-size:clamp(2.8rem,6vw,5.5rem); font-weight:400; line-height:1.05; color:#dde8d0; margin-bottom:0.4em; letter-spacing:-0.01em; }
 .post-hero-title em { font-style:italic; color:#9ecf72; }
-.post-hero-sub { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:clamp(1.2rem,2vw,1.6rem); font-weight:300; font-style:italic; color:rgba(221,232,208,0.38); margin-bottom:3rem; line-height:1.7; }
+.post-hero-sub { font-family:'Cormorant Garamond',serif; font-size:clamp(1.2rem,2vw,1.6rem); font-weight:300; font-style:italic; color:rgba(221,232,208,0.38); margin-bottom:3rem; line-height:1.7; }
 .post-stats { display:inline-flex; flex-wrap:wrap; gap:2.5rem; justify-content:center; border:0.5px solid rgba(160,200,120,0.1); padding:1.5rem 3rem; }
 .stat { text-align:center; }
-.stat-num { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:2.2rem; color:#9ecf72; line-height:1; display:block; }
+.stat-num { font-family:'IM Fell English',Georgia,serif; font-size:2.2rem; color:#9ecf72; line-height:1; display:block; }
 .stat-label { font-size:14px; letter-spacing:0.25em; text-transform:uppercase; color:rgba(221,232,208,0.4); margin-top:0.3rem; display:block; }
 
 .post-body { padding:0 4rem 2rem; }
 .opening-prose { padding:4rem 0 0; max-width:1100px; margin:0 auto; }
-.prose p { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.5rem; font-weight:300; line-height:1.9; color:rgba(221,232,208,0.82); margin-bottom:1.6rem; }
+.prose p { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; line-height:1.9; color:rgba(221,232,208,0.82); margin-bottom:1.6rem; }
 .prose p:last-child { margin-bottom:0; }
 .prose em { font-style:italic; color:#9ecf72; }
-.drop-cap::first-letter { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:5.5rem; font-weight:400; float:left; line-height:0.75; margin:0.08em 0.12em 0 0; color:#5a8a3a; }
+.drop-cap::first-letter { font-family:'IM Fell English',Georgia,serif; font-size:5.5rem; font-weight:400; float:left; line-height:0.75; margin:0.08em 0.12em 0 0; color:#5a8a3a; }
 .narrative { max-width:1100px; margin:0 auto; }
 
 .chapter-break { max-width:1100px; margin:4rem auto 0; padding-top:4rem; border-top:0.5px solid rgba(160,200,120,0.1); }
-.chapter-number { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:15px; letter-spacing:0.4em; text-transform:uppercase; color:#3d6b25; }
-.chapter-name { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:400; color:#dde8d0; line-height:1; margin:0.3em 0 0.15em; }
+.chapter-number { font-family:'Cormorant Garamond',serif; font-size:15px; letter-spacing:0.4em; text-transform:uppercase; color:#3d6b25; }
+.chapter-name { font-family:'IM Fell English',Georgia,serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:400; color:#dde8d0; line-height:1; margin:0.3em 0 0.15em; }
 .chapter-name em { font-style:italic; color:#9ecf72; }
-.chapter-epithet { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.25rem; font-weight:300; font-style:italic; color:rgba(221,232,208,0.4); margin-bottom:0.8rem; }
+.chapter-epithet { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:300; font-style:italic; color:rgba(221,232,208,0.4); margin-bottom:0.8rem; }
 
 .weather-badge { display:inline-flex; gap:1rem; font-size:14px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(221,232,208,0.35); border:0.5px solid rgba(160,200,120,0.1); padding:0.4rem 1rem; margin-bottom:2rem; }
 .w-hi { color:#c47a4a; }
 .w-lo { color:#5a8a3a; }
 
-.beat { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:1.3rem; font-style:italic; color:rgba(221,232,208,0.3); text-align:center; margin:3.5rem auto; max-width:600px; display:flex; align-items:center; gap:1.5rem; }
-.beat::before,.beat::after { content:&#x27;&#x27;; flex:1; height:0.5px; background:rgba(160,200,120,0.12); }
+.beat { font-family:'IM Fell English',Georgia,serif; font-size:1.3rem; font-style:italic; color:rgba(221,232,208,0.3); text-align:center; margin:3.5rem auto; max-width:600px; display:flex; align-items:center; gap:1.5rem; }
+.beat::before,.beat::after { content:''; flex:1; height:0.5px; background:rgba(160,200,120,0.12); }
 
 .pull { border-left:1.5px solid #3d6b25; padding:0.5rem 0 0.5rem 2rem; margin:3rem auto; max-width:1100px; }
-.pull p { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:1.7rem; font-style:italic; color:rgba(221,232,208,0.45); line-height:1.6; margin:0; }
+.pull p { font-family:'IM Fell English',Georgia,serif; font-size:1.7rem; font-style:italic; color:rgba(221,232,208,0.45); line-height:1.6; margin:0; }
 
 .ornament { text-align:center; color:#3d6b25; font-size:0.9rem; letter-spacing:1.2rem; margin:3rem auto; max-width:1100px; }
 
-.practical { background:rgba(160,200,120,0.03); border:0.5px solid rgba(160,200,120,0.1); padding:2.5rem 3rem; margin:2.5rem auto; max-width:1100px; font-family:&#x27;Cormorant Garamond&#x27;,serif; }
+.practical { background:rgba(160,200,120,0.03); border:0.5px solid rgba(160,200,120,0.1); padding:2.5rem 3rem; margin:2.5rem auto; max-width:1100px; font-family:'Cormorant Garamond',serif; }
 .prac-header { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.8rem; padding-bottom:1.2rem; border-bottom:0.5px solid rgba(160,200,120,0.1); }
 .prac-city { font-size:16px; letter-spacing:0.3em; text-transform:uppercase; color:#7db05a; }
 .prac-dates { font-size:14px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(221,232,208,0.4); }
@@ -4165,17 +4165,17 @@ nav { display:flex; justify-content:space-between; align-items:center; padding:1
 .budget-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:1px; background:rgba(160,200,120,0.07); margin-top:0.6rem; }
 .budget-cell { background:#0a0f08; padding:1.1rem 1.2rem; }
 .budget-cat { font-size:14px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(221,232,208,0.5); margin-bottom:0.4rem; }
-.budget-val { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:1.4rem; font-weight:400; color:rgba(221,232,208,0.88); }
+.budget-val { font-family:'IM Fell English',Georgia,serif; font-size:1.4rem; font-weight:400; color:rgba(221,232,208,0.88); }
 
-.tours { max-width:820px; margin:2rem auto; font-family:&#x27;Cormorant Garamond&#x27;,serif; }
+.tours { max-width:820px; margin:2rem auto; font-family:'Cormorant Garamond',serif; }
 .tours-label { font-size:10px; letter-spacing:0.4em; text-transform:uppercase; color:#3d6b25; margin-bottom:1.2rem; display:flex; align-items:center; gap:1rem; }
-.tours-label::after { content:&#x27;&#x27;; flex:1; height:0.5px; background:rgba(160,200,120,0.1); }
+.tours-label::after { content:''; flex:1; height:0.5px; background:rgba(160,200,120,0.1); }
 .tours-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px; background:rgba(160,200,120,0.07); }
 .tour-card { background:#0a0f08; padding:1.4rem 1.6rem; text-decoration:none; display:block; transition:background 0.3s; }
 .tour-card:hover { background:#0e1409; }
 .tour-card:hover .tour-name { color:#9ecf72; }
 .tour-type { font-size:13px; letter-spacing:0.25em; text-transform:uppercase; color:#7db05a; margin-bottom:0.5rem; }
-.tour-name { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:1.4rem; font-weight:400; color:#dde8d0; line-height:1.3; margin-bottom:0.6rem; transition:color 0.3s; }
+.tour-name { font-family:'IM Fell English',Georgia,serif; font-size:1.4rem; font-weight:400; color:#dde8d0; line-height:1.3; margin-bottom:0.6rem; transition:color 0.3s; }
 .tour-meta { font-size:1.15rem; font-weight:300; font-style:italic; color:rgba(221,232,208,0.5); margin-bottom:1rem; line-height:1.5; }
 .tour-footer { display:flex; justify-content:space-between; align-items:center; }
 .tour-price { font-size:14px; letter-spacing:0.15em; text-transform:uppercase; color:#7db05a; }
@@ -4185,44 +4185,44 @@ nav { display:flex; justify-content:space-between; align-items:center; padding:1
 .itin-block { background:rgba(160,200,120,0.02); border-top:0.5px solid rgba(160,200,120,0.1); border-bottom:0.5px solid rgba(160,200,120,0.1); padding:4rem 8rem; }
 .itin-inner { max-width:1100px; margin:0 auto; }
 .itin-block-title { font-size:15px; letter-spacing:0.35em; text-transform:uppercase; color:#6a9a47; text-align:center; margin-bottom:3rem; display:flex; align-items:center; justify-content:center; gap:1.2rem; }
-.itin-block-title::before,.itin-block-title::after { content:&#x27;&#x27;; width:40px; height:0.5px; background:#3d6b25; }
-.itin-meta { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.25rem; font-weight:300; color:rgba(221,232,208,0.6); margin-bottom:0.5rem; }
+.itin-block-title::before,.itin-block-title::after { content:''; width:40px; height:0.5px; background:#3d6b25; }
+.itin-meta { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:300; color:rgba(221,232,208,0.6); margin-bottom:0.5rem; }
 .itin-meta strong { font-weight:400; color:#7db05a; }
 .itin-section-head { font-size:14px; letter-spacing:0.32em; text-transform:uppercase; color:#6a9a47; margin:2.5rem 0 1rem; padding-top:2.5rem; border-top:0.5px solid rgba(160,200,120,0.08); }
 .itin-days { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:rgba(160,200,120,0.07); }
-.itin-day-row { background:#0a0f08; padding:1rem 1.3rem; font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.2rem; font-weight:300; color:rgba(221,232,208,0.7); line-height:1.55; }
+.itin-day-row { background:#0a0f08; padding:1rem 1.3rem; font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:300; color:rgba(221,232,208,0.7); line-height:1.55; }
 .itin-day-num { font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#6a9a47; display:block; margin-bottom:0.3rem; }
 
 .grand-total-block { background:rgba(93,138,58,0.06); border:0.5px solid rgba(160,200,120,0.12); padding:1.8rem 2rem; margin-top:1rem; }
 .grand-total-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; margin-bottom:1.2rem; }
-.grand-line { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.25rem; font-weight:300; color:rgba(221,232,208,0.7); }
+.grand-line { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:300; color:rgba(221,232,208,0.7); }
 .grand-line strong { display:block; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(221,232,208,0.5); font-weight:300; margin-bottom:0.3rem; }
-.grand-total-num { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:2.2rem; color:#9ecf72; border-top:0.5px solid rgba(160,200,120,0.15); padding-top:0.9rem; margin-top:0.4rem; }
+.grand-total-num { font-family:'IM Fell English',Georgia,serif; font-size:2.2rem; color:#9ecf72; border-top:0.5px solid rgba(160,200,120,0.15); padding-top:0.9rem; margin-top:0.4rem; }
 
-.eats-row { display:grid; grid-template-columns:150px 1fr; gap:1rem; font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.2rem; font-weight:300; color:rgba(221,232,208,0.7); padding:0.7rem 0; border-bottom:0.5px solid rgba(160,200,120,0.06); }
+.eats-row { display:grid; grid-template-columns:150px 1fr; gap:1rem; font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:300; color:rgba(221,232,208,0.7); padding:0.7rem 0; border-bottom:0.5px solid rgba(160,200,120,0.06); }
 .eats-city { font-size:14px; letter-spacing:0.15em; text-transform:uppercase; color:#6a9a47; align-self:center; }
-.transport-note { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.25rem; font-weight:300; color:rgba(221,232,208,0.65); line-height:1.75; margin-bottom:0.6rem; }
+.transport-note { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:300; color:rgba(221,232,208,0.65); line-height:1.75; margin-bottom:0.6rem; }
 .transport-note strong { font-weight:400; color:#7db05a; }
 
 .faq-block { padding:4rem 8rem; border-top:0.5px solid rgba(160,200,120,0.08); }
 .faq-inner { max-width:1100px; margin:0 auto; }
 .faq-title { font-size:15px; letter-spacing:0.35em; text-transform:uppercase; color:#6a9a47; margin-bottom:2.5rem; display:flex; align-items:center; gap:1.2rem; }
-.faq-title::before,.faq-title::after { content:&#x27;&#x27;; width:40px; height:0.5px; background:#3d6b25; }
+.faq-title::before,.faq-title::after { content:''; width:40px; height:0.5px; background:#3d6b25; }
 .faq-item { margin-bottom:2.5rem; }
-.faq-q { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.5rem; font-weight:400; color:rgba(221,232,208,0.88); margin-bottom:0.6rem; }
-.faq-a { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.4rem; font-weight:300; color:rgba(221,232,208,0.6); line-height:1.85; }
+.faq-q { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:400; color:rgba(221,232,208,0.88); margin-bottom:0.6rem; }
+.faq-a { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; color:rgba(221,232,208,0.6); line-height:1.85; }
 
 .post-closing { border-top:0.5px solid rgba(160,200,120,0.1); border-bottom:0.5px solid rgba(160,200,120,0.1); padding:4rem 8rem; margin-top:4rem; }
 
 .next-chronicles { padding:3.5rem 8rem 5rem; border-top:0.5px solid rgba(160,200,120,0.1); }
 .next-label { font-size:15px; letter-spacing:0.3em; color:#5a8a3a; text-transform:uppercase; margin-bottom:2.5rem; display:flex; align-items:center; gap:1rem; }
-.next-label::after { content:&#x27;&#x27;; flex:1; height:0.5px; background:rgba(160,200,120,0.1); }
+.next-label::after { content:''; flex:1; height:0.5px; background:rgba(160,200,120,0.1); }
 .posts-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5px; background:rgba(160,200,120,0.07); width:100%; }
 .post-card { background:#0a0f08; padding:2.8rem; cursor:pointer; transition:background 0.3s; }
 .post-card:hover { background:#0e1409; }
 .post-region { font-size:13px; letter-spacing:0.3em; text-transform:uppercase; color:#5a8a3a; margin-bottom:1.1rem; }
-.post-title { font-family:&#x27;IM Fell English&#x27;,Georgia,serif; font-size:1.4rem; font-weight:400; line-height:1.2; color:#dde8d0; margin-bottom:1rem; }
-.post-excerpt { font-family:&#x27;Cormorant Garamond&#x27;,serif; font-size:1.15rem; font-weight:300; font-style:italic; color:rgba(221,232,208,0.38); line-height:1.75; margin-bottom:2rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.post-title { font-family:'IM Fell English',Georgia,serif; font-size:1.4rem; font-weight:400; line-height:1.2; color:#dde8d0; margin-bottom:1rem; }
+.post-excerpt { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:300; font-style:italic; color:rgba(221,232,208,0.38); line-height:1.75; margin-bottom:2rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
 .post-meta { font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(221,232,208,0.2); display:flex; gap:1.5rem; align-items:center; }
 .dot { display:inline-block; width:3px; height:3px; background:#3d6b25; border-radius:50%; }
 

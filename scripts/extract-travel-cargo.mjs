@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import fg from 'fast-glob';
 import * as cheerio from 'cheerio';
+import { decode } from 'html-entities';
 
 const cloneRoot = '/Users/mitchchadban/Desktop/travel-site-migration/travel.mitchchadban.com';
 const projectRoot = '/Users/mitchchadban/Desktop/travel-mitchchadban-site';
@@ -178,18 +179,62 @@ function cleanCargoRuntime($) {
 }
 
 function extractUsefulBody($) {
-  const candidates = [
-    'main',
-    '[role="main"]',
-    '.page',
-    '.site-content',
-    '.content',
-    'body'
+  // Remove runtime-only / non-content cruft before choosing content.
+  $('script, style, noscript, link[rel="preload"]').remove();
+
+  // Cargo pages can hide the useful article body inside odd wrappers.
+  // Prefer the element with the most meaningful text, not the first .page/body shell.
+  const skipSelectors = [
+    'html',
+    'head',
+    'body',
+    'nav',
+    'header',
+    'footer'
   ];
 
-  for (const selector of candidates) {
-    const found = $(selector).first();
-    if (found.length) return found.html() || '';
+  let best = null;
+
+  $('body *').each((_, el) => {
+    const $el = $(el);
+    const tag = (el.tagName || '').toLowerCase();
+
+    if (skipSelectors.includes(tag)) return;
+
+    const html = $el.html() || '';
+    const text = $el.text().replace(/\s+/g, ' ').trim();
+
+    if (text.length < 200) return;
+    if (html.length < 200) return;
+
+    const linkText = $el.find('a').text().replace(/\s+/g, ' ').trim().length;
+    const linkRatio = text.length ? linkText / text.length : 0;
+
+    // Avoid picking menus/index lists where nearly everything is links.
+    if (linkRatio > 0.75) return;
+
+    const mediaBonus =
+      $el.find('img, media-item, figure, picture, video').length * 250;
+
+    const score = text.length + mediaBonus;
+
+    if (!best || score > best.score) {
+      best = {
+        score,
+        html,
+        textLength: text.length,
+        tag,
+        className: $el.attr('class') || '',
+        id: $el.attr('id') || ''
+      };
+    }
+  });
+
+  if (best) {
+    console.log(
+      `Selected content block: <${best.tag}> #${best.id} .${best.className} text=${best.textLength} score=${best.score}`
+    );
+    return best.html;
   }
 
   return $('body').html() || '';
@@ -225,6 +270,16 @@ const pageContent = ${JSON.stringify(content)};
   fs.writeFileSync(outPath, astro);
 }
 
+
+function cleanCss(css) {
+  return decode(css)
+    .replace(/\u00a0/g, ' ')
+    .replace(/\u2007/g, ' ')
+    .replace(/\u202f/g, ' ')
+    .replace(/\ufeff/g, '')
+    .replace(/font-family:\s*'Cormorant Garamond', serif;/g, 'font-family: "Cormorant Garamond", serif;');
+}
+
 function extractCss(files) {
   const css = new Set();
 
@@ -234,7 +289,7 @@ function extractCss(files) {
 
     $('style').each((_, el) => {
       const text = $(el).html();
-      if (text) css.add(text.trim());
+      if (text) css.add(cleanCss(text.trim()));
     });
   }
 
@@ -262,7 +317,7 @@ video {
 }
 `;
 
-  fs.writeFileSync(stylesPath, `${base}\n\n${[...css].join('\n\n')}\n`);
+  fs.writeFileSync(stylesPath, cleanCss(`${base}\n\n${[...css].join('\n\n')}\n`));
 }
 
 function main() {
