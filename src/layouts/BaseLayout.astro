@@ -1,21 +1,58 @@
 ---
 import '../styles/global.css';
 
+const SITE_NAME = 'There & Back Again';
+const SITE_URL = 'https://travel.mitchchadban.com';
+const DEFAULT_OG_IMAGE = '/og-default.jpg'; // TODO: add a default share image to /public
+
 const {
   title = 'There & Back Again',
   description = 'A literary travel chronicle by Mitch Chadban.',
-  canonical = 'https://travel.mitchchadban.com/'
+  canonical = `${SITE_URL}/`,
+  // Open Graph / Twitter
+  ogType = 'website',
+  image = DEFAULT_OG_IMAGE,
+  // Control indexing for placeholder/utility pages
+  noindex = false,
 } = Astro.props;
+
+// Resolve the share image to an absolute URL (required by OG/Twitter).
+const ogImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
 ---
 
 <!doctype html>
 <html lang="en-AU">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#1a1a1a" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Per-page structured data (JSON-LD) and any extra head tags -->
+    <slot name="head" />
   </head>
   <body>
     <slot />

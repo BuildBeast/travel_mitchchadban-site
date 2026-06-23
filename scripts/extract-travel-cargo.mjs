@@ -176,6 +176,12 @@ function cleanCargoRuntime($) {
   $('script').remove();
   $('noscript').remove();
   $('link[rel="preload"]').remove();
+
+  // BaseLayout owns SEO tags. Strip any Cargo leftovers from migrated content.
+  $('link[rel="canonical"]').remove();
+  $('meta[name="description"]').remove();
+  $('meta[property^="og:"]').remove();
+  $('meta[name^="twitter:"]').remove();
 }
 
 function extractUsefulBody($) {
