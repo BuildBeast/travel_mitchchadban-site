@@ -31,6 +31,14 @@ const ogImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, follow" />}
 
+    <!-- Fonts (non-render-blocking; replaces the old CSS @import) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    />
+
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
@@ -55,6 +63,9 @@ const ogImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
     <slot name="head" />
   </head>
   <body>
-    <slot />
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <main id="main-content">
+      <slot />
+    </main>
   </body>
 </html>
