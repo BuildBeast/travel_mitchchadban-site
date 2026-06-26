@@ -1,0 +1,94 @@
+---
+// Shared site header (desktop + mobile). Centralised here so individual
+// migrated pages no longer carry an inlined copy of the nav markup.
+const NAV = [
+  { href: '/chronicles/', label: 'CHRONICLES' },
+  { href: '/by-region/', label: 'BY REGION' },
+  { href: '/about-the-traveller/', label: 'THE TRAVELLER' },
+];
+
+const pathname = Astro.url.pathname;
+const isActive = (href) => pathname === href;
+---
+
+<header class="header-web" role="banner">
+  <div class="header-web__inner">
+    <a class="header-web__brand" href="/">THERE &amp; BACK AGAIN</a>
+
+    <nav aria-label="Primary" class="header-web__nav">
+      {NAV.map((item) => (
+        <a
+          class:list={['header-web__link', isActive(item.href) && 'active']}
+          href={item.href}
+          aria-current={isActive(item.href) ? 'page' : undefined}
+        >{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+<hr class="header-rule" />
+
+<header class="header-mob" role="banner">
+  <div class="mobnav" data-mobnav>
+    <div class="mobnav__bar">
+      <a class="mobnav__brand" href="/">THERE &amp; BACK AGAIN</a>
+      <button
+        type="button"
+        class="mobnav__btn"
+        aria-expanded="false"
+        aria-controls="mobnav-panel"
+        data-mobnav-toggle
+      >
+        <span class="mobnav__icon" aria-hidden="true"></span>
+        <span class="mobnav__label">Menu</span>
+      </button>
+    </div>
+
+    <div class="mobnav__overlay" data-mobnav-close></div>
+    <button type="button" class="mobnav__x" aria-label="Close menu" data-mobnav-close>×</button>
+
+    <nav id="mobnav-panel" class="mobnav__panel" aria-label="Primary">
+      <div class="mobnav__links">
+        {NAV.map((item) => (
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
+        ))}
+      </div>
+      <p class="mobnav__note">Tales written in the old manner — for those who travel not merely to arrive, but to be changed by the road.</p>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.querySelectorAll('[data-mobnav]').forEach((nav) => {
+    const toggle = nav.querySelector('[data-mobnav-toggle]');
+    const closers = nav.querySelectorAll('[data-mobnav-close]');
+    const links = nav.querySelectorAll('.mobnav__links a');
+    if (!toggle) return;
+
+    const isOpen = () => nav.hasAttribute('open');
+
+    const open = () => {
+      nav.setAttribute('open', '');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      const first = nav.querySelector('.mobnav__links a');
+      if (first) first.focus();
+    };
+
+    const close = ({ refocus = true } = {}) => {
+      nav.removeAttribute('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      if (refocus) toggle.focus();
+    };
+
+    toggle.addEventListener('click', () => (isOpen() ? close() : open()));
+    closers.forEach((el) => el.addEventListener('click', () => close()));
+    // Navigating away — just let the link work, but reset scroll lock.
+    links.forEach((el) => el.addEventListener('click', () => close({ refocus: false })));
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && isOpen()) close();
+    });
+  });
+</script>

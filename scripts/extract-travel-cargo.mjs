@@ -184,6 +184,30 @@ function cleanCargoRuntime($) {
   $('meta[name^="twitter:"]').remove();
 }
 
+function stripSiteChrome($) {
+  // Header/nav is owned by BaseLayout (src/components/Header.astro). Remove the
+  // inlined Cargo "menu_web" page and any stray header markup so pages don't
+  // ship a duplicate nav.
+  $('[page-url="menu_web"]').remove();
+  $('header.header-web, .header-mob, hr.header-rule').remove();
+
+  // Empty Cargo wrappers and junk attributes.
+  $('customhtml').remove();
+  $('a[rel="history"]').removeAttr('rel');
+
+  // /by-region/: the inline world-map SVG was driven by Cargo runtime JS that
+  // no longer exists, leaving the region panels permanently hidden. Drop the
+  // heavy SVG, remove the dead close buttons, and surface every panel.
+  $('.map-wrap').remove();
+  $('.panel-close').remove();
+  $('.region-panel').each((_, el) => {
+    const $el = $(el);
+    const cls = ($el.attr('class') || '').split(/\s+/).filter(Boolean);
+    if (!cls.includes('open')) cls.push('open');
+    $el.attr('class', cls.join(' '));
+  });
+}
+
 function extractUsefulBody($) {
   // Remove runtime-only / non-content cruft before choosing content.
   $('script, style, noscript, link[rel="preload"]').remove();
@@ -356,6 +380,7 @@ function main() {
     convertMediaItems($, mediaMap);
     rewriteLinks($);
     cleanCargoRuntime($);
+    stripSiteChrome($);
 
     const content = extractUsefulBody($);
 

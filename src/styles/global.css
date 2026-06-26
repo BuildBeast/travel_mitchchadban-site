@@ -52,14 +52,9 @@ body {
 .header-mob { display: none; }
 
 @media (max-width: 820px) {
-  /* Keep the (only) header visible on mobile and let it reflow. */
-  .header-web__inner {
-    flex-direction: column;
-    gap: 0.55rem;
-    padding: 0.85rem 1.25rem 0.8rem;
-  }
-  .header-web__nav { gap: 1.5rem; }
-  .header-web__link { font-size: 12px; letter-spacing: 0.12em; }
+  /* Swap to the dedicated mobile header below 820px. */
+  .header-web { display: none; }
+  .header-mob { display: block; }
 }
 
 /* ── DESKTOP HEADER ── */

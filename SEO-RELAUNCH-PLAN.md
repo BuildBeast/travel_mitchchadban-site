@@ -2,6 +2,19 @@
 
 _Audit date: 2026-06-24 · Site: https://travel.mitchchadban.com · Stack: Astro 6, content migrated from Cargo as raw HTML strings_
 
+> ## ✅ Final launch pass 2026-06-27 (branch `final-launch-pass`)
+> Closes the remaining structural / a11y / deployment items on top of the 2026-06-24 SEO work.
+> - **Header centralised:** the inlined Cargo `menu_web` header/nav (duplicated across all 31 pages) is removed; the site header now lives in `src/components/Header.astro`, rendered once by `BaseLayout`. Brand links to `/`; the current section gets `.active` + `aria-current="page"` via `Astro.url.pathname`. Dark literary theme, fonts, accent colour and nav labels unchanged.
+> - **Mobile nav finished:** a dedicated `.header-mob` now switches in below 820px (was previously hidden CSS with no markup). Real `<button aria-expanded>` toggle wired with ~30 lines of vanilla JS (no framework): toggles `aria-expanded`, locks body scroll, closes on overlay/✕/nav-link click and on **Escape**, and manages focus (focuses first link on open, returns focus to the button on close). Reuses the existing `.mobnav*` CSS via the `[open]` attribute.
+> - **`/by-region/` slimmed:** the inline world-map SVG (303 `<path>`s) was driven by Cargo runtime JS that no longer exists, leaving every region panel permanently hidden. Removed the SVG + dead close buttons and surfaced all 13 region panels as stacked sections — **`dist/by-region/index.html` 346 KB → 24 KB** with all 33 post links preserved and now actually reachable.
+> - **Host-level redirects:** all 10 old accented/punctuation slugs + `/front-page/` now 301 via `public/_redirects` (Cloudflare Pages). The build-time meta-refresh redirect pages were removed from `astro.config.mjs`, so `dist/` contains only the 31 real pages and the sitemap stays canonical-only (30 URLs).
+> - **Default OG image:** added on-brand `public/og-default.svg` (dark `#0a0f08`, `#dde8d0` text, `#7db05a` accent, title + subtitle). `BaseLayout` fallback `og:image`/`twitter:image` now points to it. (Per-post hero images are still not implemented — this is the default share card only.)
+> - **CSS warning:** confirmed no `@import` remains in `src/styles/global.css` (fonts load via `<link>` in `<head>`); build emits no PostCSS `@import` ordering warning.
+> - **Durability:** all generated-page cleanups (`stripSiteChrome`) are mirrored into `scripts/extract-travel-cargo.mjs` so a re-extraction reproduces them.
+> - **Verified in `dist/`:** `npm run build` passes with no warnings · 31 pages · 31 `<html lang="en-AU">` · exactly one canonical and one `<main>` per page · no `<media-item>`, `rel="history"`, `menu_web`, or `<customhtml>` residue · `noindex` only on `coming-soon` · skip-link → real `#main-content`.
+>
+> **Still open (post-launch):** per-post hero images with `alt`; analytics; GSC sitemap submission. SVG OG images render in-browser but some social scrapers prefer PNG/JPG — swap `og-default.svg` for a 1200×630 raster if richer previews are needed.
+
 > ## ✅ Implemented 2026-06-24 (Phases 1–4, images excluded)
 > - **Foundation:** `site` + `@astrojs/sitemap` configured → `sitemap-index.xml`; `public/robots.txt` added; `BaseLayout` rewritten with unique description, canonical, full Open Graph + Twitter cards, `noindex` support, a `head` slot for JSON-LD, and icon/theme-color tags.
 > - **Per-page metadata:** unique meta descriptions on all 26 posts + index pages (was 32/33 duplicates); posts set `og:type=article`; malformed Córdoba title fixed.

@@ -1,0 +1,17 @@
+# Host-level 301 redirects (Cloudflare Pages).
+# Old Cargo accented/punctuation slugs -> normalized ASCII slugs.
+# Primary redirect system — replaces the previous meta-refresh fallback pages.
+
+/1-day-in-cádiz-—-at-the-edge-of-the-known-world/    /1-day-in-cadiz/                       301
+/2-days-in-cáceres-a-medieval-city-held-in-amber/    /2-days-in-caceres/                     301
+/the-douro-valley-—-a-day-among-the-terraced-vines/  /douro-valley-day-trip/                 301
+/7-days-in-barcelona-gaudí's-unfinished-argument/    /7-days-in-barcelona/                   301
+/italy,-morocco-seville-4-week-itinerary/            /italy-morocco-seville-4-week-itinerary/ 301
+/4-days-in-bologna-the-fat-city's-table/             /4-days-in-bologna/                     301
+/2-days-in-évora-bones-roman-stones/                 /2-days-in-evora/                       301
+/10-days-in-sevilla-andalucía-without-rush/          /10-days-in-sevilla/                    301
+/the-city-between-empires-—one-day-in-córdoba/       /1-day-in-cordoba/                      301
+/1-day-in-colònia-güell/                             /1-day-in-colonia-guell/                301
+
+# Removed pages
+/front-page/                                         /                                       301
