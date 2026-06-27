@@ -1,0 +1,68 @@
+---
+import { WORLD_VIEWBOX, WORLD_PATH } from "./world-map-path.js";
+
+// `regions` is an array of { id, name, cx, cy, count }.
+// `activeId` is the region that should be open on first paint.
+const { regions = [], activeId } = Astro.props;
+
+const label = (count) =>
+  count === 0
+    ? "no chronicles yet"
+    : `${count} ${count === 1 ? "chronicle" : "chronicles"}`;
+---
+
+<div class="map-wrap" data-region-map>
+  <svg
+    id="world-map"
+    class="region-map"
+    viewBox={WORLD_VIEWBOX}
+    role="group"
+    aria-label="World map — choose a region to reveal its chronicles"
+    preserveAspectRatio="xMidYMid meet"
+  >
+    <path class="map-land" d={WORLD_PATH} aria-hidden="true" fill-rule="evenodd" />
+
+    {
+      regions.map((r) => (
+        <g
+          class:list={["hotspot", { active: r.id === activeId, "has-posts": r.count > 0 }]}
+          data-region={r.id}
+          role="button"
+          tabindex="0"
+          aria-controls={`panel-${r.id}`}
+          aria-expanded={r.id === activeId ? "true" : "false"}
+          aria-label={`${r.name} — ${label(r.count)}`}
+        >
+          <circle class="hotspot__halo" cx={r.cx} cy={r.cy} r="14" />
+          <circle class="hotspot__dot" cx={r.cx} cy={r.cy} r="5.5" />
+          <text class="hotspot__label" x={r.cx} y={r.cy - 12} text-anchor="middle">
+            {r.name}
+          </text>
+        </g>
+      ))
+    }
+  </svg>
+
+  <!-- Compact, always-available region selector (primary navigation on phones,
+       a quick index on desktop). Mirrors the map hotspots. -->
+  <nav class="region-switch" aria-label="Regions">
+    <ul class="region-switch__list">
+      {
+        regions.map((r) => (
+          <li>
+            <button
+              type="button"
+              class:list={["region-switch__btn", { active: r.id === activeId }]}
+              data-region={r.id}
+              aria-controls={`panel-${r.id}`}
+              aria-pressed={r.id === activeId ? "true" : "false"}
+            >
+              <span class="region-switch__name">{r.name}</span>
+              <span class="region-switch__count">{r.count > 0 ? r.count : "—"}</span>
+            </button>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</div>

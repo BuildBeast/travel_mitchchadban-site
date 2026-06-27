@@ -1,13 +1,455 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import RegionMap from "../../components/RegionMap.astro";
 
-const pageContent = "<div style=\"margin-top: 0px; margin-bottom: 0px;\" class=\"pages\"><div id=\"K1402631969\" page-url=\"by-region\" class=\"page\"><a id=\"by-region\"></a><div class=\"page-layout\"><div class=\"page-content\"><bodycopy style=\"--fit-height: 10px; --resize-parent-width: 100%;\"><div class=\"region-header\">\n  <div class=\"page-label\">Explore by region</div>\n  <h1 class=\"region-title\">The <em>Known World</em></h1>\n</div>\n\n\n\n\n<div class=\"region-panel open\" id=\"panel-europe\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>Europe</em></h2>\n    \n  </div>\n  <div class=\"panel-grid\">\n    <div class=\"panel-card\"><div class=\"card-region\">Italy · Emilia-Romagna</div><h3 class=\"card-title\"><a href=\"/4-days-in-bologna/\" style=\"color:inherit;text-decoration:none;\">Bologna: The Fat City’s Table</a></h3><p class=\"card-excerpt\">A deeper guide to eating in Emilia-Romagna — the old country of ragù, mortadella, Parmigiano-Reggiano, and the settled conviction that lunch deserves reverence.</p><div class=\"card-meta\"><span>4 days</span><span class=\"dot-sep\"></span><span>September 2025</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Portugal · Europe</div><h3 class=\"card-title\"><a href=\"/coming-soon/\">At the Edge of the Known World</a></h3><p class=\"card-excerpt\">Lisbon ends where the Atlantic begins, and at Cabo da Roca the traveller stood at the westernmost point of Europe.</p><div class=\"card-meta\"><span>10 days</span><span class=\"dot-sep\"></span><span>March</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\"><a href=\"/coming-soon/\">Greece · Europ</a>e</div><h3 class=\"card-title\">Islands at the End of Summer</h3><p class=\"card-excerpt\">The ferry left Piraeus before dawn and by the time the sun was up the mainland had disappeared entirely.</p><div class=\"card-meta\"><span>11 days</span><span class=\"dot-sep\"></span><span>September</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\"><a href=\"/coming-soon/\">Spain · Europe</a></div><h3 class=\"card-title\">In the Shadow of the Alhambra</h3><p class=\"card-excerpt\">Granada is a city that keeps its greatest treasure hidden until the very last moment.</p><div class=\"card-meta\"><span>7 days</span><span class=\"dot-sep\"></span><span>May</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\"><a href=\"/10-days-in-sevilla/\">Spain · Andalucía</a></div><h3 class=\"card-title\"><a href=\"/10-days-in-sevilla/\" style=\"color:inherit;text-decoration:none;\">Andalucía Without Rush</a></h3><p class=\"card-excerpt\">Ten days in southern Spain’s triumvirate of Moorish inheritance — using Seville as a fixed base, making the region reveal itself not by conquest, but by return.</p><div class=\"card-meta\"><span>10 days</span><span class=\"dot-sep\"></span><span>September 2025</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\"><a href=\"/1-day-in-santiago-de-compostela/\">Spain · Europe</a></div><h3 class=\"card-title\"><a href=\"/1-day-in-santiago-de-compostela/\" style=\"color:inherit;text-decoration:none;\">Santiago de Compostela — The End of the Pilgrim Road</a></h3><p class=\"card-excerpt\">A day trip to the old pilgrim city from Porto — granite streets, cathedral shadow, and the strange hush that gathers where long roads finally end.</p><div class=\"card-meta\"><span>1 day</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\"><a href=\"/3-days-in-madrid-the-capital-at-full-volume/\">Spain · Europe</a></div><h3 class=\"card-title\"><a href=\"/3-days-in-madrid-the-capital-at-full-volume/\" style=\"color:inherit;text-decoration:none;\">Madrid — The Capital at Full Volume</a></h3><p class=\"card-excerpt\">Two days in Spain’s capital at full voltage — plazas, galleries, late meals, and the civic theatre of a city that refuses to lower its voice.</p><div class=\"card-meta\"><span>2 days</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\"><a href=\"/1-day-in-colonia-guell/\">Spain · Europe</a></div><h3 class=\"card-title\"><a href=\"/1-day-in-colonia-guell/\" style=\"color:inherit;text-decoration:none;\">Colonia Güell — Gaudí's Forgotten Blueprint</a></h3><p class=\"card-excerpt\">A short journey to Gaudí’s unfinished crypt at Colonia Güell — a quiet architectural rehearsal for the impossible argument later made in Barcelona.</p><div class=\"card-meta\"><span>Guide</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\"><a href=\"/4-weeks-portugal-to-spain-by-rail-road/\">Portugal &amp; Spain · Europe</a></div><h3 class=\"card-title\"><a href=\"/4-weeks-portugal-to-spain-by-rail-road/\" style=\"color:inherit;text-decoration:none;\">Portugal to Spain by Rail and Road — The Complete Circuit</a></h3><p class=\"card-excerpt\">A full Portugal and Spain circuit by rail and road — Porto, Lisbon, Andalucía, Madrid, Barcelona, and the smaller detours that gave the route its texture.</p><div class=\"card-meta\"><span>Full circuit</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Portugal · Europe</div><h3 class=\"card-title\"><a href=\"/4-days-in-mondim-de-basto/\" style=\"color:inherit;text-decoration:none;\">Mondim de Basto — The Detour Into the Mountains</a></h3><p class=\"card-excerpt\">A mountain detour in northern Portugal — river valleys, granite villages, slow roads, and the kind of pause that changes the shape of a journey.</p><div class=\"card-meta\"><span>Guide</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Portugal · Europe</div><h3 class=\"card-title\"><a href=\"/5-days-in-porto-the-city-the-river-built/\" style=\"color:inherit;text-decoration:none;\">Porto — The City the River Built</a></h3><p class=\"card-excerpt\">Four days in Porto, where the Douro cuts through stone and the city gathers itself in terraces, tiled churches, taverns, bridges, and river light.</p><div class=\"card-meta\"><span>4 days</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Portugal · Europe</div><h3 class=\"card-title\"><a href=\"/2-days-in-evora/\" style=\"color:inherit;text-decoration:none;\">Évora — The Town of Bones and Roman Stone</a></h3><p class=\"card-excerpt\">A guide to Évora’s Roman temple, whitewashed lanes, chapel of bones, and Alentejo stillness — a town where history feels close enough to touch.</p><div class=\"card-meta\"><span>Guide</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Portugal · Europe</div><h3 class=\"card-title\"><a href=\"/douro-valley-day-trip/\" style=\"color:inherit;text-decoration:none;\">The Douro Valley — A Day Among the Terraced Vines</a></h3><p class=\"card-excerpt\">A day through the Douro Valley’s terraced vineyards, river bends, station tiles, and slow wine-country distances from Porto.</p><div class=\"card-meta\"><span>1 day</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Spain · Europe</div><h3 class=\"card-title\"><a href=\"/1-day-in-tarragona-sitges/\" style=\"color:inherit;text-decoration:none;\">Tarragona and Sitges — Roman Stone and Seaside Light</a></h3><p class=\"card-excerpt\">A Barcelona day trip split between Tarragona’s Roman remains and Sitges’ bright coastal ease — stone, sea air, and a softer edge of Catalonia.</p><div class=\"card-meta\"><span>1 day</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Spain · Europe</div><h3 class=\"card-title\"><a href=\"/1-day-in-figueres-girona/\" style=\"color:inherit;text-decoration:none;\">Figueres and Girona — A Day Inside Dalí's Mind</a></h3><p class=\"card-excerpt\">A Catalonia day trip through Dalí’s theatrical museum in Figueres and Girona’s medieval lanes, where surrealism gives way to stone and riverlight.</p><div class=\"card-meta\"><span>1 day</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Spain · Europe</div><h3 class=\"card-title\"><a href=\"/2-days-in-caceres/\" style=\"color:inherit;text-decoration:none;\">Cáceres — A Medieval City Held in Amber</a></h3><p class=\"card-excerpt\">A guide to Cáceres, the Extremaduran city of towers, plazas, and preserved medieval silence — a place that seems to resist the present tense.</p><div class=\"card-meta\"><span>Guide</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Portugal · Europe</div><h3 class=\"card-title\"><a href=\"/5-days-in-lisbon-itinerary/\" style=\"color:inherit;text-decoration:none;\">Lisbon — Seven Hills and the Sound of Fado</a></h3><p class=\"card-excerpt\">Five days in Lisbon across miradouros, tiled streets, trams, fado rooms, river light, and the steep grammar of a city built on seven hills.</p><div class=\"card-meta\"><span>5 days</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Portugal · Europe</div><h3 class=\"card-title\"><a href=\"/1-day-in-sintra-the-mountain-of-romantic-follies/\" style=\"color:inherit;text-decoration:none;\">Sintra — The Mountain of Romantic Follies</a></h3><p class=\"card-excerpt\">A day trip to Sintra’s palaces, forests, steep roads, and Romantic excess — where the mountain turns architecture into theatre.</p><div class=\"card-meta\"><span>1 day</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Spain · Europe</div><h3 class=\"card-title\"><a href=\"/4-days-in-valencia-itinerary/\" style=\"color:inherit;text-decoration:none;\">Valencia — Where the River Became a Garden</a></h3><p class=\"card-excerpt\">A guide to Valencia’s old quarter, market halls, beaches, paella country, and the Turia — the riverbed remade as the city’s long green spine.</p><div class=\"card-meta\"><span>Guide</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Portugal · Europe</div><h3 class=\"card-title\"><a href=\"/4-days-in-lagos-the-coast-of-golden-cliffs/\" style=\"color:inherit;text-decoration:none;\">Lagos — The Coast of Golden Cliffs</a></h3><p class=\"card-excerpt\">A guide to Lagos and the Algarve coast — golden cliffs, sea caves, old walls, and the Atlantic light that sharpens every edge.</p><div class=\"card-meta\"><span>Guide</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Spain · Europe</div><h3 class=\"card-title\"><a href=\"/7-days-in-barcelona/\" style=\"color:inherit;text-decoration:none;\">Barcelona — Gaudí's Unfinished Argument</a></h3><p class=\"card-excerpt\">Seven days in Barcelona through Gaudí’s monuments, Gothic streets, markets, seaside edges, and the unfinished argument rising above the city.</p><div class=\"card-meta\"><span>7 days</span><span class=\"dot-sep\"></span><span>Summer 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Italy · Lazio</div><h3 class=\"card-title\"><a href=\"/six-days-in-rome-at-the-table-of-empires/\" style=\"color:inherit;text-decoration:none;\">Rome: Six Days at the Table of Empires</a></h3><p class=\"card-excerpt\">Six days in Rome at the table of empires — ruins, churches, piazzas, trattorias, and the old imperial appetite still moving beneath the stone.</p><div class=\"card-meta\"><span>6 days</span><span class=\"dot-sep\"></span><span>September 2025</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">San Marino · Europe</div><h3 class=\"card-title\"><a href=\"/san-marino-day-trip-guide/\" style=\"color:inherit;text-decoration:none;\">San Marino: Upon the Rock of the Oldest Republic</a></h3><p class=\"card-excerpt\">A day trip from Bologna to the old republic on the mountain — towers, steep streets, and the strange endurance of a country built into stone.</p><div class=\"card-meta\"><span>1 day</span><span class=\"dot-sep\"></span><span>September 2025</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Spain · Andalucía</div><h3 class=\"card-title\"><a href=\"/1-day-in-cordoba/\" style=\"color:inherit;text-decoration:none;\">The City Between Empires — One Day in Córdoba</a></h3><p class=\"card-excerpt\">A day trip from Seville to Córdoba — mosque-cathedral shadow, Roman stone, orange courtyards, and the city caught between its empires.</p><div class=\"card-meta\"><span>1 day</span><span class=\"dot-sep\"></span><span>Autumn 2024</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Spain · Andalucía</div><h3 class=\"card-title\"><a href=\"/1-day-in-cadiz/\" style=\"color:inherit;text-decoration:none;\">Cádiz — At the Edge of the Known World</a></h3><p class=\"card-excerpt\">A day trip to Cádiz, where the old city narrows toward the Atlantic — sea walls, bright plazas, fried fish, and the edge of Spain facing outward.</p><div class=\"card-meta\"><span>1 day</span><span class=\"dot-sep\"></span><span>Autumn 2024</span></div></div>\n  </div>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-north-africa\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>North Africa</em></h2>\n    \n  </div>\n  <div class=\"panel-grid\">\n    <div class=\"panel-card\"><div class=\"card-region\">Morocco · North Africa</div><h3 class=\"card-title\">Into the Red City and Beyond</h3><p class=\"card-excerpt\">The medina swallowed the traveller whole — a labyrinth of spice and shadow older than any map.</p><div class=\"card-meta\"><span>9 days</span><span class=\"dot-sep\"></span><span>April</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Morocco · Imperial Cities</div><h3 class=\"card-title\"><a href=\"/the-imperial-circuit-morocco-in-14-days/\" style=\"color:inherit;text-decoration:none;\">The Imperial Circuit: Morocco in 14 Days</a></h3><p class=\"card-excerpt\">Marrakech to Rabat to Fes to Tangier — a standalone journey through Morocco’s old capitals, with the road running from red walls and desert light to medina shadow, Atlantic wind, and the northern strait.</p><div class=\"card-meta\"><span>14 days</span><span class=\"dot-sep\"></span><span>September 2025</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Morocco · Fez</div><h3 class=\"card-title\"><a href=\"/2-days-in-fez-itinerary/\" style=\"color:inherit;text-decoration:none;\">Fez: Into the Labyrinth of the Eternal City</a></h3><p class=\"card-excerpt\">A guide to Fez and its ancient medina — blue gates, tannery light, narrow lanes, and the feeling of entering a city built before the map learned restraint.</p><div class=\"card-meta\"><span>Guide</span><span class=\"dot-sep\"></span><span>Morocco</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Morocco · Tangier</div><h3 class=\"card-title\"><a href=\"/3-days-in-tangier-at-the-edge-of-two-worlds/\" style=\"color:inherit;text-decoration:none;\">Tangier: At the Edge of Two Worlds</a></h3><p class=\"card-excerpt\">A guide to Tangier at the meeting of sea roads — medina hills, café terraces, Atlantic wind, and the narrow strait between continents.</p><div class=\"card-meta\"><span>Guide</span><span class=\"dot-sep\"></span><span>Morocco</span></div></div>\n  </div>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-west-africa\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>West Africa</em></h2>\n    \n  </div>\n  <p class=\"panel-empty\">The road has not yet reached these shores. But the traveller is patient.</p>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-east-africa\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>East Africa</em></h2>\n    \n  </div>\n  <p class=\"panel-empty\">The road has not yet reached these shores. But the traveller is patient.</p>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-middle-east\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>Middle East</em></h2>\n    \n  </div>\n  <div class=\"panel-grid\">\n    <div class=\"panel-card\"><div class=\"card-region\">Turkey · Middle East</div><h3 class=\"card-title\">Between Two Continents</h3><p class=\"card-excerpt\">Istanbul does not belong to any single world — it stands at the crossing of many.</p><div class=\"card-meta\"><span>8 days</span><span class=\"dot-sep\"></span><span>October</span></div></div>\n  </div>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-south-asia\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>South Asia</em></h2>\n    \n  </div>\n  <p class=\"panel-empty\">The road has not yet reached these shores. But the traveller is patient.</p>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-southeast-asia\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>Southeast Asia</em></h2>\n    \n  </div>\n  <div class=\"panel-grid\">\n    <div class=\"panel-card\"><div class=\"card-region\">Vietnam · Southeast Asia</div><h3 class=\"card-title\">The Long Road from Hanoi</h3><p class=\"card-excerpt\">They boarded the night train south as the city was going to sleep, and woke to mountains entirely unknown.</p><div class=\"card-meta\"><span>18 days</span><span class=\"dot-sep\"></span><span>February</span></div></div>\n    <div class=\"panel-card\"><div class=\"card-region\">Thailand · Southeast Asia</div><h3 class=\"card-title\">North of Bangkok, Toward the Mountains</h3><p class=\"card-excerpt\">Chiang Mai arrived slowly, the way all good cities do — first as a rumour, then as a smell of jasmine.</p><div class=\"card-meta\"><span>12 days</span><span class=\"dot-sep\"></span><span>January</span></div></div>\n  </div>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-east-asia\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>East Asia</em></h2>\n    \n  </div>\n  <div class=\"panel-grid\">\n    <div class=\"panel-card\"><div class=\"card-region\">Japan · East Asia</div><h3 class=\"card-title\">Where the Temples Keep Their Silence</h3><p class=\"card-excerpt\">Kyoto in November is a city made entirely of farewells — each maple leaf a small, burning letter of departure.</p><div class=\"card-meta\"><span>14 days</span><span class=\"dot-sep\"></span><span>November</span></div></div>\n  </div>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-central-asia\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>Central Asia</em></h2>\n    \n  </div>\n  <p class=\"panel-empty\">The road has not yet reached these shores. But the traveller is patient.</p>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-north-america\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>North America</em></h2>\n    \n  </div>\n  <p class=\"panel-empty\">The road has not yet reached these shores. But the traveller is patient.</p>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-central-america\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>Central America</em></h2>\n    \n  </div>\n  <p class=\"panel-empty\">The road has not yet reached these shores. But the traveller is patient.</p>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-south-america\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>South America</em></h2>\n    \n  </div>\n  <p class=\"panel-empty\">The road has not yet reached these shores. But the traveller is patient.</p>\n</div>\n\n<div class=\"region-panel open\" id=\"panel-oceania\">\n  <div class=\"panel-header\">\n    <h2 class=\"panel-title\"><em>Oceania</em></h2>\n    \n  </div>\n  <p class=\"panel-empty\">The road has not yet reached these shores. But the traveller is patient.</p>\n</div>\n\n\n\n</bodycopy></div></div></div></div>";
+// Region marker positions are given in the map's own coordinate space
+// (viewBox 0 0 1016.371 514.609). `posts` holds only real, published
+// chronicles — empty regions render an empty-state line, never fake cards.
+const regions = [
+  {
+    id: "north-america",
+    name: "North America",
+    cx: 175,
+    cy: 175,
+    posts: [],
+  },
+  {
+    id: "central-america",
+    name: "Central America",
+    cx: 185,
+    cy: 278,
+    posts: [],
+  },
+  {
+    id: "south-america",
+    name: "South America",
+    cx: 235,
+    cy: 355,
+    posts: [],
+  },
+  {
+    id: "europe",
+    name: "Europe",
+    cx: 470,
+    cy: 148,
+    posts: [
+      {
+        href: "/4-weeks-portugal-to-spain-by-rail-road/",
+        region: "Portugal & Spain · Europe",
+        title: "Portugal to Spain by Rail and Road — The Complete Circuit",
+        excerpt:
+          "A full Portugal and Spain circuit by rail and road — Porto, Lisbon, Andalucía, Madrid, Barcelona, and the smaller detours that gave the route its texture.",
+        meta: ["Full circuit", "Summer 2024"],
+      },
+      {
+        href: "/italy-morocco-seville-4-week-itinerary/",
+        region: "Italy · Morocco · Spain",
+        title: "Italy, Morocco & Seville — Four Weeks Across Two Continents",
+        excerpt:
+          "Bologna and Rome, the imperial cities of Morocco, and across the Strait into Andalucía — a single month-long arc joining Europe and North Africa.",
+        meta: ["4 weeks", "September 2025"],
+      },
+      {
+        href: "/10-days-in-sevilla/",
+        region: "Spain · Andalucía",
+        title: "Andalucía Without Rush",
+        excerpt:
+          "Ten days in southern Spain’s triumvirate of Moorish inheritance — using Seville as a fixed base, making the region reveal itself not by conquest, but by return.",
+        meta: ["10 days", "September 2025"],
+      },
+      {
+        href: "/1-day-in-cordoba/",
+        region: "Spain · Andalucía",
+        title: "The City Between Empires — One Day in Córdoba",
+        excerpt:
+          "A day trip from Seville to Córdoba — mosque-cathedral shadow, Roman stone, orange courtyards, and the city caught between its empires.",
+        meta: ["1 day", "Autumn 2024"],
+      },
+      {
+        href: "/1-day-in-cadiz/",
+        region: "Spain · Andalucía",
+        title: "Cádiz — At the Edge of the Known World",
+        excerpt:
+          "A day trip to Cádiz, where the old city narrows toward the Atlantic — sea walls, bright plazas, fried fish, and the edge of Spain facing outward.",
+        meta: ["1 day", "Autumn 2024"],
+      },
+      {
+        href: "/7-days-in-barcelona/",
+        region: "Spain · Catalonia",
+        title: "Barcelona — Gaudí's Unfinished Argument",
+        excerpt:
+          "Seven days in Barcelona through Gaudí’s monuments, Gothic streets, markets, seaside edges, and the unfinished argument rising above the city.",
+        meta: ["7 days", "Summer 2024"],
+      },
+      {
+        href: "/1-day-in-colonia-guell/",
+        region: "Spain · Catalonia",
+        title: "Colonia Güell — Gaudí's Forgotten Blueprint",
+        excerpt:
+          "A short journey to Gaudí’s unfinished crypt at Colonia Güell — a quiet architectural rehearsal for the impossible argument later made in Barcelona.",
+        meta: ["Guide", "Summer 2024"],
+      },
+      {
+        href: "/1-day-in-figueres-girona/",
+        region: "Spain · Catalonia",
+        title: "Figueres and Girona — A Day Inside Dalí's Mind",
+        excerpt:
+          "A Catalonia day trip through Dalí’s theatrical museum in Figueres and Girona’s medieval lanes, where surrealism gives way to stone and riverlight.",
+        meta: ["1 day", "Summer 2024"],
+      },
+      {
+        href: "/1-day-in-tarragona-sitges/",
+        region: "Spain · Catalonia",
+        title: "Tarragona and Sitges — Roman Stone and Seaside Light",
+        excerpt:
+          "A Barcelona day trip split between Tarragona’s Roman remains and Sitges’ bright coastal ease — stone, sea air, and a softer edge of Catalonia.",
+        meta: ["1 day", "Summer 2024"],
+      },
+      {
+        href: "/3-days-in-madrid-the-capital-at-full-volume/",
+        region: "Spain · Madrid",
+        title: "Madrid — The Capital at Full Volume",
+        excerpt:
+          "Two days in Spain’s capital at full voltage — plazas, galleries, late meals, and the civic theatre of a city that refuses to lower its voice.",
+        meta: ["2 days", "Summer 2024"],
+      },
+      {
+        href: "/4-days-in-valencia-itinerary/",
+        region: "Spain · Valencia",
+        title: "Valencia — Where the River Became a Garden",
+        excerpt:
+          "A guide to Valencia’s old quarter, market halls, beaches, paella country, and the Turia — the riverbed remade as the city’s long green spine.",
+        meta: ["Guide", "Summer 2024"],
+      },
+      {
+        href: "/2-days-in-caceres/",
+        region: "Spain · Extremadura",
+        title: "Cáceres — A Medieval City Held in Amber",
+        excerpt:
+          "A guide to Cáceres, the Extremaduran city of towers, plazas, and preserved medieval silence — a place that seems to resist the present tense.",
+        meta: ["Guide", "Summer 2024"],
+      },
+      {
+        href: "/1-day-in-santiago-de-compostela/",
+        region: "Spain · Galicia",
+        title: "Santiago de Compostela — The End of the Pilgrim Road",
+        excerpt:
+          "A day trip to the old pilgrim city from Porto — granite streets, cathedral shadow, and the strange hush that gathers where long roads finally end.",
+        meta: ["1 day", "Summer 2024"],
+      },
+      {
+        href: "/5-days-in-lisbon-itinerary/",
+        region: "Portugal · Lisbon",
+        title: "Lisbon — Seven Hills and the Sound of Fado",
+        excerpt:
+          "Five days in Lisbon across miradouros, tiled streets, trams, fado rooms, river light, and the steep grammar of a city built on seven hills.",
+        meta: ["5 days", "Summer 2024"],
+      },
+      {
+        href: "/1-day-in-sintra-the-mountain-of-romantic-follies/",
+        region: "Portugal · Sintra",
+        title: "Sintra — The Mountain of Romantic Follies",
+        excerpt:
+          "A day trip to Sintra’s palaces, forests, steep roads, and Romantic excess — where the mountain turns architecture into theatre.",
+        meta: ["1 day", "Summer 2024"],
+      },
+      {
+        href: "/5-days-in-porto-the-city-the-river-built/",
+        region: "Portugal · Douro",
+        title: "Porto — The City the River Built",
+        excerpt:
+          "Four days in Porto, where the Douro cuts through stone and the city gathers itself in terraces, tiled churches, taverns, bridges, and river light.",
+        meta: ["4 days", "Summer 2024"],
+      },
+      {
+        href: "/douro-valley-day-trip/",
+        region: "Portugal · Douro",
+        title: "The Douro Valley — A Day Among the Terraced Vines",
+        excerpt:
+          "A day through the Douro Valley’s terraced vineyards, river bends, station tiles, and slow wine-country distances from Porto.",
+        meta: ["1 day", "Summer 2024"],
+      },
+      {
+        href: "/2-days-in-evora/",
+        region: "Portugal · Alentejo",
+        title: "Évora — The Town of Bones and Roman Stone",
+        excerpt:
+          "A guide to Évora’s Roman temple, whitewashed lanes, chapel of bones, and Alentejo stillness — a town where history feels close enough to touch.",
+        meta: ["Guide", "Summer 2024"],
+      },
+      {
+        href: "/4-days-in-lagos-the-coast-of-golden-cliffs/",
+        region: "Portugal · Algarve",
+        title: "Lagos — The Coast of Golden Cliffs",
+        excerpt:
+          "A guide to Lagos and the Algarve coast — golden cliffs, sea caves, old walls, and the Atlantic light that sharpens every edge.",
+        meta: ["Guide", "Summer 2024"],
+      },
+      {
+        href: "/4-days-in-mondim-de-basto/",
+        region: "Portugal · Tâmega Valley",
+        title: "Mondim de Basto — The Detour Into the Mountains",
+        excerpt:
+          "A mountain detour in northern Portugal — river valleys, granite villages, slow roads, and the kind of pause that changes the shape of a journey.",
+        meta: ["Guide", "Summer 2024"],
+      },
+      {
+        href: "/4-days-in-bologna/",
+        region: "Italy · Emilia-Romagna",
+        title: "Bologna: The Fat City’s Table",
+        excerpt:
+          "A deeper guide to eating in Emilia-Romagna — the old country of ragù, mortadella, Parmigiano-Reggiano, and the settled conviction that lunch deserves reverence.",
+        meta: ["4 days", "September 2025"],
+      },
+      {
+        href: "/six-days-in-rome-at-the-table-of-empires/",
+        region: "Italy · Lazio",
+        title: "Rome: Six Days at the Table of Empires",
+        excerpt:
+          "Six days in Rome at the table of empires — ruins, churches, piazzas, trattorias, and the old imperial appetite still moving beneath the stone.",
+        meta: ["6 days", "September 2025"],
+      },
+      {
+        href: "/san-marino-day-trip-guide/",
+        region: "San Marino",
+        title: "San Marino: Upon the Rock of the Oldest Republic",
+        excerpt:
+          "A day trip from Bologna to the old republic on the mountain — towers, steep streets, and the strange endurance of a country built into stone.",
+        meta: ["1 day", "September 2025"],
+      },
+    ],
+  },
+  {
+    id: "north-africa",
+    name: "North Africa",
+    cx: 490,
+    cy: 268,
+    posts: [
+      {
+        href: "/the-imperial-circuit-morocco-in-14-days/",
+        region: "Morocco · Imperial Cities",
+        title: "The Imperial Circuit: Morocco in 14 Days",
+        excerpt:
+          "Marrakech to Rabat to Fes to Tangier — a standalone journey through Morocco’s old capitals, with the road running from red walls and desert light to medina shadow, Atlantic wind, and the northern strait.",
+        meta: ["14 days", "September 2025"],
+      },
+      {
+        href: "/2-days-in-fez-itinerary/",
+        region: "Morocco · Fez",
+        title: "Fez: Into the Labyrinth of the Eternal City",
+        excerpt:
+          "A guide to Fez and its ancient medina — blue gates, tannery light, narrow lanes, and the feeling of entering a city built before the map learned restraint.",
+        meta: ["Guide", "Morocco"],
+      },
+      {
+        href: "/3-days-in-tangier-at-the-edge-of-two-worlds/",
+        region: "Morocco · Tangier",
+        title: "Tangier: At the Edge of Two Worlds",
+        excerpt:
+          "A guide to Tangier at the meeting of sea roads — medina hills, café terraces, Atlantic wind, and the narrow strait between continents.",
+        meta: ["Guide", "Morocco"],
+      },
+    ],
+  },
+  {
+    id: "west-africa",
+    name: "West Africa",
+    cx: 440,
+    cy: 340,
+    posts: [],
+  },
+  {
+    id: "east-africa",
+    name: "East Africa",
+    cx: 560,
+    cy: 330,
+    posts: [],
+  },
+  {
+    id: "middle-east",
+    name: "Middle East",
+    cx: 582,
+    cy: 218,
+    posts: [],
+  },
+  {
+    id: "central-asia",
+    name: "Central Asia",
+    cx: 660,
+    cy: 178,
+    posts: [],
+  },
+  {
+    id: "south-asia",
+    name: "South Asia",
+    cx: 648,
+    cy: 248,
+    posts: [],
+  },
+  {
+    id: "southeast-asia",
+    name: "Southeast Asia",
+    cx: 760,
+    cy: 278,
+    posts: [],
+  },
+  {
+    id: "east-asia",
+    name: "East Asia",
+    cx: 790,
+    cy: 165,
+    posts: [],
+  },
+  {
+    id: "oceania",
+    name: "Oceania",
+    cx: 855,
+    cy: 398,
+    posts: [],
+  },
+];
+
+const ACTIVE = "europe";
+const EMPTY_STATE =
+  "The road has not yet reached these shores. But the traveller is patient.";
+
+const mapRegions = regions.map((r) => ({
+  id: r.id,
+  name: r.name,
+  cx: r.cx,
+  cy: r.cy,
+  count: r.posts.length,
+}));
 ---
 
 <BaseLayout
   title="By Region — There & Back Again"
-  description="Explore There & Back Again's travel chronicles by region — from Portugal, Spain and Italy to Morocco and beyond."
+  description="Explore There & Back Again's travel chronicles by region on an interactive world map — from Portugal, Spain and Italy to Morocco and beyond."
   canonical="https://travel.mitchchadban.com/by-region/"
 >
-  <Fragment set:html={pageContent} />
+  <div class="region-header">
+    <div class="page-label">Explore by region</div>
+    <h1 class="region-title">The <em>Known World</em></h1>
+    <p class="region-intro">
+      A map of where the road has been. Choose a region to read its chronicles.
+    </p>
+  </div>
+
+  <RegionMap regions={mapRegions} activeId={ACTIVE} />
+
+  <div class="region-panels">
+    {
+      regions.map((r) => (
+        <section
+          class:list={["region-panel", { open: r.id === ACTIVE }]}
+          id={`panel-${r.id}`}
+          tabindex="-1"
+          aria-labelledby={`panel-${r.id}-title`}
+          hidden={r.id !== ACTIVE}
+        >
+          <div class="panel-header">
+            <h2 class="panel-title" id={`panel-${r.id}-title`}>
+              <em>{r.name}</em>
+            </h2>
+            <span class="panel-count">
+              {r.posts.length > 0
+                ? `${r.posts.length} ${r.posts.length === 1 ? "chronicle" : "chronicles"}`
+                : "Not yet written"}
+            </span>
+          </div>
+
+          {r.posts.length > 0 ? (
+            <div class="panel-grid">
+              {r.posts.map((p) => (
+                <article class="panel-card">
+                  <div class="card-region">{p.region}</div>
+                  <h3 class="card-title">
+                    <a href={p.href}>{p.title}</a>
+                  </h3>
+                  <p class="card-excerpt">{p.excerpt}</p>
+                  {p.meta && p.meta.length > 0 && (
+                    <div class="card-meta">
+                      {p.meta.map((m, i) => (
+                        <>
+                          {i > 0 && <span class="dot-sep" aria-hidden="true" />}
+                          <span>{m}</span>
+                        </>
+                      ))}
+                    </div>
+                  )}
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p class="panel-empty">{EMPTY_STATE}</p>
+          )}
+        </section>
+      ))
+    }
+  </div>
 </BaseLayout>
+
+<script>
+  // Map / region-switcher interaction. Progressive enhancement: the active
+  // panel is already open in the server-rendered HTML.
+  const hotspots = Array.from(document.querySelectorAll<HTMLElement>(".hotspot"));
+  const switches = Array.from(
+    document.querySelectorAll<HTMLElement>(".region-switch__btn"),
+  );
+  const panels = Array.from(
+    document.querySelectorAll<HTMLElement>(".region-panel"),
+  );
+
+  function select(id: string | undefined, moveFocus: boolean) {
+    if (!id) return;
+
+    hotspots.forEach((h) => {
+      const on = h.dataset.region === id;
+      h.classList.toggle("active", on);
+      h.setAttribute("aria-expanded", on ? "true" : "false");
+    });
+    switches.forEach((s) => {
+      const on = s.dataset.region === id;
+      s.classList.toggle("active", on);
+      s.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+
+    let active: HTMLElement | null = null;
+    panels.forEach((p) => {
+      const on = p.id === `panel-${id}`;
+      p.classList.toggle("open", on);
+      if (on) {
+        p.removeAttribute("hidden");
+        active = p;
+      } else {
+        p.setAttribute("hidden", "");
+      }
+    });
+
+    if (active) {
+      if (moveFocus) (active as HTMLElement).focus();
+      if (window.innerWidth < 820) {
+        (active as HTMLElement).scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }
+
+  // SVG hotspots: role="button" groups need explicit keyboard handling.
+  hotspots.forEach((h) => {
+    h.addEventListener("click", () => select(h.dataset.region, false));
+    h.addEventListener("keydown", (e: KeyboardEvent) => {
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        e.preventDefault();
+        select(h.dataset.region, true);
+      }
+    });
+  });
+
+  // Native <button> switches: click covers Enter/Space already.
+  switches.forEach((s) => {
+    s.addEventListener("click", () => select(s.dataset.region, false));
+  });
+</script>

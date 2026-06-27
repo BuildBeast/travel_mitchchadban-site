@@ -1139,14 +1139,183 @@ footer p {
   color: #9ecf72;
 }
 
+.region-intro {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(221, 232, 208, 0.4);
+  margin-top: 1.1rem;
+}
+
+/* ── WORLD MAP ── */
+
 .map-wrap {
   position: relative;
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 0 4rem;
+}
+
+.region-map {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    rgba(40, 70, 30, 0.18),
+    rgba(10, 15, 8, 0) 70%
+  );
+}
+
+.map-land {
+  fill: #16240e;
+  stroke: rgba(120, 170, 80, 0.28);
+  stroke-width: 0.5;
 }
 
 .hotspot {
   cursor: pointer;
+}
+
+.hotspot__halo {
+  fill: rgba(158, 207, 114, 0.12);
+  stroke: rgba(158, 207, 114, 0.35);
+  stroke-width: 0.75;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.6);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hotspot__dot {
+  fill: #2f4a1d;
+  stroke: rgba(158, 207, 114, 0.5);
+  stroke-width: 1.25;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.hotspot.has-posts .hotspot__dot {
+  fill: #9ecf72;
+  stroke: #cde9b0;
+}
+
+.hotspot__label {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  fill: rgba(221, 232, 208, 0.55);
+  paint-order: stroke;
+  stroke: #0a0f08;
+  stroke-width: 2.5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.hotspot.has-posts .hotspot__label {
+  opacity: 0.75;
+}
+
+.hotspot:hover .hotspot__halo,
+.hotspot.active .hotspot__halo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hotspot:hover .hotspot__label,
+.hotspot.active .hotspot__label,
+.hotspot:focus-visible .hotspot__label {
+  opacity: 1;
+  fill: #dde8d0;
+}
+
+.hotspot:hover .hotspot__dot {
+  fill: #9ecf72;
+}
+
+.hotspot.active .hotspot__dot {
+  fill: #cde9b0;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.hotspot:focus {
+  outline: none;
+}
+
+.hotspot:focus-visible .hotspot__halo {
+  opacity: 1;
+  transform: scale(1.15);
+  stroke: #9ecf72;
+  stroke-width: 1.25;
+}
+
+/* ── COMPACT REGION SWITCHER (primary nav on phones, quick index on desktop) ── */
+
+.region-switch {
+  margin: 2.25rem auto 0;
+  max-width: 1100px;
+}
+
+.region-switch__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.region-switch__btn {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: rgba(221, 232, 208, 0.55);
+  background: rgba(20, 32, 14, 0.55);
+  border: 0.5px solid rgba(160, 200, 120, 0.16);
+  border-radius: 2px;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+}
+
+.region-switch__btn:hover {
+  color: #dde8d0;
+  border-color: rgba(160, 200, 120, 0.4);
+}
+
+.region-switch__btn.active {
+  color: #0a0f08;
+  background: #9ecf72;
+  border-color: #9ecf72;
+}
+
+.region-switch__btn.active .region-switch__count {
+  color: rgba(10, 15, 8, 0.65);
+}
+
+.region-switch__count {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: rgba(158, 207, 114, 0.7);
+}
+
+.region-switch__btn:focus-visible {
+  outline: 2px solid #9ecf72;
+  outline-offset: 2px;
+}
+
+/* ── REGION PANELS ── */
+
+.region-panels {
+  margin-top: 1rem;
 }
 
 .region-panel {
@@ -1160,10 +1329,15 @@ footer p {
   display: block;
 }
 
+.region-panel:focus {
+  outline: none;
+}
+
 .panel-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  gap: 1rem;
   margin-bottom: 2.5rem;
 }
 
@@ -1179,20 +1353,13 @@ footer p {
   color: #9ecf72;
 }
 
-.panel-close {
+.panel-count {
   font-family: "Cormorant Garamond", serif;
   font-size: 13px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(221, 232, 208, 0.3);
-  cursor: pointer;
-  border: none;
-  background: none;
-  transition: color 0.3s;
-}
-
-.panel-close:hover {
-  color: #9ecf72;
+  white-space: nowrap;
 }
 
 .panel-grid {
@@ -1233,6 +1400,22 @@ footer p {
   line-height: 1.25;
   color: #dde8d0;
   margin-bottom: 0.8rem;
+}
+
+.card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.card-title a:hover,
+.panel-card:hover .card-title a {
+  color: #9ecf72;
+}
+
+.card-title a:focus-visible {
+  outline: 2px solid #9ecf72;
+  outline-offset: 3px;
 }
 
 .card-excerpt {
@@ -2061,20 +2244,41 @@ footer p {
     line-height: 1.45;
   }
 
-  /* By Region mobile fallback */
+  /* By Region — map stays usable on phones; the region switcher is the
+     primary control and the panel toggle still works one-at-a-time. */
   .map-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hotspot__label {
     display: none;
   }
 
-  .region-panel,
-  .region-panel.open {
-    display: block;
+  .region-switch {
+    margin-top: 1.75rem;
+  }
+
+  .region-switch__list {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .region-switch__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .region-switch__btn {
+    flex: 0 0 auto;
+  }
+
+  .region-panel {
     padding-top: 2rem;
     padding-bottom: 2.25rem;
-  }
-
-  .panel-close {
-    display: none;
   }
 
   .panel-header {
