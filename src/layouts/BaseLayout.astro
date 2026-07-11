@@ -62,6 +62,17 @@ const ogImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
 
     <!-- Per-page structured data (JSON-LD) and any extra head tags -->
     <slot name="head" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XHNFCYJ42"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-8XHNFCYJ42');
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
