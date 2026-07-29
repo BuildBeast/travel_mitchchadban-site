@@ -3,9 +3,22 @@ import { WORLD_VIEWBOX, WORLD_PATH } from "./world-map-path.js";
 
 // `regions` is an array of { id, name, cx, cy, count }.
 // `activeId` is the region that should be open on first paint.
+interface Region {
+  id: string;
+  name: string;
+  cx: number;
+  cy: number;
+  count: number;
+}
+
+interface Props {
+  regions?: Region[];
+  activeId?: string;
+}
+
 const { regions = [], activeId } = Astro.props;
 
-const label = (count) =>
+const label = (count: number) =>
   count === 0
     ? "no chronicles yet"
     : `${count} ${count === 1 ? "chronicle" : "chronicles"}`;

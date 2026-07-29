@@ -8,7 +8,7 @@ const NAV = [
 ];
 
 const pathname = Astro.url.pathname;
-const isActive = (href) => pathname === href;
+const isActive = (href: string) => pathname === href;
 ---
 
 <header class="header-web" role="banner">
@@ -60,7 +60,7 @@ const isActive = (href) => pathname === href;
 
 <script>
   document.querySelectorAll('[data-mobnav]').forEach((nav) => {
-    const toggle = nav.querySelector('[data-mobnav-toggle]');
+    const toggle = nav.querySelector<HTMLElement>('[data-mobnav-toggle]');
     const closers = nav.querySelectorAll('[data-mobnav-close]');
     const links = nav.querySelectorAll('.mobnav__links a');
     if (!toggle) return;
@@ -71,7 +71,7 @@ const isActive = (href) => pathname === href;
       nav.setAttribute('open', '');
       toggle.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
-      const first = nav.querySelector('.mobnav__links a');
+      const first = nav.querySelector<HTMLElement>('.mobnav__links a');
       if (first) first.focus();
     };
 

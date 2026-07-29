@@ -64,7 +64,7 @@ const ogImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
     <slot name="head" />
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XHNFCYJ42"></script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8XHNFCYJ42"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
