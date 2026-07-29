@@ -1,0 +1,65 @@
+---
+/**
+ * Further-reading cards. Emits the legacy `.next-chronicles` DOM, with one
+ * deliberate correction: the whole card is a single link to a real route,
+ * rather than the legacy pattern where only the region line was clickable and
+ * several cards pointed at `/coming-soon/`.
+ *
+ * Only link to routes that exist. Do not link to `/coming-soon/`.
+ */
+interface Card {
+  /** Site-absolute path with trailing slash, e.g. '/1-day-in-cordoba/'. */
+  href: string;
+  /** Region line, e.g. 'Spain · Andalucía'. */
+  region: string;
+  title: string;
+  excerpt: string;
+  /** Two short meta chips shown under the excerpt. */
+  meta?: [string, string];
+}
+
+interface Props {
+  label?: string;
+  id?: string;
+  cards: Card[];
+}
+
+const { label = 'Further Reading', id, cards } = Astro.props;
+---
+
+<div class="next-chronicles" id={id}>
+  <div class="section-label">{label}</div>
+  <div class="posts-grid">
+    {
+      cards.map((card) => (
+        <a class="post-card chronicle-card" href={card.href}>
+          <div class="post-region">{card.region}</div>
+          <div class="post-title">{card.title}</div>
+          <div class="post-excerpt">{card.excerpt}</div>
+          {card.meta && (
+            <div class="post-meta">
+              <span>{card.meta[0]}</span>
+              <span class="dot" />
+              <span>{card.meta[1]}</span>
+            </div>
+          )}
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  /* The legacy markup used a div for `.post-card`; making the whole card a link
+     needs these resets so it renders identically. Scoped — global.css untouched. */
+  a.chronicle-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a.chronicle-card:focus-visible {
+    outline: 2px solid #6a9a47;
+    outline-offset: 3px;
+  }
+</style>

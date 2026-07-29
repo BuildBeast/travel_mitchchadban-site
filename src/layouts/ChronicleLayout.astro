@@ -1,0 +1,85 @@
+---
+/**
+ * Layout for NEW chronicles.
+ *
+ * Wraps `BaseLayout` and adds:
+ *   - typed article metadata (see `components/chronicle/types.ts`)
+ *   - canonical URL derived from `meta.path` (no hand-typed absolute URLs)
+ *   - Article + BreadcrumbList JSON-LD, plus FAQPage when `meta.faq` is supplied,
+ *     mirroring the shape already used by the legacy chronicles
+ *
+ * Legacy Cargo-migrated posts continue to use `BaseLayout` directly and are untouched.
+ * New pages need no `.pages/.page/.page-layout/.page-content/bodycopy` wrappers —
+ * those carry no styling (verified against `global.css`).
+ */
+import BaseLayout from './BaseLayout.astro';
+import { absolute, type ChronicleMeta } from '../components/chronicle/types';
+
+interface Props {
+  meta: ChronicleMeta;
+}
+
+const { meta } = Astro.props;
+
+const canonical = absolute(meta.path);
+const headline = meta.headline ?? meta.title;
+
+const trail = [
+  { name: 'Home', path: '/' },
+  ...(meta.breadcrumbs ?? [{ name: 'Chronicles', path: '/chronicles/' }]),
+  { name: headline, path: meta.path },
+];
+
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'Article',
+    headline,
+    description: meta.description,
+    author: { '@type': 'Person', name: 'Mitch Chadban' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'There & Back Again',
+      url: `${absolute('/')}`,
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    url: canonical,
+    inLanguage: 'en-AU',
+    ...(meta.ogImage ? { image: absolute(meta.ogImage) } : {}),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((crumb, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: crumb.name,
+      item: absolute(crumb.path),
+    })),
+  },
+];
+
+if (meta.faq?.length) {
+  graph.push({
+    '@type': 'FAQPage',
+    mainEntity: meta.faq.map((entry) => ({
+      '@type': 'Question',
+      name: entry.question,
+      acceptedAnswer: { '@type': 'Answer', text: entry.answer },
+    })),
+  });
+}
+
+const schema = { '@context': 'https://schema.org', '@graph': graph };
+const jsonLd =
+  '<script type="application/ld+json">' + JSON.stringify(schema) + '<\/script>';
+---
+
+<BaseLayout
+  title={`${meta.title} — There & Back Again`}
+  description={meta.description}
+  canonical={canonical}
+  ogType="article"
+  {...meta.ogImage ? { image: meta.ogImage } : {}}
+>
+  <Fragment slot="head" set:html={jsonLd} />
+  <slot />
+</BaseLayout>

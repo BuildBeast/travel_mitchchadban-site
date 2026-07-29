@@ -1,0 +1,103 @@
+---
+/**
+ * In-page anchor menu. The site had no anchor-menu or table-of-contents
+ * implementation, so this is genuinely new. Styles are component-scoped —
+ * `global.css` is not modified — and reuse the existing accent greens,
+ * hairline rules and letter-spacing already used by `.page-label` /
+ * `.section-label`.
+ */
+import type { AnchorLink } from './types';
+
+interface Props {
+  links: AnchorLink[];
+  label?: string;
+}
+
+const { links, label = 'On this page' } = Astro.props;
+---
+
+{
+  links.length > 0 && (
+    <nav class="anchor-menu" aria-label={label}>
+      <p class="anchor-menu__label">{label}</p>
+      <ul class="anchor-menu__list">
+        {links.map((link) => (
+          <li>
+            <a href={`#${link.id}`}>{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+<style is:global>
+  /* The site header is `position: sticky` and about 78px tall, so an anchor
+     jump would otherwise land the target heading underneath it. Offset the
+     anchor targets this nav can reach.
+     `:where()` keeps specificity at zero so this can never override anything,
+     and the selector list is confined to chronicle article elements — legacy
+     pages, which have no in-page anchors, are unaffected. */
+  :where(.chapter-break, .itin-block, .post-body h2, .post-body h3)[id] {
+    scroll-margin-top: 6rem;
+  }
+</style>
+
+<style>
+  .anchor-menu {
+    max-width: 820px;
+    margin: 0 auto 3.5rem;
+    padding: 1.4rem 1.6rem;
+    border-top: 0.5px solid rgba(160, 200, 120, 0.12);
+    border-bottom: 0.5px solid rgba(160, 200, 120, 0.12);
+  }
+
+  .anchor-menu__label {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #5a8a3a;
+    margin: 0 0 1rem;
+  }
+
+  .anchor-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.6rem;
+  }
+
+  .anchor-menu__list a {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(221, 232, 208, 0.72);
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(160, 200, 120, 0.25);
+    padding-bottom: 0.15rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .anchor-menu__list a:hover,
+  .anchor-menu__list a:focus-visible {
+    color: #a8cc82;
+    border-bottom-color: #6a9a47;
+  }
+
+  @media (max-width: 820px) {
+    .anchor-menu {
+      margin-bottom: 2.5rem;
+      padding: 1.1rem 0;
+    }
+
+    .anchor-menu__list {
+      gap: 0.45rem 1.1rem;
+    }
+
+    .anchor-menu__list a {
+      font-size: 1rem;
+    }
+  }
+</style>

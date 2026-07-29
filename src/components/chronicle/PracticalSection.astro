@@ -1,0 +1,42 @@
+---
+/**
+ * A labelled group inside a <Practical> block.
+ * Children are `.prac-item` / `.tip-row` divs, written directly in the page
+ * so prose stays readable and links can be inlined normally.
+ *
+ * When `level` is set the label is rendered as a real heading (h3/h4) instead
+ * of a styled div, so a page can keep a valid heading outline where the label
+ * genuinely functions as a sub-heading.
+ */
+interface Props {
+  label: string;
+  /** Render the label as a heading of this level rather than a plain div. */
+  level?: 3 | 4;
+  /** Optional anchor target for the section. */
+  id?: string;
+}
+
+const { label, level, id } = Astro.props;
+const Heading = level ? (`h${level}` as 'h3' | 'h4') : null;
+---
+
+<div class="prac-section" id={id}>
+  {
+    Heading ? (
+      <Heading class="prac-label">{label}</Heading>
+    ) : (
+      <div class="prac-label">{label}</div>
+    )
+  }
+  <slot />
+</div>
+
+<style>
+  /* The legacy `.prac-label` styling assumes a div; reset heading defaults so a
+     real h3/h4 renders identically. Scoped — global.css is untouched. */
+  h3.prac-label,
+  h4.prac-label {
+    margin-top: 0;
+    font-weight: inherit;
+  }
+</style>

@@ -1,0 +1,117 @@
+---
+/**
+ * Article figure. The site previously had no image pattern at all — no
+ * <figure>, no captions, no images of any kind. This is the new convention.
+ *
+ * Images live at `public/images/<article-slug>/<descriptive-name>.jpg` and are
+ * served byte-identical: no resizing, no re-encoding, no format conversion.
+ * `width`/`height` are the true pixel dimensions, which together with the
+ * existing `img { max-width:100%; height:auto }` rule in global.css reserves
+ * the correct aspect ratio and prevents layout shift.
+ *
+ * Accessibility:
+ *   - `alt` is required. Pass `alt=""` for a decorative image; that is the only
+ *     case in which an empty string is correct.
+ *   - A caption is optional and should add context, not restate the alt text.
+ */
+interface Props {
+  /** Site-absolute path, e.g. '/images/3-days-in-seville/giralda-from-alcazar.jpg'. */
+  src: string;
+  /** Describe what is visibly in the frame. Empty string only for decorative images. */
+  alt: string;
+  /** True pixel width of the file. */
+  width: number;
+  /** True pixel height of the file. */
+  height: number;
+  /** Optional caption. Omit rather than padding with filler. */
+  caption?: string;
+  /**
+   * Set true for a genuine above-the-fold image (at most one per page).
+   * Loads eagerly with high fetch priority; everything else lazy-loads.
+   */
+  priority?: boolean;
+  /**
+   * Presentation width.
+   *   'wide'     — default, up to 980px; for landscape frames
+   *   'narrow'   — up to the 820px prose column
+   *   'portrait' — up to 560px, centred; use for tall frames so they do not
+   *                dominate the scroll
+   */
+  variant?: 'wide' | 'narrow' | 'portrait';
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  caption,
+  priority = false,
+  variant = 'wide',
+} = Astro.props;
+---
+
+<figure
+  class:list={[
+    'chronicle-figure',
+    { 'chronicle-figure--narrow': variant === 'narrow' },
+    { 'chronicle-figure--portrait': variant === 'portrait' },
+  ]}
+>
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={priority ? 'eager' : 'lazy'}
+    decoding={priority ? 'sync' : 'async'}
+    fetchpriority={priority ? 'high' : undefined}
+  />
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .chronicle-figure {
+    max-width: 980px;
+    margin: 3rem auto;
+    padding: 0;
+  }
+
+  .chronicle-figure--narrow {
+    max-width: 820px;
+  }
+
+  .chronicle-figure--portrait {
+    max-width: 560px;
+  }
+
+  .chronicle-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0.5px solid rgba(160, 200, 120, 0.12);
+  }
+
+  .chronicle-figure figcaption {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: rgba(221, 232, 208, 0.45);
+    margin-top: 0.85rem;
+    padding-left: 0.9rem;
+    border-left: 1.5px solid rgba(93, 138, 58, 0.5);
+  }
+
+  @media (max-width: 820px) {
+    .chronicle-figure {
+      margin: 2.2rem auto;
+    }
+
+    .chronicle-figure figcaption {
+      font-size: 0.95rem;
+      margin-top: 0.7rem;
+    }
+  }
+</style>

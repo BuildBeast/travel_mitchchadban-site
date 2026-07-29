@@ -1,0 +1,72 @@
+---
+/**
+ * Article hero. Emits the same DOM as the legacy chronicles' `.post-hero`
+ * block, so it inherits existing typography and spacing with no new CSS.
+ */
+import type { HeroStat } from './types';
+
+interface Props {
+  /** Route strip, e.g. ['Spain', 'Andalucía', 'Seville']. */
+  route?: string[];
+  /** Small kicker above the title, e.g. 'Itinerary · Three Days'. */
+  label?: string;
+  /** Main title. Rendered as the page's single <h1>. */
+  title: string;
+  /** Optional second line of the title, rendered in italics beneath. */
+  titleEmphasis?: string;
+  /** Standfirst / deck. */
+  standfirst: string;
+  /** Up to four hero stats. */
+  stats?: HeroStat[];
+}
+
+const { route = [], label, title, titleEmphasis, standfirst, stats = [] } =
+  Astro.props;
+---
+
+<div class="post-hero">
+  {
+    route.length > 0 && (
+      <div class="post-route-strip">
+        {route.map((place, i) => (
+          <>
+            {i > 0 && <Fragment set:html="&nbsp;·&nbsp;" />}
+            <span>{place}</span>
+          </>
+        ))}
+      </div>
+    )
+  }
+
+  {label && <div class="page-label">{label}</div>}
+
+  <h1 class="post-hero-title">
+    {title}{titleEmphasis && (<><br /><em>{titleEmphasis}</em></>)}
+  </h1>
+
+  <p class="post-hero-sub">{standfirst}</p>
+
+  {
+    stats.length > 0 && (
+      <div class="post-stats">
+        {stats.map((stat) => (
+          <div class="stat">
+            <span class="stat-num">{stat.num}</span>
+            <span class="stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  /* `global.css` gives `.post-stats` a `max-width` with `margin: 0`, so between
+     roughly 700px and 1024px the block sits flush against the left padding edge
+     and leaves a wide empty gap to its right. Centring it is a one-line
+     correction. This style is component-scoped, so it applies to new chronicles
+     only — legacy pages keep their existing behaviour untouched. */
+  .post-stats {
+    margin-inline: auto;
+  }
+</style>

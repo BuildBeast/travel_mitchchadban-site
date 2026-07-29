@@ -1,0 +1,25 @@
+---
+/**
+ * Chapter / day heading. Emits the legacy `.chapter-break` DOM so it inherits
+ * existing styling. The `id` is carried on a wrapper so `AnchorNav` can target
+ * it and so the heading itself stays a clean <h2>.
+ */
+interface Props {
+  /** Anchor target, e.g. 'day-one'. Must match the AnchorNav link id. */
+  id?: string;
+  /** Roman numeral or short marker, e.g. 'I.'. */
+  number?: string;
+  /** The chapter heading. Rendered as <h2>. */
+  name: string;
+  /** One-line sub-heading beneath the chapter name. */
+  epithet?: string;
+}
+
+const { id, number, name, epithet } = Astro.props;
+---
+
+<div class="chapter-break" id={id}>
+  {number && <div class="chapter-number">{number}</div>}
+  <h2 class="chapter-name">{name}</h2>
+  {epithet && <p class="chapter-epithet">{epithet}</p>}
+</div>

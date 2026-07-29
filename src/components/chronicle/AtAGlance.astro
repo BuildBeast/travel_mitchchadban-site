@@ -1,0 +1,71 @@
+---
+/**
+ * "At a glance" summary block. Emits the legacy `.itin-block` DOM.
+ *
+ * `meta` rows are short label/value facts. `days` are the route rows.
+ * Extra free-form content (e.g. a booking list) goes in the default slot,
+ * after the day rows.
+ */
+interface MetaRow {
+  label: string;
+  value: string;
+}
+
+interface DayRow {
+  /** Left column, e.g. 'Day 1'. */
+  num: string;
+  /** Right column — the day in one line. */
+  text: string;
+}
+
+interface Props {
+  /** Block heading. */
+  title: string;
+  /** Anchor target. */
+  id?: string;
+  meta?: MetaRow[];
+  /** Heading above the day rows. */
+  daysHeading?: string;
+  days?: DayRow[];
+}
+
+const {
+  title,
+  id,
+  meta = [],
+  daysHeading = 'Day by Day',
+  days = [],
+} = Astro.props;
+---
+
+<div class="itin-block" id={id}>
+  <div class="itin-inner">
+    <div class="itin-block-title">{title}</div>
+
+    {
+      meta.map((row) => (
+        <div class="itin-meta">
+          <strong>{row.label}:</strong> {row.value}
+        </div>
+      ))
+    }
+
+    {
+      days.length > 0 && (
+        <>
+          <div class="itin-section-head">{daysHeading}</div>
+          <div class="itin-days">
+            {days.map((day) => (
+              <div class="itin-day-row">
+                <span class="itin-day-num">{day.num}</span>
+                {day.text}
+              </div>
+            ))}
+          </div>
+        </>
+      )
+    }
+
+    <slot />
+  </div>
+</div>

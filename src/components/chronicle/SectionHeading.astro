@@ -1,0 +1,79 @@
+---
+/**
+ * A second-level section heading for new chronicles.
+ *
+ * Why this exists: `global.css` styles `.chapter-name` (the big IM Fell English
+ * chapter title) and `.prac-label` (the small uppercase green label), but it has
+ * **no rule for a bare `h2` or `h3` at all** — those fall back to the browser
+ * default, which renders as 24px bold Cormorant, i.e. the same size as body
+ * copy. That leaves an article's minor sections with no visible hierarchy.
+ *
+ * This sits deliberately between the two existing levels — IM Fell English at
+ * ~34px against `.chapter-name`'s ~51px and body prose's 24px — and reuses the
+ * existing hairline rule and cream text colour. Styles are component-scoped, so
+ * legacy pages are untouched.
+ */
+interface Props {
+  /** Anchor target, matching an AnchorNav link id. */
+  id?: string;
+  /** Heading level. Defaults to 2. */
+  level?: 2 | 3;
+  /** Omit the separating rule above the heading. */
+  rule?: boolean;
+}
+
+const { id, level = 2, rule = true } = Astro.props;
+const Tag = `h${level}` as 'h2' | 'h3';
+---
+
+<Tag
+  id={id}
+  class:list={[
+    'chronicle-section-heading',
+    { 'chronicle-section-heading--sub': level === 3 },
+    { 'chronicle-section-heading--flush': !rule },
+  ]}
+>
+  <slot />
+</Tag>
+
+<style>
+  .chronicle-section-heading {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 2.15rem;
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: 0.01em;
+    color: #dde8d0;
+    margin: 3.6rem 0 1.5rem;
+    padding-top: 2.4rem;
+    border-top: 0.5px solid rgba(160, 200, 120, 0.1);
+  }
+
+  .chronicle-section-heading--sub {
+    font-size: 1.55rem;
+    color: rgba(221, 232, 208, 0.9);
+    margin: 2.4rem 0 1rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .chronicle-section-heading--flush {
+    padding-top: 0;
+    border-top: 0;
+    margin-top: 2.6rem;
+  }
+
+  @media (max-width: 900px) {
+    .chronicle-section-heading {
+      font-size: 1.75rem;
+      margin: 2.6rem 0 1.1rem;
+      padding-top: 1.8rem;
+    }
+
+    .chronicle-section-heading--sub {
+      font-size: 1.35rem;
+      margin: 1.9rem 0 0.85rem;
+    }
+  }
+</style>

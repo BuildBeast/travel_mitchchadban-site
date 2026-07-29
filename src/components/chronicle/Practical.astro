@@ -1,0 +1,47 @@
+---
+/**
+ * Practical-information block — "the map after the story".
+ * Emits the legacy `.practical` / `.prac-header` DOM. Sections go in the
+ * default slot as <PracticalSection> children.
+ */
+interface Props {
+  /** Left side of the header, e.g. 'Seville — Day 1'. */
+  place?: string;
+  /** Right side of the header, e.g. 'Monumental core · ~2 km on foot'. */
+  detail?: string;
+  /** Emoji prefixes, matching the existing chronicles. Pass '' to omit. */
+  placeIcon?: string;
+  detailIcon?: string;
+}
+
+const {
+  place,
+  detail,
+  placeIcon = '📍',
+  detailIcon = '🗓',
+} = Astro.props;
+
+const hasHeader = Boolean(place || detail);
+---
+
+<div class="practical">
+  {
+    hasHeader && (
+      <div class="prac-header">
+        {place && (
+          <div class="prac-city">
+            {placeIcon ? `${placeIcon} ` : ''}
+            {place}
+          </div>
+        )}
+        {detail && (
+          <div class="prac-dates">
+            {detailIcon ? `${detailIcon} ` : ''}
+            {detail}
+          </div>
+        )}
+      </div>
+    )
+  }
+  <slot />
+</div>
