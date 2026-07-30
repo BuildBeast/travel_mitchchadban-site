@@ -1,0 +1,668 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+
+const meta: ChronicleMeta = {
+  title: 'Best Areas to Stay in Seville',
+  headline: 'Best Areas to Stay in Seville: Six Bases and What Each Costs You',
+  description:
+    'Six Seville neighbourhoods assessed on noise, shade, walking distance and evening character — Santa Cruz, El Arenal, Centro, San Lorenzo, Triana and La Macarena.',
+  path: '/best-areas-to-stay-in-seville/',
+  ogImage: '/images/best-areas-to-stay-in-seville/giralda-above-the-rooftops.jpg',
+  factsVerified: '2026-07-29',
+};
+
+const IMG = '/images/best-areas-to-stay-in-seville';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Andalucía', 'Seville']}
+    label="Where to Stay · Six Areas"
+    title="Best Areas to Stay in Seville:"
+    titleEmphasis="Six Bases and What Each Costs You"
+    standfirst="In a city where everything worth seeing stands inside a two-kilometre oval, the question is not how close you are. It is what you are prepared to lose — sleep, money, shade, or fifteen minutes twice a day."
+    stats={[
+      { num: '6', label: 'Areas' },
+      { num: '~2 km', label: 'Old-City Oval' },
+      { num: '15 min', label: 'The Radius That Matters' },
+      { num: '1', label: 'River to Cross' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Seville makes the accommodation question look easier than it is. The
+          Cathedral, the Giralda, the Real Alcázar and the Archivo de Indias
+          stand within four hundred metres of one another; the whole of the old
+          city fits inside an oval about two kilometres across, flat, and walked
+          end to end in half an hour. On that evidence any central room will do,
+          and a great many booking pages are written on exactly that assumption.
+        </p>
+        <p>
+          The assumption is wrong in a specific and expensive way. Because
+          distance barely varies, everything else does the deciding — and the
+          things that decide are the ones no map shows. Whether the lane outside
+          your window is two metres wide and lined with bars. Whether the
+          afternoon sun reaches your street at all. Whether a taxi can pull up
+          at the door with your suitcase or stop ninety metres away on cobbles.
+          Whether the walk home at one in the morning crosses a river. Seville's
+          neighbourhoods are not further apart or closer to the sights in any
+          way that matters. They are louder, hotter, dearer and quieter than one
+          another, and those four differences are large.
+        </p>
+        <p>
+          What follows assesses six areas on those terms. One of them carries a
+          first-hand verdict: a nine-night stay in a street behind San Lorenzo,
+          recorded on this site as
+          <a href="/10-days-in-sevilla/">ten days using Seville as a base</a>,
+          which also argues plainly against sleeping in Santa Cruz. The other
+          five are assessed rather than remembered — from the city's geography,
+          its published market and transport hours, and what the streets
+          themselves are built like. Where a judgement rests on experience it is
+          attributed. Where it rests on reasoning, it says so.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/giralda-above-the-rooftops.jpg`}
+      alt="The upper stage of the Giralda catching low gold light above the roofline of a large stone civic building in central Seville, with three flagpoles, ornate iron street lamps and a half moon in a pale sky."
+      width={2048}
+      height={1365}
+      caption="Wherever you sleep in the old city, this is what you steer by walking home. The Giralda is visible from more open ground in Seville than any other thing in it."
+      priority
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="who-for" rule={false}>What this page assumes about you</SectionHeading>
+      <p>
+        That you will walk. That you have between two and ten nights. That you
+        would rather understand the trade-off than be handed a single answer,
+        because the right area for a couple on a long weekend in February is
+        not the right area for a family of four in July. No hotel or apartment
+        is named here — a room is a room, and the building you book will be
+        different by the time you read this. The area will not.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'santa-cruz', label: 'Santa Cruz' },
+        { id: 'el-arenal', label: 'El Arenal' },
+        { id: 'centro', label: 'Centro and Alfalfa' },
+        { id: 'san-lorenzo', label: 'San Lorenzo and the Alameda' },
+        { id: 'triana', label: 'Triana' },
+        { id: 'macarena', label: 'La Macarena' },
+        { id: 'decide', label: 'How to decide' },
+        { id: 'arriving', label: 'Arriving with luggage' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Six Areas at a Glance"
+    meta={[
+      {
+        label: 'The real variables',
+        value:
+          'Noise after midnight, shade in the afternoon, price per night, and whether your walk home crosses water. Not distance.',
+      },
+      {
+        label: 'The radius that matters',
+        value:
+          'Roughly fifteen minutes on foot from the Cathedral. Inside it you pay a premium for minutes; outside it you buy quiet with them.',
+      },
+      {
+        label: 'Shortest stays',
+        value: 'Two or three nights — stay inside the fifteen-minute radius. El Arenal or Centro.',
+      },
+      {
+        label: 'Longer stays',
+        value: 'Four nights or more — go outside it. San Lorenzo, Triana or La Macarena.',
+      },
+    ]}
+    daysHeading="Area by Area"
+    days={[
+      {
+        num: 'Santa Cruz',
+        text: 'The most beautiful and the least restful. Four minutes from the Cathedral, loud after dark, dear for the room you get, awkward with a suitcase.',
+      },
+      {
+        num: 'El Arenal',
+        text: 'The sensible one. Wide streets between the Cathedral and the river, real hotels with lifts, a quieter evening, no postcard charm at all.',
+      },
+      {
+        num: 'Centro / Alfalfa',
+        text: 'The best eating in the city and the widest choice of rooms. Two streets can differ completely — choose the street, not the district.',
+      },
+      {
+        num: 'San Lorenzo / Alameda',
+        text: 'The documented base. Residential, shaded, outside the tourist premium, fifteen to twenty minutes in. The Alameda itself is loud very late.',
+      },
+      {
+        num: 'Triana',
+        text: 'A neighbourhood rather than a district, across the river. Excellent value and a genuine local evening, paid for with a bridge every time.',
+      },
+      {
+        num: 'La Macarena',
+        text: 'The cheapest rooms and the longest walks. Ordinary working Seville, a great market, and almost no visitors on the street at breakfast.',
+      },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="narrative prose">
+      <SectionHeading id="santa-cruz">Santa Cruz — beautiful, and the worst place to sleep</SectionHeading>
+      <p>
+        The old Jewish quarter east of the Cathedral is the Seville of the
+        photographs: whitewash, orange trees, courtyards seen through iron
+        gates, lanes narrow enough in places that two people cannot walk them
+        abreast. It is four minutes from the Cathedral door and about the same
+        from the Alcázar gate. Nothing else on this page is closer, and nothing
+        else on this page is a worse decision for most travellers.
+      </p>
+      <p>
+        The reason is that Santa Cruz has no daytime population to speak of. It
+        is a quarter of holiday flats, restaurants with menus in four languages
+        and bars that fill at ten and empty at two, and its lanes are stone
+        chambers that hold sound the way they hold heat. The ten-day chronicle
+        puts it as plainly as it can be put — beautiful to walk through, loud at
+        night, and expensive for what you get — and that verdict is the one
+        piece of first-hand judgement on this page that is a warning rather than
+        a recommendation.
+      </p>
+      <p>
+        Two smaller frictions compound it. The lanes are cobbled and uneven, and
+        several of the prettiest are closed to vehicles, which means arriving
+        with a suitcase can involve a hundred metres of dragging it over stone
+        that was laid for mules. And the same narrowness that traps noise
+        delivers the quarter's one genuine advantage: at three in the afternoon
+        in July, Santa Cruz is the coolest ground in the old city. That is worth
+        having. It is not worth having at the price of every night's sleep.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you have two nights, sleep through
+        anything, are travelling light, and want to open a door onto the
+        prettiest streets in Andalucía. <strong>Do not stay here if</strong> you
+        are a light sleeper, have children, have a mobility constraint, are
+        arriving late with luggage, or are staying more than three nights.
+        <strong>The trade-off:</strong> you pay the highest prices in Seville to
+        buy four minutes of walking, and you pay for them again at two in the
+        morning.
+      </p>
+
+      <SectionHeading id="el-arenal">El Arenal — the unromantic right answer</SectionHeading>
+      <p>
+        West of the Cathedral, between the monumental core and the Guadalquivir,
+        El Arenal was the old shipyard and riverside district: the ground where
+        the American fleets unloaded, and where the Torre del Oro still stands
+        with the Maestranza a few minutes behind it. What survives is not
+        picturesque. It is a quarter of broad nineteenth-century streets and
+        plain apartment blocks, with the river at one end and the Cathedral at
+        the other, and it is the most straightforwardly sensible place to sleep
+        in Seville.
+      </p>
+      <p>
+        Everything about it follows from the width of the streets. Sound
+        disperses instead of ringing. Taxis and cars reach the door. The
+        buildings are large enough to contain conventional hotels, which means
+        lifts, air conditioning that works, and someone at a desk at midnight.
+        The evening is real but moderate — restaurants along Calle Adriano and
+        the lanes behind the bullring, busy at ten, thinning by half past
+        twelve — and the area empties rather than filling as the night goes on,
+        because most of the people in it have gone home to somewhere else. Five
+        to ten minutes gets you to the Cathedral; two gets you to the water.
+      </p>
+      <p>
+        The cost is atmosphere. You will not step out of your door into anything
+        you want to photograph. On a bullfight afternoon the streets around the
+        Maestranza fill and stay full for hours, which is either a spectacle or
+        an obstruction depending on your feelings about it. And the wide streets
+        that disperse the noise also admit the sun: there is markedly less shade
+        here than in Santa Cruz, offset a little by whatever moves off the river.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you have two or three nights, a suitcase,
+        an early train, a light sleeper in the party, or a preference for hotels
+        over apartments. <strong>Look elsewhere if</strong> the point of the trip
+        is to live somewhere for a week. <strong>The trade-off:</strong> the most
+        practical base in the city and the least memorable one.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/torre-del-oro-from-el-arenal.jpg`}
+      alt="The Torre del Oro seen from the landward side among tall palms, its battlemented drum and golden-tiled turret against a deep blue sky, with a Spanish flag flying and brick paving in the foreground."
+      width={1365}
+      height={2048}
+      caption="El Arenal's edge. The tower stands where the American cargoes were counted, and the quarter behind it still looks like what it was: a working riverside, laid out wide."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="centro">Centro and Alfalfa — where the city eats</SectionHeading>
+      <p>
+        North of the Cathedral the tourist quarter stops and Seville's own
+        centre begins: Calle Sierpes and Calle Tetuán with the shops, Plaza del
+        Salvador with its church and its crowd of standing drinkers, Plaza de la
+        Alfalfa with the densest and best concentration of tapas bars in the
+        city, and the Setas rising over Plaza de la Encarnación ten minutes
+        further on. Five to twelve minutes gets you to the Cathedral. Rather
+        less gets you to dinner.
+      </p>
+      <p>
+        This is the area with the widest choice of rooms at the widest range of
+        prices, and the one where the choice of street matters more than the
+        choice of district. Alfalfa and Salvador are loud in a particular
+        way — the sound of several hundred people drinking outdoors on a warm
+        night, which begins around nine and does not resolve into quiet until
+        the small hours. Two streets back it stops almost completely. The
+        difference between an excellent decision and a bad one here is about a
+        hundred metres, and it is worth putting a map and a street name into a
+        search before you book rather than trusting the phrase "central".
+      </p>
+      <p>
+        What you gain is the thing most visitors to Seville say afterwards that
+        they wanted: the ability to walk out at half past nine with no plan and
+        eat well within three minutes, among people who live there. The
+        <a href="/seville-tapas-food-guide/">way the city's tapas system actually works</a>
+        is easiest to learn in this quarter, because the bars here are used to
+        serving Sevillians in a hurry and will not slow down for you.
+      </p>
+      <p>
+        <strong>Stay here if</strong> eating is a substantial part of why you
+        came, you want maximum choice of rooms, and you will check the exact
+        street. <strong>Do not stay here if</strong> you will not check the exact
+        street. <strong>The trade-off:</strong> the best evening in Seville, and
+        the highest chance of accidentally booking a bedroom above it.
+      </p>
+
+      <SectionHeading id="san-lorenzo">San Lorenzo and the Alameda — the documented base</SectionHeading>
+      <p>
+        Fifteen to twenty minutes north-west of the Cathedral, two adjoining
+        areas do very different work. San Lorenzo is residential and quiet: a
+        parish gathered around the Basílica del Gran Poder, plane trees, ordinary
+        shops, almost nobody on the pavement with a map. The Alameda de
+        Hércules, immediately east of it, is a long tree-planted rectangle with
+        two Roman columns standing at its southern end under statues of Hercules
+        and Julius Caesar, and it is the principal late-night drinking ground of
+        the city.
+      </p>
+      <p>
+        This is the one area on the page with a first-hand verdict behind it. The
+        ten-day stay recorded on this site took its nine nights in a street
+        behind San Lorenzo, on the edge of the Alameda, and rated it an
+        excellent base for exactly the reasons the geography suggests: walkable
+        to everything, on the doorstep of the best late eating and drinking in
+        Seville, and outside the price premium of the tourist core. That is a
+        judgement about a street behind San Lorenzo. It is not a judgement about
+        the Alameda itself, and the distinction is the whole point — a room
+        overlooking those columns is a room above a bar strip on a Saturday, and
+        a room three streets west of them is in a quiet parish that happens to
+        be four minutes from dinner.
+      </p>
+      <p>
+        The plane trees are worth naming as a practical asset rather than a
+        pleasant detail. They shade the Alameda through the worst of the
+        afternoon, which almost nothing in the tourist core does, and they make
+        the twenty-minute walk south into the old city bearable in a month when
+        it otherwise would not be. There is no tram and no metro here; there are
+        buses, and taxis have no trouble reaching the door.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you have four nights or more, want to eat
+        where the city eats, are watching what you spend, and do not mind
+        fifteen to twenty minutes each way. <strong>Look elsewhere if</strong>
+        you have two nights and would resent making that walk twice a
+        day. <strong>The trade-off:</strong> you spend half an hour a day walking
+        and are repaid in quiet, shade, price and dinner.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/alameda-de-hercules-columns.jpg`}
+      alt="Two tall Roman columns inside iron railings at the southern end of the Alameda de Hércules in Seville, carrying statues of Hercules and Julius Caesar, with plane trees turning yellow behind them, café tables and a few passers-by in evening light."
+      width={1365}
+      height={2048}
+      caption="The columns at the foot of the Alameda are Roman, moved here in the sixteenth century when the ground was drained. The tables behind them are the reason the area is loud at two in the morning."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="triana">Triana — a neighbourhood, and a bridge</SectionHeading>
+      <p>
+        Triana stands on the west bank of the Guadalquivir and has always been
+        slightly other: sailors, potters, flamenco, a place that knows it is not
+        the centre and has never much wanted to be. It made the glazed tile that
+        covers half of Seville's walls and towers, and its market — the working
+        kind, produce and fish and ham, closed by mid-afternoon and shut on
+        Sundays — still anchors the neighbourhood at the foot of the Puente de
+        Isabel II. Twenty to twenty-five minutes and one bridge separate it from
+        the Cathedral.
+      </p>
+      <p>
+        As a base it offers the best value on this page and the most convincing
+        local evening. Rooms are largely apartments and small family hotels at
+        prices the near bank cannot match; Calle San Jacinto and Calle Betis
+        carry the eating and drinking, the latter facing the old city across the
+        water, which is one of the genuinely fine places to be at nine at night
+        anywhere in Spain. The inner streets are quiet. The riverbank is not,
+        at weekends.
+      </p>
+      <p>
+        The bridge is the cost, and it is a real one rather than a rhetorical
+        one. It is level and takes four minutes to cross, but you cross it every
+        time — going out in the morning, coming back for the shade hour if you
+        take one, going out again in the evening, and coming home at the end of
+        it. The ten-day chronicle notes that a taxi is occasionally useful for
+        Triana crossings at night, which is an honest way of saying that four
+        minutes across open water in the dark feels longer than four minutes.
+        Several of the riverbank access points involve steps.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you have four nights or more, want a
+        neighbourhood rather than a district, are travelling on a budget, or
+        your interests are weighted towards the river and the ceramics and the
+        market. <strong>Do not stay here if</strong> you have one or two nights,
+        or if you already know that the bridge will annoy you.
+        <strong>The trade-off:</strong> you gain the only genuine neighbourhood
+        on the list, and you pay a river for it, four times a day.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/capilla-del-carmen-triana.jpg`}
+      alt="The Capilla del Carmen at the Triana end of the Puente de Isabel II in Seville: a brick drum topped by a glazed ceramic dome bearing the date AÑO 1927 in a cartouche, beside a taller octagonal brick bell tower with tiled cupola and a single bell."
+      width={1365}
+      height={2048}
+      caption="The little chapel at the Triana bridgehead, dated 1927 in its own tilework. Coming home across the Puente de Isabel II at night, this is the thing that tells you the walk is nearly over."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="macarena">La Macarena — the cheapest rooms and the longest walks</SectionHeading>
+      <p>
+        North of the Alameda, out towards the surviving stretch of Almohad city
+        wall, La Macarena is the least visited of the six and the most ordinary.
+        Its centre of gravity is the Basílica de la Macarena, where the
+        Esperanza Macarena stands with her painted tears and a brotherhood four
+        centuries old carries her through the streets on Good Friday morning; its
+        daily life runs along Calle Feria, which holds one of the oldest markets
+        in the city. Twenty to thirty minutes on foot puts you at the Cathedral.
+      </p>
+      <p>
+        Everything here follows from being furthest out. Rooms are the cheapest
+        of the six by a clear margin. The bars are neighbourhood bars, priced for
+        neighbours, and at eight in the morning there is essentially nobody on
+        the street who is not going to work. The northern streets are wider and
+        less shaded than the old city's, which tells in August. There is no tram
+        and no metro; there are buses, and the walk back at two in the morning is
+        long, mostly empty and — while not a place with a reputation for
+        trouble — the only walk on this page that some travellers will decide
+        they would rather not do alone.
+      </p>
+      <p>
+        For a first visit of three days this is the wrong choice: the walking
+        adds up to an hour a day you could have spent inside the Alcázar. For a
+        second or third visit, a fortnight, a working stay, or a traveller who
+        wants Seville's own life rather than its display, it is the best value
+        in the city. Further out again, Nervión — east of the centre, around the
+        football ground and the shopping centres — is cheaper still and purely
+        residential; it is a decision about money, not about atmosphere, and it
+        needs a bus or the metro to be liveable.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you are staying a week or more, have been
+        to Seville before, are on a real budget, or care about Semana Santa's
+        home ground. <strong>Do not stay here if</strong> this is a short first
+        visit. <strong>The trade-off:</strong> the lowest prices and the most
+        walking, in that order.
+      </p>
+    </div>
+
+    <PullQuote>
+      In a city this small, proximity stops being the variable at about the
+      fifteen-minute mark. After that you are no longer buying minutes. You are
+      buying quiet, or shade, or dinner, or the difference in your bill.
+    </PullQuote>
+
+    <div class="narrative prose">
+      <SectionHeading id="decide">How to decide, in four questions</SectionHeading>
+      <p>
+        The areas above do not sort into better and worse. They sort against
+        four questions, and answering them honestly settles the matter faster
+        than any amount of comparison.
+      </p>
+      <p>
+        <strong>How many nights?</strong> This is the strongest single
+        determinant. At two or three nights, the walking you save inside the
+        fifteen-minute radius is a meaningful fraction of your visit, and you
+        should pay for it: El Arenal or a quiet street in Centro. At four nights
+        or more the arithmetic reverses — the daily walk becomes trivial and the
+        nightly saving becomes substantial, and San Lorenzo, Triana or La
+        Macarena are all better places to spend a week than the tourist core is.
+      </p>
+      <p>
+        <strong>How well do you sleep?</strong> If the answer is "badly", it
+        eliminates Santa Cruz, the two loud squares in Centro, the Alameda
+        itself and the Calle Betis frontage in Triana — which is to say it
+        eliminates most of the areas people book first. Seville eats late and
+        drinks outdoors, and no amount of glazing changes the fact that the
+        conversation is happening two metres below your window.
+      </p>
+      <p>
+        <strong>What month?</strong> In July and August, when the city regularly
+        passes forty degrees, shade stops being pleasant and starts being
+        structural. Narrow lanes and mature trees are the two things that
+        provide it, which favours Santa Cruz for the afternoons and San Lorenzo
+        for everything else, and counts against the wide unshaded streets of El
+        Arenal and the northern quarters. In December the question inverts and
+        barely matters.
+      </p>
+      <p>
+        <strong>How are you arriving, and with what?</strong> A large suitcase,
+        a late arrival, a pram or a mobility constraint all argue for streets a
+        vehicle can enter and buildings with lifts, which means El Arenal or the
+        wider parts of Centro and rules out the pedestrian lanes of Santa Cruz
+        almost regardless of everything else.
+      </p>
+
+      <SectionHeading id="arriving">Arriving, moving and the ground underfoot</SectionHeading>
+      <p>
+        Trains reach <strong>Sevilla-Santa Justa</strong>, roughly two
+        kilometres north-east of the Cathedral: half an hour on foot, or a short
+        taxi with luggage. Long-distance coaches, including those from the Cádiz
+        coast and the Tarifa ferry, use
+        <strong>Estación de Autobuses del Prado de San Sebastián</strong>, which
+        is central and walkable to most of the old city — the approach taken by
+        <a href="/italy-morocco-seville-4-week-itinerary/">a longer overland route from Morocco</a>.
+        A dedicated bus runs in from the airport; fares and frequencies change,
+        so check the operator rather than a guide.
+      </p>
+      <p>
+        Inside the city, none of these areas requires public transport for a
+        normal visit. A short tram line crosses the centre between Plaza Nueva
+        and San Bernardo, touching the Archivo de Indias and Puerta Jerez and
+        connecting to Metro Line 1; it is useful with luggage and unnecessary
+        without it. Both Triana and the northern quarters are served by buses
+        rather than rail, which is one of the practical reasons a fifteen-minute
+        walk is the honest way to measure them.
+      </p>
+      <p>
+        Two notes on ground. Santa Cruz is cobbled and uneven throughout, and
+        several Triana riverbank access points involve steps. And two weeks of
+        the year overturn everything on this page: during
+        <strong>Semana Santa</strong> and the <strong>Feria de Abril</strong>,
+        processional routes close streets across the centre, room prices rise
+        substantially, and quiet residential parishes — San Lorenzo and La
+        Macarena above all, since both are brotherhood strongholds — become the
+        busiest ground in the city. Either festival is a reason to come or a
+        reason to avoid the dates, but the areas do not behave normally in
+        either week.
+      </p>
+    </div>
+
+    <Practical place="Seville — Where to Stay" detail="Six areas · verified 29 July 2026" detailIcon="🛏">
+      <PracticalSection label="Shortest route to a decision" level={3}>
+        <div class="prac-item">
+          <strong>Two or three nights, first visit</strong> — El Arenal. Wide
+          streets, real hotels, vehicle access, moderate evening, five to ten
+          minutes from the Cathedral.
+        </div>
+        <div class="prac-item">
+          <strong>Two or three nights, and you came to eat</strong> — Centro,
+          two or three streets off Plaza de la Alfalfa or Plaza del Salvador.
+          Check the street name on a map before booking.
+        </div>
+        <div class="prac-item">
+          <strong>Four nights or more</strong> — San Lorenzo, west of the
+          Alameda. The documented base on this site, and the best balance of
+          quiet, shade, price and walking distance.
+        </div>
+        <div class="prac-item">
+          <strong>A week or more, or a return visit</strong> — Triana or La
+          Macarena. Both give a neighbourhood rather than a district; Triana
+          costs you a bridge, La Macarena costs you ten more minutes.
+        </div>
+        <div class="prac-item">
+          <strong>Whatever the length of stay</strong> — Santa Cruz only if you
+          are travelling light and sleep through noise.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="What each area is like after midnight" level={3}>
+        <div class="prac-item">
+          <strong>Loud until late:</strong> Santa Cruz throughout · Plaza de la
+          Alfalfa and Plaza del Salvador in Centro · the Alameda de Hércules
+          itself · Calle Betis and Calle San Jacinto in Triana.
+        </div>
+        <div class="prac-item">
+          <strong>Moderate:</strong> El Arenal, which fills at ten and thins
+          before one · most of Centro two streets back from its two squares.
+        </div>
+        <div class="prac-item">
+          <strong>Quiet:</strong> San Lorenzo west of the Alameda · Triana's
+          inner streets · most of La Macarena away from Calle Feria at weekends.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row">
+          "Central" in a listing means nothing in a city two kilometres across.
+          Find the street on a map and look at how wide it is and what is on the
+          ground floor opposite.
+        </div>
+        <div class="tip-row">
+          Mercado de Triana's produce stalls trade Monday to Saturday, roughly
+          09:00 to 14:30, and are closed on Sundays and public holidays; the
+          bars inside keep longer hours and do open on Sunday afternoons. If a
+          working market on your doorstep is part of why you are choosing
+          Triana, that is the shape of it.
+        </div>
+        <div class="tip-row">
+          Neither the metro nor the tram serves Triana, San Lorenzo or La
+          Macarena. Measure those three areas in walking minutes, not in stops.
+        </div>
+        <div class="tip-row">
+          One documented stay is not a survey. The San Lorenzo verdict and the
+          Santa Cruz warning come from the nine nights recorded in
+          <a href="/10-days-in-sevilla/">the ten-day chronicle</a>; the other
+          four areas are assessed from geography and published hours, not from
+          having slept in them.
+        </div>
+      </PracticalSection>
+    </Practical>
+
+    <Beat>Six areas, one oval, and four questions that settle it.</Beat>
+
+    <div class="narrative prose">
+      <SectionHeading id="quiet-street">A note on the street with nothing on it</SectionHeading>
+      <p>
+        The best rooms in Seville are almost never on the streets that appear in
+        the photographs. They are one turning away, on a street with a single
+        narrow pavement and no bar at all, where the low sun comes down the
+        length of it at nine in the morning and nothing else happens for the
+        rest of the day. Every one of the six areas above contains streets like
+        that, including Santa Cruz. Finding one is a matter of looking at a map
+        for four minutes rather than reading another comparison, and it will do
+        more for the trip than moving between neighbourhoods will.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/quiet-street-at-first-light.jpg`}
+      alt="A narrow, empty residential street in Seville with the low morning sun coming down its length: whitewashed and ochre houses with wrought-iron balconies and hanging lanterns on both sides, a single narrow pavement, and trees at the far end."
+      width={1365}
+      height={2048}
+      caption="Nine in the morning on an ordinary Seville street — no bar, no queue, no name worth remembering. The district is not determinable from the frame, which is rather the point: there is one of these in every area on this page."
+      variant="portrait"
+    />
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        The honest summary is that Seville does not punish a bad accommodation
+        decision very hard. The city is too small and too flat for that, and a
+        traveller who books the wrong area will still see everything and eat
+        well. What a good decision buys is not access. It is the quality of the
+        hours the guidebooks do not schedule — the walk back at midnight, the
+        second coffee at eight in the morning, the hour after lunch when the
+        street outside is either shaded and silent or full of somebody's
+        delivery van.
+      </p>
+      <p>
+        Which is why the fifteen-minute radius is the only rule worth carrying.
+        Inside it, buy proximity and accept the noise. Outside it, buy the quiet
+        and walk. And in either case, once the room is settled, the sequence of
+        the days matters more than the address does — that argument is made at
+        length in <a href="/3-days-in-seville/">the three-day route</a>, and the
+        rest of the region is gathered in <a href="/chronicles/">the archive</a>
+        and on <a href="/by-region/">the map by region</a>.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/3-days-in-seville/',
+        region: 'Spain · Andalucía',
+        title: '3 Days in Seville: Palace, River and Parasol',
+        excerpt:
+          'Once the room is booked, the order of the days is what decides the trip — a three-day route that never crosses the city twice.',
+        meta: ['Seville', '3 days'],
+      },
+      {
+        href: '/10-days-in-sevilla/',
+        region: 'Spain · Andalucía',
+        title: '10 Days in Sevilla: Andalucía Without Rush',
+        excerpt:
+          'The stay behind the San Lorenzo verdict on this page — nine nights in one street, and the case for letting a city accumulate.',
+        meta: ['Seville', '10 days'],
+      },
+      {
+        href: '/seville-tapas-food-guide/',
+        region: 'Spain · Andalucía',
+        title: 'Seville Tapas and Food Guide',
+        excerpt:
+          'What each neighbourhood is like at the table, how the ordering actually works, and why the clock matters more than the menu.',
+        meta: ['Seville', 'Food'],
+      },
+    ]}
+  />
+</ChronicleLayout>

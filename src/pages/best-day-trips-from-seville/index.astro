@@ -1,0 +1,730 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+
+const meta: ChronicleMeta = {
+  title: 'Best Day Trips from Seville',
+  headline: 'Best Day Trips from Seville: Seven Assessed, Two Refused',
+  description:
+    'Seven excursions from Seville assessed by the shape of the day — Córdoba, Cádiz, Jerez, Itálica, Carmona, Granada and Ronda — including two that are not worth a day.',
+  path: '/best-day-trips-from-seville/',
+  ogImage: '/images/best-day-trips-from-seville/mezquita-arch-within-arch.jpg',
+  factsVerified: '2026-07-29',
+};
+
+const IMG = '/images/best-day-trips-from-seville';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Andalucía', 'Seville']}
+    label="Guide · Seven Excursions"
+    title="Best Day Trips from Seville:"
+    titleEmphasis="Seven Assessed, Two Refused"
+    standfirst="Distance is a poor guide to what makes a good day out of Seville. Ronda is closer than Córdoba and four times harder to reach. What matters is the shape of the day the railway lets you have."
+    stats={[
+      { num: '7', label: 'Assessed' },
+      { num: '45 min', label: 'Nearest by Rail' },
+      { num: '5', label: 'Shapes of Day' },
+      { num: '1', label: 'Better as an Overnight' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Seville sits at the centre of the densest concentration of interesting
+          ground in southern Europe, and the standard list of excursions from it
+          is more or less fixed: Córdoba, Cádiz, Granada, Ronda, and then
+          whichever of Jerez, Itálica or Carmona a particular writer happens to
+          favour. What the standard list rarely does is decide between them, or
+          admit that two of the seven make poor days out and one makes an
+          excellent night.
+        </p>
+        <p>
+          The reason the list needs deciding is that distance predicts almost
+          nothing here. Ronda is a hundred and thirty kilometres from Seville and
+          Córdoba is a hundred and forty, and the difference in a day is
+          enormous: Córdoba is forty-five minutes on the high-speed line and
+          Ronda is two and a half hours by coach or three and a half by a train
+          that goes round three sides of a mountain. Itálica is twelve kilometres
+          away and takes half an hour, because it needs a suburban bus. What
+          governs an Andalusian day trip is not how far the place is. It is which
+          of three lines out of the city it happens to sit on.
+        </p>
+        <p>
+          So this page is organised by the shape of the day rather than by the
+          merit of the destination — half day, comfortable full day, full day that
+          earns itself, very long day, and better as an overnight. Three of the
+          seven are documented on this site from a stay recorded as
+          <a href="/10-days-in-sevilla/">ten days using Seville as a base</a>:
+          Córdoba and Cádiz have chronicles of their own, and Granada was made as
+          a day trip from Seville on that stay. <strong>The remaining four —
+          Jerez, Itálica, Carmona and Ronda — have not been visited from Seville
+          and are assessed rather than remembered.</strong> Where the difference
+          matters, the text says which is which. It assumes no car, because a car
+          changes every answer on the page.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/mezquita-arch-within-arch.jpg`}
+      alt="Inside the Mezquita-Catedral of Córdoba: a tall Christian Gothic pointed arch in the foreground framing the interlacing red-and-white polylobed Islamic arches and carved plasterwork of the Villaviciosa chapel beyond, with a crucifix below and coloured light from stained glass thrown across the stone floor."
+      width={2048}
+      height={1365}
+      caption="One frame, two religions, and the whole argument for giving Córdoba a day: a Gothic arch looking through into the Islamic hall it was inserted beside. Nothing on this page comes close to it."
+      priority
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="who-for" rule={false}>The three lines out of Seville</SectionHeading>
+      <p>
+        Everything below sits on one of three axes, and the axis explains the
+        verdict better than the destination does.
+        <strong>North-east, up the Guadalquivir valley:</strong> Itálica at twelve
+        kilometres, Carmona at thirty-three, Córdoba at a hundred and forty on the
+        high-speed line. <strong>South-west, down the line to the Atlantic:</strong>
+        Jerez at ninety, Cádiz at a hundred and twenty-five, on the same frequent
+        service. <strong>East, into the mountains:</strong> Ronda and Granada,
+        where the rail geography stops cooperating entirely. The first two axes
+        are the reason day trips from Seville are unusually rewarding. The third
+        is the reason two of them are not.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'italica', label: 'Itálica · half day' },
+        { id: 'cordoba', label: 'Córdoba · full day' },
+        { id: 'jerez', label: 'Jerez · full day' },
+        { id: 'carmona', label: 'Carmona · full day' },
+        { id: 'cadiz', label: 'Cádiz · a day it earns' },
+        { id: 'granada', label: 'Granada · a very long day' },
+        { id: 'ronda', label: 'Ronda · sleep there' },
+        { id: 'choose', label: 'How to choose' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Seven at a Glance"
+    meta={[
+      {
+        label: 'If you make one day trip',
+        value:
+          'Córdoba. Forty-five minutes each way on the high-speed line, and the Mezquita-Catedral alone justifies the day.',
+      },
+      {
+        label: 'If you make two',
+        value:
+          'Córdoba and Cádiz. They are opposite in every way — one inland and imperial, one Atlantic and salt-bitten — and neither repeats the other.',
+      },
+      {
+        label: 'If you have half a day',
+        value:
+          'Itálica. A Roman city twelve kilometres out, free to EU residents, reached by a suburban bus, and closed on Mondays.',
+      },
+      {
+        label: 'The two to refuse',
+        value:
+          'Ronda as a day trip — go, but sleep there. And Granada, unless you have Alhambra tickets in hand and accept a fourteen-hour day.',
+      },
+    ]}
+    daysHeading="Destination by Destination"
+    days={[
+      { num: 'Itálica', text: 'Half day · ~30 min by bus · A Roman provincial capital and one of the largest amphitheatres of the empire. Closed Mondays.' },
+      { num: 'Córdoba', text: 'Full day · ~45 min by AVE · The Mezquita-Catedral, the Judería, the Roman bridge. The strongest day trip in Andalucía.' },
+      { num: 'Jerez', text: 'Full day · ~50 min by train · Sherry, Andalusian horses and an almost empty old town. The most overlooked trip on the list.' },
+      { num: 'Carmona', text: 'Short full day · ~1 h by bus · A walled hill town with a Roman necropolis and almost no visitors.' },
+      { num: 'Cádiz', text: 'Full day · ~1 h 45 by train · Three thousand years on an Atlantic spit. A day it earns rather than fills.' },
+      { num: 'Granada', text: 'Very long day · 2½–3 h+ each way · The Alhambra, and nothing else. Tickets months ahead or do not go.' },
+      { num: 'Ronda', text: 'Overnight · 2–2½ h by bus, 3 h 20 by train · Magnificent, and wrong as a day trip. Sleep there instead.' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter
+      id="italica"
+      number="I."
+      name="The Half Day"
+      epithet="Itálica — a Roman city twelve kilometres out, and the best value on this page"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Before Seville there was Hispalis, and beside Hispalis there was Itálica:
+        founded in 206 BC for the veterans of a campaign against Carthage, grown
+        into a provincial capital, and the birthplace of two Roman emperors,
+        Trajan and Hadrian. It stands at Santiponce, twelve kilometres north-west
+        of the city, and what survives is a street grid, mosaic floors still in
+        their houses, a theatre, and an amphitheatre built for something like
+        twenty-five thousand people — one of the largest in the empire, and
+        emptier on a Tuesday morning than any comparable Roman site in Spain.
+        Television has found it: the amphitheatre stood in for the dragonpit in
+        the later seasons of <em>Game of Thrones</em>, which brings a certain kind
+        of visitor and has not yet brought crowds.
+      </p>
+      <p>
+        It is the only genuine half day on this list, and the only one that costs
+        essentially nothing. A metropolitan bus from Plaza de Armas takes about
+        half an hour; two hours on the site is generous, three is thorough, and
+        you are back in Seville for lunch. That makes it the right answer for a
+        traveller with a spare morning rather than a spare day — and the
+        right answer for anyone who is going to visit the Palacio de la Condesa de
+        Lebrija in the city, whose drawing-room floors are Roman mosaics lifted
+        from these ruins in the 1900s. Seeing the ruins first turns that house from
+        a curiosity into something closer to an accusation.
+      </p>
+      <p>
+        <strong>Getting there</strong> metropolitan bus from Plaza de Armas,
+        roughly 30 minutes; confirm the current line and timetable with the
+        Consorcio de Transportes rather than a guide ·
+        <strong>Time on site</strong> 2 to 3 hours ·
+        <strong>Practicalities</strong> free to EU residents, otherwise about
+        €1.50. Tuesday to Saturday 09:00–18:00; Sundays, public holidays and
+        Mondays that precede a holiday 09:00–15:00;
+        <strong>closed on ordinary Mondays</strong>. Andalusian archaeological
+        sites generally shorten their hours through high summer, so check before a
+        July or August visit · <strong>Verdict</strong> yes, and the easiest yes
+        here. <em>Assessed rather than visited from Seville.</em>
+      </p>
+    </div>
+
+    <Chapter
+      id="cordoba"
+      number="II."
+      name="The Comfortable Full Days"
+      epithet="Córdoba, Jerez and Carmona — three destinations the transport genuinely wants you to visit"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="cordoba-entry" level={3} rule={false}>Córdoba — the one to make if you make only one</SectionHeading>
+      <p>
+        Córdoba was, in the tenth century, plausibly the largest city in Europe
+        and the seat of a caliphate whose libraries and mathematics had no
+        northern equal. What remains of that is one building, and it is enough to
+        organise a day around and probably a trip. The Mezquita-Catedral begins as
+        a forest: hundreds of columns of jasper and marble carrying red-and-white
+        striped double arches that recede in every direction, so that the eye
+        cannot find a wall and the mind cannot settle on a scale. Into the middle
+        of that forest, in the sixteenth century, the cathedral chapter inserted a
+        complete Gothic church — a decision their contemporaries called
+        desecration and which the emperor who authorised it is said to have
+        regretted. The result is not beautiful in any ordinary sense. It is
+        stranger than beautiful, and it is the whole history of Andalucía made
+        architectural.
+      </p>
+      <p>
+        The rest of the day is easy and good: the Judería, the only surviving
+        medieval synagogue in Andalucía, the flowered lanes, the arcaded Plaza de
+        la Corredera, and the Puente Romano over a Guadalquivir that here runs
+        wide and shallow over weirs with reed islands in it. The day trip
+        documented on this site departed Sevilla-Santa Justa at a quarter past
+        seven, was in Córdoba by five past ten, and came back on the half past
+        eight train — eight hours in the city, which is the right amount.
+      </p>
+      <p>
+        What this page will not do is tell you how to spend those eight hours,
+        because
+        <a href="/1-day-in-cordoba/">there is a full account of one day in Córdoba</a>
+        on this site already, written from that visit. Read it after you have
+        decided, not instead of deciding.
+      </p>
+      <p>
+        <strong>Getting there</strong> AVE from Sevilla-Santa Justa, about 45
+        minutes; slower services take around an hour and a half. Book ahead —
+        the fast trains fill · <strong>Time on site</strong> 6 to 8 hours ·
+        <strong>Practicalities</strong> the Mezquita takes timed entry booked
+        online, opens at 10:00, and deserves two hours minimum. The synagogue
+        closes on Mondays. Start early: Córdoba is hotter than Seville in high
+        summer and the Mezquita is the only air-conditioned part of the day ·
+        <strong>Verdict</strong> the strongest day trip from Seville, without
+        qualification. <em>Documented.</em>
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/cordoba-puente-romano.jpg`}
+      alt="The Puente Romano at Córdoba in low afternoon light: a long honey-coloured stone bridge on wide arches with rounded pier buttresses, people walking along its parapet, the battlemented Torre de la Calahorra at the far end, and the shallow Guadalquivir running over weirs between reed islands."
+      width={2048}
+      height={1365}
+      caption="Five o'clock at the Roman bridge, with the Calahorra tower at the far end. The river here is wide, shallow and full of islands — nothing like the deep working channel at Seville."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="jerez" level={3}>Jerez de la Frontera — the trip nobody takes</SectionHeading>
+      <p>
+        Fifty minutes down the Atlantic line, and the most overlooked destination
+        on this page. Jerez gave sherry its name — the English word is a mangling
+        of the Arabic <em>Sherish</em> — and the wine is made here by a method
+        that is genuinely unlike anything in Bordeaux or Burgundy: the solera, a
+        cascade of barrels in which older wine is continuously refreshed by
+        younger, so that no bottle is of any single year and the cellar itself
+        becomes the vintage. The bodegas are cathedral-scaled, cool, and open to
+        visitors. It is the best possible use of an Andalusian afternoon in July.
+      </p>
+      <p>
+        The other half of Jerez is horses. The Real Escuela Andaluza del Arte
+        Ecuestre keeps a school of Andalusian stallions in a nineteenth-century
+        estate on the edge of town and performs an exhibition — a kind of
+        choreographed dressage, which sounds absurd on paper and is not — on
+        selected days of the week. On the other days the estate can be visited for
+        the training sessions, the stables, the carriage museum and the saddlery.
+        The show days and times move by season and are not published far
+        ahead: check the school's own calendar, and book, before building a day
+        around it. Beyond those two things there is a Moorish alcázar, a cathedral
+        on a rise above the vineyards, and an old town that is close to empty on
+        a weekday.
+      </p>
+      <p>
+        Jerez also solves a problem, which is the strongest argument for it. It is
+        a stop on the Cádiz line, so a traveller who has already given a day to
+        Cádiz can take Jerez as a second, quite different Atlantic day without
+        repeating any of the ground.
+      </p>
+      <p>
+        <strong>Getting there</strong> Renfe from Sevilla-Santa Justa, about 47 to
+        52 minutes, with something like seventeen services a day ·
+        <strong>Time on site</strong> 6 to 7 hours ·
+        <strong>Practicalities</strong> bodega visits are guided, generally need
+        booking, and often close on Sundays. The equestrian exhibition runs on
+        selected days only — confirm on the official calendar and buy in advance.
+        Do not attempt Jerez and Cádiz in one day: the train makes it look
+        possible and both places deserve better ·
+        <strong>Verdict</strong> yes, for anyone interested in wine, horses, or
+        an Andalusian town without a coach park. <em>Assessed rather than
+        visited.</em>
+      </p>
+
+      <SectionHeading id="carmona" level={3}>Carmona — a walled town on a ridge</SectionHeading>
+      <p>
+        Thirty-three kilometres east, on a ridge above the farmland, Carmona has
+        been fortified by every power that has held this valley: Carthaginians,
+        Romans, Moors, and Castilians who built a fortress on the highest point
+        that is now a parador. Two things make it more than a pretty walled town.
+        The Roman necropolis on its western edge is a field of chambered tombs cut
+        into the rock, several of them large enough to walk down into, with
+        painted walls and niches for urns — an unusually intact piece of Roman
+        domestic religion. And the Puerta de Sevilla is not a gate but a small
+        fortress with a Carthaginian base, Roman upper works and a Moorish
+        courtyard stacked on top of one another, which can be climbed.
+      </p>
+      <p>
+        It is the quietest destination on this list. It is also the one where the
+        transport is least generous: a metropolitan bus rather than a train, about
+        an hour for the full run, with a separate timetable through July and
+        August. That makes Carmona a short full day rather than a comfortable one
+        — five or six hours in the town, and a bus at each end that you should
+        look up properly rather than trust to frequency.
+      </p>
+      <p>
+        <strong>Getting there</strong> metropolitan bus line M-124 from Seville,
+        operated by CASAL, roughly an hour end to end; the Seville terminus is
+        Plaza de Armas. The line has variants and a separate summer timetable, so
+        check the Consorcio de Transportes listing for your date ·
+        <strong>Time on site</strong> 5 to 6 hours ·
+        <strong>Practicalities</strong> the necropolis and the gate-fortress both
+        keep museum hours and Monday closures are common in Andalucía; confirm
+        both. Little shade on the ridge ·
+        <strong>Verdict</strong> yes, for a second or third visit to the region,
+        or for anyone who has had enough of queues. <em>Assessed rather than
+        visited.</em>
+      </p>
+    </div>
+
+    <Beat>Two railway lines and a bus route, and everything the transport likes is worth going to.</Beat>
+
+    <Chapter
+      id="cadiz"
+      number="III."
+      name="The Day That Earns Itself"
+      epithet="Cádiz — an hour and three quarters each way, three thousand years, and a different Spain entirely"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Cádiz is the oldest continuously inhabited city in western Europe by most
+        reckonings — Phoenician, then Carthaginian, then Roman, then a port that
+        received the silver of the Americas and was raided for it by the English
+        and the Dutch. It stands on a spit of Atlantic shore so narrow that the
+        old city is walled by the sea on three sides, and the entire historic
+        centre can be walked in a day without hurrying. Its cathedral was built
+        over a hundred and sixteen years on New World money and changed style
+        twice while it went up. Its beach, La Caleta, is a crescent of sand cupped
+        between two sea forts.
+      </p>
+      <p>
+        An hour and three quarters each way is a real cost, and the reason to pay
+        it is that Cádiz is not a smaller Seville. Seville is inland, imperial and
+        landlocked in temperament, a city that grew rich on an ocean it could not
+        see. Cádiz is maritime, salt-bitten and open on every side, and the light
+        and the air and the food are all different. Nothing else on this page
+        gives a traveller a second Spain for the price of a train.
+      </p>
+      <p>
+        The full day is documented on this site as
+        <a href="/1-day-in-cadiz/">one day in Cádiz</a>, walked in October from the
+        morning train, and it is the account to read once the decision is made.
+        The relevant decision here is only this: Cádiz is a full day and rewards
+        being treated as one. The afternoon day-trippers who arrive at two and
+        leave at six get the cathedral and a coffee and miss the city entirely.
+      </p>
+      <p>
+        <strong>Getting there</strong> Renfe from Sevilla-Santa Justa, about an
+        hour and three quarters, hourly through the day; the same line stops at
+        Jerez. On the documented visit in 2025 the fare was around €12–18 each
+        way, which is a 2025 observation rather than a current quote ·
+        <strong>Time on site</strong> 8 to 10 hours; the last useful train back
+        leaves in the evening ·
+        <strong>Practicalities</strong> everything is on foot — do not take a car
+        inside the walls. The Museum of Cádiz is free to EU citizens. La Caleta
+        faces west, so if you can stay for the Atlantic sunset from the sea wall,
+        do · <strong>Verdict</strong> the best second day trip from Seville, and
+        the best first one for anyone who has already seen Córdoba.
+        <em>Documented.</em>
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/cadiz-cathedral-facade.jpg`}
+      alt="The west front of Cádiz Cathedral: a broad pale limestone baroque façade with two domed bell towers, a large arched central bay and a carved doorway, half of it in shadow and half in golden morning light, with palm fronds crossing the top of the frame."
+      width={2048}
+      height={1365}
+      caption="Cádiz Cathedral took a hundred and sixteen years and three architectural fashions to finish, and was paid for with silver landed a few hundred metres away."
+    />
+
+    <Figure
+      src={`${IMG}/cadiz-la-caleta.jpg`}
+      alt="La Caleta beach in Cádiz: a domed white balneario building raised on piers at the left, a long stone breakwater running out towards a sea fort, turquoise Atlantic water, and bathers and sunbathers on pale sand."
+      width={2048}
+      height={1365}
+      caption="La Caleta, held between two forts. This is the argument for Cádiz in one frame — nothing in Seville looks remotely like it, or smells like it either."
+    />
+
+    <Chapter
+      id="granada"
+      number="IV."
+      name="The Very Long Day"
+      epithet="Granada — defensible for one building, and only if the tickets are already bought"
+    />
+
+    <div class="narrative prose">
+      <p>
+        The Alhambra is not primarily a palace. It is an enclosed Nasrid city on a
+        red hill between the plain of Granada and the first ridges of the Sierra
+        Nevada: a fortress at the western end, the Palacios Nazaríes in the
+        centre, and the Generalife summer palaces and their gardens at the east.
+        The water everywhere — channels, fountains, reflecting pools — is not
+        decoration. It is an engineering achievement and a philosophical
+        statement at once, because in a dry country the control of water was the
+        most eloquent expression of power available. It is the finest surviving
+        building of Islamic Spain and one of the two or three most extraordinary
+        places in Europe.
+      </p>
+      <p>
+        And it is two and a half to three hours from Seville on the fastest
+        services, appreciably longer on the rest — the average across the day's
+        eleven or so trains runs past three and a half hours, and the day trip
+        documented on this site took a service that ran three and a half hours
+        each way, leaving at seven in the morning and returning on the 18:55.
+        Faster trains now exist; slower ones still do too, and that spread is the
+        whole problem. On the worst plausible combination a Granada day trip is
+        seven hours of travelling for four hours in the city.
+      </p>
+      <p>
+        The verdict is therefore conditional and the condition is absolute.
+        <strong>The Nasrid Palaces take a timed ticket that sells out months
+        ahead in season.</strong> The ten-day chronicle on this site puts it
+        without hedging: arriving in Granada without pre-purchased Nasrid Palaces
+        entry means you will be looking at the outside of a wall. If you have
+        those tickets, and you accept a fourteen-hour day, and you understand that
+        you will see the Alhambra and the Mirador de San Nicolás and essentially
+        nothing else of a substantial city, then go — it is worth it, and the
+        return through the Andalusian dark is part of the day rather than a
+        penalty. If any of those three conditions fails, do not.
+      </p>
+      <p>
+        The better answer, for anyone whose dates allow it, is not to make Granada
+        a day trip at all but to move there for two nights on the way east. That
+        is how it appears in the wider regional routes on this site rather than as
+        an excursion.
+      </p>
+      <p>
+        <strong>Getting there</strong> Renfe from Sevilla-Santa Justa; fastest
+        around two and a half hours, typically nearer three, and considerably more
+        on some services. Book at least a fortnight ahead ·
+        <strong>Time on site</strong> 6 to 7 hours on a good day ·
+        <strong>Practicalities</strong> book the Alhambra the moment your dates
+        are fixed, through the official channel, and allow three to four hours for
+        the full complex. Entry to the Nasrid Palaces is by half-hour slot and
+        strictly enforced. One consolation the rest of Andalucía does not offer:
+        Granada still gives a free tapa with every drink ordered, which is a
+        different food culture from
+        <a href="/seville-tapas-food-guide/">Seville's, where tapas are ordered and paid for</a> ·
+        <strong>Verdict</strong> a qualified yes, for the Alhambra alone.
+        <em>Documented as a day trip on the recorded stay.</em>
+      </p>
+    </div>
+
+    <Chapter
+      id="ronda"
+      number="V."
+      name="The One to Sleep In"
+      epithet="Ronda — magnificent, closer than Córdoba, and the wrong shape for a day"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Ronda stands on a limestone plateau split by the Tajo, a gorge a hundred
+        metres deep, with the eighteenth-century Puente Nuevo thrown across it and
+        the old town on one side and the new on the other. It holds one of the
+        oldest bullrings in Spain, the Arab baths, a clifftop walk with a hundred
+        kilometres of sierra in front of it, and the ruins of the Roman town of
+        Acinipo half an hour further out. It is one of the most photographed
+        places in Spain and it deserves to be.
+      </p>
+      <p>
+        It is also the destination on this page that a day trip serves worst, and
+        the arithmetic is straightforward. The train from Seville takes around
+        three hours and twenty minutes, which is longer than Granada; the coach
+        takes between two hours and two and a half and is the practical option.
+        Either way you spend four to five hours travelling to reach a town whose
+        two best hours are the ones a day-tripper cannot have — early morning on
+        the bridge before the coaches arrive from the Costa del Sol, and the hour
+        after sunset when the gorge goes blue and the day visitors have gone. A
+        day trip to Ronda delivers you at the busiest moment and removes you
+        before the good one.
+      </p>
+      <p>
+        So the verdict is not that Ronda is unworthy. It is that Ronda is worth
+        more than a day trip can extract from it. Take a night there — it is
+        small, the accommodation includes some of the more remarkable rooms in
+        Andalucía on the gorge edge, and it works naturally as a stop between
+        Seville and Málaga or Granada rather than as an out-and-back. Ronda has
+        not been visited from Seville for this site, and no chronicle of it exists
+        here yet; that assessment is made on the transport and on what the town is
+        like at which hours, not on a remembered day.
+      </p>
+      <p>
+        <strong>Getting there</strong> coach with Damas, about two hours to two
+        and a half; train around three hours twenty, by a slower route ·
+        <strong>Time on site</strong> 4 to 5 hours as a day trip, which is the
+        problem · <strong>Practicalities</strong> if you go anyway, take the
+        earliest coach out and the latest back, and accept that the middle of your
+        day is the middle of everyone else's ·
+        <strong>Verdict</strong> go, but sleep there. Not a day trip.
+        <em>Assessed rather than visited from Seville.</em>
+      </p>
+    </div>
+
+    <Practical place="Day Trips from Seville" detail="Seven destinations · verified 29 July 2026" detailIcon="🚆">
+      <PracticalSection label="By shape of day" level={3}>
+        <div class="prac-item">
+          <strong>Half day</strong> — Itálica. ~30 min by metropolitan bus from
+          Plaza de Armas. Free to EU residents. Closed ordinary Mondays.
+        </div>
+        <div class="prac-item">
+          <strong>Comfortable full day</strong> — Córdoba (~45 min by AVE) ·
+          Jerez (~50 min by Renfe) · Carmona (~1 h by bus M-124).
+        </div>
+        <div class="prac-item">
+          <strong>Full day, treated as one</strong> — Cádiz (~1 h 45 by Renfe).
+          Not an afternoon.
+        </div>
+        <div class="prac-item">
+          <strong>Very long day, conditional</strong> — Granada (2½ h at best,
+          often more). Alhambra tickets in hand, or do not go.
+        </div>
+        <div class="prac-item">
+          <strong>Overnight, not a day trip</strong> — Ronda (~2–2½ h by coach).
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Booking, in priority order" level={3}>
+        <div class="prac-item">
+          <strong>Alhambra Nasrid Palaces</strong> — the moment your dates are
+          fixed, months ahead in season, through the official channel. No other
+          booking on this page is remotely as urgent.
+        </div>
+        <div class="prac-item">
+          <strong>Mezquita-Catedral, Córdoba</strong> — timed entry online; opens
+          at 10:00; allow two hours minimum.
+        </div>
+        <div class="prac-item">
+          <strong>Jerez equestrian exhibition</strong> — selected days only, and
+          the days move by season. Check the school's own calendar and buy in
+          advance; a bodega visit needs booking too.
+        </div>
+        <div class="prac-item">
+          <strong>Fast trains</strong> — Córdoba's AVE and Granada's services fill
+          in season. Book at least a week out, a fortnight for Granada.
+        </div>
+        <div class="prac-item">
+          <strong>Nothing needed</strong> — Itálica, Carmona and Cádiz can all be
+          done on a walk-up ticket bought the same morning.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row">
+          <strong>Mondays close things across Andalucía.</strong> Itálica shuts on
+          ordinary Mondays, Córdoba's synagogue shuts, and municipal museums in
+          Carmona and Jerez commonly do too. A Monday is the day to stay in
+          Seville — where Casa de Pilatos, the Alcázar and the Cathedral all open.
+        </div>
+        <div class="tip-row">
+          <strong>Journey times quoted here are bands, not timetables.</strong>
+          Seville–Granada in particular ranges from about two and a half hours to
+          well over three depending on the service, and the difference decides
+          whether the day works. Check the actual departure before you commit.
+        </div>
+        <div class="tip-row">
+          <strong>Do not combine two destinations in one day.</strong> Jerez and
+          Cádiz sit on the same line and the temptation is obvious; the result is
+          two rushed half-days and a lot of platform.
+        </div>
+        <div class="tip-row">
+          <strong>Start early, everywhere.</strong> Every destination on this
+          page is hotter than Seville in high summer except Cádiz, which is
+          windier. The documented Córdoba day left Santa Justa at 07:15 for good
+          reason.
+        </div>
+        <div class="tip-row">
+          <strong>Four of these seven have not been visited from Seville</strong>
+          for this site — Jerez, Itálica, Carmona and Ronda. Their sections are
+          assessments built from transport data, published site hours and what
+          each place is, and they are labelled as such rather than written as
+          memory.
+        </div>
+      </PracticalSection>
+    </Practical>
+
+    <PullQuote>
+      Ronda is ten kilometres nearer than Córdoba and four times harder to reach.
+      In Andalucía the railway, not the map, decides what a day can contain.
+    </PullQuote>
+
+    <div class="narrative prose">
+      <SectionHeading id="choose">How to choose, by how long you have</SectionHeading>
+      <p>
+        <strong>Three days in Seville: make no day trip at all.</strong> This is
+        the recommendation and it is firmer than it looks. Any excursion takes a
+        third of a three-day visit and returns a train journey and a second city
+        you will see too fast, and Seville itself has not been finished at that
+        point — the case is made in
+        <a href="/3-days-in-seville/">the three-day route</a>, which deliberately
+        excludes all of them.
+      </p>
+      <p>
+        <strong>Four or five days: one day trip, and it is Córdoba.</strong>
+        Forty-five minutes each way, a building that changes the scale by which
+        you measure other buildings, and you are back for dinner in Seville.
+      </p>
+      <p>
+        <strong>Six or seven days: two, and take Cádiz as the second.</strong>
+        The pairing works because the two are opposite. Add Itálica as a half day
+        if a morning is going spare, since it costs nothing and finishes by lunch.
+      </p>
+      <p>
+        <strong>Eight days or more: three, and here the choice opens.</strong>
+        Jerez if wine or horses appeal; Carmona if what you want is a town with
+        nobody in it; Granada only if the Alhambra tickets came through and you
+        are willing to give it a fourteen-hour day. This is also the trip length
+        at which the honest answer may be to stop making day trips and move —
+        two nights in Granada, or one in Ronda, in the manner of
+        <a href="/4-weeks-portugal-to-spain-by-rail-road/">the longer overland routes</a>
+        recorded on this site.
+      </p>
+
+      <SectionHeading id="cut">Considered and cut</SectionHeading>
+      <p>
+        Four destinations that appear on other lists are not assessed above, for
+        the same reason in each case: without a car they do not make a day.
+        <strong>Sanlúcar de Barrameda</strong> and the Doñana boat crossing need a
+        connection at Jerez and a great deal of luck with timings.
+        <strong>Osuna</strong> is reachable but thin for a full day.
+        <strong>Aracena</strong> and its cave sit two hours north-west on
+        infrequent buses. And the white villages of the
+        <strong>Sierra de Grazalema</strong> are the best driving in Andalucía and
+        essentially unreachable on public transport in a day. A car changes all
+        four verdicts, and it changes the audience of this page, so they are named
+        here rather than assessed above.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/triana-tiled-excursion-signs.jpg`}
+      alt="A wall of old Andalusian trade azulejos: a large yellow and blue tiled panel advertising a six-day coach excursion to Cordoba, Sevilla and Granada departing Madrid every Tuesday and Saturday, surrounded by tiled shop and house signs including E. Gonzalez, El Madrigal, Villa Julita, Hermanas Elvira y Estefania, a Singer sewing-machine roundel and a painted Virgin medallion."
+      width={2048}
+      height={1365}
+      caption="Kept at the Centro Cerámica Triana: a pre-war tiled advertisement for a six-day coach tour of Córdoba, Seville and Granada, departing Madrid every Tuesday and Saturday. The circuit on this page is a century old and was always sold in French."
+    />
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        The tiled advertisement above hangs in a former tile works in Triana, and
+        it is worth a minute because it settles an argument. Córdoba, Seville and
+        Granada were being sold as a package, in French, to Madrid coach
+        passengers, before either world war. The circuit is not a modern invention
+        and neither is the mistake it encourages — six days for three cities, each
+        arrived at and departed from, none of them stayed in.
+      </p>
+      <p>
+        Which is the whole of the case for being sparing with day trips. Seville
+        rewards return rather than conquest; every day given to a train is a day
+        the city does not get, and the two or three excursions that genuinely earn
+        their place earn it by being unlike Seville rather than by adding to it.
+        Córdoba is a different civilisation's high point. Cádiz is a different
+        sea. Itálica is a different empire. Everything else on this page is a
+        town, and there will be other years. The rest of the region, taken slowly,
+        is gathered in <a href="/chronicles/">the archive</a> and laid out on
+        <a href="/by-region/">the map by region</a>.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/1-day-in-cordoba/',
+        region: 'Spain · Andalucía',
+        title: '1 Day in Córdoba: The City Between Empires',
+        excerpt:
+          'The full account of the day this page recommends first — the Mezquita-Catedral, the Judería, the synagogue and the Roman bridge, hour by hour.',
+        meta: ['Córdoba', '1 day'],
+      },
+      {
+        href: '/1-day-in-cadiz/',
+        region: 'Spain · Andalucía',
+        title: '1 Day in Cádiz: At the Edge of the Known World',
+        excerpt:
+          'The full account of the second day trip — El Pópulo, the Roman theatre, the cathedral, La Caleta and the camera obscura above the old city.',
+        meta: ['Cádiz', '1 day'],
+      },
+      {
+        href: '/10-days-in-sevilla/',
+        region: 'Spain · Andalucía',
+        title: '10 Days in Sevilla: Andalucía Without Rush',
+        excerpt:
+          'The stay these verdicts are drawn from — Seville held as a fixed base, with Córdoba and Granada taken as days out and the city returned to each evening.',
+        meta: ['Seville', '10 days'],
+      },
+    ]}
+  />
+</ChronicleLayout>

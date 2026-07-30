@@ -1,0 +1,771 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+
+const meta: ChronicleMeta = {
+  title: 'Seville Tapas and Food Guide',
+  headline: 'Seville Tapas and Food Guide: How the City Eats, and When',
+  description:
+    'How eating in Seville actually works — the tapas system, the three sizes, the clock that ruins visitors’ evenings, the markets, and what one documented stay ate.',
+  path: '/seville-tapas-food-guide/',
+  ogImage: '/images/seville-tapas-food-guide/jamon-counter-mercado-de-triana.jpg',
+  factsVerified: '2026-07-29',
+};
+
+const IMG = '/images/seville-tapas-food-guide';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Andalucía', 'Seville']}
+    label="Food · The System and the Table"
+    title="Seville Tapas and Food Guide:"
+    titleEmphasis="How the City Eats, and When"
+    standfirst="Most visitors to Seville do not eat badly because they chose the wrong bar. They eat badly because they arrived at half past seven, sat down, and ordered in the wrong units."
+    stats={[
+      { num: '21:00', label: 'Dinner Begins' },
+      { num: '3', label: 'Sizes to Order' },
+      { num: '0', label: 'Free Tapas' },
+      { num: '~80', label: 'Stalls in One Market' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Seville's food is not difficult and it is not expensive, and a visitor
+          can still spend a week here eating worse than the man at the next
+          counter paying a third as much. The reason is almost never the choice of
+          place. It is that eating in this city runs on a set of conventions —
+          about quantity, about where you stand, about what hour it is
+          acceptable to be hungry — that nobody writes down because everybody
+          local absorbed them at eight years old.
+        </p>
+        <p>
+          So this is a guide to the system rather than a list of restaurants. It
+          explains how an order is actually placed, why the same dish costs three
+          different amounts in the same room, what the words on a chalkboard mean,
+          and above all what the clock is doing — because more visitor meals in
+          Seville are ruined by turning up at the wrong hour than by any other
+          cause. The restaurants come near the end, they are few, and they are
+          labelled by how much anybody can actually vouch for them.
+        </p>
+        <p>
+          That labelling matters enough to state at the front. Four kinds of thing
+          appear below and they are kept separate throughout.
+          <strong>What was eaten</strong> — thirteen restaurants and a bar across
+          nine nights in late September and early October 2025, recorded on this
+          site as <a href="/10-days-in-sevilla/">ten days using Seville as a
+          base</a>. <strong>What was eaten <em>at</em> them</strong> — which, with
+          one exception, the record does not preserve, so the dishes of exactly
+          one kitchen are described here and no others.
+          <strong>What is currently verifiable</strong> — market hours,
+          institutions, the shape of the trade, checked in July 2026.
+          And <strong>how the city eats</strong>, which is not anybody's opinion
+          and takes up most of the page. Nothing has been invented to fill the gaps
+          between them.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/jamon-counter-mercado-de-triana.jpg`}
+      alt="A charcuterie counter in the Mercado de Triana under magenta lighting: whole Ibérico hams hanging in dark netted sleeves and unwrapped, rings of chorizo and morcilla, a Queso Payoyo poster, a printed chart headed Jamones y Paletas Ibéricos setting out Bellota 100%, Bellota, Cebo de Campo and Cebo, euro price tags throughout, two customers at the glass and an assistant working behind it."
+      width={2048}
+      height={1365}
+      caption="A ham counter in Triana, with the whole grading system printed on a card above it: Bellota 100%, Bellota, Cebo de Campo, Cebo. The vocabulary in this article is not academic — it is written on the wall of the market."
+      priority
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="who-for" rule={false}>What this page is not</SectionHeading>
+      <p>
+        It is not a ranked restaurant list, and it does not carry a table of
+        addresses. Seville's bars close for August, for holidays, for family
+        reasons and sometimes permanently, and a directory assembled in one year
+        and read in another does a reader active harm. What does not go stale is
+        how the ordering works, what the dishes are, when to arrive, and which
+        markets trade on which days. That is what is here.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'system', label: 'How tapas works' },
+        { id: 'clock', label: 'The clock' },
+        { id: 'repertoire', label: 'What to order' },
+        { id: 'sherry', label: 'Sherry' },
+        { id: 'markets', label: 'The markets' },
+        { id: 'neighbourhoods', label: 'Where the barrios differ' },
+        { id: 'mistakes', label: 'Nine mistakes' },
+        { id: 'record', label: 'What one stay ate' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Rules, Before Anything Else"
+    meta={[
+      {
+        label: 'Tapas are not free here',
+        value:
+          'You order them and you pay for them. The free-tapa-with-a-drink convention belongs to Granada and Jaén, not to Seville, and expecting it is the single most common visitor error.',
+      },
+      {
+        label: 'Three sizes, not one',
+        value:
+          'Tapa, media ración, ración — roughly a taste, a half plate and a plate. The same dish appears at all three sizes on the same board at three prices.',
+      },
+      {
+        label: 'The clock is the whole game',
+        value:
+          'Lunch from about 14:00, dinner rarely before 21:00, and traditional bars largely shut between roughly 16:30 and 20:00. Arrive at 19:00 and you will eat in a tourist restaurant by default.',
+      },
+      {
+        label: 'Stand up',
+        value:
+          'The bar is cheaper than a table and a table is cheaper than a terrace, in the same establishment, for the same food. Nobody will explain this to you.',
+      },
+    ]}
+    daysHeading="The Shape of a Sevillian Day at the Table"
+    days={[
+      { num: '08:00–10:00', text: 'Coffee standing up, and toast with olive oil or lard. Nobody eats a large breakfast. Nobody lingers.' },
+      { num: '11:00–12:30', text: 'The second coffee, sometimes with a small savoury thing. This is when the market is busiest.' },
+      { num: '14:00–15:30', text: 'Lunch, and it is the main meal of the day. A menú del día is the best value in Spain.' },
+      { num: '15:30–17:30', text: 'Nothing. The shade hour. Kitchens close; the city closes with them.' },
+      { num: '20:30–21:00', text: 'The bars refill. This is the beginning of the evening, not the middle of it.' },
+      { num: '21:00–00:00', text: 'Dinner, standing or sitting, in two or three places rather than one.' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter
+      id="system"
+      number="I."
+      name="How Tapas Actually Works"
+      epithet="Three sizes, three prices for the same plate, and a bill written on the counter in chalk"
+    />
+
+    <div class="narrative prose">
+      <p>
+        A tapa is not a dish. It is a quantity. Almost everything on a Sevillian
+        bar's board exists at three sizes, and the size is the unit you are
+        ordering in: a <strong>tapa</strong> is a saucer's worth, three or four
+        mouthfuls, priced for a person who intends to have four or five of them
+        across two bars; a <strong>media ración</strong> is a half plate, enough
+        for two people to share alongside something else; a
+        <strong>ración</strong> is a full plate and is a portion of dinner. The
+        prices sit in three columns on the board or on the menu, and the whole
+        skill of eating well in Seville consists of matching the size to what you
+        actually want, which is usually smaller than a visitor's instinct.
+      </p>
+      <p>
+        The second convention is about position, and it is money. In most
+        traditional establishments the same food carries three prices depending on
+        where you consume it — cheapest standing at the bar, more at a table
+        inside, more again on the terrace. This is legal, normal, printed on the
+        menu if you look, and never mentioned. Standing at a bar in Seville is not
+        a hardship posture; it is where the food is freshest, the turnover
+        fastest, and the barman's attention actually available.
+      </p>
+      <p>
+        The third is about ordering itself, and it is the one that intimidates
+        people. You do not wait to be seated, greeted or approached. You find a
+        space at the bar, catch the barman's eye, and ask for a drink; the food
+        order follows in the same breath or a minute later, in pieces, as you
+        decide. Nothing is ordered all at once. A Sevillian evening at a good
+        counter consists of a drink, one tapa, a conversation, another tapa, and
+        then leaving for somewhere else — the movement between two or three bars
+        being the point rather than a failure to settle. In the older places the
+        running total is chalked on the wooden counter in front of you, and you
+        pay at the end, which looks like a charming survival and is in fact the
+        most efficient system anyone has devised for the purpose.
+      </p>
+      <p>
+        And the fourth: <strong>tapas in Seville are not free.</strong> The
+        tradition of a complimentary tapa arriving with each drink is real and
+        Andalusian, and it belongs to Granada, Jaén and Almería. A traveller
+        arriving in Seville from
+        <a href="/best-day-trips-from-seville/">a day trip to Granada</a> — where
+        that convention is still very much alive — sometimes carries the
+        expectation west and is quietly disappointed for a week. Here you order,
+        and you pay, and the compensation is that the food is better.
+      </p>
+    </div>
+
+    <Beat>You are not choosing dishes. You are choosing sizes, and where to stand.</Beat>
+
+    <Chapter
+      id="clock"
+      number="II."
+      name="The Clock"
+      epithet="The section most likely to change your trip, and the one most guides bury at the bottom"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Seville does not eat late as a matter of style. It eats late because for
+        much of the year the middle of the day is unusable and the evening does
+        not begin until the stone has stopped radiating, and the timetable that
+        results is not negotiable by tourists. Two figures are worth memorising:
+        <strong>lunch begins at about two</strong>, and <strong>dinner begins at
+        about nine</strong>. Not "can be had from". Begins.
+      </p>
+      <p>
+        The consequence that catches visitors is the gap. From roughly half past
+        four to eight in the evening, a large proportion of traditional bars are
+        either shut or serving drinks only, their kitchens cold between services.
+        A hungry traveller walking the centre at seven finds, quite reliably, that
+        the places still serving hot food at that hour are the ones that exist for
+        people who do not know the timetable — the terraces with laminated
+        photographs and a man outside inviting you in. That is the mechanism by
+        which perfectly sensible visitors end up eating the worst meal of their
+        trip on their first night. It is not bad luck. It is a schedule.
+      </p>
+      <p>
+        The correction is simple and worth building the day around. Eat your main
+        meal at lunch, between two and half past three, when the
+        <strong>menú del día</strong> — three courses, bread and a drink at a
+        fixed price — is the best value available anywhere in Spain and is what
+        the people around you are having. Then treat the evening as tapas: go out
+        at nine, not seven, and expect to eat in two or three places rather than
+        one. If nine feels impossibly late, eat at half past eight and accept a
+        half-empty room; the food will be the same and the atmosphere will arrive
+        about the time you are finishing.
+      </p>
+      <p>
+        Two smaller notes on the clock. <strong>Sunday evening is quiet</strong>
+        and a great many kitchens are closed; the good move is a long Sunday lunch
+        instead. And <strong>August empties the city</strong>: family-run bars
+        close for two or three weeks and post a handwritten sign, which is
+        unpredictable and worth a phone call if you have set your heart on
+        somewhere.
+      </p>
+    </div>
+
+    <Chapter
+      id="repertoire"
+      number="III."
+      name="What to Understand Before You Order"
+      epithet="A dozen things that are genuinely Sevillian, and what each one actually is"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Andalusian cooking is poor cooking that got very good at what it had:
+        pork, olive oil, chickpeas, bread, sherry and whatever the Atlantic sent
+        up the river. The list below is not a list of recommendations. It is a
+        vocabulary, so that a chalkboard stops being an obstacle.
+      </p>
+      <p>
+        <strong>Espinacas con garbanzos</strong> — spinach with chickpeas, cumin,
+        paprika and often a little vinegar and fried bread, served hot in a small
+        earthenware dish. It is the most Sevillian thing on any board, it is
+        usually the cheapest, it descends from Moorish and Jewish cooking, and it
+        is the single best test of a bar: a place that makes this well is not
+        cutting corners anywhere.
+      </p>
+      <p>
+        <strong>Salmorejo</strong> — the cold one, and not gazpacho. Tomato,
+        bread, olive oil and garlic blended thick enough to coat a spoon, usually
+        with chopped egg and jamón on top. Gazpacho is thinner and includes pepper
+        and cucumber; salmorejo is richer, comes from Córdoba, and is what you
+        want in July.
+      </p>
+      <p>
+        <strong>Carrillada</strong> — pork or beef cheek braised until it gives up
+        entirely, in a dark sherry-based sauce. Ordered as a media ración it is one
+        of the best-value plates in the city.
+        <strong>Cola de toro</strong> is oxtail treated the same way and takes
+        even longer; where it appears it is usually the kitchen's declaration of
+        seriousness.
+      </p>
+      <p>
+        <strong>Solomillo al whisky</strong> — pork tenderloin in a sauce of
+        garlic, lemon and whisky, which sounds like a mistake and is a Sevillian
+        institution. Order it with bread and do not think about it too hard.
+      </p>
+      <p>
+        <strong>Pescaíto frito</strong> — the small fried fish of the Andalusian
+        coast, floured and dropped in very hot olive oil, eaten with fingers and
+        lemon. It is a Cádiz and Málaga tradition that Seville does well because
+        the river brought the fish up; the coastal version, eaten from a paper
+        cone standing on a square, is described in
+        <a href="/1-day-in-cadiz/">the Cádiz chronicle</a>.
+        <strong>Tortillitas de camarones</strong> — lacy fritters of tiny whole
+        shrimp — belong to the same coast and turn up on better Seville boards.
+      </p>
+      <p>
+        <strong>Jamón ibérico</strong>, and the grading printed on the card above
+        every market counter: <em>bellota 100%</em> from pure-bred acorn-fed pigs,
+        <em>bellota</em> from crossbred acorn-fed, <em>cebo de campo</em> from
+        pasture-raised on feed, and <em>cebo</em> from feed alone. The differences
+        are real and the price differences are steep. In a bar, a plate of the
+        second grade is a better purchase than a small plate of the first.
+      </p>
+      <p>
+        <strong>Montadito</strong> and <strong>serranito</strong> — the first a
+        small filled roll, the second a substantial sandwich of pork loin with
+        fried green pepper and jamón, which is lunch rather than a tapa and is
+        what Sevillians eat when they are actually hungry and in a hurry.
+      </p>
+      <p>
+        <strong>Queso payoyo</strong> — a goat and sheep cheese from the Sierra de
+        Grazalema, aged, nutty, and on every serious counter in the city. And for
+        the end of a meal, <strong>convent sweets</strong>: enclosed religious
+        communities across Seville still sell biscuits, marmalades and
+        egg-yolk <em>yemas</em> through a revolving wooden hatch, so that the buyer
+        and the seller do not see each other. The hatch at the convent on Plaza de
+        Pilatos, beside Casa de Pilatos, is the one recorded on this site, and the
+        yemas bought there were very good.
+      </p>
+    </div>
+
+    <Chapter
+      id="sherry"
+      number="IV."
+      name="Sherry, and the One Thing to Know About It"
+      epithet="Not a dessert wine, not sweet, and served cold in a glass the size of a thought"
+    />
+
+    <div class="narrative prose">
+      <p>
+        The most common misunderstanding about sherry in northern Europe is that
+        it is sweet. Almost none of it is. It comes from the triangle of
+        vineyards around <a href="/best-day-trips-from-seville/">Jerez de la
+        Frontera</a>, an hour down the Atlantic line, and it is made by the solera
+        method — a cascade of barrels in which older wine is continuously
+        refreshed by younger, so that no bottle belongs to a single year and the
+        cellar itself is the vintage.
+      </p>
+      <p>
+        Four names cover almost everything you will meet.
+        <strong>Fino</strong> is bone dry, pale, aged under a veil of yeast, and
+        served cold in a small glass; it is what you drink with olives, jamón and
+        fried fish, and it is the correct first order in an old Seville bar.
+        <strong>Manzanilla</strong> is the same idea made at Sanlúcar on the
+        coast, where the sea air makes it saltier and lighter.
+        <strong>Amontillado</strong> is a fino that lost its yeast veil and
+        oxidised — darker, nuttier, still dry, and very good with the braised
+        dishes. <strong>Oloroso</strong> never had the veil at all: dark, broad,
+        dry unless sweetened. Only <strong>Pedro Ximénez</strong>, almost black
+        and made from sun-dried grapes, is the sweet thing people expect all
+        sherry to be, and it belongs at the end of the meal over ice cream.
+      </p>
+      <p>
+        The practical point is that fino is cheap, it is poured cold and fast, it
+        goes with everything Andalusian, and ordering it marks you out as somebody
+        who has been paying attention. On the documented stay behind this page,
+        the memorable version of that was a glass of fino arriving at a table in a
+        modern tapas bar without having been asked for — which is what happens
+        when the kitchen knows what the dish needs better than the customer does.
+      </p>
+    </div>
+
+    <Chapter
+      id="markets"
+      number="V."
+      name="The Market as the City's Larder"
+      epithet="Where the trade still happens daily, and why a visitor should go even without a kitchen"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Seville's markets are not food halls with a heritage façade. They are
+        working shops where the neighbourhood buys dinner, and they run on the
+        neighbourhood's hours rather than a visitor's — which is precisely why
+        they are worth an hour of a trip. Stand in one at half past eleven on a
+        Tuesday and the argument this article has been making about the clock
+        becomes visible: the queues are at the fish and the ham, the shoppers are
+        buying for a meal three hours away, and nobody is holding a menu.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/mercado-de-triana-entrance.jpg`}
+      alt="The azulejo sign reading Bienvenidos al Mercado de Triana in blue lettering on white tiles within a decorative tiled border, set into the brick gable above the market's shuttered iron gate, with the shadow of a street lamp thrown across it and a deep blue sky above."
+      width={2048}
+      height={1365}
+      caption="The Mercado de Triana names itself in tile, which is appropriate for a building standing on the foundations of a castle in the neighbourhood that made the tiles."
+    />
+
+    <div class="narrative prose">
+      <p>
+        <strong>Mercado de Triana</strong> is the one to see. It stands at the
+        Triana foot of the Puente de Isabel II on the foundations of the castle of
+        San Jorge, holds around eighty stalls, and sells what a household actually
+        needs: fruit and vegetables, meat, <em>chacinas</em> — the cured pork
+        trade — pickles, spices, fish and shellfish. Its rhythm is the thing to
+        get right. The <strong>produce and retail stalls trade Monday to
+        Saturday, roughly nine to half past two, and are closed on Sundays and
+        public holidays.</strong> The bars and counters inside keep longer hours,
+        including Sunday afternoons, which means a Sunday visit gives you a
+        handsome hall with the trade gone out of it. Go on a weekday morning and
+        eat at one of the counters between the stalls, which serve what the stalls
+        sell — the whole argument for a market breakfast in one sentence.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/fruteria-mercado-de-triana.jpg`}
+      alt="A greengrocer's stall in the Mercado de Triana: bunches of garlic, spring onions, carrots, leeks, pineapples, bananas and cauliflowers hanging from a rail above crates of lemons, oranges, peppers, green beans and strawberries, with a stallholder in a blue polo shirt reaching across and handwritten Frutas price cards throughout."
+      width={2048}
+      height={1365}
+      caption="Half past eleven on a Saturday. The stall is hung as well as stacked, because floor space costs and ceiling space does not."
+    />
+
+    <Figure
+      src={`${IMG}/mercado-de-triana-morning-shoppers.jpg`}
+      alt="An aisle in the Mercado de Triana mid-morning: a stall of mangos, avocados marked aguacate extra ecológico Málaga 3'95, radishes, fennel and punnets of berries, with two shoppers of retirement age standing at the counter and further stalls and shoppers beyond."
+      width={2048}
+      height={1365}
+      caption="Avocados from Málaga at 3,95 a kilo, in October 2025. The prices on these cards are the only euro figures in this article that anybody can actually stand behind."
+    />
+
+    <div class="narrative prose">
+      <p>
+        Two others are worth knowing about.
+        <strong>Mercado de Feria</strong>, in the north of the city on the street
+        of the same name, is reputed to be the oldest market in Seville and is
+        markedly less visited than Triana — a neighbourhood market with a fish bar
+        in it, in a quarter where nobody is selling anything to tourists. And
+        <strong>Mercado de la Encarnación</strong> sits underneath the Setas, in
+        the same excavation as the Antiquarium's Roman remains, which produces the
+        pleasing situation of buying tomatoes on top of a Roman street.
+      </p>
+      <p>
+        A word on the newer breed. Seville also has renovated market halls
+        converted into food courts — the Lonja del Barranco on the riverbank being
+        the best known. They are pleasant, they open at hours the traditional trade
+        does not, and they are not the same thing at all: a food court is a place
+        to eat and a market is a place to shop. Both are legitimate. Only one of
+        them tells you anything about the city.
+      </p>
+    </div>
+
+    <Chapter
+      id="neighbourhoods"
+      number="VI."
+      name="Where the Barrios Differ at the Table"
+      epithet="Four quarters, four kinds of evening, and one to avoid eating in altogether"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Seville is small enough that a visitor can eat in a different quarter
+        every night without effort, and the quarters are genuinely different at
+        the table. Where you sleep interacts with this, which is argued separately
+        in <a href="/best-areas-to-stay-in-seville/">the guide to the six
+        areas</a>.
+      </p>
+      <p>
+        <strong>Centro and Alfalfa</strong> hold the densest and best
+        concentration of tapas bars in the city. Around Plaza de la Alfalfa and
+        Plaza del Salvador the crowd stands outdoors with a drink in one hand from
+        nine until very late, and two streets back from either square the bars are
+        smaller, older and full of people who work nearby. If you eat in one
+        quarter on one night, eat here.
+      </p>
+      <p>
+        <strong>San Lorenzo and the Alameda de Hércules</strong> are where the
+        city's younger and more contemporary kitchens have gathered, and where the
+        eating goes latest. The Alameda itself is a bar strip under plane trees;
+        San Lorenzo behind it is quieter and holds several of the more serious
+        modern tapas rooms. This is the quarter that most rewards a booking.
+      </p>
+      <p>
+        <strong>Triana</strong>, across the river, eats like a neighbourhood
+        rather than a district: Calle San Jacinto and the lanes off it for
+        everyday counters, Calle Betis facing the lit old city across the water
+        for the evening. The market anchors the morning. The register here is
+        traditional and the prices are lower than the near bank's.
+      </p>
+      <p>
+        <strong>El Arenal</strong>, between the Cathedral and the river, keeps a
+        run of old comedores near the bullring — the sort of place with a tiled
+        dado, a television on in the corner and a menú del día chalked outside. It
+        is the least fashionable eating in central Seville and among the most
+        reliable.
+      </p>
+      <p>
+        And <strong>Santa Cruz</strong> is the quarter to walk through rather than
+        eat in. The lanes east of the Cathedral are beautiful and they contain the
+        highest concentration of restaurants in the city that exist for people who
+        will not come back. There are honourable exceptions and finding them takes
+        local knowledge. Three streets north, in Alfalfa, no such knowledge is
+        required.
+      </p>
+    </div>
+
+    <Chapter
+      id="two-kinds"
+      number="VII."
+      name="The Old Bar and the New Kitchen"
+      epithet="Two traditions that coexist without much friction, and how to tell which one you have walked into"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Seville runs two parallel food cultures and a good week uses both.
+      </p>
+      <p>
+        The <strong>traditional bar</strong> announces itself: a marble or zinc
+        counter, hams on a stand, barrels or bottles of fino behind, a tiled dado,
+        handwritten paper signs, sawdust or paper napkins on the floor, and the
+        bill chalked on the wood. The menu has not changed in thirty years and does
+        not need to. You stand, you order two or three things, you pay in cash or
+        card without ceremony, and the whole transaction takes twenty minutes.
+        Within this category the <strong>abacería</strong> is worth naming
+        separately — a deli-tavern that sells the ham, cheese, tinned fish and
+        wine it also serves you, so the shelves around the room are the menu.
+      </p>
+      <p>
+        The <strong>contemporary kitchen</strong> looks different: fewer covers,
+        a short printed or chalked list that changes, one or two dishes the place
+        is known for, and reservations. What it is doing is not fusion. It is
+        Andalusian cooking with better technique and less pork fat — the same
+        oxtail, the same chickpeas, the same fino, executed with an attention the
+        old bars do not attempt. These are the places to book, and the places
+        where a visitor is most likely to have the meal they remember.
+      </p>
+      <p>
+        The rule of thumb that follows is short: <strong>book the sit-down
+        kitchens, never the counters.</strong> Turning up unannounced at a good
+        modern tapas room at nine on a Friday will not work. Turning up at an old
+        counter is the only way anyone ever does it.
+      </p>
+    </div>
+
+    <div class="narrative prose">
+      <SectionHeading id="mistakes">Nine mistakes, in the order visitors make them</SectionHeading>
+      <p>
+        <strong>One.</strong> Eating dinner at seven, which selects for the
+        restaurants that cater to people eating dinner at seven.
+        <strong>Two.</strong> Expecting a free tapa with the drink, which is
+        Granada's convention and not Seville's.
+        <strong>Three.</strong> Ordering raciones when you wanted tapas, and
+        arriving at the third dish already full.
+        <strong>Four.</strong> Sitting on a terrace for counter food and paying a
+        third more for it without noticing.
+        <strong>Five.</strong> Eating all three courses in one place, when the
+        local practice is two or three bars in an evening and one dish in each.
+        <strong>Six.</strong> Eating in Santa Cruz because you are standing in
+        Santa Cruz.
+        <strong>Seven.</strong> Going to the market in the afternoon, when the
+        produce stalls shut at about half past two and are closed altogether on
+        Sundays.
+        <strong>Eight.</strong> Treating lunch as the light meal. In Seville it is
+        the substantial one, and the menú del día is the best value of the trip.
+        <strong>Nine.</strong> Ordering sherry expecting it to be sweet, and
+        concluding you do not like sherry.
+      </p>
+
+      <SectionHeading id="record">What one documented stay actually ate</SectionHeading>
+      <p>
+        This section is the record rather than a recommendation, and the
+        distinction is the point. Across nine nights in late September and early
+        October 2025, thirteen restaurants and one bar were eaten and drunk in;
+        the full list, night by night, is in
+        <a href="/10-days-in-sevilla/">the ten-day chronicle</a> and is not
+        reproduced here. Seven are named below because each one illustrates a
+        category this article has been describing. All of them were open in 2025.
+        None has been re-verified as trading today, and a reader planning to cross
+        the city for one should check first.
+      </p>
+      <p>
+        <strong>Eslava</strong>, on the street of the same name behind San
+        Lorenzo, is the modern-tapas category in a single address: a place three
+        separate people insisted on, serious about ingredients and unserious about
+        atmosphere, whose slow-cooked egg has been famous for years and whose
+        oxtail croquette deserves to be. It is also the one kitchen on this page
+        whose dishes the record preserves — the egg, the croquette, and a glass of
+        fino that arrived without being asked for. Everything else eaten on that
+        stay is a name and a night, and this article does not invent the plates.
+      </p>
+      <p>
+        <strong>Abacería del Postigo</strong>, near the river in El Arenal, is
+        what an abacería is: ham, cheese, natural wine, and no ceremony at all.
+        <strong>Baratillo</strong>, on Calle Adriano beside the bullring, is the
+        old comedor category — river-facing, traditional, full of locals, and the
+        most Sevillian lunch on the recorded list.
+        <strong>Taberna la Auténtica Regina</strong>, three minutes from Casa de
+        Pilatos, is the cheap noisy neighbourhood counter that a good day needs
+        somewhere in the middle of it.
+        <strong>Balbuena y Huertas</strong> on Calle San Jacinto is Triana eating
+        late, on the far bank, after something else.
+        <strong>El Disparate</strong> on the Alameda de Hércules is the
+        contemporary Alameda register — a corner site with the name painted large
+        on the wall and tables out on the pavement.
+      </p>
+      <p>
+        And <strong>El Garlochi</strong> on Calle Boteros is not food at all but
+        belongs here anyway: a bar decorated wholly in the imagery of the Semana
+        Santa brotherhoods, smelling of incense, serving cocktails with names that
+        are either blasphemous or devout depending on your temperament. It is the
+        best single illustration in the city of how completely the religious
+        calendar has soaked into ordinary Sevillian life, and it is open late.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/el-disparate-alameda.jpg`}
+      alt="The corner exterior of a restaurant called el Disparate on the Alameda de Hércules in Seville: cream walls with the name hand-painted in large black brush lettering, a round navy sign above, a tall cactus in a terracotta pot, bougainvillea trained up the wall, and one laid pavement table with green chairs."
+      width={1365}
+      height={2048}
+      caption="Two in the afternoon on the Alameda, and the tables are laid for a service that has not started yet. Nothing here opens for dinner before about half past eight."
+      variant="portrait"
+    />
+
+    <Practical place="Seville — Eating" detail="Verified 29 July 2026 · research, not recollection" detailIcon="🍽">
+      <PracticalSection label="Currently verifiable: the markets" level={3}>
+        <div class="prac-item">
+          <strong>Mercado de Triana</strong>, Calle San Jorge — retail and produce
+          stalls <strong>Monday to Saturday, roughly 09:00–14:30, closed Sundays
+          and public holidays</strong>. Bars and counters inside run longer, Monday
+          to Saturday roughly 09:00–17:00 and 18:00–00:00, and Sundays and
+          holidays 10:00–17:00. Around eighty stalls. Bring some cash for the
+          stalls; the counters take cards.
+        </div>
+        <div class="prac-item">
+          <strong>Mercado de Feria</strong>, Calle Feria — a neighbourhood market
+          in the north of the city, reputed to be the oldest in Seville, with a
+          fish bar attached. Morning trade, and far quieter than Triana.
+        </div>
+        <div class="prac-item">
+          <strong>Mercado de la Encarnación</strong> — beneath the Setas, sharing
+          its excavation with the Antiquarium's Roman remains.
+        </div>
+        <div class="prac-item">
+          <strong>Convent sweets</strong> — sold through a revolving hatch at
+          enclosed communities across the city, including the convent on Plaza de
+          Pilatos next to Casa de Pilatos. Ring the bell at the hatch.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="The rules worth carrying" level={3}>
+        <div class="prac-item">
+          <strong>Order by size, not by dish.</strong> Tapa, media ración,
+          ración. Two tapas each is a light dinner; two raciones each is too much
+          food.
+        </div>
+        <div class="prac-item">
+          <strong>Stand at the bar.</strong> It is cheaper than a table and the
+          table is cheaper than the terrace, in the same room, for the same food.
+        </div>
+        <div class="prac-item">
+          <strong>Book the modern kitchens; never book a counter.</strong> A day
+          or two ahead is enough except at weekends.
+        </div>
+        <div class="prac-item">
+          <strong>Order fino, cold, first.</strong> It is inexpensive, dry, and
+          right with almost everything on the board.
+        </div>
+        <div class="prac-item">
+          <strong>Use lunch.</strong> The menú del día between two and half past
+          three is the best-value meal in Spain and the one the city itself is
+          eating.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="What this page does not claim" level={3}>
+        <div class="tip-row">
+          <strong>No restaurant here has been verified as currently trading.</strong>
+          The seven named are drawn from a documented stay in September and
+          October 2025. Sevillian bars close for August and for family reasons at
+          short notice; check before making a journey.
+        </div>
+        <div class="tip-row">
+          <strong>No dish is described at any venue except Eslava</strong>, because
+          the record does not preserve what was eaten elsewhere and inventing it
+          would make the rest of this page worthless.
+        </div>
+        <div class="tip-row">
+          <strong>No prices are quoted for any restaurant.</strong> The only euro
+          figures on the page are the ones legible on market price cards in
+          October 2025.
+        </div>
+        <div class="tip-row">
+          The market hours above were checked against the market's own published
+          timetable in July 2026. Everything else in this practical block is
+          either structural or explicitly framed as reputation rather than
+          verification.
+        </div>
+      </PracticalSection>
+    </Practical>
+
+    <PullQuote>
+      A tapa is not a dish. It is a quantity — and almost every visitor's first
+      bad meal in Seville is really an error of arithmetic, committed two hours
+      too early in the evening.
+    </PullQuote>
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        What the food actually tells you about Seville is that the city is
+        organised around heat and company, in that order. The long lunch and the
+        late dinner are not indulgences; they are what you arrive at after several
+        centuries of afternoons too hot to work in. The small plate exists so that
+        an evening can be spent in three rooms rather than one. The bill chalked on
+        the counter exists because nobody was ever meant to sit down long enough to
+        need a receipt. Even the sherry is a solution to a problem — a wine that
+        will not spoil in a hot cellar, poured cold and drunk fast.
+      </p>
+      <p>
+        Which is why the useful instruction at the end of a food guide is not a
+        restaurant name. It is to stop resisting the timetable. Eat at two and at
+        nine, order less than you think, stand up, and let the evening take you
+        through more than one door. Do that and Seville feeds you extremely well
+        for very little, in the same rooms and at the same hours as the people who
+        live here — which is the whole of what anybody means by eating well in a
+        foreign city. The longer record of one stay that did exactly that is in
+        <a href="/10-days-in-sevilla/">the ten-day chronicle</a>; the rest of the
+        table, from Bologna to Tangier, is in <a href="/chronicles/">the
+        archive</a>.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/10-days-in-sevilla/',
+        region: 'Spain · Andalucía',
+        title: '10 Days in Sevilla: Andalucía Without Rush',
+        excerpt:
+          'The full night-by-night record this page draws on — thirteen restaurants, one extraordinary bar, and the budget that went with them.',
+        meta: ['Seville', '10 days'],
+      },
+      {
+        href: '/4-days-in-bologna/',
+        region: 'Italy · Emilia-Romagna',
+        title: "4 Days in Bologna: The Fat City's Table",
+        excerpt:
+          'The other food chronicle on this site — ragù, mortadella, Parmigiano-Reggiano, and a city with an even stronger conviction that lunch deserves reverence.',
+        meta: ['Bologna', 'Food'],
+      },
+      {
+        href: '/best-areas-to-stay-in-seville/',
+        region: 'Spain · Andalucía',
+        title: 'Best Areas to Stay in Seville',
+        excerpt:
+          'Since where you sleep decides where you eat at half past ten: six neighbourhoods assessed on noise, shade, walking distance and evening character.',
+        meta: ['Seville', 'Where to stay'],
+      },
+    ]}
+  />
+</ChronicleLayout>

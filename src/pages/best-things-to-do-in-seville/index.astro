@@ -1,0 +1,818 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+
+const meta: ChronicleMeta = {
+  title: 'Best Things to Do in Seville',
+  headline: 'Best Things to Do in Seville: Sixteen, Grouped and Judged',
+  description:
+    'Sixteen Seville experiences assessed individually — how long each takes, what it pairs with, what needs booking, and which ones a first visit can reasonably skip.',
+  path: '/best-things-to-do-in-seville/',
+  ogImage: '/images/best-things-to-do-in-seville/pabellon-mudejar-reflected.jpg',
+  factsVerified: '2026-07-29',
+};
+
+const IMG = '/images/best-things-to-do-in-seville';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Andalucía', 'Seville']}
+    label="Guide · Sixteen Experiences"
+    title="Best Things to Do in Seville:"
+    titleEmphasis="Sixteen, Grouped and Judged"
+    standfirst="Not a ranked list of interchangeable attractions. Sixteen experiences, grouped by where they sit and what they are for, each with the time it takes, what it pairs with, and an honest answer to whether you can skip it."
+    stats={[
+      { num: '16', label: 'Entries' },
+      { num: '6', label: 'Groups' },
+      { num: '3', label: 'Need Booking' },
+      { num: '6', label: 'Free or Nearly' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          The trouble with a list of things to do in Seville is that the list is
+          short and the city is not. Six or seven buildings carry the reputation,
+          they stand within a few hundred metres of one another, and any account
+          of them will name the same six or seven. The genuinely useful work
+          begins one layer down, among the fifteen or twenty things that are
+          worth a stranger's afternoon and are not obligatory — and there the
+          question is no longer <em>what is there</em> but <em>which of these,
+          and instead of what</em>.
+        </p>
+        <p>
+          So this is a list with verdicts in it. Sixteen entries, grouped into
+          six sections by what they actually are rather than by rank, and each one
+          answered on the same five points: why it matters, what makes it
+          specifically Seville rather than generically Spanish, how long it takes,
+          what it sits next to, and who can reasonably leave it out. Several
+          entries carry an explicit permission to skip. Two are recommended over
+          near-identical alternatives. Sixteen is not a round number and is not
+          meant to be — it is the count that survived the test of whether
+          something specific could be said about why each one deserves your time.
+        </p>
+        <p>
+          What this page deliberately does not do is put them in order. Sequencing
+          Seville is a separate and quite difficult problem, solved elsewhere on
+          this site for <a href="/3-days-in-seville/">three days</a> and for
+          <a href="/one-day-in-seville/">a single one</a>. Here the geography
+          appears only as pairing advice, so you can assemble your own days out of
+          it. Everything below has been visited: the sixteen are drawn from a
+          nine-night stay recorded as
+          <a href="/10-days-in-sevilla/">ten days using Seville as a base</a>.
+          The opening hours, prices and booking rules are current research rather
+          than memory, and are dated accordingly.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/pabellon-mudejar-reflected.jpg`}
+      alt="The Pabellón Mudéjar in Parque de María Luisa, Seville, mirrored in its still lily-padded pool: a brick and tile pavilion with two towers and a green-tiled roof, flanked by two tall ornate iron lamp standards, with a small fountain playing in the water."
+      width={2048}
+      height={1365}
+      caption="The Mudéjar Pavilion in Parque de María Luisa, built for the 1929 Exposition and now the Museum of Arts and Popular Customs. It is a ten-minute walk from the most photographed square in Seville and almost nobody comes round the back to look at it."
+      priority
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="how-to-use" rule={false}>How to read the entries</SectionHeading>
+      <p>
+        Each one closes with a single line of mechanics: <strong>Time</strong>,
+        <strong>Pairs with</strong>, <strong>Booking</strong>, and
+        <strong>Skip if</strong> — the last being the part most lists leave out.
+        A verdict of <em>first visit</em> means it belongs in a stay of three days
+        or fewer; <em>longer stay</em> means it earns its place from about the
+        fourth day onward. Prices and hours were verified on 29 July 2026 and are
+        the fastest-moving thing on this page.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'monumental', label: 'Monumental Seville' },
+        { id: 'river', label: 'The river and the trade' },
+        { id: 'palaces', label: 'The private palaces' },
+        { id: 'parks', label: 'Parks and open ground' },
+        { id: 'art', label: 'Art, tile and the convents' },
+        { id: 'after-dark', label: 'Seville after dark' },
+        { id: 'booking', label: 'What needs booking' },
+        { id: 'omitted', label: 'What did not make the list' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Six Groups at a Glance"
+    meta={[
+      {
+        label: 'The four that are genuinely unmissable',
+        value:
+          'Real Alcázar · Cathedral and Giralda · Plaza de España · an evening of flamenco at a tablao. Everything else on this page is a choice.',
+      },
+      {
+        label: 'Book before you arrive',
+        value:
+          'The Alcázar, the Cathedral, and whichever flamenco you settle on. Nothing else needs advance purchase.',
+      },
+      {
+        label: 'Free, or close to it',
+        value:
+          'Plaza de España · Parque de María Luisa · Barrio de Santa Cruz · the riverbank · Archivo General de Indias · Museo de Bellas Artes (free to EU citizens) · the Basílica de la Macarena itself.',
+      },
+      {
+        label: 'The three most under-visited',
+        value:
+          'Archivo General de Indias · Museo de Bellas Artes · Palacio de la Condesa de Lebrija. All three are close to the centre and all three are quiet.',
+      },
+    ]}
+    daysHeading="Group by Group"
+    days={[
+      { num: 'Monumental', text: 'Alcázar · Cathedral and Giralda · Archivo de Indias · Santa Cruz. Four entries inside a 250-metre radius.' },
+      { num: 'The River', text: 'The Guadalquivir and the Triana bank · Torre del Oro · Maestranza · Centro Cerámica Triana. One line, one bridge.' },
+      { num: 'The Palaces', text: 'Casa de Pilatos · Palacio de las Dueñas · Condesa de Lebrija. On a first visit, choose one.' },
+      { num: 'Open Ground', text: 'Plaza de España · Parque de María Luisa and the Pabellón Mudéjar. Both free, both south, both best early.' },
+      { num: 'Art and Tile', text: 'Museo de Bellas Artes · Basílica de la Macarena. What the convents left, and what the brotherhoods still carry.' },
+      { num: 'After Dark', text: 'Flamenco at a tablao · the Setas at dusk. The two hours no daytime plan can hold.' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter
+      id="monumental"
+      number="I."
+      name="Monumental Seville"
+      epithet="Four entries inside a radius of 250 metres, and the reason three days in the city is possible at all"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Around Plaza del Triunfo, Seville put a royal palace, the largest Gothic
+        cathedral in the world, the paper archive of an empire and a quarter of
+        medieval lanes within sight of one another. No other Spanish city
+        concentrates so much in so little ground. It is also the group that fills
+        first and gets hottest, which is why all four entries below carry a note
+        about the hour.
+      </p>
+
+      <SectionHeading id="alcazar" level={3} rule={false}>1. Real Alcázar</SectionHeading>
+      <p>
+        A palace lived in without interruption since the twelfth century, and the
+        single best thing in Seville. What makes it more than beautiful is the
+        decision recorded in its fabric: when the Christian kings inherited a
+        Moorish palace they extended it in the Moorish manner rather than
+        replacing it, and kept doing so for four hundred years. The Patio de las
+        Doncellas and the gilded dome of the Salón de Embajadores are the set
+        pieces; the walled gardens beyond them are close to half the visit and
+        are the part visitors run out of time for. Nothing in Andalucía explains
+        the region faster.
+      </p>
+      <p>
+        <strong>Time</strong> 2 to 2½ hours, half of it outdoors ·
+        <strong>Pairs with</strong> the Cathedral, three minutes away ·
+        <strong>Booking</strong> essential and timed; general admission €15.50,
+        reduced €8.00, Cuarto Real Alto a further €5.50; open 09:30–19:00 April
+        to September and 09:30–17:00 October to March; the early slots sell out
+        weeks ahead · <strong>Skip if</strong> never. First visit.
+      </p>
+
+      <SectionHeading id="cathedral" level={3}>2. Catedral de Sevilla and the Giralda</SectionHeading>
+      <p>
+        The largest Gothic church on earth by volume, built on the footprint of
+        the mosque it replaced, with the mosque's minaret still standing beside
+        it as a bell tower. Two things justify the ticket. The Retablo Mayor is a
+        wall of gilded and polychrome carving assembled over most of a century
+        and holding something over a thousand figures — an object genuinely
+        difficult to take in at one standing. And the Giralda is climbed by
+        thirty-five shallow ramps rather than stairs, built wide enough, the story
+        goes, for a rider to ascend on horseback. There is no lift.
+      </p>
+      <p>
+        A caution belonging to this year rather than the twelfth century:
+        improvement works on the belfry have been under way through 2026, the
+        visiting hours have moved more than once because of them, and no
+        completion date has been published. The notices neither close the climb
+        nor confirm that it is open.
+      </p>
+      <p>
+        <strong>Time</strong> 1½ hours including the tower ·
+        <strong>Pairs with</strong> the Alcázar and the Archivo, both minutes
+        away · <strong>Booking</strong> yes, timed and capacity-limited; €13.00
+        online or €14.00 at the window, reduced €7.00 / €8.00, current from 1
+        January 2026. The same ticket also admits you to the Church of El
+        Salvador a few streets north. Check
+        <a href="https://www.catedraldesevilla.es/en/cultural-visit/schedules-and-rates/" rel="noopener">the
+        official schedule page</a> in the week before you travel ·
+        <strong>Skip if</strong> never, though the tower climb is genuinely
+        optional. First visit.
+      </p>
+
+      <SectionHeading id="archivo" level={3}>3. Archivo General de Indias</SectionHeading>
+      <p>
+        The most under-visited important building in Seville, and free. A
+        Renaissance merchants' exchange, later given over to the entire written
+        record of Spain's empire in the Americas: roughly eight kilometres of
+        shelving, uniform boxes, the journals of the conquistadors, letters in
+        Columbus's own hand, all in a vaulted upper gallery with a chequered
+        marble floor cut by window light. Few rooms anywhere hold so much
+        consequence so quietly. It is also air-conditioned, which in July makes it
+        the most efficient forty minutes in the city.
+      </p>
+      <p>
+        <strong>Time</strong> 30 to 45 minutes · <strong>Pairs with</strong> the
+        Cathedral, directly opposite · <strong>Booking</strong> none needed below
+        twenty people; free; Tuesday to Saturday 09:30–17:00 with last entry
+        16:30, Sunday and public holidays 10:00–14:00, <strong>closed
+        Mondays</strong> · <strong>Skip if</strong> you have a single day and it
+        is a Monday. Otherwise no. First visit.
+      </p>
+
+      <SectionHeading id="santa-cruz" level={3}>4. Barrio de Santa Cruz</SectionHeading>
+      <p>
+        The old Jewish quarter, immediately east of the Cathedral: whitewash,
+        orange trees, courtyards behind iron gates, lanes narrow enough in places
+        that two people cannot walk them abreast. There is no ticket, no route
+        and nothing to queue for, which makes it the one entry on this page that
+        cannot be done badly except by doing it at the wrong hour. At noon it is
+        an oven with a crowd in it. At five it is one of the pleasantest places in
+        Andalucía to be lost on purpose.
+      </p>
+      <p>
+        <strong>Time</strong> 45 minutes to 1½ hours, unstructured ·
+        <strong>Pairs with</strong> everything in this group, and drifts of its
+        own accord into an evening towards Calle Mateos Gago and Plaza de la
+        Alfalfa · <strong>Booking</strong> none. Free ·
+        <strong>Skip if</strong> the ground is a problem — it is cobbled and
+        uneven throughout. First visit.
+      </p>
+    </div>
+
+    <Beat>Four things, four hundred metres, and one instruction: not at midday.</Beat>
+
+    <Chapter
+      id="river"
+      number="II."
+      name="The River and the Trade"
+      epithet="Why a city a hundred kilometres from open water grew rich on an ocean it could not see"
+    />
+
+    <div class="narrative prose">
+      <p>
+        For two centuries the whole of Spain's trade with the Americas was
+        required by law to pass through this one river port. That fact built
+        Seville, and the four entries here are what it left: a watchtower, a
+        bullring, a tile industry and the water itself, running north–south along
+        the Guadalquivir with one bridge in the middle.
+      </p>
+
+      <SectionHeading id="guadalquivir" level={3} rule={false}>5. The Guadalquivir and the Triana bank</SectionHeading>
+      <p>
+        Not a sight, and the most under-rated thing on this page. The river
+        divides Seville into the old city and Triana — sailors, potters, flamenco,
+        a neighbourhood that knows it is not the centre and has never much wanted
+        to be — and the walk along Calle Betis on the west bank, facing the lit
+        old town across the current, is one of the genuinely fine hours available
+        anywhere in Spain. At dawn and at dusk the water carries rowers and
+        canoeists; the crews training on it are a working club rather than an
+        attraction, which is exactly why watching them is worth ten minutes.
+      </p>
+      <p>
+        <strong>Time</strong> an hour, or an evening · <strong>Pairs with</strong>
+        the market and the ceramics museum in the morning, or nothing at all after
+        dark · <strong>Booking</strong> none. Free ·
+        <strong>Skip if</strong> you have one day; the bridge is the specific
+        thing that breaks a single-day route. First visit if you have two days or
+        more.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/guadalquivir-at-sunset.jpg`}
+      alt="The Guadalquivir at sunset seen from above: a lone kayaker and a group of four paddlers on violet water, the far bank in silhouette with white apartment buildings, trees, construction cranes and a lit modern building, beneath an orange and violet sky."
+      width={1365}
+      height={2048}
+      caption="Eight in the evening, and the river is being used rather than admired — training crews, a kayak, and cranes on the far bank. Seville's working edges are part of the argument for walking the water rather than photographing it."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="torre-del-oro" level={3}>6. Torre del Oro and the Naval Museum</SectionHeading>
+      <p>
+        An Almohad watchtower of 1221 that has since been a prison, a chapel, a
+        gunpowder store and a warehouse, and is now a small maritime museum with
+        a viewing platform on top. It is the cheapest ticketed thing in central
+        Seville and the most modest, and its real function is as a marker: it
+        stands where the American cargoes were counted, and its dozen rooms of
+        charts and models put the river trade into a form you can look at. Thirty
+        to forty-five minutes, no more.
+      </p>
+      <p>
+        <strong>Time</strong> 30 to 45 minutes · <strong>Pairs with</strong> the
+        Maestranza, five minutes north, and the riverbank walk ·
+        <strong>Booking</strong> none; admission is around €3 with a reduced rate
+        of about half that, and entry has traditionally been free on Mondays.
+        Published hours differ between sources, so confirm before making a
+        journey for it · <strong>Skip if</strong> you are short of time — the
+        exterior and the walk along the water stand perfectly well without the
+        interior. Longer stay.
+      </p>
+
+      <SectionHeading id="maestranza" level={3}>7. Plaza de Toros de la Real Maestranza</SectionHeading>
+      <p>
+        One of the oldest and most consequential bullrings in Spain, white stucco
+        and ochre mouldings with its own name cut into the lintel, and a museum
+        tracing the corrida from the eighteenth century onward. Some travellers
+        will decline the interior on principle and the façade is worth five
+        minutes regardless. For those who go in, the visit is guided or
+        audio-guided rather than free-roaming, which is the practical fact that
+        catches people out: you join a cycle rather than walk in.
+      </p>
+      <p>
+        <strong>Time</strong> 45 minutes to an hour, guided ·
+        <strong>Pairs with</strong> the Torre del Oro and the river ·
+        <strong>Booking</strong> not usually necessary, but note the hours: daily
+        09:30–19:30, extended to 09:30–21:00 in July and August, and
+        <strong>09:30–15:00 on days when there is a bullfight</strong>, with the
+        ticket office closing thirty minutes before the building ·
+        <strong>Skip if</strong> the subject is not for you. Longer stay.
+      </p>
+
+      <SectionHeading id="ceramica" level={3}>8. Centro Cerámica Triana</SectionHeading>
+      <p>
+        A small museum in the shell of an old tile works, standing on the kilns
+        that fired it, and the single most efficient explanation of why the rest
+        of Seville looks the way it does. Triana made the glazed tile that covers
+        the city's walls, benches, bridges, church towers and shop fronts; one of
+        the rooms is a wall of salvaged trade signs — chemists, hostels, a Singer
+        sewing-machine agent, a pre-war coach company advertising a six-day
+        excursion to Córdoba, Seville and Granada in French. Half an hour, and
+        everything you have already seen reads differently afterwards.
+      </p>
+      <p>
+        <strong>Time</strong> 30 to 45 minutes · <strong>Pairs with</strong>
+        Mercado de Triana, two minutes away, whose produce stalls trade Monday to
+        Saturday roughly 09:00–14:30 and are closed Sundays ·
+        <strong>Booking</strong> none; a modest admission ·
+        <strong>Skip if</strong> you have no interest in how things are made.
+        Longer stay, but promoted to first visit for anyone who liked the Alcázar
+        tilework.
+      </p>
+    </div>
+
+    <Chapter
+      id="palaces"
+      number="III."
+      name="The Private Palaces"
+      epithet="Three aristocratic houses within a kilometre of each other, and the case for visiting only one"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Seville's nobility built courtyard houses that borrowed Mudéjar
+        plasterwork, Italian Renaissance proportion and Roman sculpture and
+        somehow reconciled all three. Three are open. They are genuinely different
+        from one another and not different enough that a first-time visitor should
+        see more than one — a second becomes a comparison and a third a chore. So
+        what follows is a choice rather than a list.
+      </p>
+
+      <SectionHeading id="pilatos" level={3} rule={false}>9. Casa de Pilatos — the one to choose</SectionHeading>
+      <p>
+        The finest of the three, and the right answer if you are only visiting
+        one. A sixteenth-century house built by an owner who had travelled to
+        Italy and the Holy Land and came home determined to reconcile what he had
+        seen: Roman busts set into the arches of the courtyard above azulejo
+        dados, honeycomb Mudéjar ceilings, a marble fountain with dolphins under a
+        Janus head, and rooms named after the stations of the Via Dolorosa. It is
+        open every day, which among the ticketed sights in Seville makes it
+        unusually forgiving of a Sunday or a Monday.
+      </p>
+      <p>
+        <strong>Time</strong> an hour, or 90 minutes with the upper floor ·
+        <strong>Pairs with</strong> the Setas, ten minutes north, and Santa Cruz,
+        ten minutes south-west · <strong>Booking</strong> none; open every day
+        09:00–18:00; €12 for the ground floor and garden, €6 more for the upper
+        floor, which is shown on a guided visit ·
+        <strong>Skip if</strong> you are choosing one of the other two instead.
+        First visit.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/casa-de-pilatos-patio-principal.jpg`}
+      alt="The principal courtyard of Casa de Pilatos in Seville: two storeys of arcading with intricate Mudéjar plasterwork and a Gothic tracery balustrade above, blue and white azulejo dados, Roman busts set in roundels, a standing Roman female statue on a plinth, and a marble fountain with dolphins beneath a bearded Janus head on chequered marble paving."
+      width={1365}
+      height={2048}
+      caption="Roman sculpture, Mudéjar plaster and Gothic tracery in one courtyard, and none of it looks borrowed. If you visit one private palace in Seville, this is the one."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="duenas" level={3}>10. Palacio de las Dueñas</SectionHeading>
+      <p>
+        The Seville house of the Alba family, and the one that still feels
+        inhabited rather than curated — courtyards of clipped box and blue-tiled
+        fountains, family photographs, and the room where the poet Antonio Machado
+        was born in 1875. Choose this over Casa de Pilatos if you would rather see
+        how a great family actually lived than how one man assembled a
+        collection; the architecture is less remarkable and the atmosphere is
+        considerably warmer.
+      </p>
+      <p>
+        <strong>Time</strong> an hour · <strong>Pairs with</strong> the Alameda de
+        Hércules and the northern quarters · <strong>Booking</strong> none for
+        the standard visit; open daily 10:00–20:00 April to September and
+        10:00–18:00 October to March; €12, reduced €10. A longer guided visit at
+        €16 has run on Thursdays and Saturdays at midday, which is worth
+        confirming rather than assuming ·
+        <strong>Skip if</strong> you are visiting Casa de Pilatos. Longer stay.
+      </p>
+
+      <SectionHeading id="lebrija" level={3}>11. Palacio de la Condesa de Lebrija</SectionHeading>
+      <p>
+        The strangest of the three and the least visited. In the 1900s the
+        Countess of Lebrija had Roman mosaic floors lifted from the ruins at
+        Itálica, north of the city, and laid in her own house — so you walk on
+        second-century Roman pavement in a private drawing room, under a
+        honeycomb ceiling rescued from a demolished medieval palace. The ten-day
+        chronicle on this site calls it not famous enough, and that is right. It
+        is also the one of the three that most rewards a visitor who has already
+        been to Itálica.
+      </p>
+      <p>
+        <strong>Time</strong> 45 minutes to an hour · <strong>Pairs with</strong>
+        Calle Sierpes and the Centro shopping streets, on whose edge it stands ·
+        <strong>Booking</strong> none; open daily 10:00–18:00 September to June
+        and 10:00–15:00 in July and August; €12 ·
+        <strong>Skip if</strong> Roman archaeology leaves you cold. Longer stay.
+      </p>
+    </div>
+
+    <Chapter
+      id="parks"
+      number="IV."
+      name="Parks and Open Ground"
+      epithet="The two free things in the south of the city, and the one hour of the day to take them in"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Seville built itself a park and a ceremonial square for the
+        Ibero-American Exposition of 1929 and then kept them. Both are free, both
+        are unenclosed, both are in the south, and both are ruined by the middle
+        of the day — which makes them the easiest pair of decisions on this page.
+      </p>
+
+      <SectionHeading id="plaza-espana" level={3} rule={false}>12. Plaza de España</SectionHeading>
+      <p>
+        A brick semicircle nearly two hundred metres across, wrapped around a
+        canal, crossed by four tiled bridges, its inner wall broken into alcoves —
+        one for each Spanish province, each with a painted map and a tiled bench.
+        It is the most theatrical thing in the city and it costs nothing. It is
+        also unshaded from end to end, which is the whole of the practical
+        advice: before about half past nine it is close to empty and lit from the
+        side; by noon it is the hottest and most crowded ground on any Seville
+        itinerary with nowhere at all to stand out of the light.
+      </p>
+      <p>
+        <strong>Time</strong> 30 minutes to an hour, walking the arc rather than
+        the middle · <strong>Pairs with</strong> Parque de María Luisa, directly
+        behind it · <strong>Booking</strong> none. Free and ungated. The city
+        council has discussed enclosing it and charging non-residents; nothing has
+        been implemented and no price has been set ·
+        <strong>Skip if</strong> never. First visit.
+      </p>
+
+      <SectionHeading id="maria-luisa" level={3}>13. Parque de María Luisa and the Pabellón Mudéjar</SectionHeading>
+      <p>
+        The park begins immediately behind Plaza de España and is the correct
+        antidote to it: Moorish fountains, tiled benches, ponds, and trees old
+        enough and large enough to make a genuine difference to the temperature.
+        At its southern end the Plaza de América holds three Exposition
+        pavilions around a pool, of which the Pabellón Mudéjar — now the Museum
+        of Arts and Popular Customs — is the finest, and reflects into its own
+        lily pond with almost nobody looking at it. The white pigeons on that
+        square are said to descend from a delegation's gift to the 1929
+        Exposition; whether or not that is true, they behave as though they own
+        the place.
+      </p>
+      <p>
+        <strong>Time</strong> an hour, or 90 minutes as far as Plaza de América ·
+        <strong>Pairs with</strong> Plaza de España, which it should always
+        follow · <strong>Booking</strong> none. The park is free; the pavilion
+        museums charge a small admission ·
+        <strong>Skip if</strong> you have one day. First visit at two days or
+        more.
+      </p>
+    </div>
+
+    <Chapter
+      id="art"
+      number="V."
+      name="Art, Tile and What the Convents Left"
+      epithet="A golden age of painting, most of it seized from religious houses, and one statue that still stops traffic"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Seville produced Velázquez, Murillo and Zurbarán, and then in the
+        nineteenth century the state dissolved the religious houses that had
+        commissioned most of what they painted and gathered the results into a
+        museum. That history explains both entries here — one where the paintings
+        ended up, and one where the devotion they were made for is still going on.
+      </p>
+
+      <SectionHeading id="bellas-artes" level={3} rule={false}>14. Museo de Bellas Artes</SectionHeading>
+      <p>
+        One of Spain's great collections, housed in a former Mercedarian convent,
+        almost always uncrowded, and free to EU citizens. The building does half
+        the work: the old convent church survives as a gallery, so a single
+        Zurbarán crucifixion hangs alone on a partition wall beneath a frescoed
+        dome, and the effect is closer to how the picture was meant to be met than
+        any modern hang could manage. The Murillos are the collection's
+        reputation; the Zurbaráns are the reason to come.
+      </p>
+      <p>
+        <strong>Time</strong> 90 minutes to two hours ·
+        <strong>Pairs with</strong> Plaza de Armas and the northern edge of El
+        Arenal · <strong>Booking</strong> none; €1.50 and
+        <strong>free to accredited EU citizens</strong>; Tuesday to Saturday
+        09:00–21:00 and Sunday and holidays 09:00–15:00 from September to July,
+        reduced to Tuesday to Sunday 09:00–15:00 through August;
+        <strong>closed Mondays</strong> ·
+        <strong>Skip if</strong> you have three days or fewer — it deserves a
+        morning and would cost you the river. Longer stay.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/zurbaran-crucifixion-bellas-artes.jpg`}
+      alt="A single large Zurbarán crucifixion in a gilded frame hung alone on a pale partition wall in the Museo de Bellas Artes in Seville, beneath the frescoed dome and painted pendentives of the former convent church, with three visitors photographing it from below."
+      width={1365}
+      height={2048}
+      caption="One painting, one wall, and a convent dome above it. The Museo de Bellas Artes is free to EU citizens and is very nearly always this empty."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="macarena" level={3}>15. Basílica de la Macarena</SectionHeading>
+      <p>
+        In the north of the city, the Esperanza Macarena stands above her altar
+        with painted tears on her face, and a brotherhood four centuries old
+        carries her through Seville in the small hours of Good Friday. The
+        basilica itself is free and takes fifteen minutes; the museum beside it,
+        which holds the processional floats and the embroidered mantles, is what
+        makes the trip north worthwhile, because it shows the sheer industrial
+        scale of the devotion. Nothing else on this page explains Semana Santa to
+        someone who has not seen it.
+      </p>
+      <p>
+        <strong>Time</strong> 15 minutes for the basilica, an hour with the museum ·
+        <strong>Pairs with</strong> the Alameda de Hércules and the surviving
+        stretch of Almohad city wall · <strong>Booking</strong> none; the
+        basilica is free and the museum around €5, reduced €3. Open Monday to
+        Saturday 09:00–14:00 and 17:00–21:00, Sundays and holidays from 09:30 —
+        note the long afternoon closure ·
+        <strong>Skip if</strong> the religious life of the city is not what you
+        came for. Longer stay.
+      </p>
+    </div>
+
+    <Chapter
+      id="after-dark"
+      number="VI."
+      name="Seville After Dark"
+      epithet="The two hours that cannot be fitted into a daytime plan, and should not be"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="flamenco" level={3} rule={false}>16. Flamenco at a tablao</SectionHeading>
+      <p>
+        Flamenco is not a sight and does not belong in a walking route, which is
+        why itineraries leave it out and why a list like this has to put it back.
+        It comes in three forms and the distinction matters more than the venue. A
+        <strong>tablao</strong> is a room with a stage, a short fixed programme, a
+        drink rather than a meal, and performers who are working rather than
+        entertaining — choose this. A <strong>dinner show</strong> attaches the
+        same art to a set menu and weakens both. A <strong>museum
+        performance</strong>, given in a historic patio, sits between them and is
+        easiest to book at short notice.
+      </p>
+      <p>
+        What you are watching is not a dance in the ordinary sense. It is an
+        argument conducted with feet and hands and a voice about the cost of
+        feeling, and it is not designed to charm. An hour of it at close range is
+        one of the four things on this page a visitor is likely to still be
+        thinking about a year later.
+      </p>
+      <p>
+        <strong>Time</strong> an hour, plus getting there ·
+        <strong>Pairs with</strong> a late dinner afterwards, since Seville eats
+        from about nine · <strong>Booking</strong> yes, a few days ahead for
+        anything good; no venue is named here because the one attended on the
+        stay behind this page is not identified in the record, and a
+        recommendation nobody can stand behind is worth nothing ·
+        <strong>Skip if</strong> never, unless you have already seen it done
+        well. First visit.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/flamenco-on-a-dark-stage.jpg`}
+      alt="Six flamenco performers on a dark stage lit in blue and red: a guitarist in shadow at the left, a woman standing in a red and gold fringed dress with her hand on her hip, three seated figures around a small table, and a second guitarist playing at the right."
+      width={2048}
+      height={1365}
+      caption="A tablao stage, most of the room in darkness. The economy of it is part of the form — six people, two guitars, four chairs and a table."
+    />
+
+    <div class="narrative prose">
+      <p>
+        The other evening hour belongs to <strong>the Setas de Sevilla</strong> in
+        Plaza de la Encarnación — a vast timber lattice the city argued about for a
+        decade and has since absorbed into its own vocabulary, carrying a walkway
+        across its upper surface, with the old town and the Giralda laid out below.
+        Beneath it the <strong>Antiquarium</strong> preserves the Roman and Almohad
+        city found when the foundations were dug, which is a neat summary of how
+        Seville is put together. Aim for dusk; from April to October a light
+        installation runs across the canopy late in the evening. Admission from
+        €16, and the published hours run to one in the morning, which is easy to
+        misread — confirm them.
+      </p>
+    </div>
+
+    <Practical place="Seville — Choosing Between Them" detail="16 entries · verified 29 July 2026" detailIcon="🎟">
+      <PracticalSection label="What genuinely needs advance booking" level={3} id="booking">
+        <div class="prac-item">
+          <strong>Real Alcázar</strong> — timed entry, sells out weeks ahead in
+          season. The one booking that can spoil a trip if left late.
+        </div>
+        <div class="prac-item">
+          <strong>Cathedral and Giralda</strong> — timed, capacity-limited, and a
+          euro cheaper online than at the window.
+        </div>
+        <div class="prac-item">
+          <strong>Flamenco</strong> — a few days ahead for anything worth
+          attending.
+        </div>
+        <div class="prac-item">
+          <strong>Everything else on this page</strong> can be bought on the day
+          or costs nothing.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="What pairs with what, geographically" level={3}>
+        <div class="prac-item">
+          <strong>Inside 250 m of Plaza del Triunfo</strong> — Alcázar, Cathedral
+          and Giralda, Archivo, Santa Cruz. Four entries, almost no walking.
+        </div>
+        <div class="prac-item">
+          <strong>Along the river, one bridge</strong> — Mercado de Triana and
+          Centro Cerámica Triana on the west bank; Torre del Oro and the
+          Maestranza on the east; Calle Betis for the evening.
+        </div>
+        <div class="prac-item">
+          <strong>The southern axis</strong> — Plaza de España then Parque de
+          María Luisa, in that order, starting early.
+        </div>
+        <div class="prac-item">
+          <strong>The northern old city</strong> — Casa de Pilatos, the Setas and
+          the Antiquarium, Palacio de las Dueñas, the Alameda, and the Macarena
+          furthest out.
+        </div>
+        <div class="prac-item">
+          <strong>Off the grid</strong> — Museo de Bellas Artes, which sits west
+          near Plaza de Armas and pairs with nothing else neatly. Give it its own
+          morning or leave it.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Closing days to plan around" level={3}>
+        <div class="tip-row">
+          <strong>Mondays:</strong> Archivo General de Indias and Museo de Bellas
+          Artes both close. Casa de Pilatos, the Alcázar and the Cathedral do not.
+        </div>
+        <div class="tip-row">
+          <strong>Sundays:</strong> Mercado de Triana's produce stalls do not
+          trade, and the Cathedral opens to visitors only in the afternoon outside
+          July and August.
+        </div>
+        <div class="tip-row">
+          <strong>Bullfight days:</strong> the Maestranza closes to visitors at
+          15:00.
+        </div>
+        <div class="tip-row">
+          <strong>August:</strong> the Museo de Bellas Artes drops to a
+          morning-only schedule, and the Condesa de Lebrija closes at 15:00.
+        </div>
+      </PracticalSection>
+    </Practical>
+
+    <PullQuote>
+      A list of sixteen things is only useful if it is willing to tell you which
+      four matter and which three you may leave out. Otherwise it is an
+      inventory, and the city already has one of those.
+    </PullQuote>
+
+    <div class="narrative prose">
+      <SectionHeading id="omitted">What did not make the list, and who it would still suit</SectionHeading>
+      <p>
+        Six things were considered and left out, and each has a reader it would
+        suit better than something above.
+      </p>
+      <p>
+        <strong>Hospital de los Venerables</strong> — a fine baroque foundation
+        with an exceptional church, five minutes from the Cathedral, left out
+        because at the same walking distance the Archivo is free and stranger.
+        <strong>Real Fábrica de Tabacos</strong>, the vast eighteenth-century
+        tobacco factory now part of the University, with the discovery of tobacco
+        carved over its doorway: free, worth ten minutes in passing, not worth a
+        detour. <strong>Isla Mágica</strong>, the theme park on the Expo '92
+        grounds across the river — genuinely enjoyable and thoroughly peculiar in
+        its framing, and the right answer for anyone travelling with children, as
+        the ten-day chronicle admits without embarrassment.
+        <strong>Convento de Santa Paula</strong>, an active Carmelite community
+        selling marmalade through a hatch, which belongs to eating in the city
+        rather than to monuments. And <strong>the Cathedral rooftop tours</strong>,
+        excellent, and not to be booked in the same year the belfry works are
+        still under way.
+      </p>
+      <p>
+        One further omission is deliberate and structural: no day trip appears on
+        this page. Córdoba, Cádiz, Itálica and the rest are experiences, but they
+        are not experiences in Seville, and the decision about which of them is
+        worth a whole day is
+        <a href="/best-day-trips-from-seville/">made separately</a>. The same goes
+        for the table: eating in Seville is not an attraction to be slotted between
+        two monuments, and
+        <a href="/seville-tapas-food-guide/">it has its own guide</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        Sixteen entries is more than most visits will use, and that is the
+        intention. Four are effectively compulsory. Three are among the quietest
+        important places in the city and will be nearly empty when you arrive.
+        Three are variations on one idea, of which you should pick one. And
+        several exist here mainly so that a reader with four days rather than two
+        knows what the extra two days are for.
+      </p>
+      <p>
+        The thing worth carrying away is smaller than the list. Almost everything
+        above is better at nine in the morning or after six in the evening than in
+        between, and the middle of a Seville day belongs to a table and a stretch
+        of shade rather than to a queue. Arrange the sixteen around that and the
+        city stops feeling like a set of tickets. The routes that do the arranging
+        are <a href="/3-days-in-seville/">the three-day version</a> and
+        <a href="/one-day-in-seville/">the single day</a>; the rest of Andalucía
+        is gathered in <a href="/chronicles/">the archive</a>.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/3-days-in-seville/',
+        region: 'Spain · Andalucía',
+        title: '3 Days in Seville: Palace, River and Parasol',
+        excerpt:
+          'Eleven of the sixteen above, arranged into three days that never cross the city twice — with the booking order and the heat strategy that make it work.',
+        meta: ['Seville', '3 days'],
+      },
+      {
+        href: '/one-day-in-seville/',
+        region: 'Spain · Andalucía',
+        title: 'One Day in Seville',
+        excerpt:
+          'Which four of these survive a single day, and the unexpected move at a quarter past eight in the morning that makes room for a fifth.',
+        meta: ['Seville', '1 day'],
+      },
+      {
+        href: '/best-day-trips-from-seville/',
+        region: 'Spain · Andalucía',
+        title: 'Best Day Trips from Seville',
+        excerpt:
+          'Seven excursions assessed — Córdoba, Cádiz, Jerez, Itálica, Carmona, Granada and Ronda — including the two that are not worth a day.',
+        meta: ['Andalucía', 'Day trips'],
+      },
+    ]}
+  />
+</ChronicleLayout>

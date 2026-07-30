@@ -1,0 +1,620 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+
+const meta: ChronicleMeta = {
+  title: 'One Day in Seville',
+  headline: 'One Day in Seville: The Route, and the Cost of It',
+  description:
+    'A realistic route for one day in Seville — Plaza de España before the Alcázar opens, then the Cathedral, the Archivo and Santa Cruz — and what a day cannot hold.',
+  path: '/one-day-in-seville/',
+  ogImage: '/images/one-day-in-seville/plaza-de-espana-from-the-arcade.jpg',
+  factsVerified: '2026-07-29',
+};
+
+const IMG = '/images/one-day-in-seville';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Andalucía', 'Seville']}
+    label="Itinerary · One Day"
+    title="One Day in Seville:"
+    titleEmphasis="The Route, and the Cost of It"
+    standfirst="A single day in Seville is not a planning problem. It is a subtraction problem — and the route below is built around one unexpected move at a quarter past eight in the morning."
+    stats={[
+      { num: '1', label: 'Day' },
+      { num: '5', label: 'Stops' },
+      { num: '~4 km', label: 'On Foot' },
+      { num: '2', label: 'Tickets to Book' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          One day is not enough for Seville, and every honest account of the city
+          says so. But one day is what a great many travellers have — a stop
+          between Madrid and the coast, a cruise call at Cádiz, a long layover, a
+          Saturday cut out of a working week — and the useful question is not
+          whether it is enough. It is which day, out of the several a visitor
+          might attempt, actually survives contact with the clock.
+        </p>
+        <p>
+          The answer turns on a fact most itineraries ignore. Seville's two
+          essential monuments admit visitors by timed ticket, and the earlier of
+          the two does not open until half past nine. That leaves the first hour
+          and a quarter of daylight structurally empty — and it happens that the
+          city's other great set piece, the one that appears on more postcards
+          than anything except the Giralda, is free, unenclosed, unstaffed and
+          has no opening hour at all. Plaza de España can be walked at a quarter
+          past eight in the morning, when it is close to empty and the low sun
+          comes across the tilework at an angle it will not find again all day.
+        </p>
+        <p>
+          Which means a single day in Seville has room for one more major thing
+          than it appears to, provided that thing is taken before anything else
+          is open. What follows is a route built on that, and on the honest
+          accounting that goes with it: five stops, about four kilometres on
+          foot, two tickets bought before you arrive, and a plainly named list of
+          what the day does not include. The longer versions of this city are
+          recorded elsewhere on this site — as
+          <a href="/3-days-in-seville/">a three-day route</a> and as
+          <a href="/10-days-in-sevilla/">ten days using Seville as a base</a>.
+          This is not a compression of either. It is a different argument, because
+          at one day the cuts are the content.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/plaza-de-espana-from-the-arcade.jpg`}
+      alt="Plaza de España in Seville seen from an elevated position on its arcade: the tiled and pinnacled north tower flying a Spanish flag, the long brick and azulejo colonnade, the canal with a rowing boat passing under a balustraded tiled bridge, and several dozen visitors on the paving below."
+      width={2048}
+      height={1365}
+      caption="Half past five in the afternoon, and the plaza is at its most crowded and least kind. Every argument in this article for starting at a quarter past eight is an argument against this photograph."
+      priority
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="who-for" rule={false}>Who this day is for</SectionHeading>
+      <p>
+        A first visit, on foot, by a traveller who would rather see four things
+        properly than nine things from a doorway. It assumes no car, no tour, no
+        transport ticket, an appetite for architecture, and a willingness to stop
+        moving between about half past one and three in the afternoon, which is
+        not a concession to comfort but the shape the city itself takes. Two
+        tickets are booked before arrival. Nothing else needs to be.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'before-nine', label: '08:15 · Before the gate opens' },
+        { id: 'inside-walls', label: '09:30 · Inside the walls' },
+        { id: 'shade-hour', label: '13:30 · The shade hour' },
+        { id: 'evening', label: '18:00 · One evening, one choice' },
+        { id: 'sunday', label: 'If your day is a Sunday' },
+        { id: 'omitted', label: 'What one day cannot hold' },
+        { id: 'season', label: 'Season and daylight' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Day, Hour by Hour"
+    meta={[
+      {
+        label: 'Shape',
+        value:
+          'A single line about 1.5 km long, from Plaza de España in the south to the Setas in the north. Nothing is walked twice.',
+      },
+      {
+        label: 'Book before you fly',
+        value:
+          'The Real Alcázar first, then the Cathedral and Giralda. Both are timed. Nothing else on the day needs a reservation.',
+      },
+      {
+        label: 'The one instruction that matters',
+        value:
+          'Be at Plaza de España by about 08:15. It is the only major sight in Seville that asks nothing of you, and the only hour of the day that is otherwise wasted.',
+      },
+      {
+        label: 'Not on this day',
+        value:
+          'Triana, Parque de María Luisa, every museum, every private palace, and every day trip. Reasons given at the end.',
+      },
+    ]}
+    daysHeading="The Clock"
+    days={[
+      { num: '08:15', text: 'Plaza de España, close to empty, with the sun still low across the tiles and the canal.' },
+      { num: '09:05', text: 'Walk north to the Alcázar gate — about twelve minutes, through the edge of Parque de María Luisa.' },
+      { num: '09:30', text: 'Real Alcázar, first timed slot. Two and a quarter hours, and half of that in the gardens.' },
+      { num: '12:00', text: 'Catedral de Sevilla and the Giralda, three minutes away. An hour and a half including the ramps.' },
+      { num: '13:30', text: 'Lunch, and then stop. The city does; the route is built to let you.' },
+      { num: '15:15', text: 'Archivo General de Indias — free, cool, forty minutes, and closed on Mondays.' },
+      { num: '16:00', text: 'Barrio de Santa Cruz, unstructured, as the shadows cross the lanes.' },
+      { num: 'Dusk', text: 'Setas de Sevilla, ten minutes north, for the city from above and the Giralda seen from over it.' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter
+      id="before-nine"
+      number="I."
+      name="Before the Gate Opens"
+      epithet="A quarter past eight, and the largest open space in Seville has almost nobody in it"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Plaza de España was built for the Ibero-American Exposition of 1929: a
+        brick semicircle nearly two hundred metres across, wrapped around a canal,
+        crossed by four tiled bridges, its inner wall broken into alcoves — one for
+        each Spanish province, each with a painted map and a tiled bench. It is the
+        most theatrical thing in the city and the only major one that is entirely
+        free. No gate, no ticket, no attendant, no opening hour.
+      </p>
+      <p>
+        Which is why it belongs at the start of a single day rather than in some
+        gap after lunch, for a reason that is physical rather than aesthetic. The
+        plaza is unshaded brick and glazed tile from end to end. By noon it is the
+        hottest and most crowded ground on this route with nowhere at all to stand
+        out of the light; by half past five it looks like the photograph at the top
+        of this page. Before about half past nine it is close to empty, cool enough
+        to walk slowly, and lit from the side rather than from overhead — the
+        difference between seeing tilework and seeing glare.
+      </p>
+      <p>
+        Give it forty-five minutes and walk the whole arc. Then leave: Parque de
+        María Luisa begins immediately behind it and is one of the finest urban
+        parks in Spain, and today you walk along its edge rather than into it,
+        which is the first of the day's small losses. The walk north to the Alcázar
+        gate takes about twelve minutes and puts you there at twenty past nine,
+        which is exactly where you want to be.
+      </p>
+    </div>
+
+    <Beat>The one hour of the day nothing else can use, spent on the one thing that asks nothing.</Beat>
+
+    <Chapter
+      id="inside-walls"
+      number="II."
+      name="Inside the Walls"
+      epithet="A palace lived in for eight hundred years, and the largest Gothic church on earth, four minutes apart"
+    />
+
+    <div class="narrative prose">
+      <p>
+        The Real Alcázar opens at half past nine, entry is timed, and the early
+        slots go first — which means the most important decision of this day is
+        made weeks before it, at a keyboard. Take the first slot available. On a
+        one-day visit a mid-afternoon Alcázar ticket does not simply move the
+        palace later; it dismantles everything after it.
+      </p>
+      <p>
+        Inside, the palace has been continuously inhabited since the twelfth
+        century, and what makes it strange is not any single room but the
+        decision the Christian kings made when they inherited it: they extended
+        what the Moors had built rather than replacing it. Eight hundred years of
+        one civilisation finishing another's sentence, in plaster and tile and
+        water. The Patio de las Doncellas and the domed Salón de Embajadores are
+        the set pieces. The gardens beyond them are close to half the visit and
+        are almost always under-budgeted — a walled hectare of clipped
+        parterres, tall palms, pavilions and orange trees that most visitors
+        glance into on the way out with twenty minutes left.
+      </p>
+      <p>
+        Budget two and a quarter hours and treat the gardens as the second half
+        rather than the epilogue. Paths will still be left unwalked. Skip the
+        Cuarto Real Alto, which is a separate supplement on a guided visit at set
+        times: it is a genuine pleasure and it is the wrong purchase on a day
+        this tight.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/alcazar-gardens-from-above.jpg`}
+      alt="The gardens of the Real Alcázar in Seville seen from above: a grid of clipped box parterres and gravel paths, very tall Canary palms, an ochre garden pavilion among dark trees, a small stone fountain, and a few visitors on the paths."
+      width={1365}
+      height={2048}
+      caption="Half the Alcázar is outdoors, and it is the half people run out of time for. On one day, the gardens are the reason to buy the earliest ticket rather than the cheapest."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Three or four minutes separate the Alcázar gate from the Cathedral:
+        long enough for a coffee, not long enough to plan one. Arrive around
+        midday, which sits inside the visiting window under every schedule the
+        Cathedral has published this year — a caveat that matters, because it has
+        published more than one. Improvement works on the Giralda's belfry have
+        been under way through 2026, the visiting hours have moved because of
+        them more than once, and no completion date has been announced. The
+        official notices neither close the tower climb nor confirm that it is
+        open. Check the Cathedral's own schedule page in the week before you
+        travel and trust it over any itinerary, this one included.
+      </p>
+      <p>
+        The building is the largest Gothic church in the world by volume and it
+        does not reward a march between its famous objects. Two things are worth
+        the time. The Retablo Mayor is a wall of gilded and polychrome carving
+        forty-odd metres high, assembled over most of a century, containing
+        something like a thousand figures — an object it is genuinely difficult
+        to take in at one standing. And the Giralda is the minaret of the mosque
+        the Cathedral replaced, converted rather than demolished, climbed by
+        thirty-five shallow ramps rather than stairs, built wide enough — the
+        story goes — for a rider to ascend on horseback. There is no lift. The
+        ascent and descent take about half an hour and the view is the whole
+        argument for making them.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/cathedral-retablo-mayor.jpg`}
+      alt="The Retablo Mayor of Seville Cathedral: a vast gilded altarpiece rising in tiers of carved and painted scenes beneath a coffered gold canopy, with silver candlesticks and an ornate silver altar frontal below."
+      width={1365}
+      height={2048}
+      caption="The Retablo Mayor took most of a century to assemble and holds something over a thousand carved figures. Fifteen minutes in front of it is a better use of a short day than fifteen minutes finding the tomb of Columbus."
+      variant="portrait"
+    />
+
+    <Chapter
+      id="shade-hour"
+      number="III."
+      name="The Shade Hour, and After"
+      epithet="Lunch, an archive that costs nothing, and a quarter of lanes that only works late"
+    />
+
+    <div class="narrative prose">
+      <p>
+        By half past one the Cathedral is finished and the worst hours of the day
+        are beginning. Every plausible one-day itinerary is tempted here, and
+        this is where most of them break: they add a museum, or the Torre del
+        Oro, or a walk to Triana, and spend the hottest ninety minutes of the day
+        crossing open ground. Seville has spent several centuries arriving at a
+        different answer, and the route follows it. Eat, properly and slowly, and
+        then stop moving for a while.
+      </p>
+      <p>
+        Lunch in Seville is a real meal taken between about two and half past
+        three, and on a single day the useful instruction is to eat near where
+        you are standing rather than walk somewhere better. The lanes between the
+        Cathedral and Plaza de la Alfalfa carry enough good counters to make
+        this a low-risk decision; how the ordering actually works, and what the
+        words on the board mean, is set out in
+        <a href="/seville-tapas-food-guide/">the food guide</a>.
+      </p>
+      <p>
+        The afternoon then has exactly one indoor stop, and it is free. The
+        Archivo General de Indias faces the Cathedral across Plaza del Triunfo
+        and holds the paper record of the Spanish empire in the
+        Americas — roughly eight kilometres of shelving, uniform boxes, the
+        journals of the conquistadors and letters in Columbus's own hand, kept in
+        a vaulted Renaissance gallery with a chequered marble floor cut by window
+        light. It takes forty minutes, it is air-conditioned, and it is the
+        single most under-visited important building in the city. One fact about
+        it decides more one-day plans than anything else in Seville:
+        <strong>it closes on Mondays.</strong>
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/archivo-de-indias-inscription.jpg`}
+      alt="The words ARCHIVO GENERAL DE INDIAS in gilded raised letters on a pale marble tablet, framed by a dark marble surround and two fluted orange-veined marble columns."
+      width={2048}
+      height={1365}
+      caption="Free entry, forty minutes, air-conditioned, and directly opposite the Cathedral. On a hot afternoon it is the most efficient decision available anywhere on this route."
+    />
+
+    <div class="narrative prose">
+      <p>
+        Leave Barrio de Santa Cruz until the shadows have crossed the lanes. The
+        old Jewish quarter begins a few minutes east of the Cathedral and is the
+        part of the day with no ticket, no queue and no fixed route: whitewashed
+        walls, orange trees, courtyards behind iron gates, alleys narrow enough
+        in places that two people cannot comfortably walk them abreast. At noon
+        it is an oven with a crowd in it. At five it is one of the pleasantest
+        places in Andalucía to be lost on purpose, and it is the only hour of
+        this day with nothing scheduled in it — which, on a day this
+        compressed, is not slack. It is the point.
+      </p>
+    </div>
+
+    <Chapter
+      id="evening"
+      number="IV."
+      name="One Evening, One Choice"
+      epithet="Two ways to end a single day in Seville, and a recommendation"
+    />
+
+    <div class="narrative prose">
+      <p>
+        There are two defensible endings and there is not time for both.
+      </p>
+      <p>
+        <strong>The Setas de Sevilla</strong>, ten minutes north of Santa Cruz in
+        Plaza de la Encarnación, is an enormous timber lattice carrying a walkway
+        across its upper surface. From up there the old town lies out below with
+        the Giralda on the skyline — the tower that has been fixing your position
+        all day, seen from above for the first time. It stays open long after
+        dark, which in high summer is the difference between a viewpoint and a
+        furnace, and from April to October a light installation runs across the
+        canopy late in the evening.
+      </p>
+      <p>
+        <strong>Triana and Calle Betis</strong>, across the Puente de Isabel II,
+        is the other ending: the far bank of the Guadalquivir in low ochre and
+        white houses, facing the lit old city across the current. It is
+        genuinely the better evening. It is also twenty-five minutes away, on the
+        wrong side of a river, in a neighbourhood this day has had no time to
+        earn.
+      </p>
+      <p>
+        Take the Setas — not because it is the finer experience but because it
+        does something no other stop can. It gives back the ground you have just
+        walked, from above, in one view: the plaza in the far south, the palace
+        walls, the Cathedral bulk, the lanes you got lost in. It turns four
+        monuments into a place with a shape. Triana is the right answer for a
+        second day, and there is no second day.
+      </p>
+    </div>
+
+    <Practical place="Seville — One Day" detail="Five stops · ~4 km on foot · verified 29 July 2026" detailIcon="🚶">
+      <PracticalSection label="The route in order" level={3}>
+        <div class="prac-item">
+          <strong>Plaza de España</strong> — 08:15 to 09:05. Free, unenclosed,
+          no ticket, no opening hour. Walk the full arc.
+        </div>
+        <div class="prac-item">
+          <strong>Real Alcázar</strong> — first timed slot, 09:30. Allow 2¼
+          hours including the gardens. Open 09:30–19:00 from 1 April to 30
+          September and 09:30–17:00 from 1 October to 31 March; closed 1 and 6
+          January, Good Friday and 25 December.
+        </div>
+        <div class="prac-item">
+          <strong>Catedral de Sevilla and the Giralda</strong> — 3 minutes'
+          walk, from about midday. Allow 1½ hours including the tower ramps.
+        </div>
+        <div class="prac-item">
+          <strong>Lunch and a stop</strong> — 13:30 to about 15:00, near the
+          Cathedral rather than somewhere better.
+        </div>
+        <div class="prac-item">
+          <strong>Archivo General de Indias</strong> — 2 minutes' walk. Free, 40
+          minutes. Tuesday to Saturday 09:30–17:00, last entry 16:30; Sunday and
+          public holidays 10:00–14:00. <strong>Closed Mondays.</strong>
+        </div>
+        <div class="prac-item">
+          <strong>Barrio de Santa Cruz</strong> — 5 minutes' walk, from about
+          16:00. Unstructured, and deliberately so.
+        </div>
+        <div class="prac-item">
+          <strong>Setas de Sevilla</strong> — 10 minutes' walk north, timed for
+          dusk. General admission from <strong>€16</strong>, including the
+          rooftop walkway, a short film and the evening light installation, which
+          runs April to October.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Tickets and booking" level={3}>
+        <div class="prac-item">
+          <strong>Real Alcázar</strong> — general admission
+          <strong>€15.50</strong>; reduced <strong>€8.00</strong> for over-65s,
+          students aged 14–30 and European Youth Card holders. Free for
+          under-13s with an adult and for visitors with 33% or greater disability
+          plus one companion. Buy in advance through
+          <a href="https://alcazarsevilla.org/prepara-la-visita/" rel="noopener">the
+          Alcázar's own visitor page</a> rather than a reseller. The morning
+          slots sell out well ahead; on a one-day visit this is the only booking
+          that can genuinely spoil the trip.
+        </div>
+        <div class="prac-item">
+          <strong>Cathedral and Giralda</strong> — <strong>€13.00 online</strong>
+          or <strong>€14.00</strong> at the ticket office; reduced
+          <strong>€7.00 / €8.00</strong>. Prices current from 1 January 2026.
+          Access is timed and capacity limited. Hours, prices and the current
+          state of the belfry works are published on
+          <a href="https://www.catedraldesevilla.es/en/cultural-visit/schedules-and-rates/" rel="noopener">the
+          Cathedral's schedules and rates page</a>.
+        </div>
+        <div class="prac-item">
+          <strong>Nothing else</strong> — Plaza de España, Santa Cruz and the
+          Archivo are free and unbooked; the Setas can be bought on arrival.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row">
+          The Cathedral has changed its visiting schedule more than once during
+          the Giralda works and says outright that its times may be modified for
+          worship and cultural events. Do not build a one-day plan on a schedule
+          you read months in advance.
+        </div>
+        <div class="tip-row">
+          The Giralda has no lift, and the Alcázar's Cuarto Real Alto is not
+          step-free. Santa Cruz is cobbled and uneven throughout. Anyone
+          travelling with a mobility constraint should check each venue's own
+          accessibility page, which is more current than any itinerary.
+        </div>
+        <div class="tip-row">
+          From 1 October the Alcázar closes at 17:00 rather than 19:00. That does
+          not affect a 09:30 entry, but it removes the safety margin if your
+          morning slips.
+        </div>
+        <div class="tip-row">
+          Seville city council has discussed enclosing Plaza de España and
+          charging non-residents for entry. Nothing has been implemented and no
+          price has been set, but the whole shape of this day rests on the plaza
+          being free and open at eight in the morning, so it is worth a check if
+          you are reading this well after publication.
+        </div>
+      </PracticalSection>
+    </Practical>
+
+    <PullQuote>
+      Everything in a one-day itinerary is a decision about what you will not
+      see. An itinerary that hides those decisions is not shorter. It is only
+      less honest.
+    </PullQuote>
+
+    <div class="narrative prose">
+      <SectionHeading id="sunday">If your one day is a Sunday</SectionHeading>
+      <p>
+        Sunday is the constraint worth planning around, because the Cathedral
+        does not admit visitors until the afternoon — outside July and August,
+        not until half past two. That breaks the middle of the route, and the
+        correction is to run the day inside out rather than to give the Cathedral
+        up.
+      </p>
+      <p>
+        Keep Plaza de España at a quarter past eight and the Alcázar at half past
+        nine; nothing changes there. Then take the <strong>Archivo in the late
+        morning instead of the afternoon</strong>, because on Sundays and public
+        holidays it opens 10:00 to 14:00 and is otherwise lost, and give the rest
+        of the morning to Santa Cruz while the lanes still hold shadow. Eat at
+        two. Take the <strong>Cathedral and the Giralda from half past two</strong>,
+        which leaves the tower comfortably inside its earlier closing time. The
+        Setas still work at dusk. One further Sunday possibility is worth the
+        trouble: the Cathedral offers a free public visit on Sunday afternoons
+        outside public holidays, reserved online in advance and capacity-limited.
+      </p>
+      <p>
+        <strong>A Monday</strong> needs a much smaller correction. The Archivo is
+        shut, which removes the day's one cool indoor hour; extend lunch, take
+        Santa Cruz earlier and slower, and the rest of the route stands. Of the
+        five stops, the Archivo is the only one a single day can afford to lose.
+      </p>
+
+      <SectionHeading id="omitted">What one day cannot hold</SectionHeading>
+      <p>
+        Naming the omissions is the honest part of a one-day route, and the list
+        is long.
+      </p>
+      <p>
+        <strong>Triana</strong> and the whole west bank — market, ceramics, Calle
+        Betis — a morning and an evening in itself, across a river.
+        <strong>Parque de María Luisa</strong>, whose edge you walk at nine and
+        whose interior you never enter. <strong>The Torre del Oro and the
+        Maestranza</strong>, which between them would cost you the Archivo and
+        Santa Cruz. <strong>Every museum</strong>, the Museo de Bellas Artes above
+        all, which deserves a morning and would take the Alcázar's.
+        <strong>Every private palace</strong> — Casa de Pilatos, Condesa de
+        Lebrija, Palacio de las Dueñas — any one of which is an hour and a half.
+        <strong>The Basílica de la Macarena</strong> and the northern churches.
+        And <strong>flamenco</strong>, which needs an evening and cannot share
+        one with a rooftop.
+      </p>
+      <p>
+        And most firmly of all, the excursions.
+        <a href="/1-day-in-cordoba/">Córdoba is a day in itself</a> and
+        <a href="/1-day-in-cadiz/">Cádiz another</a>; both are excellent and
+        neither belongs anywhere near a single day in Seville, because each would
+        replace your entire day with a train and a different city. The full
+        assessment of which excursions are worth a day, and for whom, is
+        <a href="/best-day-trips-from-seville/">set out separately</a>.
+      </p>
+      <p>
+        A specific warning about a specific temptation. The list a first-time
+        visitor usually arrives with — Alcázar, Cathedral, Giralda, Santa Cruz,
+        Triana, Plaza de España, Parque de María Luisa, the Setas and a
+        museum — is not a difficult day. It is an arithmetically impossible one.
+        The Alcázar alone is two and a quarter hours, the Cathedral and tower
+        another hour and a half, and the walk from the plaza to Triana and back
+        across the centre is over five kilometres. Attempting all of it produces
+        nine queues, no meal, and a memory of Seville composed mainly of heat and
+        pavement. If a longer stay is possible at all, the
+        <a href="/3-days-in-seville/">three-day route</a> is where that list
+        actually fits.
+      </p>
+
+      <SectionHeading id="season">Season and daylight</SectionHeading>
+      <p>
+        The route is shaped around heat, and only two months change it much. In
+        <strong>July and August</strong>, when Seville regularly passes 40°C, the
+        quarter-past-eight start stops being clever and becomes compulsory, and
+        the afternoon stop lengthens to nothing at all between about half past one
+        and half past four; the Setas after dark are the day's mercy. In
+        <strong>December and January</strong> the constraint inverts and becomes
+        light rather than heat — dusk arrives soon after six, which brings the
+        rooftop finish forward into the early evening and makes the whole day
+        easier to complete.
+      </p>
+      <p>
+        Everything between is straightforward, with two dates worth knowing. From
+        <strong>1 October</strong> the Alcázar closes at 17:00 rather than 19:00,
+        which does not touch a morning entry but removes your margin if the
+        morning slips. And <strong>Semana Santa</strong> and the
+        <strong>Feria de Abril</strong> close streets across the centre and move
+        opening hours: neither is a week in which a single-day route through the
+        old city will survive contact with reality.
+      </p>
+    </div>
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        What a single day in Seville can actually deliver is narrower than a list
+        of sights and better than it sounds: a palace understood rather than
+        toured, a church large enough to change the scale by which you measure
+        other churches, an archive nobody else was in, an hour of getting lost on
+        purpose, and the city laid out below you at dusk with the tower you have
+        been steering by all day standing up out of it. That is four things and a
+        view, and it is a real visit.
+      </p>
+      <p>
+        What it cannot deliver is the river, or the same bar twice, or the slow
+        business of a place becoming familiar. Those need days rather than hours,
+        and they are recorded elsewhere — in
+        <a href="/3-days-in-seville/">three days</a>, in
+        <a href="/10-days-in-sevilla/">ten</a>, and across
+        <a href="/chronicles/">the rest of the archive</a>. A single day is not a
+        small version of those. It is a decision to see less, properly, and then
+        to come back.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/3-days-in-seville/',
+        region: 'Spain · Andalucía',
+        title: '3 Days in Seville: Palace, River and Parasol',
+        excerpt:
+          'Where the omissions above go when there is time for them — the river, Triana, the parks and the palaces, in a route that never crosses the city twice.',
+        meta: ['Seville', '3 days'],
+      },
+      {
+        href: '/best-things-to-do-in-seville/',
+        region: 'Spain · Andalucía',
+        title: 'Best Things to Do in Seville',
+        excerpt:
+          'Sixteen experiences assessed individually — how long each takes, what it pairs with, and which ones a first visit can reasonably skip.',
+        meta: ['Seville', 'Guide'],
+      },
+      {
+        href: '/best-areas-to-stay-in-seville/',
+        region: 'Spain · Andalucía',
+        title: 'Best Areas to Stay in Seville',
+        excerpt:
+          'If the one day comes with a night attached: six neighbourhoods assessed on noise, shade, walking distance and evening character.',
+        meta: ['Seville', 'Where to stay'],
+      },
+    ]}
+  />
+</ChronicleLayout>
