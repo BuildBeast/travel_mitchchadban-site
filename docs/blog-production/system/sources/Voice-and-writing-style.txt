@@ -1,0 +1,223 @@
+THERE AND BACK AGAIN — BLOG WRITING SYSTEM
+1. Core Identity (What this blog is)
+
+This is not travel blogging in the typical sense.
+
+It is:
+
+A literary travel chronicle
+Part guide, part memoir, part field report
+Written as if the world is being reconstructed from memory and receipts
+Obsessed with place, food, movement, and atmosphere
+Anchored in real logistics (costs, routes, restaurants) but elevated in tone
+
+The underlying idea:
+
+“Every journey is both practical and mythological at the same time.”
+
+2. Voice (How it should sound)
+Primary voice: “Reflective literary traveller”
+Calm, observational, slightly archaic at times
+Confident, not enthusiastic
+Never casual or influencer-like
+Descriptive without being decorative for decoration’s sake
+Tone qualities:
+Measured (never rushed)
+Sensory (food, weather, architecture, movement)
+Slightly epic, but grounded
+Occasionally poetic, never sentimental
+What to avoid:
+No hype (“insane”, “must visit”, “hidden gem” spam)
+No influencer voice (“you NEED to go here”)
+No over-explaining obvious things
+No modern internet slang
+3. Narrative Structure (Every post)
+
+Each blog follows a consistent ritual structure:
+
+I. The Arrival (Opening)
+Set the journey frame
+Time, place, transport arrival detail
+Emotional state without stating emotions directly
+Establish “this is a passage through space”
+
+Think: train station / airport / ferry / border crossing
+
+II. The World Unfolds (City Sections / Chapters)
+
+Each location is treated like a chaptered mythological place
+
+Each chapter contains:
+
+A name + epithet (e.g. “Rome — The Eternal”)
+A short weather / seasonal badge
+2–4 paragraphs of narrative prose:
+movement through the city
+meals as anchors
+sensory detail
+historical or cultural texture (light touch)
+
+Important:
+
+Food is not a recommendation list here — it is story structure
+Places are introduced through experience, not description dumps
+III. Practical Layer (Structured Breakdown)
+
+This is your “dual-layer system”:
+
+After narrative:
+
+“Where to Eat”
+“Getting There”
+“Budget Snapshot”
+“Tips & Watch-outs”
+
+This section is:
+
+factual
+scannable
+useful
+not poetic
+
+Think:
+
+“The map after the story”
+
+IV. Beat Lines / Transitions
+
+You use these as structural breathing points:
+
+“But the road is ever onward.”
+
+These should:
+
+reset tone
+signal movement between cities
+prevent fatigue
+feel slightly mythic
+V. Closing Reflection (Optional but powerful)
+
+Not every post needs one, but when used:
+
+very restrained
+no moral conclusion
+no “lesson learned”
+just observation or implication of continuation
+4. Language Rules
+Sentence style
+Medium-to-long sentences preferred
+Occasional long, flowing sentences with internal rhythm
+Avoid punchy TikTok-style phrasing
+Nouns over adjectives
+
+Prefer:
+
+“the porticoes of Bologna”
+over
+“beautiful old covered walkways”
+Time handling
+
+Time is always:
+
+specific (dates, trains, arrivals)
+but never overly technical unless needed
+5. Food Philosophy (Very important in your project)
+
+Food is treated as:
+
+cultural anchor
+narrative device
+memory trigger
+
+Not:
+
+“restaurant recommendations content”
+
+Each food moment should:
+
+appear inside story first
+then reappear in practical section
+
+Rule:
+
+“If it appears in the prose, it must exist in the practical section.”
+
+6. Character of the Traveller
+
+The narrator is:
+
+unnamed or lightly defined (“the traveller”)
+observant rather than expressive
+often slightly removed from events
+occasionally self-aware but never self-indulgent
+
+They are:
+
+A recorder of places, not the centre of them
+
+7. Structural Aesthetic Rules (matches your CSS system)
+
+Your writing must align with the visual system:
+
+Chapters = visual hierarchy (like monuments)
+Breaks = spacing, silence, restraint
+Pull quotes = philosophical or sensory fragments
+Stats / budget = grounding mechanism
+Lists = controlled, minimal, functional
+
+Think:
+
+“Typography is narrative pacing”
+
+8. SEO Layer (subtle, not dominant)
+
+Each post should naturally include:
+
+real city names
+real restaurant names
+transport routes
+geographic flow
+
+But:
+
+never keyword-stuffed
+never written for algorithms first
+
+Meta description logic:
+
+“One sentence: route + tone + authenticity signal”
+
+Example style:
+
+“A 30-day journey from Bologna through Rome and Morocco into Andalucía, blending real routes, restaurants, and costs with narrative travel writing.”
+9. Core Writing Formula (use this when stuck)
+
+For any section:
+
+1. Movement
+
+Where is the traveller physically?
+
+2. Detail
+
+What is one specific sensory anchor?
+
+3. Place truth
+
+What makes this place itself (not generic travel description)?
+
+4. Slight reflection
+
+What does this moment feel like in context of journey?
+
+10. Golden Rule of the Project
+
+If everything else is forgotten, keep this:
+
+“This is travel writing that refuses to become content.”
+
+If you want next step, I can turn this into:
+
+a Notion writing template
+or a Claude/Codex prompt system that generates full posts in your exact style
+or a blog post generator that outputs HTML + narrative + SEO in one pass
