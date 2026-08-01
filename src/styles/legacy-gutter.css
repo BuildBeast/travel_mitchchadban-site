@@ -1,0 +1,207 @@
+/*
+ * Side gutters for the legacy articles migrated without a `.post-body` wrapper.
+ *
+ * Most legacy articles nest their prose, figures and chapter breaks inside a
+ * single `<div class="post-body">`, and that wrapper is what carries the
+ * horizontal gutter (`global.css`: `.post-body { padding: 0 4rem 2rem }`, then
+ * 4rem / 1.5rem / 1.1rem / 0.95rem down the breakpoints). Sixteen articles were
+ * migrated with those blocks as direct children of `<bodycopy>` instead, so
+ * they inherit no gutter at all and run flush to the viewport edge below
+ * 1024px.
+ *
+ * The fix restores the wrapper's effect one level up, on `.page-content`,
+ * rather than padding each block type individually — that way figures keep
+ * being centred and capped by their own `max-width` (a portrait frame still
+ * centres at 560px instead of being squeezed), exactly as they do inside
+ * `.post-body`.
+ *
+ * `<bodycopy>` is an unknown element and computes to `display: inline`, so it
+ * cannot carry the padding itself; `.page-content` is the nearest real block.
+ * It sets `padding-left/right: 0 !important` in `global.css`, so overriding it
+ * needs `!important` plus higher specificity to be order-independent.
+ *
+ * The five sections that already carry their own gutter (`.post-hero`,
+ * `.post-closing`, `.itin-block`, `.faq-block`, `.next-chronicles`) sit
+ * OUTSIDE `.post-body` on the correctly-built articles and run full-bleed, so
+ * they are pulled back out with a matching negative margin. All sixteen
+ * articles contain all five; the rule is a no-op for any that does not.
+ *
+ * Scoped by `page-url` so it cannot reach any other page even if the bundler
+ * merges this file into a shared stylesheet. Deliberately NOT applied to
+ * articles that already have `.post-body` — padding `.page-content` there would
+ * double the gutter. Above 1024px the gutter is 0 and desktop rendering is
+ * untouched.
+ *
+ * Imported only by the sixteen affected pages.
+ */
+
+/* ── scope: the sixteen wrapper-less legacy articles ── */
+
+.page:is(
+  [page-url="1-day-in-colonia-guell"],
+  [page-url="1-day-in-figueres-girona"],
+  [page-url="1-day-in-santiago-de-compostela"],
+  [page-url="1-day-in-sintra-the-mountain-of-romantic-follies"],
+  [page-url="1-day-in-tarragona-sitges"],
+  [page-url="2-days-in-caceres"],
+  [page-url="2-days-in-evora"],
+  [page-url="3-days-in-madrid-the-capital-at-full-volume"],
+  [page-url="4-days-in-lagos-the-coast-of-golden-cliffs"],
+  [page-url="4-days-in-mondim-de-basto"],
+  [page-url="4-days-in-valencia-itinerary"],
+  [page-url="4-weeks-portugal-to-spain-by-rail-road"],
+  [page-url="5-days-in-lisbon-itinerary"],
+  [page-url="5-days-in-porto-the-city-the-river-built"],
+  [page-url="7-days-in-barcelona"],
+  [page-url="douro-valley-day-trip"]
+) {
+  --legacy-gutter: 0px;
+}
+
+/* ── gutter scale, mirroring `.post-body` in global.css ── */
+
+@media (max-width: 1024px) {
+  .page:is(
+    [page-url="1-day-in-colonia-guell"],
+    [page-url="1-day-in-figueres-girona"],
+    [page-url="1-day-in-santiago-de-compostela"],
+    [page-url="1-day-in-sintra-the-mountain-of-romantic-follies"],
+    [page-url="1-day-in-tarragona-sitges"],
+    [page-url="2-days-in-caceres"],
+    [page-url="2-days-in-evora"],
+    [page-url="3-days-in-madrid-the-capital-at-full-volume"],
+    [page-url="4-days-in-lagos-the-coast-of-golden-cliffs"],
+    [page-url="4-days-in-mondim-de-basto"],
+    [page-url="4-days-in-valencia-itinerary"],
+    [page-url="4-weeks-portugal-to-spain-by-rail-road"],
+    [page-url="5-days-in-lisbon-itinerary"],
+    [page-url="5-days-in-porto-the-city-the-river-built"],
+    [page-url="7-days-in-barcelona"],
+    [page-url="douro-valley-day-trip"]
+  ) {
+    --legacy-gutter: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page:is(
+    [page-url="1-day-in-colonia-guell"],
+    [page-url="1-day-in-figueres-girona"],
+    [page-url="1-day-in-santiago-de-compostela"],
+    [page-url="1-day-in-sintra-the-mountain-of-romantic-follies"],
+    [page-url="1-day-in-tarragona-sitges"],
+    [page-url="2-days-in-caceres"],
+    [page-url="2-days-in-evora"],
+    [page-url="3-days-in-madrid-the-capital-at-full-volume"],
+    [page-url="4-days-in-lagos-the-coast-of-golden-cliffs"],
+    [page-url="4-days-in-mondim-de-basto"],
+    [page-url="4-days-in-valencia-itinerary"],
+    [page-url="4-weeks-portugal-to-spain-by-rail-road"],
+    [page-url="5-days-in-lisbon-itinerary"],
+    [page-url="5-days-in-porto-the-city-the-river-built"],
+    [page-url="7-days-in-barcelona"],
+    [page-url="douro-valley-day-trip"]
+  ) {
+    --legacy-gutter: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page:is(
+    [page-url="1-day-in-colonia-guell"],
+    [page-url="1-day-in-figueres-girona"],
+    [page-url="1-day-in-santiago-de-compostela"],
+    [page-url="1-day-in-sintra-the-mountain-of-romantic-follies"],
+    [page-url="1-day-in-tarragona-sitges"],
+    [page-url="2-days-in-caceres"],
+    [page-url="2-days-in-evora"],
+    [page-url="3-days-in-madrid-the-capital-at-full-volume"],
+    [page-url="4-days-in-lagos-the-coast-of-golden-cliffs"],
+    [page-url="4-days-in-mondim-de-basto"],
+    [page-url="4-days-in-valencia-itinerary"],
+    [page-url="4-weeks-portugal-to-spain-by-rail-road"],
+    [page-url="5-days-in-lisbon-itinerary"],
+    [page-url="5-days-in-porto-the-city-the-river-built"],
+    [page-url="7-days-in-barcelona"],
+    [page-url="douro-valley-day-trip"]
+  ) {
+    --legacy-gutter: 1.1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .page:is(
+    [page-url="1-day-in-colonia-guell"],
+    [page-url="1-day-in-figueres-girona"],
+    [page-url="1-day-in-santiago-de-compostela"],
+    [page-url="1-day-in-sintra-the-mountain-of-romantic-follies"],
+    [page-url="1-day-in-tarragona-sitges"],
+    [page-url="2-days-in-caceres"],
+    [page-url="2-days-in-evora"],
+    [page-url="3-days-in-madrid-the-capital-at-full-volume"],
+    [page-url="4-days-in-lagos-the-coast-of-golden-cliffs"],
+    [page-url="4-days-in-mondim-de-basto"],
+    [page-url="4-days-in-valencia-itinerary"],
+    [page-url="4-weeks-portugal-to-spain-by-rail-road"],
+    [page-url="5-days-in-lisbon-itinerary"],
+    [page-url="5-days-in-porto-the-city-the-river-built"],
+    [page-url="7-days-in-barcelona"],
+    [page-url="douro-valley-day-trip"]
+  ) {
+    --legacy-gutter: 0.95rem;
+  }
+}
+
+/* ── the gutter itself ── */
+
+.page:is(
+  [page-url="1-day-in-colonia-guell"],
+  [page-url="1-day-in-figueres-girona"],
+  [page-url="1-day-in-santiago-de-compostela"],
+  [page-url="1-day-in-sintra-the-mountain-of-romantic-follies"],
+  [page-url="1-day-in-tarragona-sitges"],
+  [page-url="2-days-in-caceres"],
+  [page-url="2-days-in-evora"],
+  [page-url="3-days-in-madrid-the-capital-at-full-volume"],
+  [page-url="4-days-in-lagos-the-coast-of-golden-cliffs"],
+  [page-url="4-days-in-mondim-de-basto"],
+  [page-url="4-days-in-valencia-itinerary"],
+  [page-url="4-weeks-portugal-to-spain-by-rail-road"],
+  [page-url="5-days-in-lisbon-itinerary"],
+  [page-url="5-days-in-porto-the-city-the-river-built"],
+  [page-url="7-days-in-barcelona"],
+  [page-url="douro-valley-day-trip"]
+) .page-content {
+  padding-left: var(--legacy-gutter) !important;
+  padding-right: var(--legacy-gutter) !important;
+}
+
+/* ── full-bleed sections keep running edge to edge ── */
+
+.page:is(
+  [page-url="1-day-in-colonia-guell"],
+  [page-url="1-day-in-figueres-girona"],
+  [page-url="1-day-in-santiago-de-compostela"],
+  [page-url="1-day-in-sintra-the-mountain-of-romantic-follies"],
+  [page-url="1-day-in-tarragona-sitges"],
+  [page-url="2-days-in-caceres"],
+  [page-url="2-days-in-evora"],
+  [page-url="3-days-in-madrid-the-capital-at-full-volume"],
+  [page-url="4-days-in-lagos-the-coast-of-golden-cliffs"],
+  [page-url="4-days-in-mondim-de-basto"],
+  [page-url="4-days-in-valencia-itinerary"],
+  [page-url="4-weeks-portugal-to-spain-by-rail-road"],
+  [page-url="5-days-in-lisbon-itinerary"],
+  [page-url="5-days-in-porto-the-city-the-river-built"],
+  [page-url="7-days-in-barcelona"],
+  [page-url="douro-valley-day-trip"]
+) bodycopy > :is(
+  .post-hero,
+  .post-closing,
+  .itin-block,
+  .faq-block,
+  .next-chronicles
+) {
+  margin-left: calc(-1 * var(--legacy-gutter));
+  margin-right: calc(-1 * var(--legacy-gutter));
+}
