@@ -96,10 +96,39 @@ EXIF orientation tag). `width`/`height` in the markup are the true pixel dimensi
 | # | Source file | Output file | Dimensions (orig → final) | Size (orig → final) | q | Section anchor | Visible subject |
 |---|---|---|---|---|---|---|---|
 | 1 | `2025/DSC07200.jpg` | `bologna-fontana-del-nettuno-piazza-maggiore.jpg` | 1365×2048 → 1365×2048 | 508 KB → **322 KB** | 70 | chapter-break #1 | The bronze Fontana del Nettuno in Bologna, Neptune with his trident above the basin, backed by the brick and o… |
-| 2 | `2025/DSC07231.jpg` | `bologna-portico-colonnade.jpg` | 1365×2048 → 1365×2048 | 411 KB → **298 KB** | 70 | chapter-break #2 | A long portico in Bologna: cream and ochre vaulted bays receding into the distance on stone columns, with one … |
+| 2 | `2025/DSC07174.jpg` | `bologna-portico-columns-evening-light.jpg` | 1365×2048 → 1365×2048 | 431 KB → **304 KB** | 70 | chapter-break #2 | A Bologna portico in low evening sun: a row of ochre-painted columns on stone bases carrying the vaulted bays o… |
 | 3 | `2025/DSC07259.jpg` | `bologna-salumeria-window.jpg` | 1365×2048 → 1365×2048 | 463 KB → **335 KB** | 70 | chapter-break #3 | A lit delicatessen window in Bologna stacked with cured meats and cheeses above trays of fresh yellow egg past… |
 | 4 | `2025/DSC07277.jpg` | `bologna-rooftops-and-towers.jpg` | 2048×1365 → 2048×1365 | 603 KB → **406 KB** | 70 | chapter-break #4 | Bologna from above: a sea of terracotta roofs, a tall brick campanile in the middle distance, and the wooded h… |
 | 5 | `2025/DSC07205.jpg` | `bologna-basilica-di-san-petronio.jpg` | 2048×1365 → 2048×1365 | 455 KB → **296 KB** | 70 | FULL PRACTICAL: BOLOGNA | The west front of the Basilica di San Petronio in Bologna: marble facing across the lower half, bare brick abo… |
+
+### Replacement log — row 2, `chapter-break #2`
+
+Row 2 above was replaced on 2026-08-02. The original photograph was withdrawn because an
+identifiable travel companion stood in the near foreground as the dominant subject of the
+frame, which is disqualifying under the companion-privacy rule for this site. The rejected
+public file was deleted once nothing referenced it; the read-only source library was not
+modified and still holds the original exposure.
+
+| Field | Removed | Replacement |
+|---|---|---|
+| Public file | `bologna-portico-colonnade.jpg` (deleted) | `bologna-portico-columns-evening-light.jpg` |
+| Public path | `/images/4-days-in-bologna/bologna-portico-colonnade.jpg` | `/images/4-days-in-bologna/bologna-portico-columns-evening-light.jpg` |
+| Source file | `2025/DSC07231.jpg` | `2025/DSC07174.jpg` |
+| Source path | `<library>/2025/DSC07231.jpg` (retained, untouched) | `<library>/2025/DSC07174.jpg` |
+
+`<library>` above resolves to `/Users/mitchchadban/Desktop/Cerebro/Cerebro/raw-sources/there-&-back/Trip Photos`.
+As of 2026-08-02 the read-only source library sits there, not at the `~/Desktop/Trip Photos`
+path recorded at the top of this file; the `2025/` contents are otherwise identical (all five
+Bologna sources match on both pixel dimensions and byte size).
+
+| Visible subject | A Bologna portico with an identifiable female travel companion standing in the sunlit near foreground, facing the camera, occupying roughly the full height of the right-hand third of the frame | A Bologna portico in low evening sun: ochre-painted columns on stone bases carrying the vaulted bays, long shadows across the terrazzo pavement, parked cars at the kerb beyond, and a small group of unidentifiable passers-by far down the arcade |
+| Dimensions orig → final | 1365×2048 → 1365×2048 | 1365×2048 → 1365×2048 (no resize, no crop, no rotation) |
+| File size orig → final | 411 KB → 298 KB | 431 KB (440,996 B) → **304 KB (310,787 B)** |
+| Compression | MozJPEG q70 | MozJPEG q70, metadata stripped, no resize/crop/rotate |
+
+Reason for section fit: the figure sits at `chapter-break #2`, immediately before Chapter II,
+whose opening subject is the porticoed colonnade to San Luca. The replacement is a portico
+photograph, so both the caption and the section context still hold.
 
 ## `/4-days-in-lagos-the-coast-of-golden-cliffs/`
 
