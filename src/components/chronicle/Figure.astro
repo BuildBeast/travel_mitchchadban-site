@@ -23,6 +23,22 @@ interface Props {
   width: number;
   /** True pixel height of the file. */
   height: number;
+  /**
+   * Optional responsive candidate list, e.g.
+   * '/images/a/x-480w.jpg 480w, /images/a/x-768w.jpg 768w, /images/a/x.jpg 2048w'.
+   *
+   * The component does not derive this and never assumes derivatives exist —
+   * pass a list whose files have been generated and verified (see
+   * `scripts/generate-responsive-images.mjs`). `src` stays the full-resolution
+   * original and remains the fallback for anything that ignores `srcset`.
+   */
+  srcset?: string;
+  /**
+   * Rendered-width hint matching this figure's actual CSS width, required
+   * whenever `srcset` is passed — without it the browser assumes 100vw and
+   * over-downloads. See the pilot notes for the per-variant formulas.
+   */
+  sizes?: string;
   /** Optional caption. Omit rather than padding with filler. */
   caption?: string;
   /**
@@ -42,6 +58,8 @@ interface Props {
 
 const {
   src,
+  srcset,
+  sizes,
   alt,
   width,
   height,
@@ -60,6 +78,8 @@ const {
 >
   <img
     src={src}
+    srcset={srcset}
+    sizes={sizes}
     alt={alt}
     width={width}
     height={height}

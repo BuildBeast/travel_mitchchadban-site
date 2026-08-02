@@ -12,6 +12,10 @@ import Beat from '../../components/chronicle/Beat.astro';
 import AtAGlance from '../../components/chronicle/AtAGlance.astro';
 import FurtherReading from '../../components/chronicle/FurtherReading.astro';
 import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_WIDE,
+  SIZES_MODERN_PORTRAIT,
+} from '../../lib/responsive-image-config.mjs';
 
 const meta: ChronicleMeta = {
   title: '3 Days in Seville Itinerary',
@@ -24,6 +28,14 @@ const meta: ChronicleMeta = {
 };
 
 const IMG = '/images/3-days-in-seville';
+
+/*
+ * Responsive images. Derivatives are committed beside each original as
+ * `<name>-<width>w.jpg` (see `scripts/generate-responsive-images.mjs`); the
+ * original stays the `src` fallback and the largest srcset candidate at its
+ * true intrinsic width. The `sizes` strings come from
+ * `src/lib/responsive-image-config.mjs`, which documents how each was measured.
+ */
 ---
 
 <ChronicleLayout meta={meta}>
@@ -81,6 +93,8 @@ const IMG = '/images/3-days-in-seville';
 
     <Figure
       src={`${IMG}/giralda-at-dusk.jpg`}
+      srcset={`${IMG}/giralda-at-dusk-480w.jpg 480w, ${IMG}/giralda-at-dusk-768w.jpg 768w, ${IMG}/giralda-at-dusk-1200w.jpg 1200w, ${IMG}/giralda-at-dusk-1600w.jpg 1600w, ${IMG}/giralda-at-dusk.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The Giralda bell tower catching the last of the light above a row of pale rooftops in Seville, beneath a bank of pink cloud."
       width={2048}
       height={1365}
@@ -192,6 +206,8 @@ const IMG = '/images/3-days-in-seville';
 
     <Figure
       src={`${IMG}/giralda-from-alcazar-gardens.jpg`}
+      srcset={`${IMG}/giralda-from-alcazar-gardens-480w.jpg 480w, ${IMG}/giralda-from-alcazar-gardens-768w.jpg 768w, ${IMG}/giralda-from-alcazar-gardens-1200w.jpg 1200w, ${IMG}/giralda-from-alcazar-gardens.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="The upper stage of the Giralda rising beyond a weathered brick wall with a low arch, framed by a date palm, a cypress and a mass of magenta bougainvillea."
       width={1365}
       height={2048}
@@ -224,6 +240,8 @@ const IMG = '/images/3-days-in-seville';
 
     <Figure
       src={`${IMG}/cathedral-capilla-mayor.jpg`}
+      srcset={`${IMG}/cathedral-capilla-mayor-480w.jpg 480w, ${IMG}/cathedral-capilla-mayor-768w.jpg 768w, ${IMG}/cathedral-capilla-mayor-1200w.jpg 1200w, ${IMG}/cathedral-capilla-mayor-1600w.jpg 1600w, ${IMG}/cathedral-capilla-mayor.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The interior of Seville Cathedral looking towards the Capilla Mayor, with its gilded altarpiece beneath tall Gothic vaults and two crimson heraldic banners hanging between the piers."
       width={2048}
       height={1365}
@@ -261,6 +279,8 @@ const IMG = '/images/3-days-in-seville';
 
     <Figure
       src={`${IMG}/archivo-de-indias-gallery.jpg`}
+      srcset={`${IMG}/archivo-de-indias-gallery-480w.jpg 480w, ${IMG}/archivo-de-indias-gallery-768w.jpg 768w, ${IMG}/archivo-de-indias-gallery-1200w.jpg 1200w, ${IMG}/archivo-de-indias-gallery-1600w.jpg 1600w, ${IMG}/archivo-de-indias-gallery.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The vaulted upper gallery of the Archivo General de Indias in Seville, lined with uniform document boxes on mahogany shelving above a polished chequered marble floor cut by window light."
       width={2048}
       height={1365}
@@ -405,6 +425,8 @@ const IMG = '/images/3-days-in-seville';
 
     <Figure
       src={`${IMG}/plaza-de-toros-maestranza-facade.jpg`}
+      srcset={`${IMG}/plaza-de-toros-maestranza-facade-480w.jpg 480w, ${IMG}/plaza-de-toros-maestranza-facade-768w.jpg 768w, ${IMG}/plaza-de-toros-maestranza-facade-1200w.jpg 1200w, ${IMG}/plaza-de-toros-maestranza-facade-1600w.jpg 1600w, ${IMG}/plaza-de-toros-maestranza-facade.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The principal façade of the Plaza de Toros de la Real Maestranza in Seville: white walls with ochre-yellow mouldings, two circular windows, a red shuttered balcony door, and PLAZA DE TOROS carved into the stone lintel."
       width={2048}
       height={1365}
@@ -532,6 +554,8 @@ const IMG = '/images/3-days-in-seville';
 
     <Figure
       src={`${IMG}/plaza-de-espana-bridges.jpg`}
+      srcset={`${IMG}/plaza-de-espana-bridges-480w.jpg 480w, ${IMG}/plaza-de-espana-bridges-768w.jpg 768w, ${IMG}/plaza-de-espana-bridges-1200w.jpg 1200w, ${IMG}/plaza-de-espana-bridges-1600w.jpg 1600w, ${IMG}/plaza-de-espana-bridges.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="Plaza de España in Seville: tiled balustraded bridges crossing the canal in front of the curved brick arcade and its tiled tower, with a scattering of visitors on the paving."
       width={2048}
       height={1365}
@@ -540,6 +564,8 @@ const IMG = '/images/3-days-in-seville';
 
     <Figure
       src={`${IMG}/casa-de-pilatos-garden-loggia.jpg`}
+      srcset={`${IMG}/casa-de-pilatos-garden-loggia-480w.jpg 480w, ${IMG}/casa-de-pilatos-garden-loggia-768w.jpg 768w, ${IMG}/casa-de-pilatos-garden-loggia-1200w.jpg 1200w, ${IMG}/casa-de-pilatos-garden-loggia-1600w.jpg 1600w, ${IMG}/casa-de-pilatos-garden-loggia.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The garden loggia at Casa de Pilatos: three stone arches set with Roman busts in roundels, two clipped standard trees, an octagonal tiled fountain and marble benches backed with blue and white azulejos, among roses."
       width={2048}
       height={1365}
