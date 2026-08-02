@@ -807,22 +807,11 @@ blockquote p {
   border-color: #9ecf72;
 }
 
-/* ── FOOTER ── */
-
-footer {
-  border-top: 0.5px solid rgba(160, 200, 120, 0.08);
-  padding: 1.8rem 8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer p {
-  font-size: 13px;
-  letter-spacing: 0.13em;
-  color: rgba(221, 232, 208, 0.15);
-  text-transform: uppercase;
-}
+/* ── FOOTER ──
+   The Cargo-era `footer { … }` / `footer p { … }` rules that lived here were
+   removed: nothing rendered a <footer> after the migration, so they matched no
+   element. The site footer is now a scoped component — see
+   src/components/Footer.astro. */
 
 /* ── CHRONICLES PAGE ── */
 
@@ -2090,7 +2079,6 @@ footer p {
   .page-header,
   .content,
   .cta-strip,
-  footer,
   .chronicles-header,
   .filter-bar,
   .featured,
@@ -2125,7 +2113,6 @@ footer p {
   .page-header,
   .content,
   .cta-strip,
-  footer,
   .chronicles-header,
   .filter-bar,
   .featured,
@@ -2236,18 +2223,6 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.35rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  footer p {
-    line-height: 1.45;
-  }
-
   /* By Region — map stays usable on phones; the region switcher is the
      primary control and the panel toggle still works one-at-a-time. */
   .map-wrap {
@@ -2355,7 +2330,6 @@ footer p {
   .page-header,
   .content,
   .cta-strip,
-  footer,
   .chronicles-header,
   .filter-bar,
   .featured,
@@ -2725,18 +2699,6 @@ footer p {
     padding: 5px 12px !important;
   }
 
-  /* footer */
-  footer {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 0.3rem !important;
-    padding-top: 1rem !important;
-    padding-bottom: max(1.2rem, env(safe-area-inset-bottom)) !important;
-  }
-
-  footer p {
-    line-height: 1.4 !important;
-  }
 }
 
 @media (max-width: 560px) {
@@ -2791,8 +2753,7 @@ footer p {
   .featured,
   .grid-section,
   .section,
-  .cta-strip,
-  footer {
+  .cta-strip {
     padding-left: 0.95rem !important;
     padding-right: 0.95rem !important;
   }
@@ -3767,15 +3728,7 @@ body {
 .post-meta { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(221,232,208,0.2); display: flex; gap: 1.5rem; align-items: center; }
 .dot { display: inline-block; width: 3px; height: 3px; background: #3d6b25; border-radius: 50%; }
 
-/* ── FOOTER ── */
-footer {
-  border-top: 0.5px solid rgba(160,200,120,0.08);
-  padding: 1.8rem 8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-footer p { font-size: 13px; letter-spacing: 0.13em; color: rgba(221,232,208,0.15); text-transform: uppercase; }
+/* ── FOOTER ── (duplicate Cargo-era block removed; see Footer.astro) */
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
@@ -4435,8 +4388,7 @@ nav { display:flex; justify-content:space-between; align-items:center; padding:1
 .post-meta { font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(221,232,208,0.2); display:flex; gap:1.5rem; align-items:center; }
 .dot { display:inline-block; width:3px; height:3px; background:#3d6b25; border-radius:50%; }
 
-footer { border-top:0.5px solid rgba(160,200,120,0.08); padding:1.8rem 8rem; display:flex; justify-content:space-between; align-items:center; }
-footer p { font-size:13px; letter-spacing:0.13em; color:rgba(221,232,208,0.15); text-transform:uppercase; }
+/* (duplicate Cargo-era `footer` / `footer p` block removed; see Footer.astro) */
 
 @media (max-width:1024px) { .post-hero,.post-body,.post-closing,.itin-block,.faq-block,.next-chronicles { padding-left:4rem; padding-right:4rem; } }
 @media (max-width:768px) { .posts-grid { grid-template-columns:1fr; } nav { padding:1.2rem 2rem; } .nav-links { display:none; } }
