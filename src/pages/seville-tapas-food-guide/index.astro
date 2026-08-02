@@ -12,6 +12,10 @@ import Beat from '../../components/chronicle/Beat.astro';
 import AtAGlance from '../../components/chronicle/AtAGlance.astro';
 import FurtherReading from '../../components/chronicle/FurtherReading.astro';
 import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
 
 const meta: ChronicleMeta = {
   title: 'Seville Tapas and Food Guide',
@@ -82,6 +86,8 @@ const IMG = '/images/seville-tapas-food-guide';
 
     <Figure
       src={`${IMG}/jamon-counter-mercado-de-triana.jpg`}
+      srcset={`${IMG}/jamon-counter-mercado-de-triana-480w.jpg 480w, ${IMG}/jamon-counter-mercado-de-triana-768w.jpg 768w, ${IMG}/jamon-counter-mercado-de-triana-1200w.jpg 1200w, ${IMG}/jamon-counter-mercado-de-triana-1600w.jpg 1600w, ${IMG}/jamon-counter-mercado-de-triana.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="A charcuterie counter in the Mercado de Triana under magenta lighting: whole Ibérico hams hanging in dark netted sleeves and unwrapped, rings of chorizo and morcilla, a Queso Payoyo poster, a printed chart headed Jamones y Paletas Ibéricos setting out Bellota 100%, Bellota, Cebo de Campo and Cebo, euro price tags throughout, two customers at the glass and an assistant working behind it."
       width={2048}
       height={1365}
@@ -395,6 +401,8 @@ const IMG = '/images/seville-tapas-food-guide';
 
     <Figure
       src={`${IMG}/mercado-de-triana-entrance.jpg`}
+      srcset={`${IMG}/mercado-de-triana-entrance-480w.jpg 480w, ${IMG}/mercado-de-triana-entrance-768w.jpg 768w, ${IMG}/mercado-de-triana-entrance-1200w.jpg 1200w, ${IMG}/mercado-de-triana-entrance-1600w.jpg 1600w, ${IMG}/mercado-de-triana-entrance.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The azulejo sign reading Bienvenidos al Mercado de Triana in blue lettering on white tiles within a decorative tiled border, set into the brick gable above the market's shuttered iron gate, with the shadow of a street lamp thrown across it and a deep blue sky above."
       width={2048}
       height={1365}
@@ -420,6 +428,8 @@ const IMG = '/images/seville-tapas-food-guide';
 
     <Figure
       src={`${IMG}/fruteria-mercado-de-triana.jpg`}
+      srcset={`${IMG}/fruteria-mercado-de-triana-480w.jpg 480w, ${IMG}/fruteria-mercado-de-triana-768w.jpg 768w, ${IMG}/fruteria-mercado-de-triana-1200w.jpg 1200w, ${IMG}/fruteria-mercado-de-triana-1600w.jpg 1600w, ${IMG}/fruteria-mercado-de-triana.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="A greengrocer's stall in the Mercado de Triana: bunches of garlic, spring onions, carrots, leeks, pineapples, bananas and cauliflowers hanging from a rail above crates of lemons, oranges, peppers, green beans and strawberries, with a stallholder in a blue polo shirt reaching across and handwritten Frutas price cards throughout."
       width={2048}
       height={1365}
@@ -428,6 +438,8 @@ const IMG = '/images/seville-tapas-food-guide';
 
     <Figure
       src={`${IMG}/mercado-de-triana-morning-shoppers.jpg`}
+      srcset={`${IMG}/mercado-de-triana-morning-shoppers-480w.jpg 480w, ${IMG}/mercado-de-triana-morning-shoppers-768w.jpg 768w, ${IMG}/mercado-de-triana-morning-shoppers-1200w.jpg 1200w, ${IMG}/mercado-de-triana-morning-shoppers-1600w.jpg 1600w, ${IMG}/mercado-de-triana-morning-shoppers.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="An aisle in the Mercado de Triana mid-morning: a stall of mangos, avocados marked aguacate extra ecológico Málaga 3'95, radishes, fennel and punnets of berries, with two shoppers of retirement age standing at the counter and further stalls and shoppers beyond."
       width={2048}
       height={1365}
@@ -621,6 +633,8 @@ const IMG = '/images/seville-tapas-food-guide';
 
     <Figure
       src={`${IMG}/el-disparate-alameda.jpg`}
+      srcset={`${IMG}/el-disparate-alameda-480w.jpg 480w, ${IMG}/el-disparate-alameda-768w.jpg 768w, ${IMG}/el-disparate-alameda-1200w.jpg 1200w, ${IMG}/el-disparate-alameda.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="The corner exterior of a restaurant called el Disparate on the Alameda de Hércules in Seville: cream walls with the name hand-painted in large black brush lettering, a round navy sign above, a tall cactus in a terracotta pot, bougainvillea trained up the wall, and one laid pavement table with green chairs."
       width={1365}
       height={2048}

@@ -11,6 +11,10 @@ import Beat from '../../components/chronicle/Beat.astro';
 import AtAGlance from '../../components/chronicle/AtAGlance.astro';
 import FurtherReading from '../../components/chronicle/FurtherReading.astro';
 import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
 
 const meta: ChronicleMeta = {
   title: 'Best Areas to Stay in Seville',
@@ -79,6 +83,8 @@ const IMG = '/images/best-areas-to-stay-in-seville';
 
     <Figure
       src={`${IMG}/giralda-above-the-rooftops.jpg`}
+      srcset={`${IMG}/giralda-above-the-rooftops-480w.jpg 480w, ${IMG}/giralda-above-the-rooftops-768w.jpg 768w, ${IMG}/giralda-above-the-rooftops-1200w.jpg 1200w, ${IMG}/giralda-above-the-rooftops-1600w.jpg 1600w, ${IMG}/giralda-above-the-rooftops.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The upper stage of the Giralda catching low gold light above the roofline of a large stone civic building in central Seville, with three flagpoles, ornate iron street lamps and a half moon in a pale sky."
       width={2048}
       height={1365}
@@ -245,6 +251,8 @@ const IMG = '/images/best-areas-to-stay-in-seville';
 
     <Figure
       src={`${IMG}/torre-del-oro-from-el-arenal.jpg`}
+      srcset={`${IMG}/torre-del-oro-from-el-arenal-480w.jpg 480w, ${IMG}/torre-del-oro-from-el-arenal-768w.jpg 768w, ${IMG}/torre-del-oro-from-el-arenal-1200w.jpg 1200w, ${IMG}/torre-del-oro-from-el-arenal.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="The Torre del Oro seen from the landward side among tall palms, its battlemented drum and golden-tiled turret against a deep blue sky, with a Spanish flag flying and brick paving in the foreground."
       width={1365}
       height={2048}
@@ -334,6 +342,8 @@ const IMG = '/images/best-areas-to-stay-in-seville';
 
     <Figure
       src={`${IMG}/alameda-de-hercules-columns.jpg`}
+      srcset={`${IMG}/alameda-de-hercules-columns-480w.jpg 480w, ${IMG}/alameda-de-hercules-columns-768w.jpg 768w, ${IMG}/alameda-de-hercules-columns-1200w.jpg 1200w, ${IMG}/alameda-de-hercules-columns.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="Two tall Roman columns inside iron railings at the southern end of the Alameda de Hércules in Seville, carrying statues of Hercules and Julius Caesar, with plane trees turning yellow behind them, café tables and a few passers-by in evening light."
       width={1365}
       height={2048}
@@ -385,6 +395,8 @@ const IMG = '/images/best-areas-to-stay-in-seville';
 
     <Figure
       src={`${IMG}/capilla-del-carmen-triana.jpg`}
+      srcset={`${IMG}/capilla-del-carmen-triana-480w.jpg 480w, ${IMG}/capilla-del-carmen-triana-768w.jpg 768w, ${IMG}/capilla-del-carmen-triana-1200w.jpg 1200w, ${IMG}/capilla-del-carmen-triana.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="The Capilla del Carmen at the Triana end of the Puente de Isabel II in Seville: a brick drum topped by a glazed ceramic dome bearing the date AÑO 1927 in a cartouche, beside a taller octagonal brick bell tower with tiled cupola and a single bell."
       width={1365}
       height={2048}
@@ -604,6 +616,8 @@ const IMG = '/images/best-areas-to-stay-in-seville';
 
     <Figure
       src={`${IMG}/quiet-street-at-first-light.jpg`}
+      srcset={`${IMG}/quiet-street-at-first-light-480w.jpg 480w, ${IMG}/quiet-street-at-first-light-768w.jpg 768w, ${IMG}/quiet-street-at-first-light-1200w.jpg 1200w, ${IMG}/quiet-street-at-first-light.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="A narrow, empty residential street in Seville with the low morning sun coming down its length: whitewashed and ochre houses with wrought-iron balconies and hanging lanterns on both sides, a single narrow pavement, and trees at the far end."
       width={1365}
       height={2048}

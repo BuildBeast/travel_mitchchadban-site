@@ -12,6 +12,10 @@ import Beat from '../../components/chronicle/Beat.astro';
 import AtAGlance from '../../components/chronicle/AtAGlance.astro';
 import FurtherReading from '../../components/chronicle/FurtherReading.astro';
 import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
 
 const meta: ChronicleMeta = {
   title: 'Best Things to Do in Seville',
@@ -82,6 +86,8 @@ const IMG = '/images/best-things-to-do-in-seville';
 
     <Figure
       src={`${IMG}/pabellon-mudejar-reflected.jpg`}
+      srcset={`${IMG}/pabellon-mudejar-reflected-480w.jpg 480w, ${IMG}/pabellon-mudejar-reflected-768w.jpg 768w, ${IMG}/pabellon-mudejar-reflected-1200w.jpg 1200w, ${IMG}/pabellon-mudejar-reflected-1600w.jpg 1600w, ${IMG}/pabellon-mudejar-reflected.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The Pabellón Mudéjar in Parque de María Luisa, Seville, mirrored in its still lily-padded pool: a brick and tile pavilion with two towers and a green-tiled roof, flanked by two tall ornate iron lamp standards, with a small fountain playing in the water."
       width={2048}
       height={1365}
@@ -304,6 +310,8 @@ const IMG = '/images/best-things-to-do-in-seville';
 
     <Figure
       src={`${IMG}/guadalquivir-at-sunset.jpg`}
+      srcset={`${IMG}/guadalquivir-at-sunset-480w.jpg 480w, ${IMG}/guadalquivir-at-sunset-768w.jpg 768w, ${IMG}/guadalquivir-at-sunset-1200w.jpg 1200w, ${IMG}/guadalquivir-at-sunset.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="The Guadalquivir at sunset seen from above: a lone kayaker and a group of four paddlers on violet water, the far bank in silhouette with white apartment buildings, trees, construction cranes and a lit modern building, beneath an orange and violet sky."
       width={1365}
       height={2048}
@@ -416,6 +424,8 @@ const IMG = '/images/best-things-to-do-in-seville';
 
     <Figure
       src={`${IMG}/casa-de-pilatos-patio-principal.jpg`}
+      srcset={`${IMG}/casa-de-pilatos-patio-principal-480w.jpg 480w, ${IMG}/casa-de-pilatos-patio-principal-768w.jpg 768w, ${IMG}/casa-de-pilatos-patio-principal-1200w.jpg 1200w, ${IMG}/casa-de-pilatos-patio-principal.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="The principal courtyard of Casa de Pilatos in Seville: two storeys of arcading with intricate Mudéjar plasterwork and a Gothic tracery balustrade above, blue and white azulejo dados, Roman busts set in roundels, a standing Roman female statue on a plinth, and a marble fountain with dolphins beneath a bearded Janus head on chequered marble paving."
       width={1365}
       height={2048}
@@ -563,6 +573,8 @@ const IMG = '/images/best-things-to-do-in-seville';
 
     <Figure
       src={`${IMG}/zurbaran-crucifixion-bellas-artes.jpg`}
+      srcset={`${IMG}/zurbaran-crucifixion-bellas-artes-480w.jpg 480w, ${IMG}/zurbaran-crucifixion-bellas-artes-768w.jpg 768w, ${IMG}/zurbaran-crucifixion-bellas-artes-1200w.jpg 1200w, ${IMG}/zurbaran-crucifixion-bellas-artes.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="A single large Zurbarán crucifixion in a gilded frame hung alone on a pale partition wall in the Museo de Bellas Artes in Seville, beneath the frescoed dome and painted pendentives of the former convent church, with three visitors photographing it from below."
       width={1365}
       height={2048}
@@ -635,6 +647,8 @@ const IMG = '/images/best-things-to-do-in-seville';
 
     <Figure
       src={`${IMG}/flamenco-on-a-dark-stage.jpg`}
+      srcset={`${IMG}/flamenco-on-a-dark-stage-480w.jpg 480w, ${IMG}/flamenco-on-a-dark-stage-768w.jpg 768w, ${IMG}/flamenco-on-a-dark-stage-1200w.jpg 1200w, ${IMG}/flamenco-on-a-dark-stage-1600w.jpg 1600w, ${IMG}/flamenco-on-a-dark-stage.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="Six flamenco performers on a dark stage lit in blue and red: a guitarist in shadow at the left, a woman standing in a red and gold fringed dress with her hand on her hip, three seated figures around a small table, and a second guitarist playing at the right."
       width={2048}
       height={1365}

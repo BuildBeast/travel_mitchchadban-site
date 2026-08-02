@@ -12,6 +12,10 @@ import Beat from '../../components/chronicle/Beat.astro';
 import AtAGlance from '../../components/chronicle/AtAGlance.astro';
 import FurtherReading from '../../components/chronicle/FurtherReading.astro';
 import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
 
 const meta: ChronicleMeta = {
   title: 'One Day in Seville',
@@ -81,6 +85,8 @@ const IMG = '/images/one-day-in-seville';
 
     <Figure
       src={`${IMG}/plaza-de-espana-from-the-arcade.jpg`}
+      srcset={`${IMG}/plaza-de-espana-from-the-arcade-480w.jpg 480w, ${IMG}/plaza-de-espana-from-the-arcade-768w.jpg 768w, ${IMG}/plaza-de-espana-from-the-arcade-1200w.jpg 1200w, ${IMG}/plaza-de-espana-from-the-arcade-1600w.jpg 1600w, ${IMG}/plaza-de-espana-from-the-arcade.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="Plaza de España in Seville seen from an elevated position on its arcade: the tiled and pinnacled north tower flying a Spanish flag, the long brick and azulejo colonnade, the canal with a rowing boat passing under a balustraded tiled bridge, and several dozen visitors on the paving below."
       width={2048}
       height={1365}
@@ -227,6 +233,8 @@ const IMG = '/images/one-day-in-seville';
 
     <Figure
       src={`${IMG}/alcazar-gardens-from-above.jpg`}
+      srcset={`${IMG}/alcazar-gardens-from-above-480w.jpg 480w, ${IMG}/alcazar-gardens-from-above-768w.jpg 768w, ${IMG}/alcazar-gardens-from-above-1200w.jpg 1200w, ${IMG}/alcazar-gardens-from-above.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="The gardens of the Real Alcázar in Seville seen from above: a grid of clipped box parterres and gravel paths, very tall Canary palms, an ochre garden pavilion among dark trees, a small stone fountain, and a few visitors on the paths."
       width={1365}
       height={2048}
@@ -265,6 +273,8 @@ const IMG = '/images/one-day-in-seville';
 
     <Figure
       src={`${IMG}/cathedral-retablo-mayor.jpg`}
+      srcset={`${IMG}/cathedral-retablo-mayor-480w.jpg 480w, ${IMG}/cathedral-retablo-mayor-768w.jpg 768w, ${IMG}/cathedral-retablo-mayor-1200w.jpg 1200w, ${IMG}/cathedral-retablo-mayor.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
       alt="The Retablo Mayor of Seville Cathedral: a vast gilded altarpiece rising in tiers of carved and painted scenes beneath a coffered gold canopy, with silver candlesticks and an ornate silver altar frontal below."
       width={1365}
       height={2048}
@@ -314,6 +324,8 @@ const IMG = '/images/one-day-in-seville';
 
     <Figure
       src={`${IMG}/archivo-de-indias-inscription.jpg`}
+      srcset={`${IMG}/archivo-de-indias-inscription-480w.jpg 480w, ${IMG}/archivo-de-indias-inscription-768w.jpg 768w, ${IMG}/archivo-de-indias-inscription-1200w.jpg 1200w, ${IMG}/archivo-de-indias-inscription-1600w.jpg 1600w, ${IMG}/archivo-de-indias-inscription.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The words ARCHIVO GENERAL DE INDIAS in gilded raised letters on a pale marble tablet, framed by a dark marble surround and two fluted orange-veined marble columns."
       width={2048}
       height={1365}

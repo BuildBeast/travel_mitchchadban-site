@@ -12,6 +12,9 @@ import Beat from '../../components/chronicle/Beat.astro';
 import AtAGlance from '../../components/chronicle/AtAGlance.astro';
 import FurtherReading from '../../components/chronicle/FurtherReading.astro';
 import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
 
 const meta: ChronicleMeta = {
   title: 'Best Day Trips from Seville',
@@ -82,6 +85,8 @@ const IMG = '/images/best-day-trips-from-seville';
 
     <Figure
       src={`${IMG}/mezquita-arch-within-arch.jpg`}
+      srcset={`${IMG}/mezquita-arch-within-arch-480w.jpg 480w, ${IMG}/mezquita-arch-within-arch-768w.jpg 768w, ${IMG}/mezquita-arch-within-arch-1200w.jpg 1200w, ${IMG}/mezquita-arch-within-arch-1600w.jpg 1600w, ${IMG}/mezquita-arch-within-arch.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="Inside the Mezquita-Catedral of Córdoba: a tall Christian Gothic pointed arch in the foreground framing the interlacing red-and-white polylobed Islamic arches and carved plasterwork of the Villaviciosa chapel beyond, with a crucifix below and coloured light from stained glass thrown across the stone floor."
       width={2048}
       height={1365}
@@ -258,6 +263,8 @@ const IMG = '/images/best-day-trips-from-seville';
 
     <Figure
       src={`${IMG}/cordoba-puente-romano.jpg`}
+      srcset={`${IMG}/cordoba-puente-romano-480w.jpg 480w, ${IMG}/cordoba-puente-romano-768w.jpg 768w, ${IMG}/cordoba-puente-romano-1200w.jpg 1200w, ${IMG}/cordoba-puente-romano-1600w.jpg 1600w, ${IMG}/cordoba-puente-romano.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The Puente Romano at Córdoba in low afternoon light: a long honey-coloured stone bridge on wide arches with rounded pier buttresses, people walking along its parapet, the battlemented Torre de la Calahorra at the far end, and the shallow Guadalquivir running over weirs between reed islands."
       width={2048}
       height={1365}
@@ -400,6 +407,8 @@ const IMG = '/images/best-day-trips-from-seville';
 
     <Figure
       src={`${IMG}/cadiz-cathedral-facade.jpg`}
+      srcset={`${IMG}/cadiz-cathedral-facade-480w.jpg 480w, ${IMG}/cadiz-cathedral-facade-768w.jpg 768w, ${IMG}/cadiz-cathedral-facade-1200w.jpg 1200w, ${IMG}/cadiz-cathedral-facade-1600w.jpg 1600w, ${IMG}/cadiz-cathedral-facade.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="The west front of Cádiz Cathedral: a broad pale limestone baroque façade with two domed bell towers, a large arched central bay and a carved doorway, half of it in shadow and half in golden morning light, with palm fronds crossing the top of the frame."
       width={2048}
       height={1365}
@@ -408,6 +417,8 @@ const IMG = '/images/best-day-trips-from-seville';
 
     <Figure
       src={`${IMG}/cadiz-la-caleta.jpg`}
+      srcset={`${IMG}/cadiz-la-caleta-480w.jpg 480w, ${IMG}/cadiz-la-caleta-768w.jpg 768w, ${IMG}/cadiz-la-caleta-1200w.jpg 1200w, ${IMG}/cadiz-la-caleta-1600w.jpg 1600w, ${IMG}/cadiz-la-caleta.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="La Caleta beach in Cádiz: a domed white balneario building raised on piers at the left, a long stone breakwater running out towards a sea fort, turquoise Atlantic water, and bathers and sunbathers on pale sand."
       width={2048}
       height={1365}
@@ -667,6 +678,8 @@ const IMG = '/images/best-day-trips-from-seville';
 
     <Figure
       src={`${IMG}/triana-tiled-excursion-signs.jpg`}
+      srcset={`${IMG}/triana-tiled-excursion-signs-480w.jpg 480w, ${IMG}/triana-tiled-excursion-signs-768w.jpg 768w, ${IMG}/triana-tiled-excursion-signs-1200w.jpg 1200w, ${IMG}/triana-tiled-excursion-signs-1600w.jpg 1600w, ${IMG}/triana-tiled-excursion-signs.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
       alt="A wall of old Andalusian trade azulejos: a large yellow and blue tiled panel advertising a six-day coach excursion to Cordoba, Sevilla and Granada departing Madrid every Tuesday and Saturday, surrounded by tiled shop and house signs including E. Gonzalez, El Madrigal, Villa Julita, Hermanas Elvira y Estefania, a Singer sewing-machine roundel and a painted Virgin medallion."
       width={2048}
       height={1365}
