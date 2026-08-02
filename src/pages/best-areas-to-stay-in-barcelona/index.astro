@@ -1,0 +1,921 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Areas to Stay in Barcelona',
+  headline: 'Best Areas to Stay in Barcelona: Seven Bases Between Hill and Sea',
+  description:
+    'Seven Barcelona neighbourhoods compared on noise, transport, slope and beach access — and the minutes each one quietly adds to every day.',
+  path: '/best-areas-to-stay-in-barcelona/',
+  ogImage: '/images/best-areas-to-stay-in-barcelona/old-city-roofs-to-the-hills.jpg',
+  factsVerified: '2026-08-02',
+};
+
+const IMG = '/images/best-areas-to-stay-in-barcelona';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Catalonia', 'Barcelona']}
+    label="Where to Stay · Seven Areas"
+    title="Best Areas to Stay in Barcelona:"
+    titleEmphasis="Seven Bases Between Hill and Sea"
+    standfirst="The metro shortens every distance in this city and erases almost none of the friction. What the choice of neighbourhood really settles is which half of Barcelona becomes ordinary, and which half becomes an expedition you make twice a day."
+    stats={[
+      { num: '7', label: 'Areas' },
+      { num: '2', label: 'Metro Spines' },
+      { num: 'Midnight', label: 'Metro Stops, Sun–Thu' },
+      { num: '1', label: 'Night-Bus Hub' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          A city with one centre can be judged on a radius. Barcelona cannot,
+          because it has never had one. The old city is a knot of medieval lanes
+          wedged between the Rambla, Via Laietana and the water. The Eixample is
+          the nineteenth-century grid laid across the plain above it, holding
+          most of the architecture people come for. Montjuïc rises at the
+          south-western corner. Gràcia — an independent town until 1897 — sits
+          above the Diagonal keeping its own squares and its own hours. And
+          along the eastern edge runs several kilometres of beach that is not a
+          resort strip bolted onto the city but a working part of it. No address
+          is near all five, and the argument that settles
+          <a href="/best-areas-to-stay-in-seville/">where to sleep in a compact
+          city like Seville</a> — where everything worth seeing stands inside a
+          two-kilometre oval — simply does not transfer.
+        </p>
+        <p>
+          The metro is excellent, and it makes this sound like a solved problem.
+          It is not, quite. Two lines do nearly all the work a visitor needs. L3
+          threads Barcelona Sants to the foot of Montjuïc at Poble Sec and
+          Paral·lel, into the old city at Drassanes and Liceu, up through
+          Catalunya, Passeig de Gràcia and Diagonal, and out at Fontana and
+          Lesseps in Gràcia. L4 runs the other diagonal entirely — Poblenou,
+          Llacuna, Bogatell, Barceloneta, Jaume I at the edge of the Born,
+          Urquinaona, Passeig de Gràcia, Girona, Verdaguer, and Joanic in
+          Gràcia. Between them they touch every area on this page, which is why
+          the honest measure of a Barcelona neighbourhood is not how central it
+          is but whether it sits on a spine, and which one.
+        </p>
+        <p>
+          What the spines do not do is run all night. Transports Metropolitans
+          de Barcelona has the metro finishing at midnight from Sunday to
+          Thursday, at two in the morning on Fridays and the nights before
+          public holidays, and running continuously through Saturday night into
+          Sunday. After that the night buses take over, and every NitBus line
+          but one stops at Plaça de Catalunya, because the night network is a
+          wheel with a single hub. So lateness has a geography of its own,
+          measured not in the distance from your room to the bar but in how far
+          your bed lies from one square. That, and street noise, and slope, and
+          whether a vehicle can reach your door with a suitcase in it, is what
+          actually varies across the seven areas below.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/old-city-roofs-to-the-hills.jpg`}
+      srcset={`${IMG}/old-city-roofs-to-the-hills-480w.jpg 480w, ${IMG}/old-city-roofs-to-the-hills-768w.jpg 768w, ${IMG}/old-city-roofs-to-the-hills-1200w.jpg 1200w, ${IMG}/old-city-roofs-to-the-hills-1600w.jpg 1600w, ${IMG}/old-city-roofs-to-the-hills.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Barcelona seen from a rooftop above the old city: a dense field of flat roofs with water tanks, washing lines, terraces and satellite dishes running away to the Sagrada Família and its cranes in the middle distance, with the wooded Collserola ridge closing the horizon under a blue sky."
+      width={2048}
+      height={1365}
+      caption="The whole problem in one frame. The old city stops being a maze only when you get above it; the Sagrada Família stands a mile inland in the grid; the ridge behind is where the city runs out. Everything on this page is a decision about which of those three grounds you wake up on."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="who-for" rule={false}>What this page assumes about you</SectionHeading>
+      <p>
+        That you will walk and use public transport rather than drive, because
+        parking a car here is a separate and worse problem. That you have
+        between two and seven nights. That there is no universally best
+        district, only a best answer to your particular week. That the street
+        matters as much as the district, and the room orientation sometimes
+        more than either. That is why no hotel is named on this page: the
+        building you book will have changed hands, name and price by the time
+        you read this, and the street outside it will not have changed at all.
+      </p>
+      <p>
+        One thing here is documented rather than reasoned. A six-night stay
+        recorded on this site as
+        <a href="/7-days-in-barcelona/">seven days in Barcelona read through
+        Gaudí</a> was taken on Carrer Sant Pau in the Raval — which is not one
+        of the seven areas below, and the distinction is worth making rather
+        than blurring. What it supplies is first-hand knowledge of sleeping a
+        hundred metres off the Rambla in the old city, and of leaving it by
+        pre-booked taxi at half past four in the morning through lanes that were
+        finally empty. It licenses no opinion about waking up in Gràcia or
+        Poblenou. Those verdicts are assessed — from the city's own district
+        boundaries, from published transport, and from walking the same streets
+        across two August visits. Where a judgement is first-hand, it says so.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'eixample', label: 'Eixample' },
+        { id: 'gotic', label: 'Barri Gòtic' },
+        { id: 'born', label: 'El Born' },
+        { id: 'gracia', label: 'Gràcia' },
+        { id: 'sant-antoni', label: 'Sant Antoni · Poble-sec' },
+        { id: 'poblenou', label: 'Poblenou' },
+        { id: 'barceloneta', label: 'Barceloneta' },
+        { id: 'decide', label: 'How to decide' },
+        { id: 'arriving', label: 'Arriving with luggage' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Seven Areas at a Glance"
+    meta={[
+      {
+        label: 'What actually varies',
+        value:
+          'Late-night travel, street noise, slope, luggage access and the minutes each area adds to every crossing of the city. Very rarely the distance on the map.',
+      },
+      {
+        label: 'The two spines',
+        value:
+          'L3 links Sants, the foot of Montjuïc, the old city, the Eixample and Gràcia. L4 links Poblenou, Barceloneta, the Born, the Eixample and Gràcia. Sitting on one is worth more than sounding central.',
+      },
+      {
+        label: 'Shortest stays',
+        value:
+          'Two or three nights — buy the minutes. Central Eixample, or the old city with the street chosen carefully.',
+      },
+      {
+        label: 'Longer stays',
+        value:
+          'Five nights or more — buy the quiet. Gràcia, Sant Antoni or Poblenou, and let the daily twenty minutes amortise.',
+      },
+    ]}
+    daysHeading="Area by Area"
+    days={[
+      {
+        num: 'Eixample',
+        text: 'Best for a first visit of any length. Advantage: the one place both metro spines cross, with the airport train stopping on top of them. Sacrifice: traffic on the wide streets, and no medieval atmosphere whatsoever.',
+      },
+      {
+        num: 'Barri Gòtic',
+        text: 'Best for travellers who want the old city and sleep through anything. Advantage: you step out of the door into the thing you came to see. Sacrifice: sleep, room size, and any hope of a vehicle reaching your door.',
+      },
+      {
+        num: 'El Born',
+        text: 'Best for two or three energetic nights built around eating. Advantage: the best dinner-to-doorstep ratio in Barcelona. Sacrifice: the bill arrives after midnight, and it varies enormously by block.',
+      },
+      {
+        num: 'Gràcia',
+        text: 'Best for five nights or more. Advantage: a neighbourhood being lived in rather than displayed, with squares that belong to the people around them. Sacrifice: it is uphill, and it is the far end of both spines.',
+      },
+      {
+        num: 'Sant Antoni · Poble-sec',
+        text: 'Best for repeat visitors and food-led stays. Advantage: genuine value, real markets and Montjuïc at the end of the street. Sacrifice: nothing postcard outside the door, and Sant Antoni is a building site until 2027.',
+      },
+      {
+        num: 'Poblenou',
+        text: 'Best for families, summer and anyone who wants space. Advantage: larger, newer, calmer rooms with the better beaches at the end of the street. Sacrifice: fifteen to twenty minutes on the L4 before the old city begins.',
+      },
+      {
+        num: 'Barceloneta',
+        text: 'Best when the beach is the trip rather than a feature of it. Advantage: sand at the end of every street and El Born ten minutes on foot. Sacrifice: the smallest rooms in the city, at a premium.',
+      },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="narrative prose">
+      <SectionHeading id="eixample">Eixample — the unglamorous right answer</SectionHeading>
+      <p>
+        Ildefons Cerdà laid the Eixample out in the 1860s across the plain
+        between the demolished city walls and the villages above, and the plan
+        still does what it was designed to do: move people and air. The streets
+        are wide, straight and counted in blocks; every crossing opens into the
+        chamfered octagonal corner that is the grid's signature; the buildings
+        are tall, solid and largely nineteenth-century, with a courtyard buried
+        in the middle of each block. Officially the district holds six
+        neighbourhoods. Travellers mean two — the
+        <strong>Dreta de l'Eixample</strong> east of Balmes, which carries
+        Passeig de Gràcia and its Gaudí houses and runs up towards the Sagrada
+        Família, and <strong>l'Antiga Esquerra</strong> west of it, which is
+        quieter, more residential and costs less. The difference between them is
+        mostly price and calm rather than convenience.
+      </p>
+      <p>
+        The convenience argument is the strongest on this page and worth
+        stating precisely. Passeig de Gràcia is the only station in Barcelona
+        served by L2, L3 and L4 at once — which is to say, it is where both
+        metro spines cross — and the airport train from Terminal 2 stops there
+        as well. From a room within ten minutes' walk of it you reach the old
+        city, Gràcia, the beach, the foot of Montjuïc, Barcelona Sants and the
+        airport without ever having to plan a route. Nowhere else here offers
+        that. It is why the Eixample is the safest recommendation for a first
+        visit, and equally why it stops being necessary once you know the city
+        well enough not to need every option at once.
+      </p>
+      <p>
+        What you pay is exposure. The width that disperses noise also admits
+        traffic, and some of these streets carry a great deal of it: Gran Via,
+        Aragó and Balmes are through-routes rather than addresses, and a room
+        facing one of them faces four lanes. This is where the Eixample's one
+        genuinely important piece of advice lives, and it concerns the floor
+        plan rather than the district. Flats here have exterior rooms facing the
+        street and interior rooms facing the block's courtyard. The interior
+        room is darker and often has no view at all; it is also markedly
+        quieter, and in July cooler. If you sleep badly, the courtyard side of a
+        building on a busy Eixample street will serve you better than the street
+        side of a building on a quiet one.
+      </p>
+      <p>
+        The other cost is atmosphere, and it should not be oversold as a
+        tragedy: you step out onto a broad pavement with plane trees, a pharmacy
+        and a bank — the ordinary machinery of a large European city rather than
+        anything you want to photograph. Against that, arriving here is easy in
+        a way it is nowhere in the old city, with vehicles reaching every door
+        and lifts as standard. One caveat: two of the nine metro stations TMB
+        lists as not yet adapted for reduced mobility sit on this ground,
+        <strong>Urquinaona</strong> and <strong>Verdaguer</strong>.
+      </p>
+      <p>
+        <strong>Stay here if</strong> it is your first visit, you want maximum
+        optionality, you are arriving with luggage or leaving on an early
+        flight, or someone in the party sleeps badly and you are willing to book
+        a courtyard room. <strong>Look elsewhere if</strong> you want to walk
+        out of the door into something older than 1870, or you are staying a
+        week and would rather have a neighbourhood than a grid.
+        <strong>The trade-off:</strong> you buy the best-connected address in
+        Barcelona and pay for it in traffic and in charm.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/sagrada-familia-over-the-eixample.jpg`}
+      srcset={`${IMG}/sagrada-familia-over-the-eixample-480w.jpg 480w, ${IMG}/sagrada-familia-over-the-eixample-768w.jpg 768w, ${IMG}/sagrada-familia-over-the-eixample-1200w.jpg 1200w, ${IMG}/sagrada-familia-over-the-eixample-1600w.jpg 1600w, ${IMG}/sagrada-familia-over-the-eixample.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Looking up an Eixample street in Barcelona between ordinary apartment blocks with wrought-iron balconies and green shutters, a plane tree in leaf on the left, and the stone towers of the Sagrada Família under construction cranes rising above the rooftops against a deep blue sky."
+      width={2048}
+      height={1365}
+      caption="What the Eixample actually offers: not a view of the monument but a street that happens to end at one, above a chemist and a bank. The balconies on the right are somebody's Tuesday."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="gotic">Barri Gòtic — the most atmospheric bed and the least sleep</SectionHeading>
+      <p>
+        The Gothic Quarter occupies the oldest ground in Barcelona, between the
+        Rambla and Via Laietana, with the Cathedral at its heart and fragments
+        of the Roman wall still standing inside later buildings. Its lanes are
+        three or four metres across in places, paved rather than kerbed, walled
+        in stone five or six storeys high, and they open without warning into
+        small squares — Plaça del Pi, Plaça de Sant Felip Neri, the arcaded
+        Plaça Reial. Nothing else in this article is as good to walk through at
+        eight in the morning. Nothing else is as hard to sleep in.
+      </p>
+      <p>
+        The reason is acoustic, and structural rather than moral. A lane four
+        metres wide between two stone faces is a chamber: sound does not
+        disperse, it bounces, and a conversation at ground level arrives at a
+        second-floor window with very little lost. Add the density of bars, a
+        pedestrian flow that thins but does not stop between one and three in
+        the morning, and the plain fact that Barcelona eats late and drinks
+        outdoors, and you have a district where the difference between a good
+        night and a bad one is not the quarter at all but the specific block —
+        and, again, whether the room faces the lane or a light well. A listing
+        that says only "Gothic Quarter" is telling you nothing you can act on.
+      </p>
+      <p>
+        Two frictions compound it. The first is luggage: a great many of these
+        lanes are bollarded or pedestrianised, so a taxi sets you down on the
+        perimeter — Via Laietana, the Rambla, Plaça Nova — and the last hundred
+        to three hundred metres are yours, over uneven paving and quite possibly
+        with a step at the door. The second is the building stock. These are
+        old, narrow, deep buildings: rooms are small, lifts are not guaranteed
+        and where they exist they are often cupboard-sized. Against all of
+        which, the quarter is well served by metro — Jaume I on L4, Liceu and
+        Drassanes on L3, Catalunya at the top — and you are already standing in
+        the middle of what most first-time visitors came for.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you have two or three nights, travel
+        light, sleep through noise, and want the shortest possible distance
+        between the door and the old city. <strong>Look elsewhere if</strong>
+        you are a light sleeper, have small children, have any mobility
+        constraint, are arriving late with a large case, or are staying more
+        than three nights. <strong>The trade-off:</strong> the most atmospheric
+        address in Barcelona, bought with your sleep and paid for again every
+        time you arrive or leave with a bag.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/old-city-lane-with-bunting.jpg`}
+      srcset={`${IMG}/old-city-lane-with-bunting-480w.jpg 480w, ${IMG}/old-city-lane-with-bunting-768w.jpg 768w, ${IMG}/old-city-lane-with-bunting-1200w.jpg 1200w, ${IMG}/old-city-lane-with-bunting.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
+      alt="A narrow paved lane in Barcelona's old city, barely wide enough for two people, walled in tall stone buildings with iron balconies and trailing plants, strings of pink, blue, green and yellow bunting overhead, a restaurant sign projecting from the right, and a medieval stone tower catching gold light at the far end."
+      width={1365}
+      height={2048}
+      caption="Four metres of stone either side and no sky to speak of. This is why the old city is beautiful at nine in the morning and audible at two — the walls that keep the heat out keep the conversation in."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="born">El Born — the best dinner, and the bill after midnight</SectionHeading>
+      <p>
+        El Born is not, strictly, a neighbourhood at all. The city's official map
+        of seventy-three barris puts it inside <strong>Sant Pere, Santa Caterina
+        i la Ribera</strong>, and what people mean by the name is the eastern
+        end of that: the ground between Via Laietana and the Parc de la
+        Ciutadella, gathered around the great bare Catalan Gothic nave of Santa
+        Maria del Mar and the promenade of the Passeig del Born behind it. The
+        distinction matters when you book, because the same official
+        neighbourhood also contains streets up by Sant Pere that are quiet,
+        residential and cheaper — and they are not what anyone is selling when
+        they say Born.
+      </p>
+      <p>
+        What the Born does better than anywhere else in this article is dinner.
+        The lanes off the Passeig del Born and around Carrer de Montcada carry
+        the densest concentration of good, small, seriously run restaurants and
+        wine bars in the old city, and unlike the Gothic Quarter across Via
+        Laietana the trade is not overwhelmingly for visitors. You can leave the
+        door at half past nine with no plan and eat properly within four
+        minutes. That is most of the case for staying here.
+      </p>
+      <p>
+        The cost arrives at closing time, and it varies by block more sharply
+        than anywhere else on this page. The streets immediately around the
+        Passeig del Born and Carrer del Rec are a going concern until well after
+        midnight; three turnings north or east, towards the Ciutadella or up
+        past the Mercat de Santa Caterina, the same official neighbourhood is
+        genuinely quiet. The lanes are medieval in width and behave acoustically
+        like the Gòtic's. Taxi access is better — Passeig de Picasso, Via
+        Laietana and the Passeig del Born itself all take vehicles — but the
+        interior lanes do not. Jaume I on L4 sits on the western edge, Arc de
+        Triomf on L1 at the top, and the park is on the doorstep, which is the
+        closest thing the old city has to a garden.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you have two to four nights, eating is a
+        substantial part of why you came, you want the old city without the full
+        saturation of the Gòtic, and you will look at the exact street on a map
+        first. <strong>Look elsewhere if</strong> you are staying a week, need a
+        lift and a large room, or expect to be asleep by eleven at a weekend.
+        <strong>The trade-off:</strong> the best evening in Barcelona, and an
+        even chance of having booked a bedroom directly above it.
+      </p>
+
+      <SectionHeading id="gracia">Gràcia — the one that feels inhabited</SectionHeading>
+      <p>
+        Gràcia was a separate town until Barcelona annexed it in 1897, and it
+        has never entirely stopped behaving like one. The history is legible in
+        the street plan: a grid, but tighter and older than the Eixample's, of
+        low buildings and narrow roads opening into a series of proper squares —
+        Plaça de la Vila de Gràcia under its clock tower, Plaça del Sol, Plaça
+        de la Virreina, Plaça de la Revolució. The squares are the point. They
+        are not ornamental spaces that visitors photograph; they are where the
+        surrounding streets eat, drink, hold their meetings and let their
+        children run about, and an evening in one of them is the least performed
+        hour available to a traveller in this city. The Mercat de la Llibertat,
+        an iron hall of 1888 decorated by Gaudí's collaborator Francesc
+        Berenguer, still does the neighbourhood's shopping.
+      </p>
+      <p>
+        Be precise about which Gràcia you are booking. The district contains
+        five official neighbourhoods; the one travellers mean is
+        <strong>Vila de Gràcia</strong>, between the Diagonal and the Travessera
+        de Dalt. Above and around it, Vallcarca, El Coll and La Salut are
+        further out, steeper and considerably less useful as a base, whatever a
+        listing says about being in Gràcia.
+      </p>
+      <p>
+        The transport is good, and it is the far end of both spines, which is a
+        genuine cost rather than a quibble. L3 reaches Fontana and Lesseps, L4
+        reaches Joanic, and the Ferrocarrils station at Gràcia adds a third
+        option. From Fontana you are perhaps fifteen minutes from Passeig de
+        Gràcia, twenty-five to thirty from the old city, and further still from
+        the beach, which needs a change. Add the slope — the ground rises
+        steadily northwards, and Lesseps sits noticeably higher than Diagonal —
+        and Gràcia becomes an area to arrive at in a vehicle rather than on foot
+        from a station with a case in hand. It is also where the night-bus
+        geometry bites hardest: once the metro stops, getting home means Plaça
+        de Catalunya and a transfer, or a fare.
+      </p>
+      <p>
+        None of that matters much over five nights and it matters a great deal
+        over two, which makes this the clearest length-of-stay argument on the
+        page. On a short trip, twenty-five minutes each way is a meaningful
+        fraction of your waking time; on a longer one it becomes the price of
+        living somewhere real, and you stop noticing it by the third morning.
+        One seasonal warning: the <strong>Festa Major de Gràcia</strong> in
+        August fills the decorated streets for a week, which is either the best
+        reason to be here or a decisive one not to be, and the squares are loud
+        until very late throughout.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you have five nights or more, have been to
+        Barcelona before, want a neighbourhood rather than a district, or would
+        simply rather eat where the people at the next table live.
+        <strong>Look elsewhere if</strong> you have two nights, the beach is a
+        daily fixture, or hills and stairs are a problem.
+        <strong>The trade-off:</strong> you spend roughly forty minutes a day
+        getting in and out, and are repaid in squares, in prices, and in the
+        distinct sense of being somebody's neighbour rather than somebody's
+        guest.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/casa-vicens-gracia.jpg`}
+      srcset={`${IMG}/casa-vicens-gracia-480w.jpg 480w, ${IMG}/casa-vicens-gracia-768w.jpg 768w, ${IMG}/casa-vicens-gracia-1200w.jpg 1200w, ${IMG}/casa-vicens-gracia-1600w.jpg 1600w, ${IMG}/casa-vicens-gracia.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The upper storeys of Casa Vicens in Gràcia, Barcelona, seen from below against a clear sky: rough stone walls banded with green-and-white chequered tiles and rows of orange-and-yellow floral tiles, projecting brick corbels, and two turrets capped in green chequerwork."
+      width={2048}
+      height={1365}
+      caption="Gaudí's first house, on a residential street in Gràcia with nothing else remarkable on it. That is the neighbourhood's whole character: extraordinary things standing about in the middle of ordinary life, with no plaza built around them."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="sant-antoni">Sant Antoni and Poble-sec — two neighbourhoods, one avenue apart</SectionHeading>
+      <p>
+        These are routinely sold as a single area, and they are not one. The
+        city's own boundaries put <strong>Sant Antoni</strong> in the Eixample
+        district and <strong>Poble-sec</strong> in Sants-Montjuïc, with Avinguda
+        del Paral·lel between them, and the two feel as different as that
+        suggests. Sant Antoni is Cerdà's grid continued — wide streets,
+        chamfered corners, tall regular blocks. Poble-sec is older, denser and
+        lower, built up the first slope of Montjuïc in narrow streets that were
+        housing working Barcelona long before the Eixample reached them.
+      </p>
+      <p>
+        Sant Antoni's centre of gravity is its market, and the market explains
+        the neighbourhood. Cerdà planned it into the grid; Antoni Rovira i Trias
+        built it in iron between 1872 and 1882 as the first market outside the
+        demolished walls, four great arms in the shape of a cross under an
+        octagonal dome twenty-eight metres high. It closed in 2009 and reopened
+        in May 2018 after a refurbishment that turned up the old Sant Antoni
+        bastion of the city wall, now visitable on the floor below. It is three
+        markets in one — the food hall, the Encants, and the Sunday book and
+        collectors' fair that has run since the 1930s — and around it the
+        streets have filled with the small, confident restaurants and vermouth
+        bars that follow a restored market. Carrer del Parlament is the spine of
+        that.
+      </p>
+      <p>
+        There is a caveat here with a date on it. Barcelona City Council began
+        work on 25 June 2026 to make the neighbourhood's traffic-calmed layout
+        permanent, on <strong>Carrer del Comte Borrell</strong> between Manso
+        and the Paral·lel and on <strong>Carrer del Parlament</strong> between
+        Viladomat and the Ronda de Sant Pau, together with the new square at
+        their junction. The council states plainly that while the work is on
+        there will be disruption to circulation and to the use of public space,
+        and that it should be finished in June 2027. The result — kerbless,
+        wider, greener streets with priority given to pedestrians — will be
+        better than what was there before. Until then, the heart of Sant
+        Antoni's eating quarter is a construction site, which is a real
+        consideration for anyone booking on those two streets this year.
+      </p>
+      <p>
+        Poble-sec across the avenue is the cheaper and livelier half after dark.
+        Carrer de Blai is a pedestrian street of pintxo bars that fills from
+        eight and stays full; the streets climbing off it — Blesa, Poeta
+        Cabanyes — are steep, residential and quiet by comparison. Montjuïc
+        begins at the top: the funicular runs from Paral·lel, and the museums,
+        gardens and the long view over the port are twenty minutes from the door
+        rather than a half-day expedition. Transport is good and slightly
+        awkward — Sant Antoni sits on L2 alone, Poble Sec and Paral·lel on L3,
+        with Paral·lel the interchange — and Plaça d'Espanya is a short walk,
+        which also puts the Ferrocarrils line out to
+        <a href="/1-day-in-colonia-guell/">Gaudí's crypt at Colònia Güell</a> on
+        the doorstep. What you do not get, in either half, is a postcard when
+        you open the door.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you have been to Barcelona before, are
+        staying four nights or more, want proper value, and care more about
+        eating and drinking well among locals than about the view from the
+        window. <strong>Look elsewhere if</strong> this is a short first visit
+        and you would resent the fifteen minutes into the old city, or if you
+        were about to book Carrer del Parlament itself before mid-2027.
+        <strong>The trade-off:</strong> the best price-to-quality ratio in
+        central Barcelona, bought by giving up the scenery outside the door.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/mercat-de-sant-antoni-lantern.jpg`}
+      srcset={`${IMG}/mercat-de-sant-antoni-lantern-480w.jpg 480w, ${IMG}/mercat-de-sant-antoni-lantern-768w.jpg 768w, ${IMG}/mercat-de-sant-antoni-lantern-1200w.jpg 1200w, ${IMG}/mercat-de-sant-antoni-lantern-1600w.jpg 1600w, ${IMG}/mercat-de-sant-antoni-lantern.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The roof of the Mercat de Sant Antoni in Barcelona at sunset: a red-painted iron octagonal lantern with tall arched shuttered windows glowing gold, standing above a patterned glazed-tile roof and a gable carrying the Barcelona coat of arms, against a pale sky."
+      width={2048}
+      height={1365}
+      caption="Twenty-eight metres of iron lantern over the crossing of four arms — the first market Barcelona built outside its walls, shut for nine years and reopened in 2018. Neighbourhoods reorganise themselves around a restored market, and this one did."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="poblenou">Poblenou — space, and the beach without the crush</SectionHeading>
+      <p>
+        Poblenou is the part of Barcelona that was its factories. Textile mills
+        and foundries covered this ground so thoroughly that it was called the
+        Catalan Manchester; the 1992 Olympics cleared the seafront, and the 22@
+        programme has spent two decades filling the interior with offices,
+        studios and new flats among the surviving brick chimneys. The result is
+        the least old-feeling and most genuinely comfortable base on this page.
+        Blocks are larger, buildings are newer, lifts and air conditioning are
+        normal, and a given budget buys appreciably more floor space than
+        anywhere between here and Montjuïc.
+      </p>
+      <p>
+        Be careful with the name, because the official map is unusually helpful
+        here. <strong>El Poblenou</strong> and <strong>la Vila Olímpica del
+        Poblenou</strong> are two separate neighbourhoods, and the difference is
+        exactly the one you care about. The Vila Olímpica is the Olympic rebuild
+        around Port Olímpic — the marina, the towers, the clubs — a nightlife
+        destination with the noise profile to match. El Poblenou proper lies
+        inland and north-east of it, and its axis is the <strong>Rambla del
+        Poblenou</strong>: a genuine neighbourhood promenade of low buildings,
+        benches under the plane trees, and almost nobody carrying a map. If a
+        listing says Poblenou, establish which of the two it stands in.
+      </p>
+      <p>
+        The beaches are the other half of the case. Nova Icària, Bogatell and
+        Mar Bella run north-east from Port Olímpic, and they are wider, better
+        spaced and considerably calmer than Barceloneta — the same water, a
+        fraction of the density, and a five-to-ten-minute walk from most of the
+        neighbourhood. For a family in August that is not a nuance; it is the
+        difference between a holiday and a daily negotiation. Transport is
+        straightforward: Llacuna, Poblenou, Bogatell and Selva de Mar sit on the
+        L4 spine, with the T4 tram alongside, which puts the old city fifteen to
+        twenty minutes away without a change. Those minutes are the entire price
+        of the area, and they are charged twice a day.
+      </p>
+      <p>
+        <strong>Stay here if</strong> you are travelling with children, staying
+        five nights or more, coming in summer, want a real apartment rather than
+        a small room, or have been to Barcelona already and do not need the
+        Gothic Quarter outside the window. <strong>Look elsewhere if</strong>
+        you have two or three nights and a first-visit checklist, or if evenings
+        on foot among old stone are the reason you came.
+        <strong>The trade-off:</strong> the most comfortable rooms and the
+        calmest sand in Barcelona, at the cost of never being able to walk home
+        from dinner in the old city.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/beach-towards-port-olimpic.jpg`}
+      srcset={`${IMG}/beach-towards-port-olimpic-480w.jpg 480w, ${IMG}/beach-towards-port-olimpic-768w.jpg 768w, ${IMG}/beach-towards-port-olimpic-1200w.jpg 1200w, ${IMG}/beach-towards-port-olimpic-1600w.jpg 1600w, ${IMG}/beach-towards-port-olimpic.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A Barcelona city beach at sunset, low waves breaking on wet sand in the foreground and curving away to the right, a scatter of swimmers and bathers along the shoreline, and the tall tower of Port Olímpic with the low green hill of Montjuïc and a sail-shaped hotel on the horizon under a gold and grey sky."
+      width={2048}
+      height={1365}
+      caption="Half past eight in August, looking back along the sand towards the Olympic towers. Everything beyond that tower is dense and famous; everything behind the camera gets steadily quieter, which is the whole argument for sleeping further up the coast."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="barceloneta">Barceloneta — only when the beach is the trip</SectionHeading>
+      <p>
+        Barceloneta is a planned neighbourhood, and its plan explains almost
+        everything a visitor needs to know. It was laid out in 1753 on reclaimed
+        ground to rehouse people whose homes had been demolished to build the
+        Ciutadella fortress, and the blocks were drawn deliberately long and
+        extremely shallow so that every dwelling could take light and air from
+        both sides. Those shallow blocks are still there, which is why the flats
+        are small — not by accident or by anyone's greed, but because the
+        eighteenth century built them that way for fishermen, and the centuries
+        since subdivided them further.
+      </p>
+      <p>
+        The compensation is immediacy. The beach and the Passeig Marítim begin
+        where the houses stop, El Born is ten to twelve minutes on foot, the old
+        city barely further, and the seafood restaurants along the Passeig Joan
+        de Borbó have been doing this a long time. On a February weekend, with
+        the beach empty and the light coming off the water, it is one of the
+        more appealing places to be in Barcelona.
+      </p>
+      <p>
+        In August it is a different proposition. This is a small, dense
+        peninsula with one metro station on it — Barceloneta, on L4 — and in
+        high season it absorbs both the beach crowd and the port traffic through
+        streets three metres wide. Late pedestrian noise on those streets is
+        constant rather than occasional in summer, and the neighbourhood's long
+        and public friction with holiday flats is a straightforward consequence
+        of a resident population living at that density beside that many
+        visitors. The value equation is poor: a beach premium for the smallest
+        rooms in the city, frequently without a lift. Anyone who wants the sea
+        but also space, quiet and a second bedroom is better served three stops
+        up the L4 in Poblenou, where the beaches are better anyway.
+      </p>
+      <p>
+        A blanket dismissal would still be wrong, because there is a traveller
+        for whom this is exactly right: two or three nights, out of season or
+        untroubled by the crowd, in the water twice a day, eating fish with the
+        boats in view, walking to the Born in the evening without ever touching
+        a metro. If that is your trip, nothing else here does it as well, and
+        the small room is not a defect but the entry fee.
+      </p>
+      <p>
+        <strong>Stay here if</strong> the beach is the primary reason for the
+        trip, you are travelling alone or as a couple, the stay is short, and
+        you are coming outside July and August.
+        <strong>Look elsewhere if</strong> you need space, are travelling with
+        children or a large case, sleep badly in summer, or simply want the
+        beach as one feature of a broader week.
+        <strong>The trade-off:</strong> the shortest walk to the sea in
+        Barcelona, and the least room and the worst value once you come back
+        from it.
+      </p>
+    </div>
+
+    <PullQuote>
+      Barcelona does not punish a bad neighbourhood choice with a ruined trip.
+      It punishes it with twenty minutes, twice a day, for the length of the
+      stay — and with the hour after midnight, when the metro has stopped and
+      the map quietly changes shape.
+    </PullQuote>
+
+    <div class="narrative prose">
+      <SectionHeading id="decide">How to decide</SectionHeading>
+      <p>
+        Four questions settle this faster than any amount of comparison, and
+        they are worth answering honestly before you look at a single listing.
+        <strong>How many nights?</strong> Under four, buy proximity and accept
+        the noise; over four, buy the quiet and spend the minutes. The
+        arithmetic genuinely reverses somewhere around the fourth night, and
+        almost every disagreement about Barcelona neighbourhoods turns out on
+        inspection to be a disagreement about length of stay.
+      </p>
+      <p>
+        <strong>How late will you be out?</strong> This is the question people
+        skip and then regret. If your evenings routinely end after midnight on a
+        weekday, you are either walking home or paying for a taxi, and the areas
+        that make that painless are the old city and the central Eixample.
+        <strong>What are you optimising for?</strong> Atmosphere, food, beach,
+        quiet and value point at different answers; picking two is realistic,
+        picking four is not. And <strong>how are you arriving?</strong> A large
+        case, a late landing, a pram or a mobility constraint all argue for
+        streets a vehicle can enter, which quietly eliminates most of the old
+        city before anything else is considered. What follows applies those
+        answers directly, and introduces nothing the sections above have not
+        already earned.
+      </p>
+    </div>
+
+    <Practical place="Barcelona — Where to Stay" detail="Seven areas · verified 2 August 2026" detailIcon="🛏">
+      <PracticalSection label="The shortest route to a decision" level={3}>
+        <div class="prac-item">
+          <strong>First visit, two or three nights</strong> — central Eixample,
+          within about ten minutes of Passeig de Gràcia. Everything is one ride
+          away and nothing needs planning.
+        </div>
+        <div class="prac-item">
+          <strong>Five nights or longer</strong> — Gràcia. The daily twenty-five
+          minutes stops mattering and the neighbourhood starts paying you back.
+          Sant Antoni or Poblenou for the same logic with better rooms.
+        </div>
+        <div class="prac-item">
+          <strong>Families</strong> — Poblenou. Larger flats, lifts, calm
+          streets, and the best of the city beaches at the end of them.
+        </div>
+        <div class="prac-item">
+          <strong>Light sleepers</strong> — Eixample, in a courtyard-facing
+          room, on one of the quieter streets away from Gran Via, Aragó and
+          Balmes. That beats a quiet-sounding district with a street-facing
+          window every time.
+        </div>
+        <div class="prac-item">
+          <strong>Nightlife</strong> — El Born for eating and drinking that runs
+          late; the Vila Olímpica end of Poblenou if you specifically mean
+          clubs. Do not book the Born and then complain about the Born.
+        </div>
+        <div class="prac-item">
+          <strong>Beach priority</strong> — Poblenou if you want space and quiet
+          with it; Barceloneta only if the beach genuinely leads the decision
+          and the stay is short.
+        </div>
+        <div class="prac-item">
+          <strong>Food priority</strong> — Sant Antoni and Poble-sec for value
+          and locals, El Born for the best cooking within walking distance of a
+          bed, Gràcia for eating in a neighbourhood rather than a destination.
+        </div>
+        <div class="prac-item">
+          <strong>Early train from Barcelona Sants</strong> — Eixample or Sant
+          Antoni, both a short ride on L3. Sants sits about three kilometres
+          west of the old city and further still from everywhere else here, so
+          an early departure is one of the few reasons to weight the west of the
+          city at all.
+        </div>
+        <div class="prac-item">
+          <strong>Airport convenience</strong> — Eixample near Passeig de
+          Gràcia, where the airport train stops, or anywhere close to the
+          Aerobús line through Plaça d'Espanya, Gran Via–Borrell, Plaça
+          Universitat and Plaça de Catalunya.
+        </div>
+        <div class="prac-item">
+          <strong>Mobility limitations</strong> — Eixample or Poblenou. Flat
+          ground, wide pavements, vehicle access to the door and lifts as
+          standard. Avoid the old city, and check the specific station rather
+          than the line.
+        </div>
+        <div class="prac-item">
+          <strong>Large luggage</strong> — anywhere a taxi can reach the door,
+          which means the Eixample, Poblenou, Sant Antoni or Poble-sec. Assume a
+          walk with the case in the Gòtic, the Born and Barceloneta.
+        </div>
+        <div class="prac-item">
+          <strong>Repeat visitors</strong> — Sant Antoni, Poble-sec or Gràcia.
+          All three give a neighbourhood instead of a district, and all three
+          cost the same fifteen to twenty-five minutes that stopped being
+          expensive the second time you came.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="What each area is like after midnight" level={3}>
+        <div class="prac-item">
+          <strong>Loud late:</strong> the Gothic Quarter throughout · the
+          streets around the Passeig del Born and Carrer del Rec · Plaça del Sol
+          and the other Gràcia squares · Carrer de Blai in Poble-sec ·
+          Barceloneta's narrow streets in summer · the Vila Olímpica and Port
+          Olímpic.
+        </div>
+        <div class="prac-item">
+          <strong>Moderate:</strong> most of the Eixample, where traffic
+          replaces voices as the noise source · Carrer del Parlament in Sant
+          Antoni, which thins after one · the Rambla del Poblenou.
+        </div>
+        <div class="prac-item">
+          <strong>Quiet:</strong> Eixample courtyard rooms · the northern
+          streets of Sant Pere behind the Born · the streets climbing off Blai
+          in Poble-sec · the interior grid of Poblenou · Vila de Gràcia three
+          turnings from any square.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row">
+          "Central" and "Gothic Quarter" tell you nothing actionable in a city
+          this size. Find the exact street on a map, look at how wide it is and
+          what is on the ground floor opposite, then ask the property whether
+          the room faces the street or the courtyard. Those two checks are worth
+          more than any district recommendation, this one included.
+        </div>
+        <div class="tip-row">
+          The metro stops at midnight from Sunday to Thursday. If you plan to be
+          out later than that on a weekday, work out the walk or the fare
+          <em>before</em> you book, not at half past twelve on the second night.
+        </div>
+        <div class="tip-row">
+          Sant Antoni's Comte Borrell and Parlament are under construction until
+          around June 2027 — an excellent neighbourhood with disrupted streets.
+          Check which side of the works a room sits on.
+        </div>
+        <div class="tip-row">
+          August changes the ranking. The Festa Major de Gràcia fills that
+          neighbourhood for a week, Barceloneta is at its most crowded, and
+          Poblenou's advantages are at their largest. In February none of that
+          applies.
+        </div>
+        <div class="tip-row">
+          Lines close sections for engineering work, usually in summer. TMB
+          publishes current service alterations line by line; check the specific
+          line before you rely on it, and treat any journey time quoted anywhere
+          — here included — as an estimate rather than a timetable.
+        </div>
+      </PracticalSection>
+    </Practical>
+
+    <div class="narrative prose">
+      <SectionHeading id="arriving">Arriving with luggage</SectionHeading>
+      <p>
+        The airport is Josep Tarradellas Barcelona–El Prat, and which terminal
+        you land at changes your options. The <strong>Aerobús</strong> runs
+        around the clock — A1 from Terminal 1, A2 from Terminal 2 — and comes
+        into the city by way of Plaça d'Espanya, Gran Via–Borrell, Plaça
+        Universitat and Plaça de Catalunya. Read that list again, because it is
+        the whole point: the airport coach is an Eixample and old-city-edge
+        machine. It does nothing directly for Gràcia, Poblenou or Barceloneta,
+        each of which needs a metro leg on the end of it.
+      </p>
+      <p>
+        The <strong>train</strong> has one wrinkle. Aena puts the Renfe station
+        on floor 0 of <strong>Terminal 2</strong>, and the line is R2 Nord,
+        which runs into Barcelona Sants and Passeig de Gràcia before continuing
+        to El Clot–Aragó. From Terminal 1 you must first take the free
+        inter-terminal shuttle, which runs twenty-four hours — a step that turns
+        a simple journey into a two-part one, and the reason the train suits
+        Terminal 2 arrivals while the Aerobús often suits Terminal 1. The
+        <strong>metro</strong>, line L9 Sud, serves both terminals but ends at
+        Zona Universitària on the far western side of the city and carries an
+        airport fare supplement. It is a route to a change, not to the centre.
+      </p>
+      <p>
+        <strong>Barcelona Sants</strong> is the long-distance station, and it is
+        not central — roughly three kilometres west of the old city, in a
+        working neighbourhood rather than a place most visitors sleep. It sits
+        on L3 and L5, and L3 is the useful one: from Sants Estació it runs
+        straight through Espanya, Poble Sec, Paral·lel, Drassanes and Liceu to
+        Catalunya, Passeig de Gràcia and on into Gràcia. Anyone with an early
+        departure — including the trains carrying the day trips
+        <a href="/1-day-in-figueres-girona/">north to Figueres and Girona</a> and
+        <a href="/1-day-in-tarragona-sitges/">south to Tarragona and Sitges</a> —
+        should weight a bed within a few stops of that line accordingly.
+      </p>
+      <p>
+        Two last practicalities. <strong>Taxis cannot reach a great many
+        old-city addresses.</strong> The lanes of the Gothic Quarter and the
+        interior of the Born are bollarded or pedestrian, so the driver stops on
+        Via Laietana, the Rambla, Plaça Nova or the Passeig de Picasso and you
+        walk the last stretch over stone. Budget for that when choosing between
+        a beautiful lane and a dull street with a kerb outside it. And
+        <strong>the metro is not uniformly step-free.</strong> TMB reports lifts
+        in 156 of its 165 stations, with nine not yet adapted; four of those
+        bear on the areas here — Urquinaona and Verdaguer in the Eixample,
+        Espanya beside Sant Antoni and Poble-sec, and Plaça de Sants by the main
+        station.
+      </p>
+    </div>
+
+    <Beat>Seven areas, two spines, and one square that everything comes back to after midnight.</Beat>
+
+    <div class="post-closing">
+      <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+        <p>
+          If a single ranking is wanted, here it is.
+          <strong>Eixample</strong> is the safest first recommendation and the
+          hardest to regret, because it is the only address that keeps every
+          option open. <strong>Gràcia</strong> is the better answer the moment a
+          stay passes five nights. <strong>El Born</strong> is right for a
+          short, late, food-led trip and wrong for most other things.
+          <strong>Sant Antoni and Poble-sec</strong> are what repeat visitors
+          choose once they stop needing the scenery, allowing for the works.
+          <strong>Poblenou</strong> is the answer whenever space, calm, children
+          or summer enter the question. <strong>Barceloneta</strong> earns its
+          place only when the sea leads the decision. And the
+          <strong>Barri Gòtic</strong> is the one to be honest with yourself
+          about: extraordinary to walk out into, and a genuinely poor place to
+          sleep unless you are certain that noise does not reach you.
+        </p>
+        <p>
+          None of which is as decisive as the smaller choice inside it. The best
+          rooms in Barcelona are rarely on the streets in the photographs; they
+          are one turning away, facing a courtyard, on a block with no bar on
+          the ground floor opposite. Four minutes with a map will do more for
+          the week than moving between neighbourhoods will — and once the room
+          is settled, what remains is the city itself, argued at length in
+          <a href="/7-days-in-barcelona/">seven days in Barcelona</a>, reached
+          at the end of
+          <a href="/4-weeks-portugal-to-spain-by-rail-road/">a month overland
+          from Porto</a>, and gathered with everything else in
+          <a href="/chronicles/">the archive</a> and on
+          <a href="/by-region/">the map by region</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/7-days-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: "7 Days in Barcelona: Gaudí's Unfinished Argument",
+        excerpt:
+          'The six-night stay behind the first-hand notes on this page — the city read through Gaudí and the hill, and a departure at half past four in the morning.',
+        meta: ['Barcelona', '7 days'],
+      },
+      {
+        href: '/1-day-in-tarragona-sitges/',
+        region: 'Spain · Catalonia',
+        title: '1 Day in Tarragona & Sitges',
+        excerpt:
+          'One reason the walk to a station belongs in the choice of base — a Roman amphitheatre above the sea, then white seaside ease, both of them south from Sants.',
+        meta: ['Catalonia', 'Day trip'],
+      },
+      {
+        href: '/4-weeks-portugal-to-spain-by-rail-road/',
+        region: 'Iberia · Circuit',
+        title: 'Portugal to Spain by Rail and Road',
+        excerpt:
+          'The thirty-day overland circuit that ends in Barcelona, with the cost of every bed along the way laid out in the open.',
+        meta: ['Iberia', '4 weeks'],
+      },
+    ]}
+  />
+</ChronicleLayout>
