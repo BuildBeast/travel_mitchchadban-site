@@ -1,0 +1,970 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'One Day in Barcelona',
+  headline: 'One Day in Barcelona: From the Hill to the Sea',
+  description:
+    'A realistic one-day Barcelona route from Park Güell and the Sagrada Família through the old city to the waterfront, with the necessary cuts explained.',
+  path: '/one-day-in-barcelona/',
+  ogImage: '/images/one-day-in-barcelona/park-guell-terrace-over-the-city.jpg',
+  factsVerified: '2026-08-03',
+};
+
+const IMG = '/images/one-day-in-barcelona';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Catalonia', 'Barcelona']}
+    label="Itinerary · One Day"
+    title="One Day in Barcelona:"
+    titleEmphasis="From the Hill to the Sea"
+    standfirst="Two tickets with clocks attached decide the shape of this day. Everything after them is a matter of walking downhill — and of being honest about the four or five famous things that will not fit."
+    stats={[
+      { num: '2', label: 'Timed Tickets' },
+      { num: '5', label: 'Route Stages' },
+      { num: '~8 km', label: 'On Foot' },
+      { num: '~11 h', label: 'Gate to Water' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Barcelona will not be finished in a day, and the useful response to
+          that is not to move faster. It is to stop treating the city as a list.
+          What defeats a single day here is not the number of things worth
+          seeing — most large cities have more than a day's worth — but the fact
+          that Barcelona's are distributed across four grounds that do not sit
+          near one another. The great park is on the northern hillside. The
+          basilica stands alone in a nineteenth-century grid a mile inland. The
+          medieval city is a dense knot down by the old shore. The water is
+          behind that again. An itinerary that treats those as interchangeable
+          stops spends the day climbing and re-descending one slope, and arrives
+          at evening having seen five entrances and one city.
+        </p>
+        <p>
+          There is a shape hidden in that geography and it works in only one
+          direction. Barcelona rises from the sea to the ridge of Collserola:
+          gently through the old city, steadily through the Eixample, sharply
+          into Gràcia and the hills behind. Every gradient is therefore a
+          resource rather than an obstacle, provided you spend it in the right
+          order — begin at the top in the cool of the morning and let the day
+          fall towards the water. The reverse is the same distance and roughly
+          twice the work, and it puts the two hardest-to-book sights at the end
+          of a day on which you are already late.
+        </p>
+        <p>
+          The other governing fact is administrative rather than topographic.
+          Exactly two things on this route sell entry by the clock, and they are
+          the two things nobody wants to miss. Park Güell admits by time band;
+          the Sagrada Família admits by time band and does not forgive a late
+          arrival. Fix those two and the day has a spine. Everything after
+          them — the grid, the Gothic Quarter, El Born, the harbour — is
+          unticketed, unscheduled and improves as the light goes. That is the
+          whole argument of what follows: buy the morning, then walk down into
+          an afternoon that costs nothing and cannot sell out. The longer
+          versions of this city are recorded elsewhere on this site, as
+          <a href="/7-days-in-barcelona/">a week read through Gaudí</a> and in
+          the assessment of
+          <a href="/best-areas-to-stay-in-barcelona/">where to sleep between
+          hill and sea</a>. This is not a compression of either. At one day, the
+          cuts are the content.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/park-guell-terrace-over-the-city.jpg`}
+      srcset={`${IMG}/park-guell-terrace-over-the-city-480w.jpg 480w, ${IMG}/park-guell-terrace-over-the-city-768w.jpg 768w, ${IMG}/park-guell-terrace-over-the-city-1200w.jpg 1200w, ${IMG}/park-guell-terrace-over-the-city-1600w.jpg 1600w, ${IMG}/park-guell-terrace-over-the-city.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The wide sandy terrace of the Nature Square in Park Güell, Barcelona, framed by two tall date palms, with several dozen visitors scattered across it, a tiled pinnacle and the roofs of the entrance pavilions below, the city grid running away to the Sagrada Família and its cranes on the left, and the Mediterranean along the horizon under a pale blue sky."
+      width={2048}
+      height={1365}
+      caption="The entire route in one frame, read from the top down: the terrace you start on, the basilica standing out of the grid on the left, and the flat grey line of the sea closing the horizon. Everything in this article happens between the palms and that line."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="who-for" rule={false}>Who this day is for</SectionHeading>
+      <p>
+        A first visit, with one full day rather than a cruise call or a morning
+        between flights. It assumes a traveller who will walk seven or eight
+        kilometres without resenting it, who will use the metro and a bus
+        without needing to be persuaded, and who has booked two tickets before
+        leaving home. It assumes that urban history and architecture are the
+        point, and that shopping and the beach are not. It does not assume any
+        Catalan, a car, a guide or a tour.
+      </p>
+      <p>
+        It does assume mobility, and that is worth stating plainly rather than
+        hiding at the bottom of the page. Park Güell's own visitor information
+        describes irregular paths and steep ramps that make the site difficult
+        for people with reduced mobility; the approach from either metro
+        station is a twenty-minute climb; the Gothic Quarter is uneven stone
+        throughout. Anyone travelling with a significant mobility constraint
+        should treat this as a sketch rather than a plan — take the shuttle bus
+        described below rather than the walk up, budget for taxis between the
+        Eixample and the old city, and accept that the Gothic lanes and the
+        basilica's towers will not both be possible. The rest of the day
+        survives that adaptation. The climb does not.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'hill', label: '09:30 · The hill' },
+        { id: 'basilica', label: '12:00 · The basilica' },
+        { id: 'grid', label: '14:00 · The grid' },
+        { id: 'old-city', label: '16:00 · The old city' },
+        { id: 'water', label: '18:00 · The sea' },
+        { id: 'sold-out', label: 'If tickets are sold out' },
+        { id: 'omitted', label: 'What one day cannot hold' },
+        { id: 'season', label: 'Season and daylight' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Day, Hour by Hour"
+    meta={[
+      {
+        label: 'Book before you fly',
+        value:
+          'Park Güell, first time band. The Sagrada Família, around midday. Those two, in that order, and nothing else on this route needs a reservation.',
+      },
+      {
+        label: 'The direction',
+        value:
+          'Downhill and seaward the whole way. The route never climbs back into Gràcia or the northern Eixample, and never crosses the old city twice.',
+      },
+      {
+        label: 'The burden',
+        value:
+          'About eight kilometres on foot, one short bus ride, one or two metro legs, and roughly eleven hours between the park gate and the harbour.',
+      },
+      {
+        label: 'Not on this day',
+        value:
+          'Montjuïc, the Picasso, the MNAC, the beach, Gràcia, Tibidabo, both Gaudí house interiors, and every day trip. Reasons given at the end.',
+      },
+    ]}
+    daysHeading="The Clock"
+    days={[
+      { num: '08:45', text: 'Alfons X on the L4, for the shuttle bus up to the park — or the twenty-minute climb from Lesseps if you would rather walk it.' },
+      { num: '09:30', text: 'Park Güell, first time band. The monumental zone takes about an hour and a quarter and the view is the reason you came up here.' },
+      { num: '10:45', text: 'Down the hill: shuttle to Alfons X, one stop east on the L4, then the long straight walk down Avinguda de Gaudí.' },
+      { num: '12:00', text: 'Sagrada Família, timed entry, with about half an hour of buffer built in front of it. Ninety minutes inside.' },
+      { num: '13:30', text: 'West across the Eixample to Passeig de Gràcia — on foot if the legs allow, two stops on the L5 if they do not.' },
+      { num: '14:00', text: 'La Pedrera and the Illa de la Discòrdia, from the pavement. No interiors. Forty-five minutes and a great deal of looking up.' },
+      { num: '14:45', text: 'Lunch, near where you are standing rather than somewhere better. An hour and a quarter, and no crossing of the city for it.' },
+      { num: '16:00', text: 'Into the old city at Plaça de Catalunya and down to the Cathedral, which stops admitting visitors at a quarter to six on weekdays.' },
+      { num: '17:00', text: 'The Gothic Quarter as a route: Plaça Nova, Carrer del Bisbe, Plaça de Sant Jaume, Plaça del Rei.' },
+      { num: '18:00', text: 'Across Via Laietana into El Born, and Santa Maria del Mar, which is free to enter once the ticketed hours are over.' },
+      { num: '19:15', text: 'Down to Pla de Palau and out onto the harbour front. Dinner behind you in the Born whenever you want it.' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter
+      id="hill"
+      number="I."
+      name="The Hill"
+      epithet="Half past nine on the highest ground of the day, before the heat and before the queue"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Park Güell was meant to be a housing estate. Eusebi Güell bought the
+        bare hillside in 1900 and had Gaudí lay out sixty plots for a garden
+        city above the smoke; two were built, nobody else came, and what
+        survives is a public park holding the infrastructure of a suburb that
+        never existed. Which is worth knowing before you arrive, because this
+        is not a garden with follies in it. It is roads, retaining walls, a
+        market hall and a village square, executed as though ordinary civic
+        apparatus deserved to be extraordinary: the Hypostyle Room was to be
+        the market, and the terrace above it, edged by the serpentine bench,
+        the square.
+      </p>
+      <p>
+        Two things specific to this site put it at the start. It is outdoors
+        and almost entirely unshaded, so it is a far better place at half past
+        nine than at two; and the climb to reach it is a different proposition
+        in the cool than after a morning already spent walking. Take the first
+        time band. A mid-afternoon Park Güell ticket does not merely move the
+        park later — it inverts the route and sends you back uphill at the
+        hottest hour.
+      </p>
+      <p>
+        Getting up there is the part most itineraries fudge, because the metro
+        will not take you to the gate: Lesseps and Vallcarca on the L3 are each
+        about twenty minutes away and both of those minutes are uphill. The
+        better answer is the park's own shuttle. The <strong>Bus Güell</strong>
+        climbs from <strong>Alfons X</strong> on the L4 in about fifteen
+        minutes, and both the outward and return journeys are included in the
+        admission ticket you have already bought. Note what the park says
+        explicitly and most visitors discover too late: the time on your ticket
+        is when you may enter the restricted area, not when you may reach the
+        neighbourhood. Thirty minutes of grace follow your band — a 09:30 slot
+        admits you until 10:00 — and that is a safety margin, not a plan.
+      </p>
+      <p>
+        Inside, give the monumental zone about an hour and a quarter and walk
+        it in the order the hillside offers: up the dragon staircase past the
+        mosaic salamander, through the Hypostyle Room with its Doric columns
+        leaning outwards to take the thrust, and out onto the terrace above,
+        where the day's one long view is. From that parapet the Eixample runs
+        away in its grid, the Sagrada Família stands up out of it with the
+        cranes still on it, and the sea closes the horizon. Spend part of the
+        hour simply orienting yourself: almost everything else you will do
+        today is visible from here, and seeing the route before walking it is
+        worth more than another photograph of the bench. Do not wander off
+        hunting the Calvary hill or the Casa Museu Gaudí — that is an hour this
+        day does not have — and remember that once you leave the restricted
+        area you cannot go back in.
+      </p>
+    </div>
+
+    <Beat>Start at the top. The rest of Barcelona is downhill from here, and that is the only advantage a single day gets.</Beat>
+
+    <Chapter
+      id="basilica"
+      number="II."
+      name="The Basilica"
+      epithet="The one interior a single day should not sacrifice, and the one clock that will not wait"
+    />
+
+    <div class="narrative prose">
+      <p>
+        The transfer between the two ticketed sights is the most fragile
+        half-hour of the day. They are some two and a half kilometres apart with
+        upper Gràcia and the Guinardó between them, and there is no single
+        direct line. The cleanest route reuses the shuttle you have already paid
+        for: <strong>Bus Güell back down to Alfons X</strong>, one stop east on
+        the <strong>L4 to Guinardó | Hospital de Sant Pau</strong>, then down
+        <strong>Avinguda de Gaudí</strong> — a broad pedestrian avenue running
+        diagonally for just under a kilometre from the modernista pavilions of
+        Sant Pau straight at the basilica's Nativity façade. Twelve to fifteen
+        minutes, downhill, and the best approach to the building in the city,
+        because the towers grow in front of you the whole way.
+      </p>
+      <p>
+        If you would rather stay underground, <strong>L3 from Lesseps to
+        Diagonal, a change to the L5 and two stops</strong> does the same job.
+        Either way, read
+        <a href="https://www.tmb.cat/en/get-to-know-tmb/transport-network-improvements/metro" rel="noopener">TMB's
+        service alerts</a> before you set out. Barcelona concentrates its metro
+        engineering between late June and early September, individual stations
+        and interchanges close for weeks at a time, and the alterations are
+        announced weeks rather than months ahead — so the line that works in
+        this article may not be the line that works on your morning.
+      </p>
+      <p>
+        Whichever way you come, arrive early. The basilica's own visitor
+        information is unambiguous: tickets are valid only for the time chosen,
+        and a late arrival is not admitted. That is why this route puts a
+        deliberate half-hour of slack in front of a midday entry rather than
+        threading the two bookings as tightly as the map allows. A wasted half
+        hour on a bench on Avinguda de Gaudí costs nothing. A missed slot costs
+        the building.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/sagrada-familia-nave-light.jpg`}
+      srcset={`${IMG}/sagrada-familia-nave-light-480w.jpg 480w, ${IMG}/sagrada-familia-nave-light-768w.jpg 768w, ${IMG}/sagrada-familia-nave-light-1200w.jpg 1200w, ${IMG}/sagrada-familia-nave-light-1600w.jpg 1600w, ${IMG}/sagrada-familia-nave-light.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Inside the Sagrada Família in Barcelona: pale stone piers and a folded, faceted wall washed in deep orange and yellow light from unseen windows on the left, and on the right a tall wall of stained glass in greens, blues and reds above a curved stone balcony."
+      width={2048}
+      height={1365}
+      caption="The glass is tuned by compass point — warm on the side the sun rises and sets against, cool on the other — so the interior changes colour across the day rather than merely brightening. This is why the visit is worth ninety minutes and not forty."
+    />
+
+    <div class="narrative prose">
+      <p>
+        Inside, the case for an hour and a half is not about ticking off Gaudí.
+        The nave is built as a forest: piers that branch near the top into a
+        canopy of hyperboloid vaults, so the load comes down through a
+        structure borrowed from the way a tree stands rather than the way a
+        Gothic cathedral does — no flying buttresses, none of the external
+        stone scaffolding the medieval builders needed. The glass is the other
+        half of it, graded by orientation, warm ambers and reds on one flank
+        and cold greens and blues on the other, so the light inside moves and
+        changes hue as the day turns. Forty minutes gets you the shape of the
+        place. Ninety gets you the light doing what it was designed to do, and
+        the museum below, which explains the hanging chain models and the
+        century of argument about finishing another man's drawings.
+      </p>
+      <p>
+        On the towers: skip them. A tower ticket is a real upgrade in price and
+        a larger one in time — lift up, walk down, a queue at the lift, no bags
+        on the ascent — and the day has already given you a better long view
+        from Park Güell for nothing extra. If the towers matter more to you
+        than the Gothic Quarter does, buy them and cut Chapter IV. That is a
+        legitimate trade, and it should be made deliberately rather than
+        discovered at four in the afternoon.
+      </p>
+      <p>
+        Two things before the door. There is no general cloakroom and large
+        suitcases are refused, so this is not a stop to make on the way to a
+        station; and it is a working church with a dress code — covered
+        shoulders, nothing above mid-thigh — which in August turns people away
+        daily. And do not confuse this building with the one in Chapter IV: the
+        Sagrada Família is a basilica begun in 1882 and still rising, while the
+        cathedral is six hundred years older and four kilometres down the hill.
+        This route sees both because they are not substitutes.
+      </p>
+    </div>
+
+    <PullQuote>
+      One of these two tickets forgives a late arrival and one does not. Plan
+      the whole morning around the one that does not, and the day holds
+      together on its own.
+    </PullQuote>
+
+    <Chapter
+      id="grid"
+      number="III."
+      name="The Grid"
+      epithet="Passeig de Gràcia at street level, and the decision not to go inside"
+    />
+
+    <div class="narrative prose">
+      <p>
+        From the basilica the route turns west and begins the long shallow
+        descent across the Eixample: about a kilometre and a half along Carrer
+        de Mallorca or Consell de Cent, twenty to twenty-five minutes through
+        the ordinary grid, which is not a chore but the point. This is where
+        you find out what Ildefons Cerdà actually built in the 1860s, and its
+        signature is the chamfered octagonal corner, cut back at forty-five
+        degrees at every intersection so each crossing opens into a small square
+        and the sightlines run diagonally for half a mile. If the legs have
+        gone, the L5 does it in two stops. The walk is better; the metro is not
+        a defeat.
+      </p>
+      <p>
+        Passeig de Gràcia itself is the grid's showpiece, and it carries the two
+        Gaudí houses that every one-day itinerary tries to squeeze in.
+        <strong>La Pedrera</strong>, properly Casa Milà, sits at the top: a
+        stone cliff of a building with no straight line in its façade, wrought
+        iron balconies like torn seaweed, and a roof of helmeted chimneys you
+        cannot see from the street. Three blocks down is the
+        <strong>Illa de la Discòrdia</strong>, the block of discord, where
+        Gaudí's <strong>Casa Batlló</strong> stands beside Puig i Cadafalch's
+        stepped-gable Casa Amatller and Domènech i Montaner's Casa Lleó Morera —
+        three architects arguing with each other in tile and stone across forty
+        metres of pavement, which is why the block got its name.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/casa-batllo-facade.jpg`}
+      srcset={`${IMG}/casa-batllo-facade-480w.jpg 480w, ${IMG}/casa-batllo-facade-768w.jpg 768w, ${IMG}/casa-batllo-facade-1200w.jpg 1200w, ${IMG}/casa-batllo-facade.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
+      alt="The façade of Casa Batlló on Passeig de Gràcia in Barcelona seen from the pavement below against a deep blue sky: a shimmering skin of blue, green and gold broken tile, bone-like stone columns and window frames on the lower storeys, rows of balconies shaped like masks, and a scaled roof ridge rising to a tiled turret topped with a cross."
+      width={1365}
+      height={2048}
+      caption="Everything the interior ticket is famous for is legible from the kerb: the tile, the bone frames, the mask balconies, the dragon-back roof. Ninety minutes buy you the inside of it — on a one-day route, that is the Gothic Quarter."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Here is the decision, and this route makes it plainly:
+        <strong>see both from the pavement and go inside neither.</strong> The
+        arithmetic is not close. Either house visit runs an hour and a quarter,
+        and closer to two hours once the entrance queue is counted — and two
+        hours in the middle of this afternoon is precisely the Gothic Quarter,
+        or the Cathedral and Santa Maria del Mar together. You would be
+        exchanging the medieval city for one apartment building, having already
+        spent ninety minutes inside the greatest Gaudí interior there is.
+      </p>
+      <p>
+        These two also survive the cut better than most, because their argument
+        is almost entirely on the outside. Casa Batlló's skin of broken
+        blue-green tile, its bone-like window frames and its scaled dragon-back
+        roof are all street-facing; La Pedrera's whole thesis, that a masonry
+        façade can behave like an eroded cliff, is visible from the opposite
+        kerb. The interiors are good — La Pedrera's attic of parabolic brick
+        arches especially — but they are the supporting argument, not the case.
+        Forty-five minutes on this pavement is the right allocation.
+      </p>
+      <p>
+        If you disagree, and it is a reasonable disagreement, take
+        <strong>La Pedrera</strong> rather than Casa Batlló for the sake of the
+        roof, book it for around two o'clock, and delete the Cathedral interior
+        from Chapter IV rather than absorbing the loss later. State the cut,
+        make the cut, keep walking. What you must not do is book both houses.
+        That is a day of foyers.
+      </p>
+
+      <SectionHeading id="lunch" level={3}>Lunch, and where not to go for it</SectionHeading>
+      <p>
+        Stop at about a quarter to three, near the bottom of Passeig de Gràcia
+        or in the first streets below Plaça de Catalunya, and give it an hour
+        and a quarter. The instruction that matters is geographic rather than
+        gastronomic: <strong>eat within four minutes of where the route already
+        is.</strong> Barcelona has famous tables and several are worth the
+        journey on a longer trip — the standing bar in Poble-sec, the seafood
+        on the Barceloneta front, the dining rooms of Gràcia. Every one of them
+        is twenty-five minutes and a metro ride off this line, which is fifty
+        minutes of round trip before the meal, and those fifty minutes come
+        directly out of the Gothic Quarter.
+      </p>
+      <p>
+        The practical shape of it: Catalonia eats late, kitchens here are
+        properly busy from about half past one until half past three, and a
+        weekday <em>menú del dia</em> is the fastest good meal in the city. Sit
+        down and eat properly. Do not treat the hour as slack to be reclaimed
+        if the morning ran over — the afternoon ahead is four hours on stone,
+        and it goes badly on a sandwich eaten walking. A proper account of how
+        this city eats belongs to a longer stay and a different article.
+      </p>
+    </div>
+
+    <Chapter
+      id="old-city"
+      number="IV."
+      name="The Old City"
+      epithet="The Barri Gòtic taken as a route rather than a maze, with a closing time to respect"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Enter the old city from <strong>Plaça de Catalunya</strong> and go down
+        <strong>Portal de l'Àngel</strong>. This is the seam where the two
+        Barcelonas meet — the 1860s grid stops dead against the medieval
+        street plan, on the line where the walls stood until the city was
+        allowed to demolish them. It is worth noticing rather than walking
+        through. Ten minutes down that street the lanes narrow and the
+        Cathedral opens on your left.
+      </p>
+      <p>
+        The most important practical fact in this chapter is a closing time.
+        <strong>Barcelona Cathedral admits cultural visitors on weekdays from
+        09:30 to 18:30 with access closing at 17:45</strong>; on Saturdays and
+        the eves of religious feasts it runs 09:30 to 17:15 with access closing
+        at 16:30; and <strong>on Sundays and feast days it does not admit
+        visitors until 14:00</strong>, closing access at 16:30. Cultural
+        admission is <strong>€16</strong>. Arriving at around four o'clock on an
+        ordinary weekday leaves a comfortable margin. Arriving at six does not,
+        and the whole afternoon is built to prevent that.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/barcelona-cathedral-facade.jpg`}
+      srcset={`${IMG}/barcelona-cathedral-facade-480w.jpg 480w, ${IMG}/barcelona-cathedral-facade-768w.jpg 768w, ${IMG}/barcelona-cathedral-facade-1200w.jpg 1200w, ${IMG}/barcelona-cathedral-facade-1600w.jpg 1600w, ${IMG}/barcelona-cathedral-facade.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The upper front of Barcelona Cathedral seen steeply from below in warm low sunlight: a pale limestone gable of carved openwork tracery, a tall central spire and flanking pinnacles crowded with statues and crocketed finials, tall traceried windows on the left, and white cumulus in a blue sky behind."
+      width={2048}
+      height={1365}
+      caption="The façade is the youngest part of the building by five hundred years — a neo-Gothic front finished around 1900 over a church begun in 1298. The medieval fabric is behind it, and the quietest of it is in the cloister."
+    />
+
+    <div class="narrative prose">
+      <p>
+        Inside, the thing to find is not the nave but the
+        <strong>cloister</strong>, entered from the south side and the best
+        twenty minutes in the old city: a square of palms and magnolias round a
+        mossy fountain, ringed by chapels, with thirteen white geese kept in
+        it — one, the story goes, for each year of the life of Santa Eulàlia,
+        the young co-patron of the city who is buried in the crypt beneath the
+        high altar. The geese are not a gimmick for visitors. They have been
+        there for centuries, and the sound of them is why the cloister feels
+        like a courtyard in a town rather than an annexe of a monument.
+      </p>
+      <p>
+        Then take the quarter as a route rather than a wander; on a day this
+        length that difference is the whole chapter. Come out into
+        <strong>Plaça Nova</strong>, where two drum towers of the Roman wall
+        stand either side of the old gate with a fragment of aqueduct above
+        them — the fourth-century boundary of Barcino, inside which the
+        medieval city grew. Through the arch and down
+        <strong>Carrer del Bisbe</strong>, under the fretted neo-Gothic bridge
+        that is not medieval either but a 1928 addition, and is photographed
+        more than anything else here. That brings you into
+        <strong>Plaça de Sant Jaume</strong>, the civic centre for two thousand
+        years, the Generalitat on one side and the Ajuntament facing it. Then
+        double back east into <strong>Plaça del Rei</strong>, the enclosed
+        courtyard of the counts of Barcelona — the quietest important space in
+        the old city, and at six in the evening the best of it.
+      </p>
+      <p>
+        A word on <strong>La Rambla</strong>, two hundred metres west of all
+        this and not part of the route. Cross it for the Boqueria if you can
+        spare fifteen minutes; do not walk it end to end. It runs north to
+        south and this route runs east, and it will absorb an hour and return a
+        crowd.
+      </p>
+    </div>
+
+    <Chapter
+      id="water"
+      number="V."
+      name="The Water"
+      epithet="El Born, one enormous bare nave, and the last three hundred metres to the harbour"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Cross <strong>Via Laietana</strong>, which is a boundary rather than a
+        street: cut through the medieval city between 1908 and 1913 to link the
+        new Eixample to the port, with the Gothic Quarter and El Born facing
+        each other across the wound ever since. It is a far better crossing
+        than it was — the city finished rebuilding the avenue in June 2025,
+        widening the pavements, cutting the traffic from five lanes to three
+        and adding the crossings that now connect the old city properly to the
+        waterfront.
+      </p>
+      <p>
+        Walk into El Born along Carrer de l'Argenteria and let it arrive at
+        <strong>Santa Maria del Mar</strong>, the finest building on this day
+        and the least like the rest of it.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/santa-maria-del-mar-nave.jpg`}
+      srcset={`${IMG}/santa-maria-del-mar-nave-480w.jpg 480w, ${IMG}/santa-maria-del-mar-nave-768w.jpg 768w, ${IMG}/santa-maria-del-mar-nave-1200w.jpg 1200w, ${IMG}/santa-maria-del-mar-nave.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
+      alt="The interior of Santa Maria del Mar in Barcelona looking east to the apse: tall plain octagonal stone columns set far apart, rising to a ribbed vault washed with pale light, a suspended cross on a long chain above the crossing, stained glass in the clerestory and ambulatory, floodlit stone and rows of dark wooden pews below."
+      width={1365}
+      height={2048}
+      caption="Thirteen metres between the columns — the widest span in medieval Gothic — and almost no ornament to distract from it. Built in fifty-four years by the porters and shipwrights of the quarter, and it still reads as their building rather than a bishop's."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <p>
+        It was raised between 1329 and 1383 by the parish itself — the
+        merchants, porters and shipwrights of the Ribera — and finished in
+        fifty-four years, which for a building this size is close to
+        instantaneous. That single campaign is why it looks as it does: one
+        architect, one idea, no six-hundred-year argument stapled to the front.
+        The columns are plain octagons set thirteen metres apart, the widest
+        span in medieval Gothic anywhere, and the effect is not height but
+        breadth — one unbroken room rather than a nave with aisles beside it. A
+        fire in 1936 destroyed the baroque furniture that had accumulated
+        inside, and the bareness it left is now the point.
+      </p>
+      <p>
+        The visiting arrangement suits the end of this day unusually well. The
+        ticketed cultural visit runs <strong>Monday to Saturday 10:00 to 18:00
+        and Sunday 13:00 to 18:00, last admission 17:30</strong>, costs
+        <strong>€8</strong>, and includes the crypt, the galleries and the roof
+        terraces. Arriving around six, as this route does, you have missed
+        it — and outside the cultural hours <strong>admission is free</strong>.
+        So the default version walks into the nave for nothing, stands in it
+        for fifteen minutes, and does not go up on the roof. If the roof
+        matters, be at the door by half past five, which costs you the
+        Cathedral cloister. Both are defensible; only one is free.
+      </p>
+      <p>
+        Then give the Born forty-five unstructured minutes. Behind the church
+        the <strong>Passeig del Born</strong> runs east to the old market hall,
+        under whose floor lie the excavated streets of the district demolished
+        to build the Ciutadella fortress; Carrer de Montcada, with its row of
+        merchant palaces, is the best-preserved medieval commercial street in
+        the city. This is the part of the day with no destination in it. Let
+        the walking be the content.
+      </p>
+      <p>
+        Finish at the water. From the bottom of the Born it is eight or nine
+        minutes through Pla de Palau to the harbour front at the
+        <strong>Moll de la Fusta</strong>, with Port Vell opening in front of
+        you: the working end of the old port on one side, the marina and the
+        Barceloneta headland on the other, the Columbus column at the foot of
+        the Rambla to the west. This is not a beach afternoon and there is no
+        swim in it. It is the end of a line that started on a hillside eleven
+        hours ago, and the right thing to do with it is walk out along the quay
+        until the city is behind you, and stop.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/port-vell-at-first-light.jpg`}
+      srcset={`${IMG}/port-vell-at-first-light-480w.jpg 480w, ${IMG}/port-vell-at-first-light-768w.jpg 768w, ${IMG}/port-vell-at-first-light-1200w.jpg 1200w, ${IMG}/port-vell-at-first-light-1600w.jpg 1600w, ${IMG}/port-vell-at-first-light.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Port Vell in Barcelona under a low gold and deep blue sky: dozens of yacht masts silhouetted along the far quay with their reflections running down the still black water, a thin crescent moon high on the right, a construction crane and the towers of the seafront on the horizon, and the stone edge of the wharf in the foreground."
+      width={2048}
+      height={1365}
+      caption="This frame is dawn rather than dusk — the crescent is a waning one, low in the east. The route arrives at the same water from the other end of the day, when the light is going instead of coming, and the quay is a good deal busier."
+    />
+
+    <div class="narrative prose">
+      <p>
+        Dinner, if you want it, is behind you rather than in front. The lanes of
+        El Born hold the densest concentration of small serious restaurants in
+        the old city and you have just walked through them; Barceloneta, ten
+        minutes east along the front, does the seafood version with the boats
+        in view. Neither needs choosing in advance. Walk back to whichever you
+        passed and liked the look of.
+      </p>
+    </div>
+
+    <Practical place="Barcelona — One Day" detail="Five stages · ~8 km on foot · verified 3 August 2026" detailIcon="🚶">
+      <PracticalSection label="What must be booked, and in what order" level={3}>
+        <div class="prac-item">
+          <strong>Park Güell — first time band.</strong> General admission
+          <strong>€18</strong>; ages 7–12 and over-65s <strong>€13.50</strong>;
+          under-7s and visitors with a disability free. Entry is by time band,
+          the earliest and latest bands on sale run from 09:30 to 19:30, and the
+          park is open all year. Book on
+          <a href="https://parkguell.barcelona/en/buy-tickets" rel="noopener">the
+          park's own ticket page</a>. Your admission includes the Bus Güell
+          shuttle in both directions.
+        </div>
+        <div class="prac-item">
+          <strong>Sagrada Família — around midday.</strong> Basilica with audio
+          guide <strong>€26</strong>; with a guided tour <strong>€30</strong>;
+          with a tower <strong>€36</strong>. Tickets are sold online only,
+          through
+          <a href="https://sagradafamilia.org/en/tickets-individuals" rel="noopener">the
+          basilica's own ticket page</a>. April to September it opens Monday to
+          Friday 09:00–20:00, Saturday 09:00–18:00 and Sunday 10:30–20:00;
+          March and October and the winter months close earlier, and Sundays
+          always start at 10:30.
+        </div>
+        <div class="prac-item">
+          <strong>Nothing else.</strong> The Cathedral, Santa Maria del Mar,
+          lunch and the waterfront can all be decided on the day.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Buffers and the one rule that matters" level={3}>
+        <div class="tip-row">
+          <strong>Park Güell holds your slot for thirty minutes; the Sagrada
+          Família holds it for none.</strong> Build the day's slack in front of
+          the basilica, not behind it.
+        </div>
+        <div class="tip-row">
+          Allow <strong>75 minutes</strong> between leaving Park Güell's gate
+          and your Sagrada Família slot. The transfer itself is around 45
+          minutes door to door; the remainder is the buffer, and on a route with
+          one unforgiving ticket it is not padding.
+        </div>
+        <div class="tip-row">
+          Allow <strong>an hour and a quarter</strong> in Park Güell's monumental
+          zone, <strong>ninety minutes</strong> in the basilica,
+          <strong>forty-five minutes</strong> on Passeig de Gràcia,
+          <strong>an hour</strong> in and around the Cathedral, and
+          <strong>ninety minutes</strong> for the Born and the walk to the water.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Getting between the stages" level={3}>
+        <div class="prac-item">
+          <strong>Up to Park Güell</strong> — the <strong>Bus Güell</strong>
+          from Alfons X (L4) takes about 15 minutes and is included in your
+          admission. Otherwise Lesseps or Vallcarca on the L3, each about a
+          20-minute walk uphill, or buses H6 and D40 to Travessera de Dalt, ten
+          minutes below the park. The park currently advises against Vallcarca
+          while the Baixada de la Glòria escalators are out of service.
+        </div>
+        <div class="prac-item">
+          <strong>Park Güell to the Sagrada Família</strong> — shuttle down to
+          Alfons X, one stop east on the L4 to Guinardó | Hospital de Sant Pau,
+          then about 12 minutes down Avinguda de Gaudí. All-metro alternative:
+          L3 from Lesseps to Diagonal, change to the L5, two stops.
+        </div>
+        <div class="prac-item">
+          <strong>The Sagrada Família to Passeig de Gràcia</strong> — 1.6 km on
+          foot through the grid, 20–25 minutes, or two stops on the L5 to
+          Diagonal.
+        </div>
+        <div class="prac-item">
+          <strong>Everything after lunch</strong> — on foot. Plaça de Catalunya
+          to the Cathedral, the Cathedral to Santa Maria del Mar, the Born to
+          the Moll de la Fusta: none of these is more than fifteen minutes and
+          all of them are the point.
+        </div>
+        <div class="prac-item">
+          <strong>Tickets.</strong> This day needs only two or three metro or
+          bus legs, so a single-journey ticket each time is enough; a
+          <strong>T-casual</strong>, which carries ten journeys and can be
+          shared between travellers, is the better buy if there are two of you
+          or you expect to ride more. Current fares are on
+          <a href="https://www.tmb.cat/en/barcelona-fares-metro-bus/transport-ticket-fares" rel="noopener">TMB's
+          fares page</a>.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Works, closures and last-minute checks" level={3}>
+        <div class="tip-row">
+          <strong>Check TMB's service alerts in the week before you travel.</strong>
+          Barcelona concentrates its metro engineering between late June and
+          early September, and in that window individual stations, interchange
+          corridors and whole sections of line are taken out of service for
+          weeks at a time. Both transfers in this route have an alternative, but
+          confirm the one you intend to use on
+          <a href="https://www.tmb.cat/en/get-to-know-tmb/transport-network-improvements/metro" rel="noopener">TMB's
+          network improvements page</a> rather than on this one.
+        </div>
+        <div class="tip-row">
+          <strong>The basilica can restrict access at short notice.</strong> It
+          is a working church as well as a monument: liturgical celebrations,
+          maintenance and occasional public disruption outside its walls can all
+          close or limit visiting, and none of it is announced far ahead. Read
+          <a href="https://sagradafamilia.org/en/home" rel="noopener">the
+          basilica's own front page</a> the morning you go.
+        </div>
+        <div class="tip-row">
+          Check the Cathedral's day of the week before anything else. Sunday and
+          feast-day afternoons are the version of this route that breaks, and
+          the fix is in the next section.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="On the ground" level={3}>
+        <div class="tip-row">
+          <strong>No cloakroom at the basilica</strong>, and large suitcases are
+          refused. Bags are also barred on the tower ascent. Do not schedule this
+          day around a late check-out with luggage in hand; leave it at the
+          station or the hotel first.
+        </div>
+        <div class="tip-row">
+          <strong>Dress for a church twice.</strong> Covered shoulders and
+          nothing above mid-thigh at the Sagrada Família, and the same courtesy
+          at the Cathedral and Santa Maria del Mar. In August this turns people
+          away at the door daily.
+        </div>
+        <div class="tip-row">
+          <strong>Water and shade.</strong> The hill in the morning and Passeig
+          de Gràcia in the early afternoon are the two exposed stretches; the
+          Eixample's plane trees help and Park Güell's terrace does not. Fill a
+          bottle before you go up.
+        </div>
+        <div class="tip-row">
+          <strong>Toilets</strong> are reliable inside the two ticketed sites,
+          in the Cathedral, and in any café where you buy something. Between
+          Park Güell and the basilica there is a long gap. Use the ones at the
+          park before you leave it.
+        </div>
+        <div class="tip-row">
+          <strong>Pickpocketing</strong> is a real and specific problem on La
+          Rambla, in the Boqueria and on the metro at rush hour. It is not a
+          reason to avoid any of them; it is a reason to carry nothing in a back
+          pocket.
+        </div>
+      </PracticalSection>
+    </Practical>
+
+    <div class="narrative prose">
+      <SectionHeading id="sold-out">If tickets are sold out</SectionHeading>
+      <p>
+        Both timed sights sell out in high season, and they do not fail the
+        same way. One can be replaced. The other cannot, and pretending
+        otherwise would be the most useless thing this page could do.
+      </p>
+      <p>
+        <strong>Park Güell unavailable.</strong> This is the recoverable one,
+        because what the park contributes is a high view, an hour outdoors and
+        a starting point above everything else, and two of those three can be
+        found elsewhere. The cleanest substitution keeps the direction of
+        travel intact: start at the <strong>Sagrada Família</strong> on the
+        earliest slot you can get, and give the recovered hour to the
+        <strong>Recinte Modernista de Sant Pau</strong> at the top of Avinguda
+        de Gaudí — twelve linked pavilions by Domènech i Montaner, ticketed and
+        open daily, with hours and prices on
+        <a href="https://santpaubarcelona.org/en/prepara-la-teva-visita/" rel="noopener">its
+        own visitor page</a>. It is the best thing in Barcelona that most
+        one-day visitors never reach, it stands 900 metres from the basilica
+        door, and it keeps the shape of the day exactly. If you would rather
+        not add a ticket, start the old city earlier and let the afternoon run
+        long into the Born and the waterfront. Do not go looking for unofficial
+        ways into the monumental zone: the free woodland above it is open to
+        anyone and the restricted area is not.
+      </p>
+      <p>
+        <strong>Sagrada Família unavailable.</strong> There is no substitute,
+        and the honest thing is to say so rather than offer a consolation of
+        the same shape. Nothing else in the city does what that interior does,
+        and a day without it is a smaller day. You can rebalance rather than
+        replace: keep Park Güell in the morning, spend the recovered ninety
+        minutes on <strong>one</strong> Gaudí house interior — La Pedrera, for
+        the attic and the roof — and give the rest to a slower Gothic Quarter
+        and the ticketed visit at Santa Maria del Mar, roof included, which
+        this route otherwise misses by half an hour. That is a good day. It is
+        not this one. If your dates have any flexibility, move the day rather
+        than accept the substitution.
+      </p>
+      <p>
+        <strong>Rain.</strong> Barcelona's rain tends to arrive hard and leave
+        rather than settle in, so the first adjustment is patience. Beyond
+        that the changes are small: the two ticketed sights are unaffected, and
+        the Gothic Quarter is genuinely better wet, the lanes narrow enough to
+        keep most of it off you and the stone the better for it. Lengthen
+        lunch, take the cloister and the nave slowly, buy the €8 cultural visit
+        at Santa Maria del Mar for an interior hour the fine-weather version
+        does not need, and shorten the harbour walk. What you should not do is
+        throw the route away and rebuild an eight-stop museum day on a phone in
+        a downpour.
+      </p>
+
+      <SectionHeading id="omitted">What one day cannot hold</SectionHeading>
+      <p>
+        The omissions are the honest part of a route like this, and the list is
+        long enough to be uncomfortable. Each of these loses to something
+        specific, and the specifics are worth naming.
+      </p>
+      <p>
+        <strong>Montjuïc</strong> — the hill on the opposite corner of the
+        city, with the castle, the gardens, the Fundació Miró and the long view
+        over the port. A half-day at minimum, and in the wrong direction.
+        <strong>The MNAC</strong> stands on it, and its Romanesque frescoes
+        need three hours and a clear head. <strong>The Museu Picasso</strong> is the
+        sharpest loss, because it is two minutes off the route in Carrer de
+        Montcada and you will walk past its door — and it needs two hours that
+        this evening does not have.
+      </p>
+      <p>
+        <strong>Both Gaudí house interiors</strong>, for the reasons argued in
+        Chapter III. <strong>The beach</strong>, which is part of this city
+        rather than an appendage to it, and is a half-day of its own or
+        nothing. <strong>Gràcia</strong>, an annexed town with its own squares
+        and hours, which you pass beneath twice today and never enter — and
+        which is the best argument on this site for
+        <a href="/best-areas-to-stay-in-barcelona/">choosing where to sleep
+        with some care</a>. <strong>Tibidabo</strong>, the finest view in
+        Barcelona and ninety minutes away by tram and funicular before you have
+        looked at anything. <strong>Camp Nou</strong>, a pilgrimage rather than
+        a stop. And <strong>Sant Pau</strong>, unless the substitution above has
+        put it back on the map.
+      </p>
+      <p>
+        And the day trips, most firmly of all. Catalonia's are unusually good
+        and unusually close — <a href="/1-day-in-colonia-guell/">Gaudí's crypt
+        at Colònia Güell</a>, half an hour out on the Ferrocarrils line, is
+        where the Sagrada Família's structure was first worked out;
+        <a href="/1-day-in-figueres-girona/">Figueres and Girona</a> lie north,
+        <a href="/1-day-in-tarragona-sitges/">Tarragona and Sitges</a> south.
+        Each replaces your entire day with a train and a different city. People
+        try because they have read that Barcelona is a good base — which it is,
+        <a href="/7-days-in-barcelona/">over a week</a>, and at the end of
+        <a href="/4-weeks-portugal-to-spain-by-rail-road/">a month overland
+        from Porto</a>. Not today.
+      </p>
+      <p>
+        The list a first-time visitor usually arrives with — Sagrada Família,
+        Park Güell, Casa Batlló, La Pedrera, the Gothic Quarter, La Rambla, the
+        Picasso, the beach and a sunset on Montjuïc — is not a demanding day but
+        an arithmetically impossible one. The two timed sights and the transfer
+        between them account for four and a half hours before anything else is
+        attempted. Trying for the rest yields nine queues, a bad lunch and no
+        memory of any single place.
+      </p>
+
+      <SectionHeading id="season">Season and daylight</SectionHeading>
+      <p>
+        The route bends with the season rather than breaking. In
+        <strong>July and August</strong> the early start stops being clever and
+        becomes compulsory, and the compensation comes at the other end, where
+        the light holds past nine and the harbour is at its best. In
+        <strong>December and January</strong> the constraint inverts and
+        becomes daylight rather than temperature — dusk soon after five, and
+        both the basilica and the Cathedral closing earlier. Pull the whole day
+        forward by an hour and accept that the last stage happens in the dark,
+        which the Born and the harbour handle better than the Gothic Quarter
+        would.
+      </p>
+      <p>
+        <strong>Sunday</strong> genuinely reshapes the route, for three
+        overlapping reasons: the Cathedral does not admit visitors until two in
+        the afternoon and stops at five, Santa Maria del Mar's cultural visit
+        does not begin until one, and the Sagrada Família opens at half past
+        ten rather than nine. Run the afternoon inside out — keep Park Güell
+        first, take a later basilica slot, eat early, take the
+        <strong>Cathedral at around three</strong>, and let the Gothic Quarter
+        and the Born fill the evening rather than the middle.
+        <strong>Saturday</strong> needs less: the basilica closes at six even
+        in high summer, two hours earlier than on weekdays, and the Cathedral
+        shuts access at half past four, so book the basilica for late morning
+        instead of midday.
+      </p>
+      <p>
+        Two other things move the ground under a fixed plan.
+        <strong>Local festivals</strong> — La Mercè in late September, Sant
+        Joan on the night of 23 June, the Festa Major de Gràcia in
+        August — close streets and reroute transport; they are wonderful and
+        wholly incompatible with a tight itinerary. And <strong>religious feast
+        days</strong> put the Cathedral on its Sunday schedule without warning
+        anyone who has not checked. The most useful thing you can do in the week
+        before you travel is open the four official pages — Park Güell, the
+        Sagrada Família, the Cathedral and TMB — and read the dates you will
+        actually be there. Every schedule here was verified on 3 August 2026,
+        and every one of them can move.
+      </p>
+    </div>
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        What this day delivers is narrower than a list of Barcelona's sights and
+        considerably better than the list would have been: one long view from
+        the hill with the whole route laid out beneath it, one interior that
+        nothing else in the city or anywhere else resembles, the Eixample
+        understood from the pavement rather than from a foyer, an hour of
+        medieval stone walked as a line instead of a maze, one enormous bare
+        nave built by the people who lived around it, and open water at the end.
+        Five stages, two tickets, eight kilometres, and a single direction.
+      </p>
+      <p>
+        What it does not deliver is Barcelona. It delivers a legible section
+        through it, taken from the top down, which is a different and more
+        honest thing than a day spent proving the city can be completed. The
+        hill in the morning, stone in the afternoon, open water at the end — and
+        everything that did not fit still standing where you left it, most of it
+        visible from the terrace you started on.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/7-days-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: "7 Days in Barcelona: Gaudí's Unfinished Argument",
+        excerpt:
+          'Where every omission on this page goes when there is time for it — the hill, the houses, Montjuïc and three day trips, across a full week.',
+        meta: ['Barcelona', '7 days'],
+      },
+      {
+        href: '/best-areas-to-stay-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: 'Best Areas to Stay in Barcelona',
+        excerpt:
+          'If the one day comes with a night attached: seven neighbourhoods assessed on noise, slope, luggage access and the minutes each adds to every crossing.',
+        meta: ['Barcelona', 'Where to stay'],
+      },
+      {
+        href: '/1-day-in-colonia-guell/',
+        region: 'Spain · Catalonia',
+        title: "Colònia Güell: Gaudí's Forgotten Blueprint",
+        excerpt:
+          'The crypt half an hour out of the city where the Sagrada Família was structurally worked out — the day trip that explains the basilica.',
+        meta: ['Catalonia', 'Day trip'],
+      },
+    ]}
+  />
+</ChronicleLayout>
