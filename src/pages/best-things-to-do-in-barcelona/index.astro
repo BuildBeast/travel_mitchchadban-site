@@ -1,0 +1,1194 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Things to Do in Barcelona',
+  headline: 'Best Things to Do in Barcelona: Nineteen, Grouped and Judged',
+  description:
+    'Nineteen Barcelona experiences assessed by time, geography and what each one replaces — including what must be booked, what is free, and what a first visit can skip.',
+  path: '/best-things-to-do-in-barcelona/',
+  ogImage: '/images/best-things-to-do-in-barcelona/la-pedrera-roof-terrace.jpg',
+  factsVerified: '2026-08-04',
+};
+
+const IMG = '/images/best-things-to-do-in-barcelona';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Catalonia', 'Barcelona']}
+    label="Guide · Nineteen Experiences"
+    title="Best Things to Do in Barcelona:"
+    titleEmphasis="Nineteen, Grouped and Judged"
+    standfirst="Barcelona has more plausible attractions than any visit can hold, and they are spread across four grounds that do not touch. So these nineteen are grouped by what each one contributes and judged on the only question that matters — whether it is worth the part of the city you must give up for it."
+    stats={[
+      { num: '19', label: 'Entries' },
+      { num: '6', label: 'Groups' },
+      { num: '2', label: 'Must Be Booked' },
+      { num: '7', label: 'Free or Nearly' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          The trouble with Barcelona is not scarcity. It is that the list most
+          visitors arrive holding was written by a single architect, and that
+          the things on it sit on four separate grounds which cannot see one
+          another: a hillside in the north, a nineteenth-century grid across the
+          middle, a knot of medieval lanes down by the old shore, and a hill on
+          the far side of the port. In a compact city a poor decision costs ten
+          minutes. Here it costs an afternoon and two metro legs, and the bill
+          does not arrive until you are standing in the wrong queue at four
+          o'clock with the light going.
+        </p>
+        <p>
+          Which makes ranking close to useless. Nobody needs telling that the
+          Sagrada Família is remarkable. What a stranger needs is the exchange
+          rate — that a second Gaudí house interior costs the Gothic Quarter,
+          that the cable car up Montjuïc costs more than the museum at the top
+          of it, and that one of the finest interiors in the city is a concert
+          hall nobody puts on a list at all. So the nineteen below are grouped
+          into six sections by what each contributes, and each is answered on
+          the same points: why it matters, how long it takes, what it sits
+          beside, what needs booking, and what choosing it displaces.
+        </p>
+        <p>
+          Two arguments run underneath the page, and it is fairer to declare them
+          than to smuggle them in. The first is that Barcelona's Modernisme is
+          oversold as Gaudí and badly undersold as everything else: the two
+          Domènech i Montaner buildings here are cheaper, quieter and no less
+          extraordinary than the third Gaudí interior anybody will sell you. The
+          second is that the high ground costs less than it looks — the best view
+          in the city is free and the second best is two euros. What this page does
+          not do is put the nineteen in order; sequencing Barcelona is solved
+          elsewhere, for <a href="/one-day-in-barcelona/">a single day</a> and for
+          <a href="/7-days-in-barcelona/">a full week read through Gaudí</a>.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/la-pedrera-roof-terrace.jpg`}
+      srcset={`${IMG}/la-pedrera-roof-terrace-480w.jpg 480w, ${IMG}/la-pedrera-roof-terrace-768w.jpg 768w, ${IMG}/la-pedrera-roof-terrace-1200w.jpg 1200w, ${IMG}/la-pedrera-roof-terrace-1600w.jpg 1600w, ${IMG}/la-pedrera-roof-terrace.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The roof terrace of La Pedrera in Barcelona in low evening sun: ochre rendered chimney stacks with helmeted, faceted heads standing on both sides of a sinuous stepped walkway edged with wire mesh guard fencing, the flat roofs and balconies of the Eixample beyond, and the wooded ridge of Collserola along the horizon under a deep blue sky."
+      width={2048}
+      height={1365}
+      caption="The whole argument of this page in one frame. You are standing on one choice — a roof that costs about thirty euros and ninety minutes — and looking at all the others: the grid, the ridge, the hill where the best free view is, and everything the afternoon will not now include."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="how-to-use" rule={false}>How to read the entries</SectionHeading>
+      <p>
+        Each entry closes with one line of mechanics: <strong>Time</strong>,
+        <strong>Pairs with</strong>, <strong>Booking</strong>,
+        <strong>Skip if</strong>, and a verdict. <em>First visit</em> means it
+        belongs in a stay of three days or fewer. <em>Longer stay</em> means it
+        earns its place from about the fourth day onward.
+      </p>
+      <p>
+        A price appears only where it changes a decision — where two options are
+        near-identical and one is half the cost, or where a journey costs more than
+        the thing it takes you to. Everything else is called free, ticketed or
+        expensive, with a link to the official page, because a stale figure is worse
+        than none. The figures that do appear were checked against official sources
+        on <strong>4 August 2026</strong>.
+      </p>
+      <p>
+        On evidence: everything below was visited except where the entry says
+        otherwise, across two August stays in <strong>2023</strong> and
+        <strong>2024</strong>, the second of them six nights in El Raval. Two
+        entries are marked <em>assessed</em> and are argued from official information
+        and geography rather than memory. No opening hour or price here is a
+        recollection; those change, and they are research.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'glance', label: 'The six groups' },
+        { id: 'gaudi', label: 'Gaudí' },
+        { id: 'modernisme', label: 'Modernisme without Gaudí' },
+        { id: 'old-city', label: 'The old city' },
+        { id: 'art', label: 'Art, and choosing one' },
+        { id: 'hill', label: 'The hill and the view' },
+        { id: 'open-ground', label: 'Water and open ground' },
+        { id: 'booking', label: 'What needs booking' },
+        { id: 'omitted', label: 'What did not make the list' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Six Groups at a Glance"
+    meta={[
+      {
+        label: 'The three that are genuinely unmissable',
+        value:
+          'The Sagrada Família · the Barri Gòtic on foot · one long view from high ground. Everything else on this page is a choice, and most of it is a choice against something else.',
+      },
+      {
+        label: 'Book before you arrive',
+        value:
+          'The Sagrada Família and Park Güell, in that order, both timed. Nothing else here needs advance purchase in any season, though the Palau de la Música rewards it.',
+      },
+      {
+        label: 'Free, or nearly',
+        value:
+          'Bunkers del Carmel · the Barri Gòtic and El Born · La Boqueria · Parc de la Ciutadella and the Arc de Triomf · the waterfront and the beaches · Santa Maria del Mar outside its ticketed hours · the MNAC building and its rooftop for two euros.',
+      },
+      {
+        label: 'The most under-visited things of real quality',
+        value:
+          'Recinte Modernista de Sant Pau · the Palau de la Música Catalana · Palau Güell. All three are central, all three are Modernisme at full strength, and none of them queues like Passeig de Gràcia.',
+      },
+    ]}
+    daysHeading="Group by Group"
+    days={[
+      { num: 'Gaudí', text: 'Sagrada Família · Park Güell · La Pedrera · Casa Batlló · the lesser Gaudí. Five entries, and a firm recommendation to enter only one of the houses.' },
+      { num: 'Modernisme', text: 'Recinte Modernista de Sant Pau · Palau de la Música Catalana. Domènech i Montaner, half the crowd, and the best value in the city.' },
+      { num: 'Old City', text: 'Cathedral and the Barri Gòtic · Plaça del Rei and Roman Barcelona · Santa Maria del Mar and El Born · La Rambla and La Boqueria.' },
+      { num: 'Art', text: 'Museu Picasso · MNAC · Fundació Joan Miró. Three collections, three different Barcelonas explained. Choose one.' },
+      { num: 'The Hill', text: 'Montjuïc · the free high ground. What the view costs, which is anything between nothing and thirty-nine euros.' },
+      { num: 'Open Ground', text: 'The waterfront and the beaches · Parc de la Ciutadella · an evening on neighbourhood streets. The unticketed half of the city.' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter
+      id="gaudi"
+      number="I."
+      name="Gaudí's Barcelona"
+      epithet="Five entries, four of them ticketed interiors, and the case for going inside exactly one of the houses"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Gaudí left enough behind that a visitor can spend an entire stay on him
+        and see nothing else. Plenty do. The problem is that the buildings are
+        sold individually and consumed as a set, so a three-day trip becomes four
+        entrance halls and four rooftops, and the traveller goes home having
+        understood the architect and not the city. What follows is arranged to
+        prevent that: two entries close to compulsory, two variations on one idea
+        of which you should take one, and a fifth that almost nobody does.
+      </p>
+
+      <SectionHeading id="sagrada-familia" level={3} rule={false}>1. The Sagrada Família</SectionHeading>
+      <p>
+        Begun in 1882 and still rising, and the only thing here no substitute
+        approaches. The case for it is not the towers or the century of argument
+        about finishing a dead man's drawings; it is the nave, built as a
+        forest. The piers branch near the top into a canopy of hyperboloid
+        vaults, so the loads come down through a structure borrowed from the way
+        a tree stands rather than the way a Gothic cathedral does — which is why
+        there are no flying buttresses on it. The glass is graded by compass
+        point, warm ambers on one flank and cold greens on the other, so the
+        interior changes hue across the day instead of merely brightening. Forty
+        minutes gets the shape of the room; ninety gets the light doing what it
+        was designed to do.
+      </p>
+      <p>
+        The tower ascent is a step up in price and a larger one in time, and on a
+        short stay it is the first thing to cut, because this city gives away better
+        long views for nothing. Note too that it is a working church with a dress
+        code, no general cloakroom and no tolerance for a late arrival. Overhead the
+        construction is turning a corner: the central crane has finished the exterior
+        of the Tower of Jesus Christ and moved on to the Glory façade.
+      </p>
+      <p>
+        <strong>Time</strong> 90 minutes inside, plus half an hour of buffer in
+        front of your slot · <strong>Pairs with</strong> Sant Pau, 900 metres up
+        Avinguda de Gaudí · <strong>Booking</strong> essential, timed, online
+        only. Basilica with audio guide <strong>€26</strong>, guided
+        <strong>€30</strong>, with a tower <strong>€36</strong>, guided and with a
+        tower <strong>€40</strong>. Read
+        <a href="https://sagradafamilia.org/en/tickets-individuals" rel="noopener">the
+        basilica's own ticket page</a> before you commit, and its front page on the
+        morning you go: liturgy, maintenance and disruption outside the walls can
+        all restrict access at short notice · <strong>Skip if</strong> never. First
+        visit, and the one booking worth rearranging a trip around.
+      </p>
+
+      <SectionHeading id="park-guell" level={3}>2. Park Güell</SectionHeading>
+      <p>
+        A failed property development, which is the fact that makes sense of it.
+        Eusebi Güell bought a bare hillside in 1900 and had Gaudí lay out sixty
+        plots for a garden city above the smoke; two were built, nobody else
+        came, and what survives is a public park holding the infrastructure of a
+        suburb that never existed. So this is not a garden with follies in it. It
+        is roads, retaining walls, a market hall and a village square, built as
+        though ordinary civic apparatus deserved to be extraordinary — the
+        Hypostyle Room was to be the market, and the terrace above it, edged by
+        the serpentine bench, the square.
+      </p>
+      <p>
+        It goes early in a day because it is unshaded, and early in a
+        <em>trip</em> because the terrace is the best orientation lecture
+        available: the Eixample runs away below in its grid, the basilica stands
+        out of it, the sea closes the horizon. Spend part of the hour working out
+        where everything is, then leave — the Calvary hill and the Casa Museu are
+        an hour better spent elsewhere, and once you exit the restricted area the
+        ticket will not let you back in.
+      </p>
+      <p>
+        <strong>Time</strong> an hour and a quarter in the monumental zone ·
+        <strong>Pairs with</strong> Gràcia below it and little else — the hill is
+        the point and the isolation is the cost ·
+        <strong>Booking</strong> yes, by time band. You have
+        <strong>thirty minutes after your slot</strong> to get through the gate and
+        not a minute more; the Bus Güell shuttle from Alfons X is included. Prices
+        and bands are on
+        <a href="https://parkguell.barcelona/en/buy-tickets" rel="noopener">the
+        park's own ticket page</a> · <strong>Skip if</strong> you have one day and
+        would rather have the old city slowly. First visit otherwise.
+      </p>
+
+      <SectionHeading id="la-pedrera" level={3}>3. La Pedrera — the house to choose</SectionHeading>
+      <p>
+        Casa Milà, universally called the quarry, and the right answer if you are
+        going inside one Gaudí house. Its thesis is that a masonry façade can behave
+        like an eroded cliff, and it holds that argument without a single straight
+        line in the street front. But the reason to buy the ticket is upstairs. The
+        attic is a corridor of bare parabolic brick arches, close-set and
+        unornamented, doing pure structural work — the clearest statement Gaudí built
+        of how his geometry carries load. Above it the roof is a landscape of helmeted
+        chimneys, and the one Gaudí rooftop that gives you the Eixample from inside
+        the Eixample rather than above it.
+      </p>
+      <p>
+        The choice against Casa Batlló, three blocks south, comes down to this:
+        Batlló's argument is almost entirely on its outside and La Pedrera's on its
+        inside. You can read Batlló from the kerb. You cannot read this attic or
+        this roof from anywhere at all.
+      </p>
+      <p>
+        <strong>Time</strong> 75 to 90 minutes, most of it above the second floor ·
+        <strong>Pairs with</strong> the Illa de la Discòrdia three blocks down, from
+        the pavement · <strong>Booking</strong> sensible in season rather than
+        essential. The standard daytime visit runs from about <strong>€29</strong>
+        and covers the courtyards, an apartment, the attic and the roof; a
+        late-afternoon <em>Sunset</em> admission runs from about
+        <strong>€25</strong> for the same route, the better buy in July and August.
+        Details on
+        <a href="https://www.lapedrera.com/en/visits" rel="noopener">its own visits
+        page</a> · <strong>Skip if</strong> you are choosing Casa Batlló instead,
+        or have one day. First visit at two days or more.
+      </p>
+
+      <SectionHeading id="casa-batllo" level={3}>4. Casa Batlló — and why the pavement may be enough</SectionHeading>
+      <p>
+        The more astonishing building of the two and the weaker ticket, which is
+        an unpopular thing to write and is nonetheless what the arithmetic says.
+        Everything Casa Batlló is famous for faces the street: the skin of broken
+        blue-green tile, the bone-like window frames, the balconies shaped like
+        masks, the scaled dragon-back roof. It stands in the middle of the
+        <strong>Illa de la Discòrdia</strong>, where Gaudí, Puig i Cadafalch and
+        Domènech i Montaner built three houses in forty metres and argued with
+        each other in tile and stone — a free fifteen-minute lesson in Modernisme
+        and the best thing on Passeig de Gràcia.
+      </p>
+      <p>
+        Inside is good and heavily produced. The light well graded from deep cobalt
+        at the top to pale blue at the bottom, so every floor gets the same apparent
+        brightness, is brilliant thinking; the interpretation around it has grown
+        more theatrical. What you must not do is book both houses, which is a day of
+        foyers on a street you could have read for free.
+      </p>
+      <p>
+        <strong>Time</strong> 75 minutes inside; 15 from the pavement, the version
+        recommended on a short stay · <strong>Pairs with</strong> La Pedrera three
+        blocks north and the rest of the block, at street level ·
+        <strong>Booking</strong> useful rather than essential; it opens late, which
+        is unusual and handy. General admission runs from about
+        <strong>€29</strong> and a night visit from about <strong>€25</strong>; the
+        tiers multiply, so read
+        <a href="https://www.casabatllo.es/en/tickets/" rel="noopener">the house's
+        own ticket page</a> rather than a reseller ·
+        <strong>Skip if</strong> you have already booked La Pedrera. The exterior,
+        never.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/palau-guell-roof-spire.jpg`}
+      srcset={`${IMG}/palau-guell-roof-spire-480w.jpg 480w, ${IMG}/palau-guell-roof-spire-768w.jpg 768w, ${IMG}/palau-guell-roof-spire-1200w.jpg 1200w, ${IMG}/palau-guell-roof-spire.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
+      alt="The central spire on the roof of Palau Güell in Barcelona seen steeply from below: a tall cone clad in irregular pale limestone fragments, pierced by triangular vents and tall narrow windows, topped by a gilded spiked ball and a wrought-iron weathervane carrying a bat and a four-armed cross, with a green ceramic-scaled chimney to the right and grey cloud behind."
+      width={1365}
+      height={2048}
+      caption="Palau Güell, thirty years before La Pedrera and two minutes off La Rambla. The bat on the weathervane is an old Aragonese device, and the rubble-clad cone above the salon is a rehearsal for everything Gaudí later did with a rooftop."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="lesser-gaudi" level={3}>5. The lesser Gaudí — Palau Güell, Casa Vicens, Bellesguard</SectionHeading>
+      <p>
+        Three houses that between them cost less than one Passeig de Gràcia
+        ticket, and any of them will teach you more about how Gaudí arrived at his
+        late manner than a fourth trip round a famous one.
+        <strong>Palau Güell</strong>, off the lower Rambla, is the earliest and
+        strangest: a town mansion of 1888 for the same patron as the park, with
+        brick parabolic vaults in the basement stables, a salon rising the full
+        height of the house under a perforated dome, and the roof of tile-mosaic
+        chimneys above. Take it to see the architect before the world decided he
+        was a genius. <strong>Casa Vicens</strong>, in Gràcia, is his first
+        house — 1885, tiled in green check and marigold, closer to Mudéjar sources
+        than to anything he built later, and the clearest evidence that the mature
+        Gaudí was invented rather than inherited.
+        <strong>Bellesguard</strong>, on the slopes of Collserola, is the one
+        nobody reaches: a slate-grey tower on the site of the last medieval
+        Catalan royal residence, with an attic of stepped brick arches that is the
+        plainer sibling of La Pedrera's.
+      </p>
+      <p>
+        <strong>Time</strong> an hour each · <strong>Pairs with</strong> Palau Güell
+        with the Rambla and El Raval; Casa Vicens with Gràcia and an evening there;
+        Bellesguard with nothing, which is its one real cost ·
+        <strong>Booking</strong> none needed at any of the three; all are modestly
+        priced against the famous houses · <strong>Skip if</strong> you have three
+        days or fewer and have already bought a Passeig de Gràcia interior. Longer
+        stay — and promoted to first visit for anyone who found the Sagrada Família's
+        structure more interesting than its decoration.
+      </p>
+    </div>
+
+    <Beat>Five Gaudí entries, and the only instruction that matters: go inside one of the houses, not three.</Beat>
+
+    <Chapter
+      id="modernisme"
+      number="II."
+      name="Modernisme Without Gaudí"
+      epithet="Two buildings by Lluís Domènech i Montaner, and the best value for money in Barcelona"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Modernisme was a movement, not a man, and its most complete surviving
+        statements are not by Gaudí at all. Domènech i Montaner built a hospital and
+        a concert hall on the same principle — that a public building should be
+        lavished with tile, glass, mosaic and carved stone not as decoration but as
+        an argument about what ordinary people are owed. Both are UNESCO-listed,
+        both central, both cheaper than a Gaudí house, and both perhaps a third as
+        crowded, which after a morning on Passeig de Gràcia is a physical relief.
+      </p>
+
+      <SectionHeading id="sant-pau" level={3} rule={false}>6. Recinte Modernista de Sant Pau</SectionHeading>
+      <p>
+        A hospital designed on the theory that beauty is therapeutic. Twelve linked
+        pavilions set diagonally in gardens, joined by tunnels so patients never had
+        to be moved through weather, each brick and mosaic and coloured tile outside
+        and vaulted, tiled and daylit within. It served as Barcelona's main hospital
+        until 2009, which is the detail that changes how you look at it: these are
+        not galleries dressed up, they are wards. Standing in one of the long tiled
+        rooms and realising people were nursed here, under that vault, does
+        something no purely aesthetic building manages.
+      </p>
+      <p>
+        It is also the most efficient half-day in the northern city, standing at the
+        top of <strong>Avinguda de Gaudí</strong>, a pedestrian diagonal running just
+        under a kilometre downhill straight at the Sagrada Família's Nativity façade
+        with the towers growing in front of you the whole way. Do the two in that
+        order and the walk is part of the visit rather than a transfer.
+      </p>
+      <p>
+        <strong>Time</strong> 90 minutes to two hours, much of it outdoors ·
+        <strong>Pairs with</strong> the Sagrada Família, 900 metres downhill ·
+        <strong>Booking</strong> none needed. Self-guided admission is
+        <strong>€18</strong> before 14:00 and <strong>€17</strong> after — the rare
+        case of an afternoon being cheaper; audio guide €4, guided visit €21. Open
+        09:30–18:30 April to October and 09:30–17:00 November to March, last entry
+        half an hour before closing, with a handful of free-entry days a year.
+        Confirm on
+        <a href="https://santpaubarcelona.org/en/prepara-la-teva-visita/" rel="noopener">its
+        own visitor page</a> · <strong>Skip if</strong> you have one day. First visit
+        at three days or more, and the most under-rated ticket in Barcelona.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/palau-de-la-musica-skylight.jpg`}
+      srcset={`${IMG}/palau-de-la-musica-skylight-480w.jpg 480w, ${IMG}/palau-de-la-musica-skylight-768w.jpg 768w, ${IMG}/palau-de-la-musica-skylight-1200w.jpg 1200w, ${IMG}/palau-de-la-musica-skylight-1600w.jpg 1600w, ${IMG}/palau-de-la-musica-skylight.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The stained-glass skylight of the Palau de la Música Catalana in Barcelona seen from below: a rectangular frame enclosing an inverted cone of amber and gold glass at its centre, ringed by radiating panes of blue, green and pink glass set with rows of women's faces, all surrounded by the dark carved and rose-patterned soffit of the ceiling."
+      width={2048}
+      height={1365}
+      caption="The skylight over the concert hall — a sun of amber glass hanging down into the room, with choirs of women's faces around it. The hall was built for a choral society, and this is the ceiling they raised over the singing."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="palau-musica" level={3}>7. Palau de la Música Catalana</SectionHeading>
+      <p>
+        The best interior in Barcelona that no list mentions, and the entry most
+        likely to change a traveller's idea of the city. It was built between 1905
+        and 1908 for the Orfeó Català, an amateur choral society, which is the fact
+        everything follows from: not an opera house for the rich but a singing hall
+        for a movement, decorated accordingly, with the history of Catalan and
+        European music carried round the room in mosaic and sculpture.
+      </p>
+      <p>
+        The hall is the only auditorium in Europe lit entirely by daylight — glass
+        on all four sides and, at its centre, the inverted stained-glass sun in the
+        photograph above, so a matinée needs no lamps. Behind the stage eighteen
+        muses emerge half-sculpted from the wall, each with a different instrument;
+        the proscenium carries Wagner's valkyries on one side and a Catalan folk
+        song on the other, which tells you what this building thought it was for.
+      </p>
+      <p>
+        <strong>Time</strong> an hour on a visit; two for a concert ·
+        <strong>Pairs with</strong> Sant Pere and the northern Born, five minutes
+        away, and a short walk from the Cathedral ·
+        <strong>Booking</strong> yes, a few days ahead in season. A self-guided visit
+        is <strong>€20</strong> and a guided one <strong>€24</strong>; combined with
+        Sant Pau it is <strong>€32</strong>, the best single purchase on this page if
+        you want both. Times are on
+        <a href="https://www.palaumusica.cat/en/visites/visits-and-tickets_1159168" rel="noopener">the
+        Palau's own visits page</a>. If your dates allow it, go to a concert
+        instead — hearing the room used is worth more than being told about it ·
+        <strong>Skip if</strong> you have a single day. First visit at two days or
+        more.
+      </p>
+    </div>
+
+    <Chapter
+      id="old-city"
+      number="III."
+      name="The Old City"
+      epithet="Four entries in a square kilometre of medieval and Roman fabric, and the one that is honestly overrated"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Everything in this group sits inside the footprint of the walled town, and
+        the walking between the four entries is measured in minutes rather than metro
+        legs. It is the only part of Barcelona where the city does the work and you
+        merely have to be there — and the part most easily lost to a badly planned
+        afternoon elsewhere.
+      </p>
+
+      <SectionHeading id="cathedral" level={3} rule={false}>8. Barcelona Cathedral and the Barri Gòtic</SectionHeading>
+      <p>
+        Not Gaudí's, and much older: a Gothic church begun in 1298 behind a
+        neo-Gothic front finished around 1900, which is why the façade looks younger
+        and fussier than everything behind it. The nave is dim and vertical, but the
+        thing to find is the <strong>cloister</strong> — a square of palms and
+        magnolias round a mossy fountain, ringed by chapels, with thirteen white
+        geese kept in it, one for each year of the life of Santa Eulàlia, the young
+        co-patron of the city who lies in the crypt. They have been there for
+        centuries and are not a device for visitors; the sound of them is why the
+        cloister feels like a courtyard in a town rather than an annexe.
+      </p>
+      <p>
+        Take the quarter around it as a route rather than a wander:
+        <strong>Plaça Nova</strong>, where two drum towers of the Roman wall stand
+        either side of the old gate under a fragment of aqueduct;
+        <strong>Carrer del Bisbe</strong> beneath its fretted bridge, a 1928
+        addition and the most photographed thing here;
+        <strong>Plaça de Sant Jaume</strong>, the civic centre for two thousand
+        years. Better before nine or after six than at any hour between.
+      </p>
+      <p>
+        <strong>Time</strong> an hour for the cathedral and cloister, another for the
+        lanes · <strong>Pairs with</strong> everything else in this group ·
+        <strong>Booking</strong> none. Cultural admission is <strong>€16</strong>,
+        and the schedule is the trap: <strong>weekdays 09:30–18:30</strong> with last
+        entry 17:45, <strong>Saturdays and the eves of feasts 09:30–17:15</strong>,
+        and on <strong>Sundays and feast days no visitors until 14:00</strong>,
+        closing at 17:00. Check
+        <a href="https://catedralbcn.org/visita-turistica/horaris-visita-turistica/" rel="noopener">the
+        cathedral's own hours page</a> against your dates ·
+        <strong>Skip if</strong> the ground is a problem; it is uneven stone
+        throughout. Otherwise first visit.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/cathedral-cloister-geese.jpg`}
+      srcset={`${IMG}/cathedral-cloister-geese-480w.jpg 480w, ${IMG}/cathedral-cloister-geese-768w.jpg 768w, ${IMG}/cathedral-cloister-geese-1200w.jpg 1200w, ${IMG}/cathedral-cloister-geese-1600w.jpg 1600w, ${IMG}/cathedral-cloister-geese.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A dozen white geese standing on worn stone paving in the cloister of Barcelona Cathedral, several grouped beside a mossy green fountain basin and one alone in the foreground beside a low iron railing, with a palm trunk, a Gothic arcade and an iron grille behind."
+      width={2048}
+      height={1365}
+      caption="Thirteen geese, one for each year of Santa Eulàlia's life, in a cathedral cloister two minutes from the busiest street in Barcelona. This is the twenty minutes most cathedral visits miss entirely."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="placa-del-rei" level={3}>9. Plaça del Rei and the Roman city underneath</SectionHeading>
+      <p>
+        <em>Assessed rather than entered.</em> Plaça del Rei itself — the enclosed
+        courtyard of the counts of Barcelona, with the great hall on one side and
+        a fan-vaulted watchtower above — is the quietest important space in the
+        old city and costs nothing to stand in. Under it runs the reason this
+        entry exists: some four thousand square metres of excavated Roman and
+        Visigothic Barcino, laid out as a walkable underground street with a dye
+        works, a laundry, a fish-salting plant and a wine cellar still in place,
+        which is a far more concrete account of what a provincial Roman town did
+        for a living than most museums manage. The honest note is that this page
+        argues for it from the official description and from standing in the square
+        above, not from having walked the excavation; practicalities are on
+        <a href="https://www.barcelona.cat/museuhistoria/en" rel="noopener">the
+        city history museum's own site</a>.
+      </p>
+      <p>
+        <strong>Time</strong> 10 minutes for the square, an hour with the excavation ·
+        <strong>Pairs with</strong> the cathedral, three minutes west, and Santa Maria
+        del Mar, eight east · <strong>Booking</strong> none. Ticketed but inexpensive,
+        with free municipal-museum periods; closed Mondays ·
+        <strong>Skip if</strong> Roman archaeology leaves you cold — the square above
+        is free. Longer stay.
+      </p>
+
+      <SectionHeading id="santa-maria-del-mar" level={3}>10. Santa Maria del Mar and El Born</SectionHeading>
+      <p>
+        The finest building in the old city and the least like the rest of it. It was
+        raised between 1329 and 1383 by the parish itself — the merchants, porters
+        and shipwrights of the Ribera — and finished in fifty-four years, which for a
+        church this size is nearly instantaneous. One campaign, one architect, one
+        idea, and no six-hundred-year argument stapled to the front. The columns are
+        plain octagons set thirteen metres apart, the widest span in medieval Gothic
+        anywhere, and the effect is breadth rather than height: one unbroken room
+        rather than a nave with aisles. A fire in 1936 took out the baroque furniture
+        inside, and the bareness it left is now the point.
+      </p>
+      <p>
+        The quarter behind it is the other half of the entry.
+        <strong>Passeig del Born</strong> runs east to the old market hall, under
+        whose floor lie the excavated streets of the district demolished to build
+        the Ciutadella fortress; <strong>Carrer de Montcada</strong>, a row of
+        merchant palaces, is the best-preserved medieval commercial street in the
+        city and where the Picasso is.
+      </p>
+      <p>
+        <strong>Time</strong> 20 minutes in the nave, an hour more with the ticketed
+        roof visit, 45 minutes for the Born · <strong>Pairs with</strong> the Museu
+        Picasso, two minutes north, and the waterfront, eight minutes south ·
+        <strong>Booking</strong> none. The ticketed cultural visit adds the crypt,
+        the galleries and the roof terraces; outside those hours the nave is free,
+        an arrangement the <a href="/one-day-in-barcelona/">one-day route</a> exploits
+        deliberately · <strong>Skip if</strong> never. First visit.
+      </p>
+
+      <SectionHeading id="rambla-boqueria" level={3}>11. La Rambla and La Boqueria</SectionHeading>
+      <p>
+        This is the entry where a guide chooses between being useful and being
+        agreeable. La Rambla is historically the most important street in
+        Barcelona — a drained watercourse that became the city's promenade, the
+        spine of its nineteenth-century public life, the street where the Republic
+        was proclaimed and where Orwell watched the revolution turn on itself. It
+        is also, at two in the afternoon in August, a poor place to spend two
+        hours: 1.2 kilometres of costumed performers, souvenir kiosks and the
+        densest pickpocketing in the city.
+      </p>
+      <p>
+        So cross it rather than walk it, and cross at <strong>La Boqueria</strong>,
+        which is a working market of more than two hundred traders and not a food
+        court with a roof. Go in the morning, walk past the first aisles of fruit
+        cups and cured-meat cones aimed at people who wandered in off the street,
+        and reach the fish, the mushroom stall, the offal counters and the salt
+        cod.
+      </p>
+      <p>
+        <strong>Time</strong> 20 minutes for the market, 10 to cross the street ·
+        <strong>Pairs with</strong> Palau Güell and El Raval on the west side, the
+        Barri Gòtic on the east · <strong>Booking</strong> none, both free. The
+        market trades <strong>Monday to Saturday, 08:00–20:30</strong> and is
+        <strong>closed on Sundays and public holidays</strong> — see
+        <a href="https://www.boqueria.barcelona/" rel="noopener">the market's own
+        site</a>. Reach the produce stalls before about eleven ·
+        <strong>Skip if</strong> you resent crowds: the market at noon is shoulder to
+        shoulder and there is no version of it that is not. First visit for the
+        market, and a firm no to the promenade as an activity.
+      </p>
+    </div>
+
+    <PullQuote>
+      A list is only worth reading if it will tell you which three things matter
+      and which four you may leave out. Otherwise it is an inventory, and the
+      city already has one of those.
+    </PullQuote>
+
+    <Chapter
+      id="art"
+      number="IV."
+      name="Art, and the Case for Choosing One"
+      epithet="Three collections that explain three different Barcelonas, and no good reason to visit all of them"
+    />
+
+    <div class="narrative prose">
+      <p>
+        These are three of the best museums in Spain and they are not alternatives
+        to each other the way two Gaudí houses are. The problem is arithmetical
+        rather than aesthetic: each needs two to three hours and a clear head, they
+        sit at three corners of the city, and a three-day stay that takes all of them
+        has spent most of its daylight indoors. So the question is not which is best.
+        It is which Barcelona you want explained.
+      </p>
+
+      <SectionHeading id="museu-picasso" level={3} rule={false}>12. Museu Picasso</SectionHeading>
+      <p>
+        Not a greatest-hits collection, and people who arrive expecting one are
+        reliably disappointed. What this museum holds, almost uniquely, is the
+        <em>formation</em> — the work of a boy and then a young man in this city,
+        from academic studies of astonishing competence made at fifteen through the
+        Blue Period, arranged so that you watch a conventional prodigy decide to
+        stop being one. The other reason to come is the
+        <strong>Las Meninas</strong> cycle: fifty-eight canvases of 1957 in which
+        Picasso dismantles Velázquez over and over, kept together in one sequence of
+        rooms. It occupies five adjoining medieval merchant palaces on Carrer de
+        Montcada, and the building is half the visit. Choose it if you want
+        Barcelona as the place an artist came from.
+      </p>
+      <p>
+        <strong>Time</strong> two hours · <strong>Pairs with</strong> Santa Maria del
+        Mar and El Born, two minutes away — the strongest geographical pairing on this
+        page · <strong>Booking</strong> sensible in season. Admission is
+        <strong>€14 online</strong> against <strong>€15</strong> at the desk,
+        <strong>free on the first Sunday of each month</strong> and free on Thursday
+        afternoons through the winter half of the year, both requiring a reservation,
+        and <strong>closed on Mondays</strong>. Detail on
+        <a href="https://museupicassobcn.cat/en/plan-your-visit/buy-tickets-and-opening-hours" rel="noopener">the
+        museum's own visit page</a> · <strong>Skip if</strong> you want mature
+        Picasso; this is not where it is. First visit if you take one museum.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/mnac-oval-hall.jpg`}
+      srcset={`${IMG}/mnac-oval-hall-480w.jpg 480w, ${IMG}/mnac-oval-hall-768w.jpg 768w, ${IMG}/mnac-oval-hall-1200w.jpg 1200w, ${IMG}/mnac-oval-hall-1600w.jpg 1600w, ${IMG}/mnac-oval-hall.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The Oval Hall of the MNAC in Barcelona: tiers of white seating rising on both sides of a broad central staircase beneath a ring of tall Corinthian columns, arched windows filled with white light, and a coffered dome painted in orange, gold and pale blue, with a handful of small figures on the steps and the floor."
+      width={2048}
+      height={1365}
+      caption="The Oval Hall under the dome of the Palau Nacional, built for the 1929 International Exposition. A two-euro basic ticket admits you to this room and to the roof above it, without the collection — the cheapest architectural hour in Barcelona."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="mnac" level={3}>13. MNAC — Museu Nacional d'Art de Catalunya</SectionHeading>
+      <p>
+        The national museum of Catalan art, in the Palau Nacional built for the 1929
+        Exposition, holding something no other museum on earth has: the
+        <strong>Romanesque</strong> collection. In the early twentieth century, with
+        remote Pyrenean churches falling down and their frescoes being sold abroad,
+        Catalonia sent teams into the mountains to lift the paintings off the apse
+        walls and bring them here — then rebuilt the curved apses inside the galleries
+        so the frescoes sit in their true geometry rather than flat on a wall. Walking
+        that sequence is like walking through twenty village churches in an hour.
+        Beyond it come Gothic altarpieces, Baroque, and a strong Modernisme floor.
+      </p>
+      <p>
+        The building explains the pricing quirk that makes this entry unusual. A
+        <strong>basic ticket of €2</strong> admits you to the domed Oval Hall above
+        and the rooftop viewpoint, without the collection — so the best terrace on
+        Montjuïc and one of the grandest interiors in the city cost less than a
+        coffee.
+      </p>
+      <p>
+        <strong>Time</strong> three hours for the collection, 30 minutes for the
+        building and roof · <strong>Pairs with</strong> the rest of Montjuïc — the
+        Fundació Miró is a twelve-minute walk ·
+        <strong>Booking</strong> none needed. <strong>€12</strong> general, covering
+        temporary shows and the rooftop and valid on two days within a month;
+        <strong>€2</strong> basic as above; free to under-16s and over-65s;
+        <strong>free every Saturday from 15:00</strong> and the first Sunday of the
+        month; <strong>closed Mondays</strong>. Confirm on
+        <a href="https://www.museunacional.cat/en/opening-hours-and-prices" rel="noopener">the
+        museum's own hours and prices page</a> ·
+        <strong>Skip if</strong> you have three days or fewer and would rather have
+        the old city. First visit if medieval art is your subject; otherwise longer
+        stay, with the €2 building visit available at any time.
+      </p>
+
+      <SectionHeading id="fundacio-miro" level={3}>14. Fundació Joan Miró</SectionHeading>
+      <p>
+        The most coherent of the three, and the one an artist designed for his own
+        work. Miró gave the collection to the city and had his friend Josep Lluís
+        Sert build the house for it in the 1970s: white concrete, top-lit galleries,
+        terraces open to the Montjuïc pines. Because it is a single artist's whole
+        arc in a building tuned to it, it asks less of you than the other two and
+        gives back more per hour — and the roof terrace, with sculpture standing
+        against the city below, is one of the pleasantest places to sit down in
+        Barcelona. Choose it if you want Catalan modernism as a living argument
+        rather than a heritage listing.
+      </p>
+      <p>
+        <strong>Time</strong> 90 minutes to two hours ·
+        <strong>Pairs with</strong> the MNAC, twelve minutes downhill, and the castle
+        above · <strong>Booking</strong> none needed. <strong>€17 online</strong>
+        against <strong>€18</strong> at the door, concessions about €11–€12, free
+        under 12; Tuesday to Saturday 10:00–20:00 and Sunday 10:00–19:00 from April
+        to October, closing at 19:00 daily in winter,
+        <strong>closed Mondays</strong>. Confirm on
+        <a href="https://www.fmirobcn.org/en/visit-us/opening-hours-and-prices/" rel="noopener">the
+        foundation's own hours and prices page</a> ·
+        <strong>Skip if</strong> twentieth-century abstraction is not for you.
+        Longer stay, and the best of the three if you are only on Montjuïc for
+        half a day.
+      </p>
+    </div>
+
+    <Chapter
+      id="hill"
+      number="V."
+      name="The Hill and the View"
+      epithet="Two entries, and the discovery that in Barcelona the height you pay most for is not the height worth having"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Barcelona rises from the sea to the ridge of Collserola, so it has an
+        unusual number of ways to get above itself — from free to thirty-nine euros
+        for a view that is not four times better. This group is about that gap.
+      </p>
+
+      <SectionHeading id="montjuic" level={3} rule={false}>15. Montjuïc</SectionHeading>
+      <p>
+        Not a sight but a district on a hill, and the only one of Barcelona's four
+        grounds that can absorb a whole day without repeating itself. On it stand
+        the two museums above, the 1929 Exposition landscape of terraces and
+        fountains below the Palau Nacional, the Olympic ring of 1992, the
+        botanical gardens, and at the summit the <strong>castle</strong> — an
+        eighteenth-century fortress worth being blunt about: its guns pointed at
+        the city more often than out to sea, and it served as a prison and a place
+        of execution into the twentieth century, most notoriously for the president
+        of Catalonia in 1940. Its ramparts give the best view of the working port.
+      </p>
+      <p>
+        The practical content of this entry is how you go up, because the options
+        differ by a factor of six. The <strong>Funicular de Montjuïc</strong> from
+        Paral·lel is part of the metro network, runs on an ordinary integrated fare
+        and takes two minutes. The <strong>Telefèric de Montjuïc</strong> cable car
+        onward to the castle is a separate commercial operation at
+        <strong>€19 return</strong> or <strong>€12</strong> one way — more than the
+        MNAC's general admission, for a ten-minute ride. It is a fine ride and it is
+        not necessary: the funicular plus the 150 bus reaches the same gate.
+      </p>
+      <p>
+        <strong>Time</strong> half a day minimum; a full day with two museums ·
+        <strong>Pairs with</strong> Plaça d'Espanya and the Exposition axis below ·
+        <strong>Booking</strong> none for the hill. The castle is
+        <strong>free every Sunday from 15:00</strong> and all day on the first Sunday
+        of the month, sells online only, and publishes hours on
+        <a href="https://ajuntament.barcelona.cat/castelldemontjuic/en/visit/planning-your-visit" rel="noopener">its
+        own visitor page</a>; cable-car fares are on
+        <a href="https://www.telefericdemontjuic.cat/en" rel="noopener">the
+        Telefèric site</a> · <strong>Skip if</strong> you have one day; it is a
+        half day in the wrong direction. First visit at three days or more.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/tibidabo-ferris-wheel-over-the-city.jpg`}
+      srcset={`${IMG}/tibidabo-ferris-wheel-over-the-city-480w.jpg 480w, ${IMG}/tibidabo-ferris-wheel-over-the-city-768w.jpg 768w, ${IMG}/tibidabo-ferris-wheel-over-the-city-1200w.jpg 1200w, ${IMG}/tibidabo-ferris-wheel-over-the-city-1600w.jpg 1600w, ${IMG}/tibidabo-ferris-wheel-over-the-city.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A ferris wheel with brightly coloured open cabins standing on the summit of Tibidabo above Barcelona in hazy afternoon light, the city grid running away below it to the port and the Mediterranean, a lattice mast to the right, a pine in the near foreground and a red-surfaced terrace below."
+      width={2048}
+      height={1365}
+      caption="Tibidabo is a hundred-year-old fairground on the highest summit above Barcelona, and this is the honest picture of it: a ferris wheel, a haze, and the whole city between you and the sea. Whether that is worth ninety minutes each way is the argument of the next entry."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="high-ground" level={3}>16. The free high ground — and the case against Tibidabo</SectionHeading>
+      <p>
+        <strong>Bunkers del Carmel</strong>, properly the Turó de la Rovira, is the
+        best view in Barcelona and it costs nothing: a hilltop at 262 metres
+        carrying the concrete emplacements of an anti-aircraft battery built in 1937
+        against Italian bombers, later covered by a shanty settlement until the
+        1990s and now interpreted by the city history museum. The view is a full
+        circle — sea, port, the Sagrada Família standing out of the grid, Montjuïc
+        opposite, Collserola behind — which no paid viewpoint manages. There is no ticket and no gate, and it is
+        <strong>closed at night</strong>, a restriction imposed after the hill became
+        a nightly party at the residents' expense. This entry is
+        <em>assessed</em>: the argument rests on official information and geography,
+        not on having stood up there.
+      </p>
+      <p>
+        <strong>Tibidabo</strong>, by contrast, was visited, and the verdict is a
+        qualified no. The summit carries three things: the
+        <strong>Temple Expiatori del Sagrat Cor</strong>, a church of 1902–1961
+        topped by a bronze Christ, free to enter with a small charge for the lift to
+        its terraces; the oldest amusement park in Spain, opened in 1901 and still
+        running its original aeroplane ride and automaton museum; and the finest
+        single view in the city. The trouble is the burden — a train or bus to the
+        foot of the hill, then the <em>Cuca de Llum</em> funicular, comfortably
+        ninety minutes each way before you have looked at anything. A full park
+        ticket is <strong>€39</strong>; a <em>Panoramic Area</em> pass covering the
+        five old attractions and the transport up is <strong>€21.50</strong>. With
+        children it is a good day and the park is charming rather than cynical.
+        Without them, the Bunkers give a better view for nothing.
+      </p>
+      <p>
+        <strong>Time</strong> 45 minutes at the Bunkers plus half an hour each way;
+        a half day minimum for Tibidabo · <strong>Pairs with</strong> the Bunkers
+        with Gràcia or Park Güell below; Tibidabo with nothing ·
+        <strong>Booking</strong> none for the Bunkers or the church. Park rates are
+        on
+        <a href="https://tibidabo.cat/en/plan-the-visit/rates" rel="noopener">Tibidabo's
+        own page</a>; the Bunkers' interpretation centre keeps short seasonal hours
+        published by
+        <a href="https://www.barcelona.cat/museuhistoria/en" rel="noopener">MUHBA</a>,
+        though the hilltop needs neither ·
+        <strong>Skip if</strong> Tibidabo, unless you have children. The Bunkers:
+        first visit, and go for the last hour of light.
+      </p>
+    </div>
+
+    <Chapter
+      id="open-ground"
+      number="VI."
+      name="Water, Open Ground and the Evening"
+      epithet="The unticketed half of Barcelona, which is also the half most visitors run out of time for"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Three entries, no tickets, and the part of a stay travellers most often
+        discover they failed to schedule. Everything above is a room you enter and
+        leave; this group is the city itself, and it is what people remember.
+      </p>
+
+      <SectionHeading id="waterfront" level={3} rule={false}>17. The waterfront and the beaches</SectionHeading>
+      <p>
+        Barcelona spent most of its history with its back to the sea — the old port
+        was industry, the shore was rail yards, and the beaches as they now exist
+        were largely built for the 1992 Olympics, which is why the waterfront feels
+        less ancient than everything behind it. Walk it rather than sit on it: from
+        the <strong>Moll de la Fusta</strong> at the foot of the Rambla, past the
+        working end of the old harbour and the marina of
+        <strong>Port Vell</strong>, round the headland of
+        <strong>Barceloneta</strong> — a triangular grid of narrow streets built in
+        the 1750s for people displaced by the Ciutadella fortress, and still the
+        densest neighbourhood in the city — and on up the sand towards
+        <strong>Port Olímpic</strong>.
+      </p>
+      <p>
+        On swimming: the Barceloneta beach is the busiest and least pleasant, and
+        every stop further north-east on the L4 improves it. The
+        <strong>Poblenou</strong> beaches — Bogatell, Mar Bella, Nova Mar Bella — are
+        wider, calmer and fifteen minutes from the old city, which is the whole trick.
+      </p>
+      <p>
+        <strong>Time</strong> 90 minutes on foot from the Rambla to Port Olímpic ·
+        <strong>Pairs with</strong> El Born and Santa Maria del Mar, eight minutes
+        inland · <strong>Booking</strong> none. Free ·
+        <strong>Skip if</strong> you have one day and no evening — the harbour is the
+        right end to a single day, the beaches are not. First visit for the walk;
+        longer stay for the sand.
+      </p>
+
+      <SectionHeading id="ciutadella" level={3}>18. Parc de la Ciutadella and the Arc de Triomf</SectionHeading>
+      <p>
+        The one large park in the flat city, and a piece of history disguised as
+        lawn. After the siege of 1714 the victorious Bourbon crown levelled a whole
+        district and built a star-shaped citadel with its guns trained inward on the
+        city it had just taken; Barcelona spent a century and a half trying to have
+        it demolished, succeeded in the 1860s, and turned the site into a park. So
+        the pleasantest green space in the old city is a deliberate erasure.
+      </p>
+      <p>
+        In it: a monumental cascade a young Gaudí worked on as a student assistant, a
+        boating lake, the parliament of Catalonia in the surviving arsenal, the zoo,
+        and Domènech i Montaner's brick and iron
+        <strong>Castell dels Tres Dragons</strong>, built as a café-restaurant for
+        the 1888 Universal Exposition. The approach is the best part. The
+        <strong>Arc de Triomf</strong> stands at the head of
+        <strong>Passeig de Lluís Companys</strong>, an avenue of palms and ornate
+        iron lamp standards built as the gateway to that exposition; it is red brick
+        rather than stone, and its frieze welcomes the nations rather than
+        commemorating a victory.
+      </p>
+      <p>
+        <strong>Time</strong> an hour, or two with the walk up from the arch ·
+        <strong>Pairs with</strong> El Born on its west side and the Museu Picasso
+        beyond · <strong>Booking</strong> none. Park and arch are free; the zoo is
+        separately ticketed · <strong>Skip if</strong> you have a single day. First
+        visit at three days or more, and the best place in the city to do nothing.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/arc-de-triomf-from-the-avenue.jpg`}
+      srcset={`${IMG}/arc-de-triomf-from-the-avenue-480w.jpg 480w, ${IMG}/arc-de-triomf-from-the-avenue-768w.jpg 768w, ${IMG}/arc-de-triomf-from-the-avenue-1200w.jpg 1200w, ${IMG}/arc-de-triomf-from-the-avenue-1600w.jpg 1600w, ${IMG}/arc-de-triomf-from-the-avenue.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The Arc de Triomf in Barcelona seen down the length of Passeig de Lluís Companys in low evening sun: a red brick arch at the far end of a broad, almost empty roadway, flanked by rows of date palms and tall ornate white iron lamp standards, with a wooded hill visible through the archway."
+      width={2048}
+      height={1365}
+      caption="Seven in the evening on Passeig de Lluís Companys, which is the hour this avenue is for. The arch was built as a welcome rather than a victory, and the hills of Collserola close the view straight through it."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="evening" level={3}>19. An evening on neighbourhood streets</SectionHeading>
+      <p>
+        The last entry is not a place. It is here because every ticketed thing above
+        closes, and the remaining four hours decide whether you liked Barcelona. The
+        instruction is narrow: <strong>pick a neighbourhood and stay in it</strong>.
+        This city rewards depth in the evening and punishes crossing it for a
+        recommendation — the metro ride you take at nine to reach a famous bar costs
+        you the street you were standing in.
+      </p>
+      <p>
+        Three that work, for different reasons. <strong>Gràcia</strong> was an
+        independent town until 1897 and still behaves like one: narrow streets
+        opening into a chain of squares — Plaça de la Vila, Plaça del Sol, Plaça de
+        la Virreina — each with tables across it, and if your dates fall in the third
+        week of August the <strong>Festa Major</strong> fills those streets with
+        decorations built competitively by each block, the least touristic large
+        event in the city. <strong>Poble-sec</strong>, under Montjuïc, is where the
+        standing bars are, and where the vermouth habit of a small glass and
+        something salty before dinner is an ordinary weekday act rather than a
+        revival. <strong>El Born</strong> holds the densest concentration of small
+        serious kitchens.
+      </p>
+      <p>
+        <strong>Time</strong> four hours, unstructured ·
+        <strong>Pairs with</strong> wherever you are sleeping, which is the strongest
+        argument on this site for
+        <a href="/best-areas-to-stay-in-barcelona/">choosing that with care</a> ·
+        <strong>Booking</strong> none, except a table ·
+        <strong>Skip if</strong> never. First visit, and the cheapest entry here.
+      </p>
+    </div>
+
+    <Practical place="Barcelona — Choosing Between Them" detail="19 entries · verified 4 August 2026" detailIcon="🎟">
+      <PracticalSection label="What genuinely needs booking" level={3} id="booking">
+        <div class="prac-item">
+          <strong>The Sagrada Família</strong> — timed, online only, and
+          unforgiving of a late arrival. The one booking that can spoil a trip if
+          left late.
+        </div>
+        <div class="prac-item">
+          <strong>Park Güell</strong> — by time band, with a thirty-minute grace
+          period. Take the earliest band you can get.
+        </div>
+        <div class="prac-item">
+          <strong>Worth booking a few days ahead in season</strong> — the Palau de
+          la Música, whose visit slots are limited by rehearsals, and either Gaudí
+          house on Passeig de Gràcia.
+        </div>
+        <div class="prac-item">
+          <strong>Everything else on this page</strong> can be bought on the day
+          or costs nothing.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Where the money actually goes" level={3}>
+        <div class="tip-row">
+          <strong>The cheapest good hour in Barcelona</strong> is the MNAC's €2
+          basic ticket: the Oval Hall, the building and the rooftop, without the
+          collection.
+        </div>
+        <div class="tip-row">
+          <strong>The best value ticket</strong> is the combined Palau de la
+          Música and Sant Pau at €32 — two UNESCO-listed Domènech i Montaner
+          buildings for a little more than one Gaudí house.
+        </div>
+        <div class="tip-row">
+          <strong>The most avoidable expense</strong> is the Montjuïc cable car at
+          €19 return. The funicular from Paral·lel is an ordinary metro fare and
+          the 150 bus finishes the climb.
+        </div>
+        <div class="tip-row">
+          <strong>Free, and not second-rate</strong> — Bunkers del Carmel, the
+          Barri Gòtic, El Born, La Boqueria, Ciutadella and the Arc de Triomf, the
+          beaches, the Sagrat Cor's church and crypt, and Santa Maria del Mar
+          outside its ticketed hours.
+        </div>
+        <div class="tip-row">
+          <strong>Transport</strong> — a single metro journey is
+          <strong>€2.90</strong> and a ten-journey <strong>T-casual</strong> is
+          <strong>€13</strong>, which pays for itself twice over on any stay that
+          crosses the city daily. Fares are on
+          <a href="https://www.tmb.cat/en/barcelona-fares-metro-bus/transport-ticket-fares" rel="noopener">TMB's
+          own page</a>.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="What pairs with what, geographically" level={3}>
+        <div class="prac-item">
+          <strong>The northern Eixample</strong> — Sant Pau at the top of Avinguda
+          de Gaudí, then a kilometre downhill to the Sagrada Família. Two entries,
+          one walk, and the best approach in the city.
+        </div>
+        <div class="prac-item">
+          <strong>Passeig de Gràcia</strong> — La Pedrera and the Illa de la
+          Discòrdia, four blocks apart, one interior between them.
+        </div>
+        <div class="prac-item">
+          <strong>The old city, east half</strong> — the Cathedral and cloister,
+          Plaça del Rei, Santa Maria del Mar, the Museu Picasso and El Born. Five
+          entries and almost no transport.
+        </div>
+        <div class="prac-item">
+          <strong>Montjuïc</strong> — the MNAC, the Fundació Miró and the castle,
+          from the Paral·lel funicular. A half day at minimum and the only group
+          that fills a day on its own.
+        </div>
+        <div class="prac-item">
+          <strong>The northern hills</strong> — Park Güell, the Bunkers and Gràcia
+          sit within a couple of kilometres of one another; Bellesguard and
+          Tibidabo are further out and pair with nothing.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Closing days and hours to plan around" level={3}>
+        <div class="tip-row">
+          <strong>Mondays</strong> close the Museu Picasso, the MNAC and the
+          Fundació Miró, and most municipal museums with them. The Gaudí houses,
+          Sant Pau and the churches stay open, so Monday is a Modernisme day
+          whether you planned it or not.
+        </div>
+        <div class="tip-row">
+          <strong>Sundays</strong> shut La Boqueria entirely and delay the
+          Cathedral's visiting hours until two in the afternoon. They are also
+          when the Montjuïc castle is free from three, and when the first-Sunday
+          free museum admissions fall.
+        </div>
+        <div class="tip-row">
+          <strong>Afternoons</strong> are cheaper at Sant Pau, which drops its
+          admission after two o'clock, and later at Casa Batlló, which stays open
+          into the evening when almost nothing else does.
+        </div>
+        <div class="tip-row">
+          <strong>Check service alerts before any cross-city day.</strong>
+          Barcelona concentrates its metro engineering between late June and early
+          September, and stations and whole sections of line close for weeks at a
+          time on a few weeks' notice. Read
+          <a href="https://www.tmb.cat/en/get-to-know-tmb/transport-network-improvements/metro" rel="noopener">TMB's
+          network improvements page</a> in the week before you travel rather than
+          trusting a route on this one.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="On the ground" level={3}>
+        <div class="tip-row">
+          <strong>Dress for a church.</strong> Covered shoulders and nothing above
+          mid-thigh at the Sagrada Família, and the same courtesy at the Cathedral
+          and Santa Maria del Mar. In August this turns people away daily.
+        </div>
+        <div class="tip-row">
+          <strong>Pickpocketing</strong> is a real and specific problem on La
+          Rambla, inside La Boqueria and on the metro at rush hour. It is not a
+          reason to avoid any of them; it is a reason to carry nothing in a back
+          pocket.
+        </div>
+        <div class="tip-row">
+          <strong>Shade is unevenly distributed.</strong> Park Güell's terrace,
+          the Montjuïc esplanades and the Bunkers have none at all; the Eixample's
+          plane trees, the cathedral cloister and Ciutadella have plenty. In July
+          and August that difference decides the order of a day.
+        </div>
+        <div class="tip-row">
+          <strong>Nothing here needs a car</strong>, and several entries are
+          actively worse with one.
+        </div>
+      </PracticalSection>
+    </Practical>
+
+    <div class="narrative prose">
+      <SectionHeading id="omitted">What did not make the list, and who it would still suit</SectionHeading>
+      <p>
+        Seven things were considered and left out, and naming them is more useful
+        than padding the count. <strong>Camp Nou</strong> — a pilgrimage rather than
+        a visit, complicated further by the long stadium redevelopment.
+        <strong>The Museu d'Història de Catalunya</strong>, a good national narrative
+        museum that loses to the MNAC on the same afternoon.
+        <strong>MACBA</strong> and the contemporary art quarter in El Raval, a poor
+        fourth museum on a page that has already asked you to choose one of three.
+        <strong>The Aquarium and the Museu de la Xocolata</strong>, reasonable with
+        children and not worth an adult's afternoon. <strong>Casa Amatller and Casa
+        Lleó Morera</strong>, whose exteriors are already inside entry 4 and whose
+        interiors are a third and fourth foyer. <strong>The Monumental</strong>, the
+        old Moorish-styled bullring on Gran Via, closed to bullfighting since
+        Catalonia banned it and now mostly an exterior. And
+        <strong>the Magic Fountain</strong> below the Palau Nacional, whose shows run
+        only in some seasons and on some days: pleasant if you are already on
+        Montjuïc when it is on, a wasted crossing if not.
+      </p>
+      <p>
+        Two omissions are structural rather than judgements.
+        <strong>Nothing outside the city appears here at all</strong> —
+        <a href="/1-day-in-colonia-guell/">Gaudí's crypt at Colònia Güell</a>,
+        half an hour out on the Ferrocarrils line, is where the Sagrada Família's
+        structure was first worked out and is a better building than several
+        entries above, but it is not an experience <em>in</em> Barcelona, and
+        which excursions deserve a whole day is
+        <a href="/best-day-trips-from-barcelona/">judged separately</a>. And
+        <strong>eating</strong> is not here as an activity: La Boqueria appears as
+        a market and an evening as an hour of the day, but how this city eats is a
+        system rather than an attraction, and
+        <a href="/barcelona-food-guide/">it has its own guide</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        Nineteen entries is more than any visit will use, which is the intention.
+        Three are effectively compulsory. Four are variations on one idea, of which
+        you should take one. Three are among the best things in the city and barely
+        on the standard list. And several are here so that a traveller with five days
+        rather than two knows what the extra three are for.
+      </p>
+      <p>
+        The thing worth carrying away is smaller than the list and is not about any
+        building on it. Barcelona is a city of four separated grounds, and the
+        decision that improves a stay more than any ticket is to spend each day on
+        one of them — hill, grid, old city, water — rather than crossing between them
+        twice for things individually excellent and collectively a day spent
+        underground. Choose fewer; stay longer in each. The routes that do the
+        arranging are <a href="/one-day-in-barcelona/">the single day</a> and
+        <a href="/7-days-in-barcelona/">the full week</a>; the road that arrives here
+        from the Atlantic is
+        <a href="/4-weeks-portugal-to-spain-by-rail-road/">four weeks overland from
+        Porto</a>; the rest is in <a href="/chronicles/">the archive</a>.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/one-day-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: 'One Day in Barcelona: From the Hill to the Sea',
+        excerpt:
+          'Which five of these nineteen survive a single day, in what order, and why the whole route runs downhill from Park Güell to the harbour.',
+        meta: ['Barcelona', '1 day'],
+      },
+      {
+        href: '/best-areas-to-stay-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: 'Best Areas to Stay in Barcelona',
+        excerpt:
+          'Seven neighbourhoods assessed on noise, slope, luggage access and the minutes each one adds to every crossing — which decides how many of these you reach.',
+        meta: ['Barcelona', 'Where to stay'],
+      },
+      {
+        href: '/7-days-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: "7 Days in Barcelona: Gaudí's Unfinished Argument",
+        excerpt:
+          'Where the longer-stay entries on this page actually go when there is time for them — a full week at the busiest base of a four-week road.',
+        meta: ['Barcelona', '7 days'],
+      },
+    ]}
+  />
+</ChronicleLayout>

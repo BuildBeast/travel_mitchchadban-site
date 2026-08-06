@@ -1,0 +1,903 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Barcelona Food Guide',
+  headline: 'Barcelona Food Guide: How the City Eats, and What to Order',
+  description:
+    'How eating in Barcelona actually works — the Catalan table, market culture, meal times, vermut, what to order, and which restaurant claims here are first-hand.',
+  path: '/barcelona-food-guide/',
+  ogImage: '/images/barcelona-food-guide/xarcuteria-la-pineda-shopfront.jpg',
+  factsVerified: '2026-08-04',
+};
+
+const IMG = '/images/barcelona-food-guide';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Catalonia', 'Barcelona']}
+    label="Food · The System and the Table"
+    title="Barcelona Food Guide:"
+    titleEmphasis="How the City Eats, and What to Order"
+    standfirst="Not a ranked list of restaurants. Barcelona collapses four or five separate food traditions into the word tapas, and the useful skill is recognising what kind of place you are standing in, what belongs on its counter, and what hour it wants you to arrive."
+    stats={[
+      { num: '39', label: 'Food Markets' },
+      { num: '14:00', label: 'Lunch Starts' },
+      { num: '21:30', label: 'Dinner Starts' },
+      { num: '5', label: 'Documented Tables' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          The word that ruins Barcelona for visitors is <em>tapas</em>. It is not
+          that tapas do not exist here — they do — but that the word has been
+          made to carry four or five unrelated things at once, and a traveller
+          holding one word for five traditions cannot tell them apart. Catalan
+          home cooking is not tapas. A Basque pintxo bar in the Eixample is not
+          Catalan. A plate of <em>conserves</em> eaten standing at a marble
+          counter in Poble-sec belongs to a tradition of tinned seafood that has
+          nothing to do with fried Andalusian bar food. And the thing sold on
+          La Rambla under a photograph of paella belongs to none of them.
+        </p>
+        <p>
+          So this is a guide to the system rather than a directory. It sets out
+          what the traditions actually are, the clock the city keeps, the words
+          you need to order in the right units, a focused vocabulary of dishes
+          worth crossing a room for, an honest reading of the four markets that
+          matter, and how the table changes as you move between
+          neighbourhoods. The question it answers is not which ten places to
+          book. It is: <em>what kind of place is this, what should I order in
+          it, and what time does it want me?</em>
+        </p>
+        <p>
+          It is also unusually careful about what it claims to have eaten, for
+          reasons set out below. Five establishments appear in the record of the
+          stays behind this site. Some were sat down in; one is recorded as a
+          recommendation and photographed from the pavement; not one has an
+          exact order written down anywhere. Rather than invent five meals to
+          make the prose richer, this page labels each claim for what it is.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/xarcuteria-la-pineda-shopfront.jpg`}
+      srcset={`${IMG}/xarcuteria-la-pineda-shopfront-480w.jpg 480w, ${IMG}/xarcuteria-la-pineda-shopfront-768w.jpg 768w, ${IMG}/xarcuteria-la-pineda-shopfront-1200w.jpg 1200w, ${IMG}/xarcuteria-la-pineda-shopfront-1600w.jpg 1600w, ${IMG}/xarcuteria-la-pineda-shopfront.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The shopfront of Xarcuteria La Pineda on Carrer del Pi in Barcelona: a glazed tile sign reading LA PINEDA FIAMBRES above a white awning lettered XARCUTERIA LA PINEDA and DES DE L'ANY 1930, an open doorway showing small marble-topped tables and a lit interior, a window stacked with tinned conserves, and two chalkboards listing tasting menus beside the door."
+      width={2048}
+      height={1365}
+      caption="A xarcuteria is not a restaurant, not a deli and not a tapas bar, and the sign tells you which rules apply: cured meat and cheese sold by weight, a few marble tables, a glass of vermut, and no kitchen at all. Recognising the type is most of the skill."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="evidence" rule={false}>What is first-hand here, and what is not</SectionHeading>
+      <p>
+        The stays behind this site were <strong>August 2023</strong> and
+        <strong>August 2024</strong>, the second of them six nights in El Raval.
+        La Boqueria and the Mercat de Sant Antoni were visited and photographed.
+        The photographs on this page are all from those stays.
+      </p>
+      <p>
+        Everything about how the city eats — the clock, the formats, the
+        vocabulary, the markets — is either durable cultural practice or was
+        checked against official sources on <strong>4 August 2026</strong> and is
+        dated accordingly. Where a market's hours or an establishment's status
+        matters, the official page is linked rather than transcribed, because
+        those move faster than any article.
+      </p>
+      <p>
+        And where the record of a meal is thin, the page says so. A photograph
+        of a shopfront proves someone stood at the door; it does not prove what
+        was ordered. That distinction is kept throughout, and the honest
+        accounting sits in its own section at the end.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'glance', label: 'At a glance' },
+        { id: 'what-it-is', label: 'What the food is' },
+        { id: 'the-clock', label: 'The clock' },
+        { id: 'formats', label: 'Ordering formats' },
+        { id: 'what-to-order', label: 'What to order' },
+        { id: 'markets', label: 'The markets' },
+        { id: 'neighbourhoods', label: 'Neighbourhoods' },
+        { id: 'mistakes', label: 'Common mistakes' },
+        { id: 'record', label: 'The documented record' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="Eating in Barcelona at a Glance"
+    meta={[
+      {
+        label: 'The one thing to internalise',
+        value:
+          'Recognise the type of room before you order. A xarcuteria, a standing conserves bar, a menú del dia dining room, a market stall and a contemporary restaurant want completely different things from you.',
+      },
+      {
+        label: 'The clock, roughly',
+        value:
+          'Coffee and something small from seven. Lunch from about two, and busy until half past three. Vermut in the late morning at weekends or from seven in the evening. Dinner from about half past nine.',
+      },
+      {
+        label: 'Order these and you will not have eaten badly',
+        value:
+          'Pa amb tomàquet · escalivada · esqueixada · botifarra amb mongetes · a tin of good conserves · suquet or a rice · crema catalana. All Catalan, none of them difficult to find.',
+      },
+      {
+        label: 'The single best-value meal',
+        value:
+          'A weekday menú del dia — three courses, bread and a drink at a fixed price, served at lunch only, in ordinary neighbourhood dining rooms rather than anywhere you have read about.',
+      },
+    ]}
+    daysHeading="The Traditions, Untangled"
+    days={[
+      { num: 'Catalan', text: 'The regional kitchen proper: escalivada, esqueixada, botifarra, suquet, fideuà. Vegetables and salt cod and pork, and sauces built slowly.' },
+      { num: 'Market', text: 'Thirty-nine municipal food markets. Shopping halls first, with a handful of counters that cook. Not food courts.' },
+      { num: 'Tapes', text: 'A format, not a cuisine — small plates to share. In Barcelona the working words are more often platillos and racions.' },
+      { num: 'Pintxos', text: 'A Basque format widely present here. Skewered bites on bread, counted at the end. Excellent, and not Catalan.' },
+      { num: 'Conserves', text: 'Tinned seafood and preserves treated as a delicacy, eaten on bread at a standing counter. The most Barcelona thing on this page.' },
+      { num: 'Vermut', text: 'A drink and an hour. Sweet red vermouth with a siphon of soda, an olive, something salty, before a meal rather than after.' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter
+      id="what-it-is"
+      number="I."
+      name="What Barcelona Food Actually Is"
+      epithet="Five traditions sharing one city, and the reason a single word cannot hold them"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Start with the region rather than the city. <strong>Catalan
+        cooking</strong> is one of the old regional kitchens of the western
+        Mediterranean and it has a recognisable grammar: a base of slowly
+        softened onion and tomato; the nut-and-bread thickeners that turn a
+        broth into a sauce; the habit of putting fruit with meat and salt cod
+        with vegetables; and a genuine reverence for grilled and roasted
+        vegetables that most of Spain does not share. It is not a light cuisine
+        and it is not a fiery one. It is a patient one, and the phrase you will
+        see on menus — <em>cuina de mercat</em>, market cooking — is a claim
+        about sourcing rather than style.
+      </p>
+      <p>
+        That grammar has names, and knowing four of them makes a Catalan menu
+        legible. A <strong>sofregit</strong> is the foundation — onion, and often
+        tomato, cooked down slowly until it is jam rather than vegetable; almost
+        every stew in the region starts here, and the difference between a good
+        kitchen and a lazy one is how long it was given. A
+        <strong>picada</strong> is the finish: nuts, garlic, fried bread, parsley
+        and sometimes chocolate pounded together and stirred in at the end to
+        thicken and perfume a sauce, which is why Catalan stews have body without
+        flour or cream. <strong>Samfaina</strong> is the region's answer to
+        ratatouille, and <strong>romesco</strong> the pounded sauce of roasted
+        peppers, almonds and bread that arrives with grilled things and with
+        calçots. Sofregit at the start, picada at the end: that is the shape of
+        most of what you will eat.
+      </p>
+      <p>
+        Onto that sits <strong>market culture</strong>, which in Barcelona is
+        unusually institutional. The city runs its markets through a municipal
+        body, the Institut Municipal de Mercats, set up in 1991; there are
+        <strong>thirty-nine food markets</strong> and four non-food ones, and
+        the network is dense enough that almost every neighbourhood has one
+        within walking distance. That matters to a visitor for a reason that is
+        not romantic: it means the good produce is distributed across the whole
+        city, so there is no need to travel to a famous market to eat well.
+      </p>
+      <p>
+        Then the formats. <strong>Tapes</strong> — small plates — are real here
+        but less central than in Andalucía, and the Catalan habit leans towards
+        slightly larger shared plates. <strong>Pintxos</strong> bars are
+        everywhere and are a Basque import: very good, worth an evening, and not
+        evidence of anything about Catalan food.
+        <strong>Conserves</strong> — high-quality tinned seafood, mussels,
+        cockles, anchovies, tuna belly — are treated here as a delicacy rather
+        than a compromise, and the standing bars that serve them on bread are
+        the format most specific to this city.
+      </p>
+      <p>
+        Two more strands complete the picture. The <strong>sea</strong> gives
+        Barcelona salt cod, anchovies, small fried fish, and the rice and noodle
+        dishes discussed below — though the city's relationship with paella is
+        complicated and is dealt with under mistakes.
+        And <strong>immigration and the contemporary restaurant scene</strong>
+        have made the last two decades the most interesting in the city's cooking
+        since the war.
+      </p>
+      <p>
+        That last strand deserves more than a clause, because it is where
+        Barcelona now differs most from its own reputation. The Catalan avant-garde
+        of the 1990s and 2000s trained a generation, and when those kitchens
+        closed or contracted their cooks did not leave — they opened small rooms
+        of twenty or thirty covers across Sant Antoni, Poble-sec, Gràcia and the
+        Eixample, cooking recognisably Catalan food with technique borrowed from
+        far grander places. Running alongside it is a second layer with nothing to
+        do with fine dining: Pakistani and Bangladeshi kitchens through El Raval,
+        Filipino and Latin American cooking in Sant Antoni and Poble-sec, and a
+        bakery revival that has quietly made this one of the better cities in
+        Europe for bread. Neither layer is what the guidebooks describe, and
+        together they are the reason a week here is not repetitive.
+      </p>
+    </div>
+
+    <Beat>Five traditions, one word, and a menu that will not explain the difference to you.</Beat>
+
+    <Chapter
+      id="the-clock"
+      number="II."
+      name="The Clock"
+      epithet="The single largest cause of a disappointing meal here, and it has nothing to do with the cooking"
+    />
+
+    <div class="narrative prose">
+      <p>
+        More visitors eat badly in Barcelona because of the hour than because of
+        the address. A kitchen serving at seven in the evening is, with few
+        exceptions, a kitchen serving people who do not live here. The rhythm,
+        loosely, runs like this.
+      </p>
+      <p>
+        <strong>Breakfast</strong> is small and early — coffee standing at a bar
+        with a pastry, or bread with tomato. It is not an event.
+        <strong>Second breakfast</strong>, mid-morning, is the one visitors never
+        expect: a sandwich or a small plate around eleven, which is why bars are
+        busy at an hour that seems to belong to nothing.
+        <strong>Lunch</strong> is the real meal. Kitchens fill from about two and
+        are busy until half past three; arriving at one o'clock gets you a room
+        that has not started, and arriving at four gets you a kitchen closing.
+      </p>
+      <p>
+        The <strong>afternoon</strong> is where the generalisations break down.
+        Plenty of central places now trade straight through, and it is no longer
+        safe to assume the whole city shuts between four and seven — but the
+        neighbourhood dining rooms worth finding do close, and the market
+        counters certainly do. <strong>Vermut</strong> occupies the slot before a
+        meal: late morning at weekends, or from about seven in the evening.
+        <strong>Dinner</strong> begins at half past nine and a nine o'clock
+        booking is early. In August, when the heat pushes everything later, a
+        terrace at eleven is ordinary.
+      </p>
+      <p>
+        Two practical consequences. First, a day of sightseeing should be built
+        so that lunch lands at two rather than being squeezed in at noon — this
+        is the reason
+        <a href="/one-day-in-barcelona/">the single-day route</a> puts its meal
+        where it does. Second, do not publish your own schedule onto the city:
+        if you need to eat at seven, eat at a market counter or a pintxos bar,
+        both of which are genuinely open, rather than at a restaurant that will
+        cook for you resentfully.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/placa-del-pi-before-the-tables.jpg`}
+      srcset={`${IMG}/placa-del-pi-before-the-tables-480w.jpg 480w, ${IMG}/placa-del-pi-before-the-tables-768w.jpg 768w, ${IMG}/placa-del-pi-before-the-tables-1200w.jpg 1200w, ${IMG}/placa-del-pi-before-the-tables.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
+      alt="An empty flagstoned square in Barcelona's old city at blue hour: stone bollards and a litter bin in the foreground, a pine tree at the right, shuttered shopfronts including one lettered ANTIGUA PASAMANERÍA, a lit street lamp, and a façade covered in pale sgraffito decoration under a deep blue sky."
+      width={1365}
+      height={2048}
+      caption="An old-city square with the shutters down and no tables out. This is the hour most visitors go looking for dinner, and the photograph is the argument: the city has not started yet."
+      variant="portrait"
+    />
+
+    <Chapter
+      id="formats"
+      number="III."
+      name="Ordering Formats"
+      epithet="The words that decide how much food arrives, and how much it costs to sit down"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Getting the units right matters more than getting the dish right. A
+        table that orders six <em>racions</em> thinking they are tapas will be
+        defeated by the third.
+      </p>
+      <p>
+        A <strong>tapa</strong> is a small plate for one. A
+        <strong>platillo</strong> — the word you will meet most often in
+        Barcelona — is a slightly larger plate designed to be shared between two
+        or three; most of the city's good small-plate restaurants are built on
+        these, and four or five between two people is a meal. A
+        <strong>ració</strong> (<em>ración</em>) is a full sharing plate, and two
+        of them plus bread will feed two people properly. Do not import the
+        Andalusian three-size ladder here; Barcelona's working distinction is
+        simply small plate, sharing plate, and main.
+      </p>
+      <p>
+        A <strong>montadito</strong> is a construction on a slice of bread,
+        built to order — the format at the standing conserves bars, where the
+        bread is a plate rather than a sandwich. A <strong>pintxo</strong> is its
+        Basque cousin, usually pinned with a skewer and often laid out along the
+        counter for you to take; the sticks are counted at the end, so keep them.
+        The etiquette differs: at a pintxos bar you serve yourself and are
+        trusted, at a conserves bar you ask and wait.
+      </p>
+      <p>
+        The <strong>menú del dia</strong> is the best-value meal in Spain and it
+        is a weekday lunchtime institution: a starter, a main, bread, a drink
+        and usually a dessert or coffee at one fixed price. It exists to feed
+        people who are working. You will not find it advertised in English, it
+        will not be on a website, and the board outside is often chalk. If you
+        want one good Barcelona habit from this page, it is to eat one of these
+        on a Tuesday.
+      </p>
+      <p>
+        Finally, the geography of the room. Standing at the
+        <strong>bar counter</strong> is normal, sociable and sometimes cheaper.
+        A <strong>table</strong> inside is the ordinary choice. A
+        <strong>terrace</strong> table frequently carries a surcharge, which is
+        legal and should be posted. And a <strong>market stall</strong> is not a
+        restaurant: some counters cook and have stools, most sell you raw
+        ingredients and will be puzzled to be asked for lunch.
+      </p>
+    </div>
+
+    <Chapter
+      id="what-to-order"
+      number="IV."
+      name="What to Order"
+      epithet="A short vocabulary that is genuinely Catalan, and where each thing makes sense"
+    />
+
+    <div class="narrative prose">
+      <p>
+        This is deliberately not a dictionary. Twelve things, each with a note
+        on where ordering it makes sense, which is the part most lists leave out.
+      </p>
+      <p>
+        <strong>Pa amb tomàquet</strong> — bread rubbed with ripe tomato, oil and
+        salt. The foundation of the Catalan table and the test of a kitchen's
+        seriousness about small things. Order it everywhere; it arrives with
+        almost everything.
+        <strong>Escalivada</strong> — aubergine and pepper roasted until they
+        collapse, skinned, dressed in oil, served cool. The best argument that
+        Catalan cooking is a vegetable cuisine. Best in an ordinary dining room
+        rather than anywhere modern.
+        <strong>Esqueixada</strong> — salt cod torn raw into strips and cured in
+        its dressing with tomato, onion and olives. A summer dish, and the one
+        that most surprises visitors expecting cod to be cooked.
+      </p>
+      <p>
+        <strong>Botifarra amb mongetes</strong> — the Catalan sausage grilled and
+        served with white beans. Plain, and a whole regional identity in one
+        plate. A neighbourhood restaurant dish; be suspicious of it on a
+        tasting menu.
+        <strong>Cap i pota</strong> — slow-cooked veal head and trotter, gelatinous
+        and deeply savoury, on menús del dia in old dining rooms and almost
+        nowhere aimed at visitors. If you see it, someone in that kitchen is
+        cooking for locals.
+        <strong>Bombes</strong> — a fried potato ball with a spiced meat centre,
+        Barceloneta's own invention, best eaten in that quarter standing up.
+      </p>
+      <p>
+        <strong>Conserves</strong> — tinned mussels, cockles, razor clams,
+        anchovies, tuna belly, opened at the counter and eaten on bread. Do not
+        read tinned as second-rate; the best of it costs more than fresh fish and
+        is the most characteristic thing you can eat in this city.
+        <strong>Suquet de peix</strong> — the fishermen's stew, potatoes and fish
+        in a broth thickened the Catalan way. A lunch dish, and better near the
+        water.
+        <strong>Arròs and fideuà</strong> — Catalan rice dishes, and the same
+        thing built with short noodles instead of rice. <em>Arròs negre</em>, made
+        black with cuttlefish ink, is the one to order. Both belong at a proper
+        lunch, cooked to order, never sitting under a lamp.
+      </p>
+      <p>
+        <strong>Crema catalana</strong> — the burnt-sugar custard, older and
+        looser than a crème brûlée and flavoured with citrus and cinnamon.
+        <strong>Mel i mató</strong> — fresh unsalted curd cheese with honey and
+        nuts, which is the dessert to order when you have eaten too much
+        already.
+        And <strong>vermut</strong> — sweet red vermouth over ice with a splash
+        of soda, an olive and something salty. Not a cocktail and not an
+        aperitif in the fussy sense; a small ritual with an hour attached, and
+        the easiest local habit to adopt.
+      </p>
+      <p>
+        One seasonal entry, with the honesty it needs.
+        <strong>Calçots</strong> are long sweet spring onions charred whole over
+        vine cuttings, peeled by hand and dipped in romesco, and a
+        <em>calçotada</em> is among the best meals in Catalonia. The season runs
+        roughly <strong>November to April</strong> and peaks between January and
+        March; the heartland is the countryside inland from Tarragona rather than
+        the city. In Barcelona in August they are simply not available, and any
+        menu offering them then is telling you something about itself.
+      </p>
+
+      <SectionHeading id="what-to-drink" level={3}>And what to drink with it</SectionHeading>
+      <p>
+        Catalonia makes its own wine and Barcelona drinks it, which means the
+        house pour is usually local and usually fine. Two regions do most of the
+        work. <strong>Penedès</strong>, half an hour south-west of the city, is
+        where the whites and the sparkling wine come from: this is
+        <strong>cava</strong> country, and the most useful thing to understand
+        about cava is that here it is an everyday wine rather than a celebration
+        one. A glass with lunch is ordinary. <strong>Priorat</strong>, further
+        inland, makes the serious reds — dense, mineral, expensive, grown on
+        slate terraces — and a bottle of it is a decision rather than a default.
+        Between them sit <strong>Empordà</strong> in the north and the
+        everyday reds of <strong>Montsant</strong>, which is where most
+        good-value house wine actually comes from. Penedès is also the one wine
+        region close enough to visit between breakfast and dinner — forty-five
+        minutes on a stopping train, and assessed as
+        <a href="/best-day-trips-from-barcelona/">a day trip in its own
+        right</a>.
+      </p>
+      <p>
+        Beyond wine, three habits. <strong>Vermut</strong>, as above, is the
+        pre-meal ritual and the easiest to adopt. <strong>Beer</strong> is
+        ordered small — ask for a <em>canya</em> and you get a modest draught
+        glass, which is the point, since it stays cold. And if you are handed a
+        <strong>porró</strong> — a glass vessel with a long spout, drunk at arm's
+        length without touching your lips — you are being invited into something
+        rather than tested. Aim for your mouth, not your shirt.
+      </p>
+    </div>
+
+    <PullQuote>
+      Tinned is not a compromise here. The best conserves cost more than the
+      fresh fish beside them, and eating them on bread standing up is the most
+      Barcelona thing on this page.
+    </PullQuote>
+
+    <Chapter
+      id="markets"
+      number="V."
+      name="The Markets"
+      epithet="Four of the thirty-nine, judged on what each one is actually for"
+    />
+
+    <div class="narrative prose">
+      <p>
+        The mistake with Barcelona's markets is treating them as attractions
+        rather than as infrastructure with four different functions: a shopping
+        hall, a place to eat something prepared, a spectacle, and a
+        neighbourhood institution. Most are all four in different proportions.
+      </p>
+      <p>
+        It is also worth knowing how to use one, because the etiquette is not
+        obvious. Stalls are specialists, not departments — the fishmonger does
+        not sell you bread, and you will visit four counters to assemble a lunch.
+        At busy stalls you take a numbered ticket or simply ask
+        <em>qui és l'últim?</em> and wait your turn; pushing to the glass is the
+        one thing that will earn you a hard look. Quantities are given in
+        <em>grams</em>, and asking for a slice or two of something is entirely
+        normal. And almost every market has at least one bar built into it, which
+        opens when the traders do and is among the best-value breakfasts in the
+        city — a counter, a coffee, and something on bread at seven in the
+        morning, surrounded by people who have already been working for hours.
+      </p>
+
+      <SectionHeading id="boqueria" level={3} rule={false}>La Boqueria</SectionHeading>
+      <p>
+        Both the most famous market in Spain and a genuinely working one, and
+        the honest position is not that it has been ruined but that it has two
+        distinct zones. The first aisles off La Rambla are the spectacle: fruit
+        cups, cones of cured ham, juices, things designed to be photographed and
+        eaten walking. Go past them. Behind sit the fish counters, the mushroom
+        specialist, the offal, the salt cod, the egg stall, the pickles — a
+        serious market that supplies restaurants. It trades
+        <strong>Monday to Saturday, 08:00–20:30</strong> and is
+        <strong>closed on Sundays and public holidays</strong>; before eleven is
+        a different and better place than noon. Details on
+        <a href="https://www.boqueria.barcelona/" rel="noopener">the market's own
+        site</a>.
+      </p>
+      <p>
+        <em>Verdict:</em> shopping market with a tourist frontage. Worth twenty
+        minutes for the back half, and it has a handful of counters that cook
+        properly if you can get a stool.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/boqueria-jamon-cones.jpg`}
+      srcset={`${IMG}/boqueria-jamon-cones-480w.jpg 480w, ${IMG}/boqueria-jamon-cones-768w.jpg 768w, ${IMG}/boqueria-jamon-cones-1200w.jpg 1200w, ${IMG}/boqueria-jamon-cones-1600w.jpg 1600w, ${IMG}/boqueria-jamon-cones.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A row of paper cones filled with slices of cured ham in a lit market display case, photographed at a shallow angle so the further cones dissolve into coloured bokeh, with vacuum-packed sliced ham and a printed price label on the counter in the foreground."
+      width={2048}
+      height={1365}
+      caption="The front row of La Boqueria, doing exactly what the front row is for. Nothing here is dishonest and none of it is why the market exists — the fish and the salt cod are forty metres further in."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="sant-antoni" level={3}>Mercat de Sant Antoni</SectionHeading>
+      <p>
+        The one to go to if you want a market rather than a market visit. It sits
+        in a vast iron and brick hall of 1882 at the corner of the Eixample, was
+        rebuilt over most of a decade and reopened with the Roman and medieval
+        remains found underneath left visible. It is three markets in one: the
+        food hall, the surrounding <em>encants</em> of clothing and haberdashery,
+        and a Sunday book and collectors' trade. Note the day —
+        <strong>it closes on Tuesdays</strong>, and the stalls broadly run
+        10:00–20:00 otherwise, which is worth confirming on
+        <a href="https://www.mercatdesantantoni.com/en/" rel="noopener">the
+        market's own site</a> before making a journey.
+      </p>
+      <p>
+        <em>Verdict:</em> neighbourhood institution, and the best of these four
+        for simply watching a city buy its dinner. The bars on the streets around
+        it are the real reward.
+      </p>
+
+      <SectionHeading id="santa-caterina" level={3}>Mercat de Santa Caterina</SectionHeading>
+      <p>
+        <em>Assessed rather than visited.</em> Five minutes from the cathedral,
+        and the most architecturally interesting of the four: Enric Miralles and
+        Benedetta Tagliabue wrapped the old hall in an undulating roof of some
+        325,000 ceramic pieces in 67 colours, meant to echo the produce beneath.
+        Its opening was delayed by four years — planned for 2001, reopened in
+        <strong>May 2005</strong> — because the excavation turned up the church
+        and convent of Santa Caterina, whose Romanesque apse and burial ground
+        are now preserved as a MUHBA space inside the market. Its hours are
+        mixed, with early closing on some days and two late evenings, so check
+        before relying on it.
+      </p>
+      <p>
+        <em>Verdict:</em> a working neighbourhood market with a remarkable roof
+        and an archaeological site in the basement. The obvious choice if you are
+        already in the old city and want a market without the Boqueria's crowd.
+      </p>
+
+      <SectionHeading id="llibertat" level={3}>Mercat de la Llibertat</SectionHeading>
+      <p>
+        <em>Assessed rather than visited.</em> Gràcia's market, and the one that
+        makes the case for the network rather than the landmark. The hall was
+        inaugurated in <strong>1888</strong> to a design by Gràcia's own
+        municipal architect, and its modernista ironwork was decorated by
+        Francesc Berenguer i Mestres — Gaudí's long-time collaborator — which
+        makes it, quietly, one of the Modernisme buildings in this city that
+        nobody queues for. Stalls run roughly Monday to Saturday, 09:00–20:00.
+      </p>
+      <p>
+        <em>Verdict:</em> shopping market, no spectacle, and the right answer if
+        you are staying in Gràcia. Pair it with an evening in the squares
+        described below.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/boqueria-charcuterie-stall.jpg`}
+      srcset={`${IMG}/boqueria-charcuterie-stall-480w.jpg 480w, ${IMG}/boqueria-charcuterie-stall-768w.jpg 768w, ${IMG}/boqueria-charcuterie-stall-1200w.jpg 1200w, ${IMG}/boqueria-charcuterie-stall-1600w.jpg 1600w, ${IMG}/boqueria-charcuterie-stall.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A charcuterie stall in La Boqueria in Barcelona under pink and orange light: whole cured hams hanging in rows, bagged fuet, chorizo and llonganissa strung across the front with large orange handwritten price tags, a chilled counter of sliced meats and cheeses below, and a woman with her back to the camera standing at the glass."
+      width={2048}
+      height={1463}
+      caption="The vocabulary is on the tags: fuet, llonganissa de pagès, chorizo. The prices are the ones that hung there on the day and are no guide to today's — but the range between an everyday fuet and a leg of acorn-fed ham is the lasting lesson."
+    />
+
+    <Chapter
+      id="neighbourhoods"
+      number="VI."
+      name="Neighbourhoods at the Table"
+      epithet="The same city eating five different ways, and which one suits the evening you want"
+    />
+
+    <div class="narrative prose">
+      <p>
+        Where you eat in Barcelona changes what eating means, and the differences
+        are sharper than the distances suggest. This is not a repeat of
+        <a href="/best-areas-to-stay-in-barcelona/">the accommodation
+        assessment</a> — it is only about the table.
+      </p>
+      <p>
+        The <strong>old city</strong> — the Barri Gòtic, El Born, El Raval — has
+        the widest quality range in the smallest area. El Born holds the densest
+        concentration of small serious kitchens; the Gòtic has both
+        century-old xarcuteries and the worst value in Barcelona within fifty
+        metres of each other; El Raval is where the immigrant kitchens and the
+        cheapest good eating are, and it does not flatter anyone. The rule in all
+        three: turn off the wide street.
+      </p>
+      <p>
+        The <strong>Eixample</strong> eats formally. This is where the
+        contemporary restaurants and the business lunches are, the rooms are
+        larger, the pavement tables sit under plane trees, and the food is more
+        expensive and often better. It is also where a menú del dia is easiest to
+        find at a decent standard, because it is feeding office workers.
+      </p>
+      <p>
+        <strong>Sant Antoni and Poble-sec</strong> are, for eating, the best
+        ground in the city. Sant Antoni has the market and the young kitchens
+        that followed it; Poble-sec has Carrer de Blai and the standing bars, and
+        the vermut habit here is an ordinary weekday act rather than a revival.
+        If you want one neighbourhood for one evening, take this one.
+      </p>
+      <p>
+        <strong>Gràcia</strong> eats like the independent town it was until
+        1897 — small rooms opening onto a chain of squares, tables across the
+        flagstones, and an atmosphere that is neighbourly rather than
+        professional. <strong>Poblenou and the waterfront</strong> divide
+        sharply: the beachfront strip is the weakest eating in Barcelona, while
+        two streets inland Poblenou has become genuinely good, and Barceloneta's
+        back lanes still hold proper seafood.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/bar-del-pi-sign.jpg`}
+      srcset={`${IMG}/bar-del-pi-sign-480w.jpg 480w, ${IMG}/bar-del-pi-sign-768w.jpg 768w, ${IMG}/bar-del-pi-sign-1200w.jpg 1200w, ${IMG}/bar-del-pi-sign-1600w.jpg 1600w, ${IMG}/bar-del-pi-sign.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The painted glass sign of Bar del Pi in Barcelona seen from below in low golden light, beneath an iron balcony with green shutters, with the striped and crossed flag of the city and the Spanish and European flags on a pole, and a yellow-rendered building with wooden shutters opposite."
+      width={2048}
+      height={1365}
+      caption="A square bar in the Barri Gòtic at the hour it is for. The test of a place like this is not the menu but whether the tables outside are filled by people who walked two streets to get there."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="mistakes">Eight Common Mistakes</SectionHeading>
+      <p>
+        Eight, because eight is what there is. Each of these costs a meal.
+      </p>
+      <p>
+        <strong>1. Eating on La Rambla by default.</strong> The promenade's
+        restaurants exist because a million people walk past who will not come
+        back. Two streets either side is a different city and usually half the
+        price.
+      </p>
+      <p>
+        <strong>2. Calling everything tapas.</strong> It flattens five traditions
+        and, more practically, it makes you order in the wrong units. Learn
+        <em>platillo</em> and <em>ració</em> and the problem disappears.
+      </p>
+      <p>
+        <strong>3. Hunting paella.</strong> Paella is Valencian, and Barcelona's
+        own rice traditions — <em>arròs negre</em>, <em>fideuà</em> — are better
+        bets here. A photograph of paella on a laminated board, a beachfront
+        terrace, and a dish that arrives in twelve minutes are three signs of the
+        same problem: it was not cooked for you. Rice to order takes half an hour
+        and is normally for two.
+      </p>
+      <p>
+        <strong>4. Building a day around one viral booking.</strong> A table
+        secured six weeks ago in a distant neighbourhood will dictate an entire
+        afternoon and is rarely worth the ground it costs. Barcelona's strength
+        is depth, not peaks.
+      </p>
+      <p>
+        <strong>5. Expecting dinner at seven.</strong> Covered above, and still
+        the most common single error.
+      </p>
+      <p>
+        <strong>6. Confusing a market with a restaurant hall.</strong> Municipal
+        markets are shopping halls with some counters that cook. Arriving hungry
+        at half past three expecting lunch will not work.
+      </p>
+      <p>
+        <strong>7. Treating pintxos as Catalan.</strong> Enjoy them; just do not
+        come away thinking you have eaten the regional cuisine, any more than a
+        good curry in Glasgow explains Scotland.
+      </p>
+      <p>
+        <strong>8. Crossing the city for a table.</strong> The metro ride you
+        take at nine o'clock to reach a recommendation costs you the
+        neighbourhood you were standing in, and the equivalent was usually two
+        hundred metres away. This is the same argument the
+        <a href="/best-things-to-do-in-barcelona/">experiences guide</a> makes
+        about sightseeing, and it is truer of dinner.
+      </p>
+
+      <SectionHeading id="record">What the Documented Stays Actually Ate</SectionHeading>
+      <p>
+        Five establishments appear in the records of the 2023 and 2024 stays. What
+        follows separates what is supported from what is not, because a food guide
+        that invents its own meals is worth nothing. No exact order is written
+        down for any of them.
+      </p>
+      <p>
+        <strong>Quimet &amp; Quimet</strong>, Poble-sec — <em>visited and eaten
+        at; format recorded, dishes not</em>. A standing bar with no seating,
+        lined to the ceiling with bottles, where the food is
+        <em>montaditos</em> built to order from conserves and preserves. Its own
+        site records the bar as founded in <strong>1914</strong> and now in its
+        <strong>fifth generation</strong>, taking no reservations and serving
+        first-come, and — the operational fact that catches people out — opening
+        <strong>Monday to Friday only</strong>, roughly midday to four and again
+        from six. What the record supports: a sequence of montaditos and a glass
+        poured from the wall of bottles. What it does not: which ones.
+      </p>
+      <p>
+        <strong>Xarcuteria La Pineda</strong>, Carrer del Pi 16 —
+        <em>visited; photographed from the street; jamón and vermut recorded in
+        general terms</em>. The photograph at the top of this page is the
+        shopfront, which proves the door was reached and no more than that. The
+        shop is documented in Catalonia's register of emblematic establishments
+        as founded in <strong>1904</strong> and run by the Mir family since
+        <strong>1930</strong>, retaining a 1920s glazed tile mosaic, a marble
+        counter and a hand-cranked slicer. It is a xarcuteria with a few tables,
+        not a restaurant.
+      </p>
+      <p>
+        <strong>Eldiset</strong>, Carrer de l'Argenteria, El Born —
+        <em>visited and eaten at; dishes not recorded</em>. A wine bar with a
+        Catalan list and small plates, and the recorded impression is of a long
+        evening over shared plates rather than a meal built around any one dish.
+        This is the sort of room the El Born paragraph above describes.
+      </p>
+      <p>
+        <strong>Suculent</strong>, Rambla del Raval —
+        <em>visited and eaten at; dishes not recorded; and one correction</em>.
+        The kitchen works traditional Catalan and Mediterranean dishes with
+        modern technique and builds its reputation on slow-made broths and
+        sauces. The correction is this: an earlier account on this site describes
+        it as Michelin-starred. As checked on 4 August 2026, Suculent appears in
+        the Michelin Guide but <strong>does not currently hold a star</strong>.
+        It is a very good restaurant; it is not a starred one, and repeating the
+        older claim would be the easiest kind of inherited error.
+      </p>
+      <p>
+        <strong>Caelum</strong>, Carrer de la Palla 8 —
+        <em>recommended in the record; not evidenced as entered</em>. A café and
+        shop selling sweets made in enclosed convents, above a medieval bath
+        chamber that is visible from the lower room. It appears in the week's
+        notes as a recommendation rather than an account of a visit, and is
+        listed as trading by both its own site and the city council's register.
+        Treated here as researched, not eaten.
+      </p>
+    </div>
+
+    <Practical place="Barcelona — At the Table" detail="Verified 4 August 2026" detailIcon="🍽">
+      <PracticalSection label="The hours that actually matter" level={3} id="hours">
+        <div class="tip-row">
+          <strong>Lunch</strong> from about 14:00, busy to 15:30.
+          <strong>Dinner</strong> from about 21:30. A 19:00 dinner narrows you to
+          places cooking for visitors.
+        </div>
+        <div class="tip-row">
+          <strong>Menú del dia is weekday lunch only.</strong> It does not exist
+          in the evening and rarely at weekends.
+        </div>
+        <div class="tip-row">
+          <strong>Market counters close early.</strong> Produce stalls are best
+          before eleven; by mid-afternoon much of a market is shuttered.
+        </div>
+        <div class="tip-row">
+          <strong>Sundays are thin</strong> — La Boqueria shuts entirely, and
+          many neighbourhood kitchens close Sunday evening and Monday.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Market days to plan around" level={3}>
+        <div class="prac-item">
+          <strong>La Boqueria</strong> — Monday to Saturday 08:00–20:30, closed
+          Sundays and public holidays.
+          <a href="https://www.boqueria.barcelona/" rel="noopener">Official site</a>.
+        </div>
+        <div class="prac-item">
+          <strong>Mercat de Sant Antoni</strong> — <strong>closed
+          Tuesdays</strong>; stalls broadly 10:00–20:00.
+          <a href="https://www.mercatdesantantoni.com/en/" rel="noopener">Official site</a>.
+        </div>
+        <div class="prac-item">
+          <strong>Santa Caterina and La Llibertat</strong> — both keep
+          early-closing days and are safest treated as morning markets. The
+          municipal markets body publishes current hours for all thirty-nine on
+          <a href="https://ajuntament.barcelona.cat/mercats/en" rel="noopener">Mercats
+          de Barcelona</a>.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Ordering, in practice" level={3}>
+        <div class="tip-row">
+          <strong>Two people:</strong> four or five platillos, or two racions and
+          bread. Order in rounds rather than all at once.
+        </div>
+        <div class="tip-row">
+          <strong>Keep your pintxo sticks.</strong> They are how the bill is
+          counted.
+        </div>
+        <div class="tip-row">
+          <strong>Terrace surcharges are normal</strong> and should be posted.
+          Standing at the counter is often the cheapest and always the most
+          local option.
+        </div>
+        <div class="tip-row">
+          <strong>Rice takes half an hour</strong> and is usually for two. If it
+          arrives fast, it was not made for you.
+        </div>
+        <div class="tip-row">
+          <strong>Catalan on the menu is a good sign</strong> — not proof of
+          quality, but a reasonable indicator of who the room expects.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Seasonal notes" level={3}>
+        <div class="tip-row">
+          <strong>Calçots:</strong> roughly November to April, peaking January to
+          March, and properly a countryside meal inland from Tarragona.
+        </div>
+        <div class="tip-row">
+          <strong>August:</strong> the city eats later, and a number of
+          family-run kitchens close for two or three weeks. Check before
+          travelling across town.
+        </div>
+        <div class="tip-row">
+          <strong>Salt cod salads</strong> like esqueixada belong to the hot
+          months; the heavy stews and cap i pota belong to the cold ones.
+        </div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        Almost everything that goes wrong at a table in Barcelona comes from one
+        of two errors, and neither is about choosing badly. The first is the
+        clock: eating at hours the city does not eat at, which quietly restricts
+        you to rooms that serve visitors. The second is the category mistake:
+        walking into a xarcuteria expecting dinner, a market expecting a
+        restaurant, or a pintxos bar expecting Catalonia.
+      </p>
+      <p>
+        Fix those two and the city becomes remarkably forgiving. There are
+        thirty-nine food markets, a dense layer of small kitchens in half a dozen
+        neighbourhoods, and a fixed-price lunch in every district that will feed
+        you better than most things you could have booked. Learn six words, arrive
+        at two and at half past nine, order the vegetables as seriously as the
+        meat, and stay in the neighbourhood you are already standing in. The
+        rest is detail — and the longer version of this city is
+        <a href="/7-days-in-barcelona/">a week at its table</a>, at the end of
+        <a href="/4-weeks-portugal-to-spain-by-rail-road/">a month overland from
+        Porto</a>.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/best-things-to-do-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: 'Best Things to Do in Barcelona',
+        excerpt:
+          'Nineteen experiences grouped and judged — and the argument for spending each day on one ground rather than crossing the city twice.',
+        meta: ['19 entries', 'Guide'],
+      },
+      {
+        href: '/best-areas-to-stay-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: 'Best Areas to Stay in Barcelona',
+        excerpt:
+          'Seven neighbourhoods weighed on noise, slope and late-night travel — which is also, in practice, the decision about where you will eat every night.',
+        meta: ['7 areas', 'Where to stay'],
+      },
+      {
+        href: '/one-day-in-barcelona/',
+        region: 'Spain · Catalonia',
+        title: 'One Day in Barcelona: From the Hill to the Sea',
+        excerpt:
+          'Where a single day should put its meal, and why the route eats within four minutes of wherever it already is.',
+        meta: ['Barcelona', '1 day'],
+      },
+    ]}
+  />
+</ChronicleLayout>

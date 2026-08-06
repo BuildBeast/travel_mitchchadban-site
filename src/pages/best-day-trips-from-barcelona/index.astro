@@ -1,0 +1,923 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import PullQuote from '../../components/chronicle/PullQuote.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import {
+  SIZES_MODERN_PORTRAIT,
+  SIZES_MODERN_WIDE,
+} from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Day Trips from Barcelona',
+  headline: 'Best Day Trips from Barcelona: Eight Assessed, One Refused',
+  description:
+    'Eight excursions from Barcelona judged by the shape of the day and the transport that decides it — Montserrat, Girona, Figueres, Tarragona, Sitges, Colònia Güell, Vic and cava country.',
+  path: '/best-day-trips-from-barcelona/',
+  ogImage: '/images/best-day-trips-from-barcelona/montserrat-monastery-under-the-pinnacles.jpg',
+  factsVerified: '2026-08-04',
+};
+
+const IMG = '/images/best-day-trips-from-barcelona';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Spain', 'Catalonia', 'Barcelona']}
+    label="Guide · Eight Excursions"
+    title="Best Day Trips from Barcelona:"
+    titleEmphasis="Eight Assessed, One Refused"
+    standfirst="Distance decides almost nothing about a day trip. What decides it is which of four transport geometries the place sits on — the metropolitan hill railway, the high-speed line north, the coastal stopping train, or a bus. Eight excursions judged on the shape of the day, and one that should be refused."
+    stats={[
+      { num: '8', label: 'Assessed' },
+      { num: '4', label: 'Rail Geometries' },
+      { num: '2', label: 'Half Days' },
+      { num: '1', label: 'Refused' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Every list of day trips from Barcelona is really a list of distances,
+          and distance is the least useful thing to know. Sitges is thirty-five
+          kilometres away and gives back a half day. Montserrat is fifty and
+          takes a whole one. Girona is a hundred and is easier to reach than
+          either, because it sits on a high-speed line. Cadaqués is a hundred and
+          seventy and, without a car, is not a day trip at all — it is an
+          overnight pretending to be one. What governs all of this is not how far
+          a place is but which piece of infrastructure it happens to stand on.
+        </p>
+        <p>
+          Catalonia gives Barcelona four of those, and each produces a
+          characteristic shape of day. The <strong>FGC</strong> lines out of
+          Plaça Espanya climb into the metropolitan hills and the Llobregat
+          valley, which makes for short outward legs and a final ascent by rack
+          railway or cable car. The <strong>high-speed line north</strong> puts
+          Girona and Figueres within an hour, which is faster than crossing
+          Barcelona at rush hour. The <strong>coastal and inland stopping
+          trains</strong> — Rodalies — reach Sitges, Tarragona and Vic cheaply
+          and slowly, with the frequency that actually decides whether a day
+          works. And a handful of famous places have <strong>no useful rail at
+          all</strong>, which is the single most under-reported fact in this
+          subject.
+        </p>
+        <p>
+          So this page is organised by the shape of the day rather than by rank.
+          Each destination is answered on the same points: why go, how you get
+          there, the realistic door-to-door burden, how long the place needs,
+          what must be booked, whether the season matters, what it does or does
+          not combine with, whether the account here is documented or assessed,
+          and who should skip it. Two combinations that are widely sold as
+          single days are judged honestly, and one much-loved destination is
+          refused outright.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/montserrat-monastery-under-the-pinnacles.jpg`}
+      srcset={`${IMG}/montserrat-monastery-under-the-pinnacles-480w.jpg 480w, ${IMG}/montserrat-monastery-under-the-pinnacles-768w.jpg 768w, ${IMG}/montserrat-monastery-under-the-pinnacles-1200w.jpg 1200w, ${IMG}/montserrat-monastery-under-the-pinnacles-1600w.jpg 1600w, ${IMG}/montserrat-monastery-under-the-pinnacles.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The monastery of Montserrat on its ledge beneath the mountain's serrated conglomerate pinnacles: a long range of pale stone and ochre buildings with a bell tower, terraces and a viaduct built out over the drop, dark green pines above and below, and the hazy plain and distant hills to the right under a deep blue sky."
+      width={2048}
+      height={1365}
+      caption="Montserrat is the one excursion where the journey is the argument rather than the overhead — an hour of train, then a rack railway up a wall of conglomerate to a monastery built on a ledge. Nothing else within reach of Barcelona changes the scale of a day like this."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="evidence" rule={false}>What is documented, and what is assessed</SectionHeading>
+      <p>
+        Six of the eight were visited. <strong>Montserrat</strong> was reached in
+        August 2023 and the photographs on this page are from that day.
+        <strong>Girona</strong>, <strong>Figueres</strong>,
+        <strong>Tarragona</strong>, <strong>Sitges</strong> and
+        <strong>Colònia Güell</strong> were all taken from a six-night stay in
+        August 2024, and each has its own chronicle on this site with the full
+        sequencing — this page only makes the decision and then points you there.
+        Sitges and Colònia Güell carry no photograph here, because no unused
+        frame of either exists in the library; the visit is recorded, the picture
+        is not.
+      </p>
+      <p>
+        <strong>Vic</strong> and <strong>the Penedès</strong> are marked
+        <em>assessed</em>. So is the refusal at the end. Those verdicts rest on
+        transport, opening patterns and the geometry of the day rather than on
+        memory, and they say so where they appear. Journey times are approximate
+        and current as of <strong>4 August 2026</strong>; frequencies and last
+        returns move, and the official planners are linked rather than
+        transcribed.
+      </p>
+      <p>
+        One practical note that applies to everything below. The Rodalies and FGC
+        journeys here run on <strong>zoned integrated fares</strong>, so a trip to
+        Sitges or Colònia Güell costs a little more than a metro ride and rather
+        less than most visitors expect; the high-speed trains to Girona and
+        Figueres are separate commercial fares and are the only ones worth
+        booking ahead for price. Do not buy a multi-journey city card expecting it
+        to cover an excursion — the zone matters, and the machines at Sants will
+        sell you the right thing if you name the destination rather than the
+        line.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'glance', label: 'At a glance' },
+        { id: 'half-day', label: 'The half day' },
+        { id: 'mountain', label: 'The mountain day' },
+        { id: 'full-days', label: 'The full days' },
+        { id: 'museum', label: 'The museum journey' },
+        { id: 'coast', label: 'Coast and vines' },
+        { id: 'refuse', label: 'The one to refuse' },
+        { id: 'combining', label: 'On combining two' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="Eight Excursions at a Glance"
+    meta={[
+      {
+        label: 'Take this one first',
+        value:
+          'Montserrat, if you have a full day and reasonable weather. Girona, if you would rather have a town than a mountain. Both are better first trips than anything else here.',
+      },
+      {
+        label: 'The two genuine half days',
+        value:
+          'Colònia Güell, twenty minutes out on the FGC and back before lunch. Sitges, forty minutes down the coast, if what you want is a swim and a white town rather than sightseeing.',
+      },
+      {
+        label: 'Book before you go',
+        value:
+          'The Dalí Theatre-Museum at Figueres. Any Penedès cellar. Nothing else here needs advance purchase, though Montserrat combined tickets save queuing.',
+      },
+      {
+        label: 'The one to refuse',
+        value:
+          'The Costa Brava villages — Cadaqués above all. No useful rail, two and three-quarter hours each way by bus, and a day that is mostly coach window.',
+      },
+    ]}
+    daysHeading="By the Shape of the Day"
+    days={[
+      { num: 'Half day', text: 'Colònia Güell · Sitges. Out and back with the afternoon or the morning intact.' },
+      { num: 'Mountain', text: 'Montserrat. A full day, an hour of train and a rack railway, and the only real change of scale.' },
+      { num: 'Full days', text: 'Girona · Tarragona · Vic. Towns that fill a day and resent being halved.' },
+      { num: 'Museum', text: 'Figueres. A journey made for one building, and the question of whether to bolt Girona onto it.' },
+      { num: 'Coast & vines', text: 'Sitges and Tarragona on one line; the Penedès on another. Sea or cava, not both.' },
+      { num: 'Refused', text: 'The Costa Brava. Beautiful, and not reachable and returnable in a civilised day without a car.' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter
+      id="half-day"
+      number="I."
+      name="The Half Day"
+      epithet="Two places that give the rest of the day back, which is a rarer property than it sounds"
+    />
+
+    <div class="narrative prose">
+      <p>
+        A half day is the most valuable shape here, because it does not force a
+        choice against Barcelona itself. Both of these can be done in a morning
+        and leave the afternoon in the city intact.
+      </p>
+
+      <SectionHeading id="colonia-guell" level={3} rule={false}>1. Colònia Güell</SectionHeading>
+      <p>
+        The best short excursion from Barcelona, and the one that changes how you
+        read the Sagrada Família. Eusebi Güell built a textile colony on the
+        Llobregat in the 1890s — workers' housing, a school, a co-operative, a
+        theatre — and had Gaudí build its church. Only the crypt was finished,
+        and it is the crypt that matters: this is where Gaudí worked out the
+        structure of everything that came after, using an upside-down model of
+        strings and small weights to find the line of thrust, then building the
+        result in brick with leaning columns and a ribbed vault that follows no
+        geometry a nineteenth-century engineer would recognise. You can see the
+        basilica's whole structural argument here, thirty years early, in one
+        low room.
+      </p>
+      <p>
+        The colony around it is the other half, and most visitors give it ten
+        minutes when it deserves forty. This was a planned industrial village of
+        the kind Catalonia built dozens of along its rivers — a mill, and beside
+        it housing, a school, a co-operative shop, a doctor and a theatre, all in
+        the same red brick and all designed by Gaudí's collaborator Francesc
+        Berenguer i Mestres and others in the Modernisme idiom. Walking the
+        streets makes the crypt legible as something other than a folly: it was
+        the parish church of an actual community of some eight hundred workers,
+        and the reason it was never finished is that the textile business failed.
+        Industrial paternalism in brick, with a masterpiece in the basement.
+      </p>
+      <p>
+        <strong>Why go</strong> the intellectual origin of the Sagrada Família,
+        and a rare surviving industrial colony around it ·
+        <strong>Getting there</strong> FGC lines <strong>S3, S4, S8 or S9</strong>
+        from Plaça Espanya to Colònia Güell, about <strong>20 minutes</strong>,
+        then a short signed walk · <strong>Door to door</strong> around 40
+        minutes each way from central Barcelona ·
+        <strong>Time on site</strong> 1½ hours for the crypt and the colony
+        streets · <strong>Booking</strong> none needed. Crypt with audio guide
+        <strong>€10</strong>, guided visit <strong>€13</strong>, and a
+        <em>Combinat Güell</em> at <strong>€15.10</strong> that bundles the train
+        with the visit; open weekdays 10:00–17:00 and weekends and holidays
+        10:00–15:00, closed on a handful of feast days. Details on
+        <a href="https://www.gaudicoloniaguell.org/en/" rel="noopener">the
+        colony's own site</a> · <strong>Season</strong> irrelevant; it is indoors
+        and never crowded · <strong>Combine with</strong> nothing — go back into
+        Barcelona and use the afternoon ·
+        <strong>Documented</strong>, with the full account in
+        <a href="/1-day-in-colonia-guell/">its own chronicle</a> ·
+        <strong>Verdict</strong> the highest return per hour of any trip on this
+        page · <strong>Skip if</strong> you have no interest in how buildings
+        stand up.
+      </p>
+
+      <SectionHeading id="sitges" level={3}>2. Sitges</SectionHeading>
+      <p>
+        A white seaside town forty minutes down the coast, with a church on a rock
+        above the sand, a grid of narrow lanes behind it, a long promenade and a
+        row of Modernisme villas built by Catalans who had made money in Cuba. It
+        has been a painters' town, a resort and, since the 1970s, one of the most
+        established gay holiday towns in the Mediterranean, and it carries all
+        three without apparent strain.
+      </p>
+      <p>
+        The important judgement is about intent. Sitges is not a sightseeing
+        destination and will disappoint anyone who arrives determined to see
+        things; there are two small museums and the church, and that is the
+        inventory. As a place to swim, eat lunch by the water and walk a
+        promenade for three hours, it is excellent — and that is the version to
+        take.
+      </p>
+      <p>
+        The one thing worth knowing if you want more than a beach: Sitges was a
+        working artists' colony before it was a resort. The painter Santiago
+        Rusiñol bought two fishermen's cottages on the rock beside the church in
+        the 1890s, filled them with wrought iron, ceramics and two El Grecos, and
+        made the house — <strong>Cau Ferrat</strong> — the centre of Catalan
+        Modernisme for a decade; the movement held its festivals here before
+        Barcelona took it over. The house is now a museum, next door to another in
+        the neighbouring villa, and together they take about ninety minutes. That
+        is enough to turn a swim into a day with an argument in it.
+      </p>
+      <p>
+        <strong>Why go</strong> a swim and a white town, with almost no
+        transport friction · <strong>Getting there</strong> Rodalies
+        <strong>R2 Sud</strong> from Sants or Passeig de Gràcia, about
+        <strong>40 minutes</strong>, frequent all day ·
+        <strong>Door to door</strong> under an hour each way ·
+        <strong>Time on site</strong> 3 to 5 hours ·
+        <strong>Booking</strong> none, and nothing to buy ·
+        <strong>Season</strong> the whole point in summer; out of season it is a
+        pretty town with a closed beach, and February's carnival is a different
+        proposition entirely · <strong>Combine with</strong> Tarragona in
+        principle, and see the honest verdict on that below ·
+        <strong>Documented</strong> — visited in August 2024, recorded in
+        <a href="/1-day-in-tarragona-sitges/">the Tarragona and Sitges
+        chronicle</a>, though no photograph of it survives unused here ·
+        <strong>Verdict</strong> the best half day if you want the sea rather
+        than a monument · <strong>Skip if</strong> you are not swimming and are
+        not interested in a promenade.
+      </p>
+    </div>
+
+    <Beat>Both of these give the afternoon back. Everything that follows takes the whole day.</Beat>
+
+    <Chapter
+      id="mountain"
+      number="II."
+      name="The Mountain Day"
+      epithet="One destination, a genuine change of scale, and a journey with three moving parts"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="montserrat" level={3} rule={false}>3. Montserrat</SectionHeading>
+      <p>
+        The one excursion that does something no part of Barcelona can. Montserrat
+        is a massif of conglomerate — cemented river gravel, eroded into a
+        thousand rounded pinnacles, so it reads less like a mountain than like a
+        wall of stone fingers — and a Benedictine monastery has stood on a ledge
+        halfway up it since the eleventh century. It holds
+        <strong>La Moreneta</strong>, a polychrome Romanesque carving of the
+        Virgin from the late twelfth century, blackened by age and candle smoke,
+        who is the patron of Catalonia; the abbey was a centre of Catalan
+        cultural resistance under Franco; and the <strong>Escolania</strong>, the
+        boys' choir attached to it, is among the oldest in Europe.
+      </p>
+      <p>
+        What makes it a full day is the journey, which has three parts and is
+        also the best thing about it. Take FGC line <strong>R5</strong> from
+        Plaça Espanya up the Llobregat for about an hour, then change for the
+        final ascent — either the <strong>cremallera</strong>, the rack railway
+        that climbs from Monistrol de Montserrat in a little under twenty
+        minutes, or the <strong>aeri</strong>, the cable car from the station
+        before it, which is faster, more dramatic and closes in high wind.
+        Reckon ninety minutes each way from the middle of Barcelona. Once up
+        there, two short funiculars go higher: Sant Joan for the ridge walks,
+        Santa Cova for the chapel on the pilgrim path.
+      </p>
+      <p>
+        The one piece of timing that matters: the Escolania sings the
+        <em>Salve Regina</em> and the <em>Virolai</em> in the basilica at around
+        <strong>one o'clock</strong> on weekdays and around midday on Sundays,
+        which means the choir, not the trains, sets your departure. The choir
+        also takes an annual break, so check the abbey's calendar rather than
+        assuming.
+      </p>
+      <p>
+        <strong>Why go</strong> the only real change of landscape within reach,
+        plus a monastery that is a Catalan institution rather than a monument ·
+        <strong>Getting there</strong> FGC <strong>R5</strong> from Plaça
+        Espanya, then rack railway or cable car ·
+        <strong>Door to door</strong> about <strong>90 minutes</strong> each way ·
+        <strong>Time on site</strong> 4 to 6 hours, more if you walk ·
+        <strong>Booking</strong> not essential, but the combined tickets remove
+        most of the queuing: <strong>Trans Montserrat</strong> from about
+        <strong>€50</strong> covers metro, train, rack railway, both funiculars
+        and the audiovisual space; <strong>Tot Montserrat</strong> from about
+        <strong>€71.50</strong> adds the museum and a buffet lunch. Both allow a
+        week to return. The basilica is open 07:00–20:00. See
+        <a href="https://www.montserratvisita.com/en/" rel="noopener">the
+        sanctuary's own visitor site</a> and
+        <a href="https://www.cremallerademontserrat.cat/en/" rel="noopener">the
+        rack railway</a> ·
+        <strong>Season</strong> matters more here than anywhere else on this
+        page — cloud can erase the entire point, and the cable car stops in wind.
+        Check the forecast the night before and be willing to swap the day ·
+        <strong>Combine with</strong> nothing. It is the day ·
+        <strong>Documented</strong> — visited August 2023 ·
+        <strong>Verdict</strong> the best full day from Barcelona, and the first
+        one to take · <strong>Skip if</strong> the weather is against you, or if
+        two funiculars and a rack railway sound like work rather than pleasure.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/montserrat-rack-railway-train.jpg`}
+      srcset={`${IMG}/montserrat-rack-railway-train-480w.jpg 480w, ${IMG}/montserrat-rack-railway-train-768w.jpg 768w, ${IMG}/montserrat-rack-railway-train-1200w.jpg 1200w, ${IMG}/montserrat-rack-railway-train.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
+      alt="A green rack-railway train standing at a covered platform, its destination board reading MONISTROL VILA, with Ferrocarrils de la Generalitat markings and the unit name Les Agulles on the nose, seen from above across a metal railing, with a single person waiting further down the platform."
+      width={1365}
+      height={2048}
+      caption="The second leg. The rack railway is not a novelty bolted onto the visit — it is how you gain the last few hundred metres, and the change of gradient at the bottom of it is the moment the day stops being a train ride."
+      variant="portrait"
+    />
+
+    <Chapter
+      id="full-days"
+      number="III."
+      name="The Strong Full Days"
+      epithet="Three towns that fill a day properly, and resent being halved to fit another"
+    />
+
+    <div class="narrative prose">
+      <p>
+        These are not sights but towns, and the mistake with all three is
+        arriving at noon and leaving at four. Each rewards a slow arrival, a long
+        lunch and an unhurried walk, which is precisely what gets sacrificed when
+        a second destination is added.
+      </p>
+
+      <SectionHeading id="girona" level={3} rule={false}>4. Girona</SectionHeading>
+      <p>
+        The best town in Catalonia for a day, and the easiest good trip on this
+        page because the high-speed line does the work. Girona stacks up above
+        the Onyar in tiers: the painted houses hanging over the water, a
+        cathedral reached by ninety steps with the widest Gothic nave in the world
+        behind its baroque front, and <strong>El Call</strong>, one of the
+        best-preserved Jewish quarters in Europe, a knot of stepped stone lanes
+        that survived because the town simply built around it after the expulsion
+        of 1492. You can also walk the Roman and medieval walls almost the whole
+        way round the old town, which is the best hour there and the one most
+        visitors miss.
+      </p>
+      <p>
+        Two further things make it a full day rather than a long morning. The
+        <strong>Banys Àrabs</strong> are a twelfth-century bath house, Romanesque
+        in construction and Islamic in plan, with a domed and columned changing
+        room that is the single most photographed interior in the town for good
+        reason. And <strong>Sant Feliu</strong>, the older church below the
+        cathedral, holds Roman and early Christian sarcophagi built into its
+        walls — the town's earlier layer, casually reused. Girona also eats well
+        out of proportion to its size, which is the practical argument for
+        staying into the evening rather than catching the five o'clock train: the
+        light on the Onyar at eight is the thing people remember, and it is
+        exactly what a combined day removes.
+      </p>
+      <p>
+        <strong>Why go</strong> a complete medieval town, a great cathedral and a
+        walkable circuit of walls, all within four hundred metres ·
+        <strong>Getting there</strong> Renfe <strong>AVE or Avant</strong> from
+        Barcelona Sants, about <strong>38 minutes</strong>; the slower Rodalies
+        R11 also runs and costs less ·
+        <strong>Door to door</strong> about an hour each way ·
+        <strong>Time on site</strong> 5 to 7 hours ·
+        <strong>Booking</strong> the train, if you want the fast one at a sane
+        price. Nothing in the town needs it ·
+        <strong>Season</strong> good year round; the flower festival in May
+        transforms it and fills it ·
+        <strong>Combine with</strong> Figueres — possible, and argued below ·
+        <strong>Documented</strong> — visited August 2024, sequenced in
+        <a href="/1-day-in-figueres-girona/">the Figueres and Girona
+        chronicle</a> · <strong>Verdict</strong> the best full day that is a town
+        rather than a mountain · <strong>Skip if</strong> you have already had
+        your fill of medieval old towns.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/girona-onyar-houses-evening.jpg`}
+      srcset={`${IMG}/girona-onyar-houses-evening-480w.jpg 480w, ${IMG}/girona-onyar-houses-evening-768w.jpg 768w, ${IMG}/girona-onyar-houses-evening-1200w.jpg 1200w, ${IMG}/girona-onyar-houses-evening-1600w.jpg 1600w, ${IMG}/girona-onyar-houses-evening.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The painted houses of Girona rising straight out of the Onyar in low evening light — ochre, red and yellow façades with shuttered windows, washing on balconies and a Catalan flag — with a low pedestrian bridge crossing the river, reeds on a mid-stream bank, and the whole scene reflected in still brown water."
+      width={2048}
+      height={1152}
+      caption="Late afternoon on the Onyar, which is the hour Girona is for and the hour a combined day with Figueres removes. The argument against squeezing two towns into one day is visible here rather than theoretical."
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="tarragona" level={3}>5. Tarragona</SectionHeading>
+      <p>
+        The best Roman site in Catalonia and a working provincial city that has
+        never quite decided to become a tourist town, which is much of its
+        appeal. As <em>Tarraco</em> this was the capital of Rome's largest
+        Iberian province, and what survives is unusually legible: an amphitheatre
+        cut into the slope directly above the sea, a circus whose vaults run
+        under the streets of the old town, a provincial forum, long stretches of
+        wall along the Passeig Arqueològic, and a cathedral built on the temple
+        that stood at the top of the terraced city. The joint ticket across the
+        Roman sites is the obvious purchase — a single site is around
+        <strong>€5</strong> and the combined ticket around
+        <strong>€15</strong>, so it pays for itself at the third.
+      </p>
+      <p>
+        Two things are worth seeking out beyond the ticketed sites. The
+        <strong>Passeig Arqueològic</strong> runs between the Roman wall and the
+        later medieval rampart, so you walk a corridor with two thousand years on
+        one side and fifteen hundred on the other, above gardens and out towards
+        the sea — the best half hour in the city. And the
+        <strong>Monument als Castellers</strong>, a bronze human tower of cast
+        figures standing on each other's shoulders in a city-centre square, is
+        the clearest statement anywhere of what the <em>castell</em> tradition
+        actually is: not a spectacle but a feat of collective engineering, with
+        the smallest child climbing last.
+      </p>
+      <p>
+        One transport trap deserves naming. Tarragona has two stations: the
+        central one served by the slow <strong>Rodalies</strong> coastal lines,
+        and <strong>Camp de Tarragona</strong>, the high-speed station, which sits
+        about ten kilometres inland and needs a shuttle bus. The fast train is not
+        faster once you have added the transfer at both ends, and it is the
+        commonest way to lose an hour on this trip.
+      </p>
+      <p>
+        <strong>Why go</strong> Roman remains you walk through rather than look
+        at, in a city that is still a port · <strong>Getting there</strong>
+        Rodalies <strong>R14, R15 or R16</strong> to Tarragona central, roughly
+        <strong>1 hour 10 to 1 hour 30</strong> ·
+        <strong>Door to door</strong> about 1½ hours each way ·
+        <strong>Time on site</strong> 5 to 6 hours ·
+        <strong>Booking</strong> none. Buy the joint Roman ticket on arrival;
+        details on
+        <a href="https://www.tarragona.cat/patrimoni/museu-historia/visites" rel="noopener">the
+        city heritage service's own page</a> ·
+        <strong>Season</strong> the archaeology is unshaded, so in July and
+        August do the amphitheatre and the walls early and the cathedral at
+        midday · <strong>Combine with</strong> Sitges, in theory — verdict below ·
+        <strong>Documented</strong> — visited August 2024, in
+        <a href="/1-day-in-tarragona-sitges/">the Tarragona and Sitges
+        chronicle</a> · <strong>Verdict</strong> the right choice for anyone who
+        would rather have Rome than the Middle Ages ·
+        <strong>Skip if</strong> ruins without reconstruction leave you cold.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/tarragona-amphitheatre-and-town.jpg`}
+      srcset={`${IMG}/tarragona-amphitheatre-and-town-480w.jpg 480w, ${IMG}/tarragona-amphitheatre-and-town-768w.jpg 768w, ${IMG}/tarragona-amphitheatre-and-town-1200w.jpg 1200w, ${IMG}/tarragona-amphitheatre-and-town.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
+      alt="The Roman amphitheatre at Tarragona seen from above: the elliptical arena with the stone footings of a later church standing in it, surviving tiers of seating cut into the rock on the right, a vaulted stone passage in the foreground, and modern apartment blocks and a school on the slope beyond."
+      width={1365}
+      height={2048}
+      caption="The amphitheatre with the town immediately above it, and a Visigothic church planted in the middle of the arena. Tarragona's Roman remains are not a park you enter but something the modern city is built around."
+      variant="portrait"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="vic" level={3}>6. Vic</SectionHeading>
+      <p>
+        <em>Assessed rather than visited.</em> An inland cathedral town in a
+        plain that traps fog, and the one destination on this page that is not on
+        anybody's standard list. Its case rests on two things. The first is the
+        <strong>Plaça Major</strong>, an enormous arcaded square that has held a
+        market on <strong>Tuesdays and Saturdays</strong> for something over a
+        thousand years, and which on those days is a genuine agricultural market
+        rather than a heritage performance — Vic is the centre of a real
+        charcuterie industry, and the <em>llonganissa</em> in the food guide's
+        vocabulary comes from here. The second is the Museu Episcopal, a
+        Romanesque and Gothic collection strong enough to be discussed in the
+        same breath as the MNAC.
+      </p>
+      <p>
+        The reason this is marked assessed is simple: the argument rests on the
+        market calendar and the rail timetable rather than on having stood in
+        the square. It is included because those two things are unusually
+        decisive — go on a Tuesday or a Saturday and it is a fine day; go on a
+        Thursday and you have taken a two-and-a-half-hour round trip to see a
+        large empty square.
+      </p>
+      <p>
+        <strong>Why go</strong> a working market town and a serious medieval
+        museum, with almost no visitors ·
+        <strong>Getting there</strong> Rodalies <strong>R3</strong> from Barcelona,
+        about <strong>1 hour 15</strong>, roughly every half hour, then a
+        five-minute walk · <strong>Door to door</strong> about 1½ hours each way ·
+        <strong>Time on site</strong> 4 to 5 hours ·
+        <strong>Booking</strong> none · <strong>Season</strong> the fog is real
+        in winter and the market is better in autumn; check the
+        <a href="https://rodalies.gencat.cat/en/" rel="noopener">Rodalies
+        planner</a> for the return, which thins in the evening ·
+        <strong>Combine with</strong> nothing ·
+        <strong>Assessed</strong> · <strong>Verdict</strong> a strong day on a
+        market morning and a weak one otherwise ·
+        <strong>Skip if</strong> your dates do not include a Tuesday or a
+        Saturday.
+      </p>
+    </div>
+
+    <Chapter
+      id="museum"
+      number="IV."
+      name="The Museum Journey"
+      epithet="A two-hour round trip made for one building, and whether it needs a second destination"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="figueres" level={3} rule={false}>7. Figueres</SectionHeading>
+      <p>
+        Figueres is a modest town with one extraordinary thing in it, and the
+        honest framing is that you are travelling for a building rather than for
+        a place. Dalí took the burnt-out municipal theatre of his home town and
+        spent the last fourteen years of his life turning it into a
+        <strong>Theatre-Museum</strong> — a single total work rather than a
+        collection, with a geodesic dome over the old auditorium, a courtyard
+        holding a Cadillac you can make rain inside, the Mae West room that
+        assembles into a face from one fixed viewpoint, and Dalí himself buried
+        under the floor. Rooms 23 and 24 hold the jewellery he designed, which
+        most visitors walk past.
+      </p>
+      <p>
+        It is genuinely one of the strangest museums in Europe and it takes
+        two to three hours. What it does not do is fill a day: outside the museum
+        Figueres offers a pleasant square, a good market and a fortress on the
+        hill, and by mid-afternoon a visitor is usually looking at the timetable.
+        Which is why almost everyone bolts something onto it — and why the next
+        section exists.
+      </p>
+      <p>
+        <strong>Why go</strong> a museum built by its own subject as a single
+        surrealist object · <strong>Getting there</strong> Renfe
+        <strong>AVE or Avant</strong> from Sants to Figueres-Vilafant, about
+        <strong>55 minutes</strong>, then a fifteen-minute walk or a local bus ·
+        <strong>Door to door</strong> about 1¼ hours each way ·
+        <strong>Time on site</strong> 2 to 3 hours in the museum ·
+        <strong>Booking</strong> <strong>yes</strong> — this is the one museum on
+        this page to buy ahead. General admission is around
+        <strong>€18.50 online</strong> against <strong>€20.50</strong> at the
+        desk, rising to about <strong>€22 / €24</strong> in July and August; it
+        opens daily in July and August and <strong>closes on Mondays</strong> for
+        the rest of the year, with access ending 45 minutes before closing. See
+        <a href="https://www.salvador-dali.org/en/visit/dali-theatre-museum/" rel="noopener">the
+        Dalí Foundation's own visit page</a> ·
+        <strong>Season</strong> the museum is indoors; only the Monday closure
+        and the August pricing matter ·
+        <strong>Combine with</strong> Girona, with reservations — see below ·
+        <strong>Documented</strong> — visited August 2024, in
+        <a href="/1-day-in-figueres-girona/">the Figueres and Girona
+        chronicle</a> · <strong>Verdict</strong> worth the journey for the
+        building, not for the town · <strong>Skip if</strong> Dalí strikes you as
+        a showman rather than an artist; this will not change your mind.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/figueres-dali-museum-dome.jpg`}
+      srcset={`${IMG}/figueres-dali-museum-dome-480w.jpg 480w, ${IMG}/figueres-dali-museum-dome-768w.jpg 768w, ${IMG}/figueres-dali-museum-dome-1200w.jpg 1200w, ${IMG}/figueres-dali-museum-dome.jpg 1365w`}
+      sizes={SIZES_MODERN_PORTRAIT}
+      alt="Looking up at the Dalí Theatre-Museum in Figueres: a large geodesic glass dome on a rough stone drum above a broad brick arch, and in the foreground a dark bronze female figure seen from behind holding a long gilded oar, with a cluster of blue teardrop shapes hanging beside it."
+      width={1365}
+      height={2048}
+      caption="The dome over the old theatre auditorium, and one of the courtyard figures beneath it. The building is not a container for the work — it is the work, which is why two hours inside it are not interchangeable with two hours in any other museum."
+      variant="portrait"
+    />
+
+    <Chapter
+      id="coast"
+      number="V."
+      name="The Coast and the Vines"
+      epithet="Two lines south-west out of Barcelona, and the choice between salt water and cava"
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="penedes" level={3} rule={false}>8. The Penedès — cava country</SectionHeading>
+      <p>
+        <em>Assessed rather than visited.</em> The most under-used rail day trip
+        from Barcelona, and the only one on this page whose subject is a drink.
+        Forty-five minutes out on the Rodalies <strong>R4</strong> is
+        <strong>Sant Sadurní d'Anoia</strong>, a town of some fifteen thousand
+        people with something approaching ninety cava houses in and around it,
+        including the vast Codorníu cellars — a modernista complex by Puig i
+        Cadafalch with kilometres of tunnels beneath it. Five minutes further on
+        is <strong>Vilafranca del Penedès</strong>, the wine capital proper, with
+        a wine museum and a Saturday market, and a claim to be the home of the
+        <em>castellers</em>, the human-tower tradition.
+      </p>
+      <p>
+        The reason it is under-used is that it requires one phone call or one web
+        form more than the other trips here: cellars are working wineries and
+        almost all of them need a booked tour. Turn up unbooked in Sant Sadurní
+        and you will find a pleasant town and locked gates. Book two visits and a
+        lunch, and it is among the best days on this page — and it pairs with
+        <a href="/barcelona-food-guide/">what the food guide says about drinking
+        Catalan</a> better than anything else here.
+      </p>
+      <p>
+        <strong>Why go</strong> the cellars where cava is actually made, and a
+        countryside twenty minutes from the coast that feels a long way from it ·
+        <strong>Getting there</strong> Rodalies <strong>R4</strong> from Sants or
+        Plaça Catalunya — Sant Sadurní about <strong>45 minutes</strong>,
+        Vilafranca about <strong>50</strong> ·
+        <strong>Door to door</strong> about an hour each way ·
+        <strong>Time on site</strong> 5 to 6 hours for two cellars and lunch ·
+        <strong>Booking</strong> <strong>essential</strong>, and the whole day
+        depends on it · <strong>Season</strong> harvest in late August and
+        September is the most interesting and the busiest; cellars close over
+        Christmas and some Mondays ·
+        <strong>Combine with</strong> nothing, and do not drive ·
+        <strong>Assessed</strong> — the verdict rests on the rail geometry and on
+        the cellars' own booking requirements rather than on a visit ·
+        <strong>Verdict</strong> the best day here for anyone who would rather
+        drink than sightsee · <strong>Skip if</strong> you will not book ahead,
+        or you do not drink.
+      </p>
+    </div>
+
+    <PullQuote>
+      The question is never how far a place is. It is which piece of
+      infrastructure it stands on, and whether the last train back leaves before
+      the day is finished.
+    </PullQuote>
+
+    <div class="narrative prose">
+      <SectionHeading id="combining">On combining two destinations</SectionHeading>
+      <p>
+        Two pairings are sold everywhere as single days, and both were done on the
+        stays behind this site. Neither verdict is the flattering one.
+      </p>
+      <p>
+        <strong>Figueres and Girona.</strong> This one is
+        <em>genuinely efficient rather than merely possible</em>, and it is the
+        rare case where the arithmetic works: both towns sit on the same
+        high-speed line, they are about twenty minutes apart, and Figueres cannot
+        fill a day while Girona can absorb whatever is left of one. Do it in that
+        order — Figueres first, on an early train, museum at opening, then south
+        to Girona for the afternoon and the evening on the river. What you lose
+        is Girona's morning and the walls at their best. What you gain is a day
+        that is full rather than padded. For a first visit with limited days, take
+        the combination; if you have a week, split them and give Girona its own
+        slow day. Do not attempt it in reverse, and do not attempt it at all on a
+        Monday, when the museum is shut for most of the year.
+      </p>
+      <p>
+        <strong>Tarragona and Sitges.</strong> This is the weaker of the two and
+        the honest verdict is <em>a useful contrast that is too ambitious for
+        most visitors</em>. Both sit on the coastal line south, which makes the
+        map look obliging, but Tarragona alone is a five-hour town and Sitges is
+        only worth stopping for if you are going to swim or eat properly — and
+        neither survives being given two hours. It is also strongly seasonal:
+        in summer the day works because the light lasts until nine and a late
+        swim is pleasant, while between November and March Sitges contributes a
+        closed promenade and you have spent an hour of train on it. The
+        recommendation is to take <strong>Tarragona alone</strong> if the Roman
+        city is what you came for, and Sitges alone as a half day if it is not.
+        Combine them only in high summer, with an early start, accepting
+        Tarragona will be the compressed half.
+      </p>
+      <p>
+        The general rule behind both verdicts: a second destination costs the
+        first one its best hour, which is usually late afternoon. Add one only
+        when the first place genuinely cannot fill a day.
+      </p>
+
+      <SectionHeading id="refuse">The one to refuse</SectionHeading>
+      <p>
+        <em>Assessed.</em> Somebody will tell you to go to
+        <strong>Cadaqués</strong> — the white village on the Cap de Creus where
+        Dalí lived at Portlligat — or to Tossa de Mar, or Calella de Palafrugell.
+        They are among the most beautiful places on the Mediterranean and they are
+        not day trips from Barcelona, for one structural reason: the Costa Brava
+        villages have <strong>no useful railway</strong>. The line north runs
+        inland to Girona and Figueres, and the coast is reached by bus from
+        Barcelona Nord — around two and three-quarter hours each way to Cadaqués,
+        on a road that spends its last forty minutes climbing a headland. That is
+        five and a half hours of coach for perhaps four hours on the ground,
+        governed by a return departure you must not miss.
+      </p>
+      <p>
+        The correct answer is not to compress it but to change its category:
+        <strong>sleep there</strong>. Two nights on the Costa Brava, reached via
+        Girona or Figueres so the journey buys you two destinations rather than
+        one, is one of the best short trips in Spain. Attempted in a day it is
+        mostly window. If you only have a day and you want that coastline, take
+        Sitges instead and accept that it is a different and lesser thing — or
+        take Girona, which is where the road to the Costa Brava starts anyway.
+      </p>
+
+      <SectionHeading id="omitted">What did not make the eight</SectionHeading>
+      <p>
+        Four were considered and left out, and each has a reader it would suit.
+        <strong>Sant Cugat del Vallès</strong> has a genuinely fine Romanesque
+        monastery cloister and is twenty minutes out on the FGC — but it is a
+        prosperous commuter town around it, and the cloister is an hour rather
+        than a day, which makes it a better half-morning than an excursion.
+        <strong>Cardona</strong>, with its castle and the extraordinary salt
+        mountain beside it, is the most interesting omission and fails on
+        transport alone: it needs a bus and most of a day of travelling.
+        <strong>Mataró</strong> is thirty minutes up the coast on the R1 and holds
+        an early Gaudí commission, but the town does not reward the rest of the
+        day. And <strong>Montseny</strong>, the wooded massif behind Vic, is a
+        superb place that assumes a car and defeats anyone without one.
+      </p>
+
+    <Practical place="Catalonia — Excursions from Barcelona" detail="8 assessed · verified 4 August 2026" detailIcon="🚆">
+      <PracticalSection label="Which line, and roughly how long" level={3} id="lines">
+        <div class="prac-item">
+          <strong>FGC from Plaça Espanya</strong> — Colònia Güell on S3/S4/S8/S9,
+          about 20 minutes. Montserrat on R5, about an hour to the foot of the
+          mountain.
+        </div>
+        <div class="prac-item">
+          <strong>High-speed north from Sants</strong> — Girona about 38 minutes,
+          Figueres-Vilafant about 55. The fastest and least tiring journeys here.
+        </div>
+        <div class="prac-item">
+          <strong>Rodalies south and inland</strong> — Sitges about 40 minutes on
+          the R2 Sud; Tarragona 1 hour 10 to 1 hour 30 on the R14/R15/R16; the
+          Penedès about 45 minutes on the R4; Vic about 1 hour 15 on the R3.
+        </div>
+        <div class="prac-item">
+          <strong>Bus only</strong> — the Costa Brava villages, from Barcelona
+          Nord. This is the whole reason they are refused above.
+        </div>
+        <div class="prac-item">
+          Plan and confirm on
+          <a href="https://rodalies.gencat.cat/en/" rel="noopener">Rodalies de
+          Catalunya</a> and
+          <a href="https://www.fgc.cat/en/" rel="noopener">FGC</a>, and check
+          service alerts before an early start — engineering work is concentrated
+          in summer.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="What must be booked" level={3}>
+        <div class="tip-row">
+          <strong>The Dalí Theatre-Museum</strong> — buy online, both to save
+          money and to fix a slot.
+        </div>
+        <div class="tip-row">
+          <strong>Penedès cellars</strong> — essential. Without a booking the
+          entire day fails.
+        </div>
+        <div class="tip-row">
+          <strong>Montserrat combined tickets</strong> — optional, and worth it
+          to avoid three separate queues.
+        </div>
+        <div class="tip-row">
+          <strong>High-speed trains</strong> — worth booking ahead for price
+          rather than availability.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="The traps" level={3}>
+        <div class="tip-row">
+          <strong>Camp de Tarragona is not Tarragona.</strong> The high-speed
+          station is about ten kilometres inland and needs a shuttle. Use the
+          central station and the slow train.
+        </div>
+        <div class="tip-row">
+          <strong>Mondays close the Dalí museum</strong> outside July and August,
+          which breaks the Figueres–Girona combination.
+        </div>
+        <div class="tip-row">
+          <strong>Vic without its market</strong> is a long round trip to a large
+          empty square. Tuesdays and Saturdays only.
+        </div>
+        <div class="tip-row">
+          <strong>The Montserrat cable car stops in high wind</strong>, and cloud
+          can remove the view entirely. Have the rack railway as your fallback
+          and the forecast as your decider.
+        </div>
+        <div class="tip-row">
+          <strong>Last returns thin out</strong> on the Rodalies lines well
+          before they do on the metro. Check the evening service before you
+          commit to a late dinner in Tarragona or Vic.
+        </div>
+      </PracticalSection>
+
+      <PracticalSection label="Choosing, if you only have one day" level={3}>
+        <div class="prac-item">
+          <strong>One day, good weather, want the biggest change</strong> —
+          Montserrat.
+        </div>
+        <div class="prac-item">
+          <strong>One day, want a town</strong> — Girona.
+        </div>
+        <div class="prac-item">
+          <strong>One day, want Rome</strong> — Tarragona.
+        </div>
+        <div class="prac-item">
+          <strong>Half a day only</strong> — Colònia Güell, and keep the
+          afternoon in Barcelona.
+        </div>
+        <div class="prac-item">
+          <strong>Do not leave the city at all</strong> if it is your only full
+          day and you have not yet seen the Sagrada Família. The
+          <a href="/one-day-in-barcelona/">single-day route</a> is the better
+          use of it, and
+          <a href="/best-things-to-do-in-barcelona/">the experiences guide</a>
+          makes the same argument at greater length.
+        </div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <div class="post-closing">
+    <div class="narrative prose" style="max-width:820px; margin:0 auto;">
+      <p>
+        Eight destinations, and the pattern behind them is not about beauty. The
+        trips that work are the ones where the infrastructure does the effort —
+        an FGC line that climbs, a high-speed train that makes a hundred
+        kilometres feel like a suburb, a coastal stopping service frequent enough
+        that a missed train costs twenty minutes rather than a day. The trips
+        that fail are the ones where you supply the effort yourself, and the
+        Costa Brava fails on exactly that ground while being lovelier than most
+        of the places recommended here.
+      </p>
+      <p>
+        Which leads to the last piece of advice, and it argues against this page.
+        Barcelona is a better base than most cities and a worse one to leave
+        early: on a stay of three days or fewer, every excursion here costs you
+        the city itself, and the city is not finished. Take one day trip on a
+        five-day stay, two on a week, and spend the rest where you are. The week
+        that holds three of these is
+        <a href="/7-days-in-barcelona/">recorded here</a>, and the road that
+        arrives in Barcelona in the first place is
+        <a href="/4-weeks-portugal-to-spain-by-rail-road/">four weeks overland
+        from Porto</a>.
+      </p>
+    </div>
+  </div>
+
+  <FurtherReading
+    cards={[
+      {
+        href: '/1-day-in-colonia-guell/',
+        region: 'Spain · Catalonia',
+        title: "Colònia Güell: Gaudí's Forgotten Blueprint",
+        excerpt:
+          'The half day argued for above, in full — the crypt where the Sagrada Família was structurally worked out, half an hour out on the Ferrocarrils line.',
+        meta: ['Catalonia', 'Half day'],
+      },
+      {
+        href: '/1-day-in-figueres-girona/',
+        region: 'Spain · Catalonia',
+        title: '1 Day in Figueres & Girona',
+        excerpt:
+          'The combined day this page endorses with conditions — the Dalí Theatre-Museum first, then the painted river at Girona for the afternoon.',
+        meta: ['Catalonia', '1 day'],
+      },
+      {
+        href: '/1-day-in-tarragona-sitges/',
+        region: 'Spain · Catalonia',
+        title: '1 Day in Tarragona & Sitges',
+        excerpt:
+          'The pairing this page argues against for most visitors — Roman Tarraco above the sea, then the white lanes of Sitges, on one coastal line.',
+        meta: ['Catalonia', '1 day'],
+      },
+    ]}
+  />
+</ChronicleLayout>
