@@ -1,0 +1,445 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/1-day-in-cádiz-—-at-the-edge-of-the-known-world",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-cádiz-—-at-the-edge-of-the-known-world/",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-c%C3%A1diz-%E2%80%94-at-the-edge-of-the-known-world",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-c%C3%A1diz-%E2%80%94-at-the-edge-of-the-known-world/",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-c%c3%a1diz-%e2%80%94-at-the-edge-of-the-known-world",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-c%c3%a1diz-%e2%80%94-at-the-edge-of-the-known-world/",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-cáceres-a-medieval-city-held-in-amber",
+      "destination": "/2-days-in-caceres/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-cáceres-a-medieval-city-held-in-amber/",
+      "destination": "/2-days-in-caceres/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-c%C3%A1ceres-a-medieval-city-held-in-amber",
+      "destination": "/2-days-in-caceres/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-c%C3%A1ceres-a-medieval-city-held-in-amber/",
+      "destination": "/2-days-in-caceres/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-c%c3%a1ceres-a-medieval-city-held-in-amber",
+      "destination": "/2-days-in-caceres/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-c%c3%a1ceres-a-medieval-city-held-in-amber/",
+      "destination": "/2-days-in-caceres/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-douro-valley-—-a-day-among-the-terraced-vines",
+      "destination": "/douro-valley-day-trip/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-douro-valley-—-a-day-among-the-terraced-vines/",
+      "destination": "/douro-valley-day-trip/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-douro-valley-%E2%80%94-a-day-among-the-terraced-vines",
+      "destination": "/douro-valley-day-trip/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-douro-valley-%E2%80%94-a-day-among-the-terraced-vines/",
+      "destination": "/douro-valley-day-trip/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-douro-valley-%e2%80%94-a-day-among-the-terraced-vines",
+      "destination": "/douro-valley-day-trip/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-douro-valley-%e2%80%94-a-day-among-the-terraced-vines/",
+      "destination": "/douro-valley-day-trip/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaudí's-unfinished-argument",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaudí's-unfinished-argument/",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaud%C3%AD's-unfinished-argument",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaud%C3%AD's-unfinished-argument/",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaud%c3%ad's-unfinished-argument",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaud%c3%ad's-unfinished-argument/",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaud%C3%AD%27s-unfinished-argument",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaud%C3%AD%27s-unfinished-argument/",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaud%c3%ad%27s-unfinished-argument",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/7-days-in-barcelona-gaud%c3%ad%27s-unfinished-argument/",
+      "destination": "/7-days-in-barcelona/",
+      "statusCode": 308
+    },
+    {
+      "source": "/italy,-morocco-seville-4-week-itinerary",
+      "destination": "/italy-morocco-seville-4-week-itinerary/",
+      "statusCode": 308
+    },
+    {
+      "source": "/italy,-morocco-seville-4-week-itinerary/",
+      "destination": "/italy-morocco-seville-4-week-itinerary/",
+      "statusCode": 308
+    },
+    {
+      "source": "/italy%2C-morocco-seville-4-week-itinerary",
+      "destination": "/italy-morocco-seville-4-week-itinerary/",
+      "statusCode": 308
+    },
+    {
+      "source": "/italy%2C-morocco-seville-4-week-itinerary/",
+      "destination": "/italy-morocco-seville-4-week-itinerary/",
+      "statusCode": 308
+    },
+    {
+      "source": "/italy%2c-morocco-seville-4-week-itinerary",
+      "destination": "/italy-morocco-seville-4-week-itinerary/",
+      "statusCode": 308
+    },
+    {
+      "source": "/italy%2c-morocco-seville-4-week-itinerary/",
+      "destination": "/italy-morocco-seville-4-week-itinerary/",
+      "statusCode": 308
+    },
+    {
+      "source": "/4-days-in-bologna-the-fat-city's-table",
+      "destination": "/4-days-in-bologna/",
+      "statusCode": 308
+    },
+    {
+      "source": "/4-days-in-bologna-the-fat-city's-table/",
+      "destination": "/4-days-in-bologna/",
+      "statusCode": 308
+    },
+    {
+      "source": "/4-days-in-bologna-the-fat-city%27s-table",
+      "destination": "/4-days-in-bologna/",
+      "statusCode": 308
+    },
+    {
+      "source": "/4-days-in-bologna-the-fat-city%27s-table/",
+      "destination": "/4-days-in-bologna/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-évora-bones-roman-stones",
+      "destination": "/2-days-in-evora/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-évora-bones-roman-stones/",
+      "destination": "/2-days-in-evora/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-%C3%A9vora-bones-roman-stones",
+      "destination": "/2-days-in-evora/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-%C3%A9vora-bones-roman-stones/",
+      "destination": "/2-days-in-evora/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-%c3%a9vora-bones-roman-stones",
+      "destination": "/2-days-in-evora/",
+      "statusCode": 308
+    },
+    {
+      "source": "/2-days-in-%c3%a9vora-bones-roman-stones/",
+      "destination": "/2-days-in-evora/",
+      "statusCode": 308
+    },
+    {
+      "source": "/10-days-in-sevilla-andalucía-without-rush",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/10-days-in-sevilla-andalucía-without-rush/",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/10-days-in-sevilla-andaluc%C3%ADa-without-rush",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/10-days-in-sevilla-andaluc%C3%ADa-without-rush/",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/10-days-in-sevilla-andaluc%c3%ada-without-rush",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/10-days-in-sevilla-andaluc%c3%ada-without-rush/",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-city-between-empires-—one-day-in-córdoba",
+      "destination": "/1-day-in-cordoba/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-city-between-empires-—one-day-in-córdoba/",
+      "destination": "/1-day-in-cordoba/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-city-between-empires-%E2%80%94one-day-in-c%C3%B3rdoba",
+      "destination": "/1-day-in-cordoba/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-city-between-empires-%E2%80%94one-day-in-c%C3%B3rdoba/",
+      "destination": "/1-day-in-cordoba/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-city-between-empires-%e2%80%94one-day-in-c%c3%b3rdoba",
+      "destination": "/1-day-in-cordoba/",
+      "statusCode": 308
+    },
+    {
+      "source": "/the-city-between-empires-%e2%80%94one-day-in-c%c3%b3rdoba/",
+      "destination": "/1-day-in-cordoba/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-colònia-güell",
+      "destination": "/1-day-in-colonia-guell/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-colònia-güell/",
+      "destination": "/1-day-in-colonia-guell/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-col%C3%B2nia-g%C3%BCell",
+      "destination": "/1-day-in-colonia-guell/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-col%C3%B2nia-g%C3%BCell/",
+      "destination": "/1-day-in-colonia-guell/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-col%c3%b2nia-g%c3%bcell",
+      "destination": "/1-day-in-colonia-guell/",
+      "statusCode": 308
+    },
+    {
+      "source": "/1-day-in-col%c3%b2nia-g%c3%bcell/",
+      "destination": "/1-day-in-colonia-guell/",
+      "statusCode": 308
+    },
+    {
+      "source": "/front-page",
+      "destination": "/",
+      "statusCode": 308
+    },
+    {
+      "source": "/front-page/",
+      "destination": "/",
+      "statusCode": 308
+    },
+    {
+      "source": "/fez-into-the-labyrinth-of-the-eternal-city",
+      "destination": "/2-days-in-fez-itinerary/",
+      "statusCode": 308
+    },
+    {
+      "source": "/fez-into-the-labyrinth-of-the-eternal-city/",
+      "destination": "/2-days-in-fez-itinerary/",
+      "statusCode": 308
+    },
+    {
+      "source": "/cádiz-—-at-the-edgeof-the-known-world",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/cádiz-—-at-the-edgeof-the-known-world/",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/c%C3%A1diz-%E2%80%94-at-the-edgeof-the-known-world",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/c%C3%A1diz-%E2%80%94-at-the-edgeof-the-known-world/",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/c%c3%a1diz-%e2%80%94-at-the-edgeof-the-known-world",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/c%c3%a1diz-%e2%80%94-at-the-edgeof-the-known-world/",
+      "destination": "/1-day-in-cadiz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/san-marino-upon-the-rock-of-the-oldest-republic",
+      "destination": "/san-marino-day-trip-guide/",
+      "statusCode": 308
+    },
+    {
+      "source": "/san-marino-upon-the-rock-of-the-oldest-republic/",
+      "destination": "/san-marino-day-trip-guide/",
+      "statusCode": 308
+    },
+    {
+      "source": "/bologna-the-fat-city's-table-1",
+      "destination": "/4-days-in-bologna/",
+      "statusCode": 308
+    },
+    {
+      "source": "/bologna-the-fat-city's-table-1/",
+      "destination": "/4-days-in-bologna/",
+      "statusCode": 308
+    },
+    {
+      "source": "/bologna-the-fat-city%27s-table-1",
+      "destination": "/4-days-in-bologna/",
+      "statusCode": 308
+    },
+    {
+      "source": "/bologna-the-fat-city%27s-table-1/",
+      "destination": "/4-days-in-bologna/",
+      "statusCode": 308
+    },
+    {
+      "source": "/andalucía-without-rush",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/andalucía-without-rush/",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/andaluc%C3%ADa-without-rush",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/andaluc%C3%ADa-without-rush/",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/andaluc%c3%ada-without-rush",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/andaluc%c3%ada-without-rush/",
+      "destination": "/10-days-in-sevilla/",
+      "statusCode": 308
+    },
+    {
+      "source": "/tangier-at-the-edge-of-two-worlds",
+      "destination": "/3-days-in-tangier-at-the-edge-of-two-worlds/",
+      "statusCode": 308
+    },
+    {
+      "source": "/tangier-at-the-edge-of-two-worlds/",
+      "destination": "/3-days-in-tangier-at-the-edge-of-two-worlds/",
+      "statusCode": 308
+    },
+    {
+      "source": "/rome-six-days-at-the-table-of-empires",
+      "destination": "/six-days-in-rome-at-the-table-of-empires/",
+      "statusCode": 308
+    },
+    {
+      "source": "/rome-six-days-at-the-table-of-empires/",
+      "destination": "/six-days-in-rome-at-the-table-of-empires/",
+      "statusCode": 308
+    }
+  ]
+}

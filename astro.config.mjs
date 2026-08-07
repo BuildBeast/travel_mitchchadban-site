@@ -10,9 +10,9 @@ const SITEMAP_EXCLUDE = [
 ];
 
 // https://astro.build/config
-// Old accented/punctuation slug redirects are handled host-level (301) in
-// public/_redirects rather than as build-time meta-refresh pages, so the
-// generated output and sitemap contain only clean canonical URLs.
+// Legacy HTTP redirects (old accented/punctuation Cargo slugs) are configured
+// in the root vercel.json for Vercel rather than as build-time meta-refresh
+// pages, so the generated output and sitemap contain only clean canonical URLs.
 export default defineConfig({
   site: SITE,
   trailingSlash: 'always',
