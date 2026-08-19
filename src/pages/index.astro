@@ -1,29 +1,381 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  personNode,
+  publisherNode,
+  PERSON_ID,
+  PUBLISHER_ID,
+  WEBSITE_ID,
+  SITE_URL,
+} from "../lib/provenance";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
-      "name": "There & Back Again",
-      "alternateName": "There & Back Again — A Solo Travel Chronicle",
-      "url": "https://travel.mitchchadban.com/",
-      "description": "A solo travel chronicle blending literary travel stories, practical itineraries, food guides, and reflections from the road.",
-      "inLanguage": "en-AU",
-      "publisher": { "@type": "Organization", "name": "There & Back Again", "url": "https://travel.mitchchadban.com/" }
-    }
-  ]
+      "@id": WEBSITE_ID,
+      name: "There & Back Again",
+      alternateName: "There & Back Again — A Solo Travel Chronicle",
+      url: `${SITE_URL}/`,
+      description:
+        "A solo travel chronicle blending literary travel stories, practical itineraries, food guides, and reflections from the road.",
+      inLanguage: "en-AU",
+      author: { "@id": PERSON_ID },
+      publisher: { "@id": PUBLISHER_ID },
+    },
+    personNode(),
+    publisherNode(),
+  ],
 };
-const jsonLd = '<script type="application/ld+json">' + JSON.stringify(schema) + '<\/script>';
-const pageContent = "<div style=\"margin-top: 0px; margin-bottom: 0px;\" class=\"pages\"><div id=\"T2989797706\" page-url=\"front-page\" class=\"page\"><a id=\"front-page\"></a><div class=\"page-layout\"><div class=\"page-content\"><bodycopy style=\"--fit-height: 10px; --resize-parent-width: 100%;\"><!--  HERO  -->\n<section class=\"hero\">\n  <div class=\"hero-ornament\">A solo travel chronicle</div>\n  <h1 class=\"hero-title\">There<br><em>&amp; Back</em><br>Again</h1>\n  <p class=\"hero-subtitle\">Tales written in the old manner — for those who travel not merely to arrive, but to be changed by the road.</p>\n  <a class=\"hero-cta\" href=\"/chronicles/\">Begin the Journey →</a>\n</section>\n\n<!--  TAGLINE  -->\n<div class=\"tagline-strip\">\n  <p>\"For what is travel, if not the art of gathering <span>stories</span> to warm the cold winters of ordinary time?\"</p>\n</div>\n\n<!--  POSTS GRID  -->\n<div class=\"section\">\n  <div class=\"section-label\">Latest Chronicles</div>\n  <div class=\"posts-grid\">\n\n    <a class=\"post-card\" href=\"/4-days-in-bologna/\">\n      <div class=\"post-region\">Italy · Europe</div>\n      <h2 class=\"post-title\">Bologna the Fat City’s Table</h2>\n      <p class=\"post-excerpt\">They came to Bologna on the second day of their wandering, when the light was the colour of old honey and the towers cast long shadows across the piazzas. No city had been so generous with its table, nor so quietly magnificent with its stones.</p>\n      <div class=\"post-meta\">\n        <span>4 days</span>\n        <span class=\"dot\"></span>\n        <span>September</span>\n      </div>\n    </a>\n\n    <a class=\"post-card\" href=\"/the-imperial-circuit-morocco-in-14-days/\">\n      <div class=\"post-region\">Morocco · Africa</div>\n      <h2 class=\"post-title\">The Imperial Circuit: Morocco</h2>\n      <p class=\"post-excerpt\">The medina swallowed the traveller whole — a labyrinth of spice and shadow older than any map they had brought with them.</p>\n      <div class=\"post-meta\">\n        <span>14 days</span>\n        <span class=\"dot\"></span>\n        <span>October</span>\n      </div>\n    </a>\n\n    <a class=\"post-card\" href=\"/coming-soon/\">\n      <div class=\"post-region\">Japan · Asia</div>\n      <h2 class=\"post-title\">Where the Temples Keep Their Silence</h2>\n      <p class=\"post-excerpt\">Kyoto in November is a city made entirely of farewells — each maple leaf a small, burning letter of departure.</p>\n      <div class=\"post-meta\">\n        <span>Coming Soon</span>\n        <span class=\"dot\"></span>\n        <span>14 days</span>\n      </div>\n    </a>\n\n  </div>\n</div></bodycopy></div></div></div></div>";
+const jsonLd =
+  '<script type="application/ld+json">' + JSON.stringify(schema) + "<\/script>";
+
+// Twelve published chronicles, chosen to show the whole publication rather
+// than the newest corner of it: the long overland circuits first, then Italy,
+// Portugal, Spain and Morocco. Every href is a live route — nothing here is
+// unwritten. `/chronicles/` remains the complete archive.
+const featured = [
+  {
+    href: "/4-weeks-portugal-to-spain-by-rail-road/",
+    region: "Portugal · Spain",
+    title: "4 Weeks Portugal to Spain by Rail & Road",
+    excerpt:
+      "A month from Porto to Barcelona, almost entirely overland — port lodges and a mountain wine festival, fado and the Algarve cliffs, a chapel of bones, and Gaudí's unfinished basilica.",
+    meta: ["4 weeks", "Full circuit"],
+  },
+  {
+    href: "/italy-morocco-seville-4-week-itinerary/",
+    region: "Italy · Morocco · Spain",
+    title: "Italy, Morocco & Seville in Four Weeks",
+    excerpt:
+      "Bologna and Rome, the imperial cities of Morocco, and across the Strait into Andalucía — a single month-long arc joining Europe and North Africa.",
+    meta: ["4 weeks", "Two continents"],
+  },
+  {
+    href: "/the-imperial-circuit-morocco-in-14-days/",
+    region: "Morocco · Imperial Cities",
+    title: "The Imperial Circuit: Morocco in 14 Days",
+    excerpt:
+      "Marrakech to Rabat to Fes to Tangier — a standalone journey through Morocco's old capitals, from red walls and desert light to medina shadow and the northern strait.",
+    meta: ["14 days", "Itinerary"],
+  },
+  {
+    href: "/six-days-in-rome-at-the-table-of-empires/",
+    region: "Italy · Lazio",
+    title: "Six Days in Rome at the Table of Empires",
+    excerpt:
+      "From Pizzarium near the Vatican to carbonara at Roscioli, from the Colosseum at dawn to Trastevere at dusk — a chronicle of Rome, city of eternal hungers.",
+    meta: ["6 days", "City guide"],
+  },
+  {
+    href: "/4-days-in-bologna/",
+    region: "Italy · Emilia-Romagna",
+    title: "4 Days in Bologna: The Fat City's Table",
+    excerpt:
+      "A deeper guide to eating in Emilia-Romagna — the old country of ragù, mortadella, Parmigiano-Reggiano, and the settled conviction that lunch deserves reverence.",
+    meta: ["4 days", "Food"],
+  },
+  {
+    href: "/5-days-in-lisbon-itinerary/",
+    region: "Portugal · Lisbon",
+    title: "5 Days in Lisbon Itinerary",
+    excerpt:
+      "Five days in the city of light and tile — read by climbing, from the castle hill to the river, with fado for the evenings and Sintra a train ride away.",
+    meta: ["5 days", "Itinerary"],
+  },
+  {
+    href: "/5-days-in-porto-the-city-the-river-built/",
+    region: "Portugal · Douro",
+    title: "5 Days in Porto: The City the River Built",
+    excerpt:
+      "Five days in the city that turned a river into an industry — granite and gold, the climb up from Ribeira, port across the water, and a sunset for every evening.",
+    meta: ["5 days", "Itinerary"],
+  },
+  {
+    href: "/4-days-in-lagos-the-coast-of-golden-cliffs/",
+    region: "Portugal · Algarve",
+    title: "4 Days in Lagos: The Coast of Golden Cliffs",
+    excerpt:
+      "Four days on the Algarve done at dawn — ochre cliffs and hidden coves before the heat, the grottoes by boat, and the land running out at Cabo de São Vicente.",
+    meta: ["4 days", "Coast"],
+  },
+  {
+    href: "/10-days-in-sevilla/",
+    region: "Spain · Andalucía",
+    title: "10 Days in Sevilla: Andalucía Without Rush",
+    excerpt:
+      "Ten days in southern Spain's triumvirate of Moorish inheritance — using Seville as a fixed base, making the region reveal itself not by conquest, but by return.",
+    meta: ["10 days", "Base camp"],
+  },
+  {
+    href: "/3-days-in-seville/",
+    region: "Spain · Seville",
+    title: "3 Days in Seville: Palace, River and Parasol",
+    excerpt:
+      "A three-day Seville route that avoids crossing the city twice — the Real Alcázar and the monumental core, Triana and the river, then Plaza de España and the Setas.",
+    meta: ["3 days", "Itinerary"],
+  },
+  {
+    href: "/7-days-in-barcelona/",
+    region: "Spain · Catalonia",
+    title: "7 Days in Barcelona: Gaudí's Unfinished Argument",
+    excerpt:
+      "Seven days at the trip's busiest base, read through Gaudí and the hill, with three day trips and a cathedral still rising after a hundred and forty years.",
+    meta: ["7 days", "Itinerary"],
+  },
+  {
+    href: "/2-days-in-fez-itinerary/",
+    region: "Morocco · Fes",
+    title: "2 Days in Fez Itinerary",
+    excerpt:
+      "Two days inside Fez el-Bali — the world's oldest living medina, and the place that resists all description.",
+    meta: ["2 days", "Itinerary"],
+  },
+];
+
+const paths = [
+  {
+    href: "/chronicles/",
+    label: "The Chronicles",
+    note: "Every article, in one archive.",
+  },
+  {
+    href: "/by-region/",
+    label: "By Region",
+    note: "The same journeys, read off the map.",
+  },
+  {
+    href: "/about-the-traveller/",
+    label: "The Traveller",
+    note: "Who writes this, and how it is written.",
+  },
+];
 ---
 
 <BaseLayout
-  title="There & Back Again"
-  description="There & Back Again is a solo travel blog blending literary travel stories, practical itineraries, food guides, and reflections from the road."
+  title="There & Back Again — Literary Travel Chronicles & Practical Itineraries"
+  description="Independent travel chronicles by Mitch Chadban — literary accounts of real journeys through Portugal, Spain, Italy and Morocco, each with the routes, meals, costs and logistics that made them work."
   canonical="https://travel.mitchchadban.com/"
 >
   <Fragment slot="head" set:html={jsonLd} />
-  <Fragment set:html={pageContent} />
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-ornament">A solo travel chronicle</div>
+    <h1 class="hero-title">There<br /><em>&amp; Back</em><br />Again</h1>
+    <p class="hero-subtitle">
+      Tales written in the old manner — for those who travel not merely to
+      arrive, but to be changed by the road.
+    </p>
+    <a class="hero-cta" href="/chronicles/">Begin the Journey →</a>
+  </section>
+
+  <!-- TAGLINE -->
+  <div class="tagline-strip">
+    <p>
+      "For what is travel, if not the art of gathering <span>stories</span> to
+      warm the cold winters of ordinary time?"
+    </p>
+  </div>
+
+  <!-- WHAT THIS IS -->
+  <section class="front-statement">
+    <div class="section-label">What this is</div>
+    <div class="front-statement__body">
+      <p>
+        <strong>There &amp; Back Again</strong> is an independent travel
+        chronicle written and photographed by
+        <a href="/about-the-traveller/">Mitch Chadban</a>. Every journey here was
+        made in person, alone, and mostly overland.
+      </p>
+      <p>
+        Each article is written twice over. The narrative half tells the journey
+        as it happened, in the voice of <em>the traveller</em>. The practical
+        half gives the working detail behind it — the route in the order it
+        should be walked, the trains and the ferries, where to stay and what it
+        cost, and the meals worth crossing a city for.
+      </p>
+    </div>
+  </section>
+
+  <!-- CHRONICLES -->
+  <div class="section">
+    <div class="section-label">From the Chronicles</div>
+    <div class="posts-grid">
+      {
+        featured.map((post) => (
+          <a class="post-card" href={post.href}>
+            <div class="post-region">{post.region}</div>
+            <h2 class="post-title">{post.title}</h2>
+            <p class="post-excerpt">{post.excerpt}</p>
+            <div class="post-meta">
+              <span>{post.meta[0]}</span>
+              <span class="dot" />
+              <span>{post.meta[1]}</span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- WHERE TO GO NEXT -->
+  <section class="front-paths">
+    <div class="section-label">Where to go next</div>
+    <div class="front-paths__list">
+      {
+        paths.map((path) => (
+          <a class="front-path" href={path.href}>
+            <span class="front-path__label">{path.label}</span>
+            <span class="front-path__note">{path.note}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Two small front-page blocks. Both reuse the site's existing rhythm —
+     `.section`'s 4.5rem/8rem padding and `.section-label` — and introduce no
+     new colours, fonts or scale. */
+
+  .front-statement,
+  .front-paths {
+    width: 100%;
+    padding: 4.5rem 8rem;
+  }
+
+  .front-statement {
+    border-bottom: 0.5px solid rgba(160, 200, 120, 0.1);
+  }
+
+  .front-statement__body {
+    max-width: 62ch;
+  }
+
+  .front-statement__body p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.28rem;
+    font-weight: 300;
+    line-height: 1.78;
+    color: rgba(221, 232, 208, 0.72);
+  }
+
+  .front-statement__body p + p {
+    margin-top: 1.3rem;
+  }
+
+  .front-statement__body strong {
+    font-weight: 400;
+    color: #dde8d0;
+  }
+
+  .front-statement__body em {
+    font-style: italic;
+    color: #9ecf72;
+  }
+
+  .front-statement__body a {
+    color: rgba(221, 232, 208, 0.85);
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-decoration-color: rgba(160, 200, 120, 0.5);
+    text-underline-offset: 0.3em;
+    transition: color 0.3s, text-decoration-color 0.3s;
+  }
+
+  .front-paths {
+    border-top: 0.5px solid rgba(160, 200, 120, 0.1);
+  }
+
+  .front-paths__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5px;
+    background: rgba(160, 200, 120, 0.07);
+  }
+
+  .front-path {
+    display: block;
+    background: #0a0f08;
+    padding: 2.2rem 2.4rem;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .front-path__label {
+    display: block;
+    font-family: "IM Fell English", Georgia, serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #dde8d0;
+  }
+
+  .front-path__note {
+    display: block;
+    margin-top: 0.6rem;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(221, 232, 208, 0.45);
+  }
+
+  .front-statement__body a:hover,
+  .front-path:hover .front-path__label {
+    color: #9ecf72;
+  }
+
+  .front-statement__body a:hover {
+    text-decoration-color: rgba(158, 207, 114, 0.6);
+  }
+
+  .front-path:hover {
+    background: #0e1409;
+  }
+
+  .front-statement__body a:focus-visible,
+  .front-path:focus-visible {
+    outline: 1px solid rgba(158, 207, 114, 0.45);
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 1024px) {
+    .front-statement,
+    .front-paths {
+      padding: 4rem 4rem;
+    }
+  }
+
+  @media (max-width: 820px) {
+    .front-paths__list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .front-statement,
+    .front-paths {
+      padding: 3.2rem 1.5rem;
+    }
+
+    .front-statement__body p {
+      font-size: 1.18rem;
+    }
+
+    .front-path {
+      padding: 1.8rem 1.6rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .front-statement__body a,
+    .front-path,
+    .front-path__label {
+      transition: none;
+    }
+  }
+</style>

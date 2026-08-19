@@ -3,7 +3,8 @@
  * Article hero. Emits the same DOM as the legacy chronicles' `.post-hero`
  * block, so it inherits existing typography and spacing with no new CSS.
  */
-import type { HeroStat } from './types';
+import type { ChronicleMeta, HeroStat } from './types';
+import { bylineText, formatPublished, DISCLOSURE } from '../../lib/provenance';
 
 interface Props {
   /** Route strip, e.g. ['Spain', 'Andalucía', 'Seville']. */
@@ -18,10 +19,26 @@ interface Props {
   standfirst: string;
   /** Up to four hero stats. */
   stats?: HeroStat[];
+  /**
+   * The page's `meta`. Supplies the byline, the visible publication date and
+   * the affiliate disclosure, so a page declares its provenance once.
+   */
+  provenance?: ChronicleMeta;
 }
 
-const { route = [], label, title, titleEmphasis, standfirst, stats = [] } =
-  Astro.props;
+const {
+  route = [],
+  label,
+  title,
+  titleEmphasis,
+  standfirst,
+  stats = [],
+  provenance,
+} = Astro.props;
+
+const photography = provenance?.photography !== false;
+const published = provenance?.datePublished;
+const affiliate = provenance?.affiliateLinks === true;
 ---
 
 <div class="post-hero">
@@ -55,6 +72,26 @@ const { route = [], label, title, titleEmphasis, standfirst, stats = [] } =
             <span class="stat-label">{stat.label}</span>
           </div>
         ))}
+      </div>
+    )
+  }
+
+  {
+    provenance && (
+      <div class="article-provenance">
+        <p class="article-byline">
+          {bylineText(photography)}{' '}
+          <a href="/about-the-traveller/">Mitch Chadban</a>
+          {published && (
+            <>
+              <span class="article-byline__sep" aria-hidden="true" />
+              <span class="article-byline__date">
+                Published <time datetime={published}>{formatPublished(published)}</time>
+              </span>
+            </>
+          )}
+        </p>
+        {affiliate && <p class="affiliate-disclosure">{DISCLOSURE}</p>}
       </div>
     )
   }

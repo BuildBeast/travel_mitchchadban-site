@@ -25,6 +25,8 @@ const meta: ChronicleMeta = {
   path: '/best-things-to-do-in-seville/',
   ogImage: '/images/best-things-to-do-in-seville/pabellon-mudejar-reflected.jpg',
   factsVerified: '2026-07-29',
+  datePublished: '2026-07-30',
+  dateModified: '2026-08-02',
 };
 
 const IMG = '/images/best-things-to-do-in-seville';
@@ -32,6 +34,7 @@ const IMG = '/images/best-things-to-do-in-seville';
 
 <ChronicleLayout meta={meta}>
   <ArticleHeader
+    provenance={meta}
     route={['Spain', 'Andalucía', 'Seville']}
     label="Guide · Sixteen Experiences"
     title="Best Things to Do in Seville:"

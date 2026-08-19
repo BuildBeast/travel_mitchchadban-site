@@ -25,6 +25,8 @@ const meta: ChronicleMeta = {
   path: '/3-days-in-seville/',
   ogImage: '/images/3-days-in-seville/giralda-at-dusk.jpg',
   factsVerified: '2026-07-29',
+  datePublished: '2026-07-29',
+  dateModified: '2026-08-02',
 };
 
 const IMG = '/images/3-days-in-seville';
@@ -40,6 +42,7 @@ const IMG = '/images/3-days-in-seville';
 
 <ChronicleLayout meta={meta}>
   <ArticleHeader
+    provenance={meta}
     route={['Spain', 'Andalucía', 'Seville']}
     label="Itinerary · Three Days"
     title="3 Days in Seville:"

@@ -54,8 +54,28 @@ export interface ChronicleMeta {
   /**
    * ISO date (YYYY-MM-DD) on which the article's refresh-sensitive practical
    * details were last verified against primary sources.
+   *
+   * This is a research record, not an editorial one: a verification pass that
+   * changes nothing is not a modification, so this never becomes `dateModified`.
    */
   factsVerified?: string;
+  /**
+   * ISO date (YYYY-MM-DD) the article was first published. Set only where a
+   * trustworthy date exists; omitted rather than guessed.
+   */
+  datePublished?: string;
+  /**
+   * ISO date (YYYY-MM-DD) of a documented editorial revision after publication.
+   * Never a build, styling or configuration commit.
+   */
+  dateModified?: string;
+  /**
+   * `false` only where the page carries no original photography. Every
+   * photograph on this site is the author's own — see `docs/blog-image-audit/`.
+   */
+  photography?: boolean;
+  /** `true` where the page carries at least one monetised outbound link. */
+  affiliateLinks?: boolean;
 }
 
 /** Build an absolute URL from a site-absolute path. */

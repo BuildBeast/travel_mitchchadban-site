@@ -25,6 +25,8 @@ const meta: ChronicleMeta = {
   path: '/one-day-in-seville/',
   ogImage: '/images/one-day-in-seville/plaza-de-espana-from-the-arcade.jpg',
   factsVerified: '2026-07-29',
+  datePublished: '2026-07-30',
+  dateModified: '2026-08-02',
 };
 
 const IMG = '/images/one-day-in-seville';
@@ -32,6 +34,7 @@ const IMG = '/images/one-day-in-seville';
 
 <ChronicleLayout meta={meta}>
   <ArticleHeader
+    provenance={meta}
     route={['Spain', 'Andalucía', 'Seville']}
     label="Itinerary · One Day"
     title="One Day in Seville:"

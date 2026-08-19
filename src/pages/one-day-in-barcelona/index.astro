@@ -25,6 +25,7 @@ const meta: ChronicleMeta = {
   path: '/one-day-in-barcelona/',
   ogImage: '/images/one-day-in-barcelona/park-guell-terrace-over-the-city.jpg',
   factsVerified: '2026-08-03',
+  datePublished: '2026-08-03',
 };
 
 const IMG = '/images/one-day-in-barcelona';
@@ -32,6 +33,7 @@ const IMG = '/images/one-day-in-barcelona';
 
 <ChronicleLayout meta={meta}>
   <ArticleHeader
+    provenance={meta}
     route={['Spain', 'Catalonia', 'Barcelona']}
     label="Itinerary · One Day"
     title="One Day in Barcelona:"
