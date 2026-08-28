@@ -17,19 +17,28 @@ jobs:
       - name: Check out hardening branch
         uses: actions/checkout@v4
         with:
-          ref: fix/zero-error-hardening
+          ref: fix/zero-error-hardening-v2
           fetch-depth: 0
-      - name: Repair unmatched Barcelona prose wrapper
+      - name: Repair strict Astro markup
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          const path = 'src/pages/best-day-trips-from-barcelona/index.astro';
-          const text = fs.readFileSync(path, 'utf8');
-          const needle = `        superb place that assumes a car and defeats anyone without one.\n      </p>\n\n    <Practical place="Catalonia — Excursions from Barcelona"`;
-          const replacement = `        superb place that assumes a car and defeats anyone without one.\n      </p>\n    </div>\n\n    <Practical place="Catalonia — Excursions from Barcelona"`;
-          const matches = text.split(needle).length - 1;
-          if (matches !== 1) throw new Error(`Expected exactly one Barcelona wrapper repair target, found ${matches}`);
-          fs.writeFileSync(path, text.replace(needle, replacement));
+
+          const pagePath = 'src/pages/best-day-trips-from-barcelona/index.astro';
+          const page = fs.readFileSync(pagePath, 'utf8');
+          const pageNeedle = `        superb place that assumes a car and defeats anyone without one.\n      </p>\n\n    <Practical place="Catalonia — Excursions from Barcelona"`;
+          const pageReplacement = `        superb place that assumes a car and defeats anyone without one.\n      </p>\n    </div>\n\n    <Practical place="Catalonia — Excursions from Barcelona"`;
+          const pageMatches = page.split(pageNeedle).length - 1;
+          if (pageMatches !== 1) throw new Error(`Expected exactly one Barcelona wrapper repair target, found ${pageMatches}`);
+          fs.writeFileSync(pagePath, page.replace(pageNeedle, pageReplacement));
+
+          const layoutPath = 'src/layouts/BaseLayout.astro';
+          const layout = fs.readFileSync(layoutPath, 'utf8');
+          const layoutNeedle = '<script type="application/ld+json" set:html={JSON.stringify(collectionPageJsonLd)} />';
+          const layoutReplacement = '<script is:inline type="application/ld+json" set:html={JSON.stringify(collectionPageJsonLd)} />';
+          const layoutMatches = layout.split(layoutNeedle).length - 1;
+          if (layoutMatches !== 1) throw new Error(`Expected exactly one CollectionPage JSON-LD script target, found ${layoutMatches}`);
+          fs.writeFileSync(layoutPath, layout.replace(layoutNeedle, layoutReplacement));
           NODE
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -40,7 +49,7 @@ jobs:
         run: npm ci
       - name: Upgrade vulnerable framework dependencies
         run: npm install astro@7.2.9 sharp@0.35.4 @astrojs/sitemap@latest
-      - name: Apply non-breaking audit fixes
+      - name: Apply audit fixes
         run: npm audit fix
       - name: Audit full dependency tree
         run: npm audit --audit-level=high
@@ -52,8 +61,7 @@ jobs:
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          const path = 'src/pages/best-day-trips-from-barcelona/index.astro';
-          const text = fs.readFileSync(path, 'utf8');
+          const text = fs.readFileSync('src/pages/best-day-trips-from-barcelona/index.astro', 'utf8');
           let balance = 0;
           for (const match of text.matchAll(/<\/?div\b[^>]*>/g)) balance += match[0].startsWith('</') ? -1 : 1;
           if (balance !== 0) throw new Error(`Unbalanced div count remains: ${balance}`);
@@ -71,6 +79,6 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add package.json package-lock.json src/pages/best-day-trips-from-barcelona/index.astro
+          git add package.json package-lock.json src/layouts/BaseLayout.astro src/pages/best-day-trips-from-barcelona/index.astro
           git commit -m 'Harden dependencies and repair strict markup'
-          git push origin HEAD:fix/zero-error-hardening
+          git push origin HEAD:fix/zero-error-hardening-v2
