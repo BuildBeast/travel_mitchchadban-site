@@ -36,6 +36,21 @@ jobs:
         run: npm audit --omit=dev --audit-level=high
       - name: Astro type and content checks
         run: npm run check
+      - name: Diagnose unmatched divs in Barcelona day-trips page
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const path = 'src/pages/best-day-trips-from-barcelona/index.astro';
+          const text = fs.readFileSync(path, 'utf8');
+          const stack = [];
+          const re = /<\/?div\b[^>]*>/g;
+          for (const match of text.matchAll(re)) {
+            const line = text.slice(0, match.index).split('\n').length;
+            if (match[0].startsWith('</')) stack.pop();
+            else stack.push({ line, tag: match[0] });
+          }
+          console.log('Unmatched div openings:', stack);
+          NODE
       - name: Build production site
         run: npm run build
       - name: Validate responsive image markup
