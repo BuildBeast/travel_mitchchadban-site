@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// Verifies the live production redirect contract, not just repository configuration.
 import fs from 'node:fs/promises';
 
 const BASE_URL = process.env.REDIRECT_VERIFY_BASE_URL || 'https://travel.mitchchadban.com';
