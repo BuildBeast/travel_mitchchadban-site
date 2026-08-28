@@ -1,0 +1,53 @@
+name: Zero-error dependency hardening
+
+on:
+  push:
+    branches: [fix/zero-error-hardening]
+    paths:
+      - '.github/workflows/zero-error-hardening.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  harden:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out hardening branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/zero-error-hardening
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install current dependencies
+        run: npm ci
+      - name: Upgrade vulnerable framework dependencies
+        run: npm install astro@7.2.9 sharp@0.35.4 @astrojs/sitemap@latest
+      - name: Apply non-breaking audit fixes
+        run: npm audit fix
+      - name: Audit production dependency tree
+        run: npm audit --omit=dev --audit-level=high
+      - name: Astro type and content checks
+        run: npm run check
+      - name: Validate responsive image derivatives
+        run: npm run images:responsive:check
+      - name: Validate responsive image markup
+        run: npm run images:responsive:markup
+      - name: Build production site
+        run: npm run build
+      - name: Commit validated dependency hardening
+        run: |
+          if git diff --quiet -- package.json package-lock.json; then
+            echo 'No dependency changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add package.json package-lock.json
+          git commit -m 'Harden production dependencies'
+          git push origin HEAD:fix/zero-error-hardening
