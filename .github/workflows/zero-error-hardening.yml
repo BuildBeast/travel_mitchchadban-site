@@ -36,10 +36,10 @@ jobs:
         run: npm audit --omit=dev --audit-level=high
       - name: Astro type and content checks
         run: npm run check
-      - name: Validate responsive image markup
-        run: npm run images:responsive:markup
       - name: Build production site
         run: npm run build
+      - name: Validate responsive image markup
+        run: npm run images:responsive:markup
       - name: Commit validated dependency hardening
         run: |
           if git diff --quiet -- package.json package-lock.json; then
