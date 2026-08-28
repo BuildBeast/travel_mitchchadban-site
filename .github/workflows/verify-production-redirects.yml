@@ -12,7 +12,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -23,6 +23,14 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+      - name: Astro type and content checks
+        run: npm run check
+      - name: Validate responsive image derivatives
+        run: npm run images:responsive:check
+      - name: Validate responsive image markup
+        run: npm run images:responsive:markup
       - name: Build production site
         run: npm run build
       - name: Wait for production deployment
