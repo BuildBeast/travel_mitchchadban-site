@@ -1,17 +1,18 @@
-name: Verify production redirects
+name: Verify production site
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'vercel.json'
-      - 'scripts/verify-production-redirects.mjs'
-      - '.github/workflows/verify-production-redirects.yml'
   workflow_dispatch:
+
+concurrency:
+  group: production-site-audit
+  cancel-in-progress: true
 
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -19,7 +20,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build production site
+        run: npm run build
       - name: Wait for production deployment
-        run: sleep 45
-      - name: Verify all canonical normalization redirects
+        run: sleep 60
+      - name: Verify canonical normalization redirects
         run: node scripts/verify-production-redirects.mjs
+      - name: Audit production site
+        run: node scripts/audit-production-site.mjs
