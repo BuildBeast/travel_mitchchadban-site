@@ -20,6 +20,23 @@ const {
 
 // Resolve the share image to an absolute URL (required by OG/Twitter).
 const ogImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
+const isCollectionPage = canonical === `${SITE_URL}/chronicles/` || canonical === `${SITE_URL}/by-region/`;
+const collectionPageJsonLd = isCollectionPage
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      '@id': `${canonical}#collection`,
+      url: canonical,
+      name: title,
+      description,
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: SITE_NAME,
+      },
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -60,6 +77,10 @@ const ogImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    {collectionPageJsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(collectionPageJsonLd)} />
+    )}
 
     <!-- Per-page structured data (JSON-LD) and any extra head tags -->
     <slot name="head" />
