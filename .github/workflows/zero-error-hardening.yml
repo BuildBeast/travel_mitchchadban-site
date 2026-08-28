@@ -19,6 +19,18 @@ jobs:
         with:
           ref: fix/zero-error-hardening
           fetch-depth: 0
+      - name: Repair unmatched Barcelona prose wrapper
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const path = 'src/pages/best-day-trips-from-barcelona/index.astro';
+          const text = fs.readFileSync(path, 'utf8');
+          const needle = `        superb place that assumes a car and defeats anyone without one.\n      </p>\n\n    <Practical place="Catalonia — Excursions from Barcelona"`;
+          const replacement = `        superb place that assumes a car and defeats anyone without one.\n      </p>\n    </div>\n\n    <Practical place="Catalonia — Excursions from Barcelona"`;
+          const matches = text.split(needle).length - 1;
+          if (matches !== 1) throw new Error(`Expected exactly one Barcelona wrapper repair target, found ${matches}`);
+          fs.writeFileSync(path, text.replace(needle, replacement));
+          NODE
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -36,33 +48,29 @@ jobs:
         run: npm audit --omit=dev --audit-level=high
       - name: Astro type and content checks
         run: npm run check
-      - name: Diagnose unmatched divs in Barcelona day-trips page
+      - name: Confirm div balance in Barcelona day-trips page
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const path = 'src/pages/best-day-trips-from-barcelona/index.astro';
           const text = fs.readFileSync(path, 'utf8');
-          const stack = [];
-          const re = /<\/?div\b[^>]*>/g;
-          for (const match of text.matchAll(re)) {
-            const line = text.slice(0, match.index).split('\n').length;
-            if (match[0].startsWith('</')) stack.pop();
-            else stack.push({ line, tag: match[0] });
-          }
-          console.log('Unmatched div openings:', stack);
+          let balance = 0;
+          for (const match of text.matchAll(/<\/?div\b[^>]*>/g)) balance += match[0].startsWith('</') ? -1 : 1;
+          if (balance !== 0) throw new Error(`Unbalanced div count remains: ${balance}`);
+          console.log('Barcelona day-trips div balance: 0');
           NODE
       - name: Build production site
         run: npm run build
       - name: Validate responsive image markup
         run: npm run images:responsive:markup
-      - name: Commit validated dependency hardening
+      - name: Commit validated hardening
         run: |
-          if git diff --quiet -- package.json package-lock.json; then
-            echo 'No dependency changes to commit.'
+          if git diff --quiet; then
+            echo 'No hardening changes to commit.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add package.json package-lock.json
-          git commit -m 'Harden production dependencies'
+          git add package.json package-lock.json src/pages/best-day-trips-from-barcelona/index.astro
+          git commit -m 'Harden dependencies and repair strict markup'
           git push origin HEAD:fix/zero-error-hardening
