@@ -79,7 +79,7 @@ const collectionPageJsonLd = isCollectionPage
     <meta name="twitter:image" content={ogImage} />
 
     {collectionPageJsonLd && (
-      <script type="application/ld+json" set:html={JSON.stringify(collectionPageJsonLd)} />
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(collectionPageJsonLd)} />
     )}
 
     <!-- Per-page structured data (JSON-LD) and any extra head tags -->
