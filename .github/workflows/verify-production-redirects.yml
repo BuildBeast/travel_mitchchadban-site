@@ -1,0 +1,25 @@
+name: Verify production redirects
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'vercel.json'
+      - 'scripts/verify-production-redirects.mjs'
+      - '.github/workflows/verify-production-redirects.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Wait for production deployment
+        run: sleep 45
+      - name: Verify all canonical normalization redirects
+        run: node scripts/verify-production-redirects.mjs
