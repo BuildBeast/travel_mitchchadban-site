@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/iguazu-falls-in-2-days.md";
+import { provenanceHtml, withProvenance } from "../../lib/provenance";
+
+const title = "Iguazú Falls in 2 Days: Argentina and Brazil — There & Back Again";
+const description = "A first-hand two-day Iguazú Falls itinerary covering the Argentina and Brazil sides, including the park circuits, Macuco Safari and Parque das Aves.";
+const canonical = "https://travel.mitchchadban.com/iguazu-falls-in-2-days/";
+const image = "/images/iguazu-falls-in-2-days/iguazu-falls-panorama-1200w.jpg";
+const PROVENANCE = { photography: true };
+
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Iguazú Falls in 2 Days: Argentina and Brazil",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Iguazú Falls in 2 Days: Argentina and Brazil", item: canonical },
+      ],
+    },
+  ],
+}, PROVENANCE);
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="iguazu-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Argentina · Brazil · Iguazú Falls ·&nbsp;<span>September 2026</span></div>
+    <h1 id="iguazu-title" class="post-hero-title"><em>Iguazú Falls in 2 Days:</em><br />Argentina and Brazil</h1>
+    <p class="post-hero-sub">One waterfall system, two countries, and two full days arranged around the route.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Days</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Nights</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Countries</span></div>
+    </div>
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+  </section>
+
+  <article class="post-body iguazu-post-body">
+    <ArticleContent />
+  </article>
+
+  <style is:global>
+    .iguazu-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
+    .iguazu-post-body .article-photo picture,
+    .iguazu-post-body .article-photo img { display: block; width: 100%; }
+    .iguazu-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
+    .iguazu-post-body .article-photo figcaption { margin-top: 0.65rem; color: rgba(221, 232, 208, 0.62); font-size: 0.95rem; font-style: italic; text-align: center; }
+    .iguazu-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.08; }
+    .iguazu-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 400; }
+    .iguazu-post-body p,
+    .iguazu-post-body ul { max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .iguazu-post-body ul { padding-left: 2rem; color: rgba(221, 232, 208, 0.86); font-size: 1.18rem; line-height: 1.7; }
+    .iguazu-post-body strong { color: #e7f2da; }
+    @media (max-width: 820px) {
+      .iguazu-post-body .article-photo { margin: 2.5rem 0; }
+      .iguazu-post-body h2,
+      .iguazu-post-body h3,
+      .iguazu-post-body p { max-width: none; }
+    }
+  </style>
+</BaseLayout>
