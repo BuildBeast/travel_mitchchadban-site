@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/3-days-in-lima-itinerary.md";
+import { provenanceHtml, withProvenance } from "../../lib/provenance";
+
+const title = "3 Days in Lima: Complete Itinerary — There & Back Again";
+const description = "A three-day Lima itinerary through the historic centre, Barranco, Miraflores, archaeological sites and museums, based on a first-hand September 2026 visit.";
+const canonical = "https://travel.mitchchadban.com/3-days-in-lima-itinerary/";
+const image = "/images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-1200w.jpg";
+const PROVENANCE = { photography: true };
+
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "3 Days in Lima: Complete Itinerary",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "3 Days in Lima: Complete Itinerary", item: canonical },
+      ],
+    },
+  ],
+}, PROVENANCE);
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <header class="header-web" role="banner">
+    <div class="header-web__inner">
+      <a class="header-web__brand" href="/">THERE &amp; BACK AGAIN</a>
+      <nav aria-label="Primary" class="header-web__nav">
+        <a class="header-web__link" href="/chronicles/">CHRONICLES</a>
+        <a class="header-web__link" href="/by-region/">BY REGION</a>
+        <a class="header-web__link" href="/about-the-traveller/">THE TRAVELLER</a>
+      </nav>
+    </div>
+  </header>
+  <hr class="header-rule" />
+
+  <section class="post-hero" aria-labelledby="lima-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru · Lima ·&nbsp;<span>September 2026</span></div>
+    <h1 id="lima-title" class="post-hero-title"><em>3 Days in Lima:</em><br />The City Beneath the City</h1>
+    <p class="post-hero-sub">A first-hand three-day route through Lima’s historic centre, coastal districts, archaeological sites and museums.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Days</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Nights</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">Jesús María</span><span class="stat-label">Base</span></div>
+    </div>
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+  </section>
+
+  <article class="post-body lima-post-body">
+    <ArticleContent />
+  </article>
+
+  <style is:global>
+    .lima-post-body .article-photo {
+      max-width: 1100px;
+      margin: 3.5rem auto;
+    }
+
+    .lima-post-body .article-photo picture,
+    .lima-post-body .article-photo img {
+      display: block;
+      width: 100%;
+    }
+
+    .lima-post-body .article-photo img {
+      height: auto;
+      border: 1px solid rgba(158, 207, 114, 0.12);
+    }
+
+    .lima-post-body .article-photo figcaption {
+      margin-top: 0.65rem;
+      color: rgba(221, 232, 208, 0.62);
+      font-size: 0.95rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .lima-post-body > h1 { display: none; }
+
+    .lima-post-body h2 {
+      max-width: 1100px;
+      margin: 4.5rem auto 1.4rem;
+      color: #9ecf72;
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    .lima-post-body h3 {
+      max-width: 1100px;
+      margin: 2.8rem auto 1rem;
+      color: #9ecf72;
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: clamp(1.45rem, 3vw, 2.2rem);
+      font-weight: 400;
+    }
+
+    .lima-post-body p,
+    .lima-post-body ul {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .lima-post-body ul {
+      padding-left: 2rem;
+      color: rgba(221, 232, 208, 0.86);
+      font-size: 1.18rem;
+      line-height: 1.7;
+    }
+
+    .lima-post-body strong { color: #e7f2da; }
+
+    @media (max-width: 820px) {
+      .lima-post-body .article-photo { margin: 2.5rem 0; }
+      .lima-post-body h2,
+      .lima-post-body h3,
+      .lima-post-body p { max-width: none; }
+    }
+  </style>
+</BaseLayout>
