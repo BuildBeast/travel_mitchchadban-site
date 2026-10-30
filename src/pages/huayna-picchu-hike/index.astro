@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/huayna-picchu-hike.md";
+import { provenanceHtml, withProvenance } from "../../lib/provenance";
+
+const title = "Huayna Picchu Hike: What the Climb Is Really Like — There & Back Again";
+const description = "A first-hand, evidence-led account of the Huayna Picchu climb on 14 September 2026, including the recorded timing, stone trail, views and the limits of what the trip record can prove.";
+const canonical = "https://travel.mitchchadban.com/huayna-picchu-hike/";
+const image = "/images/huayna-picchu-hike/huayna-picchu-view-over-valley.jpg";
+const PROVENANCE = { photography: true };
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Article", headline: "Huayna Picchu Hike: What the Climb Is Really Like", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
+    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "Huayna Picchu Hike: What the Climb Is Really Like", item: canonical } ] },
+  ],
+}, PROVENANCE);
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+  <section class="post-hero" aria-labelledby="huayna-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru ·&nbsp;<span>Huayna Picchu</span>&nbsp;· September 2026</div>
+    <h1 id="huayna-title" class="post-hero-title"><em>Huayna Picchu Hike:</em><br />What the Climb Is Really Like</h1>
+    <p class="post-hero-sub">A dated visual and route record of the climb above Machu Picchu, with the evidence kept separate from the assumptions.</p>
+    <div class="post-stats"><div class="stat"><span class="stat-num">3h30</span><span class="stat-label">Recorded block</span></div><div class="stat"><span class="stat-num">14</span><span class="stat-label">September 2026</span></div><div class="stat"><span class="stat-num">1</span><span class="stat-label">Climb</span></div><div class="stat"><span class="stat-num">Peru</span><span class="stat-label">Country</span></div></div>
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+  </section>
+  <article class="post-body huayna-post-body"><ArticleContent /></article>
+  <style is:global>
+    .huayna-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
+    .huayna-post-body .article-photo picture, .huayna-post-body .article-photo img { display: block; width: 100%; }
+    .huayna-post-body .article-photo img { height: auto; border: 1px solid rgba(158,207,114,.12); }
+    .huayna-post-body .article-photo figcaption { margin-top: .65rem; color: rgba(221,232,208,.62); font-size: .95rem; font-style: italic; text-align: center; }
+    .huayna-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 400; line-height: 1.08; }
+    .huayna-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem,3vw,2.2rem); font-weight: 400; }
+    .huayna-post-body p, .huayna-post-body ul { max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .huayna-post-body ul { padding-left: 2rem; color: rgba(221,232,208,.86); font-size: 1.18rem; line-height: 1.7; }
+    .huayna-post-body strong { color: #e7f2da; }
+    @media (max-width: 820px) { .huayna-post-body .article-photo { margin: 2.5rem 0; } .huayna-post-body h2, .huayna-post-body h3, .huayna-post-body p { max-width: none; } }
+  </style>
+</BaseLayout>
