@@ -40,18 +40,6 @@ const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/s
 <BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
   <Fragment slot="head" set:html={jsonLd} />
 
-  <header class="header-web" role="banner">
-    <div class="header-web__inner">
-      <a class="header-web__brand" href="/">THERE &amp; BACK AGAIN</a>
-      <nav aria-label="Primary" class="header-web__nav">
-        <a class="header-web__link" href="/chronicles/">CHRONICLES</a>
-        <a class="header-web__link" href="/by-region/">BY REGION</a>
-        <a class="header-web__link" href="/about-the-traveller/">THE TRAVELLER</a>
-      </nav>
-    </div>
-  </header>
-  <hr class="header-rule" />
-
   <section class="post-hero" aria-labelledby="lima-title">
     <div class="post-route-strip"><span>South America</span>&nbsp;· Peru · Lima ·&nbsp;<span>September 2026</span></div>
     <h1 id="lima-title" class="post-hero-title"><em>3 Days in Lima:</em><br />The City Beneath the City</h1>
