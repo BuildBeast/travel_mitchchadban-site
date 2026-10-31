@@ -54,6 +54,8 @@ The surviving notes do not preserve exact walking times or a complete neighbourh
 
 ## Day 4 — Viewpoints, then the road to Mendoza
 
+For a focused comparison of San Cristóbal, Santa Lucía and Sky Costanera, continue to the [Santiago viewpoints guide](/santiago-viewpoints/). This itinerary remains the full four-day chronology.
+
 The final Santiago sequence is built around the city seen from above. The route records **San Cristóbal Hill**, **Sky Costanera**, the **Bahá’í Temple** and **Santa Lucía Hill**. Those stops should not be treated as interchangeable viewpoints: they belong to different parts of the city and require their own planning.
 
 The evidence does not preserve a reliable order, transport mode, fare or weather account. The practical recommendation is therefore simple: group the viewpoints geographically, leave room for the fixed opening or entry arrangements you confirm before travel, and do not assume the “Valparaiso??” planning note became a completed day trip. The sortie record does not support Valparaíso as part of this article.
