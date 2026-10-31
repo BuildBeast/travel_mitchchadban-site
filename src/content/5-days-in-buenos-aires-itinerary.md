@@ -116,7 +116,7 @@ For a reader using this trip as a framework, the evidence-backed shape is:
 1. **Arrival afternoon:** stay in the centre and connect the Cathedral, Casa Rosada, Plaza de Mayo, Congress and a first museum or dinner stop.
 2. **First full day:** combine the Obelisk, Teatro Colón, El Ateneo, Palacio Barolo, Recoleta and selected museums.
 3. **Second full day:** use San Telmo and Puerto Madero as the spine, adding cultural stops along the route.
-4. **Day trip:** keep Colonia separate and text-led until transport and photo evidence are confirmed.
+4. **Day trip:** keep Colonia separate and text-led until transport and photo evidence are confirmed; see the [Colonia del Sacramento day-trip article](/colonia-del-sacramento-day-trip/).
 5. **Final full day:** make the La Boca–San Telmo–Palermo movement the closing route.
 
 The actual stay also included a departure morning, so this is a five-day itinerary in the broader trip sense rather than five full days spent inside Buenos Aires.
