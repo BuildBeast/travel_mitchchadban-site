@@ -12,6 +12,8 @@ This is not a prescription for a relaxed weekend.
 
 It is the route recorded in the trip itinerary.
 
+For a discovery-led shortlist of the experiences behind this route, start with the [best things to do in Lima guide](/best-things-to-do-in-lima/).
+
 And it is a useful demonstration of how much city can sit inside Lima.
 
 ## Lima in Three Days at a Glance

@@ -6,6 +6,8 @@ What the evidence does support is still enough for a useful guide: San Francisco
 
 For the complete three-day route—including Barranco, Miraflores, archaeological Lima and the later museum day—continue to the [three-day Lima itinerary](/3-days-in-lima-itinerary/). This page stays with central Lima.
 
+For the wider discovery view, see the [best things to do in Lima guide](/best-things-to-do-in-lima/), which places the Historic Centre alongside Barranco, the Pacific coast, archaeology and museums.
+
 <figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-plaza-mayor.jpg" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Plaza Mayor in Lima’s historic centre during the recorded arrival afternoon." loading="lazy" decoding="async"></picture><figcaption>Plaza Mayor became the centre of gravity for the first afternoon in Lima’s Historic Centre.</figcaption></figure>
 
 ## Why I started Lima in the Historic Centre

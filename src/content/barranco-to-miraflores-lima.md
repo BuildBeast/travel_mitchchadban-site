@@ -6,6 +6,8 @@ What the day does support is a change in Lima. Barranco begins with street art, 
 
 For the full Lima chronology, continue to the [three-day Lima itinerary](/3-days-in-lima-itinerary/). For the previous afternoon’s civic and religious centre, see the [Lima Historic Centre and San Francisco guide](/lima-historic-centre-san-francisco-catacombs/).
 
+For the broader shortlist of Lima experiences, see the [best things to do in Lima guide](/best-things-to-do-in-lima/).
+
 <figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast.jpg" srcset="/images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Miraflores coast, palms, road and cliffside from the confirmed coastal sequence." loading="lazy" decoding="async"></picture><figcaption>Miraflores opens the route toward palms, cliffside roads and the Pacific.</figcaption></figure>
 
 ## Why Barranco and Miraflores work together

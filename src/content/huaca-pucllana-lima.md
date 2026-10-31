@@ -4,6 +4,8 @@ The recorded visit took place on **11 September 2026**, after Barranco and the M
 
 That distinction matters. This is a first-hand account of a confirmed site visit within a recorded Lima route, not an official visitor guide or a claim to have documented every part of the complex.
 
+For the wider Lima shortlist, see the [best things to do in Lima guide](/best-things-to-do-in-lima/), where Pucllana sits alongside the Historic Centre, Barranco, the Pacific coast and the city’s museums.
+
 <figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-huaca-pucllana-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-huaca-pucllana-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-huaca-pucllana.jpg" srcset="/images/3-days-in-lima-itinerary/lima-huaca-pucllana-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Huaca Pucllana archaeological landscape in Miraflores, Lima." loading="eager" decoding="async" width="2048" height="1152" /></picture><figcaption>Huaca Pucllana’s archaeological landscape inside modern Miraflores.</figcaption></figure>
 
 ## Huaca Pucllana at a glance
