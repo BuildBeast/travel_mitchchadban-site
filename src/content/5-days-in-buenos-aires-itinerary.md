@@ -95,6 +95,8 @@ The itinerary works best as a set of city routes rather than as a transport guid
 
 ## The city by neighbourhood
 
+For a district-by-district comparison of the places recorded on this visit, continue to the [Buenos Aires neighbourhoods guide](/buenos-aires-neighbourhoods/). This itinerary remains the full chronological account of the five-night stay.
+
 The route divided Buenos Aires into several overlapping city worlds. The historic centre supplied the first civic sequence: the Cathedral, Casa Rosada, Plaza de Mayo, Congress and the Obelisk. Recoleta added the cemetery, Floralis Genérica and the museum route. Palermo was both the base and the setting for El Preferido, Plaza Serrano, the Rosedal, the Planetarium and Paseo de La Infanta.
 
 San Telmo brought markets and museums into the route, while Puerto Madero shifted the day towards the waterfront and contemporary cultural spaces. La Boca supplied the clearest football-related location, but only as a stadium stop. Colonia sat outside this pattern altogether: a full day beyond Buenos Aires, recorded as an extension of the stay rather than another district.
