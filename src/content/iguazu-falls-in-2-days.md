@@ -4,6 +4,8 @@ The base was Puerto Iguazú, in Argentina. The first full day stayed on the Arge
 
 That division gives the trip its shape. Argentina was the more explicitly segmented park day in the itinerary. Brazil combined a falls trail with a separate wildlife visit. Neither day needs to be reduced to a winner. With two days, the useful decision is to do both.
 
+If you are deciding which side suits the kind of day you want, I have compared the [Argentina and Brazil sides of Iguazú Falls separately](/iguazu-falls-argentina-vs-brazil/). This page remains the day-by-day route.
+
 ## Iguazú in Two Days at a Glance
 
 - **26 September:** arrive from Mendoza, settle in at La Rioja 718, visit Hito Tres Fronteras and eat at El Hito Restaurante Mirador.
