@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/valle-de-la-luna-la-paz.md";
+import { provenanceHtml, withProvenance } from "../../lib/provenance";
+
+const title = "Valle de la Luna, La Paz: Is It Worth Visiting? | There & Back Again";
+const description = "A first-hand visit to Valle de la Luna in La Paz, covering the eroded formations, walking route, recorded timing and whether it deserves part of a La Paz itinerary.";
+const canonical = "https://travel.mitchchadban.com/valle-de-la-luna-la-paz/";
+const image = "/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1200w.jpg";
+const PROVENANCE = { photography: true };
+
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Valle de la Luna, La Paz: Is It Worth Visiting?",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Valle de la Luna, La Paz", item: canonical },
+      ],
+    },
+  ],
+}, PROVENANCE);
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="valle-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Bolivia · La Paz ·&nbsp;<span>September 2026</span></div>
+    <h1 id="valle-title" class="post-hero-title"><em>Valle de la Luna, La Paz:</em><br />Is It Worth Visiting?</h1>
+    <p class="post-hero-sub">A short morning away from the city, where La Paz’s streets give way to eroded formations and walking paths.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Hours Recorded</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">La Paz</span><span class="stat-label">Base</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Morning</span></div>
+    </div>
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+  </section>
+
+  <article class="post-body valle-post-body">
+    <ArticleContent />
+  </article>
+
+  <style is:global>
+    .valle-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
+    .valle-post-body .article-photo picture,
+    .valle-post-body .article-photo img { display: block; width: 100%; }
+    .valle-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
+    .valle-post-body .article-photo figcaption { margin-top: 0.65rem; color: rgba(221, 232, 208, 0.62); font-size: 0.95rem; font-style: italic; text-align: center; }
+    .valle-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.08; }
+    .valle-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 400; }
+    .valle-post-body p,
+    .valle-post-body ul { max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .valle-post-body ul { padding-left: 2rem; color: rgba(221, 232, 208, 0.86); font-size: 1.18rem; line-height: 1.7; }
+    .valle-post-body strong { color: #e7f2da; }
+    .valle-post-body .practical-note { max-width: 1100px; margin: 1.5rem auto; border-left: 2px solid rgba(158, 207, 114, 0.55); padding: 0.2rem 1rem; color: rgba(221, 232, 208, 0.72); font-size: 1rem; }
+    @media (max-width: 820px) {
+      .valle-post-body .article-photo { margin: 2.5rem 0; }
+      .valle-post-body h2,
+      .valle-post-body h3,
+      .valle-post-body p { max-width: none; }
+    }
+  </style>
+</BaseLayout>
