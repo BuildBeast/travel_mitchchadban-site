@@ -47,7 +47,7 @@ The route moves quickly from the civic centre into market streets, then into the
 
 The 16 September itinerary records several Mi Teleférico stations and movements, followed by **Mirador Killi Killi**. The exact sequence of coloured lines is less important here than the role the cable cars played in the route.
 
-They were recorded as transport between sections of the city, not only as a standalone attraction. From the cabins, streets, roofs and steep hillsides become part of one wider view.
+They were recorded as transport between sections of the city, not only as a standalone attraction. From the cabins, streets, roofs and steep hillsides become part of one wider view. For the cable-car experience on its own terms, see the [Mi Teleférico in La Paz guide](/mi-teleferico-la-paz/).
 
 <figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-1200w.jpg 1200w" sizes="(max-width: 820px) 100vw, 1100px" alt="Mi Teleférico cabins above La Paz." loading="lazy" decoding="async"></picture><figcaption>Mi Teleférico cabins above La Paz.</figcaption></figure>
 
