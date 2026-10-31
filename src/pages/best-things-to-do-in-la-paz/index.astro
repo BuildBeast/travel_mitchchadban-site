@@ -1,0 +1,379 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import { SIZES_MODERN_WIDE } from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Things to Do in La Paz, Bolivia: A First-Hand Guide',
+  headline: 'Best Things to Do in La Paz',
+  description:
+    'A first-hand guide to the best things to do in La Paz, from Mi Teleférico and the city’s markets to Plaza Murillo, museums and Valle de la Luna.',
+  path: '/best-things-to-do-in-la-paz/',
+  ogImage: '/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg',
+  photography: true,
+};
+
+const IMG = '/images/3-days-in-la-paz-itinerary';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    provenance={meta}
+    route={['Bolivia', 'La Paz', 'South America']}
+    label="Guide · Seven Experiences"
+    title="Best Things to Do in La Paz"
+    standfirst="La Paz changes register constantly: civic plazas become market streets, museums give way to cable cars, and the urban grid opens into eroded landscape. These are the seven experiences from my September 2026 visit that deserve the most attention."
+    stats={[
+      { num: '7', label: 'Experiences' },
+      { num: '3', label: 'Full days' },
+      { num: '2', label: 'Markets' },
+      { num: '1', label: 'City' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          La Paz is difficult to understand from street level. The centre is dense
+          with plazas, museums and markets. Brick neighbourhoods climb the slopes.
+          Cable cars cross above the roofs. Then, on another morning, the city gives
+          way to the eroded formations of Valle de la Luna.
+        </p>
+        <p>
+          This is a discovery page rather than another three-day itinerary. The
+          seven experiences below come from the route I recorded between 16 and 18
+          September 2026. They are grouped by what they add to an understanding of
+          La Paz, not rearranged as Day 1, Day 2 and Day 3. For the full chronology,
+          use the <a href="/3-days-in-la-paz-itinerary/">three-day La Paz itinerary</a>.
+        </p>
+        <p>
+          The list is deliberately evidence-led. I have left out football-match
+          attendance, Cholitas Wrestling as a completed first-hand experience, the
+          planned jog, altitude symptoms, restaurant reviews and current fares or
+          opening details. The records support a city route; they do not support a
+          medical account or a generic attractions directory.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/la-paz-city-panorama.jpg`}
+      srcset={`${IMG}/la-paz-city-panorama-480w.jpg 480w, ${IMG}/la-paz-city-panorama-768w.jpg 768w, ${IMG}/la-paz-city-panorama-1200w.jpg 1200w, ${IMG}/la-paz-city-panorama-1600w.jpg 1600w, ${IMG}/la-paz-city-panorama.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A broad elevated view across La Paz; the exact viewpoint is unresolved."
+      width={2048}
+      height={1365}
+      caption="La Paz from above: a city of slopes, brick neighbourhoods and cable-car routes."
+      priority
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="how-to-use" rule={false}>How to use this list</SectionHeading>
+      <p>
+        The order is a way of reading La Paz, not a mathematically precise ranking.
+        The first four are the strongest starting points for a first visit. The
+        museum route, Killi Killi and San Francisco become more valuable as additions
+        when you have time to stay with the central city rather than only passing
+        through it.
+      </p>
+      <p>
+        Route times below describe the recorded visit. They are not promises about
+        current opening hours, queues, fares or how long another traveller should
+        spend at a stop. Altitude shaped the plan through walking and cable cars,
+        but the evidence does not describe what 3,600 metres felt like physically.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'teleferico', label: 'Mi Teleférico' },
+        { id: 'central', label: 'Central La Paz' },
+        { id: 'markets', label: 'Markets' },
+        { id: 'valle', label: 'Valle de la Luna' },
+        { id: 'museums', label: 'Museums' },
+        { id: 'killi-killi', label: 'Killi Killi' },
+        { id: 'san-francisco', label: 'San Francisco' },
+        { id: 'priorities', label: 'One or two days' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Seven Experiences at a Glance"
+    meta={[
+      {
+        label: 'The essential first four',
+        value: 'Mi Teleférico · central La Paz · the markets · Valle de la Luna. Together they show the city’s vertical, civic, commercial and non-urban registers.',
+      },
+      {
+        label: 'Add with more time',
+        value: 'The museum cluster · Mirador Killi Killi · the Basilica of Saint Francis within the central walking route.',
+      },
+      {
+        label: 'What this is not',
+        value: 'A cable-car line guide, altitude-symptom account, football report, wrestling review or current prices-and-hours directory.',
+      },
+    ]}
+    daysHeading="Choose by interest"
+    days={[
+      { num: 'Above', text: 'Mi Teleférico · Mirador Killi Killi · broad views across the city' },
+      { num: 'Central', text: 'Plaza Murillo · Sucre Square · San Francisco · museums · streets and plazas' },
+      { num: 'Markets', text: 'Witches’ Market · Mercado Rodríguez · vendors, produce and street movement' },
+      { num: 'Beyond', text: 'Valle de la Luna · eroded formations and walking paths outside the dense centre' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter id="teleferico" number="I." name="Ride Mi Teleférico" epithet="Transport above the city, and a way to read La Paz’s vertical geography" />
+    <div class="narrative prose">
+      <p>
+        Mi Teleférico is the strongest anchor because it was not added as a tourist
+        ride after the important stops were finished. I used it on **16 and 17
+        September 2026**, as the recorded route moved between central streets,
+        markets, museums and viewpoints.
+      </p>
+      <p>
+        From the cabins, roofs, roads, steep hillsides and dense neighbourhoods
+        occupy one frame. That is the useful first-hand judgement: the cable cars
+        are transport and viewpoint together. The route confirms several stations
+        and lines, but I have not converted the sequence into a current line-by-line
+        guide or named a line from a photograph alone. The specialist <a href="/mi-teleferico-la-paz/">Mi Teleférico in La Paz guide</a> stays with that experience in detail.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/la-paz-cable-cars-over-city.jpg`}
+      srcset={`${IMG}/la-paz-cable-cars-over-city-480w.jpg 480w, ${IMG}/la-paz-cable-cars-over-city-768w.jpg 768w, ${IMG}/la-paz-cable-cars-over-city-1200w.jpg 1200w, ${IMG}/la-paz-cable-cars-over-city.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A Mi Teleférico cabin above La Paz; exact line and station are unresolved."
+      width={2048}
+      height={1365}
+      caption="A cable car crossing above La Paz; the exact line is not assigned here."
+    />
+    <Figure
+      src={`${IMG}/la-paz-teleferico-over-city.jpg`}
+      srcset={`${IMG}/la-paz-teleferico-over-city-480w.jpg 480w, ${IMG}/la-paz-teleferico-over-city-768w.jpg 768w, ${IMG}/la-paz-teleferico-over-city-1200w.jpg 1200w, ${IMG}/la-paz-teleferico-over-city-1600w.jpg 1600w, ${IMG}/la-paz-teleferico-over-city.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A Mi Teleférico cabin above the city; exact line and station are unresolved."
+      width={2048}
+      height={1365}
+      caption="The city seen from the cable-car network rather than from a single lookout."
+    />
+
+    <Chapter id="central" number="II." name="Explore Plaza Murillo and Central La Paz" epithet="Civic buildings, plazas and the city’s first street-level layer" />
+    <div class="narrative prose">
+      <p>
+        Plaza Murillo was the first recorded La Paz stop, from **1:29–2:59pm on 16
+        September**. The square gave the arrival day a civic centre before the
+        route moved into the Witches’ Market and the cable cars. On the following
+        day, Sucre Square began a museum-heavy central route.
+      </p>
+      <p>
+        The photographs support broad civic squares, buildings and mountain-backed
+        streets. They do not establish entry into individual buildings or political
+        events, and I do not claim a specific structure from appearance alone. The
+        recommendation is to spend time in central La Paz as a connected urban
+        experience rather than treating Plaza Murillo as a photograph to collect.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/la-paz-plaza-murillo.jpg`}
+      srcset={`${IMG}/la-paz-plaza-murillo-480w.jpg 480w, ${IMG}/la-paz-plaza-murillo-768w.jpg 768w, ${IMG}/la-paz-plaza-murillo-1200w.jpg 1200w, ${IMG}/la-paz-plaza-murillo.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Plaza Murillo with civic buildings and a mountain backdrop in central La Paz."
+      width={2048}
+      height={1365}
+      caption="Plaza Murillo: the first civic space in the recorded La Paz route."
+    />
+    <Figure
+      src={`${IMG}/la-paz-civic-building.jpg`}
+      srcset={`${IMG}/la-paz-civic-building-480w.jpg 480w, ${IMG}/la-paz-civic-building-768w.jpg 768w, ${IMG}/la-paz-civic-building-1200w.jpg 1200w, ${IMG}/la-paz-civic-building.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A civic building in central La Paz; exact building identity is not claimed."
+      width={2048}
+      height={1365}
+      caption="Civic architecture in central La Paz; the exact building is left unnamed."
+    />
+
+    <Chapter id="markets" number="III." name="Explore La Paz’s Markets" epithet="The Witches’ Market and Mercado Rodríguez in their recorded places in the route" />
+    <div class="narrative prose">
+      <p>
+        The two markets belong in one discovery recommendation because their value
+        in this record is chronological rather than folkloric. The Witches’ Market
+        followed Plaza Murillo on 16 September, from **3:08–4:08pm**. Mercado
+        Rodríguez came after the museums on 17 September, from **3:20–4:20pm**.
+      </p>
+      <p>
+        The archive supports market streets, vendors, produce and street movement.
+        It does not preserve purchases, prices, opening hours, vendor conversations
+        or a complete product inventory. I have therefore left out familiar ritual
+        and product folklore that the photographs do not establish. The focused <a href="/la-paz-markets/">La Paz markets guide</a> keeps both stops at that same level of certainty.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/la-paz-central-market-street.jpg`}
+      srcset={`${IMG}/la-paz-central-market-street-480w.jpg 480w, ${IMG}/la-paz-central-market-street-768w.jpg 768w, ${IMG}/la-paz-central-market-street-1200w.jpg 1200w, ${IMG}/la-paz-central-market-street-1600w.jpg 1600w, ${IMG}/la-paz-central-market-street.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Market street in central La Paz; exact market identity is not claimed."
+      width={2048}
+      height={1365}
+      caption="Market street in central La Paz; the archive does not assign this image to one specific venue."
+    />
+
+    <Chapter id="valle" number="IV." name="Visit Valle de la Luna" epithet="A separate morning of eroded formations and walking paths" />
+    <div class="narrative prose">
+      <p>
+        Valle de la Luna is the clearest change of scale in the trip. The recorded
+        visit ran from **10:25am–12:25pm on 18 September**, after the central-city
+        days of plazas, museums, markets and cable cars. The photographs show
+        eroded formations and paths through the landscape.
+      </p>
+      <p>
+        That is enough to recommend the excursion without inventing its operator,
+        ticketing, meeting point, exact trail or physical difficulty. The transfer
+        is recorded only as an estimated 22-minute drive each way. The dedicated
+        <a href="/valle-de-la-luna-la-paz/">Valle de la Luna guide</a> answers the
+        narrower question of whether this morning earns its place.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/la-paz-valle-de-la-luna-landscape.jpg`}
+      srcset={`${IMG}/la-paz-valle-de-la-luna-landscape-480w.jpg 480w, ${IMG}/la-paz-valle-de-la-luna-landscape-768w.jpg 768w, ${IMG}/la-paz-valle-de-la-luna-landscape-1200w.jpg 1200w, ${IMG}/la-paz-valle-de-la-luna-landscape-1600w.jpg 1600w, ${IMG}/la-paz-valle-de-la-luna-landscape.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Valle de la Luna formations and the surrounding landscape near La Paz."
+      width={2048}
+      height={1365}
+      caption="Valle de la Luna changes the route from dense city to eroded formations."
+    />
+    <Figure
+      src={`${IMG}/la-paz-valle-de-la-luna-walk.jpg`}
+      srcset={`${IMG}/la-paz-valle-de-la-luna-walk-480w.jpg 480w, ${IMG}/la-paz-valle-de-la-luna-walk-768w.jpg 768w, ${IMG}/la-paz-valle-de-la-luna-walk-1200w.jpg 1200w, ${IMG}/la-paz-valle-de-la-luna-walk.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A walking path through Valle de la Luna formations; exact trail is unresolved."
+      width={1365}
+      height={2048}
+      caption="A walking path through Valle de la Luna; the exact trail is not identified."
+      variant="portrait"
+    />
+
+    <Chapter id="museums" number="V." name="Spend Time in La Paz’s Museums" epithet="A central route through coca, art, ethnography and precious metals" />
+    <div class="narrative prose">
+      <p>
+        The second full day was museum-heavy. It moved from Sucre Square through
+        the Coca Museum, Basilica of Saint Francis, National Art Museum, National
+        Museum of Ethnography and Folklore, and Pre-Columbian Precious Metals
+        Museum before Mercado Rodríguez and more cable-car movement.
+      </p>
+      <p>
+        I would not turn those four museums into four shallow “best things” entries.
+        Their useful collective role is to make central La Paz more than a route of
+        viewpoints and markets. The records confirm the visits, but do not preserve
+        a detailed gallery-by-gallery review or enough image certainty to assign
+        every museum photograph precisely. Treat this as a museum day with several
+        confirmed institutions, not a universal order or current visitor guide.
+      </p>
+    </div>
+
+    <SectionHeading id="killi-killi">VI. See La Paz from Mirador Killi Killi</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Mirador Killi Killi appears at the end of the first recorded city circuit,
+        from **5:55–6:55pm on 16 September**, after Plaza Murillo, the Witches’
+        Market and several Mi Teleférico movements. The route record supports the
+        viewpoint visit, and the elevated-city sequence supports its place in the
+        story.
+      </p>
+      <p>
+        I keep the description broad. The supplied archive does not establish a
+        precise viewpoint caption for every elevated photograph, and it does not
+        support a sunrise, sunset, weather or skyline checklist. Killi Killi works
+        here because it gives the first day a final view after the route has moved
+        from civic space to market street to cable-car height.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/la-paz-city-panorama.jpg`}
+      srcset={`${IMG}/la-paz-city-panorama-480w.jpg 480w, ${IMG}/la-paz-city-panorama-768w.jpg 768w, ${IMG}/la-paz-city-panorama-1200w.jpg 1200w, ${IMG}/la-paz-city-panorama-1600w.jpg 1600w, ${IMG}/la-paz-city-panorama.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A broad elevated view across La Paz; exact viewpoint is unresolved."
+      width={2048}
+      height={1365}
+      caption="A broad La Paz city view; the exact elevated viewpoint is not assigned."
+    />
+
+    <SectionHeading id="san-francisco">VII. Include San Francisco in the Central Route</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        The Basilica of Saint Francis was a confirmed stop on 17 September, after
+        the Coca Museum and before the National Art Museum. It works best here as
+        part of the central route rather than as a separate museum-style review.
+      </p>
+      <p>
+        The evidence supports the named Basilica and the surrounding central-city
+        sequence. It does not establish a specific interior tour, cloister visit,
+        underground chamber, ticket or personal reaction. That is why the central
+        recommendation is to include San Francisco while moving through the museum
+        and civic route, not to promise an access experience the archive does not
+        preserve.
+      </p>
+    </div>
+
+    <SectionHeading id="priorities">What I Would Prioritise with One or Two Days</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        <strong>With one day:</strong> I would keep the route central: Plaza Murillo,
+        the Witches’ Market, Mi Teleférico and Killi Killi. That sequence gives the
+        city its civic, commercial and vertical registers without forcing Valle de
+        la Luna into the same day. If the excursion matters more than museums, the
+        central sequence can be shortened, but the evidence does not supply a
+        measured universal timetable.
+      </p>
+      <p>
+        <strong>With two days:</strong> I would add Valle de la Luna as a dedicated
+        morning and use the remaining city time for the museum-and-Mercado Rodríguez
+        route. The two markets can be treated as one subject while remaining in
+        their separate recorded positions. San Francisco belongs naturally within
+        the central museum sequence.
+      </p>
+      <p>
+        <strong>With three days:</strong> use the <a href="/3-days-in-la-paz-itinerary/">complete La Paz itinerary</a> for the actual chronology. It includes the unresolved Cancha Chualluma and Cholitas Wrestling blocks without turning them into completed attraction reviews.
+      </p>
+    </div>
+
+    <SectionHeading id="excluded">What I Have Left Out</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Hernando Siles Stadium remains a confirmed exterior/stadium stop, but it is
+        not a broad “best thing to do” recommendation on this evidence. There is no
+        confirmed Bolívar match, ticket, crowd sequence or stadium interior. The
+        same applies to Cholitas Wrestling: the itinerary records a four-hour block,
+        but no direct event photography or detailed attendance account.
+      </p>
+      <p>
+        Cancha Chualluma stays out because the source does not preserve its purpose.
+        The Cusco–La Paz overnight bus remains a connected transport article rather
+        than an attraction. The planned jog, altitude symptoms, rideshare use,
+        restaurant opinions, costs, fares, queues, weather and safety claims also
+        remain outside this discovery page.
+      </p>
+    </div>
+
+    <FurtherReading
+      label="Continue through La Paz"
+      cards={[
+        { href: '/3-days-in-la-paz-itinerary/', region: 'Bolivia · La Paz', title: '3 Days in La Paz: The City in Layers', excerpt: 'The complete chronology through civic La Paz, markets, museums, cable cars and Valle de la Luna.', meta: ['Itinerary', 'September 2026'] },
+        { href: '/mi-teleferico-la-paz/', region: 'Bolivia · La Paz', title: 'Mi Teleférico in La Paz: Riding the City by Cable Car', excerpt: 'Why the cable cars worked as transport, viewpoint and a way to understand the city’s vertical geography.', meta: ['Cable cars', 'September 2026'] },
+        { href: '/valle-de-la-luna-la-paz/', region: 'Bolivia · La Paz', title: 'Valle de la Luna, La Paz: Is It Worth Visiting?', excerpt: 'A focused morning among eroded formations and walking paths, with unresolved logistics left visible.', meta: ['Excursion', 'September 2026'] },
+        { href: '/la-paz-markets/', region: 'Bolivia · La Paz', title: 'La Paz Markets: Witches’ Market & Mercado Rodríguez', excerpt: 'Two confirmed market stops placed inside the city route without invented product or ritual details.', meta: ['Markets', 'September 2026'] },
+      ]}
+    />
+  </div>
+</ChronicleLayout>

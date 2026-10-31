@@ -6,6 +6,8 @@ Across three nights, the recorded route moved from Plaza Murillo and the Witches
 
 It was a compact itinerary. It began almost immediately after an overnight bus from Cusco and ended with a morning departure to Santiago.
 
+For a discovery-led shortlist of the experiences behind this route, start with the [best things to do in La Paz guide](/best-things-to-do-in-la-paz/).
+
 ## La Paz in three days at a glance
 
 **Day 1 — Arrival, civic La Paz and the cable cars**<br />
