@@ -146,3 +146,5 @@ Keep 29 September for the airport and onward journey to Buenos Aires. The exact 
 Iguazú became clearer when the route crossed the border. The first day was a sequence of Argentine stations and circuits, moving through the park in named stages. The second opened into a Brazilian trail, a recorded safari stop and an afternoon among birds.
 
 It was one landscape, but not one repeated view. The useful memory is the change in structure: circuits on one day, a cross-border trail and wildlife park on the next. For Iguazú, two days work because the countries are not merely two entrances to the same itinerary. They give the waterfall system two different frames.
+
+Iguazú is the two-country pivot in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).

@@ -72,3 +72,5 @@ For the wider route, continue back to the preceding <a href="/4-days-in-santiago
 Three days in Mendoza are enough to see the city and reach the wine-country material, but not enough to turn either into a complete subject. That is the useful answer. The city deserves its parks, monuments and streets; the wine route deserves a day of its own; and the transfer onward to Iguazú should be treated as logistics rather than as a final sightseeing block.
 
 Mendoza works in the middle of a larger journey because it changes the scale again: from Santiago’s civic city route to parks, foothills and named wine-country stops, then onward once more.
+
+Mendoza is the hinge between Chile and Iguazú in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).

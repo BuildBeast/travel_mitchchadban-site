@@ -79,3 +79,5 @@ For the wider South America route, continue to the documented <a href="/3-days-i
 Four days in Santiago work best when the city is treated as a sequence of different registers rather than one uninterrupted centre. Civic buildings establish the first scale. Markets and museums complicate it. Parks, neighbourhoods and cemeteries give the route depth, while the viewpoints make its geography legible.
 
 That is what the recorded visit supports: not a claim that every street was mastered, but a practical city route with enough variety to show why Santiago became more than a stop between La Paz and Mendoza.
+
+See where Santiago sits in the wider [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).

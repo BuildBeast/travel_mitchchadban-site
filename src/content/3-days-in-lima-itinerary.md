@@ -238,3 +238,5 @@ Lima is not one city hiding behind another.
 It is all of them at once.
 
 And three days is just enough time to notice.
+
+Lima is the opening stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/), which follows the route onward through Peru, Bolivia, Chile, Argentina and Uruguay.

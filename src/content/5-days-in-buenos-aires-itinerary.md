@@ -126,3 +126,5 @@ The actual stay also included a departure morning, so this is a five-day itinera
 Buenos Aires was not one monumental centre. It was a sequence of districts: civic buildings and bookshops, museums and markets, waterfront spaces and football architecture, then Palermo’s parks at the edge of the route. Colonia interrupted that pattern for a day, making the stay larger than a city itinerary without becoming part of the city itself.
 
 That is the useful shape of these five days: a route through the places that were actually recorded, with the gaps left visible rather than filled by assumptions.
+
+Buenos Aires is the final base in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).

@@ -92,3 +92,5 @@ Huayna Picchu sits inside the <a href="/2-days-in-machu-picchu-itinerary/">two-d
 Before publication as a more complete first-hand hike account, the traveller should confirm the actual ticket/circuit used, the true ascent and descent times, weather and trail conditions, whether there were rest points, and how difficult the climb physically felt. The existing evidence is sufficient for a focused route-and-photo article, but not for unsupported claims about exertion, fear, altitude, slipperiness, footwear or summit experience.
 
 Huayna Picchu deserves its own article because it is a different question from “how should I spend two days around Machu Picchu?” The evidence supports the date, the morning block, the stone route and the views. It does not support a heroic account. The honest version is more useful: a mountain path recorded in photographs, a three-and-a-half-hour visit window, and several physical details that should be checked against current conditions before anyone follows it.
+
+The hike sits inside the Machu Picchu stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).

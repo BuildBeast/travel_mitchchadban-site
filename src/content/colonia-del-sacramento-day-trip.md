@@ -83,3 +83,5 @@ Before this becomes a fully personal day-trip account, the traveller should conf
 - whether any Colonia photographs exist outside the reviewed Buenos Aires archive.
 
 Until then, the record gives us a carefully bounded route: a day allocated to Colonia from Buenos Aires, with the crossing and the town itself left deliberately open where the evidence stops.
+
+Colonia is the Uruguay day trip within the wider [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).

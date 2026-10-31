@@ -188,3 +188,5 @@ La Paz does not become simpler over three days.
 It becomes more legible: a city of civic spaces and working markets, of walking routes and cable-car connections, of dense urban streets and a landscape that sits just beyond them.
 
 That is the useful way to read this itinerary—not as one list of attractions, but as a city encountered in layers.
+
+La Paz is the Bolivian middle stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).

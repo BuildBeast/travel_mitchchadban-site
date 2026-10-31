@@ -82,3 +82,5 @@ Before using this as a live booking plan, confirm the **actual arrival train tim
 Those omissions are deliberate. The route is clear enough to publish as a first-hand itinerary, but not to pretend that unresolved booking details were measured during the trip.
 
 Two nights in Aguas Calientes gave the journey a better shape than a single dash to the ruins. One day arrived through the rail town, one day moved through the town’s recorded activities, and the last returned early to the archaeological park before the road to La Paz began. Machu Picchu was the destination, but Aguas Calientes was where the itinerary actually lived.
+
+See how this stage fits into the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).

@@ -113,3 +113,5 @@ The evidence still cannot answer:
 Those are the questions that would require traveller confirmation. The route itself is publishable: Cusco to La Paz, Transzela, 10:00pm to 1:00pm, approximately 15 hours, with the border and onboard experience left honestly unresolved.
 
 The bus was the bridge between the ruins and the high city. The evidence can place it on the map and in the timetable. It cannot yet tell the story from the seat.
+
+This transfer is the bridge between Peru and Bolivia in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).
