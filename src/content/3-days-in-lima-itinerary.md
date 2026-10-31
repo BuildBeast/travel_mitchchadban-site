@@ -91,6 +91,8 @@ After the coast, the itinerary turned inland.
 
 There was a stop at the **Miraflores Indian Market**, followed by one of the most distinctive sequences of the trip: **Pucllana**, **Huaca Huallamarca** and then the **Larco Museum**.
 
+For a focused account of the archaeological stop inside Miraflores, continue to the [Huaca Pucllana guide](/huaca-pucllana-lima/). This page remains the complete three-day Lima route.
+
 <figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-huaca-pucllana-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-huaca-pucllana-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-huaca-pucllana-1600w.jpg" srcset="/images/3-days-in-lima-itinerary/lima-huaca-pucllana-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-huaca-pucllana-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Huaca Pucllana archaeological landscape." loading="lazy" decoding="async"></picture><figcaption>Huaca Pucllana archaeological landscape.</figcaption></figure>
 
 This is where Lima’s layers become literal.
