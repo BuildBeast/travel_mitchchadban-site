@@ -41,6 +41,8 @@ The first recorded stop was **Plaza Murillo**, followed by the **Witches’ Mark
 
 The route moves quickly from the civic centre into market streets, then into the Mi Teleférico network. That sequence gives the first day its shape: formal city, working city, then city seen from above.
 
+For the two market stops as a focused subject, see the [La Paz markets guide](/la-paz-markets/).
+
 <figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Market street in central La Paz." loading="lazy" decoding="async"></picture><figcaption>Market street in central La Paz.</figcaption></figure>
 
 ### Mi Teleférico — transport above the city
