@@ -1,5 +1,7 @@
 Santiago is a city of thresholds. The centre moves from government buildings to markets, from museums to parks, and then outward towards hills and towers. The route recorded here did not depend on one grand attraction. It kept changing register.
 
+For the experience shortlist above this chronology, see the [best things to do in Santiago guide](/best-things-to-do-in-santiago/). This article keeps the four-day sequence; the hub helps decide what deserves priority.
+
 The stay ran from **19 to 23 September 2026**, for four nights. The source record lists accommodation as **Catedral 1310**, but the address is incomplete, so this article does not turn it into a precise hotel recommendation. The route evidence supports a useful four-day shape; it does not preserve a perfect hour-by-hour diary.
 
 ## Santiago in four days at a glance

@@ -1,0 +1,397 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import { SIZES_MODERN_WIDE } from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Things to Do in Santiago, Chile: A First-Hand Guide',
+  headline: 'Best Things to Do in Santiago',
+  description:
+    'A first-hand guide to the best things to do in Santiago, Chile, from the historic centre and Vega Central to museums, parks and the city’s viewpoints.',
+  path: '/best-things-to-do-in-santiago/',
+  ogImage: '/images/4-days-in-santiago-itinerary/santiago-skyline-mountain-backdrop-1200w.jpg',
+  photography: true,
+};
+
+const IMG = '/images/4-days-in-santiago-itinerary';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    provenance={meta}
+    route={['Chile', 'Santiago', 'South America']}
+    label="Guide · Six Experiences"
+    title="Best Things to Do in Santiago"
+    standfirst="Santiago kept changing register: formal civic buildings became working markets, museums opened into parks, neighbourhoods led to city-memory spaces, and the hills turned the whole route into geography. These are the experiences from my September 2026 visit that deserve priority on a first trip."
+    stats={[
+      { num: '6', label: 'Experiences' },
+      { num: '4', label: 'Nights' },
+      { num: '3', label: 'Viewpoints' },
+      { num: '1', label: 'City' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Santiago first appeared as a formal centre: La Moneda, the Metropolitan
+          Cathedral, broad streets and the old Mapocho edge. Then the scale shifted.
+          Vega Central replaced civic architecture with stalls and produce; museums
+          and Parque Forestal opened another layer; Yungay and the Sound Museum took
+          the route away from the monumental centre; the hills and towers finally made
+          the city legible from above.
+        </p>
+        <p>
+          This is a discovery guide, not another four-day itinerary. The six
+          recommendations below come from the route recorded during my stay from 19
+          to 23 September 2026. They are grouped by the experience they add, rather
+          than by day. For the chronology, use the <a href="/4-days-in-santiago-itinerary/">four-day Santiago itinerary</a>;
+          for the detailed viewpoint comparison, use <a href="/santiago-viewpoints/">Santiago Viewpoints</a>.
+        </p>
+        <p>
+          I have kept out the unresolved Valparaíso note, the Bahá’í Temple, generic
+          food recommendations, completed running claims and any current fares,
+          opening hours or queue advice. Cementerio General remains a recorded
+          supporting stop, but the evidence does not preserve enough first-hand detail
+          to make it one of the headline recommendations here.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/santiago-skyline-mountain-backdrop.jpg`}
+      srcset={`${IMG}/santiago-skyline-mountain-backdrop-480w.jpg 480w, ${IMG}/santiago-skyline-mountain-backdrop-768w.jpg 768w, ${IMG}/santiago-skyline-mountain-backdrop-1200w.jpg 1200w, ${IMG}/santiago-skyline-mountain-backdrop-1600w.jpg 1600w, ${IMG}/santiago-skyline-mountain-backdrop.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Santiago skyline with the mountains beyond the city."
+      width={2048}
+      height={1365}
+      caption="Santiago becomes a different city each time the route changes register."
+      priority
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="how-to-use" rule={false}>How to use this list</SectionHeading>
+      <p>
+        The order moves from the central city towards the experiences that widened the
+        route. It is not a universal ranking. Start with the historic centre and Vega
+        Central if you want Santiago at street level; choose the museum and park route
+        for culture; choose the viewpoint section when the city’s geography matters
+        most.
+      </p>
+      <p>
+        All route times and access limits below come from the travel record. They are
+        not current opening hours, fares, queue estimates or transport instructions.
+        The supplied Santiago archive contains 80 photographs but no GPS metadata, so
+        captions stay with subjects that are visually or source-supported.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'historic-centre', label: 'Historic centre' },
+        { id: 'cathedral', label: 'Cathedral' },
+        { id: 'vega', label: 'Vega Central' },
+        { id: 'museums', label: 'Museums' },
+        { id: 'park-route', label: 'Parks and Yungay' },
+        { id: 'viewpoints', label: 'Viewpoints' },
+        { id: 'priorities', label: 'Priorities' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Six Experiences at a Glance"
+    meta={[
+      {
+        label: 'Start here',
+        value: 'La Moneda, the Metropolitan Cathedral and the central streets form the clearest introduction to Santiago at street level.',
+      },
+      {
+        label: 'Change the scale',
+        value: 'Vega Central, the museums, Parque Forestal and the Yungay route move the visit beyond civic architecture.',
+      },
+      {
+        label: 'Look from above',
+        value: 'San Cristóbal Hill, Santa Lucía Hill and Sky Costanera are three recorded perspectives, not one repeated attraction.',
+      },
+    ]}
+    daysHeading="Choose by interest"
+    days={[
+      { num: 'Civic', text: 'La Moneda · Metropolitan Cathedral · central streets · Estación Mapocho' },
+      { num: 'Market', text: 'Vega Central · stalls · produce · working-market movement' },
+      { num: 'Culture', text: 'Pre-Columbian Art · Fine Arts Museum · Sound Museum · Parque Forestal' },
+      { num: 'Above', text: 'San Cristóbal · Santa Lucía · Sky Costanera · broad city geography' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter id="historic-centre" number="I." name="Explore Santiago’s historic centre" epithet="La Moneda, central streets, Estación Mapocho and the first civic layer" />
+    <div class="narrative prose">
+      <p>
+        The historic centre is the strongest first recommendation because it gives the
+        city an initial scale. The recorded route includes the La Moneda Cultural
+        Center, the Metropolitan Cathedral, central streets and Estación Mapocho. The
+        spaces between those names matter as much as the buildings: the visit moved
+        through institutions, public squares and the older transport-and-market edge
+        rather than stopping at one landmark.
+      </p>
+      <p>
+        I have kept La Moneda at the level the record supports. The stop is confirmed,
+        but the archive does not establish a specific exhibition, interior visit or
+        tour. The recommendation is the civic route itself, not a promise of access to
+        a particular building.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/santiago-central-plaza.jpg`}
+      srcset={`${IMG}/santiago-central-plaza-480w.jpg 480w, ${IMG}/santiago-central-plaza-768w.jpg 768w, ${IMG}/santiago-central-plaza-1200w.jpg 1200w, ${IMG}/santiago-central-plaza.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A central Santiago plaza framed by civic buildings and a monument."
+      width={1365}
+      height={2048}
+      caption="A central Santiago plaza from the civic route; the image is kept broad rather than assigned to one exact square."
+      variant="portrait"
+    />
+
+    <Chapter id="cathedral" number="II." name="Visit the Metropolitan Cathedral" epithet="A confirmed central landmark, kept separate from unsupported interior detail" />
+    <div class="narrative prose">
+      <p>
+        The Metropolitan Cathedral deserves its own place in the shortlist because the
+        identity is secure in both the route and the processed photograph. It was part
+        of the first central Santiago sequence, where the city’s civic and religious
+        buildings stood close together.
+      </p>
+      <p>
+        The evidence supports the Cathedral as a stop and the exterior as a confidently
+        identified image. It does not preserve a service, a specific chapel, an
+        interior tour or a detailed account of entering. That is enough for a useful
+        recommendation: place the Cathedral inside the historic-centre route, without
+        inventing a religious or architectural experience the archive does not record.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/santiago-metropolitan-cathedral.jpg`}
+      srcset={`${IMG}/santiago-metropolitan-cathedral-480w.jpg 480w, ${IMG}/santiago-metropolitan-cathedral-768w.jpg 768w, ${IMG}/santiago-metropolitan-cathedral-1200w.jpg 1200w, ${IMG}/santiago-metropolitan-cathedral.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The ornate facade of Santiago’s Metropolitan Cathedral."
+      width={1365}
+      height={2048}
+      caption="Santiago’s Metropolitan Cathedral, identified by its facade and twin towers."
+      variant="portrait"
+    />
+
+    <Chapter id="vega" number="III." name="Experience Vega Central" epithet="The route’s clearest shift from formal centre to working market" />
+    <div class="narrative prose">
+      <p>
+        Vega Central changes the city’s scale. The itinerary places it on the second
+        recorded day, before the route returns to museums and Parque Forestal. The
+        supported first-hand material is specific enough to say what made it different:
+        stalls, produce and movement rather than civic facades and formal institutions.
+      </p>
+      <p>
+        This is a market recommendation, not a food guide. I do not add a purchase, a
+        dish, a price, a vendor conversation or opening-hour advice because none is
+        preserved in the evidence. The useful reason to choose Vega is the change in
+        register: it places the working-market city beside the museums and parks of
+        the same wider route.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/santiago-park-street.jpg`}
+      srcset={`${IMG}/santiago-park-street-480w.jpg 480w, ${IMG}/santiago-park-street-768w.jpg 768w, ${IMG}/santiago-park-street-1200w.jpg 1200w, ${IMG}/santiago-park-street.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A tree-lined urban street setting in Santiago; exact location is unresolved."
+      width={1365}
+      height={2048}
+      caption="A Santiago street sequence from the wider market, park and cultural route; exact location unresolved."
+      variant="portrait"
+    />
+
+    <Chapter id="museums" number="IV." name="Explore Santiago’s museums" epithet="Pre-Columbian Art, Fine Arts and the Sound Museum, held together by the route" />
+    <div class="narrative prose">
+      <p>
+        Santiago’s museum route is stronger as a group than as three thin entries. The
+        itinerary records the Chilean Museum of Pre-Columbian Art, the National Museum
+        of Fine Arts and the Sound Museum. They appear across the central, park and
+        northern routes, adding collections and interiors to a visit otherwise easy to
+        describe only through streets and viewpoints.
+      </p>
+      <p>
+        The museum interior photograph is deliberately unnamed. It supports a museum
+        sequence, not a specific gallery or collection. I would choose the museums by
+        the shape of the surrounding route and by the collection you most want to see,
+        then verify current access independently. The first-hand record does not carry
+        a gallery-by-gallery review or present-day visitor logistics.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/santiago-museum-interior.jpg`}
+      srcset={`${IMG}/santiago-museum-interior-480w.jpg 480w, ${IMG}/santiago-museum-interior-768w.jpg 768w, ${IMG}/santiago-museum-interior-1200w.jpg 1200w, ${IMG}/santiago-museum-interior.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A wood-panelled museum interior in Santiago; exact museum is unresolved."
+      width={1365}
+      height={2048}
+      caption="A museum interior from the Santiago route; the exact institution is not assigned."
+      variant="portrait"
+    />
+
+    <Chapter id="park-route" number="V." name="Walk the park and neighbourhood route" epithet="Parque Forestal, Yungay and the less monumental side of Santiago" />
+    <div class="narrative prose">
+      <p>
+        Parque Forestal gives the museum route room to breathe. It is recorded between
+        the Pre-Columbian and Fine Arts stops, and works here as part of the cultural
+        core rather than as a detailed park guide. The processed fountain image is
+        confidently a Santiago park subject, but it is not relabelled as Parque
+        Forestal or Santa Lucía from appearance alone.
+      </p>
+      <p>
+        Yungay appears later in the route beside Cementerio General and the Sound
+        Museum. I would include it as a cautious extension for travellers who want to
+        see the route change away from the formal centre, not as a generic barrio
+        profile. The evidence confirms the destination and its place in the route; it
+        does not support broad claims about atmosphere, safety, cafés or local life.
+      </p>
+      <p>
+        Cementerio General remains a supporting stop. The record names it, but the
+        archive does not preserve enough internal exploration or cemetery-specific
+        observation to promote it into one of the hub’s headline experiences.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/santiago-park-fountain.jpg`}
+      srcset={`${IMG}/santiago-park-fountain-480w.jpg 480w, ${IMG}/santiago-park-fountain-768w.jpg 768w, ${IMG}/santiago-park-fountain-1200w.jpg 1200w, ${IMG}/santiago-park-fountain.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="An ornate fountain and pavilion in a Santiago park; exact park is unresolved."
+      width={1365}
+      height={2048}
+      caption="A park sequence from Santiago’s museum and neighbourhood route; exact park unresolved."
+      variant="portrait"
+    />
+    <Figure
+      src={`${IMG}/santiago-bolsa-de-comercio.jpg`}
+      srcset={`${IMG}/santiago-bolsa-de-comercio-480w.jpg 480w, ${IMG}/santiago-bolsa-de-comercio-768w.jpg 768w, ${IMG}/santiago-bolsa-de-comercio-1200w.jpg 1200w, ${IMG}/santiago-bolsa-de-comercio.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The historic Bolsa de Comercio building in central Santiago."
+      width={1365}
+      height={2048}
+      caption="The Bolsa de Comercio, one of the identifiable historic façades in central Santiago."
+      variant="portrait"
+    />
+
+    <Chapter id="viewpoints" number="VI." name="See Santiago from above" epithet="Three recorded viewpoints, three different ways to read the city" />
+    <div class="narrative prose">
+      <p>
+        The route included San Cristóbal Hill, Santa Lucía Hill and Sky Costanera.
+        They belong in the hub because the city changes when seen from above, but the
+        three should not be flattened into one repeated “panorama” recommendation.
+      </p>
+      <p>
+        San Cristóbal is the hill-and-landscape option in the recorded comparison.
+        Santa Lucía keeps the viewpoint tied to the central city and its park-like
+        spaces. Sky Costanera supplies the built, high urban perspective. The specialist
+        <a href="/santiago-viewpoints/">Santiago viewpoints guide</a> compares those three
+        subjects in more detail; this page only answers whether the viewpoint layer
+        deserves a place in a first visit.
+      </p>
+      <p>
+        The Bahá’í Temple is not included. It appears in the wider itinerary record,
+        but the available viewpoint evidence does not support promoting it into this
+        comparison. Likewise, the route does not establish which transport system was
+        used, current fares, exact opening arrangements or the viewpoint of every image.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/santiago-skyline-mountain-backdrop.jpg`}
+      srcset={`${IMG}/santiago-skyline-mountain-backdrop-480w.jpg 480w, ${IMG}/santiago-skyline-mountain-backdrop-768w.jpg 768w, ${IMG}/santiago-skyline-mountain-backdrop-1200w.jpg 1200w, ${IMG}/santiago-skyline-mountain-backdrop-1600w.jpg 1600w, ${IMG}/santiago-skyline-mountain-backdrop.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Santiago viewed from above with the mountains beyond the city; exact viewpoint is unresolved."
+      width={2048}
+      height={1365}
+      caption="Santiago from above; the archive does not assign this broad panorama to one viewpoint."
+    />
+
+    <SectionHeading id="priorities">What I Would Prioritise</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        <strong>With one day:</strong> I would stay central: La Moneda, the
+        Metropolitan Cathedral, the central streets and Vega Central, with one museum
+        if access and interest allow. This gives the day civic, working-market and
+        cultural registers without pretending that all of Santiago fits into one route.
+      </p>
+      <p>
+        <strong>With two days:</strong> add the museum-and-Parque Forestal route, then
+        choose the viewpoint layer that best matches the kind of city view you want.
+        The recorded evidence supports all three viewpoints, but it does not supply a
+        universal order or current timetable.
+      </p>
+      <p>
+        <strong>With four days:</strong> use the <a href="/4-days-in-santiago-itinerary/">complete Santiago itinerary</a>
+        for chronology, including the recorded Cementerio General, Yungay, Sound
+        Museum and departure to Mendoza. This hub is the selection layer above that
+        route, not a replacement for it.
+      </p>
+    </div>
+
+    <SectionHeading id="surprised">What changed the way I saw Santiago</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Santiago became more interesting as the route moved away from one idea of the
+        city. The formal centre established one register, Vega Central disrupted it,
+        museums and Parque Forestal softened it, and Yungay and the Sound Museum made
+        the route less monumental. The viewpoints then turned those separate places
+        into a connected urban field.
+      </p>
+      <p>
+        That is the reason for this shortlist. The strongest first visit is not a race
+        between famous names. It is a choice between different versions of Santiago:
+        civic, commercial, cultural, neighbourhood, park and elevated city. The route
+        supports those changes without requiring a generic Andes-backdrop description.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/santiago-park-street.jpg`}
+      srcset={`${IMG}/santiago-park-street-480w.jpg 480w, ${IMG}/santiago-park-street-768w.jpg 768w, ${IMG}/santiago-park-street-1200w.jpg 1200w, ${IMG}/santiago-park-street.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A tree-lined Santiago park setting; exact location is unresolved."
+      width={1365}
+      height={2048}
+      caption="A quieter Santiago street and park register; exact location unresolved."
+      variant="portrait"
+    />
+
+    <SectionHeading id="omitted">What I Have Left Out</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Valparaíso remains excluded because “Valparaiso??” is a planning note and the
+        route does not record a completed day trip. The Bahá’í Temple stays out because
+        its viewpoint-specific evidence is too weak for this hub. Cementerio General
+        is acknowledged as a recorded supporting stop, not expanded into a cemetery
+        article without stronger first-hand detail.
+      </p>
+      <p>
+        I have also left out food claims, market purchases, running, cable-car or
+        funicular assumptions, current prices, opening hours, queues, safety, weather
+        and transport fares. Those details may be useful in a live planning guide, but
+        they are not established by this first-hand record.
+      </p>
+    </div>
+
+    <FurtherReading
+      label="Continue through Santiago"
+      cards={[
+        { href: '/4-days-in-santiago-itinerary/', region: 'Chile · Santiago', title: '4 Days in Santiago: Complete Itinerary', excerpt: 'The full chronology through civic Santiago, Vega Central, museums, parks, Yungay, the viewpoints and the bus to Mendoza.', meta: ['Itinerary', 'September 2026'] },
+        { href: '/santiago-viewpoints/', region: 'Chile · Santiago', title: 'Santiago Viewpoints: San Cristóbal, Santa Lucía and Sky Costanera', excerpt: 'A focused comparison of the three recorded ways to read Santiago from above, with access and image limits kept visible.', meta: ['Viewpoints', 'September 2026'] },
+        { href: '/24-days-in-south-america-itinerary/', region: 'South America · Chile', title: '24 Days in South America', excerpt: 'The wider route from La Paz through Santiago and Mendoza before the journey turns east.', meta: ['Pillar itinerary', '2026'] },
+      ]}
+    />
+  </div>
+</ChronicleLayout>
