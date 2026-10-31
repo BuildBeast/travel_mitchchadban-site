@@ -15,7 +15,7 @@ const schema = withProvenance({
     { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "Huayna Picchu Hike: What the Climb Is Really Like", item: canonical } ] },
   ],
 }, PROVENANCE);
-const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\\/script>`;
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
