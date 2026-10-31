@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/mendoza-beyond-wine.md";
+import { provenanceHtml, withProvenance } from "../../lib/provenance";
+
+const title = "Mendoza Beyond Wine: Parks, Cerro de la Gloria & the City | There & Back Again";
+const description = "A first-hand look at Mendoza beyond its wineries, from Parque General San Martín and Cerro de la Gloria to the parks, monuments and streets of the city.";
+const canonical = "https://travel.mitchchadban.com/mendoza-beyond-wine/";
+const image = "/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1200w.jpg";
+const PROVENANCE = { photography: true };
+
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Mendoza Beyond Wine: Exploring the City Beyond the Wineries",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Mendoza Beyond Wine", item: canonical },
+      ],
+    },
+  ],
+}, PROVENANCE);
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="mendoza-beyond-wine-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Argentina · Mendoza ·&nbsp;<span>September 2026</span></div>
+    <h1 id="mendoza-beyond-wine-title" class="post-hero-title"><em>Mendoza Beyond Wine:</em><br />Exploring the City Beyond the Wineries</h1>
+    <p class="post-hero-sub">Parks, monuments, streets and the foothill edge before the vineyards.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Nights</span></div>
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">City Days</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">City</span></div>
+    </div>
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+  </section>
+
+  <article class="post-body mendoza-beyond-wine-post-body">
+    <ArticleContent />
+  </article>
+
+  <style is:global>
+    .mendoza-beyond-wine-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
+    .mendoza-beyond-wine-post-body .article-photo picture,
+    .mendoza-beyond-wine-post-body .article-photo img { display: block; width: 100%; }
+    .mendoza-beyond-wine-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
+    .mendoza-beyond-wine-post-body .article-photo figcaption { margin-top: 0.65rem; color: rgba(221, 232, 208, 0.62); font-size: 0.95rem; font-style: italic; text-align: center; }
+    .mendoza-beyond-wine-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.08; }
+    .mendoza-beyond-wine-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 400; }
+    .mendoza-beyond-wine-post-body p,
+    .mendoza-beyond-wine-post-body ul,
+    .mendoza-beyond-wine-post-body table { max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .mendoza-beyond-wine-post-body ul { padding-left: 2rem; color: rgba(221, 232, 208, 0.86); font-size: 1.18rem; line-height: 1.7; }
+    .mendoza-beyond-wine-post-body strong { color: #e7f2da; }
+    .mendoza-beyond-wine-post-body table { border-collapse: collapse; color: rgba(221, 232, 208, 0.86); font-size: 1.05rem; line-height: 1.5; width: 100%; }
+    .mendoza-beyond-wine-post-body th,
+    .mendoza-beyond-wine-post-body td { border-bottom: 1px solid rgba(158, 207, 114, 0.2); padding: 0.9rem 0.75rem; text-align: left; vertical-align: top; }
+    .mendoza-beyond-wine-post-body th { color: #e7f2da; font-family: 'IM Fell English', Georgia, serif; font-size: 1.25rem; font-weight: 400; }
+    .mendoza-beyond-wine-post-body .practical-note { max-width: 1100px; margin: 1.5rem auto; border-left: 2px solid rgba(158, 207, 114, 0.55); padding: 0.2rem 1rem; color: rgba(221, 232, 208, 0.72); font-size: 1rem; }
+    @media (max-width: 820px) {
+      .mendoza-beyond-wine-post-body .article-photo { margin: 2.5rem 0; }
+      .mendoza-beyond-wine-post-body h2,
+      .mendoza-beyond-wine-post-body h3,
+      .mendoza-beyond-wine-post-body p,
+      .mendoza-beyond-wine-post-body ul,
+      .mendoza-beyond-wine-post-body table { max-width: none; }
+      .mendoza-beyond-wine-post-body table { display: block; overflow-x: auto; }
+    }
+  </style>
+</BaseLayout>
