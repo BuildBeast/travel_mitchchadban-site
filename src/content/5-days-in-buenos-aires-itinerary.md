@@ -127,4 +127,4 @@ Buenos Aires was not one monumental centre. It was a sequence of districts: civi
 
 That is the useful shape of these five days: a route through the places that were actually recorded, with the gaps left visible rather than filled by assumptions.
 
-Buenos Aires is the final base in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).
+Buenos Aires is the final base in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/), after the route’s two-country Iguazú stage. The separate Colonia del Sacramento day trip sits within these five nights.

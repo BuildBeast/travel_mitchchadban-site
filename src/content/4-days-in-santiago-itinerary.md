@@ -80,4 +80,4 @@ Four days in Santiago work best when the city is treated as a sequence of differ
 
 That is what the recorded visit supports: not a claim that every street was mastered, but a practical city route with enough variety to show why Santiago became more than a stop between La Paz and Mendoza.
 
-See where Santiago sits in the wider [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).
+See where Santiago sits in the wider [24 Days in South America itinerary](/24-days-in-south-america-itinerary/), with the next overland stage continuing to the [three-day Mendoza itinerary](/3-days-in-mendoza-itinerary/).

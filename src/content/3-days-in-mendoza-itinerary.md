@@ -73,4 +73,4 @@ Three days in Mendoza are enough to see the city and reach the wine-country mate
 
 Mendoza works in the middle of a larger journey because it changes the scale again: from Santiago’s civic city route to parks, foothills and named wine-country stops, then onward once more.
 
-Mendoza is the hinge between Chile and Iguazú in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).
+Mendoza is the hinge between Chile and Iguazú in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/). The next destination is the two-country [Iguazú Falls route](/iguazu-falls-in-2-days/), although the exact Mendoza–Iguazú connection remains unresolved.

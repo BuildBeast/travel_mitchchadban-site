@@ -189,4 +189,4 @@ It becomes more legible: a city of civic spaces and working markets, of walking 
 
 That is the useful way to read this itinerary—not as one list of attractions, but as a city encountered in layers.
 
-La Paz is the Bolivian middle stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).
+La Paz is the Bolivian middle stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/). It begins with the [Cusco-to-La Paz overnight bus](/cusco-to-la-paz-overnight-bus/) and hands the route onward to the [four-day Santiago itinerary](/4-days-in-santiago-itinerary/).

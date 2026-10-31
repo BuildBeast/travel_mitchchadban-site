@@ -239,4 +239,4 @@ It is all of them at once.
 
 And three days is just enough time to notice.
 
-Lima is the opening stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/), which follows the route onward through Peru, Bolivia, Chile, Argentina and Uruguay.
+Lima is the opening stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/), which follows the route onward through Peru, Bolivia, Chile, Argentina and Uruguay. The next stop is the two-night [Machu Picchu and Aguas Calientes itinerary](/2-days-in-machu-picchu-itinerary/).

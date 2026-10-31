@@ -147,4 +147,4 @@ Iguazú became clearer when the route crossed the border. The first day was a se
 
 It was one landscape, but not one repeated view. The useful memory is the change in structure: circuits on one day, a cross-border trail and wildlife park on the next. For Iguazú, two days work because the countries are not merely two entrances to the same itinerary. They give the waterfall system two different frames.
 
-Iguazú is the two-country pivot in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).
+Iguazú is the two-country pivot in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/). From here the route continues to the neighbourhood-led [Buenos Aires itinerary](/5-days-in-buenos-aires-itinerary/).

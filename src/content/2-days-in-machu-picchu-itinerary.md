@@ -73,7 +73,7 @@ The evidence confirms an early National Archaeological Park visit, but not the c
 
 The route does not end at the gate or the station. The return train feeds into the Cusco-to-La Paz overnight bus, and the unresolved train timing is one of the trip’s real planning constraints. Leave room for the connection rather than presenting the afternoon as open sightseeing time.
 
-For the route before this stop, continue back to the <a href="/3-days-in-lima-itinerary/">Lima itinerary</a>. The next documented city route is the <a href="/3-days-in-la-paz-itinerary/">La Paz itinerary</a>, where the overnight transfer becomes the opening fact of the stay.
+For the route before this stop, continue back to the <a href="/3-days-in-lima-itinerary/">Lima itinerary</a>. The separate <a href="/huayna-picchu-hike/">Huayna Picchu hike account</a> covers the mountain block, while the <a href="/cusco-to-la-paz-overnight-bus/">Cusco-to-La Paz overnight bus article</a> follows the return connection. The next documented city route is the <a href="/3-days-in-la-paz-itinerary/">La Paz itinerary</a>, where the overnight transfer becomes the opening fact of the stay.
 
 ## What still needs checking
 
