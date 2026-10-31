@@ -1,5 +1,7 @@
 Buenos Aires introduced itself through public space.
 
+For the wider first-visit shortlist, see the [best things to do in Buenos Aires guide](/best-things-to-do-in-buenos-aires/). This page remains the focused account of the historic and civic route around Plaza de Mayo.
+
 On **29 September 2026**, after arriving from Puerto Iguazú and handing over the accommodation in Palermo, the recorded route moved into the historic and civic centre: Buenos Aires Metropolitan Cathedral, the Casa Rosada area, the Block of the Lights Historical-Cultural Complex, Plaza de Mayo, Plaza del Congreso and the National Museum of Fine Arts. Dinner at Parrilla Peña closed the day.
 
 This is not a generic list of things to do in Buenos Aires. It is a narrower account of that arrival-day sequence, and of why Plaza de Mayo and its surrounding civic landmarks deserve their own half-day route. The archive confirms the places and their order. It does not preserve a precise arrival time, walking duration, transport method, building-entry record or current visitor logistics, so those details stay out.

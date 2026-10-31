@@ -1,0 +1,490 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import AnchorNav from '../../components/chronicle/AnchorNav.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import { SIZES_MODERN_WIDE } from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Things to Do in Buenos Aires: A First-Hand Guide',
+  headline: 'Best Things to Do in Buenos Aires',
+  description:
+    'A first-hand guide to the best things to do in Buenos Aires, from Plaza de Mayo and Teatro Colón to Recoleta, San Telmo, La Boca, Puerto Madero and Palermo.',
+  path: '/best-things-to-do-in-buenos-aires/',
+  ogImage: '/images/5-days-in-buenos-aires-itinerary/buenos-aires-city-centre-1200w.jpg',
+  photography: true,
+};
+
+const IMG = '/images/5-days-in-buenos-aires-itinerary';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    provenance={meta}
+    route={['Argentina', 'Buenos Aires', 'South America']}
+    label="Guide · Ten Experiences"
+    title="Best Things to Do in Buenos Aires"
+    standfirst="Buenos Aires was not one monumental centre. It was a sequence of different city worlds: civic squares, cultural interiors, markets, museums, waterfront architecture, football streets and Palermo parks. These are the experiences from my September–October 2026 stay that deserve priority on a first visit."
+    stats={[
+      { num: '10', label: 'Experiences' },
+      { num: '5', label: 'Nights' },
+      { num: '6', label: 'City areas' },
+      { num: '1', label: 'First visit' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Buenos Aires did not reveal itself through one landmark. It arrived in
+          sections: the civic scale of Plaza de Mayo, the Obelisk and Teatro Colón;
+          the quieter concentration of books, museums and Recoleta; then markets,
+          waterfront buildings, football architecture and the green edge of Palermo.
+        </p>
+        <p>
+          This is the broad discovery guide I would have wanted before the trip. It
+          is not another five-day itinerary and it is not a neighbourhood comparison.
+          The question here is simpler: what is worth choosing when time is limited?
+          The recommendations come from places recorded during my stay from 29
+          September to 4 October 2026, with the judgement kept close to what the
+          route and photographs can actually support.
+        </p>
+        <p>
+          I have left out tango, a completed Palermo run, football-match attendance,
+          restaurant rankings and current visitor logistics. La Bombonera appears as
+          a stadium stop, not a match-day experience. Colonia del Sacramento is kept
+          separate as an optional day trip rather than folded into Buenos Aires.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/buenos-aires-city-centre.jpg`}
+      srcset={`${IMG}/buenos-aires-city-centre-480w.jpg 480w, ${IMG}/buenos-aires-city-centre-768w.jpg 768w, ${IMG}/buenos-aires-city-centre-1200w.jpg 1200w, ${IMG}/buenos-aires-city-centre-1600w.jpg 1600w, ${IMG}/buenos-aires-city-centre.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="A broad Buenos Aires civic-centre sequence; the exact landmark remains deliberately unnamed."
+      width={2048}
+      height={1365}
+      caption="Buenos Aires begins as a civic sequence, but the city quickly opens into other worlds."
+      priority
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="how-to-use" rule={false}>How to use this list</SectionHeading>
+      <p>
+        The order is a way of moving through the city, not a claim that one landmark
+        is objectively better than another. The first four establish the central
+        cultural spine. Recoleta, San Telmo, Puerto Madero, La Boca and Palermo then
+        widen the picture. The museum recommendation gathers several confirmed stops
+        rather than turning every recorded institution into a thin list entry.
+      </p>
+      <p>
+        Route details below describe my recorded visit. They are not current opening
+        hours, queue estimates, fares or guaranteed travel times. For the actual
+        chronology, use the <a href="/5-days-in-buenos-aires-itinerary/">five-day Buenos Aires itinerary</a>;
+        for a geographic comparison, use the <a href="/buenos-aires-neighbourhoods/">Buenos Aires neighbourhoods guide</a>.
+      </p>
+    </div>
+
+    <AnchorNav
+      links={[
+        { id: 'historic-centre', label: 'Historic centre' },
+        { id: 'obelisk', label: 'Obelisk' },
+        { id: 'teatro-colon', label: 'Teatro Colón' },
+        { id: 'el-ateneo', label: 'El Ateneo' },
+        { id: 'recoleta', label: 'Recoleta' },
+        { id: 'san-telmo', label: 'San Telmo' },
+        { id: 'puerto-madero', label: 'Puerto Madero' },
+        { id: 'la-boca', label: 'La Boca' },
+        { id: 'palermo', label: 'Palermo parks' },
+        { id: 'museums', label: 'Museums' },
+        { id: 'priorities', label: 'Priorities' },
+      ]}
+    />
+  </div>
+
+  <AtAGlance
+    id="glance"
+    title="The Ten Experiences at a Glance"
+    meta={[
+      {
+        label: 'Start here',
+        value: 'Plaza de Mayo, the Obelisk, Teatro Colón and El Ateneo form the strongest central introduction to the city.',
+      },
+      {
+        label: 'Add for contrast',
+        value: 'Recoleta, San Telmo, Puerto Madero, La Boca and Palermo show how quickly the city changes register.',
+      },
+      {
+        label: 'Keep separate',
+        value: 'Colonia is an optional day-trip spoke. It is not one of the core things to do in Buenos Aires.',
+      },
+    ]}
+    daysHeading="Choose by interest"
+    days={[
+      { num: 'Civic', text: 'Plaza de Mayo · Casa Rosada area · the Obelisk · central architecture' },
+      { num: 'Culture', text: 'Teatro Colón · El Ateneo · museums · Recoleta’s cultural route' },
+      { num: 'Street', text: 'San Telmo markets · La Boca route · Palermo’s parks and streets' },
+      { num: 'Water', text: 'Puerto Madero · Silos · Fortabat and the contemporary waterfront route' },
+    ]}
+  />
+
+  <div class="post-body">
+    <Chapter id="historic-centre" number="I." name="Explore Plaza de Mayo and the historic centre" epithet="The civic route that gave the first day its shape" />
+    <div class="narrative prose">
+      <p>
+        Plaza de Mayo was the clearest starting point. On 29 September, the recorded
+        arrival route moved through Buenos Aires Metropolitan Cathedral, the Casa
+        Rosada area, the Block of the Lights Historical-Cultural Complex and Plaza de
+        Mayo before continuing towards Plaza del Congreso and the National Museum of
+        Fine Arts.
+      </p>
+      <p>
+        I would choose this route first because it introduces Buenos Aires through
+        public space and civic architecture rather than through a single attraction.
+        The specialist <a href="/plaza-de-mayo-buenos-aires/">Plaza de Mayo and historic Buenos Aires guide</a>
+        keeps the same limits visible: the stops are confirmed, but the archive does
+        not preserve building entry, a measured walking route or current visitor details.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-congreso-sequence.jpg`}
+      srcset={`${IMG}/buenos-aires-congreso-sequence-480w.jpg 480w, ${IMG}/buenos-aires-congreso-sequence-768w.jpg 768w, ${IMG}/buenos-aires-congreso-sequence-1200w.jpg 1200w, ${IMG}/buenos-aires-congreso-sequence.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Plaza del Congreso and central civic architecture in Buenos Aires."
+      width={1365}
+      height={2048}
+      caption="The historic-centre route continued from Plaza de Mayo towards Congress."
+      variant="portrait"
+    />
+
+    <Chapter id="obelisk" number="II." name="See the Obelisk and central Buenos Aires" epithet="A landmark within a wider sequence of civic and cultural buildings" />
+    <div class="narrative prose">
+      <p>
+        The Obelisk was recorded at the beginning of the 30 September route, before
+        Palacio San Martín, the Museo del Agua y de la Historia Sanitaria and Teatro
+        Colón. It deserves a stop, but not an entire theory of the city. Its value in
+        this trip was as one unmistakable point in a day that kept moving through
+        central architecture, museums and interiors.
+      </p>
+      <p>
+        Palacio Barolo, Galerías Pacífico, Palacio Libertad and Basílica del Santísimo
+        Sacramento also belong to the wider central sequence. I keep them as supporting
+        stops rather than separate “best things” entries: the hub should help choose a
+        route, not turn every recorded building into a ranking.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-obelisco.jpg`}
+      srcset={`${IMG}/buenos-aires-obelisco-480w.jpg 480w, ${IMG}/buenos-aires-obelisco-768w.jpg 768w, ${IMG}/buenos-aires-obelisco-1200w.jpg 1200w, ${IMG}/buenos-aires-obelisco.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The Obelisk in central Buenos Aires."
+      width={1365}
+      height={2048}
+      caption="The Obelisk: a fixed landmark inside a much larger central-city route."
+      variant="portrait"
+    />
+
+    <Chapter id="teatro-colon" number="III." name="Make time for Teatro Colón" epithet="One of the strongest cultural anchors in the central route" />
+    <div class="narrative prose">
+      <p>
+        Teatro Colón belongs near the top of the list because it was part of the
+        densest cultural day, alongside the Obelisk, Palacio San Martín, El Ateneo and
+        Palacio Barolo. The surviving route and image family establish a Teatro Colón
+        sequence, but they do not let me upgrade that into a confirmed interior tour,
+        performance or detailed access account.
+      </p>
+      <p>
+        That distinction does not make the stop weak. It makes the recommendation
+        precise: include Teatro Colón in a central cultural route, then verify current
+        access separately if you want a tour or performance. This page is about the
+        experience that the trip actually records, not a timetable reconstructed from
+        general knowledge.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-teatro-colon-sequence.jpg`}
+      srcset={`${IMG}/buenos-aires-teatro-colon-sequence-480w.jpg 480w, ${IMG}/buenos-aires-teatro-colon-sequence-768w.jpg 768w, ${IMG}/buenos-aires-teatro-colon-sequence-1200w.jpg 1200w, ${IMG}/buenos-aires-teatro-colon-sequence.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Teatro Colón sequence in Buenos Aires; exterior or interior is not specified."
+      width={1365}
+      height={2048}
+      caption="Teatro Colón sequence; the archive does not resolve exterior versus interior."
+      variant="portrait"
+    />
+
+    <Chapter id="el-ateneo" number="IV." name="See El Ateneo Grand Splendid" epithet="A bookstore stop that changes the scale of the central route" />
+    <div class="narrative prose">
+      <p>
+        El Ateneo followed Teatro Colón in the 30 September record. It is one of the
+        places I would retain even on a compressed first visit because it changes the
+        kind of space on offer: after civic buildings and a theatre, the route turns
+        towards books and a more intimate interior sequence.
+      </p>
+      <p>
+        The photograph supports the El Ateneo identification, but the evidence does
+        not preserve a detailed review of the shop, a purchase, a time spent inside or
+        a judgement about its collection. The useful recommendation is simply to put
+        it beside Teatro Colón and Palacio Barolo in the central cultural route.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-el-ateneo-sequence.jpg`}
+      srcset={`${IMG}/buenos-aires-el-ateneo-sequence-480w.jpg 480w, ${IMG}/buenos-aires-el-ateneo-sequence-768w.jpg 768w, ${IMG}/buenos-aires-el-ateneo-sequence-1200w.jpg 1200w, ${IMG}/buenos-aires-el-ateneo-sequence.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="El Ateneo sequence in Buenos Aires; the image is used without adding a detailed interior review."
+      width={1365}
+      height={2048}
+      caption="El Ateneo in the recorded central-city cultural sequence."
+      variant="portrait"
+    />
+
+    <Chapter id="recoleta" number="V." name="Follow Recoleta’s cultural route" epithet="Floralis, museums and a cemetery stop without pretending to know more than the record" />
+    <div class="narrative prose">
+      <p>
+        Recoleta is strongest as a cultural route rather than as a single attraction.
+        The 30 September sequence includes Recoleta Cemetery, Floralis Genérica, the
+        Museo Nacional de Arte Decorativo and MALBA after the central-city stops.
+      </p>
+      <p>
+        I have not turned the cemetery into an exploration article. The itinerary
+        confirms the stop, but it does not preserve a detailed account of which parts
+        were visited. Floralis Genérica is the clearest photographic anchor. Around it,
+        the museums make Recoleta worth choosing when you want a day that moves between
+        monumental space and art rather than only between landmarks.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-floralis-generica.jpg`}
+      srcset={`${IMG}/buenos-aires-floralis-generica-480w.jpg 480w, ${IMG}/buenos-aires-floralis-generica-768w.jpg 768w, ${IMG}/buenos-aires-floralis-generica-1200w.jpg 1200w, ${IMG}/buenos-aires-floralis-generica-1600w.jpg 1600w, ${IMG}/buenos-aires-floralis-generica.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Floralis Genérica in the Recoleta and Palermo route."
+      width={2048}
+      height={1365}
+      caption="Floralis Genérica: the clearest landmark in the recorded Recoleta–Palermo route."
+    />
+
+    <Chapter id="san-telmo" number="VI." name="Choose San Telmo’s market-and-art route" epithet="A day that moved between Mercado San Telmo, Museo Moderno and the fair" />
+    <div class="narrative prose">
+      <p>
+        San Telmo added a different kind of movement. The recorded routes include
+        Mercado San Telmo, Museo Moderno and, on the final full day, the San Telmo Fair.
+        Those stops are enough to recommend the area as a market-and-art experience;
+        they are not enough to repeat the usual shorthand about bohemian streets,
+        tango on every corner or an antiques culture I did not document.
+      </p>
+      <p>
+        I would pair San Telmo with the waterfront route rather than make it the whole
+        day by default. The existing <a href="/buenos-aires-neighbourhoods/">neighbourhood guide</a>
+        compares San Telmo with the city’s other districts; this page’s narrower point
+        is that the market and museum stops deserve a place in the shortlist.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-mural-sequence.jpg`}
+      srcset={`${IMG}/buenos-aires-mural-sequence-480w.jpg 480w, ${IMG}/buenos-aires-mural-sequence-768w.jpg 768w, ${IMG}/buenos-aires-mural-sequence-1200w.jpg 1200w, ${IMG}/buenos-aires-mural-sequence.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Buenos Aires mural or street-art sequence; exact location is unresolved."
+      width={1365}
+      height={2048}
+      caption="A Buenos Aires mural sequence; the exact neighbourhood is not assigned from the photograph alone."
+      variant="portrait"
+    />
+
+    <Chapter id="puerto-madero" number="VII." name="Walk Puerto Madero’s waterfront and cultural route" epithet="Contemporary architecture and art after the market streets" />
+    <div class="narrative prose">
+      <p>
+        Puerto Madero supplied the sharpest change in architectural register. The
+        1 October route moved from San Telmo through Silos Puerto Madero and the
+        waterfront to the Amalia Lacroze de Fortabat Art Collection, with Faena Art
+        Center also recorded in the wider cultural sequence.
+      </p>
+      <p>
+        I would choose this route when the older civic and market city needs a
+        counterpoint. The evidence supports the waterfront, silos and cultural stops;
+        it does not support turning Puerto Madero into a restaurant, nightlife or
+        safety guide. The recommendation is for the combination of water, modern
+        architecture and art spaces.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-modern-architecture.jpg`}
+      srcset={`${IMG}/buenos-aires-modern-architecture-480w.jpg 480w, ${IMG}/buenos-aires-modern-architecture-768w.jpg 768w, ${IMG}/buenos-aires-modern-architecture-1200w.jpg 1200w, ${IMG}/buenos-aires-modern-architecture.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Modern Buenos Aires architecture from the wider central and waterfront route; exact venue is unresolved."
+      width={2048}
+      height={1365}
+      caption="Modern Buenos Aires architecture from the wider central and waterfront route."
+    />
+
+    <Chapter id="la-boca" number="VIII." name="Follow the La Boca route" epithet="Caminito, art, the bridge and a stadium stop—without inventing a match" />
+    <div class="narrative prose">
+      <p>
+        La Boca was the opening section of the final full Buenos Aires route. The
+        itinerary records Caminito, Pasaje Garibaldi, Puente Transbordador, Fundación
+        Proa and Estadio Alberto J. Armando, La Bombonera. That is a distinct route and
+        a strong reason to include La Boca in a first visit.
+      </p>
+      <p>
+        The football distinction matters. La Bombonera is supported as a stadium stop,
+        not as a match, ticketed tour or match-day atmosphere. The 3 October route has
+        no matching Buenos Aires photo-date coverage, so this section stays text-led.
+        A football-themed image elsewhere in the archive would not prove that I was
+        standing at La Bombonera or watching a game.
+      </p>
+    </div>
+
+    <Chapter id="palermo" number="IX." name="Slow down in Palermo’s parks" epithet="The green and open end of the recorded city route" />
+    <div class="narrative prose">
+      <p>
+        Palermo was both the recorded accommodation base and the setting for the final
+        green sequence: Plaza Serrano, El Rosedal Garden, Planetario Galileo Galilei
+        and Paseo de La Infanta. These places make Palermo worth choosing when the trip
+        needs space after the compressed central and museum routes.
+      </p>
+      <p>
+        The running notes attached to the Palermo parks were planning material, not a
+        completed run. I have therefore kept the recommendation with the parks,
+        Planetarium and route structure rather than describing a jog, distance or
+        recovery. For the wider geographic comparison, the <a href="/buenos-aires-neighbourhoods/">neighbourhood guide</a>
+        is the better destination.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-streetscape.jpg`}
+      srcset={`${IMG}/buenos-aires-streetscape-480w.jpg 480w, ${IMG}/buenos-aires-streetscape-768w.jpg 768w, ${IMG}/buenos-aires-streetscape-1200w.jpg 1200w, ${IMG}/buenos-aires-streetscape.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Buenos Aires streetscape from the wider city route; exact location is unresolved."
+      width={2048}
+      height={1365}
+      caption="Buenos Aires streetscape from the wider city route; exact location is deliberately unresolved."
+    />
+
+    <Chapter id="museums" number="X." name="Choose the museums that fit your route" epithet="A cultural network rather than a checklist of every institution" />
+    <div class="narrative prose">
+      <p>
+        Buenos Aires offered enough museums and cultural buildings to make selection
+        necessary. The recorded route includes the Museo Nacional de Bellas Artes,
+        Museo Nacional de Arte Decorativo, MALBA, Museo del Agua y de la Historia
+        Sanitaria, Museo Moderno, Faena Art Center, the Fortabat collection, Palacio
+        Libertad and Galerías Pacífico.
+      </p>
+      <p>
+        I would not present that list as a universal ranking. Instead, use it to choose
+        a cultural emphasis: Bellas Artes, Decorativo and MALBA fit naturally with the
+        Recoleta route; Museo Moderno and Faena fit with San Telmo and Puerto Madero;
+        Fortabat, Palacio Libertad and Galerías Pacífico belong to the wider central
+        and waterfront sequence. The evidence confirms the stops, not a gallery-by-
+        gallery review of each collection.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-gallery-interior.jpg`}
+      srcset={`${IMG}/buenos-aires-gallery-interior-480w.jpg 480w, ${IMG}/buenos-aires-gallery-interior-768w.jpg 768w, ${IMG}/buenos-aires-gallery-interior-1200w.jpg 1200w, ${IMG}/buenos-aires-gallery-interior.jpg 1365w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Gallery or exhibition interior in Buenos Aires; exact venue is unresolved."
+      width={1365}
+      height={2048}
+      caption="A gallery or exhibition interior from the recorded cultural route; exact venue unresolved."
+      variant="portrait"
+    />
+
+    <SectionHeading id="priorities">What I Would Prioritise</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        <strong>With one day:</strong> I would keep the route central: Plaza de Mayo,
+        the Obelisk, Teatro Colón and El Ateneo, with one museum or the Recoleta route
+        if time allows. That gives the first day a civic and cultural spine without
+        pretending the entire city can be covered.
+      </p>
+      <p>
+        <strong>With three days:</strong> keep the central route on one day, use a
+        second for Recoleta and Palermo or San Telmo and Puerto Madero, then give the
+        remaining day to La Boca and the parks. The choice depends on whether museums,
+        markets, waterfront architecture or neighbourhood movement matter most; the
+        evidence does not justify a single universal order.
+      </p>
+      <p>
+        <strong>With five days:</strong> use the <a href="/5-days-in-buenos-aires-itinerary/">complete five-day itinerary</a>
+        for the recorded chronology, including the separate Colonia day. This page is
+        the selection layer above it, not a replacement for the dates.
+      </p>
+    </div>
+
+    <SectionHeading id="surprised">What surprised me most</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        The strongest impression was structural. Buenos Aires did not stay at one
+        scale. A civic square led to a theatre and a bookstore; the cultural route
+        opened into Recoleta’s museums, then San Telmo’s market-and-art sequence and
+        Puerto Madero’s waterfront architecture. La Boca and Palermo changed the
+        texture again.
+      </p>
+      <p>
+        That is why I would resist a list made entirely from famous names. The useful
+        question is not whether one attraction is the city’s “best”, but which change
+        of register you want next. The recommendations above are the places that made
+        those changes visible in the route I actually recorded.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/buenos-aires-closing-streetscape.jpg`}
+      srcset={`${IMG}/buenos-aires-closing-streetscape-480w.jpg 480w, ${IMG}/buenos-aires-closing-streetscape-768w.jpg 768w, ${IMG}/buenos-aires-closing-streetscape-1200w.jpg 1200w, ${IMG}/buenos-aires-closing-streetscape.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Buenos Aires streetscape from the wider route; exact location is unresolved."
+      width={2048}
+      height={1365}
+      caption="The route ended not with one final monument, but with another change of city texture."
+    />
+
+    <SectionHeading id="colonia">If you have an extra day: Colonia del Sacramento</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Colonia del Sacramento was recorded as a separate 2 October day trip from
+        Buenos Aires. I keep it outside the core list because it is in Uruguay, and
+        because the transport operator, crossing details, completed sightseeing and
+        photo coverage remain unresolved in the source pack.
+      </p>
+      <p>
+        The dedicated <a href="/colonia-del-sacramento-day-trip/">Colonia del Sacramento day-trip account</a>
+        keeps that route record separate. It is the right place to investigate the
+        extension once the remaining travel details are confirmed; it should not be
+        used to inflate a list of things to do inside Buenos Aires.
+      </p>
+    </div>
+
+    <SectionHeading id="omitted">What I have left out</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        I have not added tango because no attended performance or milonga is confirmed.
+        I have not described a Palermo run because the route notes are planning only.
+        I have not turned La Bombonera into a match report, or any restaurant into a
+        ranking, because those claims are not supported by the archive.
+      </p>
+      <p>
+        Current prices, fares, opening hours, queues, weather, safety conditions and
+        transport procedure also remain outside this first-hand guide. They change, and
+        they were not part of the supplied evidence. This page is strongest when it
+        helps decide what deserves time without pretending to be a current operations
+        manual.
+      </p>
+    </div>
+
+    <FurtherReading
+      label="Continue through Buenos Aires"
+      cards={[
+        { href: '/5-days-in-buenos-aires-itinerary/', region: 'Argentina · Buenos Aires', title: '5 Days in Buenos Aires: Complete Itinerary', excerpt: 'The full chronology through the historic centre, Recoleta, Palermo, San Telmo, Puerto Madero, La Boca and the recorded Colonia day.', meta: ['Itinerary', 'September–October 2026'] },
+        { href: '/buenos-aires-neighbourhoods/', region: 'Argentina · Buenos Aires', title: 'Buenos Aires Neighbourhoods: Exploring the City Barrio by Barrio', excerpt: 'A geographic comparison of Palermo, Recoleta, San Telmo, Puerto Madero, La Boca and the historic centre.', meta: ['Neighbourhoods', 'September–October 2026'] },
+        { href: '/plaza-de-mayo-buenos-aires/', region: 'Argentina · Buenos Aires', title: 'Plaza de Mayo & Historic Buenos Aires', excerpt: 'A focused arrival-day account of the Cathedral, Casa Rosada area, Manzana de las Luces, Plaza de Mayo and Congress.', meta: ['Historic centre', 'September 2026'] },
+        { href: '/colonia-del-sacramento-day-trip/', region: 'Uruguay · Colonia del Sacramento', title: 'Colonia del Sacramento Day Trip from Buenos Aires', excerpt: 'A separate, carefully bounded account of the recorded day beyond Buenos Aires.', meta: ['Day trip', 'October 2026'] },
+        { href: '/24-days-in-south-america-itinerary/', region: 'South America · Argentina', title: '24 Days in South America', excerpt: 'The wider route from Lima to Buenos Aires, with the city as its final urban base.', meta: ['Pillar itinerary', '2026'] },
+      ]}
+    />
+  </div>
+</ChronicleLayout>

@@ -1,5 +1,7 @@
 Buenos Aires became legible to me as a sequence of districts rather than one monumental centre. The route moved from the civic heart to Recoleta and Palermo, then through San Telmo and Puerto Madero, before ending across La Boca, San Telmo and the Palermo parks.
 
+For a selection of the experiences rather than a comparison of the districts, continue to the [best things to do in Buenos Aires guide](/best-things-to-do-in-buenos-aires/). This page stays with where the route went; the hub stays with what deserves time.
+
 This is a comparison of the neighbourhoods and central areas actually recorded during my September–October 2026 visit. It is not a where-to-stay guide, a safety ranking or a universal answer to which barrio is best. The useful question is narrower: what changed as this particular route moved through the city?
 
 For the complete chronology, continue to the [five-day Buenos Aires itinerary](/5-days-in-buenos-aires-itinerary/). That article explains how the days fitted together; this one stays with the districts themselves.
