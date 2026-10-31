@@ -71,7 +71,7 @@ The recorded sequence includes a short walk from El Cacaotal to the Bridge of Si
 
 <figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-barranco-architecture-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-barranco-architecture-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-barranco-architecture-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-barranco-architecture-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-barranco-architecture-1600w.jpg" srcset="/images/3-days-in-lima-itinerary/lima-barranco-architecture-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-barranco-architecture-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-barranco-architecture-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-barranco-architecture-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Architecture and public space in Barranco." loading="lazy" decoding="async"></picture><figcaption>Architecture and public space in Barranco.</figcaption></figure>
 
-From there, the route shifted north toward **Miraflores**.
+From there, the route shifted north toward **Miraflores**. The day is covered in more detail in the [Barranco to Miraflores coastal-neighbourhood guide](/barranco-to-miraflores-lima/), which keeps the confirmed walking sections separate from the wider mixed movement.
 
 The transition moved through the **Puente Eduardo Villena Rey** and **Love Park**, then along the **Malecón de Miraflores**.
 
