@@ -31,6 +31,89 @@ const schema = {
 const jsonLd =
   '<script type="application/ld+json">' + JSON.stringify(schema) + "<\/script>";
 
+const heroSlides = [
+  {
+    family: "Porto Ribeira waterfront",
+    src: "/images/5-days-in-porto-the-city-the-river-built/porto-ribeira-waterfront-1600w.jpg",
+    src1200: "/images/5-days-in-porto-the-city-the-river-built/porto-ribeira-waterfront-1200w.jpg",
+    src768: "/images/5-days-in-porto-the-city-the-river-built/porto-ribeira-waterfront-768w.jpg",
+    src480: "/images/5-days-in-porto-the-city-the-river-built/porto-ribeira-waterfront-480w.jpg",
+    height: 1066,
+  },
+  {
+    family: "Douro Valley river bend",
+    src: "/images/douro-valley-day-trip/douro-river-bend-terraces-1600w.jpg",
+    src1200: "/images/douro-valley-day-trip/douro-river-bend-terraces-1200w.jpg",
+    src768: "/images/douro-valley-day-trip/douro-river-bend-terraces-768w.jpg",
+    src480: "/images/douro-valley-day-trip/douro-river-bend-terraces-480w.jpg",
+    height: 1066,
+  },
+  {
+    family: "Plaza de España, Seville",
+    src: "/images/3-days-in-seville/plaza-de-espana-bridges-1600w.jpg",
+    src1200: "/images/3-days-in-seville/plaza-de-espana-bridges-1200w.jpg",
+    src768: "/images/3-days-in-seville/plaza-de-espana-bridges-768w.jpg",
+    src480: "/images/3-days-in-seville/plaza-de-espana-bridges-480w.jpg",
+    height: 1066,
+  },
+  {
+    family: "Barcelona harbour at first light",
+    src: "/images/one-day-in-barcelona/port-vell-at-first-light-1600w.jpg",
+    src1200: "/images/one-day-in-barcelona/port-vell-at-first-light-1200w.jpg",
+    src768: "/images/one-day-in-barcelona/port-vell-at-first-light-768w.jpg",
+    src480: "/images/one-day-in-barcelona/port-vell-at-first-light-480w.jpg",
+    height: 1066,
+  },
+  {
+    family: "The Tiber towards Saint Peter's, Rome",
+    src: "/images/six-days-in-rome-at-the-table-of-empires/rome-tiber-towards-saint-peters-1600w.jpg",
+    src1200: "/images/six-days-in-rome-at-the-table-of-empires/rome-tiber-towards-saint-peters-1200w.jpg",
+    src768: "/images/six-days-in-rome-at-the-table-of-empires/rome-tiber-towards-saint-peters-768w.jpg",
+    src480: "/images/six-days-in-rome-at-the-table-of-empires/rome-tiber-towards-saint-peters-480w.jpg",
+    height: 900,
+  },
+  {
+    family: "Chouara tannery vats, Fes",
+    src: "/images/2-days-in-fez-itinerary/fez-chouara-tannery-vats-1600w.jpg",
+    src1200: "/images/2-days-in-fez-itinerary/fez-chouara-tannery-vats-1200w.jpg",
+    src768: "/images/2-days-in-fez-itinerary/fez-chouara-tannery-vats-768w.jpg",
+    src480: "/images/2-days-in-fez-itinerary/fez-chouara-tannery-vats-480w.jpg",
+    height: 1066,
+  },
+  {
+    family: "Tangier Bay at sunset",
+    src: "/images/3-days-in-tangier-at-the-edge-of-two-worlds/tangier-bay-at-sunset-1600w.jpg",
+    src1200: "/images/3-days-in-tangier-at-the-edge-of-two-worlds/tangier-bay-at-sunset-1200w.jpg",
+    src768: "/images/3-days-in-tangier-at-the-edge-of-two-worlds/tangier-bay-at-sunset-768w.jpg",
+    src480: "/images/3-days-in-tangier-at-the-edge-of-two-worlds/tangier-bay-at-sunset-480w.jpg",
+    height: 1066,
+  },
+  {
+    family: "La Paz city and mountains",
+    src: "/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1600w.jpg",
+    src1200: "/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg",
+    src768: "/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg",
+    src480: "/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg",
+    height: 1066,
+  },
+  {
+    family: "Santiago skyline and mountains",
+    src: "/images/4-days-in-santiago-itinerary/santiago-skyline-mountain-backdrop-1600w.jpg",
+    src1200: "/images/4-days-in-santiago-itinerary/santiago-skyline-mountain-backdrop-1200w.jpg",
+    src768: "/images/4-days-in-santiago-itinerary/santiago-skyline-mountain-backdrop-768w.jpg",
+    src480: "/images/4-days-in-santiago-itinerary/santiago-skyline-mountain-backdrop-480w.jpg",
+    height: 1066,
+  },
+  {
+    family: "Iguazú Falls panorama",
+    src: "/images/iguazu-falls-in-2-days/iguazu-brazil-panorama-1600w.jpg",
+    src1200: "/images/iguazu-falls-in-2-days/iguazu-brazil-panorama-1200w.jpg",
+    src768: "/images/iguazu-falls-in-2-days/iguazu-brazil-panorama-768w.jpg",
+    src480: "/images/iguazu-falls-in-2-days/iguazu-brazil-panorama-480w.jpg",
+    height: 900,
+  },
+];
+
 // Twelve published chronicles, chosen to show the whole publication rather
 // than the newest corner of it: the long overland circuits first, then Italy,
 // Portugal, Spain and Morocco. Every href is a live route — nothing here is
@@ -161,15 +244,109 @@ const paths = [
   <Fragment slot="head" set:html={jsonLd} />
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-ornament">A solo travel chronicle</div>
-    <h1 class="hero-title">There<br /><em>&amp; Back</em><br />Again</h1>
-    <p class="hero-subtitle">
-      Tales written in the old manner — for those who travel not merely to
-      arrive, but to be changed by the road.
-    </p>
-    <a class="hero-cta" href="/chronicles/">Begin the Journey →</a>
+  <section class="hero hero--home">
+    <div class="hero-slideshow" aria-hidden="true">
+      {
+        heroSlides.map((slide, index) => (
+          <div class:list={["hero-slide", index === 0 && "is-active"]}>
+            <picture>
+              <source
+                media="(max-width: 600px)"
+                {...(index === 0
+                  ? { srcset: `${slide.src480} 480w, ${slide.src768} 768w` }
+                  : {
+                      "data-srcset": `${slide.src480} 480w, ${slide.src768} 768w`,
+                    })}
+              />
+              <source
+                media="(max-width: 1200px)"
+                {...(index === 0
+                  ? { srcset: `${slide.src768} 768w, ${slide.src1200} 1200w` }
+                  : {
+                      "data-srcset": `${slide.src768} 768w, ${slide.src1200} 1200w`,
+                    })}
+              />
+              <img
+                {...(index === 0
+                  ? {
+                      src: slide.src,
+                      srcset: `${slide.src480} 480w, ${slide.src768} 768w, ${slide.src1200} 1200w, ${slide.src} 1600w`,
+                    }
+                  : {
+                      "data-src": slide.src,
+                      "data-srcset": `${slide.src480} 480w, ${slide.src768} 768w, ${slide.src1200} 1200w, ${slide.src} 1600w`,
+                    })}
+                sizes="100vw"
+                alt=""
+                width="1600"
+                height={slide.height}
+                {...(index === 0
+                  ? { fetchpriority: "high" }
+                  : { loading: "lazy" })}
+              />
+            </picture>
+          </div>
+        ))
+      }
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-ornament">A solo travel chronicle</div>
+      <h1 class="hero-title">There<br /><em>&amp; Back</em><br />Again</h1>
+      <p class="hero-subtitle">
+        Tales written in the old manner — for those who travel not merely to
+        arrive, but to be changed by the road.
+      </p>
+      <a class="hero-cta" href="/chronicles/">Begin the Journey →</a>
+    </div>
   </section>
+
+  <script is:inline>
+    (() => {
+      const slideshow = document.querySelector('.hero-slideshow');
+      if (!slideshow) return;
+
+      const slides = Array.from(slideshow.querySelectorAll('.hero-slide'));
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let activeIndex = 0;
+      let rotationTimer;
+
+      const loadSlide = (slide) => {
+        slide.querySelectorAll('source[data-srcset]').forEach((source) => {
+          source.srcset = source.dataset.srcset;
+          source.removeAttribute('data-srcset');
+        });
+
+        const image = slide.querySelector('img[data-src]');
+        if (!image) return;
+        image.srcset = image.dataset.srcset;
+        image.src = image.dataset.src;
+        image.removeAttribute('data-srcset');
+        image.removeAttribute('data-src');
+      };
+
+      const stopRotation = () => {
+        if (rotationTimer) window.clearInterval(rotationTimer);
+      };
+
+      const rotate = () => {
+        const nextIndex = (activeIndex + 1) % slides.length;
+        loadSlide(slides[nextIndex]);
+        slides[activeIndex].classList.remove('is-active');
+        slides[nextIndex].classList.add('is-active');
+        activeIndex = nextIndex;
+        loadSlide(slides[(activeIndex + 1) % slides.length]);
+      };
+
+      if (reducedMotion.matches || slides.length < 2) return;
+      loadSlide(slides[1]);
+      rotationTimer = window.setInterval(rotate, 7000);
+      window.addEventListener('pagehide', stopRotation, { once: true });
+      reducedMotion.addEventListener?.('change', (event) => {
+        if (event.matches) stopRotation();
+      });
+    })();
+  </script>
 
   <!-- TAGLINE -->
   <div class="tagline-strip">
