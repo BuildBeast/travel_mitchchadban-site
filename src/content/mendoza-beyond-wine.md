@@ -1,5 +1,7 @@
 Mendoza is often reduced to wine country. The recorded visit was more divided than that: a city of parks and formal streets, a foothill landmark, and a separate day of wine-country names beyond the urban centre.
 
+For the broader first-visit selection, continue to the [best things to do in Mendoza guide](/best-things-to-do-in-mendoza/). This page remains focused on the city side of the visit and what Mendoza offers beyond wineries.
+
 The stay ran from **23 to 26 September 2026**, for three nights, after the bus from Santiago and before onward travel towards Iguazú. This article stays with the city side of that visit: Parque General San Martín, Mendoza University, central streets, Cerro de la Gloria, San Vicente Park and the architecture between them.
 
 The argument is not that wine is unimportant. It is that Mendoza deserves to be seen before it becomes a base for somewhere else. The city has its own shape, and the route recorded enough of it to make “Mendoza beyond wine” more than a slogan.

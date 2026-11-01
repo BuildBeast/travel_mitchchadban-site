@@ -1,5 +1,7 @@
 Mendoza is often reduced to wine country. The recorded visit was more divided than that: a city of parks and formal streets, foothill landmarks, and a separate set of wine-country stops beyond the urban centre.
 
+For the experience shortlist above this chronology, see the [best things to do in Mendoza guide](/best-things-to-do-in-mendoza/). This itinerary keeps the three-day route; the hub helps decide what deserves priority.
+
 The stay ran from **23 to 26 September 2026**, for three nights, after the bus from Santiago and before onward travel towards Iguazú. The evidence supports the broad shape of the visit and the names of the places recorded. It does not preserve a full hour-by-hour chronology, tasting notes, transport operator, prices or a reliable account of the Mendoza–Iguazú connection. This itinerary keeps those limits visible.
 
 ## Mendoza in three days at a glance
