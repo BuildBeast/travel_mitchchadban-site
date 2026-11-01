@@ -182,20 +182,44 @@ const paths = [
   <!-- WHAT THIS IS -->
   <section class="front-statement">
     <div class="section-label">What this is</div>
-    <div class="front-statement__body">
-      <p>
-        <strong>There &amp; Back Again</strong> is an independent travel
-        chronicle written and photographed by
-        <a href="/about-the-traveller/">Mitch Chadban</a>. Every journey here was
-        made in person, alone, and mostly overland.
-      </p>
-      <p>
-        Each article is written twice over. The narrative half tells the journey
-        as it happened, in the voice of <em>the traveller</em>. The practical
-        half gives the working detail behind it — the route in the order it
-        should be walked, the trains and the ferries, where to stay and what it
-        cost, and the meals worth crossing a city for.
-      </p>
+    <div class="front-statement__grid">
+      <div class="front-statement__body">
+        <p>
+          <strong>There &amp; Back Again</strong> is an independent travel
+          chronicle written and photographed by
+          <a href="/about-the-traveller/">Mitch Chadban</a>. Every journey here was
+          made in person, alone, and mostly overland.
+        </p>
+        <p>
+          Each article is written twice over. The narrative half tells the journey
+          as it happened, in the voice of <em>the traveller</em>. The practical
+          half gives the working detail behind it — the route in the order it
+          should be walked, the trains and the ferries, where to stay and what it
+          cost, and the meals worth crossing a city for.
+        </p>
+      </div>
+      <figure class="front-statement__media">
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="/images/2-days-in-machu-picchu-itinerary/aguas-calientes-railway-town-480w.jpg 480w, /images/2-days-in-machu-picchu-itinerary/aguas-calientes-railway-town-768w.jpg 768w"
+          />
+          <source
+            media="(max-width: 1200px)"
+            srcset="/images/2-days-in-machu-picchu-itinerary/aguas-calientes-railway-town-768w.jpg 768w, /images/2-days-in-machu-picchu-itinerary/aguas-calientes-railway-town-1200w.jpg 1200w"
+          />
+          <img
+            src="/images/2-days-in-machu-picchu-itinerary/aguas-calientes-railway-town-1200w.jpg"
+            srcset="/images/2-days-in-machu-picchu-itinerary/aguas-calientes-railway-town-480w.jpg 480w, /images/2-days-in-machu-picchu-itinerary/aguas-calientes-railway-town-768w.jpg 768w, /images/2-days-in-machu-picchu-itinerary/aguas-calientes-railway-town-1200w.jpg 1200w"
+            sizes="(max-width: 820px) 100vw, 58vw"
+            alt="A blue passenger train beside the mountain town of Aguas Calientes, Peru"
+            loading="lazy"
+            decoding="async"
+            width="1200"
+            height="1800"
+          />
+        </picture>
+      </figure>
     </div>
   </section>
 
@@ -251,8 +275,33 @@ const paths = [
     border-bottom: 0.5px solid rgba(160, 200, 120, 0.1);
   }
 
+  .front-statement__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+    align-items: center;
+  }
+
   .front-statement__body {
     max-width: 62ch;
+  }
+
+  .front-statement__media {
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+  }
+
+  .front-statement__media picture,
+  .front-statement__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .front-statement__media img {
+    object-fit: cover;
+    object-position: center 58%;
   }
 
   .front-statement__body p {
@@ -348,11 +397,23 @@ const paths = [
     .front-paths {
       padding: 4rem 4rem;
     }
+
+    .front-statement__grid {
+      gap: 3rem;
+    }
   }
 
   @media (max-width: 820px) {
+    .front-statement__grid {
+      grid-template-columns: 1fr;
+    }
+
     .front-paths__list {
       grid-template-columns: 1fr;
+    }
+
+    .front-statement__media {
+      aspect-ratio: 4 / 5;
     }
   }
 
