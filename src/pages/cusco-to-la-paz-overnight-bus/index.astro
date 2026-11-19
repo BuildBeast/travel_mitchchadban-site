@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/cusco-to-la-paz-overnight-bus.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
+
+const title = "Cusco to La Paz by Overnight Bus: What to Expect — There & Back Again";
+const description = "A first-hand account of the comfortable Transzela overnight bus from Cusco to La Paz, including the 15-hour crossing, border process and arrival in Bolivia.";
+const canonical = "https://travel.mitchchadban.com/cusco-to-la-paz-overnight-bus/";
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Article", headline: "Cusco to La Paz by Overnight Bus: What the Journey Is Really Like", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU" },
+    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "Cusco to La Paz by Overnight Bus", item: canonical } ] },
+  ],
+};
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article">
+  <Fragment slot="head" set:html={jsonLd} />
+  <section class="post-hero" aria-labelledby="cusco-la-paz-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru → Bolivia ·&nbsp;<span>Cusco to La Paz</span>&nbsp;· September 2026</div>
+    <h1 id="cusco-la-paz-title" class="post-hero-title"><em>Cusco to La Paz by Overnight Bus:</em><br />What the Journey Is Really Like</h1>
+    <p class="post-hero-sub">A comfortable overnight crossing from Cusco to La Paz, with the road, border and arrival treated as part of the journey.</p>
+    <div class="post-stats"><div class="stat"><span class="stat-num">15h</span><span class="stat-label">Journey</span></div><div class="stat"><span class="stat-num">10pm</span><span class="stat-label">Departure</span></div><div class="stat"><span class="stat-num">1pm</span><span class="stat-label">Arrival</span></div><div class="stat"><span class="stat-num">2</span><span class="stat-label">Countries</span></div></div>
+  </section>
+  <article class="post-body south-america-post-body cusco-la-paz-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through the Andes"
+      cards={[
+        { href: "/3-days-in-la-paz-itinerary/", region: "Bolivia · La Paz", title: "3 Days in La Paz: Complete Itinerary", excerpt: "The arrival, markets, cable cars, museums and city-edge stages that follow the overnight crossing.", cta: "READ CHRONICLE" },
+        { href: "/2-days-in-machu-picchu-itinerary/", region: "Peru · Machu Picchu", title: "2 Days in Machu Picchu and Aguas Calientes", excerpt: "The mountain stage before the road turns south towards Bolivia.", cta: "READ CHRONICLE" },
+        { href: "/24-days-in-south-america-itinerary/", region: "South America · Peru → Bolivia", title: "24 Days in South America", excerpt: "The wider journey from Peru through La Paz and across the continent.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="cusco-la-paz-overview-slot">
+    <AtAGlance
+      id="cusco-la-paz-glance"
+      title="Cusco to La Paz at a Glance"
+      meta={[
+        { label: "Journey time", value: "Roughly 15 hours on this September 2026 trip, from a 10:00pm departure in Cusco to a 1:00pm arrival in La Paz." },
+        { label: "Best reason to take it", value: "The night absorbs most of the distance while preserving the following afternoon for La Paz." },
+        { label: "Border crossing", value: "Part of the overnight international journey, with passport and immigration formalities along the route." },
+        { label: "Best for", value: "Travellers comfortable sleeping on a long-distance bus who prefer one continuous overland transfer to another airport day." },
+      ]}
+      daysHeading="Four Parts of the Journey"
+      days={[
+        { num: "Cusco Departure", detail: "10pm · Terminal · Overnight start", text: "A late departure turns the transfer into the final movement of the Peru stage rather than sacrificing another full day to travel." },
+        { num: "The Night Bus", detail: "Sleep · Comfort · Luggage below", text: "The service was comfortable enough for much of the night to pass asleep, with luggage stored beneath the bus and one food-and-coffee stop." },
+        { num: "The Border", detail: "Peru → Bolivia · Immigration · Documents", text: "The international crossing happens as part of the journey. Keep required documents accessible and check current entry rules before travelling." },
+        { num: "La Paz Arrival", detail: "1pm · Bus terminal · First afternoon", text: "Arrival around midday leaves enough room for a light first afternoon in La Paz rather than requiring another full recovery day." },
+      ]}
+    />
+  </div>
+
+  <div class="cusco-la-paz-decision-slot">
+    <Practical place="Cusco → La Paz" detail="Overnight · international" detailIcon="🚌">
+      <PracticalSection label="Shortest route to a decision" level={3}>
+        <div class="prac-item"><strong>Choose the bus if</strong> — You want the overnight journey itself to replace both a hotel night and another airport transfer.</div>
+        <div class="prac-item"><strong>Choose a flight if</strong> — Minimising travel time matters more than keeping the route continuous.</div>
+        <div class="prac-item"><strong>Plan around</strong> — A full overnight journey plus most of the following morning, with the first La Paz plans kept flexible.</div>
+        <div class="prac-item"><strong>Best-case outcome</strong> — Sleep through much of the road and arrive with the afternoon still usable.</div>
+      </PracticalSection>
+      <PracticalSection label="What matters most" level={3}>
+        <div class="prac-item"><strong>Journey length:</strong> About 15 hours on this trip.</div>
+        <div class="prac-item"><strong>Departure:</strong> Late evening from Cusco.</div>
+        <div class="prac-item"><strong>Border:</strong> International immigration during the journey.</div>
+        <div class="prac-item"><strong>Arrival:</strong> Early afternoon in La Paz.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Keep documents with you.</strong> Passport and anything needed for border formalities should stay in the cabin, not in luggage underneath the bus.</div>
+        <div class="tip-row"><strong>Do not assume the old timetable still applies.</strong> Check current schedules, seat types, fares and border instructions before booking.</div>
+        <div class="tip-row"><strong>Keep the arrival afternoon flexible.</strong> Border timing and road conditions can change the exact arrival.</div>
+        <div class="tip-row"><strong>Pack for one long night.</strong> Anything needed for sleep, warmth, food, water or personal comfort belongs in the cabin bag.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.cusco-la-paz-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.cusco-la-paz-overview-slot');
+      const decision = document.querySelector('.cusco-la-paz-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'How long is the Cusco to La Paz bus?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="cusco-to-la-paz-overnight-bus" />
+</BaseLayout>

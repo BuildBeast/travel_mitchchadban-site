@@ -1,0 +1,227 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/3-days-in-la-paz-itinerary.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Beat from "../../components/chronicle/Beat.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import TourRecommendations from "../../components/chronicle/TourRecommendations.astro";
+import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import "../../styles/south-america-article.css";
+
+const title = "3 Days in La Paz: Complete Itinerary — There & Back Again";
+const description = "A first-hand three-day La Paz itinerary through Plaza Murillo, markets, museums, Mi Teleférico, Hernando Siles Stadium and Valle de la Luna.";
+const canonical = "https://travel.mitchchadban.com/3-days-in-la-paz-itinerary/";
+const image = "/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg";
+const PROVENANCE = { photography: true };
+
+const faqItems = [
+  { question: "Is three days enough for La Paz?", answer: "Yes. Three days give the city a clear sequence: the civic centre and markets first, museums and cable-car movement second, then Valle de la Luna beyond the dense urban bowl. A longer stay would allow more neighbourhoods and highland excursions, but three days are enough for a strong first reading." },
+  { question: "Do you need a recovery day for the altitude in La Paz?", answer: "Not necessarily. This traveller arrived from the Cusco-to-La Paz overnight bus and did not need a recovery day, but individual responses to altitude vary. Start with easy movement, use walking and cable cars sensibly, hydrate, and seek medical help for concerning symptoms." },
+  { question: "Is Mi Teleférico worth using as transport?", answer: "Yes. The cable cars connect parts of La Paz that are difficult to understand from street level, while also functioning as everyday transport between districts. They work best when used to join two walking sections rather than added as a separate ride with no onward purpose." },
+  { question: "How much time do you need at Valle de la Luna?", answer: "Roughly two hours worked for this itinerary. That left the afternoon open after the transfer and return, rather than filling the whole day with another major attraction." },
+  { question: "What is the best way to organise museums and markets in La Paz?", answer: "Choose two or three museums around Sucre Square and San Francisco, then use Mercado Rodríguez and Mi Teleférico to return the day to street level and the wider city. Trying to explore every collection deeply makes the sequence feel like a checklist." },
+];
+
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Article", headline: "3 Days in La Paz: Complete Itinerary", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
+    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "3 Days in La Paz: Complete Itinerary", item: canonical } ] },
+    { "@type": "FAQPage", mainEntity: faqItems.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+  ],
+}, PROVENANCE);
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+  <section class="post-hero" aria-labelledby="la-paz-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Bolivia · La Paz ·&nbsp;<span>September 2026</span></div>
+    <h1 id="la-paz-title" class="post-hero-title"><em>3 Days in La Paz:</em><br />The City in Layers</h1>
+    <p class="post-hero-sub">A three-day route through plazas, markets, museums, cable cars and Valle de la Luna.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Days</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Nights</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">La Paz</span><span class="stat-label">Base</span></div>
+    </div>
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: true })} />
+  </section>
+
+  <article class="post-body south-america-post-body la-paz-post-body"><ArticleContent /></article>
+
+  <div class="la-paz-day-support-slots" aria-label="Day-by-day practical planning">
+    <div class="la-paz-day-support-slot" data-before="Day Two">
+      <Practical place="La Paz — Day 1" detail="City centre · cable cars · Killi Killi" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>YATI Restaurant café bar</strong> — evening stop after the opening circuit.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Arrival</strong> — Transzela reached the La Paz bus terminal at about 1:00pm on 16 September; the first afternoon continued into the central city without a recovery day.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Plaza Murillo</strong> — the civic centre and first orientation point.</div>
+          <div class="prac-item"><strong>Witches’ Market</strong> — the working market street below the formal centre.</div>
+          <div class="prac-item"><strong>Mi Teleférico</strong> — use the cable-car network to read the city above the streets.</div>
+          <div class="prac-item"><strong>Mirador Killi Killi</strong> — the elevated close to the first afternoon.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="La Paz Day 1 budget snapshot">
+          <div class="prac-header"><div class="prac-city">La Paz — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$30/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$25</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$8/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$45–50</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Keep the first afternoon manageable.</strong> A central walk, cable-car movement and one viewpoint are enough after the overnight bus.</div>
+          <div class="tip-row"><strong>Use the cable cars as transport.</strong> The view is part of the connection between districts, not a separate obligation.</div>
+          <div class="tip-row"><strong>Keep altitude advice measured.</strong> Move easily and respond to individual symptoms rather than treating one traveller’s arrival as a rule.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — La Paz city experiences" tours={[
+        { category: "City & Cable Cars", title: "La Paz Half-Day Sightseeing Tour", description: "A compact introduction to Plaza Murillo, the Witches’ Market, Mi Teleférico and Valle de la Luna with a bilingual guide.", href: "https://www.viator.com/tours/La-Paz/LA-PAZ-CITY-DEATH-ROAD-NIRVANA-FROM-BOLIVIA/d5027-108748P32?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Walking & Cable Cars", title: "La Paz Walking and Cable Car City Tour", description: "A central walking route linking Mercado Rodríguez, Plaza Murillo, San Francisco, the Witches’ Market and Mi Teleférico.", href: "https://www.viator.com/tours/La-Paz/City-Tour-Essential/d5027-391609P1?pid=P00295455&mcid=42383&medium=link" },
+        { category: "History & Culture", title: "La Paz Political Tour: History, Politics & Culture", description: "A shorter guided introduction using Plaza Murillo, Mi Teleférico and museum context to place the civic centre in the wider city.", href: "https://www.viator.com/tours/La-Paz/Guided-Cable-Car-Experience/d5027-196546P2?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="la-paz-day-support-slot" data-before="Day Three">
+      <Practical place="La Paz — Day 2" detail="Museums · Mercado Rodríguez · stadium exterior" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>La Rufina Restaurant</strong> — lunch before the stadium precinct.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Central cluster to stadium precinct</strong> — keep the museum sequence walkable, then use Mi Teleférico to reconnect the centre with the Hernando Siles area.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Coca Museum and San Francisco</strong> — the opening pair around the central museum and church sequence.</div>
+          <div class="prac-item"><strong>MUSEF and National Art Museum</strong> — the main collections in the middle of the day.</div>
+          <div class="prac-item"><strong>Pre-Columbian Precious Metals Museum</strong> — a shorter material-culture stop.</div>
+          <div class="prac-item"><strong>Mercado Rodríguez and Mi Teleférico</strong> — return the day to commerce and the wider geography.</div>
+          <div class="prac-item"><strong>Hernando Siles Stadium</strong> — exterior visit only; no match attendance is claimed.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="La Paz Day 2 budget snapshot">
+          <div class="prac-header"><div class="prac-city">La Paz — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$30/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$25</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$8/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$45–50</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Choose two or three museums.</strong> The sequence is stronger when the major collections have room to register.</div>
+          <div class="tip-row"><strong>Use cable cars to reconnect the day geographically.</strong> They make the move from the centre to the stadium precinct part of the itinerary.</div>
+          <div class="tip-row"><strong>Keep the stadium visit exterior.</strong> The itinerary included the stadium precinct rather than a match.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — La Paz markets and culture" tours={[
+        { category: "Markets & Cable Cars", title: "La Paz Walking and Cable Car City Tour", description: "A guided route through Mercado Rodríguez, San Pedro, Mi Teleférico, Plaza Murillo, San Francisco and the Witches’ Market.", href: "https://www.viator.com/tours/La-Paz/City-Tour-Essential/d5027-391609P1?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Walking & Food", title: "Half-Day Walking Tour through La Paz with Typical Food", description: "A central walking and cable-car experience beginning near the Red Line station and ending at Plaza Murillo, with snacks and local context.", href: "https://www.viator.com/tours/La-Paz/Half-Day-Walking-Tour-through-the-streets-of-La-Paz-with-Typical-Food/d5027-413365P1?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Cable-Car History", title: "La Paz Political Tour: History, Politics & Culture", description: "A focused cable-car and civic-history experience linking Plaza Murillo with museum context and the city’s political centre.", href: "https://www.viator.com/tours/La-Paz/Guided-Cable-Car-Experience/d5027-196546P2?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="la-paz-day-support-slot" data-before="Is Three Days Enough for La Paz?">
+      <Practical place="La Paz — Day 3" detail="Valle de la Luna · open afternoon" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>Oliva Restaurant – Cocina Abierta</strong> — evening stop after the Valle de la Luna day.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Valle de la Luna</strong> — allow a vehicle transfer to the formations and a return to La Paz; check the current local option close to travel.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Trip / Excursion">
+          <div class="prac-item"><strong>Valle de la Luna</strong> — allow roughly two hours for the visit.</div>
+          <div class="prac-item"><strong>Open afternoon</strong> — return to the city without forcing another major attraction into the day.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="La Paz Day 3 budget snapshot">
+          <div class="prac-header"><div class="prac-city">La Paz — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$30/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$25</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$8/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$45–50</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Make Valle de la Luna the morning’s centre.</strong> The formations work better as the day’s focus than as a rushed stop between museums.</div>
+          <div class="tip-row"><strong>Leave the afternoon open.</strong> Two hours at the site does not require a second full excursion.</div>
+          <div class="tip-row"><strong>Check access and transport.</strong> Current ticketing and transfer arrangements can change.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Valle de la Luna experiences" tours={[
+        { category: "City & Moon Valley", title: "Private La Paz City Tour: Cable Cars, Witches’ Market and Moon Valley", description: "A private city and landscape route combining Valle de la Luna, Killi Killi, Plaza Murillo, the Witches’ Market and Mi Teleférico.", href: "https://www.viator.com/tours/La-Paz/CITY-TOUR-IN-LA-PAZ-FULLDAY/d5027-191741P1?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Walking & Cable Cars", title: "La Paz Walking Tour, Cable Car and Moon Valley Private Tour", description: "A private route through Plaza Murillo and the Witches’ Market that includes cable-car movement and Valle de la Luna.", href: "https://www.viator.com/tours/La-Paz/City-Tour-La-Paz/d5027-149664P2?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Alternative Day Trip", title: "Chacaltaya and Valley of the Moon", description: "A longer alternative combining Valle de la Luna with Chacaltaya; treat it as a separate day-trip option rather than part of this three-day sequence.", href: "https://www.viator.com/tours/La-Paz/Chacaltaya-and-Valley-of-the-Moon/d5027-171598P2?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+  </div>
+
+  <AtAGlance id="full-itinerary" title="The Full Itinerary at a Glance" meta={[
+    { label: "Trip", value: "Three nights in La Paz after the overnight bus from Cusco, with civic centre, markets, museums, cable cars and Valle de la Luna." },
+    { label: "Duration", value: "3 days / 3 nights" },
+    { label: "Country", value: "Bolivia" },
+    { label: "Travelled", value: "September 2026" },
+  ]} days={[
+    { num: "Day 1", text: "Plaza Murillo, Witches’ Market, Mi Teleférico and Mirador Killi Killi." },
+    { num: "Day 2", text: "Museums, Mercado Rodríguez, Mi Teleférico and Hernando Siles exterior." },
+    { num: "Day 3", text: "Valle de la Luna and open afternoon." },
+  ]}>
+    <div class="itin-section-head">Budget Snapshot — Planning Estimate</div>
+    <p class="itin-meta">Budget figures are indicative planning averages based on current La Paz traveller costs and vary with accommodation, food and sightseeing choices.</p>
+    <div class="grand-total-block">
+      <div class="grand-total-grid">
+        <div class="grand-line"><strong>Accommodation</strong>~A$30/night</div>
+        <div class="grand-line"><strong>Food daily</strong>~A$25</div>
+        <div class="grand-line"><strong>Transport</strong>~A$8/day</div>
+        <div class="grand-line"><strong>Daily total</strong>~A$45–50</div>
+      </div>
+      <div class="grand-total-num">Estimated La Paz budget: ~A$135–150</div>
+    </div>
+    <div class="itin-section-head">Quick Reference — Best Eats</div>
+    <div class="eats-row"><span class="eats-city">La Paz</span><span><strong>YATI Restaurant café bar</strong> — first evening after the city’s opening circuit.</span></div>
+    <div class="eats-row"><span class="eats-city">La Paz</span><span><strong>La Rufina Restaurant</strong> — second day before the stadium precinct.</span></div>
+    <div class="eats-row"><span class="eats-city">La Paz</span><span><strong>Oliva Restaurant – Cocina Abierta</strong> — evening after Valle de la Luna.</span></div>
+    <div class="itin-section-head">Getting Around</div>
+    <div class="transport-note"><strong>Central La Paz:</strong> Keep the civic centre, markets and museum cluster primarily walkable.</div>
+    <div class="transport-note"><strong>Cross-city movement:</strong> Use Mi Teleférico where it connects the walking sections.</div>
+    <div class="transport-note"><strong>Valle de la Luna:</strong> Allow a vehicle transfer or current local option and check arrangements close to travel.</div>
+    <div class="transport-note"><strong>Arrival and onward:</strong> Transzela arrived from Cusco; the next stage was the flight from La Paz to Santiago.</div>
+  </AtAGlance>
+
+  <section class="faq-block" aria-labelledby="la-paz-faq-title">
+    <div class="faq-inner">
+      <div class="faq-title" id="la-paz-faq-title">Frequently Asked Questions</div>
+      {faqItems.map((item) => (
+        <div class="faq-item"><div class="faq-q">{item.question}</div><div class="faq-a">{item.answer}</div></div>
+      ))}
+    </div>
+  </section>
+
+  <div class="next-chronicles">
+    <div class="section-label">Next Chronicles</div>
+    <div class="posts-grid">
+      <a class="post-card chronicle-card" href="/best-things-to-do-in-la-paz/"><div class="post-region">Bolivia · La Paz</div><div class="post-title">Best Things to Do in La Paz</div><div class="post-excerpt">The city’s strongest experiences, from civic streets and markets to cable cars and the landscape beyond the bowl.</div><div class="post-meta">READ CHRONICLE</div></a>
+      <a class="post-card chronicle-card" href="/mi-teleferico-la-paz/"><div class="post-region">Bolivia · La Paz</div><div class="post-title">Mi Teleférico in La Paz</div><div class="post-excerpt">How the cable-car network changes the way La Paz is crossed, seen and understood.</div><div class="post-meta">READ CHRONICLE</div></a>
+      <a class="post-card chronicle-card" href="/valle-de-la-luna-la-paz/"><div class="post-region">Bolivia · La Paz</div><div class="post-title">Valle de la Luna</div><div class="post-excerpt">A focused visit to the eroded formations beyond La Paz’s dense urban bowl.</div><div class="post-meta">READ CHRONICLE</div></a>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const slots = [...document.querySelectorAll('.la-paz-day-support-slot')];
+      const article = document.querySelector('.la-paz-post-body');
+      if (!article) return;
+      for (const slot of slots) {
+        const target = [...article.querySelectorAll('h2')].find((heading) => heading.textContent?.trim().startsWith(slot.dataset.before || ''));
+        if (target) target.insertAdjacentElement('beforebegin', slot);
+      }
+    })();
+  </script>
+</BaseLayout>

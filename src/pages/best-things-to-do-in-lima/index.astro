@@ -1,0 +1,377 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import ArticleFAQ from '../../components/chronicle/ArticleFAQ.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import { SIZES_MODERN_WIDE } from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Things to Do in Lima: A First-Hand Guide',
+  headline: 'Best Things to Do in Lima',
+  description:
+    'A first-hand guide to Lima’s Historic Centre, Barranco, the Pacific coast, huacas, Museo Larco and the museums that explain the city’s many layers.',
+  path: '/best-things-to-do-in-lima/',
+  ogImage: '/images/3-days-in-lima-itinerary/lima-plaza-mayor-1200w.jpg',
+  photography: true,
+};
+
+const IMG = '/images/3-days-in-lima-itinerary';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Peru', 'Lima', 'South America']}
+    label="Guide · Eight Experiences"
+    title="Best Things to Do in Lima"
+    standfirst="Lima contains several cities at once: a colonial capital, a Pacific city above the cliffs, neighbourhoods made for walking, and an older archaeological landscape beneath the modern one."
+    stats={[
+      { num: '8', label: 'Experiences' },
+      { num: '3', label: 'Route days' },
+      { num: '5', label: 'Lima districts' },
+      { num: '1', label: 'City' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Lima is not one attraction or one district. The Historic Centre gathers
+          churches, civic buildings and plazas into the city’s colonial and
+          political heart. Barranco turns the streets towards art, low-rise houses
+          and public space. Miraflores reaches the Pacific along cliffs and coastal
+          parks. Archaeological sites rise inside modern districts, while museums
+          hold cultures that existed long before the Spanish capital.
+        </p>
+        <p>
+          The best things to do in Lima are therefore connected by contrast rather
+          than by one efficient sightseeing loop. A church can lead to a square, a
+          neighbourhood can open onto the ocean, and a modern apartment district can
+          contain the remains of a much older city. The pleasure is in watching those
+          versions occupy the same map.
+        </p>
+        <p>
+          For the full chronology, use the <a href="/3-days-in-lima-itinerary/">three-day Lima itinerary</a>. This guide stays with the experiences that explain Lima most clearly on a first visit.
+        </p>
+      </div>
+    </div>
+
+    <AtAGlance
+      id="lima-glance"
+      title="Lima at a Glance"
+      meta={[
+        { label: 'Best first stop', value: 'The Historic Centre for Plaza Mayor, civic architecture and the colonial structure of the capital.' },
+        { label: 'Best neighbourhood', value: 'Barranco for walking, art, low-rise streets and a slower urban rhythm.' },
+        { label: 'Best coastal experience', value: 'Miraflores and the Malecón, where Lima meets the Pacific along the cliffs.' },
+        { label: 'Best historical depth', value: 'Huaca Pucllana, Huaca Huallamarca and Museo Larco for the pre-Hispanic city beneath modern Lima.' },
+      ]}
+      daysHeading="Five Ways into Lima"
+      days={[
+        { num: 'Historic Lima', detail: 'Plaza Mayor · Churches · Civic power', text: 'The colonial and political centre of the city, where religious institutions, public squares and government buildings explain Lima’s formal history.' },
+        { num: 'Barranco', detail: 'Streets · Art · Museums · Neighbourhood life', text: 'A district best experienced on foot, where houses, galleries, public space and the descent towards the coast accumulate gradually.' },
+        { num: 'Pacific Lima', detail: 'Miraflores · Malecón · Cliffs', text: 'The coastal edge changes the scale of the city. Parks and paths run above the Pacific while modern Lima continues immediately behind them.' },
+        { num: 'Archaeological Lima', detail: 'Pucllana · Huallamarca · Older city', text: 'Pre-Hispanic sites survive inside modern districts, making Lima’s older layers impossible to separate neatly from the present city.' },
+        { num: 'Museum Lima', detail: 'Museo Larco · MALI · Collections', text: 'Museums give chronology to the ruins, architecture and objects encountered outside, connecting ancient Peru with colonial and modern Lima.' },
+      ]}
+    />
+
+    <Chapter id="historic-centre" number="I." name="Explore Lima’s Historic Centre" epithet="Colonial streets, civic power and the religious heart of the capital" />
+    <div class="narrative prose">
+      <p>
+        The Historic Centre is the natural beginning because Lima’s public history is
+        concentrated here. Plaza Mayor gathers the Cathedral, the Government Palace,
+        the Archbishop’s Palace and the surrounding civic buildings into one formal
+        space. The square is not merely a backdrop for façades. It explains how Lima
+        was established as the political and religious centre of Spanish South
+        America.
+      </p>
+      <p>
+        The surrounding walk adds different forms of authority. The Basilica and
+        Convent of San Francisco brings the city’s religious history into the route;
+        Santo Domingo extends that history through another major complex; Las
+        Nazarenas keeps devotion present in a more intimate urban setting. Municipal
+        buildings and government walls return the walk to the modern capital.
+      </p>
+      <p>
+        The point is not to count churches. It is to see how the colonial city was
+        organised around public squares, religious institutions and administrative
+        power. The dedicated <a href="/lima-historic-centre-san-francisco-catacombs/">Historic Centre and San Francisco guide</a> follows that central walk in more detail.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/lima-plaza-mayor.jpg`}
+      srcset={`${IMG}/lima-plaza-mayor-480w.jpg 480w, ${IMG}/lima-plaza-mayor-768w.jpg 768w, ${IMG}/lima-plaza-mayor-1200w.jpg 1200w, ${IMG}/lima-plaza-mayor-1600w.jpg 1600w, ${IMG}/lima-plaza-mayor.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Plaza Mayor at the civic heart of historic Lima."
+      width={2048}
+      height={1365}
+      caption="Plaza Mayor places Lima’s civic and religious history in one formal centre."
+      priority
+    />
+
+    <Chapter id="barranco" number="II." name="Spend Time in Barranco" epithet="A neighbourhood where streets, art, houses and museums accumulate" />
+    <div class="narrative prose">
+      <p>
+        Barranco rewards walking because its character is spread across a cluster of
+        small transitions. The Bridge of Sighs leads towards the Bajada de Baños;
+        the route passes public gardens, painted walls and low-rise architecture
+        before reaching museums such as MATE and Museo Pedro de Osma. Nothing needs
+        to announce itself as the single reason to come. Barranco works through the
+        accumulation of the walk.
+      </p>
+      <p>
+        The neighbourhood also changes the pace of Lima. The Historic Centre is
+        shaped by civic and religious institutions. Barranco is read through the
+        relationship between houses, streets, galleries and the descent towards the
+        coast. Its museums are stronger when they remain part of that neighbourhood
+        rather than replacing it.
+      </p>
+      <p>
+        Give Barranco time to be a district, not a short stop at the Bridge of Sighs.
+        The <a href="/barranco-to-miraflores-lima/">Barranco to Miraflores guide</a> continues the coastal movement without pretending the two neighbourhoods are identical.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/lima-barranco-street-art.jpg`}
+      srcset={`${IMG}/lima-barranco-street-art-480w.jpg 480w, ${IMG}/lima-barranco-street-art-768w.jpg 768w, ${IMG}/lima-barranco-street-art-1200w.jpg 1200w, ${IMG}/lima-barranco-street-art-1600w.jpg 1600w, ${IMG}/lima-barranco-street-art.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Street art and a passage in Barranco, Lima."
+      width={2048}
+      height={1365}
+      caption="Barranco combines street art, low-rise architecture and public space."
+    />
+
+    <Chapter id="miraflores" number="III." name="Walk the Miraflores Coast" epithet="Cliffs, parks and the Pacific edge of the city" />
+    <div class="narrative prose">
+      <p>
+        Miraflores changes Lima from a dense urban experience into a city visibly
+        suspended above the Pacific. The Malecón runs along the cliffs through parks
+        and open viewpoints, while Love Park gives the coastal walk a recognisable
+        centre. The scale changes quickly: apartments, traffic and commercial streets
+        remain close behind, but the land ends dramatically ahead.
+      </p>
+      <p>
+        This is not primarily a beach recommendation. The coast matters because it
+        shows how Lima meets the ocean. From the cliffs, the Pacific is not a distant
+        strip beyond the city but one of its defining edges. Barranco approaches the
+        coast through neighbourhood streets and a descent; Miraflores holds the city
+        above it in a longer line of parks and paths.
+      </p>
+      <p>
+        Leave room to walk rather than treating the Malecón as a viewpoint to tick
+        off between transfers. The coast is one of the experiences that gives Lima
+        its geography.
+      </p>
+    </div>
+
+    <Chapter id="pucllana" number="IV." name="Visit Huaca Pucllana" epithet="Pre-Hispanic Lima rising inside modern Miraflores" />
+    <div class="narrative prose">
+      <p>
+        Huaca Pucllana is one of Lima’s strongest juxtapositions. A large adobe
+        ceremonial centre of the Lima culture, built roughly between 450 and 650 CE,
+        rises inside modern Miraflores. Apartment buildings, traffic and restaurants
+        surround a structure made from thousands of hand-formed bricks and organised
+        around platforms, plazas and enclosures.
+      </p>
+      <p>
+        The site is important because it refuses the idea that archaeology belongs
+        outside the contemporary city. Pucllana is not a remote ruin that needs a
+        separate historical frame. It is part of the district’s present geography.
+        The Lima culture built here centuries before the Spanish foundation of Lima;
+        later occupation, research and conservation have kept that earlier city in
+        view.
+      </p>
+      <p>
+        The <a href="/huaca-pucllana-lima/">Huaca Pucllana guide</a> stays with the site itself. On a first visit, place it after the Miraflores coast if the day can hold both the modern Pacific edge and the older ground beneath the district.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/lima-huaca-pucllana.jpg`}
+      srcset={`${IMG}/lima-huaca-pucllana-480w.jpg 480w, ${IMG}/lima-huaca-pucllana-768w.jpg 768w, ${IMG}/lima-huaca-pucllana-1200w.jpg 1200w, ${IMG}/lima-huaca-pucllana-1600w.jpg 1600w, ${IMG}/lima-huaca-pucllana.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Huaca Pucllana archaeological complex inside modern Miraflores."
+      width={2048}
+      height={1365}
+      caption="Huaca Pucllana survives inside modern Miraflores."
+    />
+
+    <Chapter id="huallamarca" number="V." name="See Huaca Huallamarca" epithet="Another archaeological layer beneath San Isidro’s modern district" />
+    <div class="narrative prose">
+      <p>
+        Huaca Huallamarca makes the archaeological story wider. In San Isidro, the
+        site stands among one of Lima’s modern districts, where offices, apartment
+        buildings and broad roads make the older structure easy to overlook. The
+        archaeological mound is associated with successive occupations and later
+        funerary use by cultures including Lima, Ichma and Chancay.
+      </p>
+      <p>
+        Seeing Huallamarca after Pucllana changes the meaning of the first site.
+        Pucllana is not an isolated survival inside Miraflores. Pre-Hispanic Lima
+        sits beneath several modern districts, and each huaca gives a different edge
+        to the same historical fact. The city has been rebuilt over older cities
+        without fully erasing them.
+      </p>
+    </div>
+
+    <Chapter id="larco" number="VI." name="Visit Museo Larco" epithet="Archaeological fragments arranged into a history of ancient Peru" />
+    <div class="narrative prose">
+      <p>
+        Museo Larco is where the archaeological day becomes chronological. Founded
+        by Rafael Larco Hoyle in 1926, the museum brings together a large collection
+        of pre-Columbian objects, including ceramics, textiles, metals and works from
+        cultures across ancient Peru. Its strength is not one famous gallery. It is
+        the way objects are arranged so that fragments begin to form a sequence.
+      </p>
+      <p>
+        Larco’s ceramics are especially useful after seeing the huacas. At Pucllana
+        and Huallamarca, the past appears as architecture in the middle of the city.
+        In the museum, vessels and other objects show the societies that made and
+        used those spaces. The collection reaches beyond the Inca, giving the older
+        history of Peru more depth than a short visit to the best-known imperial
+        sites can provide.
+      </p>
+      <p>
+        The museum’s gold and silver collections, textiles and erotic ceramics add
+        different registers without turning the visit into a catalogue. Museo Larco
+        earns its place because it gives chronology to the archaeological ground
+        already encountered outside.
+      </p>
+    </div>
+
+    <Chapter id="museums" number="VII." name="Spend Time in Lima’s Museums" epithet="MALI and the central collections that widen the city’s chronology" />
+    <div class="narrative prose">
+      <p>
+        Museum time matters in Lima because the city’s outdoor layers are too large
+        to explain on their own. MALI, in the Palacio de la Exposición, provides the
+        broadest frame: its collections move through pre-Columbian, colonial,
+        republican and modern art. After the Historic Centre and the huacas, that
+        range gives the city’s changes a longer chronology.
+      </p>
+      <p>
+        The Museo de Minerales Andrés del Castillo offers a different material
+        emphasis, while the parks and civic spaces around central Lima keep the day
+        connected to the streets. Choose the collection that most interests you
+        rather than trying to make every museum carry equal weight. Indoor time is
+        useful here not as shelter from the city, but as a way of understanding what
+        the buildings and archaeological sites outside have already begun to show.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/lima-museum-interior.jpg`}
+      srcset={`${IMG}/lima-museum-interior-480w.jpg 480w, ${IMG}/lima-museum-interior-768w.jpg 768w, ${IMG}/lima-museum-interior-1200w.jpg 1200w, ${IMG}/lima-museum-interior-1600w.jpg 1600w, ${IMG}/lima-museum-interior.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Museum interior from Lima’s central cultural district."
+      width={2048}
+      height={1365}
+      caption="Museum time gives Lima’s streets and archaeological sites a longer chronology."
+    />
+
+    <Chapter id="between" number="VIII." name="Walk the City Between the Landmarks" epithet="The transitions where Lima’s different versions meet" />
+    <div class="narrative prose">
+      <p>
+        Lima’s transitions deserve their own place in the itinerary. Colonial streets
+        open onto Plaza Mayor. Barranco’s low-rise streets descend towards the coast.
+        Miraflores changes from apartments and commerce to cliffs and parks. Huaca
+        Pucllana sits beside modern roads and buildings; museums return the visitor
+        to the city after the archaeological sites.
+      </p>
+      <p>
+        None of this needs to become a single continuous walking route. The city is
+        too spread out for that claim to be useful. What matters is the movement
+        between registers: the ordinary streets, short transfers, public parks and
+        neighbourhood edges that keep the headline attractions from becoming
+        isolated scenes.
+      </p>
+      <p>
+        Allow time for those spaces. Lima is not only the Plaza Mayor, the Bridge of
+        Sighs, the Malecón or the huacas. The city between them is where the layers
+        stop behaving like separate attractions and begin to belong to one place.
+      </p>
+    </div>
+    <Figure
+      src={`${IMG}/lima-street-vendor.jpg`}
+      srcset={`${IMG}/lima-street-vendor-480w.jpg 480w, ${IMG}/lima-street-vendor-768w.jpg 768w, ${IMG}/lima-street-vendor-1200w.jpg 1200w, ${IMG}/lima-street-vendor-1600w.jpg 1600w, ${IMG}/lima-street-vendor.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Street vendor and everyday movement in Lima."
+      width={2048}
+      height={1365}
+      caption="The city between the landmarks is part of Lima’s story."
+    />
+
+    <Practical place="Lima — Things to Do" detail="Eight experiences · three days" detailIcon="🧭">
+      <PracticalSection label="Shortest route to a great first visit" level={3}>
+        <div class="prac-item"><strong>One day</strong> — Start with the Historic Centre, then choose either Barranco plus the coast or Barranco plus one archaeological stop.</div>
+        <div class="prac-item"><strong>Two days</strong> — Give the Historic Centre its own day, then combine Barranco, Miraflores and Huaca Pucllana on the second.</div>
+        <div class="prac-item"><strong>Three days</strong> — Follow the <a href="/3-days-in-lima-itinerary/">full Lima itinerary</a> so the central museums, coastal neighbourhoods and archaeological sites are not compressed into one oversized route.</div>
+        <div class="prac-item"><strong>If you only choose three things</strong> — Historic Centre, Barranco and Huaca Pucllana or the Miraflores coast depending on whether history or geography matters more.</div>
+      </PracticalSection>
+      <PracticalSection label="What each part of Lima does best" level={3}>
+        <div class="prac-item"><strong>Colonial and civic history:</strong> Historic Centre.</div>
+        <div class="prac-item"><strong>Neighbourhood character:</strong> Barranco.</div>
+        <div class="prac-item"><strong>Pacific geography:</strong> Miraflores coast.</div>
+        <div class="prac-item"><strong>Pre-Hispanic archaeology:</strong> Huaca Pucllana and Huaca Huallamarca.</div>
+        <div class="prac-item"><strong>Historical context:</strong> Museo Larco and MALI.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not treat Lima as one walkable centre.</strong> The city is spread across several districts, so transfers are part of the itinerary.</div>
+        <div class="tip-row"><strong>Give Barranco time to be a neighbourhood.</strong> Do not reduce it to a Bridge of Sighs photo stop.</div>
+        <div class="tip-row"><strong>Do not overload the museum day.</strong> Choose collections that genuinely add context rather than trying to clear every museum.</div>
+        <div class="tip-row"><strong>Keep archaeology inside the modern city story.</strong> The huacas are strongest when understood as older Lima surviving inside Miraflores and San Isidro.</div>
+      </PracticalSection>
+    </Practical>
+
+    <div class="narrative prose">
+      <SectionHeading id="priorities" rule={false}>What to prioritise with one, two or three days</SectionHeading>
+      <p>
+        <strong>With one day:</strong> choose the Historic Centre plus either
+        Barranco and the coast or Barranco and the archaeology, depending on pace.
+        Historic Lima, neighbourhood Lima and the Pacific edge make a rich but
+        ambitious day; there is no need to force every museum and huaca into it.
+      </p>
+      <p>
+        <strong>With two days:</strong> give the first day to the Historic Centre.
+        Use the second for Barranco, Miraflores and Huaca Pucllana, with Museo Larco
+        as the stronger addition when archaeology matters more than another coastal
+        stop. Huaca Huallamarca can extend that archaeological thread.
+      </p>
+      <p>
+        <strong>With three days:</strong> follow the <a href="/3-days-in-lima-itinerary/">complete Lima itinerary</a>, which separates the central museum day from the Barranco, Miraflores and archaeological route instead of treating the city as one compressed list.
+      </p>
+    </div>
+
+    <div class="narrative prose">
+      <SectionHeading id="closing" rule={false}>The city beneath the city</SectionHeading>
+      <p>
+        Lima does not resolve itself into one image. The colonial centre, Barranco’s
+        streets, the Pacific cliffs and the huacas belong to different centuries, but
+        they occupy the same city. Museo Larco and MALI give those layers chronology;
+        ordinary streets and public parks keep them connected to the present.
+      </p>
+      <p>
+        The pleasure of Lima is discovering how often one version survives beside
+        another. A modern district can carry an older city beneath it. A road can
+        open from civic stone to ocean. A museum can turn a ruin into a history that
+        continues beyond the walls. The <a href="/3-days-in-lima-itinerary/">three-day route</a> is the natural next step when those layers need to become a journey.
+      </p>
+    </div>
+
+    <p class="beat">But the road is ever onward.</p>
+
+    <FurtherReading
+      label="Continue through Lima"
+      cards={[
+        { href: '/3-days-in-lima-itinerary/', region: 'Peru · Lima', title: '3 Days in Lima: Complete Itinerary', excerpt: 'The full route through the Historic Centre, Barranco, Miraflores, archaeology and museums.', cta: 'READ CHRONICLE' },
+        { href: '/barranco-to-miraflores-lima/', region: 'Peru · Lima', title: 'Barranco to Miraflores', excerpt: 'A focused coastal movement through Barranco, the Malecón and Miraflores.', cta: 'READ CHRONICLE' },
+        { href: '/huaca-pucllana-lima/', region: 'Peru · Lima', title: 'Huaca Pucllana', excerpt: 'A closer look at the pre-Hispanic ceremonial centre surviving inside modern Miraflores.', cta: 'READ CHRONICLE' },
+      ]}
+    />
+  </div>
+  <ArticleFAQ page="best-things-to-do-in-lima" />
+</ChronicleLayout>

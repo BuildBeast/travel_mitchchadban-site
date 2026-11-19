@@ -1,0 +1,469 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import ArticleFAQ from '../../components/chronicle/ArticleFAQ.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import { SIZES_MODERN_WIDE } from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Things to Do in Buenos Aires: A First-Hand Guide',
+  headline: 'Best Things to Do in Buenos Aires',
+  description:
+    'A first-hand guide to the best things to do in Buenos Aires, from Plaza de Mayo and Teatro Colón to Recoleta, San Telmo, La Boca, Puerto Madero and Palermo.',
+  path: '/best-things-to-do-in-buenos-aires/',
+  ogImage: '/images/5-days-in-buenos-aires-itinerary/buenos-aires-city-centre-1200w.jpg',
+  photography: true,
+};
+
+const IMG = '/images/5-days-in-buenos-aires-itinerary';
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Argentina', 'Buenos Aires', 'South America']}
+    label="Guide · Ten Experiences"
+    title="Best Things to Do in Buenos Aires"
+    standfirst="Buenos Aires works through contrast: civic grandeur, theatre and books, Recoleta’s cultural institutions, San Telmo’s market streets, Puerto Madero’s docks, La Boca’s football-and-port identity and Palermo’s parks."
+    stats={[
+      { num: '10', label: 'Experiences' },
+      { num: '5', label: 'Nights' },
+      { num: '6', label: 'City areas' },
+      { num: '1', label: 'First visit' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          Buenos Aires did not reveal itself through one landmark. It arrived in sections:
+          the civic scale of Plaza de Mayo, the Obelisk and Teatro Colón; the quieter
+          concentration of books, museums and Recoleta; then markets, waterfront buildings,
+          football streets and the green edge of Palermo.
+        </p>
+        <p>
+          The city is easier to understand by moving between these worlds than by chasing
+          one signature monument. Plaza de Mayo explains the political centre. Avenida 9 de
+          Julio shows what modern Buenos Aires did to its own scale. Recoleta turns towards
+          museums, monuments and the city’s grander cultural institutions, while San Telmo
+          keeps older streets, market life and tango history close to the surface. Puerto
+          Madero rewrites the waterfront. La Boca joins port history to football. Palermo
+          finally gives the city room to loosen into parks and longer walks.
+        </p>
+        <p>
+          This is a discovery guide rather than a day-by-day itinerary. The recommendations
+          come from the places that shaped a first visit during the September–October 2026
+          stay, expanded with the historical and cultural context that makes each stop worth
+          choosing. The traveller does not need to complete every district to understand the
+          argument. The useful question is which change of character deserves the next part
+          of the day.
+        </p>
+      </div>
+    </div>
+
+    <Figure
+      src={`${IMG}/buenos-aires-city-centre.jpg`}
+      srcset={`${IMG}/buenos-aires-city-centre-480w.jpg 480w, ${IMG}/buenos-aires-city-centre-768w.jpg 768w, ${IMG}/buenos-aires-city-centre-1200w.jpg 1200w, ${IMG}/buenos-aires-city-centre-1600w.jpg 1600w, ${IMG}/buenos-aires-city-centre.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Casa Rosada and the Pirámide de Mayo in Plaza de Mayo, Buenos Aires."
+      width={2048}
+      height={1365}
+      caption="Plaza de Mayo gathers the political history of Buenos Aires into one urban room."
+      priority
+    />
+
+    <AtAGlance
+      id="buenos-aires-glance"
+      title="Buenos Aires at a Glance"
+      meta={[
+        { label: 'Best first stop', value: 'Plaza de Mayo and the historic centre for the city’s political and civic core.' },
+        { label: 'Best cultural route', value: 'Teatro Colón, El Ateneo and Recoleta for architecture, books, museums and grand institutions.' },
+        { label: 'Best neighbourhood contrast', value: 'San Telmo, Puerto Madero and La Boca for market streets, waterfront redevelopment and football identity.' },
+        { label: 'Best place to slow down', value: 'Palermo, where parks and wider streets give the city room to breathe.' },
+      ]}
+      daysHeading="Five Ways into Buenos Aires"
+      days={[
+        { num: 'Civic Buenos Aires', detail: 'Plaza de Mayo · Congress · Historic centre', text: 'The political and historical starting point, where national institutions and the old centre sit within one urban sequence.' },
+        { num: 'Cultural Buenos Aires', detail: 'Teatro Colón · El Ateneo · Museums', text: 'The city at its most institutional: theatre, books, art and architecture folded into the central and northern districts.' },
+        { num: 'Southern Buenos Aires', detail: 'San Telmo · La Boca · Tango · Football', text: 'Older streets, market culture, port history and the neighbourhood identity that links tango and Boca Juniors to the city.' },
+        { num: 'Waterfront Buenos Aires', detail: 'Puerto Madero · Docks · Contemporary city', text: 'Converted warehouses, towers and bridges showing how Buenos Aires rebuilt part of its river edge.' },
+        { num: 'Green Buenos Aires', detail: 'Recoleta · Palermo · Parks', text: 'Museums, monuments, gardens and longer walks that loosen the dense urban rhythm.' },
+      ]}
+    />
+
+    <div class="narrative prose">
+      <SectionHeading id="choose">Choose your Buenos Aires</SectionHeading>
+      <p>
+        With one day, stay central: Plaza de Mayo, the Obelisk, Teatro Colón and El Ateneo
+        make a coherent introduction, with Recoleta added only if time remains. With three
+        days, give one day to the civic and cultural centre, one to Recoleta and Palermo,
+        and one to San Telmo, Puerto Madero and La Boca. With five nights, slow the museum
+        choices down and leave room for a separate Colonia del Sacramento day trip.
+      </p>
+      <p>
+        Buenos Aires is large enough that the order matters. A day built around nearby
+        institutions feels different from one built around neighbourhood movement. The
+        <a href="/5-days-in-buenos-aires-itinerary/">five-day Buenos Aires itinerary</a>
+        supplies the full chronology; the <a href="/buenos-aires-neighbourhoods/">Buenos Aires neighbourhoods guide</a>
+        is the better companion when the decision is where to spend a slower day.
+      </p>
+    </div>
+
+    <Chapter id="historic-centre" number="I." name="Start with Plaza de Mayo and the historic centre" epithet="Where political Buenos Aires is easiest to read" />
+    <div class="narrative prose">
+      <p>
+        Plaza de Mayo is the right first stop because it is not simply a square surrounded
+        by attractive buildings. It is the oldest public square in Buenos Aires and the
+        place where the city’s political life has repeatedly made itself visible. Its name
+        recalls the May Revolution of 1810, the beginning of the independence process, while
+        the buildings around it hold several earlier layers of the city.
+      </p>
+      <p>
+        The Casa Rosada occupies the site of the old Buenos Aires fort and remains the seat
+        of the national government. Across the square, the Metropolitan Cathedral carries
+        the religious history of the centre, and the Cabildo keeps the colonial civic world
+        within the same view. The Pirámide de Mayo, raised in 1811 and later moved to its
+        present position, gives the open space a physical memory of the revolution rather
+        than leaving that history inside a museum.
+      </p>
+      <p>
+        From here, Avenida de Mayo leads towards the Plaza del Congreso and the more
+        monumental civic architecture of the capital. The Manzana de las Luces adds a
+        different register: institutions of learning and religion gathered within the old
+        centre’s dense blocks. The <a href="/plaza-de-mayo-buenos-aires/">focused Plaza de Mayo guide</a>
+        is worth reading alongside this wider list because the square rewards attention to
+        its political continuities, not just a photograph of the pink palace.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/buenos-aires-civic-architecture.jpg`}
+      srcset={`${IMG}/buenos-aires-civic-architecture-480w.jpg 480w, ${IMG}/buenos-aires-civic-architecture-768w.jpg 768w, ${IMG}/buenos-aires-civic-architecture-1200w.jpg 1200w, ${IMG}/buenos-aires-civic-architecture-1600w.jpg 1600w, ${IMG}/buenos-aires-civic-architecture.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="The National Congress building in Buenos Aires viewed from its surrounding park."
+      width={2048}
+      height={1365}
+      caption="The central route broadens from Plaza de Mayo towards the Congress and the monumental city."
+    />
+
+    <Chapter id="obelisk" number="II." name="See the Obelisk and Avenida 9 de Julio" epithet="A modern city marker rather than a stop that needs a whole afternoon" />
+    <div class="narrative prose">
+      <p>
+        The Obelisk is not a destination so much as a punctuation mark in the middle of
+        Buenos Aires. It stands where Avenida Corrientes meets Avenida 9 de Julio, the
+        broad avenue named for the date of Argentina’s declaration of independence. The
+        monument was designed by Alberto Prebisch and inaugurated in 1936 to mark the
+        fourth centenary of the city’s first foundation.
+      </p>
+      <p>
+        Its importance is urban. The Obelisk makes the scale of the modern capital visible,
+        while the theatre, towers, traffic and side streets around it keep the monument
+        from becoming an isolated object. The original controversy around its modern form
+        has long given way to recognition: this is now one of the city’s defining markers.
+        Stop for the view, then keep moving towards Teatro Colón, Palacio Barolo, Galerías
+        Pacífico or the cultural institutions around Avenida de Mayo.
+      </p>
+    </div>
+
+    <Chapter id="teatro-colon" number="III." name="Make time for Teatro Colón" epithet="The city’s grandest cultural institution in the central route" />
+    <div class="narrative prose">
+      <p>
+        Teatro Colón gives the central day an interior scale. The current building opened
+        in 1908, and its history belongs to the period when Buenos Aires was building the
+        cultural institutions of a capital that wanted to be taken seriously on an
+        international stage. Its architecture draws the visitor inward through the foyer,
+        staircases, sculpture and decorated rooms before the auditorium makes the full
+        argument for grandeur.
+      </p>
+      <p>
+        The theatre’s importance is not only architectural. It remains a working opera,
+        ballet and concert institution, with an artistic training programme and an active
+        relationship to Argentine cultural life. A guided visit is the practical way to
+        understand the building when there is no performance that fits the stay; a ticket
+        for the programme makes it something more than a beautiful shell. Check the
+        theatre’s official visitor arrangements before going, since tours and performances
+        follow their own schedules.
+      </p>
+    </div>
+
+    <Chapter id="el-ateneo" number="IV." name="Step inside El Ateneo Grand Splendid" epithet="A bookstore that still behaves architecturally like a theatre" />
+    <div class="narrative prose">
+      <p>
+        El Ateneo Grand Splendid changes the central route without abandoning its cultural
+        theme. The building began as the Teatro Grand Splendid, and its theatre shell still
+        governs the experience: balconies frame the room, the former stage becomes a place
+        to sit with a book, and the decorative details survive beneath the language of a
+        modern bookstore.
+      </p>
+      <p>
+        That is why it deserves more than a quick photograph. Buenos Aires has a serious
+        relationship with books, newspapers, cafés and public argument, and El Ateneo gives
+        that literary culture an unusually legible building. It works naturally after
+        Teatro Colón or Palacio Barolo, when the day has already moved from government to
+        performance and can now turn towards reading.
+      </p>
+    </div>
+
+    <Chapter id="recoleta" number="V." name="Give Recoleta a cultural day" epithet="Cemetery, museums and the grander northern city" />
+    <div class="narrative prose">
+      <p>
+        Recoleta is strongest when treated as a district rather than a cemetery with a few
+        extras attached. Recoleta Cemetery is the famous centrepiece, but the surrounding
+        cultural institutions explain why the area became one of Buenos Aires’ most
+        concentrated addresses for art, memory and public life.
+      </p>
+      <p>
+        The Museo Nacional de Bellas Artes provides the broadest introduction to European
+        and Argentine art. The Museo Nacional de Arte Decorativo narrows the focus to
+        interiors, objects and the social world that produced them, while MALBA takes the
+        route towards modern and contemporary Latin American art. Floralis Genérica gives
+        the district a large piece of public sculpture and a more open park setting between
+        the museum visits.
+      </p>
+      <p>
+        The cemetery belongs in the same cultural reading. Its mausoleums turn the history
+        of Argentine public life into an urban landscape, but it does not need to be rushed
+        through as a checklist of famous names. Choose the museums that genuinely interest
+        you, then leave enough time for the district’s avenues and open spaces to make sense
+        of the institutions.
+      </p>
+    </div>
+
+    <Figure
+      src={`${IMG}/buenos-aires-floralis-generica.jpg`}
+      srcset={`${IMG}/buenos-aires-floralis-generica-480w.jpg 480w, ${IMG}/buenos-aires-floralis-generica-768w.jpg 768w, ${IMG}/buenos-aires-floralis-generica-1200w.jpg 1200w, ${IMG}/buenos-aires-floralis-generica-1600w.jpg 1600w, ${IMG}/buenos-aires-floralis-generica.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Floralis Genérica in the Recoleta area of Buenos Aires."
+      width={2048}
+      height={1365}
+      caption="Floralis Genérica gives Recoleta’s museum route a wide, open punctuation."
+    />
+
+    <Chapter id="san-telmo" number="VI." name="Walk San Telmo’s market streets" epithet="Older urban fabric, market culture and the city’s tango inheritance" />
+    <div class="narrative prose">
+      <p>
+        San Telmo works through street life and older urban fabric. It is one of Buenos
+        Aires’ oldest neighbourhoods, and its low houses, cobbled streets, courtyards and
+        antiques shops carry the history of the southern edge of the centre. The district
+        changed sharply after the 1871 yellow-fever epidemic pushed many wealthy families
+        north, leaving a different social and architectural life to develop among the old
+        buildings.
+      </p>
+      <p>
+        Mercado de San Telmo is the practical starting point. Its iron structure, food
+        stalls, cafés, antiques and everyday shopping make it more useful than a market
+        treated only as scenery. From there, Defensa leads towards Plaza Dorrego, the
+        neighbourhood’s central square and the setting for the Sunday antiques fair, while
+        Museo Moderno gives the day an art institution rather than another street view.
+      </p>
+      <p>
+        San Telmo also belongs to the history of tango, even when the visit does not include
+        a performance. The district’s bars, dance halls and older streets form part of the
+        urban culture from which tango became one of Buenos Aires’ defining exports. A
+        visitor can choose a formal show, look for a milonga or simply understand the
+        neighbourhood as one of the places where that tradition remains attached to the
+        city rather than presented as a separate theatre product.
+      </p>
+    </div>
+
+    <Chapter id="puerto-madero" number="VII." name="See Puerto Madero rewrite the waterfront" epithet="Converted docks, contemporary towers and art beside the river" />
+    <div class="narrative prose">
+      <p>
+        Puerto Madero is useful because it shows Buenos Aires changing its waterfront
+        rather than preserving it unchanged. The former docklands have become a district of
+        converted warehouses, footbridges, towers and open water, with the Puente de la
+        Mujer providing its most recognisable piece of contemporary infrastructure.
+      </p>
+      <p>
+        The change is clearest after San Telmo. A short distance separates the market’s
+        older fabric from a neighbourhood built around redevelopment, office buildings and
+        the modern river edge. The Amalia Lacroze de Fortabat Art Collection adds a private
+        art institution to the walk; the silos and waterfront buildings make the architecture
+        itself part of the visit. Puerto Madero does not need to become a dining or nightlife
+        guide. Its value is the contrast between inherited city and constructed city.
+      </p>
+    </div>
+
+    <Chapter id="la-boca" number="VIII." name="Follow La Boca from port to football" epithet="Immigrant history, Caminito, art and the home of Boca Juniors" />
+    <div class="narrative prose">
+      <p>
+        La Boca carries Buenos Aires back towards the port. Its history is tied to immigrant
+        workers, especially the Genoese communities that shaped the neighbourhood’s language,
+        labour and built form. The painted corrugated façades around Caminito are the most
+        recognisable expression of that history, but the district is larger than the
+        postcard street.
+      </p>
+      <p>
+        The route through Caminito, Pasaje Garibaldi, the Puente Transbordador and Fundación
+        Proa moves between popular art, industrial memory and the contemporary art world.
+        La Bombonera adds the city’s football culture to the same geography. Boca Juniors is
+        not merely a team with a stadium in the neighbourhood: the club’s identity is bound
+        to La Boca, its colours and its working port history. The stadium stop belongs in a
+        first visit even without a match. Match attendance should not be assumed, but the
+        place of football in the neighbourhood cannot be separated from the visit.
+      </p>
+    </div>
+
+    <Chapter id="palermo" number="IX." name="Let Buenos Aires open out in Palermo" epithet="Parks, museums and the green exhale of the city" />
+    <div class="narrative prose">
+      <p>
+        Palermo changes the city’s pace without leaving the city behind. The district has
+        room for parks, gardens, wide avenues and the long walks that the denser centre does
+        not offer. El Rosedal gives the green route its formal heart, while the Planetario
+        Galileo Galilei supplies an architectural marker that feels entirely different from
+        the civic monuments south of the centre.
+      </p>
+      <p>
+        Plaza Serrano and Palermo Soho bring a more commercial, contemporary side of the
+        district, while Paseo de la Infanta runs through the park edge with a different
+        relationship to the city. Palermo is not simply a place to add after the serious
+        attractions are finished. It is where the guide’s argument about urban scale becomes
+        visible: Buenos Aires can move from government, markets and football into gardens
+        without becoming a different city.
+      </p>
+    </div>
+
+    <Chapter id="museums" number="X." name="Choose the museums that fit the day" epithet="A cultural network rather than a checklist" />
+    <div class="narrative prose">
+      <p>
+        Buenos Aires has too many worthwhile museums for a useful guide to pretend that all
+        of them belong on one list. Choose by interest and geography instead. Museo Nacional
+        de Bellas Artes is the broadest choice for European and Argentine art, and fits
+        naturally with Recoleta. MALBA is the stronger choice for Latin American modern and
+        contemporary art. Museo Nacional de Arte Decorativo suits visitors more interested
+        in interiors, objects and social history.
+      </p>
+      <p>
+        Museo Moderno belongs with San Telmo and the southern centre. The Fortabat collection
+        works with Puerto Madero, while Palacio Libertad and Galerías Pacífico can be folded
+        into a central architectural day when their cultural programmes or interiors appeal.
+        The point is not to rank collections from a distance. It is to choose one or two
+        museums that deepen the neighbourhood already underfoot.
+      </p>
+    </div>
+
+    <SectionHeading id="tango">Tango belongs in the Buenos Aires conversation</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Tango should not disappear from a first-visit guide simply because the traveller did
+        not attend a performance on this stay. It grew from the working-class districts and
+        port culture of Buenos Aires and Montevideo, then became one of the city’s defining
+        cultural forms. San Telmo and La Boca provide the historical geography; milongas and
+        theatre shows provide two different ways to encounter it now.
+      </p>
+      <p>
+        A formal dinner-and-show suits a visitor who wants an arranged evening. A milonga is
+        a better fit for someone interested in the social life of the dance. Neither should
+        be described as a first-hand experience here. The useful advice is to choose the
+        format deliberately rather than treating every tango venue as interchangeable.
+      </p>
+    </div>
+
+    <SectionHeading id="food">Eat through the city’s Italian and Argentine inheritance</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Food is another way Buenos Aires changes register. Parrillas connect the city to
+        Argentine beef and the ritual of the shared grill. Empanadas belong to a wider
+        national tradition, while pizza, fugazzeta, cafés, medialunas and helado show the
+        depth of Italian influence in the capital’s everyday eating.
+      </p>
+      <p>
+        The best use of this guide is not to turn those categories into a restaurant ranking.
+        Put a parrilla or pizzeria into a neighbourhood day, leave room for a café, and let
+        the food follow the city rather than interrupting it. Buenos Aires is particularly
+        good at making an ordinary meal feel like part of the urban argument: old port,
+        immigrant kitchen, formal café, modern district.
+      </p>
+    </div>
+
+    <Practical place="Buenos Aires — Things to Do" detail="Ten experiences · five nights" detailIcon="🧭">
+      <PracticalSection label="Shortest route to a great first visit" level={3}>
+        <div class="prac-item"><strong>One day</strong> — Plaza de Mayo, Obelisk, Teatro Colón and El Ateneo. Add Recoleta only if the day still has room.</div>
+        <div class="prac-item"><strong>Three days</strong> — One day for the civic and cultural centre, one for Recoleta and Palermo, one for San Telmo, Puerto Madero and La Boca.</div>
+        <div class="prac-item"><strong>Five nights</strong> — Slow the museum choices down and leave room for tango, longer neighbourhood walks and a separate Colonia day trip.</div>
+        <div class="prac-item"><strong>If you only choose three things</strong> — Plaza de Mayo, one major cultural institution and one neighbourhood outside the centre.</div>
+      </PracticalSection>
+      <PracticalSection label="What each part of the city does best" level={3}>
+        <div class="prac-item"><strong>Politics and history:</strong> Plaza de Mayo and the historic centre.</div>
+        <div class="prac-item"><strong>Theatre and books:</strong> Teatro Colón and El Ateneo.</div>
+        <div class="prac-item"><strong>Museums and monuments:</strong> Recoleta.</div>
+        <div class="prac-item"><strong>Markets, port and football:</strong> San Telmo, Puerto Madero and La Boca.</div>
+        <div class="prac-item"><strong>Parks and slower city time:</strong> Palermo.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not compress the whole city into one day.</strong> Buenos Aires is large enough that bad routing can turn the visit into transfers.</div>
+        <div class="tip-row"><strong>Choose museums by district.</strong> One or two strong institutions are better than trying to collect them all.</div>
+        <div class="tip-row"><strong>Treat Colonia as a separate day-trip decision.</strong> It is not another Buenos Aires neighbourhood.</div>
+        <div class="tip-row"><strong>Do not treat tango as one product.</strong> A formal show and a milonga are different experiences.</div>
+      </PracticalSection>
+    </Practical>
+
+    <SectionHeading id="priorities">What to prioritise</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        <strong>With one day:</strong> begin at Plaza de Mayo and walk towards the Obelisk,
+        Teatro Colón and El Ateneo. If the museums matter more than the central interiors,
+        replace one stop with Recoleta. Do not try to add La Boca or Palermo unless the day
+        is unusually long; the city’s scale is part of what makes the choice meaningful.
+      </p>
+      <p>
+        <strong>With three days:</strong> give the first day to Plaza de Mayo, Avenida 9 de
+        Julio, Teatro Colón and El Ateneo. Use the second for Recoleta and Palermo, choosing
+        the museum that best fits the interest of the day. Use the third for San Telmo,
+        Puerto Madero and La Boca, allowing the older market streets to lead into the
+        converted docks and then the football-and-port identity of the south.
+      </p>
+      <p>
+        <strong>With five days:</strong> follow the <a href="/5-days-in-buenos-aires-itinerary/">complete five-day Buenos Aires itinerary</a>
+        for the fuller chronology, but keep the hub’s freedom to slow down. The extra time
+        is best spent on a second museum, a tango evening, a longer Palermo walk or a
+        separate day trip to Colonia del Sacramento rather than on adding more landmarks
+        to a single day.
+      </p>
+    </div>
+
+    <SectionHeading id="colonia">With an extra day: Colonia del Sacramento</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Colonia del Sacramento in Uruguay is one of the classic extensions from Buenos
+        Aires. It is not another Buenos Aires neighbourhood and should remain a separate
+        day-trip decision. Keep the old quarter, waterfront and practical crossing questions
+        separate from the Buenos Aires visit, and check current ferry details before travel.
+      </p>
+    </div>
+
+    <SectionHeading id="closing">Buenos Aires in changing registers</SectionHeading>
+    <div class="narrative prose">
+      <p>
+        Buenos Aires does not settle into one image. Plaza de Mayo gives way to a theatre,
+        the theatre to a bookstore, Recoleta to museums and gardens, museums to San Telmo’s
+        market streets, markets to converted docks, docks to football streets, and finally
+        the city loosens into Palermo’s parks. Its pleasure lies not in finding the one
+        monument that explains it, but in noticing how often it changes character without
+        ceasing to be Buenos Aires.
+      </p>
+      <p>
+        For the longer stay, continue to the <a href="/5-days-in-buenos-aires-itinerary/">five-day Buenos Aires itinerary</a>.
+        For a slower comparison of the districts, use the <a href="/buenos-aires-neighbourhoods/">Buenos Aires neighbourhoods guide</a>.
+      </p>
+      <p>But the road is ever onward.</p>
+    </div>
+
+    <FurtherReading
+      label="Continue through Buenos Aires"
+      cards={[
+        { href: '/5-days-in-buenos-aires-itinerary/', region: 'Argentina · Buenos Aires', title: '5 Days in Buenos Aires: Complete Itinerary', excerpt: 'The full chronology through the historic centre, Recoleta, Palermo, San Telmo, Puerto Madero, La Boca and Colonia.', cta: 'READ CHRONICLE' },
+        { href: '/buenos-aires-neighbourhoods/', region: 'Argentina · Buenos Aires', title: 'Buenos Aires Neighbourhoods', excerpt: 'A slower comparison of Palermo, Recoleta, San Telmo, Puerto Madero, La Boca and the historic centre.', cta: 'READ CHRONICLE' },
+        { href: '/plaza-de-mayo-buenos-aires/', region: 'Argentina · Buenos Aires', title: 'Plaza de Mayo & Historic Buenos Aires', excerpt: 'A focused account of the Cathedral, Casa Rosada area, Manzana de las Luces, Plaza de Mayo and Congress.', cta: 'READ CHRONICLE' },
+      ]}
+    />
+  </div>
+  <ArticleFAQ page="best-things-to-do-in-buenos-aires" />
+</ChronicleLayout>

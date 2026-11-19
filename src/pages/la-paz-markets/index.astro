@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/la-paz-markets.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
+
+const title = "La Paz Markets: Witches’ Market & Mercado Rodríguez | There & Back Again";
+const description = "A first-hand guide to La Paz’s Witches’ Market and Mercado Rodríguez, explaining how their ritual and everyday commerce reveal different sides of the city.";
+const canonical = "https://travel.mitchchadban.com/la-paz-markets/";
+const image = "/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1200w.jpg";
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "La Paz Markets: Witches’ Market and Mercado Rodríguez",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "La Paz Markets", item: canonical },
+      ],
+    },
+  ],
+};
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="la-paz-markets-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Bolivia · La Paz ·&nbsp;<span>September 2026</span></div>
+    <h1 id="la-paz-markets-title" class="post-hero-title"><em>La Paz Markets:</em><br />Witches’ Market and Mercado Rodríguez</h1>
+    <p class="post-hero-sub">Two markets, two ways of reading the city: ritual goods in the historic centre and everyday produce commerce after the museums.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Markets</span></div>
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Route days</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">City</span></div>
+    </div>
+  </section>
+
+  <article class="post-body south-america-post-body la-paz-markets-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through La Paz"
+      cards={[
+        { href: "/3-days-in-la-paz-itinerary/", region: "Bolivia · La Paz", title: "3 Days in La Paz: Complete Itinerary", excerpt: "The wider La Paz sequence through markets, museums, Mi Teleférico and the city edge.", cta: "READ CHRONICLE" },
+        { href: "/mi-teleferico-la-paz/", region: "Bolivia · La Paz", title: "Mi Teleférico: Exploring La Paz by Cable Car", excerpt: "A focused account of the cable-car system and the geography it reveals above the streets.", cta: "READ CHRONICLE" },
+        { href: "/24-days-in-south-america-itinerary/", region: "South America · Bolivia", title: "24 Days in South America", excerpt: "The wider journey from Peru through La Paz and across the continent.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="la-paz-markets-overview-slot">
+    <AtAGlance
+      id="la-paz-markets-glance"
+      title="La Paz Markets at a Glance"
+      meta={[
+        { label: "Best for cultural context", value: "The Witches’ Market, where Aymara ritual objects, medicinal goods and tourism occupy the same central streets." },
+        { label: "Best for everyday city life", value: "Mercado Rodríguez, where produce, vendors and household shopping show La Paz at work." },
+        { label: "Best first-time choice", value: "The Witches’ Market if time is limited and the priority is understanding a distinctive part of La Paz’s identity." },
+        { label: "Best overall approach", value: "Visit both on different route days so ritual commerce and everyday commerce remain distinct rather than blurring into one “market experience”." },
+      ]}
+      daysHeading="Two Markets, Four Readings"
+      days={[
+        { num: "Witches’ Market", detail: "Ritual · Aymara culture · Central streets", text: "The market most closely tied to ritual goods, offerings and the continuing presence of Aymara belief within central La Paz." },
+        { num: "Mercado Rodríguez", detail: "Produce · Vendors · Daily commerce", text: "A working food market shaped by ordinary buying, selling, deliveries and household needs rather than visitor spectacle." },
+        { num: "Cultural Context", detail: "Belief · Practice · Respect", text: "The Witches’ Market makes more sense when its objects are understood as part of living traditions rather than curiosities or props." },
+        { num: "City Context", detail: "Museums · Streets · Cable cars", text: "Both markets work best as part of larger city days: one after the civic centre, the other after the museums and before the afternoon movement through La Paz." },
+      ]}
+    />
+  </div>
+
+  <div class="la-paz-markets-decision-slot">
+    <Practical place="La Paz — Markets" detail="Ritual · produce · city life" detailIcon="🧭">
+      <PracticalSection label="Shortest route to a decision" level={3}>
+        <div class="prac-item"><strong>If you only visit one</strong> — Choose the Witches’ Market for the clearest first encounter with Aymara cultural context in central La Paz.</div>
+        <div class="prac-item"><strong>If you want everyday commerce</strong> — Choose Mercado Rodríguez for produce, vendors and the practical rhythm of the city.</div>
+        <div class="prac-item"><strong>If you have two days</strong> — Visit both, keeping the Witches’ Market with the historic centre and Mercado Rodríguez with the museum day.</div>
+        <div class="prac-item"><strong>If you want the strongest comparison</strong> — Treat them as different kinds of market rather than ranking one above the other.</div>
+      </PracticalSection>
+      <PracticalSection label="What each market does best" level={3}>
+        <div class="prac-item"><strong>Ritual context:</strong> Witches’ Market.</div>
+        <div class="prac-item"><strong>Aymara cultural continuity:</strong> Witches’ Market.</div>
+        <div class="prac-item"><strong>Produce and food commerce:</strong> Mercado Rodríguez.</div>
+        <div class="prac-item"><strong>Everyday urban life:</strong> Mercado Rodríguez.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not treat ritual objects as props.</strong> The Witches’ Market is tied to living beliefs and practices, not just visual novelty.</div>
+        <div class="tip-row"><strong>Ask before photographing people or stalls.</strong> Both markets are workplaces before they are visitor experiences.</div>
+        <div class="tip-row"><strong>Carry small cash.</strong> It is more practical for ordinary purchases and avoids opening a large wallet in crowded streets.</div>
+        <div class="tip-row"><strong>Do not force both markets into one stop.</strong> They work better on different route days because their meaning comes from the wider city around them.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.la-paz-markets-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.la-paz-markets-overview-slot');
+      const decision = document.querySelector('.la-paz-markets-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'How the Markets Fit the Itinerary');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="la-paz-markets" />
+</BaseLayout>

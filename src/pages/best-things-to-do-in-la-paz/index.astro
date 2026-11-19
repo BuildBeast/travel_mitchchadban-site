@@ -1,0 +1,388 @@
+---
+import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
+import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
+import Chapter from '../../components/chronicle/Chapter.astro';
+import Figure from '../../components/chronicle/Figure.astro';
+import SectionHeading from '../../components/chronicle/SectionHeading.astro';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import ArticleFAQ from '../../components/chronicle/ArticleFAQ.astro';
+import type { ChronicleMeta } from '../../components/chronicle/types';
+import { SIZES_MODERN_WIDE } from '../../lib/responsive-image-config.mjs';
+
+const meta: ChronicleMeta = {
+  title: 'Best Things to Do in La Paz, Bolivia: A First-Hand Guide',
+  headline: 'Best Things to Do in La Paz',
+  description:
+    'A first-hand guide to the best things to do in La Paz, from Mi Teleférico and the city markets to Plaza Murillo, museums, viewpoints and Valle de la Luna.',
+  path: '/best-things-to-do-in-la-paz/',
+  ogImage: '/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg',
+  photography: true,
+};
+
+const IMG = '/images/3-days-in-la-paz-itinerary';
+const TELEFERICO = `${IMG}/la-paz-teleferico-over-city`;
+const MARKET = `${IMG}/la-paz-central-market-street`;
+const VALLE = `${IMG}/la-paz-valle-de-la-luna-landscape`;
+const CITY = `${IMG}/la-paz-city-panorama`;
+const STADIUM = `${IMG}/la-paz-hernando-siles-stadium`;
+---
+
+<ChronicleLayout meta={meta}>
+  <ArticleHeader
+    route={['Bolivia', 'La Paz', 'South America']}
+    label="Guide · Seven Experiences"
+    title="Best Things to Do in La Paz"
+    standfirst="La Paz is best understood through changing elevation and changing register: civic squares become market streets, museums give way to cable cars, and the urban bowl opens into dry, eroded landscape."
+    stats={[
+      { num: '7', label: 'Experiences' },
+      { num: '3', label: 'Full days' },
+      { num: '2', label: 'Markets' },
+      { num: '1', label: 'City' },
+    ]}
+  />
+
+  <div class="post-body">
+    <div class="opening-prose">
+      <div class="prose">
+        <p class="drop-cap">
+          La Paz is difficult to understand from street level. The centre gathers
+          plazas, churches, museums and markets into a dense urban bowl, while brick
+          neighbourhoods climb the slopes above it. Cable cars cross over roofs and
+          roads, making the city’s vertical shape visible. Then the streets give way
+          to the eroded formations of Valle de la Luna, where the city becomes a
+          landscape rather than a collection of buildings.
+        </p>
+        <p>
+          The strongest experiences here are the ones that explain those changes.
+          Plaza Murillo gives the city a civic centre; the markets bring belief,
+          produce and daily commerce into the same central streets; the museums hold
+          older histories in rooms close enough to walk between. Mi Teleférico and
+          Mirador Killi Killi make the geography legible from above, while Hernando
+          Siles connects the city to football and public life. Taken together, they
+          make La Paz more than a list of stops.
+        </p>
+        <p>
+          Three full days give these layers room to sit beside one another. For the
+          same places arranged as a dated journey, use the <a href="/3-days-in-la-paz-itinerary/">three-day La Paz itinerary</a>.
+        </p>
+      </div>
+    </div>
+
+    <Chapter
+      id="teleferico"
+      number="I."
+      name="Ride Mi Teleférico"
+      epithet="Public transport above the city, and the clearest introduction to its vertical geography"
+    />
+    <div class="narrative prose">
+      <p>
+        Mi Teleférico is the best place to begin because it is both a practical way
+        through La Paz and a changing view of the city. From a cabin, roofs, roads,
+        steep hillsides and dense neighbourhoods share one frame. The city stops
+        looking like a flat centre with an edge and starts to read as a basin built
+        upwards.
+      </p>
+      <p>
+        That double function matters. A cable car can shorten a crossing between
+        parts of the city, but it also shows how those parts sit together. Streets
+        disappear beneath the cabin; slopes that seemed distant become the next
+        neighbourhood; the high plain and the lower bowl take their place in the
+        same view. The specialist <a href="/mi-teleferico-la-paz/">Mi Teleférico in La Paz guide</a> goes further into the network. For a first visit, the useful rule is simple: use the system as transport rather than saving it for a single scenic ride.
+      </p>
+    </div>
+    <Figure
+      src={`${TELEFERICO}.jpg`}
+      srcset={`${TELEFERICO}-480w.jpg 480w, ${TELEFERICO}-768w.jpg 768w, ${TELEFERICO}-1200w.jpg 1200w, ${TELEFERICO}-1600w.jpg 1600w, ${TELEFERICO}.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Mi Teleférico cabin crossing above the steep urban basin of La Paz."
+      width={2048}
+      height={1365}
+      caption="Mi Teleférico turns the city’s steep geography into a way of moving through it."
+      priority
+    />
+
+    <AtAGlance
+      id="la-paz-glance"
+      title="La Paz at a Glance"
+      meta={[
+        { label: 'Best first experience', value: 'Mi Teleférico, because it makes La Paz’s vertical geography understandable almost immediately.' },
+        { label: 'Best central route', value: 'Plaza Murillo, San Francisco and the markets for civic life, belief and everyday commerce.' },
+        { label: 'Best cultural depth', value: 'The museum cluster, where history, art and material culture sit within walking distance of the centre.' },
+        { label: 'Best landscape contrast', value: 'Valle de la Luna, where the dense urban bowl gives way to dry, eroded formations.' },
+      ]}
+      daysHeading="Five Ways into La Paz"
+      days={[
+        { num: 'Vertical City', detail: 'Mi Teleférico · Killi Killi · Basin', text: 'The clearest way to understand La Paz. Cable cars and viewpoints reveal how neighbourhoods climb the slopes around the central bowl.' },
+        { num: 'Civic Centre', detail: 'Plaza Murillo · San Francisco · Public life', text: 'The formal heart of the city, where government, religious architecture and central streets establish La Paz at ground level.' },
+        { num: 'Markets', detail: 'Witches’ Market · Mercado Rodríguez', text: 'Two different readings of the city: ritual and Aymara cultural context on one side, produce and everyday commerce on the other.' },
+        { num: 'Museums & History', detail: 'MUSEF · National Art · Coca Museum · Precious Metals', text: 'A compact cultural layer within the centre. Choose one or two rather than turning the day into a museum marathon.' },
+        { num: 'Landscape & Public Life', detail: 'Valle de la Luna · Hernando Siles', text: 'Two very different edges to the guide: eroded landscape outside the centre and football as part of the city’s collective life.' },
+      ]}
+    />
+
+    <Chapter
+      id="central"
+      number="II."
+      name="Walk Plaza Murillo and Central La Paz"
+      epithet="Civic buildings, old streets and the public face of the city"
+    />
+    <div class="narrative prose">
+      <p>
+        Plaza Murillo gives central La Paz its formal centre. The square is named
+        for Pedro Domingo Murillo, one of the leaders associated with the 1809
+        uprising in Upper Peru, and its surrounding buildings keep that political
+        history close to the present. The Metropolitan Cathedral, government
+        buildings and the traffic of the surrounding streets make the square a place
+        to read the city’s public life, not simply to pass through on the way to the
+        markets.
+      </p>
+      <p>
+        From there, the central walk can widen through Sucre Square, the streets
+        around San Francisco and the museum district. Colonial religious buildings,
+        civic façades and the slopes beyond them occupy the same short sequence. It
+        is a good counterweight to the cable cars: first see how La Paz rises above
+        the centre, then spend time in the streets where its institutions meet.
+      </p>
+    </div>
+
+    <Chapter
+      id="markets"
+      number="III."
+      name="Walk the Witches’ Market and Mercado Rodríguez"
+      epithet="Two market districts where belief and everyday commerce sit within the city’s centre"
+    />
+    <div class="narrative prose">
+      <p>
+        The Witches’ Market is not a single grand market hall but a set of shops and
+        stalls around Calle Linares. Offerings associated with Pachamama sit beside
+        herbs, candles, amulets, crafts and other goods. The place is most useful
+        when approached as part of La Paz’s living culture rather than as a stage set
+        for unusual photographs. Look closely, move respectfully and let the street
+        remain a working place for the people who use it.
+      </p>
+      <p>
+        Mercado Rodríguez gives the day a different emphasis. It is one of the
+        city’s emblematic markets, with produce, vendors and the ordinary business of
+        buying and selling. The contrast between the two areas is not a neat division
+        between ritual and reality; both belong to the city’s working centre. The
+        dedicated <a href="/la-paz-markets/">La Paz markets guide</a> keeps the two visits together and gives the practical sequence more room.
+      </p>
+    </div>
+    <Figure
+      src={`${MARKET}.jpg`}
+      srcset={`${MARKET}-480w.jpg 480w, ${MARKET}-768w.jpg 768w, ${MARKET}-1200w.jpg 1200w, ${MARKET}-1600w.jpg 1600w, ${MARKET}.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Market street in central La Paz with stalls and everyday foot traffic."
+      width={2048}
+      height={1152}
+      caption="Market streets bring everyday commerce into the centre of La Paz."
+    />
+
+    <Chapter
+      id="valle"
+      number="IV."
+      name="Visit Valle de la Luna"
+      epithet="A separate morning where the city gives way to eroded formations"
+    />
+    <div class="narrative prose">
+      <p>
+        Valle de la Luna earns a place because it changes the scale of the visit.
+        After plazas, museums, market streets and cable cars, the route leaves the
+        dense urban bowl for formations cut into pale, dry earth. The paths move
+        between spires and ridges rather than between buildings, and the surrounding
+        city becomes something seen beyond the landforms.
+      </p>
+      <p>
+        Give it a separate block rather than trying to fit it between central stops.
+        The transfer is short enough to make the excursion practical, but the point
+        is the change of setting. The <a href="/valle-de-la-luna-la-paz/">Valle de la Luna guide</a> is the better place to settle questions about the visit; here, the recommendation is simply to let La Paz have a landscape chapter of its own.
+      </p>
+    </div>
+    <Figure
+      src={`${VALLE}.jpg`}
+      srcset={`${VALLE}-480w.jpg 480w, ${VALLE}-768w.jpg 768w, ${VALLE}-1200w.jpg 1200w, ${VALLE}-1600w.jpg 1600w, ${VALLE}.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Valle de la Luna formations and dry landscape near La Paz."
+      width={2048}
+      height={1365}
+      caption="Valle de la Luna carries the visit beyond the dense city and into eroded land."
+    />
+
+    <Chapter
+      id="museums"
+      number="V."
+      name="Spend Time in the Museums"
+      epithet="History, art and material culture within walking distance of the centre"
+    />
+    <div class="narrative prose">
+      <p>
+        La Paz’s museum district works best as a cluster. The Coca Museum, MUSEF,
+        the National Art Museum and the Museum of Precious Metals each offer a
+        different way into Bolivia’s history and culture. None needs to carry the
+        whole day alone. Together they make the centre less like a sequence of
+        viewpoints and more like a place with deep material history.
+      </p>
+      <p>
+        San Francisco belongs naturally in the same central walk. Its church and
+        surrounding complex connect religious history with the streets and markets
+        outside, while the nearby collections provide a wider frame. Choose the
+        museum that most interests you, then leave enough time to walk between the
+        buildings. The value is in the movement from public square to collection,
+        not in rushing through every door.
+      </p>
+    </div>
+
+    <Chapter
+      id="killi-killi"
+      number="VI."
+      name="Look Out from Mirador Killi Killi"
+      epithet="A city-wide view after the city has been walked at street level"
+    />
+    <div class="narrative prose">
+      <p>
+        Mirador Killi Killi is most useful after the centre has become familiar. From
+        above, La Paz gathers itself into one broad image: the bowl, the roads, the
+        brick slopes and the mountains beyond. The view does not replace the markets
+        or museums. It gives them a geography.
+      </p>
+      <p>
+        This is the viewpoint to choose when the question is how the city fits
+        together. Mi Teleférico shows the urban fabric in motion; Killi Killi holds
+        it still. After both, the steepness of La Paz is no longer an abstract fact
+        but the organising feature of the city.
+      </p>
+    </div>
+    <Figure
+      src={`${CITY}.jpg`}
+      srcset={`${CITY}-480w.jpg 480w, ${CITY}-768w.jpg 768w, ${CITY}-1200w.jpg 1200w, ${CITY}-1600w.jpg 1600w, ${CITY}.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="La Paz spread across its basin and surrounding slopes from an elevated viewpoint."
+      width={2048}
+      height={1365}
+      caption="From above, La Paz reads as roofs, roads and neighbourhoods climbing the basin."
+    />
+
+    <Chapter
+      id="stadium"
+      number="VII."
+      name="See Estadio Hernando Siles"
+      epithet="Football, public space and the city’s high-altitude civic geography"
+    />
+    <div class="narrative prose">
+      <p>
+        Estadio Hernando Siles adds a different kind of public space to the list. It
+        is one of Bolivia’s major football venues, set within the city rather than
+        separated from it as a distant attraction. Even from outside, the stadium
+        belongs to the same geography as the plazas, markets and cable cars: a place
+        where the city gathers around a shared institution.
+      </p>
+      <p>
+        The visit does not need a match to justify the stop. The exterior and its
+        urban setting are enough to make football part of the way La Paz is read. It
+        is a useful final experience because it returns the journey from wide views
+        and dry landscape to a building made for collective attention.
+      </p>
+    </div>
+    <Figure
+      src={`${STADIUM}.jpg`}
+      srcset={`${STADIUM}-480w.jpg 480w, ${STADIUM}-768w.jpg 768w, ${STADIUM}-1200w.jpg 1200w, ${STADIUM}-1600w.jpg 1600w, ${STADIUM}.jpg 2048w`}
+      sizes={SIZES_MODERN_WIDE}
+      alt="Exterior of Estadio Hernando Siles in La Paz."
+      width={2048}
+      height={1365}
+      caption="Estadio Hernando Siles, where football joins La Paz’s public geography."
+    />
+
+    <Practical place="La Paz — Things to Do" detail="Seven experiences · three days" detailIcon="🧭">
+      <PracticalSection label="Shortest route to a great first visit" level={3}>
+        <div class="prac-item"><strong>One day</strong> — Plaza Murillo, the Witches’ Market, Mi Teleférico and Mirador Killi Killi. This gives civic La Paz, market life and the city’s vertical geography in one sequence.</div>
+        <div class="prac-item"><strong>Two days</strong> — Keep the central route on day one, then choose museums plus Mercado Rodríguez or Valle de la Luna depending on whether culture or landscape matters more.</div>
+        <div class="prac-item"><strong>Three days</strong> — Follow the <a href="/3-days-in-la-paz-itinerary/">complete La Paz itinerary</a>, giving Valle de la Luna its own block and leaving enough room for markets, museums and cable-car movement.</div>
+        <div class="prac-item"><strong>If you only choose three things</strong> — Mi Teleférico, the central markets and one elevated city view.</div>
+      </PracticalSection>
+      <PracticalSection label="What each part of La Paz does best" level={3}>
+        <div class="prac-item"><strong>Geography:</strong> Mi Teleférico and Mirador Killi Killi.</div>
+        <div class="prac-item"><strong>Civic history:</strong> Plaza Murillo and central La Paz.</div>
+        <div class="prac-item"><strong>Markets and daily life:</strong> Witches’ Market and Mercado Rodríguez.</div>
+        <div class="prac-item"><strong>Culture:</strong> Museum district and San Francisco.</div>
+        <div class="prac-item"><strong>Landscape:</strong> Valle de la Luna.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not treat Mi Teleférico as only a scenic ride.</strong> It works best when used as part of the route through the city.</div>
+        <div class="tip-row"><strong>Keep Valle de la Luna separate from a packed central day.</strong> Its value is the change of landscape, not squeezing it between urban stops.</div>
+        <div class="tip-row"><strong>Choose museums rather than collecting them.</strong> One or two strong visits are more useful than rushing every collection.</div>
+        <div class="tip-row"><strong>Respect the markets as working places.</strong> Photograph thoughtfully and avoid turning people or ritual goods into scenery.</div>
+      </PracticalSection>
+    </Practical>
+
+    <div class="narrative prose">
+      <SectionHeading id="priorities" rule={false}>What to prioritise with one or two days</SectionHeading>
+      <p>
+        With one day, keep the central sequence compact: Plaza Murillo, the Witches’
+        Market, Mi Teleférico and Mirador Killi Killi. It moves from civic space to
+        market street, then uses the cable cars and viewpoint to show how the city
+        rises around them.
+      </p>
+      <p>
+        With two days, give one day to the centre and markets, then choose between
+        the museum cluster and Valle de la Luna according to whether history or the
+        landscape matters more. Add Hernando Siles if football and public space are
+        part of the interest. With three days, follow the fuller <a href="/3-days-in-la-paz-itinerary/">La Paz itinerary</a>, which gives Valle de la Luna its own day and keeps the movement between central stops manageable.
+      </p>
+    </div>
+
+    <div class="narrative prose">
+      <SectionHeading id="planning" rule={false}>Practical planning</SectionHeading>
+      <p>
+        La Paz works best when transport and walking are treated as part of the
+        sightseeing. Use Mi Teleférico where it connects the day, stay central if the
+        markets and museums matter, and avoid forcing Valle de la Luna into a short
+        gap between urban stops. The exact order can change; the contrast between
+        the settings is the important part.
+      </p>
+      <p>
+        Altitude shaped the plan through walking and cable cars rather than harder
+        training. The traveller had already spent time at altitude before La Paz,
+        but individual responses differ. Keep the first walks manageable, allow
+        extra time for climbs and seek medical advice if symptoms are concerning.
+      </p>
+      <p>
+        In the markets, photograph the street rather than treating people or ritual
+        objects as scenery. For museums, choose a small group rather than trying to
+        cover every collection. Those choices leave enough space for the city to be
+        read rather than merely completed.
+      </p>
+    </div>
+
+    <div class="narrative prose">
+      <SectionHeading id="closing" rule={false}>The City in Layers</SectionHeading>
+      <p>
+        The cable cars explain La Paz’s vertical shape. The markets explain how
+        belief and daily commerce share the centre. Plaza Murillo explains civic
+        power; the museums give history material form; Valle de la Luna carries the
+        city into a different landscape. Killi Killi gathers the geography into one
+        view, and Hernando Siles brings the attention back to public life.
+      </p>
+      <p>
+        That is why the best things to do in La Paz are not interchangeable stops.
+        They move between elevation, history, commerce, landscape and collective
+        space until the city begins to hold together. The <a href="/3-days-in-la-paz-itinerary/">three-day itinerary</a> is the natural next step when those layers need to become a route.
+      </p>
+    </div>
+
+    <p class="beat">But the road is ever onward.</p>
+
+    <FurtherReading
+      label="Continue through La Paz"
+      cards={[
+        { href: '/3-days-in-la-paz-itinerary/', region: 'Bolivia · La Paz', title: '3 Days in La Paz: Complete Itinerary', excerpt: 'The full La Paz sequence through markets, museums, Mi Teleférico, Valle de la Luna and the city edge.', cta: 'READ CHRONICLE' },
+        { href: '/la-paz-markets/', region: 'Bolivia · La Paz', title: 'La Paz Markets: Witches’ Market and Mercado Rodríguez', excerpt: 'A focused comparison of ritual commerce and everyday produce markets in the city centre.', cta: 'READ CHRONICLE' },
+        { href: '/mi-teleferico-la-paz/', region: 'Bolivia · La Paz', title: 'Mi Teleférico: Exploring La Paz by Cable Car', excerpt: 'A closer look at the cable-car system and the geography it reveals above the streets.', cta: 'READ CHRONICLE' },
+      ]}
+    />
+  </div>
+  <ArticleFAQ page="best-things-to-do-in-la-paz" />
+</ChronicleLayout>

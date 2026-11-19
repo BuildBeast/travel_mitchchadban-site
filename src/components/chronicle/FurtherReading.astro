@@ -16,6 +16,8 @@ interface Card {
   excerpt: string;
   /** Two short meta chips shown under the excerpt. */
   meta?: [string, string];
+  /** Optional direct-action label for cards that use a reading CTA. */
+  cta?: string;
 }
 
 interface Props {
@@ -36,7 +38,9 @@ const { label = 'Further Reading', id, cards } = Astro.props;
           <div class="post-region">{card.region}</div>
           <div class="post-title">{card.title}</div>
           <div class="post-excerpt">{card.excerpt}</div>
-          {card.meta && (
+          {card.cta ? (
+            <div class="post-meta">{card.cta}</div>
+          ) : card.meta && (
             <div class="post-meta">
               <span>{card.meta[0]}</span>
               <span class="dot" />

@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/mi-teleferico-la-paz.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
+
+const title = "Mi Teleférico in La Paz: Riding the City by Cable Car | There & Back Again";
+const description = "A first-hand guide to riding Mi Teleférico in La Paz as public transport, viewpoint and the clearest way to understand the city’s vertical geography.";
+const canonical = "https://travel.mitchchadban.com/mi-teleferico-la-paz/";
+const image = "/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Mi Teleférico in La Paz: Riding the City by Cable Car",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Mi Teleférico in La Paz", item: canonical },
+      ],
+    },
+  ],
+};
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="teleferico-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Bolivia · La Paz ·&nbsp;<span>September 2026</span></div>
+    <h1 id="teleferico-title" class="post-hero-title"><em>Mi Teleférico in La Paz:</em><br />Riding the City by Cable Car</h1>
+    <p class="post-hero-sub">The city changes shape when the streets become something you cross above.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Days Used</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">La Paz</span><span class="stat-label">City</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Network</span></div>
+    </div>
+  </section>
+
+  <article class="post-body south-america-post-body teleferico-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through La Paz"
+      cards={[
+        { href: "/best-things-to-do-in-la-paz/", region: "Bolivia · La Paz", title: "Best Things to Do in La Paz", excerpt: "A first-visit guide through cable cars, civic space, markets, museums, viewpoints and Valle de la Luna.", cta: "READ CHRONICLE" },
+        { href: "/la-paz-markets/", region: "Bolivia · La Paz", title: "La Paz Markets: Witches’ Market and Mercado Rodríguez", excerpt: "A focused comparison of ritual commerce and everyday produce markets in the city centre.", cta: "READ CHRONICLE" },
+        { href: "/3-days-in-la-paz-itinerary/", region: "Bolivia · La Paz", title: "3 Days in La Paz: Complete Itinerary", excerpt: "The full La Paz sequence through markets, museums, Mi Teleférico and the city edge.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="teleferico-overview-slot">
+    <AtAGlance
+      id="teleferico-glance"
+      title="Mi Teleférico at a Glance"
+      meta={[
+        { label: "Best first use", value: "Ride it early in the stay so La Paz’s basin, slopes and relationship with El Alto become legible from above." },
+        { label: "Best way to experience it", value: "Use the network as transport between places you already want to visit rather than treating it as a standalone attraction." },
+        { label: "Best for", value: "Understanding La Paz’s vertical geography while avoiding some of the slower road movement between high and low parts of the city." },
+        { label: "Best overall approach", value: "One or two purposeful journeys are enough for a first visit. There is no need to collect every line." },
+      ]}
+      daysHeading="Four Ways to Use the Network"
+      days={[
+        { num: "As Transport", detail: "Stations · Connections · Real journeys", text: "The strongest ride is usually the one that takes you somewhere useful. Build the network into a normal city day rather than creating a separate cable-car excursion." },
+        { num: "For Geography", detail: "Basin · Slopes · El Alto", text: "From the cabin, the city’s steepness finally makes sense. Roads, neighbourhoods and the plateau sit together in one connected landscape." },
+        { num: "Between City Stops", detail: "Markets · Museums · Viewpoints", text: "Pair rides with Plaza Murillo, the Witches’ Market, museum district or Mirador Killi Killi so the network remains part of the wider route." },
+        { num: "For the View", detail: "Roofs · Roads · Urban scale", text: "The view is a consequence of the transport system rather than a separate attraction. That is what makes Mi Teleférico so effective." },
+      ]}
+    />
+  </div>
+
+  <div class="teleferico-decision-slot">
+    <Practical place="La Paz — Mi Teleférico" detail="Transport · geography · view" detailIcon="🚡">
+      <PracticalSection label="Shortest route to a good first ride" level={3}>
+        <div class="prac-item"><strong>First-time visitor</strong> — Start with a journey that connects the central city to another stop you already plan to visit.</div>
+        <div class="prac-item"><strong>If you only ride once</strong> — Choose a route that gives both a useful transfer and a clear change in elevation.</div>
+        <div class="prac-item"><strong>If you have two days</strong> — Use the network on both days rather than doing one long line-collecting session.</div>
+        <div class="prac-item"><strong>If you want the best experience</strong> — Get off, walk the neighbourhood or continue to the next attraction. The station should be a threshold, not the destination.</div>
+      </PracticalSection>
+      <PracticalSection label="What Mi Teleférico does best" level={3}>
+        <div class="prac-item"><strong>Transport:</strong> Connecting high and low parts of La Paz.</div>
+        <div class="prac-item"><strong>Orientation:</strong> Making the basin and slopes readable.</div>
+        <div class="prac-item"><strong>Sightseeing:</strong> Showing the city in relation to its terrain.</div>
+        <div class="prac-item"><strong>Efficiency:</strong> Turning transfers into part of the visit.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not ride every line just to complete the map.</strong> One or two useful journeys usually explain the system better than a network marathon.</div>
+        <div class="tip-row"><strong>Check current fares and service details.</strong> Payment arrangements, operating hours and service conditions can change.</div>
+        <div class="tip-row"><strong>Altitude still matters.</strong> The cable cars reduce some steep walking, but they do not remove the city’s elevation.</div>
+        <div class="tip-row"><strong>Leave time after getting off.</strong> Orientation and walking at either end are part of the experience, not dead time between rides.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.teleferico-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.teleferico-overview-slot');
+      const decision = document.querySelector('.teleferico-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'Transport or sightseeing?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="mi-teleferico-la-paz" />
+</BaseLayout>

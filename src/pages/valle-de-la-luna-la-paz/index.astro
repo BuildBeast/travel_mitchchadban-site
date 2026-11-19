@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/valle-de-la-luna-la-paz.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
+
+const title = "Valle de la Luna, La Paz: Is It Worth Visiting? | There & Back Again";
+const description = "A first-hand guide to Valle de la Luna near La Paz: the eroded formations, walking experience, practical timing and whether the excursion is worth visiting.";
+const canonical = "https://travel.mitchchadban.com/valle-de-la-luna-la-paz/";
+const image = "/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1200w.jpg";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Valle de la Luna, La Paz: Is It Worth Visiting?",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Valle de la Luna, La Paz", item: canonical },
+      ],
+    },
+  ],
+};
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="valle-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Bolivia · La Paz ·&nbsp;<span>September 2026</span></div>
+    <h1 id="valle-title" class="post-hero-title"><em>Valle de la Luna, La Paz:</em><br />Is It Worth Visiting?</h1>
+    <p class="post-hero-sub">A short morning away from the city, where La Paz’s streets give way to eroded formations and walking paths.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Hours On Site</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">La Paz</span><span class="stat-label">Base</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Morning</span></div>
+    </div>
+  </section>
+
+  <article class="post-body south-america-post-body valle-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through La Paz"
+      cards={[
+        { href: "/best-things-to-do-in-la-paz/", region: "Bolivia · La Paz", title: "Best Things to Do in La Paz", excerpt: "A first-visit guide through cable cars, civic space, markets, museums, viewpoints and Valle de la Luna.", cta: "READ CHRONICLE" },
+        { href: "/mi-teleferico-la-paz/", region: "Bolivia · La Paz", title: "Mi Teleférico in La Paz", excerpt: "A closer look at the cable-car network and the geography it reveals above the streets.", cta: "READ CHRONICLE" },
+        { href: "/3-days-in-la-paz-itinerary/", region: "Bolivia · La Paz", title: "3 Days in La Paz: Complete Itinerary", excerpt: "The full La Paz sequence through markets, museums, Mi Teleférico and the city edge.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="valle-overview-slot">
+    <AtAGlance
+      id="valle-glance"
+      title="Valle de la Luna at a Glance"
+      meta={[
+        { label: "Best for", value: "Adding a landscape counterpoint after one or two days in central La Paz." },
+        { label: "Time on site", value: "Around two hours worked well for this visit, with transfer time kept separate." },
+        { label: "Walking", value: "Uneven paths, narrow sections and repeated changes of level, but not a technical hike." },
+        { label: "Best overall approach", value: "Give it a dedicated morning rather than squeezing it between museums, markets and central-city stops." },
+      ]}
+      daysHeading="Four Parts of the Visit"
+      days={[
+        { num: "The Landscape", detail: "Clay · Erosion · Ridges", text: "The main reason to go. Soft earth has been cut into narrow formations, gullies and walls that replace the urban fabric with exposed ground." },
+        { num: "The Walk", detail: "Paths · Uneven ground · Changing levels", text: "Valle de la Luna works on foot. The route threads between formations rather than ending at one single viewpoint." },
+        { num: "The Contrast", detail: "City → Landscape · Third-day change", text: "After plazas, markets and cable cars, the excursion gives the itinerary a completely different physical register without leaving the wider La Paz geography." },
+        { num: "The Morning", detail: "~2 hours · Transfer separate · Return to city", text: "Short enough to fit into a three-day stay, but substantial enough that it deserves its own block rather than becoming a rushed detour." },
+      ]}
+    />
+  </div>
+
+  <div class="valle-decision-slot">
+    <Practical place="La Paz — Valle de la Luna" detail="Landscape · walk · half-day" detailIcon="🥾">
+      <PracticalSection label="Shortest route to a decision" level={3}>
+        <div class="prac-item"><strong>One day in La Paz</strong> — Skip it and prioritise the centre, markets and Mi Teleférico.</div>
+        <div class="prac-item"><strong>Two days</strong> — Choose Valle de la Luna if landscape matters more than adding another museum-heavy central block.</div>
+        <div class="prac-item"><strong>Three days</strong> — Give it a dedicated morning. This is where the excursion fits most naturally.</div>
+        <div class="prac-item"><strong>If you go</strong> — Allow roughly two hours at the formations plus separate transfer time.</div>
+      </PracticalSection>
+      <PracticalSection label="What the visit does best" level={3}>
+        <div class="prac-item"><strong>Landscape contrast:</strong> Breaks up the dense urban itinerary.</div>
+        <div class="prac-item"><strong>Walking:</strong> Short, contained route through changing terrain.</div>
+        <div class="prac-item"><strong>Geography:</strong> Shows the exposed ground beneath the wider La Paz landscape.</div>
+        <div class="prac-item"><strong>Timing:</strong> Works as a half-day or morning excursion.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not count only the time on site.</strong> Valle de la Luna sits south of central La Paz, so transfer time needs its own margin.</div>
+        <div class="tip-row"><strong>Wear proper walking shoes.</strong> The route is not technical, but the ground is uneven and the paths change level repeatedly.</div>
+        <div class="tip-row"><strong>Sun and altitude still matter.</strong> Carry water and sun protection, especially in the exposed high-altitude environment.</div>
+        <div class="tip-row"><strong>Check current access before leaving.</strong> Opening hours, ticketing, transport and path access can change.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.valle-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.valle-overview-slot');
+      const decision = document.querySelector('.valle-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'How much time should you allow?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="valle-de-la-luna-la-paz" />
+</BaseLayout>

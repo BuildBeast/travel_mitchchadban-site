@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/lima-historic-centre-san-francisco-catacombs.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
+
+const title = "Lima Historic Centre & San Francisco Catacombs | There & Back Again";
+const description = "A first-hand guide to Lima’s Historic Centre, from San Francisco and its catacombs to Plaza Mayor, the Cathedral, Santo Domingo and Las Nazarenas.";
+const canonical = "https://travel.mitchchadban.com/lima-historic-centre-san-francisco-catacombs/";
+const image = "/images/3-days-in-lima-itinerary/lima-plaza-mayor-1200w.jpg";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Lima Historic Centre and the San Francisco Catacombs",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Lima Historic Centre and the San Francisco Catacombs", item: canonical },
+      ],
+    },
+  ],
+};
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="lima-centre-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru · Lima ·&nbsp;<span>September 2026</span></div>
+    <h1 id="lima-centre-title" class="post-hero-title"><em>Lima Historic Centre</em><br />and the San Francisco Catacombs</h1>
+    <p class="post-hero-sub">A first afternoon through Lima’s civic and religious centre, from San Francisco to Plaza Mayor and the streets beyond.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Afternoon</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">Lima</span><span class="stat-label">City</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Historic Walk</span></div>
+    </div>
+  </section>
+
+  <article class="post-body south-america-post-body lima-centre-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through Lima"
+      cards={[
+        { href: "/best-things-to-do-in-lima/", region: "Peru · Lima", title: "Best Things to Do in Lima", excerpt: "A first-visit guide through the Historic Centre, Barranco, the Pacific coast, archaeology and museums.", cta: "READ CHRONICLE" },
+        { href: "/3-days-in-lima-itinerary/", region: "Peru · Lima", title: "3 Days in Lima: Complete Itinerary", excerpt: "The full route through historic, coastal and archaeological Lima.", cta: "READ CHRONICLE" },
+        { href: "/barranco-to-miraflores-lima/", region: "Peru · Lima", title: "Barranco to Miraflores", excerpt: "A focused coastal movement through Barranco, the Malecón and Miraflores.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="lima-centre-overview-slot">
+    <AtAGlance
+      id="lima-centre-glance"
+      title="Lima Historic Centre at a Glance"
+      meta={[
+        { label: "Best starting point", value: "San Francisco, especially if the convent and catacombs are a priority." },
+        { label: "Best civic stop", value: "Plaza Mayor, where the Cathedral, Government Palace and municipal buildings make the old city’s power structure visible." },
+        { label: "Best route length", value: "Around three to four hours for a focused first visit." },
+        { label: "Best overall approach", value: "Treat the centre as a walking sequence through religious, civic and devotional Lima rather than a collection of isolated façades." },
+      ]}
+      daysHeading="Four Parts of the Historic Centre"
+      days={[
+        { num: "San Francisco", detail: "Church · Convent · Catacombs", text: "The strongest opening to the route. The complex introduces colonial religious Lima above ground and, when access is available, its burial history below." },
+        { num: "Plaza Mayor", detail: "Cathedral · Government · Civic space", text: "The formal centre of historic Lima, where religious, executive and municipal authority share one public square." },
+        { num: "Santo Domingo", detail: "Convent · Saints · Religious history", text: "A second major religious complex that extends the walk beyond Plaza Mayor and connects the city to figures such as Santa Rosa de Lima and San Martín de Porres." },
+        { num: "Las Nazarenas", detail: "Devotion · Señor de los Milagros · Living faith", text: "A strong final stop because the route ends not with frozen colonial architecture but with a church tied to one of Peru’s major living devotional traditions." },
+      ]}
+    />
+  </div>
+
+  <div class="lima-centre-decision-slot">
+    <Practical place="Lima — Historic Centre" detail="Churches · civic space · catacombs" detailIcon="⛪">
+      <PracticalSection label="Shortest route to a strong first visit" level={3}>
+        <div class="prac-item"><strong>Half day</strong> — San Francisco, Plaza Mayor, Santo Domingo and Las Nazarenas make a strong compact sequence.</div>
+        <div class="prac-item"><strong>If the catacombs matter most</strong> — Start at San Francisco and build the rest of the walk around the current access window.</div>
+        <div class="prac-item"><strong>If architecture matters most</strong> — Begin at Plaza Mayor, then move outward through San Francisco, Santo Domingo and Las Nazarenas.</div>
+        <div class="prac-item"><strong>If time is very short</strong> — Prioritise San Francisco and Plaza Mayor rather than trying to collect every church.</div>
+      </PracticalSection>
+      <PracticalSection label="What each stop does best" level={3}>
+        <div class="prac-item"><strong>Colonial religious complex:</strong> San Francisco.</div>
+        <div class="prac-item"><strong>Civic and political history:</strong> Plaza Mayor.</div>
+        <div class="prac-item"><strong>Religious continuity:</strong> Santo Domingo.</div>
+        <div class="prac-item"><strong>Living devotional culture:</strong> Las Nazarenas.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not assume catacomb access is automatic.</strong> Check the current San Francisco entry arrangements before building the visit around them.</div>
+        <div class="tip-row"><strong>Do not reduce the centre to Plaza Mayor.</strong> The walk becomes much stronger when the churches and convents around it are included.</div>
+        <div class="tip-row"><strong>Allow time for interiors.</strong> A half-day disappears quickly once church access, tours and pauses are added.</div>
+        <div class="tip-row"><strong>Dress and photograph respectfully.</strong> These are active religious spaces as well as historic sites.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.lima-centre-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.lima-centre-overview-slot');
+      const decision = document.querySelector('.lima-centre-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'How much time does the Historic Centre need?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="lima-historic-centre-san-francisco-catacombs" />
+</BaseLayout>

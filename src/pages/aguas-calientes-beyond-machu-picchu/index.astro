@@ -1,0 +1,129 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/aguas-calientes-beyond-machu-picchu.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
+
+const title = "Aguas Calientes Beyond Machu Picchu: Is It Worth Staying? | There & Back Again";
+const description = "A practical account of Aguas Calientes beyond Machu Picchu, covering the railway town, market, Butterfly Zoo, hot springs and why two nights can work.";
+const canonical = "https://travel.mitchchadban.com/aguas-calientes-beyond-machu-picchu/";
+const image = "/images/24-days-in-south-america-itinerary/machu-picchu-mountain-panorama-1200w.jpg";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Aguas Calientes Beyond Machu Picchu: Is It Worth Staying?",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Aguas Calientes Beyond Machu Picchu", item: canonical },
+      ],
+    },
+  ],
+};
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="aguas-calientes-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru · Aguas Calientes ·&nbsp;<span>September 2026</span></div>
+    <h1 id="aguas-calientes-title" class="post-hero-title"><em>Aguas Calientes Beyond Machu Picchu:</em><br />Is It Worth Staying?</h1>
+    <p class="post-hero-sub">The railway town, market, butterflies and hot springs beneath the ruins.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Nights</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Dates</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Town</span></div>
+    </div>
+  </section>
+
+  <article class="post-body south-america-post-body aguas-calientes-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through Machu Picchu"
+      cards={[
+        { href: "/2-days-in-machu-picchu-itinerary/", region: "Peru · Machu Picchu", title: "2 Days in Machu Picchu and Aguas Calientes", excerpt: "The two-night mountain stage through Aguas Calientes, Machu Picchu and Huayna Picchu.", cta: "READ CHRONICLE" },
+        { href: "/huayna-picchu-hike/", region: "Peru · Machu Picchu", title: "Huayna Picchu Hike", excerpt: "A focused account of the mountain route above Machu Picchu and how to plan the climb.", cta: "READ CHRONICLE" },
+        { href: "/24-days-in-south-america-itinerary/", region: "South America · Peru", title: "24 Days in South America", excerpt: "The wider journey from Lima through Machu Picchu, La Paz and across the continent.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="aguas-calientes-overview-slot">
+    <AtAGlance
+      id="aguas-calientes-glance"
+      title="Aguas Calientes at a Glance"
+      meta={[
+        { label: "Best first move", value: "Walk the town slowly before treating it only as the gateway to Machu Picchu." },
+        { label: "Best short stop", value: "The market and central streets, which give the town its everyday scale between trains and mountain traffic." },
+        { label: "Best nature stop", value: "The Butterfly House for a quieter break from the railway, buses and crowds." },
+        { label: "Best recovery stop", value: "The hot springs, especially after a mountain day or early Machu Picchu start." },
+      ]}
+      daysHeading="Four Ways to Use the Town"
+      days={[
+        { num: "Central Aguas Calientes", detail: "Streets · Railway · Town life", text: "Compact, busy and shaped by the railway. The centre works best as something to walk through rather than simply cross between hotel and bus queue." },
+        { num: "Market", detail: "Souvenirs · Local movement · Easy stop", text: "The easiest addition to a short stay. It sits naturally within the town rather than demanding a separate excursion." },
+        { num: "Butterfly House", detail: "Wildlife · Quiet · Short excursion", text: "A smaller-scale nature stop away from the centre, useful when the town needs a slower counterpoint to Machu Picchu." },
+        { num: "Hot Springs", detail: "Recovery · Evening · Mountain-day reset", text: "The most natural way to use spare time after a long day, especially when the legs need something gentler than another climb." },
+      ]}
+    />
+  </div>
+
+  <div class="aguas-calientes-decision-slot">
+    <Practical place="Aguas Calientes — Beyond Machu Picchu" detail="Town · market · recovery" detailIcon="🧭">
+      <PracticalSection label="Shortest route to a good stay" level={3}>
+        <div class="prac-item"><strong>A few hours</strong> — Walk the centre and market, then keep the rest of the time for food or the railway rather than forcing in another attraction.</div>
+        <div class="prac-item"><strong>Half a day</strong> — Add the Butterfly House or hot springs, depending on whether the priority is nature or recovery.</div>
+        <div class="prac-item"><strong>One full spare day</strong> — Combine the town, Butterfly House, market and hot springs at an easy pace without turning the day into another expedition.</div>
+        <div class="prac-item"><strong>If you only choose two things</strong> — Walk the town properly and add either the Butterfly House or hot springs.</div>
+      </PracticalSection>
+      <PracticalSection label="What each part does best" level={3}>
+        <div class="prac-item"><strong>Town atmosphere:</strong> Central Aguas Calientes.</div>
+        <div class="prac-item"><strong>Easy browsing:</strong> The market.</div>
+        <div class="prac-item"><strong>Nature:</strong> Butterfly House.</div>
+        <div class="prac-item"><strong>Recovery:</strong> Hot springs.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not over-schedule the town.</strong> Aguas Calientes works best as a compact base and recovery stop rather than a second full-scale sightseeing destination.</div>
+        <div class="tip-row"><strong>Keep Machu Picchu timing protected.</strong> Any extra activity should fit around the main mountain visit, not compete with it.</div>
+        <div class="tip-row"><strong>The hot springs are a recovery activity, not a major attraction.</strong> Treat them accordingly.</div>
+        <div class="tip-row"><strong>Railway and bus movement shape the town.</strong> Leave margin around departure times rather than building a minute-perfect afternoon.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.aguas-calientes-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.aguas-calientes-overview-slot');
+      const decision = document.querySelector('.aguas-calientes-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'Is Aguas Calientes worth staying overnight?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+
+  <ArticleFAQ page="aguas-calientes-beyond-machu-picchu" />
+</BaseLayout>

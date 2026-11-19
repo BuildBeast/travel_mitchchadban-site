@@ -1,0 +1,149 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/3-days-in-lima-itinerary.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Beat from "../../components/chronicle/Beat.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import TourRecommendations from "../../components/chronicle/TourRecommendations.astro";
+import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import "../../styles/south-america-article.css";
+
+const title = "3 Days in Lima: Complete Itinerary — There & Back Again";
+const description = "A three-day Lima itinerary through the historic centre, Barranco, Miraflores, archaeological sites and museums, based on a first-hand September 2026 visit.";
+const canonical = "https://travel.mitchchadban.com/3-days-in-lima-itinerary/";
+const image = "/images/3-days-in-lima-itinerary/lima-miraflores-pacific-coast-1200w.jpg";
+const PROVENANCE = { photography: true };
+
+const faqItems = [
+  { question: "Is three days enough for Lima?", answer: "Yes, three days can cover the historic centre, Barranco, Miraflores, the Pacific coast, archaeological sites and museums. The route is fast, especially on Day 2, and four days would make it more comfortable." },
+  { question: "What is the best area to stay in Lima for this itinerary?", answer: "Jesús María worked as a base for this itinerary because it allowed separate trips into the historic centre, Barranco, Miraflores, San Isidro, Pueblo Libre and central Lima. Other bases can work if they suit the districts you most want to visit." },
+  { question: "Can you combine Barranco and Miraflores in one day?", answer: "Yes. Barranco and Miraflores can be combined by walking within each neighbourhood and using a transfer between them. Add the coast, Pucllana, Huaca Huallamarca and Larco and the day becomes demanding, so split it if you have four days." },
+  { question: "Is Huaca Pucllana worth visiting?", answer: "Yes, especially when paired with Huaca Huallamarca and the Larco Museum. The archaeological sites make Lima’s older layers visible inside its modern neighbourhoods." },
+  { question: "What is the best way to get around Lima?", answer: "Walk within each district, then use current taxis, ride-hailing or public transport for the longer connections between the historic centre, coastal neighbourhoods and archaeological sites. Allow extra time for airport and city traffic." },
+];
+
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Article", headline: "3 Days in Lima: Complete Itinerary", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+      { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+      { "@type": "ListItem", position: 3, name: "3 Days in Lima: Complete Itinerary", item: canonical },
+    ] },
+    { "@type": "FAQPage", mainEntity: faqItems.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+  ],
+}, PROVENANCE);
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="lima-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru · Lima ·&nbsp;<span>September 2026</span></div>
+    <h1 id="lima-title" class="post-hero-title"><em>3 Days in Lima:</em><br />The City Beneath the City</h1>
+    <p class="post-hero-sub">A first-hand three-day route through Lima’s historic centre, coastal districts, archaeological sites and museums.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Days</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Nights</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">Jesús María</span><span class="stat-label">Base</span></div>
+    </div>
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: true })} />
+  </section>
+
+  <article class="post-body south-america-post-body lima-post-body"><ArticleContent /></article>
+
+  <div class="lima-day-support-slot" data-before="Day 2 — Barranco to Miraflores">
+    <Practical place="Lima — Day 1" detail="Historic Centre · arrival afternoon" placeIcon="" detailIcon="">
+      <PracticalSection label="Where to Eat"><div class="prac-item"><strong>Cevichería Barra Maretazo</strong> — dinner after the historic-centre afternoon.</div></PracticalSection>
+      <PracticalSection label="Getting There"><div class="prac-item"><strong>Arrival</strong> — the flight reached Jorge Chávez International Airport at 12:25pm; Jesús María was the base before continuing to the Historic Centre.</div></PracticalSection>
+      <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Historic Centre</strong> — San Francisco, Plaza Mayor, Lima Cathedral, the Government Palace area, Santo Domingo and Las Nazarenas.</div></PracticalSection>
+      <section class="practical" aria-label="Lima Day 1 budget snapshot"><div class="prac-header"><div class="prac-city">Lima — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$75/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$45–50</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$9/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$135–140</div></div></div></section>
+      <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Keep the first afternoon compact.</strong> The historic centre groups its main civic and religious stops closely.</div><div class="tip-row"><strong>Allow for the airport transfer.</strong> This is an ambitious arrival day rather than a slow introduction.</div><div class="tip-row"><strong>Check current access details.</strong> San Francisco and the catacombs should be checked close to travel.</div></PracticalSection>
+    </Practical>
+    <TourRecommendations label="Book it — Lima historic-centre experiences" tours={[
+      { category: "Historic Centre", title: "Lima Historic Center Tour, Cathedral and Catacombs", description: "A guided historic-centre route through Plaza Mayor, the Cathedral and the catacombs beneath San Francisco.", href: "https://www.viator.com/tours/Lima/Historical-Guided-Tour-in-Lima/d928-208206P6?pid=P00295455&mcid=42383&medium=link", featured: true },
+      { category: "Historic Centre", title: "Lima Historic Center Walking Tour With Catacombs", description: "A walking-led introduction to Lima’s colonial centre, churches, plazas and catacombs.", href: "https://www.viator.com/tours/Lima/City-of-the-Kings-and-Catacombs-Tour/d928-159308P33?pid=P00295455&mcid=42383&medium=link" },
+      { category: "Food & History", title: "Street Food, Market & Old Eateries Tour in Lima's Historic Center", description: "An evening food and history walk through Lima’s historic centre, with market and old-eatery stops.", href: "https://www.viator.com/tours/Lima/Lima-Historic-Center-Street-Food-Night-Tour/d928-66022P2?pid=P00295455&mcid=42383&medium=link" },
+    ]} />
+    <Beat>But the road is ever onward.</Beat>
+  </div>
+
+  <div class="lima-day-support-slot" data-before="Day 3 — Museums, Streets and Central Lima">
+    <Practical place="Lima — Day 2" detail="Barranco · Miraflores · archaeology" placeIcon="" detailIcon="">
+      <PracticalSection label="Where to Eat"><div class="prac-item"><strong>El Cacaotal</strong> — the first Barranco stop.</div><div class="prac-item"><strong>Restaurant Huaca Pucllana</strong> — dinner after the archaeological and museum route.</div></PracticalSection>
+      <PracticalSection label="Getting There"><div class="prac-item"><strong>Barranco to Miraflores</strong> — walk the Barranco cluster, follow the coastal section in Miraflores, then transfer inland to the archaeological sites and Larco.</div></PracticalSection>
+      <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Barranco</strong> — Bridge of Sighs, Bajada de Baños, Barranco Municipal Park, Museo Mario Testino and Museo Pedro de Osma.</div><div class="prac-item"><strong>Miraflores</strong> — Love Park, the Malecón and the Pacific coast.</div><div class="prac-item"><strong>Archaeological Lima</strong> — Huaca Pucllana, Huaca Huallamarca and the Larco Museum.</div></PracticalSection>
+      <section class="practical" aria-label="Lima Day 2 budget snapshot"><div class="prac-header"><div class="prac-city">Lima — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$75/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$45–50</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$9/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$135–140</div></div></div></section>
+      <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Expect a full day.</strong> Barranco, the coast, two huacas and Larco make this the most demanding stage.</div><div class="tip-row"><strong>Walk the clusters.</strong> Barranco and the Miraflores coast suit walking; use a transfer between districts.</div><div class="tip-row"><strong>Split the day if possible.</strong> Four nights would give the archaeological and museum sequence more room.</div></PracticalSection>
+    </Practical>
+    <TourRecommendations label="Book it — Lima coast and archaeology experiences" tours={[
+      { category: "Barranco & Miraflores", title: "Lima: Miraflores & Barranco Private Tour", description: "A focused neighbourhood experience connecting the coastal districts, viewpoints and cultural stops in Barranco and Miraflores.", href: "https://www.viator.com/tours/Lima/Private-Tour-in-Miraflores-and-Barranco/d928-122472P45?pid=P00295455&mcid=42383&medium=link", featured: true },
+      { category: "City & Barranco", title: "Small-Group Tour: Lima and Barranco City Tour", description: "A small-group city introduction combining Lima’s historic core with Barranco and catacomb access.", href: "https://www.viator.com/tours/Lima/Half-Day-City-Tour-of-Lima-and-Barranco/d928-18917P7?pid=P00295455&mcid=42383&medium=link" },
+      { category: "Archaeology & Museums", title: "4 Hours Larco Museum and Huaca Pucllana in Lima City", description: "A compact guided pairing of Huaca Pucllana and the Larco Museum for the archaeological layer of Lima.", href: "https://www.viator.com/tours/Lima/Lima-City-tour-Larco-Museum-and-Huaca-Pucllana/d928-103984P22?pid=P00295455&mcid=42383&medium=link" },
+    ]} />
+    <Beat>But the road is ever onward.</Beat>
+  </div>
+
+  <div class="lima-day-support-slot" data-before="Why Jesús María Worked as a Base">
+    <Practical place="Lima — Day 3" detail="Central Lima · museums · Kennedy Park" placeIcon="" detailIcon="">
+      <PracticalSection label="Where to Eat"><div class="prac-item"><strong>El Merlin de Cabo Blanco</strong> — lunch during the final full day.</div></PracticalSection>
+      <PracticalSection label="Getting There"><div class="prac-item"><strong>Central Lima and onward travel</strong> — move from Jesús María through the central parks and museum sequence, then leave margin for the onward journey to Cusco.</div></PracticalSection>
+      <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Central Lima</strong> — Juana Alarco de Dammert, Parque La Muralla, MALI and Museo de Minerales Andrés del Castillo.</div><div class="prac-item"><strong>Miraflores</strong> — El Merlin de Cabo Blanco and Kennedy Park.</div></PracticalSection>
+      <section class="practical" aria-label="Lima Day 3 budget snapshot"><div class="prac-header"><div class="prac-city">Lima — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$75/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$45–50</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$9/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$135–140</div></div></div></section>
+      <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Choose selectively.</strong> The museum sequence works better with one or two priorities than with every collection.</div><div class="tip-row"><strong>Keep the final afternoon flexible.</strong> Kennedy Park gives the day a lighter close before onward travel.</div><div class="tip-row"><strong>Leave transfer margin.</strong> The final day should not depend on a tight connection.</div></PracticalSection>
+    </Practical>
+    <TourRecommendations label="Book it — Lima museum and culture experiences" tours={[
+      { category: "Huacas & Larco", title: "Guided Tour to the Larco Museum and Huaca Pucllana with Dinner or Lunch", description: "A guided five-hour pairing of Huaca Pucllana and the Larco Museum with a meal included.", href: "https://www.viator.com/tours/Lima/Guided-Tour-to-the-Larco-Museum-and-Huaca-Pucllana-with-Dinner-or-Lunch/d928-352688P4?pid=P00295455&mcid=42383&medium=link", featured: true },
+      { category: "Full-Day Lima", title: "Lima in 1-Day Tour: Huaca Pucllana, Cathedral, Larco Museum", description: "A broader city-and-museum option for combining Lima’s civic centre with its archaeological and cultural collections.", href: "https://www.viator.com/tours/Lima/Lima-in-a-Day-City-Sightseeing-Tour-Larco-Museum-and-Magic-Water-Circuit/d928-5243LIMDAY?pid=P00295455&mcid=42383&medium=link" },
+    ]} />
+    <Beat>But the road is ever onward.</Beat>
+  </div>
+
+  <AtAGlance id="full-itinerary" title="The Full Itinerary at a Glance" meta={[
+    { label: "Trip", value: "Three nights in Lima, moving through the historic centre, Barranco, Miraflores, archaeological sites and museums." },
+    { label: "Duration", value: "3 days / 3 nights" },
+    { label: "Country", value: "Peru" },
+    { label: "Base", value: "Jesús María" },
+    { label: "Travelled", value: "September 2026" },
+  ]} days={[
+    { num: "Day 1", text: "Historic Centre — San Francisco, Plaza Mayor, Cathedral, Santo Domingo and Las Nazarenas" },
+    { num: "Day 2", text: "Barranco + Miraflores — Bridge of Sighs, coast, Huaca Pucllana, Huaca Huallamarca and Larco Museum" },
+    { num: "Day 3", text: "Central Lima museums + Kennedy Park + onward travel" },
+  ]}>
+    <div class="itin-section-head">Budget Snapshot — Planning Estimate</div>
+    <p class="itin-meta">Budget figures are indicative planning averages for Lima based on current traveller-reported costs and vary with accommodation, food, transport and sightseeing choices. Major admissions are not included.</p>
+    <div class="grand-total-block"><div class="grand-total-grid"><div class="grand-line"><strong>Accommodation</strong>~A$75/night</div><div class="grand-line"><strong>Food daily</strong>~A$45–50</div><div class="grand-line"><strong>Transport</strong>~A$9/day</div><div class="grand-line"><strong>Daily total</strong>~A$135–140</div></div><div class="grand-total-num">Estimated Lima budget: ~A$405–420</div></div>
+    <div class="itin-section-head">Quick Reference — Best Eats</div>
+    <div class="eats-row"><span class="eats-city">Historic Centre</span><span><strong>Cevichería Barra Maretazo</strong> — dinner after Day 1.</span></div>
+    <div class="eats-row"><span class="eats-city">Barranco</span><span><strong>El Cacaotal</strong> — first stop of the coastal-neighbourhood day.</span></div>
+    <div class="eats-row"><span class="eats-city">Miraflores</span><span><strong>Restaurant Huaca Pucllana</strong> — dinner after the archaeology and museum sequence.</span></div>
+    <div class="eats-row"><span class="eats-city">Miraflores</span><span><strong>El Merlin de Cabo Blanco</strong> — lunch on the final full day.</span></div>
+    <div class="itin-section-head">Getting Around</div>
+    <div class="transport-note"><strong>Historic Centre:</strong> Walk the compact civic and religious core.</div><div class="transport-note"><strong>Barranco:</strong> Walk between the Bridge of Sighs, Bajada de Baños, park and museums.</div><div class="transport-note"><strong>Between districts:</strong> Use current taxis, ride-hailing or public transport for longer connections and allow traffic margin.</div><div class="transport-note"><strong>Onward:</strong> Leave time for the airport and the onward journey to Cusco.</div>
+  </AtAGlance>
+
+  <section class="faq-block" aria-labelledby="lima-faq-title"><div class="faq-inner"><div class="faq-title" id="lima-faq-title">Frequently Asked Questions</div>{faqItems.map((item) => (<div class="faq-item"><div class="faq-q">{item.question}</div><div class="faq-a">{item.answer}</div></div>))}</div></section>
+
+  <div class="next-chronicles"><div class="section-label">Next Chronicles</div><div class="posts-grid">
+    <a class="post-card chronicle-card" href="/best-things-to-do-in-lima/"><div class="post-region">Peru · Lima</div><div class="post-title">Best Things to Do in Lima</div><div class="post-excerpt">The city’s strongest experiences, from the historic centre and Barranco to the Pacific edge, archaeological sites and museums.</div><div class="post-meta">READ CHRONICLE</div></a>
+    <a class="post-card chronicle-card" href="/barranco-to-miraflores-lima/"><div class="post-region">Peru · Lima</div><div class="post-title">Barranco to Miraflores</div><div class="post-excerpt">A coastal-neighbourhood day through Barranco’s bridges and museums, Miraflores and the Pacific edge.</div><div class="post-meta">READ CHRONICLE</div></a>
+    <a class="post-card chronicle-card" href="/2-days-in-machu-picchu-itinerary/"><div class="post-region">Peru · Machu Picchu</div><div class="post-title">2 Days in Machu Picchu</div><div class="post-excerpt">A two-night mountain stage through Aguas Calientes, Machu Picchu and Huayna Picchu.</div><div class="post-meta">READ CHRONICLE</div></a>
+  </div></div>
+
+  <script is:inline>
+    (() => {
+      const slots = [...document.querySelectorAll('.lima-day-support-slot')];
+      const article = document.querySelector('.lima-post-body');
+      if (!article) return;
+      for (const slot of slots) {
+        const target = [...article.querySelectorAll('h2')].find((heading) => heading.textContent?.trim().startsWith(slot.dataset.before || ''));
+        if (target) target.insertAdjacentElement('beforebegin', slot);
+      }
+    })();
+  </script>
+</BaseLayout>

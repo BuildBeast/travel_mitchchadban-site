@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/barranco-to-miraflores-lima.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
+
+const title = "Barranco to Miraflores: Lima Coastal Route — There & Back Again";
+const description = "A first-hand mixed route through Barranco and Miraflores in Lima, from street art and architecture to the cliffs and Pacific coast.";
+const canonical = "https://travel.mitchchadban.com/barranco-to-miraflores-lima/";
+const image = "/images/3-days-in-lima-itinerary/lima-barranco-street-art-1200w.jpg";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Barranco to Miraflores: Exploring Lima’s Coastal Neighbourhoods",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Barranco to Miraflores", item: canonical },
+      ],
+    },
+  ],
+};
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="coastal-lima-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru · Lima ·&nbsp;<span>September 2026</span></div>
+    <h1 id="coastal-lima-title" class="post-hero-title"><em>Barranco to Miraflores:</em><br />Exploring Lima’s Coastal Neighbourhoods</h1>
+    <p class="post-hero-sub">A mixed day from painted streets and low-rise neighbourhoods to cliffs, palms and the Pacific.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Districts</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Coast</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Day</span></div>
+    </div>
+  </section>
+
+  <article class="post-body south-america-post-body coastal-lima-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through Lima"
+      cards={[
+        { href: "/best-things-to-do-in-lima/", region: "Peru · Lima", title: "Best Things to Do in Lima", excerpt: "A first-visit guide through the Historic Centre, Barranco, the Pacific coast, archaeology and museums.", cta: "READ CHRONICLE" },
+        { href: "/huaca-pucllana-lima/", region: "Peru · Lima", title: "Huaca Pucllana", excerpt: "A closer look at the pre-Hispanic ceremonial centre surviving inside modern Miraflores.", cta: "READ CHRONICLE" },
+        { href: "/3-days-in-lima-itinerary/", region: "Peru · Lima", title: "3 Days in Lima: Complete Itinerary", excerpt: "The full route through historic, coastal and archaeological Lima.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="coastal-lima-overview-slot">
+    <AtAGlance
+      id="coastal-lima-glance"
+      title="Barranco to Miraflores at a Glance"
+      meta={[
+        { label: "Best starting point", value: "Barranco, where streets, public space, architecture and museums reward several hours on foot." },
+        { label: "Best transition", value: "Move between the districts however best protects the day. The value is not in walking every metre between them." },
+        { label: "Best coastal stretch", value: "Miraflores, especially Love Park and the Malecón above the Pacific." },
+        { label: "Best overall approach", value: "Barranco first, Miraflores second. Let the day move from enclosed neighbourhood scale to open coastal scale." },
+      ]}
+      daysHeading="Four Parts of the Day"
+      days={[
+        { num: "Barranco Streets", detail: "Bridge of Sighs · Bajada · Architecture", text: "Begin at street level, where Barranco’s character comes from low-rise buildings, public spaces, painted walls and the descent towards the coast." },
+        { num: "Cultural Barranco", detail: "Museums · Art · Houses", text: "Choose one strong cultural stop rather than filling the morning with interiors. Museo Pedro de Osma is the clearest established anchor." },
+        { num: "The Transition", detail: "Walk · Taxi · Rideshare · Flexibility", text: "There is no prize for walking every metre. Protect the time that matters in each district and use transport when it improves the day." },
+        { num: "Miraflores Coast", detail: "Love Park · Malecón · Pacific", text: "The city opens above the cliffs. Parks, paths and ocean replace Barranco’s tighter street scale with a broad coastal edge." },
+      ]}
+    />
+  </div>
+
+  <div class="coastal-lima-decision-slot">
+    <Practical place="Lima — Barranco to Miraflores" detail="Neighbourhood · coast · full day" detailIcon="🚶">
+      <PracticalSection label="Shortest route to a great day" level={3}>
+        <div class="prac-item"><strong>Morning</strong> — Give Barranco several hours for the Bridge of Sighs, Bajada de Baños, surrounding streets and one museum if wanted.</div>
+        <div class="prac-item"><strong>Midday</strong> — Transfer between districts when it makes sense rather than forcing an uninterrupted walk.</div>
+        <div class="prac-item"><strong>Afternoon</strong> — Start again on foot around Love Park and continue along the Miraflores Malecón.</div>
+        <div class="prac-item"><strong>If time remains</strong> — Add Huaca Pucllana later, but only if Barranco and the coast have already had enough room.</div>
+      </PracticalSection>
+      <PracticalSection label="What each district does best" level={3}>
+        <div class="prac-item"><strong>Neighbourhood atmosphere:</strong> Barranco.</div>
+        <div class="prac-item"><strong>Architecture and cultural stops:</strong> Barranco.</div>
+        <div class="prac-item"><strong>Pacific views:</strong> Miraflores.</div>
+        <div class="prac-item"><strong>Cliff-top walking:</strong> Miraflores.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not rush Barranco.</strong> The neighbourhood loses its value if the whole visit becomes a Bridge of Sighs photo stop.</div>
+        <div class="tip-row"><strong>Do not make the transfer the challenge.</strong> Walking every metre between districts is optional, not the point of the day.</div>
+        <div class="tip-row"><strong>Do not overload the museum time.</strong> One Barranco museum is enough for most first visits.</div>
+        <div class="tip-row"><strong>Keep Huaca Pucllana optional.</strong> It is a strong continuation, but not at the cost of cutting short Barranco or the Malecón.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.coastal-lima-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.coastal-lima-overview-slot');
+      const decision = document.querySelector('.coastal-lima-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'Can you walk from Barranco to Miraflores?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="barranco-to-miraflores-lima" />
+</BaseLayout>

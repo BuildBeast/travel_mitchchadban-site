@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/parque-das-aves-foz-do-iguacu.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
+
+const title = "Parque das Aves, Foz do Iguaçu: Is It Worth Visiting? | There & Back Again";
+const description = "A first-hand visit to Parque das Aves in Foz do Iguaçu, a conservation-focused Atlantic Forest bird park beside the Brazilian side of Iguazú Falls.";
+const canonical = "https://travel.mitchchadban.com/parque-das-aves-foz-do-iguacu/";
+const image = "/images/iguazu-falls-in-2-days/iguazu-parque-das-aves-sign-1200w.jpg";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Parque das Aves, Foz do Iguaçu: Is It Worth Visiting?",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Parque das Aves, Foz do Iguaçu", item: canonical },
+      ],
+    },
+  ],
+};
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="parque-das-aves-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Brazil · Foz do Iguaçu ·&nbsp;<span>September 2026</span></div>
+    <h1 id="parque-das-aves-title" class="post-hero-title"><em>Parque das Aves, Foz do Iguaçu:</em><br />Is It Worth Visiting?</h1>
+    <p class="post-hero-sub">Two hours among birds after the Brazilian side of Iguazú Falls.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Hours</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Bird Park</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Brazil</span></div>
+    </div>
+  </section>
+
+  <article class="post-body south-america-post-body parque-das-aves-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Further Reading"
+      cards={[
+        { href: "/iguazu-falls-in-2-days/", region: "Argentina · Brazil · Iguazú", title: "Iguazú Falls in 2 Days", excerpt: "A two-day sequence through the Argentine and Brazilian sides of the waterfall system.", cta: "READ CHRONICLE" },
+        { href: "/iguazu-falls-argentina-vs-brazil/", region: "Argentina · Brazil · Iguazú", title: "Iguazú Falls: Argentina vs Brazil", excerpt: "A practical comparison of immersion on the Argentine side and the broad Brazilian panorama.", cta: "READ CHRONICLE" },
+        { href: "/24-days-in-south-america-itinerary/", region: "South America · Argentina & Brazil", title: "24 Days in South America", excerpt: "The wider journey across South America, including the Iguazú stage between Argentina and Brazil.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="parque-das-aves-overview-slot">
+    <AtAGlance
+      id="parque-das-aves-glance"
+      title="Parque das Aves at a Glance"
+      meta={[
+        { label: "Best for", value: "A wildlife and conservation counterpoint after the Brazilian side of Iguazú Falls." },
+        { label: "Time needed", value: "Around two hours is a good working allowance, with longer possible for a slower visit." },
+        { label: "Best pairing", value: "Brazilian Cataratas trail first, Parque das Aves afterwards." },
+        { label: "Best reason to go", value: "The day changes scale from waterfalls and gorge to birds, forest and individual animals." },
+      ]}
+      daysHeading="Four Parts of the Visit"
+      days={[
+        { num: "The Setting", detail: "Beside Iguazú · Atlantic Forest · Easy pairing", text: "The park sits beside the Brazilian national-park entrance, making it a natural continuation rather than a separate city excursion." },
+        { num: "The Aviaries", detail: "Birds · Butterflies · Hummingbirds", text: "Immersive enclosures bring the subject close after a morning spent looking across enormous landscapes." },
+        { num: "The Conservation Story", detail: "Atlantic Forest · Native species · Education", text: "The park works best when understood as a conservation institution with a public trail, not simply a collection of animal displays." },
+        { num: "The Afternoon", detail: "~2 hours · Slower pace · Change of scale", text: "Give the park enough time to feel like its own experience rather than a hurried add-on after the falls." },
+      ]}
+    />
+  </div>
+
+  <div class="parque-das-aves-decision-slot">
+    <Practical place="Foz do Iguaçu — Parque das Aves" detail="Wildlife · forest · 2 hours" detailIcon="🦜">
+      <PracticalSection label="Shortest route to a decision" level={3}>
+        <div class="prac-item"><strong>If the falls are your only priority</strong> — Do the Brazilian Cataratas trail first and add Parque das Aves only if the day has enough room.</div>
+        <div class="prac-item"><strong>If wildlife matters</strong> — Parque das Aves is one of the strongest additions to the Brazil-side day.</div>
+        <div class="prac-item"><strong>If you have a full day</strong> — Falls first, then Parque das Aves. Add Macuco Safari only if the schedule still has breathing room.</div>
+        <div class="prac-item"><strong>If time is tight</strong> — Prioritise the falls. The bird park earns its place when the day can hold both properly.</div>
+      </PracticalSection>
+      <PracticalSection label="What the park does best" level={3}>
+        <div class="prac-item"><strong>Wildlife:</strong> Close-range bird and animal encounters.</div>
+        <div class="prac-item"><strong>Conservation:</strong> Atlantic Forest species and environmental context.</div>
+        <div class="prac-item"><strong>Pacing:</strong> A slower counterpoint after the falls.</div>
+        <div class="prac-item"><strong>Logistics:</strong> Easy pairing with the Brazilian national-park entrance.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not treat it as another falls viewpoint.</strong> Its value is the change of subject.</div>
+        <div class="tip-row"><strong>Allow more than the bare minimum.</strong> Around two hours gives the trail and aviaries room to breathe.</div>
+        <div class="tip-row"><strong>Do not automatically add Macuco Safari.</strong> It is a separate attraction and can make the Brazil day considerably denser.</div>
+        <div class="tip-row"><strong>Check current opening and ticket information.</strong> Hours, prices and visitor arrangements can change.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.parque-das-aves-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.parque-das-aves-overview-slot');
+      const decision = document.querySelector('.parque-das-aves-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('After the Falls'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'How Long to Allow');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="parque-das-aves-foz-do-iguacu" />
+</BaseLayout>

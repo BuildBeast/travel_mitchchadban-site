@@ -1,0 +1,235 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/2-days-in-machu-picchu-itinerary.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Beat from "../../components/chronicle/Beat.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import TourRecommendations from "../../components/chronicle/TourRecommendations.astro";
+import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import "../../styles/south-america-article.css";
+
+const title = "2 Days in Machu Picchu: Aguas Calientes Itinerary — There & Back Again";
+const description = "A first-hand two-night Machu Picchu and Aguas Calientes itinerary, with the archaeological park, town, Butterfly Zoo and the rail journey kept in a clear sequence.";
+const canonical = "https://travel.mitchchadban.com/2-days-in-machu-picchu-itinerary/";
+const image = "/images/24-days-in-south-america-itinerary/machu-picchu-mountain-panorama-1200w.jpg";
+const PROVENANCE = { photography: true };
+
+const faqItems = [
+  { question: "Is two nights enough for Machu Picchu and Aguas Calientes?", answer: "Yes. Two nights give arrival its own evening, leave a full day for Huayna Picchu and Aguas Calientes, and allow a separate early visit to Machu Picchu before the return train." },
+  { question: "Do you need a separate ticket for Huayna Picchu?", answer: "Yes. Huayna Picchu is a separate mountain route and requires its own availability and ticket alongside Machu Picchu entry. Check current official circuits, entry windows and identification requirements before booking." },
+  { question: "How far in advance should you book Machu Picchu?", answer: "Book as early as practical through the official Machu Picchu ticket platform, especially if you want a particular circuit, entry window or Huayna Picchu date. Availability and current entry rules should be checked before arranging rail and accommodation." },
+  { question: "Is Aguas Calientes worth staying in?", answer: "Yes, if the aim is to give Machu Picchu more than a single rushed excursion. Two nights let the rail town hold the arrival, meals, market and hot springs while the mountain and archaeological park remain separate parts of the stay." },
+  { question: "Can you visit Machu Picchu and return to Cusco in one day?", answer: "Yes, but it makes the day tightly dependent on the rail timetable. This itinerary used an early Machu Picchu visit, a 1:07pm return train from Aguas Calientes and a 10:00pm Cusco-to-La Paz bus, so the train and onward connection needed to be treated as fixed parts of the day." },
+];
+
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Article", headline: "2 Days in Machu Picchu and Aguas Calientes", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
+    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "2 Days in Machu Picchu and Aguas Calientes", item: canonical } ] },
+    { "@type": "FAQPage", mainEntity: faqItems.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+  ],
+}, PROVENANCE);
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+  <section class="post-hero" aria-labelledby="machu-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru ·&nbsp;<span>Machu Picchu</span>&nbsp;· September 2026</div>
+    <h1 id="machu-title" class="post-hero-title"><em>2 Days in Machu Picchu</em><br />and Aguas Calientes</h1>
+    <p class="post-hero-sub">A two-night journey that keeps the mountain citadel and the town below it in the same frame.</p>
+    <div class="post-stats"><div class="stat"><span class="stat-num">2</span><span class="stat-label">Nights</span></div><div class="stat"><span class="stat-num">1</span><span class="stat-label">Town base</span></div><div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div><div class="stat"><span class="stat-num">Peru</span><span class="stat-label">Country</span></div></div>
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: true })} />
+  </section>
+
+  <article class="post-body south-america-post-body machu-post-body"><ArticleContent /></article>
+
+  <div class="machu-day-support-slots" aria-label="Day-by-day practical planning">
+    <div class="machu-day-support-slot" data-before="II. Day Two">
+      <Practical place="Aguas Calientes — Day 1" detail="Arrival · rail town orientation" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>Mapacho Craft Beer Restaurant</strong> — arrival-night dinner after the 7:04pm rail arrival.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>PeruRail</strong> — the recorded journey reached Aguas Calientes from Cusco/Wanchaq at 7:04pm on 13 September.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Town orientation</strong> — use the first evening for the market, railway and the mountain setting below the archaeological park.</div>
+          <div class="prac-item"><strong>Light arrival</strong> — keep Machu Picchu and Huayna Picchu for their separate reserved days.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Aguas Calientes Day 1 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Aguas Calientes — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$85–130/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$50</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$45/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$175–180</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Keep arrival light.</strong> The first evening is better used to orientate around the town than to force in a mountain visit.</div>
+          <div class="tip-row"><strong>Check live rail details.</strong> Current schedules and boarding arrangements should be confirmed close to travel.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Aguas Calientes experiences" tours={[
+        { category: "Machu Picchu Guided Visit", title: "Machu Picchu Guided Tour with Local Expert", description: "A guided Machu Picchu visit with pickup in Aguas Calientes, local coordination and a service matched to the circuit on the entry ticket.", href: "https://www.viator.com/tours/Cusco/1-Day-Short-Inca-Trail-Trek-to-Machu-Picchu/d937-5615253P1?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Private Mountain Visit", title: "Machu Picchu and Huayna Picchu Private Guided Service", description: "A private Machu Picchu and Huayna Picchu experience beginning in Aguas Calientes, with transport and ticket inclusions varying by selected option.", href: "https://www.viator.com/tours/Sacred-Valley/MACHUPICCHU-AND-HUAYNA-PICCHU-FULL-DAY-PRIVAT-GUIDED-SERVICE/d4928-117644P5?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Private Guide", title: "Machu Picchu Private Tour Guide Service", description: "A private guide service from Aguas Calientes for a circuit-based visit to the citadel; confirm entry and transport inclusions before booking.", href: "https://www.viator.com/tours/Cusco/Machu-Picchu-private-guided-tour-from-Aguas-Calientes/d937-66100P22?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="machu-day-support-slot" data-before="III. Day Three Morning">
+      <Practical place="Aguas Calientes — Day 2" detail="Huayna Picchu · town below" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>La Cafetería @ El MaPi by Inkaterra</strong> — the recorded midday food stop after Huayna Picchu, Butterfly Zoo and the market.</div>
+          <div class="prac-item"><strong>Full House Machupicchu Restaurant</strong> — the recorded evening meal after the hot springs.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Early mountain movement</strong> — the recorded Huayna Picchu sequence began at Puente Ruinas and reached the mountain between 6:17am and 9:47am.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Huayna Picchu</strong> — the separate mountain experience above the citadel.</div>
+          <div class="prac-item"><strong>Butterfly Zoo</strong> — a one-hour lower-valley stop after the mountain.</div>
+          <div class="prac-item"><strong>Market and hot springs</strong> — the recorded afternoon sequence back in Aguas Calientes.</div>
+        </PracticalSection>
+        <PracticalSection label="Booking Ahead">
+          <div class="prac-item"><strong>Separate mountain access</strong> — book Huayna Picchu availability alongside the Machu Picchu entry rather than treating it as an add-on.</div>
+          <div class="prac-item"><strong>Current rules</strong> — check the official circuit, entry window, identification and ticket requirements before travel.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Aguas Calientes Day 2 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Aguas Calientes — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$85–130/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$50</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$45/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$175–180</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Start early.</strong> The mountain entry and the walk to the access area shape the whole day.</div>
+          <div class="tip-row"><strong>Leave room after the hike.</strong> The Butterfly Zoo, market, hot springs and meals were separate parts of the recorded afternoon.</div>
+          <div class="tip-row"><strong>Keep the mountain ticket separate in your planning.</strong> It is not covered simply by having a Machu Picchu entry.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Huayna Picchu experiences" tours={[
+        { category: "Huayna Picchu", title: "Machu Picchu and Huayna Picchu Full-Day Private Guided Service", description: "A private mountain-and-citadel experience from Aguas Calientes, with options for tickets, buses and trains selected at booking.", href: "https://www.viator.com/tours/Sacred-Valley/MACHUPICCHU-AND-HUAYNA-PICCHU-FULL-DAY-PRIVAT-GUIDED-SERVICE/d4928-117644P5?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Circuit-Based Visit", title: "Machu Picchu Circuit 2 Entrance Ticket with Guided Tour", description: "A circuit-based guided visit with official entry and local guide, subject to current ticket availability and the route assigned at booking.", href: "https://www.viator.com/en-GB/tours/Sacred-Valley/Machu-Picchu-Circuit-2-Entrance-Ticket-with-Guided-Tour/d4928-5615253P10?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Local Expert", title: "Machu Picchu Guided Tour with Local Expert", description: "A shorter guided service from Aguas Calientes for travellers arranging the mountain and citadel as separate parts of the stay.", href: "https://www.viator.com/tours/Cusco/1-Day-Short-Inca-Trail-Trek-to-Machu-Picchu/d937-5615253P1?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="machu-day-support-slot" data-before="The Mountain and the Town">
+      <Practical place="Machu Picchu — Day 3" detail="Early park visit · return rail" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>La Boulangerie de París Machupicchu</strong> — the recorded coffee, crêpes and gelato stop after the early park visit.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Return rail</strong> — the recorded sequence left Aguas Calientes at 1:07pm, reached Wanchaq later that afternoon and continued to the 10:00pm Cusco-to-La Paz bus.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Machu Picchu archaeological park</strong> — the recorded early visit ran from 5:02am to 8:02am, with the citadel, terraces and ridge as the final mountain stage.</div>
+        </PracticalSection>
+        <PracticalSection label="Booking Ahead">
+          <div class="prac-item"><strong>Protect the onward connection.</strong> Check the live rail ticket and current park entry conditions before fixing the final morning.</div>
+          <div class="prac-item"><strong>Official ticketing</strong> — use the current Ministry of Culture platform and verify the circuit and entry window assigned to the booking.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Machu Picchu Day 3 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Machu Picchu — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$85–130/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$50</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$45/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$175–180</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Leave early.</strong> The park visit belongs at the start of the day, not in the space left over after the train.</div>
+          <div class="tip-row"><strong>Keep the train fixed.</strong> Return to Aguas Calientes with enough time for bags, food and the 1:07pm departure.</div>
+          <div class="tip-row"><strong>Protect Cusco.</strong> The return rail and the 10:00pm overnight bus to La Paz are connected stages of the same day.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Machu Picchu park experiences" tours={[
+        { category: "Private Guide", title: "Machu Picchu Private Tour Guide Service", description: "A circuit-based private guide service from Aguas Calientes for the archaeological park; confirm the entry and transport details before booking.", href: "https://www.viator.com/tours/Cusco/Machu-Picchu-private-guided-tour-from-Aguas-Calientes/d937-66100P22?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Small Group", title: "Small-Group Guide Service in Machu Picchu from Aguas Calientes", description: "A small-group visit with local guiding, a circuit-based route and time to continue independently after the main tour.", href: "https://www.viator.com/tours/Sacred-Valley/Private-guide-service-in-Machu-Piccchu/d4928-29542P8?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Full-Day Rail Stage", title: "Machu Picchu Full Day from Cusco", description: "A full-day rail-and-guided option for travellers who need to compress Cusco, the mountain and the return journey into one day.", href: "https://www.viator.com/tours/Cusco/Machu-Picchu-Day-Tour/d937-19945P3?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+  </div>
+
+  <section class="post-closing">
+    <div class="narrative">
+      <div class="prose">
+        <p>Machu Picchu was the destination, but Aguas Calientes was where the two-night itinerary actually lived. The town received the railway, held the market and hot springs, made room for Huayna Picchu, and then returned the traveller to the tracks below the citadel.</p>
+        <p>The mountain was not a single viewpoint. It was a sequence of levels: rail town, steep ridge, Inca terraces, town again, then the road through Cusco towards Bolivia. Two nights give each level enough time to become part of the same journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <AtAGlance id="full-itinerary" title="The Full Itinerary at a Glance" meta={[
+    { label: "Trip", value: "Two nights in Aguas Calientes with Huayna Picchu and Machu Picchu across three calendar days." },
+    { label: "Duration", value: "2 nights / 3 calendar days" },
+    { label: "Country", value: "Peru" },
+    { label: "Travelled", value: "September 2026" },
+  ]} days={[
+    { num: "13 September", text: "Rail arrival in Aguas Calientes, town orientation and arrival night." },
+    { num: "14 September", text: "Huayna Picchu, Butterfly Zoo, market, hot springs and town." },
+    { num: "15 September", text: "Early Machu Picchu, return train to Cusco, onward overnight bus towards La Paz." },
+  ]}>
+    <div class="itin-section-head">Budget Snapshot — Planning Estimate</div>
+    <p class="itin-meta">Budget figures are indicative planning averages based on current Machu Picchu traveller costs and vary with accommodation, food and sightseeing choices.</p>
+    <div class="grand-total-block">
+      <div class="grand-total-grid">
+        <div class="grand-line"><strong>Accommodation</strong>~A$85–130/night</div>
+        <div class="grand-line"><strong>Food daily</strong>~A$50</div>
+        <div class="grand-line"><strong>Transport</strong>~A$45/day</div>
+        <div class="grand-line"><strong>Daily total</strong>~A$175–180</div>
+      </div>
+      <div class="grand-total-num">Estimated Machu Picchu stay budget: ~A$350–360</div>
+    </div>
+    <div class="itin-section-head">Quick Reference — Best Eats</div>
+    <div class="eats-row"><span class="eats-city">Aguas Calientes</span><span><strong>Mapacho Craft Beer Restaurant</strong> — arrival-night dinner.</span></div>
+    <div class="eats-row"><span class="eats-city">Aguas Calientes</span><span><strong>La Cafetería @ El MaPi by Inkaterra</strong> — recorded midday food stop.</span></div>
+    <div class="eats-row"><span class="eats-city">Aguas Calientes</span><span><strong>Full House Machupicchu Restaurant</strong> — recorded evening meal.</span></div>
+    <div class="eats-row"><span class="eats-city">Aguas Calientes</span><span><strong>La Boulangerie de París Machupicchu</strong> — final-morning coffee, crêpes and gelato stop.</span></div>
+    <div class="itin-section-head">Getting Around</div>
+    <div class="transport-note"><strong>Cusco/Wanchaq to Aguas Calientes:</strong> PeruRail formed the recorded rail approach.</div>
+    <div class="transport-note"><strong>Aguas Calientes to Machu Picchu:</strong> The recorded visits used the early walk to the access area; check current local access and entry arrangements.</div>
+    <div class="transport-note"><strong>Huayna Picchu:</strong> Treat the mountain as separate ticketed access within the official Machu Picchu system.</div>
+    <div class="transport-note"><strong>Return and onward:</strong> Return rail reached Wanchaq before the 10:00pm Transzela bus from Cusco towards La Paz.</div>
+  </AtAGlance>
+
+  <section class="faq-block" aria-labelledby="machu-faq-title">
+    <div class="faq-inner">
+      <div class="faq-title" id="machu-faq-title">Frequently Asked Questions</div>
+      {faqItems.map((item) => (
+        <div class="faq-item"><div class="faq-q">{item.question}</div><div class="faq-a">{item.answer}</div></div>
+      ))}
+    </div>
+  </section>
+
+  <div class="next-chronicles">
+    <div class="section-label">Next Chronicles</div>
+    <div class="posts-grid">
+      <a class="post-card chronicle-card" href="/huayna-picchu-hike/"><div class="post-region">Peru · Machu Picchu</div><div class="post-title">Huayna Picchu Hike</div><div class="post-excerpt">A practical account of the steep mountain route above Machu Picchu, with the entry window and climb kept in view.</div><div class="post-meta">READ CHRONICLE</div></a>
+      <a class="post-card chronicle-card" href="/aguas-calientes-beyond-machu-picchu/"><div class="post-region">Peru · Machu Picchu</div><div class="post-title">Aguas Calientes Beyond Machu Picchu</div><div class="post-excerpt">The rail town, market, hot springs and lower valley that make the mountain stage more than a single entrance.</div><div class="post-meta">READ CHRONICLE</div></a>
+      <a class="post-card chronicle-card" href="/cusco-to-la-paz-overnight-bus/"><div class="post-region">Peru → Bolivia</div><div class="post-title">Cusco to La Paz Overnight Bus</div><div class="post-excerpt">The overland hinge after Machu Picchu, crossing from Cusco towards Bolivia by night.</div><div class="post-meta">READ CHRONICLE</div></a>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const slots = [...document.querySelectorAll('.machu-day-support-slot')];
+      const article = document.querySelector('.machu-post-body');
+      if (!article) return;
+      for (const slot of slots) {
+        const target = [...article.querySelectorAll('h2')].find((heading) => heading.textContent?.trim().startsWith(slot.dataset.before || ''));
+        if (target) target.insertAdjacentElement('beforebegin', slot);
+      }
+    })();
+  </script>
+</BaseLayout>

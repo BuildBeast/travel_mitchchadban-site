@@ -1,0 +1,270 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqByPage: Record<string, FAQItem[]> = {
+  'best-things-to-do-in-santiago': [
+    { question: 'How many days do you need in Santiago?', answer: 'One day can cover the civic centre, Vega Central and one viewpoint. Three or four days make the contrast between markets, museums, parks, neighbourhoods and elevated views easier to enjoy without turning every stop into a race.' },
+    { question: 'What should you do first in Santiago?', answer: 'Begin around La Moneda, the Metropolitan Cathedral and the central streets. That civic route gives the city its formal starting point before the day moves towards Vega Central, museums, parks or the viewpoints.' },
+    { question: 'Which Santiago viewpoint is best?', answer: 'San Cristóbal gives the clearest sense of the basin and mountain geography, Santa Lucía keeps the historic centre close, and Sky Costanera shows the broadest built skyline. They are different perspectives rather than interchangeable versions of the same view.' },
+    { question: 'How should you combine Santiago museums?', answer: 'Choose one or two collections that genuinely interest you and leave room for the surrounding streets or Parque Forestal. The museums work better as part of a district-based day than as a checklist of isolated interiors.' },
+    { question: 'Is Vega Central worth visiting?', answer: 'Yes, especially if the aim is to see Santiago beyond its civic buildings. The market changes the scale of the day from monuments and institutions to produce, movement and the working city nearby.' },
+  ],
+  'santiago-viewpoints': [
+    { question: 'Which Santiago viewpoint is best for a first visit?', answer: 'San Cristóbal is the strongest first choice when the main question is where Santiago sits against its hills and the Andes. Santa Lucía suits a central-city day, while Sky Costanera gives the widest urban panorama.' },
+    { question: 'Can you visit all three Santiago viewpoints in one day?', answer: 'It is possible to arrange them across a full sightseeing day, but they work better when treated as distinct perspectives rather than three identical stops. Plan the movement between them and check current access before fixing the sequence.' },
+    { question: 'Is San Cristóbal or Santa Lucía better?', answer: 'San Cristóbal provides the larger geographic reading, with the city set against its mountain edge. Santa Lucía is more compact and central, making it the better fit when the historic centre already anchors the day.' },
+    { question: 'Is Sky Costanera worth adding?', answer: 'Sky Costanera is useful when the desired view is the scale of the built city rather than the immediate historic centre or foothills. It complements rather than replaces San Cristóbal or Santa Lucía.' },
+    { question: 'What should you check before visiting Santiago viewpoints?', answer: 'Check current opening hours, ticketing and any funicular, cable-car or lift operations before travel. Access arrangements can change, and the three viewpoints do not share one booking or operating system.' },
+  ],
+  'best-things-to-do-in-mendoza': [
+    { question: 'What are the best things to do in Mendoza beyond wine?', answer: 'Start with central Mendoza, Parque General San Martín and Cerro de la Gloria. Together they show the planned city, its public landscape and the foothill edge before a separate wine-country day changes the setting.' },
+    { question: 'How many days do you need in Mendoza?', answer: 'One day can cover the centre, park and Cerro de la Gloria in a focused sequence. Two city-focused days allow more time for San Vicente Park and the university area, while a third day can belong to wine country or another excursion.' },
+    { question: 'Can Mendoza be worthwhile without visiting wineries?', answer: 'Yes. The city has a distinct identity in its streets, tree-lined public spaces, parks and foothill landmarks, so the wineries do not need to carry the whole visit.' },
+    { question: 'What is the best area to stay in Mendoza?', answer: 'A central base is the most useful for this guide because it keeps the streets, parks and civic spaces within reach and makes the city easier to read on foot. Choose a location that also makes the separate wine day or onward transport practical.' },
+    { question: 'Should wine country be combined with Mendoza city?', answer: 'It is usually clearer to give wine country its own day. Trying to combine bodegas with the city parks and Cerro de la Gloria makes both halves denser and leaves less time for the city that exists beyond the vineyards.' },
+  ],
+  'mendoza-beyond-wine': [
+    { question: 'What can you do in Mendoza beyond wine?', answer: 'Walk central Mendoza, spend time in Parque General San Martín, visit Cerro de la Gloria and allow room for the city edge around San Vicente Park. These places form a coherent city visit rather than filler between winery bookings.' },
+    { question: 'How long should you spend exploring Mendoza city?', answer: 'Give the city at least one full day if its parks, public spaces and foothill landmarks matter. A second city day allows a slower pace and more walking before wine country becomes a separate stage.' },
+    { question: 'Is Parque General San Martín worth visiting?', answer: 'Yes. The park is the clearest expression of Mendoza’s spacious green structure and helps explain the city as a planned landscape rather than only a base for vineyard tours.' },
+    { question: 'How do you fit Cerro de la Gloria into a Mendoza visit?', answer: 'Treat Cerro de la Gloria as the city-edge part of the day, alongside the park and wider transition towards the foothills. It is better placed in a city-and-landscape sequence than squeezed into a central walking loop.' },
+    { question: 'Does Mendoza need a separate wine day?', answer: 'A separate wine day is the cleanest arrangement when wine is part of the trip. It lets the city’s parks and monuments retain their own rhythm instead of competing with bodegas and longer transfers.' },
+  ],
+  'aguas-calientes-beyond-machu-picchu': [
+    { question: 'Is Aguas Calientes worth staying in beyond Machu Picchu?', answer: 'Yes, when the mountain is given more than a rushed day trip. The town holds the rail arrival, market, Butterfly House, hot springs and meals, giving the Machu Picchu stage a lower, more ordinary layer.' },
+    { question: 'How many nights should you spend in Aguas Calientes?', answer: 'Two nights worked for the recorded journey because arrival, the mountain visits and the town’s smaller activities could remain separate. The right length depends on rail timings and the Machu Picchu entry window you secure.' },
+    { question: 'What can you do in Aguas Calientes besides Machu Picchu?', answer: 'Walk the compact town, visit the market, consider the Butterfly House and use the hot springs as a slower recovery activity. These are additions around the mountain, not replacements for the archaeological park.' },
+    { question: 'How should you plan rail timings in Aguas Calientes?', answer: 'Protect the fixed rail and park-entry windows first, then fit town activities around them. Exact rail timings vary, so check the current operator and timetable close to travel.' },
+    { question: 'Is Aguas Calientes a destination or only a base?', answer: 'It is both a practical base and a place with its own scale. The railway, market and valley setting make it worth walking through properly, even though Machu Picchu remains the main reason for the stay.' },
+  ],
+  'huayna-picchu-hike': [
+    { question: 'How difficult is the Huayna Picchu hike?', answer: 'It is better understood as a serious mountain route than as a gentle walk to a viewpoint, though it is not technical mountaineering. The article focuses on the stone trail, stairs, vegetation and changing views without inventing undocumented physical symptoms or recovery.' },
+    { question: 'Do you need a separate Huayna Picchu ticket?', answer: 'Yes. Huayna Picchu access is separate from ordinary Machu Picchu entry and depends on the circuit and entry window available at booking. Check the current official ticket rules before arranging rail and accommodation.' },
+    { question: 'How early should you book Huayna Picchu?', answer: 'Book as early as practical if Huayna Picchu is central to the visit, because mountain-entry availability is limited and tied to specific entry arrangements. Confirm the current official system rather than relying on an old ticket format.' },
+    { question: 'How long does the Huayna Picchu visit take?', answer: 'The recorded route occupies a morning block, but the article does not turn that historical sequence into a universal duration. Allow margin for the access movement, the mountain route and the return to the wider Machu Picchu visit.' },
+    { question: 'Is Huayna Picchu worth adding to a Machu Picchu itinerary?', answer: 'It is worthwhile for travellers who want a separate mountain route and a more vertical reading of the setting. It should be added only when the ticket, entry window and broader park visit can be kept distinct.' },
+  ],
+  'cusco-to-la-paz-overnight-bus': [
+    { question: 'How long is the Cusco to La Paz overnight bus?', answer: 'The recorded Transzela journey left Cusco at 10:00pm and reached La Paz at 1:00pm the following day, an approximately fifteen-hour overland stage. Current schedules and operators should be checked before booking.' },
+    { question: 'Is the Cusco to La Paz overnight bus worth taking?', answer: 'For this traveller, yes. The recorded service was comfortable, allowed substantial sleep and made the border crossing part of the overland journey rather than a separate airport process.' },
+    { question: 'Which operator was used for the journey?', answer: 'The recorded ticket names Transzela. That is a historical trip detail, not a guarantee that the same service, timetable or booking conditions will apply to a future journey.' },
+    { question: 'What should you check before crossing the border by bus?', answer: 'Check the current operator, ticketing instructions, passport and entry requirements for your nationality, and allow margin for border processing. The article records one journey but is not a substitute for current immigration guidance.' },
+    { question: 'What is the bus journey like compared with flying?', answer: 'The bus takes longer, but it turns the border and changing landscape into part of the route and avoids an airport connection. Choose it when the overland experience and a night journey matter more than speed.' },
+  ],
+  'la-paz-markets': [
+    { question: 'Which La Paz market should you visit first?', answer: 'Witches’ Market fits naturally with a first central walk around Plaza Murillo and the older streets. Mercado Rodríguez gives a different market scale and belongs to the later route through everyday food and produce.' },
+    { question: 'Are Witches’ Market and Mercado Rodríguez the same experience?', answer: 'No. Witches’ Market is a specialist cultural and commercial district in the historic centre, while Mercado Rodríguez is a working market with a broader everyday rhythm. The recorded itinerary kept them on separate days.' },
+    { question: 'How much time do La Paz markets need?', answer: 'Allow enough time to walk the market area without treating it as a quick photo stop, then protect the rest of the day for the surrounding route. Exact opening patterns and activity can vary, so check current local information.' },
+    { question: 'Can La Paz markets be combined with other sights?', answer: 'Witches’ Market combines naturally with Plaza Murillo and central La Paz. Mercado Rodríguez can sit within a day that continues to museums or cable cars, but avoid stacking distant attractions without allowing for the city’s geography.' },
+    { question: 'What should you watch out for in La Paz markets?', answer: 'Keep normal urban precautions, secure phones and bags, and treat current opening hours, prices and local conditions as changeable. The markets are best approached as working parts of the city rather than staged attractions.' },
+  ],
+  'best-things-to-do-in-la-paz': [
+    { question: 'How many days do you need in La Paz?', answer: 'Three days can combine the historic centre, markets, museums, cable cars, Hernando Siles Stadium and Valle de la Luna without treating the city as one continuous walk. The exact pace depends on altitude, transport and the amount of time given to each district.' },
+    { question: 'What should you do first in La Paz?', answer: 'Begin with Plaza Murillo and the Witches’ Market, then use Mi Teleférico to understand the city’s vertical geography. A first day should leave room for easy movement rather than trying to cross every district on foot.' },
+    { question: 'Is Mi Teleférico worth doing in La Paz?', answer: 'Yes. It is both transport and a way to read the city from above, linking neighbourhoods that feel very different at street level. Check current lines, stations, fares and operating conditions before relying on it for a timed connection.' },
+    { question: 'What is the best La Paz day trip?', answer: 'Valle de la Luna provides a nearby landscape contrast, while a longer archaeological excursion such as Tiwanaku belongs to a separate full day. Choose according to the time available rather than treating every excursion as essential.' },
+    { question: 'How should altitude affect a La Paz itinerary?', answer: 'Altitude shaped the recorded plan, so the practical approach is to keep early movement manageable, use cable cars where helpful and avoid overloading the first day. The article does not claim personal altitude symptoms or prescribe medical advice.' },
+  ],
+  'mi-teleferico-la-paz': [
+    { question: 'Is Mi Teleférico worth using as a visitor?', answer: 'Yes. The cable cars are useful for moving through La Paz and provide a distinct view of the city’s basin, slopes and neighbourhoods. They make the geography legible in a way that a street-only route cannot.' },
+    { question: 'Is Mi Teleférico transport or a sightseeing attraction?', answer: 'It is both. The recorded journeys formed part of the city’s movement between markets, museums and viewpoints, while the elevated route itself supplied one of the clearest perspectives on La Paz.' },
+    { question: 'How many cable-car lines should you ride?', answer: 'Choose the lines that support the day’s actual route rather than collecting journeys for their own sake. Current line operations, stations, fares and closures should be checked before building a precise sequence.' },
+    { question: 'Can Mi Teleférico replace walking in La Paz?', answer: 'It reduces some uphill or cross-city movement, but it does not replace walking around the historic centre, markets or individual neighbourhoods. Use it as a bridge between districts and keep the ground-level visits distinct.' },
+    { question: 'What should you check before using Mi Teleférico?', answer: 'Check current operating hours, line status, station arrangements and fares close to travel. The recorded article preserves the journeys and perspectives, not a permanent fare table or timetable.' },
+  ],
+  'valle-de-la-luna-la-paz': [
+    { question: 'Is Valle de la Luna worth visiting from La Paz?', answer: 'Yes, if the itinerary has room for a nearby landscape that changes the subject from city streets to eroded formations. It works as a compact contrast within a La Paz stay rather than as a replacement for the city itself.' },
+    { question: 'How much time should you allow at Valle de la Luna?', answer: 'The recorded visit provides a useful historical shape but not a universal duration. Allow enough time for the walking route and transfers, then check the current operator, ticketing and access details before travel.' },
+    { question: 'How do you get to Valle de la Luna?', answer: 'The supplied trip record does not settle one current operator or exact transfer arrangement. Confirm the live transport option, entry conditions and return plan rather than treating an old itinerary detail as permanent.' },
+    { question: 'Can Valle de la Luna be combined with La Paz city sights?', answer: 'It can fit with a wider La Paz day if the transfers are kept realistic, but the formations are outside the central walking sequence. Avoid combining it with too many distant stops simply to fill one day.' },
+    { question: 'What should you bring or check for the visit?', answer: 'Wear practical shoes for the walking route and check current weather, access and opening information close to travel. The visit is about the landscape and path, so keep the schedule flexible enough for transfers.' },
+  ],
+  'best-things-to-do-in-lima': [
+    { question: 'How many days do you need in Lima?', answer: 'Three nights allow a balanced first visit across the Historic Centre, Barranco, Miraflores and Lima’s archaeological museums. The city is too spread out to treat as one long walk, so build days around districts and use transport between them.' },
+    { question: 'What should you do first in Lima?', answer: 'The Historic Centre is the clearest first introduction to colonial and civic Lima. Pair it on another day with Barranco, Miraflores, Huaca Pucllana, Huallamarca or Museo Larco according to the balance of coast, neighbourhoods and archaeology you want.' },
+    { question: 'Is Lima worth visiting beyond the Historic Centre?', answer: 'Yes. Barranco and Miraflores provide the coastal and neighbourhood layer, while Huaca Pucllana, Huallamarca and Museo Larco show how much older Lima is than its colonial centre.' },
+    { question: 'How should you get around Lima sightseeing areas?', answer: 'Walk within each district, then use vehicle transfers between the Historic Centre, coastal neighbourhoods and archaeological sites. A day planned as separate clusters is more useful than assuming every major stop is close enough to connect on foot.' },
+    { question: 'What should you check before visiting Lima attractions?', answer: 'Check current opening days, tickets, restaurant arrangements and transport conditions close to travel. Museum and archaeological-site access can change, so do not build a tight schedule around an old timetable.' },
+  ],
+  'lima-historic-centre-san-francisco-catacombs': [
+    { question: 'How much time does Lima’s Historic Centre need?', answer: 'Allow a connected half-day for Plaza Mayor, San Francisco, Santo Domingo, Las Nazarenas and the surrounding civic streets. The route works through relationships between the sites rather than as a race between isolated interiors.' },
+    { question: 'Are the San Francisco catacombs confirmed in this guide?', answer: 'The church and Historic Centre route are supported, but the surviving record does not securely establish the exact catacomb entry, ticket, queue or underground sequence. Check current official access before planning the visit around it.' },
+    { question: 'Can you walk between the main Historic Centre sights?', answer: 'The immediate historic core is best read on foot, with Plaza Mayor and the principal churches forming a connected route. Use current local transport information if the day extends beyond the central area.' },
+    { question: 'What should you combine with Lima’s Historic Centre?', answer: 'Keep the first route focused, then pair the city centre on another day with Barranco, Miraflores or an archaeological site. Trying to add distant coastal districts to the same walking sequence makes the day less coherent.' },
+    { question: 'What should you check before visiting the churches and museums?', answer: 'Check current opening hours, entry arrangements, religious closures and any photography restrictions before travel. Access can differ between the Basilica of San Francisco, the Cathedral, Santo Domingo and other central sites.' },
+  ],
+  'barranco-to-miraflores-lima': [
+    { question: 'Can you walk from Barranco to Miraflores?', answer: 'The recorded day connected the two districts, but it should be treated as a neighbourhood sequence rather than a measured promise of one uninterrupted walk. Start in Barranco, use the bridges and Bajada de Baños, then allow proper time for the Miraflores coast.' },
+    { question: 'How much time do you need for Barranco and Miraflores?', answer: 'A full day gives the route room for Barranco’s museums and streets, the coastal walking route and an archaeological or museum continuation. Shorter visits should choose one district properly rather than compressing every stop.' },
+    { question: 'What should you see in Barranco?', answer: 'The Bridge of Sighs, Bajada de Baños, Barranco Municipal Park, Museo Mario Testino and Museo Pedro de Osma form the strongest recorded cluster. Choose one museum rather than trying to collect every interior.' },
+    { question: 'How should you plan the coast between Barranco and Miraflores?', answer: 'Protect enough time for the Pacific-facing walking sections around the Malecón, Love Park and Puente Eduardo Villena Rey. Transport between districts is acceptable when it preserves the coastal portion instead of consuming the day.' },
+    { question: 'Is Huaca Pucllana part of the same route?', answer: 'It is an optional archaeological continuation rather than a compulsory part of the Barranco-to-Miraflores walk. Add it when the day’s interest is archaeology, and check current entry arrangements before fixing the sequence.' },
+  ],
+  'huaca-pucllana-lima': [
+    { question: 'Is Huaca Pucllana worth visiting?', answer: 'Yes, especially when the aim is to see pre-Hispanic Lima inside the modern city. The adobe platforms, museum and surrounding Miraflores streets make the archaeological past part of the neighbourhood rather than an excursion beyond it.' },
+    { question: 'How long do you need at Huaca Pucllana?', answer: 'Around one to one and a half hours works for a focused visit, with more time possible for a longer guided circuit or the exhibition space. The exact visit depends on current access and the pace of the route.' },
+    { question: 'What is the best way to combine Huaca Pucllana?', answer: 'Pair it with Barranco or the Miraflores coast, then continue to Huallamarca or Museo Larco only if the day is genuinely built around archaeology. It does not need to be surrounded by every other museum to justify the visit.' },
+    { question: 'What does Huaca Pucllana show?', answer: 'The site shows Lima-culture adobe architecture, stepped platforms and later Wari and Ychsma use. The museum and archaeological circuit work together by connecting the physical structure with objects and cultural phases.' },
+    { question: 'What should you check before visiting Huaca Pucllana?', answer: 'Check current opening days, entry prices, last admission and guided-visit arrangements close to travel. The official listing and visit format can change, so avoid relying on an old schedule.' },
+  ],
+  'iguazu-falls-argentina-vs-brazil': [
+    { question: 'Which side of Iguazú Falls is better?', answer: 'Argentina is the stronger choice for immersion, circuits and changing viewpoints, while Brazil provides the grand panorama and a compact falls route. The better side depends on whether the priority is moving through the system or seeing it whole.' },
+    { question: 'Do you need to visit both sides of Iguazú Falls?', answer: 'If two full sightseeing days are available, yes. Argentina explains the parts through Garganta del Diablo, the Upper Circuit and the Lower Circuit; Brazil shows how those parts belong together across the gorge.' },
+    { question: 'Can you visit both sides in one day?', answer: 'The article is based on separate country-side days and does not recommend compressing them into one. Border movement, park access and the different shapes of the two visits are easier to manage when each side has its own day.' },
+    { question: 'Is Argentina or Brazil better for photography?', answer: 'Brazil is stronger for one broad panorama across river, forest and falls. Argentina offers more varied photographs because the circuits change distance, elevation and relationship to the water.' },
+    { question: 'What should you check before crossing the Iguazú border?', answer: 'Check current entry requirements for both countries, passport and visa rules for your nationality, transport arrangements and any park-access notices. Border conditions and walkway access can change, so leave margin rather than relying on a fixed crossing time.' },
+  ],
+  'parque-das-aves-foz-do-iguacu': [
+    { question: 'Is Parque das Aves worth visiting after Iguazú Falls?', answer: 'Yes, when the Brazil-side day has room for a second subject. The park changes the scale from waterfalls and gorge to birds, forest and individual animals, while its conservation focus gives the visit purpose beyond a quick wildlife add-on.' },
+    { question: 'How long should you allow at Parque das Aves?', answer: 'Around two hours is a useful working allowance for the trail, aviaries and smaller wildlife areas. The park’s own guidance can support shorter or longer visits, so protect margin if it is one of the reasons for making the stop.' },
+    { question: 'Can Parque das Aves and the Brazilian falls be visited together?', answer: 'Yes. The park sits beside the Brazilian national-park entrance, making the Cataratas trail first and Parque das Aves afterwards the most natural sequence. Macuco Safari is a separate addition and can make the day considerably denser.' },
+    { question: 'Is Parque das Aves a zoo or a conservation park?', answer: 'It is best understood as a conservation institution with a public trail, immersive aviaries and environmental education. The article keeps the focus on Atlantic Forest species and the change from large landscape to close wildlife observation.' },
+    { question: 'What should you check before visiting Parque das Aves?', answer: 'Check current opening hours, ticket prices, access arrangements and visitor information close to travel. Those details can change, especially when the park is being combined with the Brazilian falls day.' },
+  ],
+  'best-things-to-do-in-buenos-aires': [
+    { question: 'How many days do you need in Buenos Aires?', answer: 'One day can cover the civic and cultural centre, while three days allow separate time for Recoleta and Palermo and the southern districts. Five nights make it easier to slow the museums down, add tango and keep Colonia as a separate day trip.' },
+    { question: 'What should you do first in Buenos Aires?', answer: 'Start with Plaza de Mayo, the Obelisk, Teatro Colón and El Ateneo for a compact introduction to the city’s civic and cultural centre. Add Recoleta only when the day has enough room for the move north.' },
+    { question: 'Which Buenos Aires neighbourhoods should you prioritise?', answer: 'Recoleta suits museums and monuments, San Telmo the older market streets and tango history, Puerto Madero the redeveloped waterfront, La Boca port and football identity, and Palermo parks and longer walks. The useful choice is the contrast you want next, not a universal ranking.' },
+    { question: 'Should you visit Colonia del Sacramento from Buenos Aires?', answer: 'Colonia works as a separate day-trip decision when the stay has enough time. Keep its old quarter, waterfront and crossing logistics distinct from the Buenos Aires neighbourhood sequence and check current ferry details before travel.' },
+    { question: 'How should you plan tango in Buenos Aires?', answer: 'A formal dinner-and-show and a milonga are different experiences. Choose the format deliberately: one is an arranged performance evening, while the other belongs more to the social life of the dance.' },
+  ],
+  'buenos-aires-neighbourhoods': [
+    { question: 'Which Buenos Aires neighbourhood is best for a first visit?', answer: 'Start with the Historic Centre or Monserrat for Plaza de Mayo, Congress and the civic core, then add Recoleta for museums and monumental architecture. Palermo is the most flexible base for several nights, while the southern districts work better as planned visits.' },
+    { question: 'Which Buenos Aires neighbourhood is best to stay in?', answer: 'Palermo is the broadest all-round base because it combines parks, restaurants and access to the rest of the city. Recoleta suits museums and formal architecture, while San Telmo suits older streets and market-led days.' },
+    { question: 'How many Buenos Aires neighbourhoods should you visit in one day?', answer: 'Two substantial neighbourhoods are usually enough. Three can work when the stops are close and transfers are simple, but the city becomes clearer when each district has enough time to feel distinct.' },
+    { question: 'Which Buenos Aires neighbourhoods pair well?', answer: 'Historic Centre and Recoleta make a civic and cultural day; San Telmo and Puerto Madero connect older markets to the redeveloped waterfront; La Boca and San Telmo form a southern history route; Palermo and Recoleta suit parks, sculpture and museums.' },
+    { question: 'Should La Boca be used as a base?', answer: 'It is better treated as a planned daytime visit than as the default base. Keep the main tourist precinct, arrange transport directly to and from it, and check current official advice because local conditions can change.' },
+  ],
+  'plaza-de-mayo-buenos-aires': [
+    { question: 'How much time do you need at Plaza de Mayo?', answer: 'Allow two to three hours for the square and immediate Historic Centre. A half day works better if the route continues along Avenida de Mayo towards Palacio Barolo and Congress or includes several interiors.' },
+    { question: 'Can you visit Plaza de Mayo and Congress together?', answer: 'Yes. Avenida de Mayo creates a natural civic axis from the executive square towards Plaza del Congreso, with Manzana de las Luces or Palacio Barolo fitting as extensions when the day has room.' },
+    { question: 'What should you see around Plaza de Mayo?', answer: 'Read Plaza de Mayo, Casa Rosada, the Metropolitan Cathedral, Cabildo and Pirámide de Mayo together. Their relationship is more useful than treating each building as a separate photograph.' },
+    { question: 'Is Plaza de Mayo worth visiting?', answer: 'Yes. It brings colonial government, Catholic authority, executive power, revolutionary memory and public assembly into one open urban space, giving the wider Buenos Aires itinerary a civic starting point.' },
+    { question: 'What should you check before visiting Plaza de Mayo?', answer: 'Check current access, opening hours and visitor arrangements for Casa Rosada, Cabildo, the Cathedral and Manzana de las Luces individually. Demonstrations, ceremonies or closures can also affect the square and nearby streets.' },
+  ],
+  '3-days-in-seville': [
+    { question: 'How many days do you need in Seville?', answer: 'Three days give a first visit room for the cathedral and Giralda, the Alcázar, Plaza de España, the old centre and at least one slower neighbourhood or food-led route. The order matters less than leaving space between the major interiors.' },
+    { question: 'What should you do first in Seville?', answer: 'Begin with the historic centre and its major monuments, then use the later days for Triana, María Luisa Park, Plaza de España and the city’s food and neighbourhood texture. Keep the first morning focused rather than crossing the whole city.' },
+    { question: 'Can you visit the Alcázar and Cathedral on the same day?', answer: 'Yes, their proximity makes them a natural pair, but both deserve protected time. Add the Giralda and surrounding streets without treating the interiors as quick checklist stops.' },
+    { question: 'Where should you eat during three days in Seville?', answer: 'Keep meals close to the day’s neighbourhoods and use the route to move between different kinds of restaurant and tapas stop rather than searching for one definitive meal.' },
+    { question: 'What should you book ahead in Seville?', answer: 'Check current entry arrangements for the Alcázar, Cathedral and Giralda before fixing a tight schedule. Opening times, ticket systems and special access can change.' },
+  ],
+  'barcelona-food-guide': [
+    { question: 'What food should you try in Barcelona?', answer: 'Start with Catalan staples such as pa amb tomàquet, escalivada and esqueixada, then make room for markets, seafood, small plates and neighbourhood restaurants. Choose meals that fit the district and the pace of the day rather than treating the city as a fixed list of dishes.' },
+    { question: 'How many meals should you plan in Barcelona?', answer: 'Leave room for a real lunch, a later dinner and smaller stops between them. Barcelona’s food culture works through timing and repetition, so an over-packed sightseeing schedule can make the best meals harder to enjoy.' },
+    { question: 'Where should you eat in Barcelona?', answer: 'Choose by neighbourhood and keep meals close to the day’s route. The Gothic Quarter, Eixample, Gràcia, Barceloneta and the wider market circuit offer different kinds of meal, so location is part of the choice.' },
+    { question: 'Are Barcelona markets worth visiting?', answer: 'Yes, especially when treated as working food spaces rather than only photo stops. A market visit can supply breakfast, a snack or a way into the city’s everyday cooking before a more deliberate restaurant meal.' },
+    { question: 'Should you book Barcelona restaurants?', answer: 'Book the restaurants that matter most to the trip and keep less formal meals flexible. Opening hours, service patterns and availability vary, so check the current venue details close to travel.' },
+  ],
+  'best-areas-to-stay-in-barcelona': [
+    { question: 'What is the best area to stay in Barcelona?', answer: 'There is no single best area for every trip. The Gothic Quarter suits historic-centre access, Eixample gives a broad central base, Gràcia feels more residential, and Barceloneta or the waterfront suit travellers prioritising the coast.' },
+    { question: 'Is the Gothic Quarter a good base?', answer: 'It is useful for first access to the old city, Cathedral, Las Ramblas and nearby museums. Choose it when historic-centre walking matters most, while remembering that other parts of Barcelona will still require transport.' },
+    { question: 'Is Eixample better than the Gothic Quarter?', answer: 'Eixample is the more flexible base for a longer stay, with broad connections to the old centre, Gaudí sites and neighbourhood restaurants. The Gothic Quarter is more immediate for the historic core; the better choice depends on the shape of the days.' },
+    { question: 'Where should you stay for Barcelona beaches?', answer: 'Barceloneta and the waterfront keep the beach close, while other central districts can still reach it by walking or public transport. Choose the waterfront when the coast is a central part of the stay rather than an occasional excursion.' },
+    { question: 'How should you choose a Barcelona neighbourhood?', answer: 'Start with the places that anchor the itinerary, then choose the district that reduces the most repeated travel. A quieter residential area can work well if the traveller is comfortable using transport between clusters.' },
+  ],
+  'best-areas-to-stay-in-seville': [
+    { question: 'What is the best area to stay in Seville?', answer: 'Santa Cruz is strongest for immediate monument access, while the wider historic centre, Alameda, Triana, El Arenal and San Lorenzo each give a different balance of atmosphere, food and walking distance. Choose by the shape of the stay rather than a universal ranking.' },
+    { question: 'Is Santa Cruz a good base for Seville?', answer: 'Yes, especially for a first visit centred on the Cathedral, Giralda, Alcázar and historic lanes. It is the most direct choice for the major monuments, while other neighbourhoods may offer more space or a different evening rhythm.' },
+    { question: 'Should you stay in Triana or the historic centre?', answer: 'Triana works when the river, ceramics, market and neighbourhood identity are part of the appeal. The historic centre is more convenient for the main monuments. Both can work; the choice is between immediate access and a distinct district base.' },
+    { question: 'How many nights do you need in Seville?', answer: 'Three nights allow the main historic centre and at least one neighbourhood or day-trip extension. Longer stays make it easier to use the base properly rather than moving between monuments every day.' },
+    { question: 'What should you check before booking accommodation in Seville?', answer: 'Check the walking distance to the parts of the city that matter most, local access for luggage and current accommodation conditions. A central address is useful, but the nearest neighbourhood is not automatically the best fit.' },
+  ],
+  'best-day-trips-from-barcelona': [
+    { question: 'What are the best day trips from Barcelona?', answer: 'The strongest choices depend on the contrast wanted: Girona for historic streets, Montserrat for mountain and monastery, Sitges for the coast, and Figueres for the Dalí museum. The guide also places wider Catalan and coastal excursions within that broader choice.' },
+    { question: 'How many day trips should you take from Barcelona?', answer: 'One or two is usually enough during a short city stay. Each excursion uses transfer time, so adding every possible destination can leave too little time for Barcelona itself.' },
+    { question: 'Is Montserrat worth visiting from Barcelona?', answer: 'Yes, when the aim is to change the city scale for mountain landscape and the monastery. Protect the excursion as its own day and check current transport and access details before fixing the sequence.' },
+    { question: 'Can you visit Girona and Figueres in one day?', answer: 'They can be combined in a longer excursion, but the day becomes transfer-heavy and gives each place less room. Treat the combination as a deliberate choice rather than the default way to maximise stops.' },
+    { question: 'Do Barcelona day trips need to be booked ahead?', answer: 'Book fixed-entry attractions and organised excursions when they are central to the plan. Check current rail, bus, museum and attraction arrangements because schedules and ticketing can change.' },
+  ],
+  'best-day-trips-from-seville': [
+    { question: 'What are the best day trips from Seville?', answer: 'Córdoba is the strongest all-round choice, while Carmona, Cádiz, Jerez, Ronda, Aracena and the white villages suit different interests. Choose between historic monuments, coast, wine, hill towns or a change of landscape.' },
+    { question: 'Can you visit Córdoba as a day trip from Seville?', answer: 'Yes. Córdoba is a strong full-day extension when the Mezquita-Catedral and historic centre are priorities. Allow the transfer and enough time in the old city rather than treating it as a brief photo stop.' },
+    { question: 'Is Cádiz worth visiting from Seville?', answer: 'Cádiz provides a coastal counterpoint to Seville’s inland streets and monuments. Give it its own day when the Atlantic setting and historic peninsula matter more than adding another inland site.' },
+    { question: 'How many Seville day trips should you plan?', answer: 'One day trip fits comfortably into a short Seville stay; two can work on a longer visit. Keep at least enough time in Seville for the Cathedral, Alcázar, neighbourhoods and meals that make the city distinct.' },
+    { question: 'What should you check before a Seville day trip?', answer: 'Check current rail or bus schedules, attraction opening arrangements and the return connection before committing to a tight day. Organised excursions can simplify the logistics, but they should still match the time available.' },
+  ],
+  'best-things-to-do-in-barcelona': [
+    { question: 'How many days do you need in Barcelona?', answer: 'A short stay can focus on the old city, one or two Gaudí landmarks and a neighbourhood or food route. More days make room for parks, museums, the coast and day trips without reducing the city to a checklist.' },
+    { question: 'What should you do first in Barcelona?', answer: 'Begin with the historic centre or the district that contains the first fixed booking, then build outward through Gaudí, markets, parks and the coast. Barcelona makes more sense in neighbourhood clusters than as a line between distant attractions.' },
+    { question: 'Which Barcelona attractions should you book ahead?', answer: 'Prioritise timed-entry sites that anchor the day, especially major Gaudí interiors and other attractions with fixed admission. Check current official ticketing and opening arrangements before building the rest of the route.' },
+    { question: 'Is Barcelona better explored by neighbourhood?', answer: 'Yes. Grouping the old city, Eixample, Gràcia, the waterfront or Montjuïc keeps transport from taking over the day and lets each part of Barcelona retain its own character.' },
+    { question: 'Should you include a Barcelona day trip?', answer: 'Add one when the stay is long enough to preserve time for Barcelona itself. Montserrat, Girona, Sitges and Figueres each change the subject, but none should be added automatically to a short first visit.' },
+  ],
+  'best-things-to-do-in-seville': [
+    { question: 'What are the best things to do in Seville?', answer: 'Start with the Cathedral and Giralda, the Alcázar and the historic centre, then add Plaza de España, María Luisa Park, Triana, the river and a food-led neighbourhood route. The city is strongest when monuments and ordinary streets share the day.' },
+    { question: 'How many days do you need in Seville?', answer: 'Two days cover the main monuments at a brisk pace. Three or four days allow neighbourhoods, parks, food and a slower relationship with the historic centre.' },
+    { question: 'Can you visit Seville’s main monuments in one day?', answer: 'You can see the Cathedral, Giralda and Alcázar in one concentrated day if current entry times line up, but the route leaves little room for parks, markets or an unhurried meal. Treat it as an introduction rather than the complete city.' },
+    { question: 'What should you book ahead in Seville?', answer: 'Check current ticketing for the Alcázar, Cathedral and Giralda before travel. Fixed-entry monuments should anchor the day; the surrounding streets, parks and neighbourhoods can remain more flexible.' },
+    { question: 'Is Triana worth adding to a Seville itinerary?', answer: 'Yes, when the visit needs a district beyond the monumental centre. The river, market, ceramics and neighbourhood streets give the city a different register from the Cathedral and Alcázar route.' },
+  ],
+  'one-day-in-barcelona': [
+    { question: 'What is the best way to spend one day in Barcelona?', answer: 'Keep the day to a coherent route: choose one major timed attraction, connect it with the historic centre or a nearby neighbourhood, and leave room for a proper meal. The hour-by-hour plan works because it limits long cross-city jumps.' },
+    { question: 'Can you see Sagrada Família and Park Güell in one day?', answer: 'It is possible, but the transfer and fixed entry times make the day tighter. Add both only when the bookings line up and the traveller accepts that there will be less room for the old city, food or unscheduled walking.' },
+    { question: 'What should you book for one day in Barcelona?', answer: 'Book the timed-entry attraction that matters most before arranging the rest of the day. Check the current official times for Sagrada Família, Park Güell or any other chosen site.' },
+    { question: 'Where should you eat during one day in Barcelona?', answer: 'Choose food stops near the route rather than crossing the city for a single meal. A market, neighbourhood restaurant or planned lunch can support the day without turning the itinerary into a second transport exercise.' },
+    { question: 'Is one day enough for Barcelona?', answer: 'It is enough for a focused first impression, not for the whole city. Choose the contrast that matters most—historic centre, Gaudí, market, park or coast—and leave the rest for another visit.' },
+  ],
+  'one-day-in-seville': [
+    { question: 'What is the best one-day itinerary for Seville?', answer: 'Build the day around the Cathedral and Giralda, the Alcázar and the historic centre, then use the remaining hours for Plaza de España, María Luisa Park, Triana or a carefully chosen meal. Keep the route compact.' },
+    { question: 'Can you visit the Cathedral and Alcázar in one day?', answer: 'Yes, they are the natural anchors for a first day, but timed entry and queues determine how much else fits. Leave space around the visits rather than promising every major sight.' },
+    { question: 'Should you include Plaza de España on a one-day Seville visit?', answer: 'It is a strong addition when the day has room for the move south into María Luisa Park. Treat it as a change of setting after the old centre, not as another interior to collect.' },
+    { question: 'Where should you eat during one day in Seville?', answer: 'Keep the meal close to the route and use the recorded tapas or restaurant stops as practical anchors. A long cross-city detour can cost more time than the meal adds to the day.' },
+    { question: 'What should you book before one day in Seville?', answer: 'Check current access and timed tickets for the Alcázar, Cathedral and Giralda first. Once those are fixed, place the surrounding streets, park and meal around them.' },
+  ],
+  'seville-tapas-food-guide': [
+    { question: 'How does a tapas meal work in Seville?', answer: 'Move through the meal in small decisions: choose a bar or restaurant, order a few things, eat them properly and decide whether to continue. The guide treats tapas as a way of moving through the city rather than one oversized dinner.' },
+    { question: 'How many tapas bars should you visit in one night?', answer: 'Two or three well-chosen stops are usually more useful than trying to collect every famous address. Leave time for the food, the room and the walk between places.' },
+    { question: 'Where should you eat tapas in Seville?', answer: 'Choose tapas by neighbourhood and style, then keep the evening walkable. The best sequence is not necessarily the one with the most celebrated names.' },
+    { question: 'Do you need to book tapas restaurants in Seville?', answer: 'Book the restaurants that are central to the plan, especially for a larger group or a specific meal. Keep traditional bar stops flexible where possible and check current opening patterns.' },
+    { question: 'What should you avoid when planning a Seville food day?', answer: 'Do not turn the day into a list of dishes or restaurants separated by long transfers. Leave room for the city between meals, and let the neighbourhood determine the next stop.' },
+  ],
+  'the-imperial-circuit-morocco-in-14-days': [
+    { question: 'What is the route for the 14-day Morocco imperial circuit?', answer: 'The route runs Marrakech → Rabat → Fes → Tangier, with day trips and excursions including Aït Ben Haddou, Essaouira, Ouzoud, Chefchaouen and the northbound ferry onward to Tarifa.' },
+    { question: 'How many days should you spend in Marrakech on this route?', answer: 'The recorded circuit gives Marrakech the longest stage, with time for the medina, palaces, museums and several day trips. The city benefits from that room because the excursions change how the dense centre reads on return.' },
+    { question: 'How do you travel between the Moroccan cities?', answer: 'ONCF rail forms the backbone from Marrakech through Rabat and Fes to Tangier. Day trips use other transport, while walking and petit taxis handle movement within and around the medinas.' },
+    { question: 'Is Chefchaouen possible as a day trip from Tangier?', answer: 'Yes, the recorded route treats it as a full-day excursion from Tangier, with a long road journey in each direction. Protect the return connection and check current transport or tour arrangements before travel.' },
+    { question: 'How does the route continue from Tangier?', answer: 'The journey continues by ferry from Tangier-Med to Tarifa. Tangier-Med is outside the city, so allow transfer time to the port and check current ferry schedules before fixing the final morning.' },
+  ],
+};
+
+interface Props { page: string; }
+const { page } = Astro.props;
+const faqItems = faqByPage[page];
+if (!faqItems) throw new Error(`Missing ArticleFAQ record for ${page}`);
+const faqId = `${page}-faq`;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+---
+
+<section class="faq-block article-faq" aria-labelledby={faqId}>
+  <div class="faq-inner">
+    <div class="faq-title" id={faqId}>Frequently Asked Questions</div>
+    {faqItems.map((item) => (
+      <div class="faq-item">
+        <div class="faq-q">{item.question}</div>
+        <div class="faq-a">{item.answer}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<script is:inline>
+  (() => {
+    const faq = document.currentScript?.previousElementSibling?.previousElementSibling;
+    const next = document.querySelector('.next-chronicles');
+    if (faq && next && next.compareDocumentPosition(faq) & Node.DOCUMENT_POSITION_FOLLOWING) next.insertAdjacentElement('beforebegin', faq);
+  })();
+</script>

@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../content/santiago-viewpoints.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import { withProvenance } from "../../lib/provenance";
+import "../../styles/south-america-article.css";
+
+const title = "Santiago Viewpoints: Which View to Choose — There & Back Again";
+const description = "A first-hand comparison of Santiago viewpoints: San Cristóbal, Santa Lucía and Sky Costanera, and what each reveals about the city.";
+const canonical = "https://travel.mitchchadban.com/santiago-viewpoints/";
+const image = "/images/4-days-in-santiago-itinerary/santiago-skyline-mountain-backdrop-1200w.jpg";
+const PROVENANCE = { photography: true };
+
+const schema = withProvenance({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Santiago Viewpoints: San Cristóbal, Santa Lucía and Sky Costanera",
+      description,
+      author: { "@type": "Person", name: "Mitch Chadban" },
+      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      url: canonical,
+      inLanguage: "en-AU",
+      image: `https://travel.mitchchadban.com${image}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
+        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
+        { "@type": "ListItem", position: 3, name: "Santiago Viewpoints", item: canonical },
+      ],
+    },
+  ],
+}, PROVENANCE);
+
+const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
+  <Fragment slot="head" set:html={jsonLd} />
+
+  <section class="post-hero" aria-labelledby="santiago-viewpoints-title">
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Chile · Santiago ·&nbsp;<span>September 2026</span></div>
+    <h1 id="santiago-viewpoints-title" class="post-hero-title"><em>Santiago Viewpoints:</em><br />San Cristóbal, Santa Lucía and Sky Costanera</h1>
+    <p class="post-hero-sub">Three ways of reading the city from above.</p>
+    <div class="post-stats">
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Viewpoints</span></div>
+      <div class="stat"><span class="stat-num">4</span><span class="stat-label">Nights</span></div>
+      <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">City</span></div>
+    </div>
+  </section>
+
+  <article class="post-body south-america-post-body santiago-viewpoints-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through Santiago"
+      cards={[
+        { href: "/4-days-in-santiago-itinerary/", region: "Chile · Santiago", title: "4 Days in Santiago: Complete Itinerary", excerpt: "The full four-night sequence through Santiago’s civic centre, markets, museums, parks and viewpoints.", cta: "READ CHRONICLE" },
+        { href: "/best-things-to-do-in-santiago/", region: "Chile · Santiago", title: "Best Things to Do in Santiago", excerpt: "A first-visit guide through the civic centre, Vega Central, museums, parks, neighbourhoods and viewpoints.", cta: "READ CHRONICLE" },
+        { href: "/24-days-in-south-america-itinerary/", region: "South America · Chile", title: "24 Days in South America", excerpt: "The wider journey through Peru, Bolivia, Chile, Argentina and Uruguay.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="santiago-viewpoints-overview-slot">
+    <AtAGlance
+      id="viewpoints-glance"
+      title="The Three Viewpoints at a Glance"
+      meta={[
+        { label: "Best for geography", value: "San Cristóbal Hill, with Santiago set inside its basin and mountain edge." },
+        { label: "Best for the centre", value: "Santa Lucía Hill, where the historic streets and civic buildings stay close." },
+        { label: "Best for urban scale", value: "Sky Costanera, where the built city becomes a continuous field of blocks and towers." },
+        { label: "For a short visit", value: "Choose one viewpoint; add a second only when the contrast is worth the extra movement." },
+      ]}
+      daysHeading="Side by Side"
+      days={[
+        { num: "San Cristóbal Hill", detail: "Landscape and geography", text: "Santiago against its hills and the Andes. Choose it when the question is where the city sits." },
+        { num: "Santa Lucía Hill", detail: "A central-city view", text: "A closer urban perspective within the historic centre. Choose it when the day already belongs to central Santiago." },
+        { num: "Sky Costanera", detail: "Urban scale", text: "The built grid beneath the mountain edge. Choose it for the broadest reading of the city’s extent." },
+      ]}
+    />
+  </div>
+
+  <div class="santiago-viewpoints-decision-slot">
+    <Practical place="Santiago — Viewpoints" detail="Three perspectives" detailIcon="🧭">
+      <PracticalSection label="Shortest route to a decision" level={3}>
+        <div class="prac-item"><strong>One viewpoint</strong> — Choose San Cristóbal for the clearest geographic sense of Santiago, Santa Lucía for the central city, or Sky Costanera for the broadest built panorama.</div>
+        <div class="prac-item"><strong>Two viewpoints</strong> — Pair San Cristóbal and Sky Costanera when the contrast between landscape and urban scale matters most.</div>
+        <div class="prac-item"><strong>A central-city day</strong> — Choose Santa Lucía when the historic centre and civic buildings already shape the route.</div>
+      </PracticalSection>
+      <PracticalSection label="What each view does best" level={3}>
+        <div class="prac-item"><strong>San Cristóbal Hill:</strong> the basin, hills and Andes beyond the city.</div>
+        <div class="prac-item"><strong>Santa Lucía Hill:</strong> the historic centre and central streets kept close to the frame.</div>
+        <div class="prac-item"><strong>Sky Costanera:</strong> the continuous built grid and Santiago’s urban extent.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>The viewpoints are alternatives, not duplicates.</strong> Each one answers a different question about Santiago rather than repeating the same panorama.</div>
+        <div class="tip-row"><strong>Plan the movement.</strong> San Cristóbal needs more transport planning than Santa Lucía, while Santa Lucía fits naturally into a historic-centre day.</div>
+        <div class="tip-row"><strong>Check current access.</strong> Museum hours, funicular or cable-car operations, viewpoint access and Sky Costanera entry arrangements can change.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.santiago-viewpoints-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.santiago-viewpoints-overview-slot');
+      const decision = document.querySelector('.santiago-viewpoints-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const practical = headings.find((heading) => heading.textContent?.trim() === 'Practical planning');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && practical) practical.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="santiago-viewpoints" />
+</BaseLayout>
