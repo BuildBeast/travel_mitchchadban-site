@@ -1,6 +1,6 @@
 # SEO Relaunch Plan — There & Back Again
 
-_Audit date: 2026-06-24 · Site: https://travel.mitchchadban.com · Stack: Astro 6, content migrated from Cargo as raw HTML strings_
+_Audit date: 2026-06-24 · Site: https://there-and-back.mitchchadban.com · Stack: Astro 6, content migrated from Cargo as raw HTML strings_
 
 > ## ✅ Final launch pass 2026-06-27 (branch `final-launch-pass`)
 > Closes the remaining structural / a11y / deployment items on top of the 2026-06-24 SEO work.
@@ -71,13 +71,13 @@ _Audit date: 2026-06-24 · Site: https://travel.mitchchadban.com · Stack: Astro
 ## Plan
 
 ### Phase 1 — Foundation (one-time, highest leverage)
-1. Set `site: 'https://travel.mitchchadban.com'` in `astro.config.mjs`.
+1. Set `site: 'https://there-and-back.mitchchadban.com'` in `astro.config.mjs`.
 2. `npx astro add sitemap` → auto-generates `sitemap-index.xml` at build. Exclude utility/noindex pages via the integration's `filter`.
 3. Add `public/robots.txt`:
    ```
    User-agent: *
    Allow: /
-   Sitemap: https://travel.mitchchadban.com/sitemap-index.xml
+   Sitemap: https://there-and-back.mitchchadban.com/sitemap-index.xml
    ```
 4. Upgrade `BaseLayout.astro` to accept props and emit: unique `description`, `canonical`, full Open Graph (`og:title/description/image/type/url/site_name`), Twitter `summary_large_image` card, optional `noindex`, plus `apple-touch-icon` / `theme-color` / `initial-scale=1`. Add a `<slot name="head">` so pages can inject JSON-LD.
 

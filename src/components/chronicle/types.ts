@@ -6,7 +6,7 @@
  * built with `ChronicleLayout`.
  */
 
-export const SITE_URL = 'https://travel.mitchchadban.com';
+export const SITE_URL = 'https://there-and-back.mitchchadban.com';
 
 /** One crumb in the article's BreadcrumbList. `item` is a site-absolute path. */
 export interface Crumb {

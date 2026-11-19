@@ -3,7 +3,7 @@
 // Verifies the live production redirect contract, not just repository configuration.
 import fs from 'node:fs/promises';
 
-const BASE_URL = process.env.REDIRECT_VERIFY_BASE_URL || 'https://travel.mitchchadban.com';
+const BASE_URL = process.env.REDIRECT_VERIFY_BASE_URL || 'https://there-and-back.mitchchadban.com';
 const EXPECTED_RULE_COUNT = Number(process.env.EXPECTED_NORMALIZATION_REDIRECTS || 81);
 const config = JSON.parse(await fs.readFile(new URL('../vercel.json', import.meta.url), 'utf8'));
 

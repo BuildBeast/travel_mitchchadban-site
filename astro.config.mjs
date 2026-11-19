@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-const SITE = 'https://travel.mitchchadban.com';
+const SITE = 'https://there-and-back.mitchchadban.com';
 
 // Pages kept out of the sitemap (utility/placeholder routes).
 const SITEMAP_EXCLUDE = [

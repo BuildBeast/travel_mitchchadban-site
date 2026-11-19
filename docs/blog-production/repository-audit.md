@@ -30,7 +30,7 @@ _Audit run: 2026-07-29 · Repo: `/Users/mitchchadban/Desktop/travel-mitchchadban
 | Node engine | `>=22.12.0` | `package.json` |
 | Rendering | Fully static SSG. No adapter, no SSR, no islands, no UI framework integration | `astro.config.mjs` |
 | Integrations | `@astrojs/sitemap` only | `astro.config.mjs:19-23` |
-| Site URL | `https://travel.mitchchadban.com` | `astro.config.mjs:5` |
+| Site URL | `https://there-and-back.mitchchadban.com` | `astro.config.mjs:5` |
 | Trailing slash | `'always'` | `astro.config.mjs:18` |
 | **Content source of truth** | **None. There is no content layer.** No `src/content/`, no content collections, no `content.config.*`, no Markdown, no MDX, no JSON, no CMS, no database. | verified by full file listing of `src/` |
 | Chronicle file location | `src/pages/<slug>/index.astro` — one hand-authored `.astro` file per post | 26 post directories |
@@ -54,7 +54,7 @@ const jsonLd = '<script type="application/ld+json">' + JSON.stringify(schema) + 
 <BaseLayout
   title="10 Days in Sevilla: Andalucía Without Rush — There & Back Again"
   description="A 10-day Andalucía itinerary using Seville as a base…"
-  canonical="https://travel.mitchchadban.com/10-days-in-sevilla/"
+  canonical="https://there-and-back.mitchchadban.com/10-days-in-sevilla/"
   ogType="article"
 >
   <Fragment slot="head" set:html={jsonLd} />
@@ -187,7 +187,7 @@ I checked all 63 class names used by the existing Seville article against `globa
 |---|---|
 | Slug generation | **Manual.** The slug is the directory name under `src/pages/`. Nothing derives it from a title. |
 | Canonical generation | **Manual.** Each page hardcodes an absolute `canonical` prop. Nothing derives it from the route. |
-| Canonical correctness | Verified in `dist/` — all self-referential and correct, e.g. `dist/2-days-in-fez-itinerary/index.html` → `https://travel.mitchchadban.com/2-days-in-fez-itinerary/` |
+| Canonical correctness | Verified in `dist/` — all self-referential and correct, e.g. `dist/2-days-in-fez-itinerary/index.html` → `https://there-and-back.mitchchadban.com/2-days-in-fez-itinerary/` |
 | Trailing slash | `'always'` globally; every internal link and canonical uses it consistently |
 | Redirects | Host-level only, in `public/_redirects` (copied verbatim to `dist/_redirects`). 10 legacy accented/punctuation slugs + `/front-page/` → `/`. No `redirects:` block in `astro.config.mjs`. |
 | **Internal-link integrity** | **29 distinct internal links across all pages; 0 broken.** Every `href` resolves to a real route. Verified programmatically against the `src/pages/` directory listing. |

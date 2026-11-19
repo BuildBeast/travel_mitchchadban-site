@@ -11,7 +11,7 @@ import "../../styles/south-america-article.css";
 
 const title = "5 Days in Buenos Aires: Complete Itinerary — There & Back Again";
 const description = "A five-night Buenos Aires itinerary through the historic centre, Recoleta, Palermo, San Telmo, Puerto Madero, La Boca and an optional Colonia day trip.";
-const canonical = "https://travel.mitchchadban.com/5-days-in-buenos-aires-itinerary/";
+const canonical = "https://there-and-back.mitchchadban.com/5-days-in-buenos-aires-itinerary/";
 const image = "/images/5-days-in-buenos-aires-itinerary/buenos-aires-city-centre-1200w.jpg";
 const PROVENANCE = { photography: true };
 
@@ -26,8 +26,8 @@ const faqItems = [
 const schema = withProvenance({
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Article", headline: "5 Days in Buenos Aires: Complete Itinerary", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
-    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "5 Days in Buenos Aires: Complete Itinerary", item: canonical } ] },
+    { "@type": "Article", headline: "5 Days in Buenos Aires: Complete Itinerary", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://there-and-back.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://there-and-back.mitchchadban.com${image}` },
+    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://there-and-back.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://there-and-back.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "5 Days in Buenos Aires: Complete Itinerary", item: canonical } ] },
     { "@type": "FAQPage", mainEntity: faqItems.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
   ],
 }, PROVENANCE);

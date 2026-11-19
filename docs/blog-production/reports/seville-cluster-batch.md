@@ -16,7 +16,7 @@ Companion documents: [`../briefs/seville-cluster-cannibalisation.md`](../briefs/
 | 4 | `/best-day-trips-from-seville/` | Best Day Trips from Seville: Seven Assessed, Two Refused | `Best Day Trips from Seville — There & Back Again` (47) | `Seven excursions from Seville assessed by the shape of the day — Córdoba, Cádiz, Jerez, Itálica, Carmona, Granada and Ronda — including two that are not worth a day.` (165) |
 | 5 | `/seville-tapas-food-guide/` | Seville Tapas and Food Guide: How the City Eats, and When | `Seville Tapas and Food Guide — There & Back Again` (48) | `How eating in Seville actually works — the tapas system, the three sizes, the clock that ruins visitors' evenings, the markets, and what one documented stay ate.` (161) |
 
-Canonicals are all `https://travel.mitchchadban.com<path>` and were verified in the built HTML. "Seville" appears in every title, description, slug and H1. `/10-days-in-sevilla/` was not renamed.
+Canonicals are all `https://there-and-back.mitchchadban.com<path>` and were verified in the built HTML. "Seville" appears in every title, description, slug and H1. `/10-days-in-sevilla/` was not renamed.
 
 ## 2. Word counts, and an honest note on the target ranges
 

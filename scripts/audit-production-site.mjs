@@ -3,7 +3,7 @@
 import fs from 'node:fs/promises';
 import { load } from 'cheerio';
 
-const BASE_URL = process.env.SITE_AUDIT_BASE_URL || 'https://travel.mitchchadban.com';
+const BASE_URL = process.env.SITE_AUDIT_BASE_URL || 'https://there-and-back.mitchchadban.com';
 const ORIGIN = new URL(BASE_URL).origin;
 const failures = [];
 const warnings = [];

@@ -50,7 +50,7 @@ public/images/3-days-in-seville/parque-maria-luisa-pabellon-mudejar.jpg   DELETE
 | **H1** | 3 Days in Seville: Palace, River and Parasol |
 | **Title tag** | `3 Days in Seville Itinerary — There & Back Again` (48 chars) |
 | **Meta description** | `A three-day Seville route that avoids crossing the city twice — the Real Alcázar and the monumental core, Triana and the river, then Plaza de España and the Setas.` (161 chars) |
-| **Canonical** | `https://travel.mitchchadban.com/3-days-in-seville/` |
+| **Canonical** | `https://there-and-back.mitchchadban.com/3-days-in-seville/` |
 | **OG image** | `/images/3-days-in-seville/giralda-at-dusk.jpg` (landscape) |
 
 The earlier "built around what is actually open" phrasing was dropped as instructed. The replacement leads on the route's actual organising idea — not crossing the city twice — and names the three days' anchors in order. No banned language ("ultimate", "perfect", "must-see", "hidden gems", "you need to").
@@ -181,7 +181,7 @@ Plus scripted checks: MozJPEG encode-and-measure, `sips` dimension verification,
 | `npm run check` | 51 files, **6 errors — all pre-existing** in `Header.astro`/`RegionMap.astro`; **0 in new code** |
 | `npm run build` | **Passed, no errors, no warnings.** 32 pages (31 → 32) |
 | Route generated | `/3-days-in-seville/index.html` ✓ |
-| Canonical / trailing slash | `https://travel.mitchchadban.com/3-days-in-seville/` ✓ |
+| Canonical / trailing slash | `https://there-and-back.mitchchadban.com/3-days-in-seville/` ✓ |
 | Open Graph | `og:type=article`, absolute `og:url`, absolute landscape `og:image`, matching `twitter:image` ✓ |
 | Structured data | `Article` + `BreadcrumbList`; **no `FAQPage`**; no invented dates ✓ |
 | Headings | 1 × H1, 9 × H2, 7 × H3; valid outline ✓ |

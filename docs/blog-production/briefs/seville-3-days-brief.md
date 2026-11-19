@@ -30,7 +30,7 @@ Cornerstone duration itinerary. Research-led editorial guide with **sourced** fi
 | **Recommended slug** | `3-days-in-seville` → `/3-days-in-seville/` | — |
 | **`BaseLayout` `title` prop** | `3 Days in Seville Itinerary — There & Back Again` | 48 ✓ |
 | **Meta description** | `A three-day Seville itinerary built around what is actually open: the Alcázar first, Triana and the river, then the parks and the Setas at dusk.` | 144 ✓ |
-| **`canonical`** | `https://travel.mitchchadban.com/3-days-in-seville/` | — |
+| **`canonical`** | `https://there-and-back.mitchchadban.com/3-days-in-seville/` | — |
 | **`ogType`** | `article` | — |
 | **Primary keyword** | 3 days in Seville | — |
 | **Secondary terms** (restrained) | Seville itinerary · Real Alcázar tickets · Seville in three days · Triana · Plaza de España | — |

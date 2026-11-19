@@ -152,7 +152,7 @@ Explicitly **off-limits** — no evidence exists anywhere:
 | P3 | Catedral de Sevilla — notice: *modified hours due to Giralda belfry works* (published **7 June 2026**) | `https://www.catedraldesevilla.es/la-catedral-de-sevilla-modifica-los-horarios-de-la-visita-cultural-debido-a-las-obras-en-el-campanario-de-la-giralda/` | 2026-07-29 | Dated schedule blocks Jun–Aug 2026; no stated end date for the works |
 | P4 | Setas de Sevilla (Metropol Parasol) — official site | `https://www.setasdesevilla.com/en/` | 2026-07-29 | Ticket inclusions and headline price |
 | P5 | Casa de Pilatos — Fundación Casa Ducal de Medinaceli | `https://www.fundacionmedinaceli.org/en/monumentos/casa-de-pilatos/` | 2026-07-29 | Hours and two-tier pricing |
-| P6 | Live site check — Fez route | `https://travel.mitchchadban.com/2-days-in-fez-itinerary/` | 2026-07-29 | HTTP 200; title correct |
+| P6 | Live site check — Fez route | `https://there-and-back.mitchchadban.com/2-days-in-fez-itinerary/` | 2026-07-29 | HTTP 200; title correct |
 
 ### Attempted but **could not be opened** from this environment — must be verified before drafting
 
