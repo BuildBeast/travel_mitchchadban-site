@@ -13,7 +13,7 @@
  *     (see `prepareLegacyArticle`)
  */
 
-export const SITE_URL = 'https://travel.mitchchadban.com';
+export const SITE_URL = 'https://there-and-back.mitchchadban.com';
 
 /** Stable @id for the author. One node, referenced from every Article. */
 export const PERSON_ID = `${SITE_URL}/#mitch-chadban`;

@@ -279,7 +279,7 @@ function writeAstroPage({ slug, title, description, content }) {
   const outPath = pageOutPath(slug);
   ensureDir(path.dirname(outPath));
 
-  const canonical = `https://travel.mitchchadban.com/${slug ? `${slug}/` : ''}`;
+  const canonical = `https://there-and-back.mitchchadban.com/${slug ? `${slug}/` : ''}`;
   const layoutImport = relativeLayoutImport(outPath).replaceAll(path.sep, '/');
 
   const astro = `---
