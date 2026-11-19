@@ -1,18 +1,47 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ArticleContent from "../../content/3-days-in-mendoza-itinerary.md";
-import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleContent from '../../content/3-days-in-mendoza-itinerary.md';
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import TourRecommendations from '../../components/chronicle/TourRecommendations.astro';
+import { provenanceHtml, withProvenance } from '../../lib/provenance';
+import '../../styles/south-america-article.css';
 
-const title = "3 Days in Mendoza: Complete Itinerary — There & Back Again";
-const description = "A first-hand three-day Mendoza itinerary balancing parks, city streets, foothill landmarks and a recorded wine-country route.";
-const canonical = "https://travel.mitchchadban.com/3-days-in-mendoza-itinerary/";
-const image = "/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1200w.jpg";
+const title = '3 Days in Mendoza: Complete Itinerary — There & Back Again';
+const description = 'A first-hand three-day Mendoza itinerary covering the city, Parque General San Martín, the foothill edge and a separate day in wine country.';
+const canonical = 'https://travel.mitchchadban.com/3-days-in-mendoza-itinerary/';
+const image = '/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1200w.jpg';
 const PROVENANCE = { photography: true };
+const faqItems = [
+  {
+    question: 'Is three days enough for Mendoza?',
+    answer: 'Yes, if the days are kept distinct: an arrival and city day, a foothill day, and a full day in wine country. The bus from Santiago makes the first afternoon partial, while 26 September is departure morning rather than a fourth sightseeing day.',
+  },
+  {
+    question: 'How many days should you spend in Mendoza wine country?',
+    answer: 'Give wine country a full day. The recorded visit spread producers across 24 and 25 September, but the itinerary works best when the vineyards are treated as a separate destination rather than squeezed around the city.',
+  },
+  {
+    question: 'Can you visit Mendoza without doing a wine tour?',
+    answer: 'Yes. Central Mendoza, Parque General San Martín, the university area, Cerro de la Gloria and San Vicente Park form a substantial city-and-foothill visit on their own. Wine country is a separate layer, not the only reason to stay.',
+  },
+  {
+    question: 'What is the best way to get around Mendoza wineries?',
+    answer: 'Use a pre-arranged tour, transfer or other transport that keeps the day between wineries organised. The recorded route included bike hire on 24 September, but the named wine-country stops on 25 September were reached by a separate arrangement; do not assume every producer belongs to one cycling loop.',
+  },
+  {
+    question: 'How do you get from Santiago to Mendoza?',
+    answer: 'The recorded journey left Santiago’s Terminal Sur at around 10:00 am on 23 September and reached Mendoza around 4:00 pm by bus. Keep the arrival afternoon light and check the current operator, border and ticketing details before travel.',
+  },
+];
 const schema = withProvenance({
-  "@context": "https://schema.org",
-  "@graph": [
-    { "@type": "Article", headline: "3 Days in Mendoza: Complete Itinerary", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
-    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "3 Days in Mendoza: Complete Itinerary", item: canonical } ] },
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Article', headline: '3 Days in Mendoza: Complete Itinerary', description, author: { '@type': 'Person', name: 'Mitch Chadban' }, publisher: { '@type': 'Organization', name: 'There & Back Again', url: 'https://travel.mitchchadban.com/' }, mainEntityOfPage: { '@type': 'WebPage', '@id': canonical }, url: canonical, inLanguage: 'en-AU', image: `https://travel.mitchchadban.com${image}` },
+    { '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://travel.mitchchadban.com/' }, { '@type': 'ListItem', position: 2, name: 'Chronicles', item: 'https://travel.mitchchadban.com/chronicles/' }, { '@type': 'ListItem', position: 3, name: '3 Days in Mendoza: Complete Itinerary', item: canonical } ] },
+    { '@type': 'FAQPage', mainEntity: faqItems.map(({ question, answer }) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
   ],
 }, PROVENANCE);
 const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
@@ -23,21 +52,213 @@ const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/s
   <section class="post-hero" aria-labelledby="mendoza-title">
     <div class="post-route-strip"><span>South America</span>&nbsp;· Argentina ·&nbsp;<span>Mendoza</span>&nbsp;· September 2026</div>
     <h1 id="mendoza-title" class="post-hero-title"><em>3 Days in Mendoza:</em><br />Complete Itinerary</h1>
-    <p class="post-hero-sub">A first-hand route through Mendoza’s parks, city streets, foothill landmarks and recorded wine-country stops.</p>
+    <p class="post-hero-sub">A first-hand journey through Mendoza’s city streets, parks, foothill edge and wine country.</p>
     <div class="post-stats"><div class="stat"><span class="stat-num">3</span><span class="stat-label">Nights</span></div><div class="stat"><span class="stat-num">1</span><span class="stat-label">City base</span></div><div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div><div class="stat"><span class="stat-num">Argentina</span><span class="stat-label">Country</span></div></div>
-    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: true })} />
   </section>
-  <article class="post-body mendoza-post-body"><ArticleContent /></article>
-  <style is:global>
-    .mendoza-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
-    .mendoza-post-body .article-photo picture, .mendoza-post-body .article-photo img { display: block; width: 100%; }
-    .mendoza-post-body .article-photo img { height: auto; border: 1px solid rgba(158,207,114,.12); }
-    .mendoza-post-body .article-photo figcaption { margin-top: .65rem; color: rgba(221,232,208,.62); font-size: .95rem; font-style: italic; text-align: center; }
-    .mendoza-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 400; line-height: 1.08; }
-    .mendoza-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem,3vw,2.2rem); font-weight: 400; }
-    .mendoza-post-body p, .mendoza-post-body ul { max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .mendoza-post-body ul { padding-left: 2rem; color: rgba(221,232,208,.86); font-size: 1.18rem; line-height: 1.7; }
-    .mendoza-post-body strong { color: #e7f2da; }
-    @media (max-width: 820px) { .mendoza-post-body .article-photo { margin: 2.5rem 0; } .mendoza-post-body h2, .mendoza-post-body h3, .mendoza-post-body p { max-width: none; } }
-  </style>
+
+  <article class="post-body south-america-post-body mendoza-post-body"><ArticleContent /></article>
+
+  <div class="mendoza-day-support-slots" aria-label="Day-by-day practical planning">
+    <div class="mendoza-day-support-slot" data-day="1">
+      <Practical place="Mendoza — Day 1" detail="Arrival and city · 23 September" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>Chachingo Arístides</strong> — arrival-night dinner after reaching Mendoza.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Arrival</strong> — bus from Santiago Terminal Sur at around 10:00am, reaching Mendoza around 4:00pm.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Central Mendoza</strong> — the city, university area and Parque General San Martín as one connected first sequence.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Mendoza Day 1 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Mendoza — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$60/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$6/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row">Keep the arrival afternoon light after the Andes crossing.</div>
+          <div class="tip-row">Treat the city and Parque General San Martín as one connected sequence.</div>
+          <div class="tip-row">Do not rush straight into wine country.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Mendoza Day 1 experiences" tours={[
+        { category: 'City & Park', title: 'Mendoza Highlights: Half-Day City Tour', description: 'A four-hour orientation through Mendoza’s landmarks, city history and Parque General San Martín.', href: 'https://www.viator.com/tours/Mendoza/Mendoza-City-Sightseeing-Tour/d931-5674P271?pid=P00295455&mcid=42383&medium=link', featured: true },
+        { category: 'City & Cerro', title: 'City Tour of Mendoza with Cerro de la Gloria', description: 'A half-day city route linking downtown Mendoza, San Martín Park and Cerro de la Gloria.', href: 'https://www.viator.com/tours/Mendoza/City-Tour-of-Mendoza-with-Cerro-de-la-Gloria/d931-34949P102?pid=P00295455&mcid=42383&medium=link' },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="mendoza-day-support-slot" data-day="2">
+      <Practical place="Mendoza — Day 2" detail="Cerro de la Gloria and the foothill edge · 24 September" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>Hannk Arístides Parrillada</strong> — evening meal after the bike, park and winery sequence.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Foothill movement</strong> — bike hire and cycling connected Aconcagua Bike, San Vicente Park, Carmelo Patti, Bodega Viamonte and the city return.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Cerro de la Gloria and San Vicente Park</strong> — group the foothill stops geographically rather than scattering them across the stay.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Mendoza Day 2 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Mendoza — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$60/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$6/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row">Group foothill stops geographically.</div>
+          <div class="tip-row">Allow transport rather than treating every connection as a walk.</div>
+          <div class="tip-row">Check current monument and park access.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Mendoza Day 2 experiences" tours={[
+        { category: 'High Mountain', title: 'High Mountain, Aconcagua and Inca Bridge', description: 'A full-day excursion from Mendoza through Potrerillos, Uspallata, Puente del Inca and Aconcagua viewpoints.', href: 'https://www.viator.com/tours/Mendoza/High-Mountain-and-Inca-Bridge/d931-5573772P4?pid=P00295455&mcid=42383&medium=link', featured: true },
+        { category: 'Andes', title: 'Mendoza: Aconcagua Adventure in the Andes Mountains', description: 'A long mountain day from Mendoza through the high-country landscape around Aconcagua and the Andean passes.', href: 'https://www.viator.com/tours/Mendoza/Aconcagua-Experience-Mendoza/d931-18016P109?pid=P00295455&mcid=42383&medium=link' },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="mendoza-day-support-slot" data-day="3">
+      <Practical place="Mendoza — Day 3" detail="Wine country · 25 September" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>Soberana</strong> — evening meal after the named winery and olive-oil stops.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Wine-country transport</strong> — arrange a tour, transfer or other safe transport between producers; the recorded wine-country day was not a single bike loop.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Trip / Excursion">
+          <div class="prac-item"><strong>Named producers</strong> — Carmelo Patti, Bodega Viamonte, Cecchin, Pasrai, Vistandes and Bodega Esencia 1870.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Mendoza Day 3 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Mendoza — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$60/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$6/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row">Book wineries ahead where required.</div>
+          <div class="tip-row">Give wine country the whole day.</div>
+          <div class="tip-row">Arrange safe transport between tastings.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Mendoza Day 3 wine experiences" tours={[
+        { category: 'Wine Country', title: 'Mendoza Hop-On Hop-Off Wine Tour', description: 'A flexible full-day or half-day option across Luján de Cuyo, Maipú and Uco Valley wine routes without driving between wineries.', href: 'https://www.viator.com/tours/Mendoza/Wine-Hop-On-Hop-Off-Tour-from-Mendoza/d931-40988P2?pid=P00295455&mcid=42383&medium=link', featured: true },
+        { category: 'Luján de Cuyo', title: 'Luján Deluxe — Premium Wine Tour with Gourmet Lunch', description: 'A full-day Luján de Cuyo experience through boutique wineries in Agrelo and Perdriel with tastings and lunch.', href: 'https://www.viator.com/tours/Mendoza/Lujan-Wine-Region-Tour-with-Lunch-from-Mendoza/d931-15735P14?pid=P00295455&mcid=42383&medium=link' },
+        { category: 'Uco Valley', title: 'Uco Valley Private Wine Tasting Tour', description: 'A private Uco Valley wine day with transport from Mendoza and a more focused vineyard experience.', href: 'https://www.viator.com/tours/Mendoza/Uco-Valley-Altitud-Vines/d931-197059P2?pid=P00295455&mcid=42383&medium=link' },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+  </div>
+
+  <section class="post-closing">
+    <div class="narrative">
+      <div class="prose">
+        <p>Mendoza earns its place in the wider journey by holding several scales together: the city of trees and formal streets, the monument at the foothill edge, and the vineyards beyond them. Three nights are enough to let each register stand on its own before the road turns east again.</p>
+      </div>
+    </div>
+  </section>
+  <AtAGlance
+    id="full-itinerary"
+    title="The Full Itinerary at a Glance"
+    meta={[
+      { label: 'Trip', value: 'Three nights in Mendoza after crossing the Andes from Santiago, continuing east towards Iguazú.' },
+      { label: 'Duration', value: '3 days / 3 nights.' },
+      { label: 'Country', value: 'Argentina.' },
+      { label: 'Travelled', value: 'September 2026.' },
+    ]}
+    days={[
+      { num: 'Day 1', text: 'Arrival from Santiago, central Mendoza, university area and Parque General San Martín.' },
+      { num: 'Day 2', text: 'Cerro de la Gloria, San Vicente Park and the foothill edge.' },
+      { num: 'Day 3', text: 'Wine country: wineries and vineyard landscape.' },
+      { num: 'Departure morning', text: 'Onward journey towards Iguazú.' },
+    ]}
+  >
+    <div class="itin-section-head">Budget Snapshot — Planning Estimate</div>
+    <div class="grand-total-block">
+      <div class="grand-total-grid">
+        <div class="grand-line"><strong>Accommodation</strong>~A$60/night</div>
+        <div class="grand-line"><strong>Food daily</strong>~A$10</div>
+        <div class="grand-line"><strong>Transport</strong>~A$6/day</div>
+        <div class="grand-line"><strong>Daily total</strong>~A$80</div>
+      </div>
+      <div class="grand-total-num">Estimated Mendoza budget: ~A$240</div>
+    </div>
+
+    <div class="itin-section-head">Quick Reference — Best Eats</div>
+    <div class="eats-row"><span class="eats-city">Mendoza</span><span><strong>Chachingo Arístides</strong> — arrival-night dinner.</span></div>
+    <div class="eats-row"><span class="eats-city">Mendoza</span><span><strong>Hannk Arístides Parrillada</strong> — after the bike and foothill day.</span></div>
+    <div class="eats-row"><span class="eats-city">Mendoza</span><span><strong>Soberana</strong> — after the wine-country day.</span></div>
+
+    <div class="itin-section-head">Getting Around</div>
+    <div class="transport-note"><strong>Central Mendoza:</strong> Walk between the central streets, university area and nearby public spaces.</div>
+    <div class="transport-note"><strong>Parque and Cerro:</strong> Use local transport or the recorded bike arrangement as appropriate.</div>
+    <div class="transport-note"><strong>Wine country:</strong> Arrange a pre-booked tour, transfer or other safe transport between tastings.</div>
+    <div class="transport-note"><strong>Arrival and onward:</strong> Long-distance bus from Santiago; departure towards Iguazú after 26 September.</div>
+  </AtAGlance>
+
+  <section class="faq-block" aria-labelledby="mendoza-faq-title">
+    <div class="faq-inner">
+      <div class="faq-title" id="mendoza-faq-title">Frequently Asked Questions</div>
+      {faqItems.map((item) => (
+        <div class="faq-item">
+          <div class="faq-q">{item.question}</div>
+          <div class="faq-a">{item.answer}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="next-chronicles">
+    <div class="section-label">Next Chronicles</div>
+    <div class="posts-grid">
+      <a class="post-card chronicle-card" href="/mendoza-beyond-wine/">
+        <div class="post-region">Argentina · Mendoza</div>
+        <div class="post-title">Mendoza Beyond Wine</div>
+        <div class="post-excerpt">A closer look at the city streets, parks, monuments and foothill geography beyond the vineyard day.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+      <a class="post-card chronicle-card" href="/best-things-to-do-in-mendoza/">
+        <div class="post-region">Argentina · Mendoza</div>
+        <div class="post-title">Best Things to Do in Mendoza</div>
+        <div class="post-excerpt">The strongest Mendoza experiences, from the central streets and Parque General San Martín to the foothill edge and wine country.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+      <a class="post-card chronicle-card" href="/iguazu-falls-in-2-days/">
+        <div class="post-region">Argentina · Brazil</div>
+        <div class="post-title">Iguazú Falls in 2 Days</div>
+        <div class="post-excerpt">The next stage east: two country sides of the falls, kept separate across Argentina and Brazil.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const slots = [...document.querySelectorAll('.mendoza-day-support-slot')];
+      const article = document.querySelector('.mendoza-post-body');
+      if (!article) return;
+      for (const slot of slots) {
+        const heading = [...article.querySelectorAll('h2')].find((item) => item.textContent?.trim().startsWith(`Day ${slot.dataset.day} `));
+        if (!heading) continue;
+        let node = heading.nextElementSibling;
+        let figure = null;
+        while (node && !node.matches('h2')) {
+          if (node.matches('figure')) figure = node;
+          node = node.nextElementSibling;
+        }
+        if (figure) figure.insertAdjacentElement('afterend', slot);
+      }
+    })();
+  </script>
 </BaseLayout>

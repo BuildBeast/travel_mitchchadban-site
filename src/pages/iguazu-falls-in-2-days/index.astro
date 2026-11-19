@@ -1,39 +1,36 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleContent from "../../content/iguazu-falls-in-2-days.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Beat from "../../components/chronicle/Beat.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import TourRecommendations from "../../components/chronicle/TourRecommendations.astro";
 import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import "../../styles/south-america-article.css";
 
 const title = "Iguazú Falls in 2 Days: Argentina and Brazil — There & Back Again";
-const description = "A first-hand two-day Iguazú Falls itinerary covering the Argentina and Brazil sides, including the park circuits, Macuco Safari and Parque das Aves.";
+const description = "A first-hand two-day Iguazú Falls itinerary across Argentina and Brazil, from the Argentine circuits to the Brazilian panorama, Macuco Safari and Parque das Aves.";
 const canonical = "https://travel.mitchchadban.com/iguazu-falls-in-2-days/";
 const image = "/images/iguazu-falls-in-2-days/iguazu-falls-panorama-1200w.jpg";
 const PROVENANCE = { photography: true };
 
+const faqItems = [
+  { question: "Is two days enough for Iguazú Falls?", answer: "Yes. Two full days are the right minimum for a first visit that wants both countries without compressing them into one cross-border day. Keep the arrival evening separate, give Argentina its own day, give Brazil its own day and leave the following day for departure if possible." },
+  { question: "Should you visit both the Argentina and Brazil sides?", answer: "Yes, if the schedule allows two full sightseeing days. Argentina takes the visitor through the falls via its circuits and different elevations; Brazil gives the broader panorama. The two sides show the same landscape from different positions rather than repeating each other." },
+  { question: "Which side of Iguazú Falls is better?", answer: "Neither replaces the other. Argentina is stronger for moving through the waterfall system via the Upper Circuit, Lower Circuit and Garganta del Diablo. Brazil is stronger for the broad view across the river, with Macuco Safari and Parque das Aves as natural additions to the same day." },
+  { question: "How difficult is the border crossing between Argentina and Brazil?", answer: "Allow a generous margin on both the outward and return legs. The crossing is part of the Brazilian park day, and entry requirements depend on nationality and can change, so check the current requirements for both countries and carry the required documentation before travel." },
+  { question: "Is Macuco Safari worth adding to the Brazilian side?", answer: "It is a worthwhile optional addition if the day has room for it. The Cataratas trail gives the wide view and Parque das Aves changes the subject to wildlife; Macuco Safari adds the river itself. Check current ticketing and operating conditions before booking, because the Brazilian day can become full." },
+];
+
 const schema = withProvenance({
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
-      headline: "Iguazú Falls in 2 Days: Argentina and Brazil",
-      description,
-      author: { "@type": "Person", name: "Mitch Chadban" },
-      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
-      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
-      url: canonical,
-      inLanguage: "en-AU",
-      image: `https://travel.mitchchadban.com${image}`,
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
-        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
-        { "@type": "ListItem", position: 3, name: "Iguazú Falls in 2 Days: Argentina and Brazil", item: canonical },
-      ],
-    },
+    { "@type": "Article", headline: "Iguazú Falls in 2 Days: Argentina and Brazil", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
+    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "Iguazú Falls in 2 Days: Argentina and Brazil", item: canonical } ] },
+    { "@type": "FAQPage", mainEntity: faqItems.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
   ],
 }, PROVENANCE);
-
 const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
 ---
 
@@ -43,37 +40,123 @@ const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/s
   <section class="post-hero" aria-labelledby="iguazu-title">
     <div class="post-route-strip"><span>South America</span>&nbsp;· Argentina · Brazil · Iguazú Falls ·&nbsp;<span>September 2026</span></div>
     <h1 id="iguazu-title" class="post-hero-title"><em>Iguazú Falls in 2 Days:</em><br />Argentina and Brazil</h1>
-    <p class="post-hero-sub">One waterfall system, two countries, and two full days arranged around the route.</p>
+    <p class="post-hero-sub">One waterfall system, two countries, and two full days arranged around different ways of seeing it.</p>
     <div class="post-stats">
       <div class="stat"><span class="stat-num">2</span><span class="stat-label">Days</span></div>
       <div class="stat"><span class="stat-num">3</span><span class="stat-label">Nights</span></div>
       <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
       <div class="stat"><span class="stat-num">2</span><span class="stat-label">Countries</span></div>
     </div>
-    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: true })} />
   </section>
 
-  <article class="post-body iguazu-post-body">
+  <article class="post-body south-america-post-body iguazu-post-body">
     <ArticleContent />
   </article>
 
-  <style is:global>
-    .iguazu-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
-    .iguazu-post-body .article-photo picture,
-    .iguazu-post-body .article-photo img { display: block; width: 100%; }
-    .iguazu-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
-    .iguazu-post-body .article-photo figcaption { margin-top: 0.65rem; color: rgba(221, 232, 208, 0.62); font-size: 0.95rem; font-style: italic; text-align: center; }
-    .iguazu-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.08; }
-    .iguazu-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 400; }
-    .iguazu-post-body p,
-    .iguazu-post-body ul { max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .iguazu-post-body ul { padding-left: 2rem; color: rgba(221, 232, 208, 0.86); font-size: 1.18rem; line-height: 1.7; }
-    .iguazu-post-body strong { color: #e7f2da; }
-    @media (max-width: 820px) {
-      .iguazu-post-body .article-photo { margin: 2.5rem 0; }
-      .iguazu-post-body h2,
-      .iguazu-post-body h3,
-      .iguazu-post-body p { max-width: none; }
-    }
-  </style>
+  <div class="iguazu-day-support-slots" aria-label="Iguazú practical planning">
+    <div class="iguazu-day-support-slot" data-before="II. Day One">
+      <Practical place="Puerto Iguazú — Arrival evening" detail="Hito Tres Fronteras · El Hito Restaurante Mirador" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat"><div class="prac-item"><strong>El Hito Restaurante Mirador</strong> — dinner after the arrival visit to Hito Tres Fronteras.</div></PracticalSection>
+        <PracticalSection label="Getting There"><div class="prac-item"><strong>Arrival</strong> — the flight reached Puerto Iguazú at 5:34pm on 26 September; the evening continued to Hito Tres Fronteras before dinner.</div></PracticalSection>
+        <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Hito Tres Fronteras</strong> — an arrival-evening view of the Paraná and Iguazú rivers, with Paraguay and Brazil across the water.</div></PracticalSection>
+        <section class="practical" aria-label="Puerto Iguazú arrival budget snapshot"><div class="prac-header"><div class="prac-city">Puerto Iguazú — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$55–60/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$4/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div></div></section>
+        <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Keep arrival light.</strong> Hito Tres Fronteras gives the first evening a clear purpose without taking time from the two park days.</div><div class="tip-row"><strong>Use Puerto Iguazú as the base.</strong> The Argentine town keeps the first park morning and the Brazilian crossing in the same accommodation frame.</div></PracticalSection>
+      </Practical>
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="iguazu-day-support-slot" data-before="III. Across the Border">
+      <Practical place="Iguazú National Park — Argentina" detail="Garganta del Diablo · Upper Circuit · Lower Circuit" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat"><div class="prac-item"><strong>Antigal Parrilla Restaurant</strong> — the recorded meal after the park and Jardín de los Picaflores.</div></PracticalSection>
+        <PracticalSection label="Getting There"><div class="prac-item"><strong>Puerto Iguazú to the Argentine park</strong> — allow the current local transfer or taxi, then use the Ecological Jungle Train and walking circuits inside the park.</div></PracticalSection>
+        <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Garganta del Diablo</strong> — the walkway across the upper Iguazú River to the central chasm.</div><div class="prac-item"><strong>Upper Circuit</strong> — the falls from above, with the channels and cascades arranged across the river.</div><div class="prac-item"><strong>Lower Circuit</strong> — the closer route through forest, rock and descending paths.</div><div class="prac-item"><strong>Jardín de los Picaflores</strong> — a smaller afternoon stop after the national park.</div></PracticalSection>
+        <section class="practical" aria-label="Argentine Iguazú budget snapshot"><div class="prac-header"><div class="prac-city">Puerto Iguazú — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$55–60/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$4/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div></div></section>
+        <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Start early.</strong> Garganta del Diablo, the Upper Circuit and the Lower Circuit need their own time rather than a compressed sequence.</div><div class="tip-row"><strong>Check access before travel.</strong> Water levels can affect current park routes and circuit availability.</div><div class="tip-row"><strong>Do not combine both countries in one day.</strong> The Argentine side is a full park day before the Brazilian crossing begins.</div></PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Argentine Iguazú experiences" tours={[
+        { category: "Argentina Side", title: "Full-Day Tour to Iguazu Falls", description: "A guided Puerto Iguazú day through the Argentine park’s main circuits, including Garganta del Diablo and multiple viewpoints.", href: "https://www.viator.com/tours/Puerto-Iguazu/Full-Day-Tour-to-Iguazu-Falls/d971-3851D_FALLS?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Argentina Side · Boat", title: "Iguazu Falls: Boat, Train, and Safari Truck", description: "A longer Argentine-side option combining park transport, circuits and a boat experience; check current inclusions before booking.", href: "https://www.viator.com/tours/Puerto-Iguazu/Iguazu-Falls-Tour-with-Great-Adventure-Boat-Ride/d971-3851P22?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Two-Country Stage", title: "Iguazu Falls: Argentine and Brazilian Sides in Two Days", description: "A two-day guided format covering both national parks from a Puerto Iguazú base, with current border and entry requirements to check before booking.", href: "https://www.viator.com/tours/Puerto-Iguazu/Iguazu-Falls-Visit-to-Argentinian-and-Brazilian-Side-in-two-days/d971-34949P91?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="iguazu-day-support-slot" data-before="Argentina or Brazil?">
+      <Practical place="Foz do Iguaçu — Brazil" detail="Cataratas trail · Macuco Safari · Parque das Aves" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat"><div class="prac-item"><strong>Holy Iguazú</strong> — the recorded evening stop after the Brazilian park day and return crossing.</div></PracticalSection>
+        <PracticalSection label="Getting There"><div class="prac-item"><strong>Puerto Iguazú to Foz do Iguaçu</strong> — allow the Tancredo Neves border crossing, the Brazilian park transfer and a margin for the return to Argentina.</div></PracticalSection>
+        <PracticalSection label="Day Trip / Excursion"><div class="prac-item"><strong>Cataratas trail</strong> — the broad Brazilian-side panorama across the river gorge.</div><div class="prac-item"><strong>Macuco Safari</strong> — a river-level addition after the trail, with current tickets and operating conditions to check.</div><div class="prac-item"><strong>Parque das Aves</strong> — a nearby wildlife and conservation visit that changes the scale of the day.</div></PracticalSection>
+        <section class="practical" aria-label="Brazilian Iguazú budget snapshot"><div class="prac-header"><div class="prac-city">Puerto Iguazú — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$55–60/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$4/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div></div></section>
+        <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Leave border margin.</strong> The Brazilian park day includes immigration on the outward and return legs.</div><div class="tip-row"><strong>Plan Macuco and Parque das Aves as real stops.</strong> Both add time beyond the Cataratas trail and should not be treated as five-minute extras.</div><div class="tip-row"><strong>Carry the required documents.</strong> Check current entry requirements for both countries before travel.</div></PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Brazilian Iguazú experiences" tours={[
+        { category: "Brazil Side & Bird Park", title: "Tour to Iguazu Falls Brazil with Visit to the Bird Park", description: "A guided Brazilian-side day combining the falls and Parque das Aves, with pickup and current park inclusions to confirm at booking.", href: "https://www.viator.com/tours/Foz-do-Iguacu/Daytour-to-Brazilian-Falls-and-Bird-Park/d970-7558P21?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Brazil Side · Boat", title: "Brazilian Falls, Boat Ride and Bird Park", description: "A fuller Brazilian-side option that combines the panoramic trail, Parque das Aves and Macuco Safari in one structured day.", href: "https://www.viator.com/tours/Foz-do-Iguacu/Brazilian-Falls-Boat-Ride-and-bird-park/d970-7558P13?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Complete Brazilian Falls", title: "Brazil Adventure Tour — Complete Brazilian Falls", description: "A Brazilian-side day combining Parque das Aves, the falls and Macuco Safari, with current inclusions and park entry details to check before booking.", href: "https://www.viator.com/tours/Foz-do-Iguacu/Brazil-Adventure-Tour-Complete-Brazilian-Falls/d970-399321P1?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+  </div>
+
+  <AtAGlance id="full-itinerary" title="The Full Itinerary at a Glance" meta={[
+    { label: "Trip", value: "Three nights based in Puerto Iguazú, with one full day on the Argentine side and one full day across the border in Brazil." },
+    { label: "Duration", value: "2 full park days / 3 nights" },
+    { label: "Countries", value: "Argentina + Brazil" },
+    { label: "Travelled", value: "September 2026" },
+  ]} days={[
+    { num: "Arrival evening", text: "Puerto Iguazú + Hito Tres Fronteras" },
+    { num: "Day 1 — Argentina", text: "Garganta del Diablo, Upper Circuit, Lower Circuit, optional hummingbird garden" },
+    { num: "Day 2 — Brazil", text: "Cataratas trail, Macuco Safari, Parque das Aves" },
+    { num: "Departure", text: "Onward journey after the two-country falls visit" },
+  ]}>
+    <div class="itin-section-head">Budget Snapshot — Planning Estimate</div>
+    <p class="itin-meta">Budget figures are indicative planning averages based on current Iguazú traveller costs and vary with accommodation, food, transport and sightseeing choices. Major park admissions, Macuco Safari and Parque das Aves tickets are additional and should be checked separately.</p>
+    <div class="grand-total-block">
+      <div class="grand-total-grid">
+        <div class="grand-line"><strong>Accommodation</strong>~A$55–60/night</div>
+        <div class="grand-line"><strong>Food daily</strong>~A$10</div>
+        <div class="grand-line"><strong>Transport</strong>~A$4/day</div>
+        <div class="grand-line"><strong>Daily total</strong>~A$80</div>
+      </div>
+      <div class="grand-total-num">Estimated Iguazú base budget: ~A$240</div>
+    </div>
+    <div class="itin-section-head">Quick Reference — Best Eats</div>
+    <div class="eats-row"><span class="eats-city">Puerto Iguazú</span><span><strong>El Hito Restaurante Mirador</strong> — arrival evening after Hito Tres Fronteras.</span></div>
+    <div class="eats-row"><span class="eats-city">Puerto Iguazú</span><span><strong>Antigal Parrilla Restaurant</strong> — after the Argentine park day.</span></div>
+    <div class="eats-row"><span class="eats-city">Puerto Iguazú</span><span><strong>Holy Iguazú</strong> — after the Brazilian park day and return crossing.</span></div>
+    <div class="itin-section-head">Getting Around</div>
+    <div class="transport-note"><strong>Argentine side:</strong> Use the current local transfer or taxi from Puerto Iguazú, then the Ecological Jungle Train and walking circuits inside the park.</div>
+    <div class="transport-note"><strong>Brazilian side:</strong> Allow a cross-border transfer, immigration margin and park transport before the Cataratas trail.</div>
+    <div class="transport-note"><strong>Park additions:</strong> Macuco Safari and Parque das Aves need their own time and current ticket checks.</div>
+    <div class="transport-note"><strong>Departure:</strong> Keep the following day for the airport or onward connection.</div>
+  </AtAGlance>
+
+  <section class="faq-block" aria-labelledby="iguazu-faq-title">
+    <div class="faq-inner">
+      <div class="faq-title" id="iguazu-faq-title">Frequently Asked Questions</div>
+      {faqItems.map((item) => (<div class="faq-item"><div class="faq-q">{item.question}</div><div class="faq-a">{item.answer}</div></div>))}
+    </div>
+  </section>
+
+  <div class="next-chronicles">
+    <div class="section-label">Next Chronicles</div>
+    <div class="posts-grid">
+      <a class="post-card chronicle-card" href="/iguazu-falls-argentina-vs-brazil/"><div class="post-region">Argentina · Brazil</div><div class="post-title">Iguazú Falls: Argentina vs Brazil</div><div class="post-excerpt">A closer comparison of the two national parks, their different viewpoints and what each side adds to the falls.</div><div class="post-meta">READ CHRONICLE</div></a>
+      <a class="post-card chronicle-card" href="/parque-das-aves-foz-do-iguacu/"><div class="post-region">Brazil · Foz do Iguaçu</div><div class="post-title">Parque das Aves</div><div class="post-excerpt">A focused visit to the bird park beside the Brazilian falls, from the paved aviary trail to the wildlife beyond the gorge.</div><div class="post-meta">READ CHRONICLE</div></a>
+      <a class="post-card chronicle-card" href="/5-days-in-buenos-aires-itinerary/"><div class="post-region">Argentina · Buenos Aires</div><div class="post-title">5 Days in Buenos Aires</div><div class="post-excerpt">Five nights across the historic centre, Recoleta, San Telmo, Puerto Madero, La Boca and Palermo.</div><div class="post-meta">READ CHRONICLE</div></a>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const slots = [...document.querySelectorAll('.iguazu-day-support-slot')];
+      const article = document.querySelector('.iguazu-post-body');
+      if (!article) return;
+      for (const slot of slots) {
+        const target = [...article.querySelectorAll('h2')].find((heading) => heading.textContent?.trim().startsWith(slot.dataset.before || ''));
+        if (target) target.insertAdjacentElement('beforebegin', slot);
+      }
+    })();
+  </script>
 </BaseLayout>

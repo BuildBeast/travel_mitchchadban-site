@@ -1,117 +1,81 @@
-The overnight bus from Cusco to La Paz was the hinge between two parts of the journey. It followed the return from Machu Picchu and preceded the first afternoon in Bolivia. The route record is specific about the terminals, operator and broad timing. It is almost completely silent about the bus interior and the border itself.
+The bus left Cusco after the mountain section of the journey was over. By the time it reached La Paz the following afternoon, Peru had given way to Bolivia without another airport, another hotel night or a second departure. The overnight service became more than a connection: it was the long middle passage between Machu Picchu and the high city.
 
-That makes this a practical route article, but not a conventional comfort review. The evidence confirms a **10:00pm departure from Terminal Terrestre de Cusco on 15 September 2026**, a **1:00pm arrival at the Terminal de Buses La Paz on 16 September**, and a ticket record naming **Transzela**. The recorded window is roughly **15 hours**.
+For this journey, it was also the better choice than flying. The Transzela bus left **Terminal Terrestre de Cusco at 10:00pm on 15 September 2026** and reached the **Terminal de Buses La Paz at 1:00pm on 16 September**, a journey of roughly **15 hours**. The bus was comfortable, the interior was excellent, and the traveller slept for much of the night. There was one stop for food and coffee, no delay to complicate the crossing, and luggage travelled underneath the bus.
 
-It does not preserve a seat number, bus class, bedding, food, sleep, toilet facilities, road conditions, border procedure or first-hand physical reaction. Those omissions stay visible. A route article is more useful when it distinguishes the journey that was recorded from the journey a generic search result might assume.
+That combination made the transfer unusually useful. The night took care of the distance while the traveller slept; the following afternoon opened into La Paz rather than another round of airport transfers. The [Machu Picchu and Aguas Calientes itinerary](/2-days-in-machu-picchu-itinerary/) covers the journey's first half. This account begins at the point where the railway and ruins fall behind.
 
-## The journey at a glance
+## I. Night Road out of Cusco
 
-- **Route:** Cusco, Peru → La Paz, Bolivia
-- **Departure:** Terminal Terrestre de Cusco, 10:00pm, 15 September
-- **Operator:** Transzela, as named in the ticket record
-- **Arrival:** Terminal de Buses La Paz, 1:00pm, 16 September
-- **Recorded duration:** approximately 15 hours
-- **Ticket reference:** TB-622214 appears in the Sortie record
-- **Photographs:** no separate Cusco, bus, border or arrival photo sequence is reliably tied to this journey
+The day had begun at Machu Picchu. After the early visit to the archaeological park, the traveller returned to Aguas Calientes and took the afternoon train back towards Cusco and Wanchaq. There was then time to make the onward connection across the city before the international bus left at night.
 
-The ticket reference is included as evidence of the recorded booking, not as a recommendation or a promise that the same service details remain current.
+The sequence mattered because the bus was not an isolated booking placed between two unrelated stays. It followed the mountain and the railway directly. The [Huayna Picchu hike](/huayna-picchu-hike/) belongs to the same compressed Cusco stage, while the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/) sets the transfer inside the wider passage through Peru and Bolivia.
 
-## Why the overnight bus came next
+At 10:00pm, Terminal Terrestre de Cusco became the last fixed point in Peru for the day. The traveller boarded the Transzela service with the route ahead running through the night. The journey was scheduled to arrive at La Paz at 1:00pm the next day, leaving a long stretch in between for the road to do its work.
 
-The bus was not an isolated transport choice. It followed the Machu Picchu section of the trip in a tightly compressed chain:
+That is the useful way to think about an overnight bus across this part of the continent. It does not turn the distance into a sightseeing stop. It removes the need to spend daylight hours crossing it and makes the transfer part of the itinerary rather than a break from it.
 
-1. An early National Archaeological Park visit on 15 September.
-2. Return to Aguas Calientes and the afternoon train towards Cusco/Wanchaq.
-3. The onward connection through Cusco.
-4. The overnight bus to La Paz.
+## II. A Better Way to Cross the Andes
 
-The broader context is covered in the <a href="/2-days-in-machu-picchu-itinerary/">Machu Picchu and Aguas Calientes itinerary</a>. The separate <a href="/huayna-picchu-hike/">Huayna Picchu hike article</a> covers the previous day’s climb. This article begins when that mountain section is over and the route becomes a long international transfer.
+The strongest part of the service was its simplicity. The bus was very comfortable, the interior was excellent, and the traveller slept through much of the journey. One stop supplied food and coffee. There were no delays to turn the crossing into a problem, and the luggage remained beneath the bus rather than occupying the seat or becoming another thing to manage in the cabin.
 
-## Returning to Cusco
+Those details are modest, but together they changed the character of the transfer. Flying would have been quicker in the air, but it would also have divided the journey into another departure, another arrival and the usual time spent reaching and leaving airports. The overnight bus allowed the traveller to leave Cusco late, sleep on the way and arrive in La Paz with the afternoon still available.
 
-The afternoon records are not perfectly consistent across the supplied material. The Sortie record places the train at Aguas Calientes from **1:07pm to 1:37pm**, with a later handoff at **Estación Wanchaq at 3:15pm**. The planning notes describe the return train more simply as leaving Aguas Calientes at **1:37pm** and reaching Cusco at approximately **5:30pm**.
+That does not make the bus automatically right for every traveller. Anyone who needs the shortest possible connection, dislikes overnight travel or prefers to control every part of a long transfer may reasonably choose a flight. For this journey, though, the bus was the more convincing option. It was comfortable enough to sleep on, direct enough to avoid unnecessary complication and long enough to carry the route from one country to the next while the city was dark.
 
-The useful fact is the sequence rather than a falsely exact connection: the train returned to the Cusco/Wanchaq side of the city, and the overnight bus was scheduled for 10:00pm. The master route describes a walk from Wanchaq to the Cusco bus terminal; the Sortie route gives that walk as an estimated **17 minutes and 1.3 kilometres**. That is a route-planner estimate, not a measured personal walking time.
+The geography gives the crossing its weight. Cusco and La Paz belong to the high Andes, but they are not the same kind of place. The road links southeastern Peru with western Bolivia and carries the journey out across the high plateau before it descends towards the basin and urban spread of La Paz. The traveller does not see all of that geography from a night seat. The change is registered later, in the difference between the Cusco departure and the city waiting at the far end.
 
-There was therefore a substantial gap between the afternoon rail connection and the night bus. The evidence does not say how that time was spent. It does not support a meal, hotel stop, lounge, luggage arrangement or rest period, so those details are left out.
+## III. The Border in the Dark
 
-## Leaving from Terminal Terrestre de Cusco
+The Peru–Bolivia crossing was part of the international bus journey rather than a separately described excursion. The process was standard international immigration: passports and border formalities, broadly familiar from an airport or ordinary land crossing, but somewhat slower because the facilities were smaller. It was not a dramatic interruption and there was no major problem to solve.
 
-The confirmed departure point is **Terminal Terrestre de Cusco**. The recorded departure is **10:00pm on 15 September**. The ticket record identifies the service as **Transzela** and carries reference **TB-622214**.
+That is enough to make the practical point without turning one crossing into a permanent rule. Border procedures depend on nationality, current regulations and the operator's instructions. Requirements should be checked close to departure with the official authorities for both countries. The experience of this September 2026 journey does not replace that advice.
 
-That is as far as the transport description can safely go. No surviving source confirms the bus class, seat layout, legroom, recline, charging points, Wi-Fi, blankets, luggage allowance, toilet, food service or booking website. The article does not turn Transzela’s name into a review of the vehicle that was actually used.
+The night made the border feel like part of the road rather than the centre of the story. The bus continued, the journey moved from Peru into Bolivia, and the dark hours kept the crossing from breaking the trip into two separate days. By morning, the international leg was already doing what it had been chosen to do: carrying the traveller towards La Paz without asking for another hotel or flight.
 
-The practical lesson is simple: the terminal and departure time are the dependable anchors. Everything about the onboard experience should be checked against the traveller’s actual ticket and the current operator information rather than borrowed from a generic Cusco-to-La Paz guide.
+## IV. La Paz at the End of the Line
 
-## The overnight journey
+The bus reached Terminal de Buses La Paz at about 1:00pm on 16 September. The city did not require a separate recovery day. The next stage moved into La Paz that afternoon, with the accommodation handoff followed by Plaza Murillo, the Witches' Market, Mi Teleférico and Mirador Killi Killi. The [three-day La Paz itinerary](/3-days-in-la-paz-itinerary/) follows those city days in detail.
 
-The journey ran through the night and into the following afternoon, but the personal experience is not written down in the supplied evidence. There is no reliable account of how much sleep was achieved, whether the seat was comfortable, whether the road was smooth, whether the bus stopped, or what was eaten or drunk.
+La Paz arrives as a change in geography as much as a change in country. The city occupies a basin below the high plateau, with El Alto above it and the surrounding slopes making the shape of the settlement visible. After a night spent crossing the plateau, the arrival did not need to be dramatised. The contrast was already there in the city itself: the bus terminal, the formal centre, the market streets and the cable-car lines all belonged to a place built vertically around its terrain.
 
-That means the honest answer to “what is the overnight bus actually like?” has two parts. Structurally, it is a long international transfer that leaves Cusco at night and reaches La Paz the next day. Experientially, this archive cannot tell us whether it was restful, uncomfortable, efficient, exhausting or surprisingly manageable.
+The traveller had no altitude symptoms after the journey and no recovery problems that required the afternoon to be set aside. That matters because the bus was not merely a way to save a flight. It delivered the traveller into the next city without creating a new interruption in the itinerary. Plaza Murillo followed, then the first views across La Paz, and the Bolivia section began on the same day.
 
-The absence of a bus photo sequence matters here. The Machu Picchu folder contains the archaeological park and Aguas Calientes material, while the inventory notes no separate Cusco folder. There is no defensible image of the bus interior or of the night on the road. This article stays image-free rather than placing a random Cusco or La Paz photograph over an experience it cannot prove.
+## How long is the Cusco to La Paz bus?
 
-## Crossing from Peru into Bolivia
+For this journey, the timetable ran from 10:00pm on 15 September to 1:00pm on 16 September: roughly 15 hours. That is the useful planning figure. It includes the night departure, the international crossing and the arrival into La Paz the following afternoon.
 
-The route is confirmed as an international Peru-to-Bolivia journey. The supplied records do **not** preserve the border crossing as a separate stop or narrative. They do not say which checkpoint was used, how long the process took, whether passports were stamped, what forms were completed, whether customs inspected luggage, or how the bus and passengers moved through the crossing.
+The practical day should therefore be planned as a long transfer, not as a normal morning excursion. Keep the afternoon after arrival flexible enough for the terminal, the accommodation handoff and the first La Paz plans. In this journey the day continued into the city, but the exact pace will depend on the service, the border and the traveller's priorities.
 
-Those are not small details to guess. Border procedures change, and nationality-specific requirements cannot be reconstructed from a route record. This article therefore does not present September 2026 as current immigration advice.
+## Is the overnight bus better than flying?
 
-For a future journey, check current official entry requirements for both countries and confirm the operator’s instructions before departure. That is general planning advice, not a claim about what happened on this particular bus.
+For this traveller, yes. The Transzela service was comfortable, sleep was possible for much of the journey, the luggage was stored underneath, and one food-and-coffee stop broke up the night. There were no delays, and the bus arrived in time for the first La Paz afternoon.
 
-## Arriving in La Paz
+The advantage was not a romantic idea of the road. It was the practical economy of the journey. A late departure replaced another flight and preserved the following day for La Paz. The bus made the Peru-to-Bolivia crossing part of the trip rather than an empty interval between destinations.
 
-The bus reached **Terminal de Buses La Paz at 1:00pm on 16 September**. The next recorded movement was a **1:19pm accommodation handoff at Calle Modesta Sanjinés 1357**, followed by Plaza Murillo at 1:29pm.
+Flying may still suit a different itinerary. It is the better fit for a traveller who values speed above all else or who does not sleep well on buses. The useful comparison is not bus versus plane in the abstract; it is whether one long, comfortable night is a better trade than another airport day. On this route, it was.
 
-This gives the arrival a clear shape. The bus did not arrive into an empty day reserved for recovery in the route record; it fed directly into the La Paz itinerary. Plaza Murillo, the Witches’ Market, Mi Teleférico and Mirador Killi Killi followed that afternoon.
+## Practical planning
 
-The separate <a href="/3-days-in-la-paz-itinerary/">three-day La Paz itinerary</a> covers those city stops. It also makes the important distinction that the route records the overnight bus, but not how the traveller felt after it. No sleep deficit, altitude symptom, fatigue level or recovery claim is added here.
+### Book the international leg first
 
-## How long did the journey take?
+The Cusco-to-La Paz bus was a key connection between the Machu Picchu stage and the La Paz stay. Once the 10:00pm departure and 1:00pm arrival were fixed, the surrounding rail and accommodation plans had a clear shape.
 
-Using the recorded **10:00pm departure** and **1:00pm arrival**, the timetable window is approximately **15 hours**. That is the duration supported by the route record.
+### Keep documents accessible
 
-It should not be confused with a measured wheel-to-wheel travel time. The supplied itinerary does not preserve boarding time, any border halt, delays, timezone handling or the exact moment the bus left and reached the terminal. The most accurate phrasing is therefore: **the recorded journey window was roughly 15 hours**.
+This is an international journey. Keep the documents needed for border formalities accessible rather than packed into luggage beneath the bus, and check current Peru and Bolivia entry requirements before travel.
 
-## Was it worth taking instead of flying?
+### Allow a full night and following morning
 
-The evidence does not preserve a direct answer. There is no recorded comparison with a flight, no cost ledger, no account of sleep, and no first-hand judgement about whether the bus was worth the time.
+The useful planning assumption is a roughly 15-hour journey. Do not build an important early-morning commitment into the La Paz side of the itinerary. The traveller arrived at 1:00pm and continued into the city that afternoon.
 
-What can be said is narrower. The bus connected the Machu Picchu/Cusco section to La Paz without adding another flight record to the route. It required an overnight departure and occupied the following morning until 1:00pm. Whether that trade made sense depends on the traveller’s priorities, and this source pack does not contain Mitch’s verdict.
+### Pack for the seat, not the hold
 
-## Practical lessons from the recorded route
+Luggage travelled underneath the bus, so the things needed during the night belong in a small cabin bag. The journey was comfortable, but it was still one long international transfer; keeping essentials close avoids opening the hold at the wrong point in the crossing.
 
-### Treat the terminals as the fixed points
+### Check current service details
 
-The reliable anchors are Terminal Terrestre de Cusco at 10:00pm and Terminal de Buses La Paz at 1:00pm the next day. The afternoon rail connection, the estimated Wanchaq walk and the later bus departure should be planned as one chain, but not padded with invented stops.
+Transzela was the operator on this journey. Current schedules, seat types, fares and border instructions should be checked with the operator or booking source before departure rather than assumed from a September 2026 service.
 
-### Treat the operator detail as historical evidence
+The bus crossed the distance between two major stages of the journey without asking the traveller to leave the route behind. Cusco ended at night; La Paz began in the afternoon; the road joined the two.
 
-Transzela and ticket reference TB-622214 are supported by the September 2026 record. They are not a current service review, fare quote or guarantee of the same bus configuration.
-
-### Do not use this as current border advice
-
-The article records an international transfer, not an immigration manual. Check current official requirements and the operator’s instructions before travelling. Nothing in the supplied evidence supports a visa, fee, form, stamping or processing-time claim.
-
-### Read it alongside the destination pieces
-
-Read the <a href="/2-days-in-machu-picchu-itinerary/">Machu Picchu and Aguas Calientes itinerary</a> for the preceding rail-and-mountain section, the <a href="/huayna-picchu-hike/">Huayna Picchu account</a> for the climb, and the <a href="/3-days-in-la-paz-itinerary/">La Paz itinerary</a> for the afternoon after arrival.
-
-## What remains unresolved
-
-The evidence still cannot answer:
-
-- which bus class or seat type was used;
-- how luggage was handled;
-- what the bus interior and onboard facilities were like;
-- how much sleep was achieved;
-- where and how the Peru–Bolivia border was processed;
-- whether there were delays or intermediate stops;
-- whether the journey felt comfortable, exhausting, efficient or worthwhile;
-- whether any altitude symptoms or recovery issues followed the overnight ride.
-
-Those are the questions that would require traveller confirmation. The route itself is publishable: Cusco to La Paz, Transzela, 10:00pm to 1:00pm, approximately 15 hours, with the border and onboard experience left honestly unresolved.
-
-The bus was the bridge between the ruins and the high city. The evidence can place it on the map and in the timetable. It cannot yet tell the story from the seat.
-
-This transfer is the bridge between Peru and Bolivia in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/).
+But the road is ever onward.

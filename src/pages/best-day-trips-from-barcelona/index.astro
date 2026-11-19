@@ -11,6 +11,7 @@ import SectionHeading from '../../components/chronicle/SectionHeading.astro';
 import Beat from '../../components/chronicle/Beat.astro';
 import AtAGlance from '../../components/chronicle/AtAGlance.astro';
 import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import ArticleFAQ from '../../components/chronicle/ArticleFAQ.astro';
 import type { ChronicleMeta } from '../../components/chronicle/types';
 import {
   SIZES_MODERN_PORTRAIT,
@@ -21,7 +22,7 @@ const meta: ChronicleMeta = {
   title: 'Best Day Trips from Barcelona',
   headline: 'Best Day Trips from Barcelona: Eight Assessed, One Refused',
   description:
-    'Eight excursions from Barcelona judged by the shape of the day and the transport that decides it — Montserrat, Girona, Figueres, Tarragona, Sitges, Colònia Güell, Vic and cava country.',
+    'Eight Barcelona day trips assessed by time, transport and the shape of the day, from Montserrat and Girona to Tarragona, Sitges and cava country.',
   path: '/best-day-trips-from-barcelona/',
   ogImage: '/images/best-day-trips-from-barcelona/montserrat-monastery-under-the-pinnacles.jpg',
   factsVerified: '2026-08-04',
@@ -923,4 +924,5 @@ const IMG = '/images/best-day-trips-from-barcelona';
       },
     ]}
   />
+  <ArticleFAQ page="best-day-trips-from-barcelona" />
 </ChronicleLayout>

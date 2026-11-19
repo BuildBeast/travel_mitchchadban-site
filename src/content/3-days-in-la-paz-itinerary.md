@@ -1,196 +1,92 @@
-La Paz is difficult to understand from street level.
+La Paz is difficult to understand from street level. The centre gathers plazas, churches, museums and markets into a dense urban bowl, while brick neighbourhoods climb the slopes above it and cable cars cross over roofs on their way between districts. Look across the basin and the city seems to have been built in layers, each one continuing above the last.
 
-The centre is dense with plazas, museums, markets and churches. Brick neighbourhoods climb the surrounding slopes. Cable cars pass overhead. Roads disappear around hillsides and reappear somewhere above you. Look across the valley and another version of the city seems to be stacked behind the first.
+Three days are enough to make that shape legible. The first begins with the civic centre and works through the Witches’ Market to a cable-car view over the roofs. The second places museums and a working market between further journeys above the streets. The third leaves the dense bowl for the eroded formations of Valle de la Luna. La Paz does not give up all its depth in three days. It gives the traveller a way to read it.
 
-Across three nights, the recorded route moved from Plaza Murillo and the Witches’ Market into the Mi Teleférico network, through museums and markets, then out to the eroded landscape of Valle de la Luna.
+The [Cusco-to-La Paz bus account](/cusco-to-la-paz-overnight-bus/) covers the crossing; this itinerary starts at the La Paz terminal and follows the city through three nights.
 
-It was a compact itinerary. It began almost immediately after an overnight bus from Cusco and ended with a morning departure to Santiago.
+## Day One — The City in the Bowl
 
-For a discovery-led shortlist of the experiences behind this route, start with the [best things to do in La Paz guide](/best-things-to-do-in-la-paz/).
+The Transzela bus arrived at the La Paz terminal at about 1:00pm on 16 September 2026. No recovery day was needed. After the accommodation handoff, the afternoon began at Plaza Murillo and ended above the streets at Mirador Killi Killi.
 
-## La Paz in three days at a glance
+<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="A market street in central La Paz, with pedestrians and stalls between the city buildings." width="1600" height="900" loading="lazy" decoding="async"></picture><figcaption>Street commerce begins where the formal centre gives way to the market.</figcaption></figure>
 
-**Day 1 — Arrival, civic La Paz and the cable cars**<br />
-Bus terminal · Plaza Murillo · Witches’ Market · Mi Teleférico · Mirador Killi Killi
+### Plaza Murillo
 
-**Day 2 — Museums, markets and the city from above**<br />
-Sucre Square · Coca Museum · Basilica of Saint Francis · National Art Museum · National Museum of Ethnography and Folklore · Pre-Columbian Precious Metals Museum · Mercado Rodríguez · Mi Teleférico · Hernando Siles Stadium
+Plaza Murillo is the right first room in La Paz because it presents the city in its most formal register. Government buildings, the Cathedral Basilica of Our Lady of Peace and the Presidential Palace gather around the square, while the high-rise walls and steep slopes beyond keep the wider city in view. The plaza is civic space, political stage and orientation point at once.
 
-**Day 3 — Valle de la Luna and an unresolved afternoon sequence**<br />
-Valle de la Luna · Cancha Chualluma, purpose unresolved · recorded Cholitas Wrestling block
+Its name recalls Pedro Domingo Murillo, one of the leaders associated with the 1809 uprising against Spanish rule. That history gives the square a weight beyond its architecture, but the power of the place is also physical. The formal façades sit inside a city that immediately refuses to remain flat. Above the rooftops, the hills continue; behind the institutions, La Paz keeps climbing.
 
-**Base:** Calle Modesta Sanjinés 1357
+The traveller begins here before the city breaks into smaller streets. Plaza Murillo supplies the centre as an idea: government, religion and public space gathered into one square. The next stop changes the register completely.
 
-The shape of these days matters. The central route is recorded as a mix of walking, plazas, museums and markets. Mi Teleférico then forms part of the movement between sections, while the Valle de la Luna visit is handled as a separate morning excursion.
+### Witches’ Market
 
-## Arrival in La Paz — Overnight from Cusco
+The Witches’ Market is not a museum of Andean belief placed behind glass. It is a working commercial street where ritual objects, household goods and the visual language of Aymara traditions sit alongside the ordinary business of the city. The market’s llama foetuses and offerings associated with Pachamama are familiar images of La Paz, but the street is more useful when read as part of living practice rather than as a spectacle arranged for visitors.
 
-The route to La Paz began the previous night.
+The transition from Plaza Murillo to the market is one of the first reasons to spend time walking La Paz. The civic centre speaks in stone, flags and formal entrances; the market speaks through shelves, shopfronts and objects whose meanings belong to a different history. Both are central to the city, but they do not ask the traveller to look at it in the same way.
 
-The bus left **Terminal Terrestre de Cusco at 10:00 pm on 15 September** and reached the **La Paz bus terminal at 1:00 pm on 16 September**, according to the recorded transport itinerary.
+The dedicated [La Paz markets guide](/la-paz-markets/) follows this part of the city more closely. For the three-day itinerary, the market works as the hinge between the square and the cable-car network.
 
-There is no surviving first-hand account of the journey itself, so the seat, border crossing, sleep and food remain outside this article.
+### Mi Teleférico and Mirador Killi Killi
 
-What the records establish is a 1:19 pm accommodation handoff at **Calle Modesta Sanjinés 1357**, followed shortly afterwards by the first recorded city stop.
+Mi Teleférico changes the scale of the afternoon. From the cabin, the city is no longer a sequence of streets joined at ground level. Roofs, walls, roads and slopes arrange themselves into a continuous settlement, and the basin becomes visible as a structure rather than a backdrop.
 
-La Paz began with **Plaza Murillo**.
+That is why the cable cars belong in the itinerary as transport, not merely as a sightseeing ride. They carry people between districts and give the traveller a view of how La Paz is actually built. Houses continue up the hillsides; roads bend around contours; the dense centre becomes one part of a much larger vertical city. The [Mi Teleférico in La Paz guide](/mi-teleferico-la-paz/) treats the network as an experience in its own right.
 
-## Day 1 — Plaza Murillo, markets and the cable cars
+The day then ends at Mirador Killi Killi, where the city can be read from outside the streets that first contained it. The sequence has an argument without needing to announce one: formal centre, working market, movement above the roofs, then a panorama that gathers the layers together. The evening stop was at YATI Restaurant café bar before the traveller returned to the accommodation.
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-1200w.jpg 1200w" sizes="(max-width: 820px) 100vw, 1100px" alt="Civic buildings and mountain backdrop in central La Paz." loading="lazy" decoding="async"></picture><figcaption>Civic buildings and mountain backdrop in central La Paz.</figcaption></figure>
+## Day Two — Museums, Markets and the City Above
 
-The first recorded stop was **Plaza Murillo**, followed by the **Witches’ Market**.
+The second day stays closer to the centre but goes further into what the city carries. It begins around Sucre Square and moves through museums, religious architecture and the material histories of the Andes before returning to street commerce and the cable cars.
 
-The route moves quickly from the civic centre into market streets, then into the Mi Teleférico network. That sequence gives the first day its shape: formal city, working city, then city seen from above.
+The museums should not be treated as five equal boxes to tick. A stronger morning gives the largest attention to the collections that explain La Paz’s overlapping histories, then lets the smaller stops extend the same reading.
 
-For the two market stops as a focused subject, see the [La Paz markets guide](/la-paz-markets/).
+The Coca Museum provides an entry into a plant whose place in Andean society is older and more complicated than its later reputation in European and North American drug policy. The Basilica of San Francisco brings the colonial city into the same morning: its façade and interior belong to the Catholic architecture imposed on, and adapted within, an Andean world.
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-central-market-street-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-central-market-street-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Market street in central La Paz." loading="lazy" decoding="async"></picture><figcaption>Market street in central La Paz.</figcaption></figure>
+The National Museum of Ethnography and Folklore is the most useful place to widen that history again. Its collections treat clothing, ritual, objects and community life as material culture rather than background decoration. The National Art Museum and the Pre-Columbian Precious Metals Museum then add other registers, from colonial and republican art to the technical and ceremonial importance of metalwork before Spanish rule.
 
-### Mi Teleférico — transport above the city
-
-The 16 September itinerary records several Mi Teleférico stations and movements, followed by **Mirador Killi Killi**. The exact sequence of coloured lines is less important here than the role the cable cars played in the route.
-
-They were recorded as transport between sections of the city, not only as a standalone attraction. From the cabins, streets, roofs and steep hillsides become part of one wider view. For the cable-car experience on its own terms, see the [Mi Teleférico in La Paz guide](/mi-teleferico-la-paz/).
-
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-1200w.jpg 1200w" sizes="(max-width: 820px) 100vw, 1100px" alt="Mi Teleférico cabins above La Paz." loading="lazy" decoding="async"></picture><figcaption>Mi Teleférico cabins above La Paz.</figcaption></figure>
-
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="A Mi Teleférico cabin above the city." loading="eager" decoding="async"></picture><figcaption>A Mi Teleférico cabin above the city.</figcaption></figure>
-
-The first day therefore moved from a bus terminal to a plaza, from a market to the cable cars, and finally to a viewpoint above the city. The recorded evening ended with a stop at YATI Restaurant café bar and a return to the accommodation.
-
-## Day 2 — Museums, markets and a city built vertically
-
-The second day stayed largely in central La Paz. It began at **Sucre Square** before moving through a dense sequence of museums and religious buildings:
-
-- Coca Museum
-- Basilica of Saint Francis
-- National Art Museum
-- National Museum of Ethnography and Folklore
-- Pre-Columbian Precious Metals Museum
-
-The route is museum-heavy, but it is not only an indoor day. The stops are separated by recorded walks through streets and plazas, with further Mi Teleférico movements later in the afternoon.
-
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-civic-building-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-civic-building-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-civic-building-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-civic-building-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-civic-building.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-civic-building-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-civic-building-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-civic-building-1200w.jpg 1200w" sizes="(max-width: 820px) 100vw, 1100px" alt="A civic building in central La Paz." loading="lazy" decoding="async"></picture><figcaption>A civic building in central La Paz.</figcaption></figure>
+The museums offer several ways of describing the country: coca and belief, church and colonial power, textiles and ritual, painting and metal. The streets between them matter as much as the order of the collections. The morning remains a walk through La Paz, not an indoor corridor detached from it.
 
 ### Mercado Rodríguez
 
-After the museum sequence came **Mercado Rodríguez**.
+Mercado Rodríguez brings the day back to street level. After the museums, the market replaces formal display with movement: produce, stalls, deliveries and the constant exchange that makes a city function between its monuments. It is a place to see La Paz as a working urban centre rather than only as the setting for its history.
 
-The market provides a different register from the civic spaces and museums earlier in the day. It belongs to the working route of the city: vendors, produce and street movement rather than galleries or formal façades.
+The museums preserve and interpret; Mercado Rodríguez distributes and supplies. Their proximity makes the second day stronger because the city keeps changing register without changing subject.
 
-That contrast is one of the useful features of this itinerary. The city is not reduced to its major sights; the route repeatedly returns to ordinary urban spaces between them.
+<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Mi Teleférico cabins crossing above the steep urban basin of La Paz." width="1600" height="1066" loading="lazy" decoding="async"></picture><figcaption>Mi Teleférico crosses the steep urban basin above the streets.</figcaption></figure>
 
 ### Back above the streets
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="An elevated view across La Paz." loading="lazy" decoding="async"></picture><figcaption>An elevated view across La Paz.</figcaption></figure>
+Further cable-car movement restores the wider geography after the close work of the museums and market. The cabins do not erase the city below; they show how its parts fit together. The same slopes that looked like a distant wall from Plaza Murillo become streets, roofs and neighbourhoods arranged at different heights.
 
-The afternoon itinerary returned to Mi Teleférico before the final recorded stop, **Hernando Siles Stadium**.
+The day ended at the exterior of Estadio Hernando Siles. The stadium is one of Bolivia’s important football grounds, and its high-altitude setting belongs to the country’s football identity. The precinct adds another kind of public space to the day: not the ceremonial square or the museum, but a place built for collective attention and competition.
 
-The stadium visit is supported by the route record, and **DSC09456** clearly shows the stadium exterior. The evidence does not establish attendance at a Bolívar match. There is no confirmed ticket, crowd sequence, scoreboard or match photograph, so this remains a stadium stop rather than a football story.
+Lunch at La Rufina Restaurant came before the stadium stop, linking the central museum sequence with the stadium precinct.
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="The exterior of Estadio Hernando Siles." loading="lazy" decoding="async"></picture><figcaption>The exterior of Estadio Hernando Siles.</figcaption></figure>
+<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-hernando-siles-stadium-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="The exterior of Estadio Hernando Siles in La Paz." width="1600" height="1066" loading="lazy" decoding="async"></picture><figcaption>Estadio Hernando Siles, the stadium precinct above the central streets.</figcaption></figure>
 
-## Day 3 — Valle de la Luna
+## Day Three — Beyond the Dense City
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Eroded formations at Valle de la Luna." loading="lazy" decoding="async"></picture><figcaption>Eroded formations at Valle de la Luna.</figcaption></figure>
+Valle de la Luna deserves its own morning. It is close enough to La Paz to be practical, but different enough in shape and texture that squeezing it between central museums would make both experiences smaller.
 
-The third day left the dense centre of La Paz behind.
+<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Dry eroded formations and ridges at Valle de la Luna outside La Paz." width="1600" height="1066" loading="lazy" decoding="async"></picture><figcaption>Valle de la Luna replaces the dense city with dry ridges and eroded stone.</figcaption></figure>
 
-The recorded route reached **Valle de la Luna** in the morning and allocated roughly two hours to the visit. The transfer is recorded as an estimated 22-minute drive each way, but the operator, vehicle, fare, ticketing and meeting arrangements are not preserved in the source pack.
+The landscape is shaped by erosion rather than by the masonry and traffic of the city. Soft ground has been cut into pinnacles, channels and narrow ridges, leaving a dry sculpted field that seems to belong to another scale of La Paz. The formations are not a decorative interruption to the city; they explain something about the wider terrain in which the city sits.
 
-The contrast with the previous two days is clear in the photographs. Markets, museums and cable cars give way to eroded formations and walking paths.
+Roughly two hours was enough to walk among the formations without turning the excursion into a race back to the centre. The [Valle de la Luna guide](/valle-de-la-luna-la-paz/) follows the landscape in greater detail. After two days of civic buildings, museums, markets and cable cars, the third day moves beyond the dense urban bowl and lets the landscape take over.
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-landscape-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="Valle de la Luna and the surrounding mountain landscape." loading="lazy" decoding="async"></picture><figcaption>Valle de la Luna and the surrounding mountain landscape.</figcaption></figure>
+<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1600w.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="La Paz spread across the surrounding basin and slopes from an elevated viewpoint." width="1600" height="1066" loading="lazy" decoding="async"></picture><figcaption>La Paz spread across the basin and slopes beyond the central streets.</figcaption></figure>
 
-Valle de la Luna deserves its own block of the day rather than being squeezed between central-city sights. Beyond that, the available evidence does not establish a particular trail or viewpoint. For the focused visit and the question of whether the excursion earns its place, see the [Valle de la Luna guide](/valle-de-la-luna-la-paz/).
+After Valle de la Luna, the afternoon stayed deliberately loose before dinner at Oliva Restaurant – Cocina Abierta.
 
-### After Valle de la Luna
+## Is Three Days Enough for La Paz?
 
-The route records an afternoon stop at **Cancha Chualluma**, but does not preserve its purpose or what happened there. It should remain a route marker, not a reconstructed experience.
+Three days are enough for a strong first reading of La Paz, but not enough to exhaust it. The itinerary reaches the civic centre, the Witches’ Market, the major museum sequence, Mercado Rodríguez, Mi Teleférico, Mirador Killi Killi, Hernando Siles Stadium and Valle de la Luna. It covers the city’s formal, working, vertical and geological registers without pretending that they amount to the whole place.
 
-The itinerary then contains a four-hour block labelled **Cholitas Wrestling MP**. That is enough to say the visit appears in the recorded itinerary. It is not enough to describe a bout, venue, ticketing process, crowd or personal reaction. No clearly identifiable wrestling photograph has been confirmed in the archive.
+The first day establishes the bowl and its slopes. The second fills the centre with history, material culture, commerce and football. The third moves beyond the dense city. La Paz rewards a longer stay for anyone who wants to follow more of its neighbourhoods, museums and highland surroundings.
 
-The evening itinerary records Oliva Restaurant – Cocina Abierta. No dish, price or restaurant opinion is supported by the source material.
+## The City in Layers
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-walk-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-walk-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-walk-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-walk-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-walk.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-walk-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-walk-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-valle-de-la-luna-walk-1200w.jpg 1200w" sizes="(max-width: 820px) 100vw, 1100px" alt="A walk among the formations at Valle de la Luna." loading="lazy" decoding="async"></picture><figcaption>A walk among the formations at Valle de la Luna.</figcaption></figure>
+La Paz does not become simpler in three days. It becomes legible. Plaza Murillo gives the traveller the formal city; the Witches’ Market and Mercado Rodríguez return it to working streets. Museums add the colonial, Indigenous and material histories that the buildings alone cannot hold. Mi Teleférico reveals the vertical city, with neighbourhoods and roads continuing above the basin. Valle de la Luna then carries the journey beyond the dense urban bowl into the eroded landscape around it.
 
-## Where I stayed
-
-The recorded La Paz base was **Calle Modesta Sanjinés 1357**. The itinerary returned there after the first two full days and before the 19 September departure.
-
-For this route, the useful practical detail is not a hotel review but the way the base fits into the recorded sequence: central-city stops were handled on foot, while longer movements used cable cars or vehicle transfers.
-
-## Getting around La Paz
-
-The recorded trip used four forms of movement:
-
-**Walking**<br />
-The central itinerary is made up of repeated walks between plazas, museums, markets and stations. The distances and durations in the source are route-planner estimates, not a measured personal walking log.
-
-**Mi Teleférico**<br />
-The cable cars appear repeatedly in the route and function as transport between walking sections as well as viewpoints over the city.
-
-**Vehicle transfers**<br />
-A short drive is recorded between the bus terminal and the accommodation. The Valle de la Luna route also includes estimated vehicle transfers. The operator and fare are not documented.
-
-**Long-distance transport**<br />
-Arrival was by overnight bus from Cusco. Departure was by flight from La Paz El Alto International Airport at 9:16 am on 19 September.
-
-The practical shape is therefore simple: keep the central route clustered, use the cable cars where they form part of the journey, and treat Valle de la Luna as a separate excursion rather than assuming every stop belongs in one continuous walk.
-
-## What the altitude changed
-
-La Paz was explicitly treated as an altitude stop in the planning material. The training plan was reduced to walking, with an optional easy 20–30-minute jog only if conditions felt right; the harder workout was removed from the plan.
-
-That supports a narrow conclusion: altitude shaped the plan before arrival.
-
-It does not document how the traveller physically felt. There is no surviving first-hand record of headache, breathlessness, nausea, sleep disruption, appetite change, dehydration, unusual fatigue or recovery, and none of those should be added here.
-
-The deeper question belongs to a separate article: **La Paz at Altitude: What Three Days at 3,600m Actually Felt Like**.
-
-## Food stops
-
-Three named restaurant stops survive in the itinerary:
-
-- **YATI Restaurant café bar**, on the first evening
-- **La Rufina Restaurant**, on the second day before the stadium stop
-- **Oliva Restaurant – Cocina Abierta**, after the recorded 18 September activities
-
-They are route markers, not reviews. The source pack does not support dishes, prices, service opinions or recommendations.
-
-## Is three days enough for La Paz?
-
-The recorded itinerary covers Plaza Murillo, the Witches’ Market, several museums, Mercado Rodríguez, Mi Teleférico, Mirador Killi Killi, Hernando Siles Stadium, Valle de la Luna and a Cholitas Wrestling block.
-
-That is a substantial introduction, but it is compressed. The first day began after an overnight bus from Cusco. The second combined museums, markets, walking and cable cars. The third gave Valle de la Luna its own morning before moving into an afternoon sequence whose details are incomplete.
-
-Three days can outline the shape of La Paz. They cannot exhaust it.
-
-## A practical three-day La Paz route
-
-### Day 1
-
-Arrive from Cusco → accommodation → Plaza Murillo → Witches’ Market → Mi Teleférico → Mirador Killi Killi → recorded evening restaurant stop
-
-### Day 2
-
-Sucre Square → Coca Museum → Basilica of Saint Francis → National Art Museum → National Museum of Ethnography and Folklore → Pre-Columbian Precious Metals Museum → Mercado Rodríguez → Mi Teleférico → Hernando Siles Stadium
-
-### Day 3
-
-Valle de la Luna → flexible afternoon, pending confirmation of the Chualluma and Cholitas Wrestling details → evening
-
-The final afternoon is intentionally less prescriptive. The source contains route entries whose purpose and attendance are not fully documented, and a clean itinerary should not pretend otherwise.
-
-## The city in layers
-
-The first afternoon introduces the plazas and markets. The cable cars widen the view. The second day fills the centre with museums, stalls, streets and further journeys above the roofs. Then Valle de la Luna changes the scale again.
-
-La Paz does not become simpler over three days.
-
-It becomes more legible: a city of civic spaces and working markets, of walking routes and cable-car connections, of dense urban streets and a landscape that sits just beyond them.
-
-That is the useful way to read this itinerary—not as one list of attractions, but as a city encountered in layers.
-
-La Paz is the Bolivian middle stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/). It begins with the [Cusco-to-La Paz overnight bus](/cusco-to-la-paz-overnight-bus/) and hands the route onward to the [four-day Santiago itinerary](/4-days-in-santiago-itinerary/).
+La Paz holds its civic centre, markets, museums, cable cars and dry outer landscape together without making them look alike.
+The Bolivia stage of the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/) begins with the [Cusco-to-La Paz overnight bus](/cusco-to-la-paz-overnight-bus/) and continues through the city in layers.

@@ -16,6 +16,8 @@ interface DayRow {
   num: string;
   /** Right column — the day in one line. */
   text: string;
+  /** Optional bold subline shown above the card description. */
+  detail?: string;
 }
 
 interface Props {
@@ -58,6 +60,7 @@ const {
             {days.map((day) => (
               <div class="itin-day-row">
                 <span class="itin-day-num">{day.num}</span>
+                {day.detail && <strong class="itin-day-detail">{day.detail}</strong>}
                 {day.text}
               </div>
             ))}
@@ -69,3 +72,12 @@ const {
     <slot />
   </div>
 </div>
+
+<style>
+  .itin-day-detail {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+    color: rgba(221, 232, 208, 0.82);
+  }
+</style>

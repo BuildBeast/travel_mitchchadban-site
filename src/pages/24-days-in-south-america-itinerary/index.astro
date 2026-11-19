@@ -1,20 +1,46 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleContent from "../../content/24-days-in-south-america-itinerary.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Beat from "../../components/chronicle/Beat.astro";
+import TourRecommendations from "../../components/chronicle/TourRecommendations.astro";
 import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import "../../styles/south-america-article.css";
 
 const title = "24 Days in South America: Complete Itinerary — There & Back Again";
-const description = "A first-hand 24-day South America itinerary through Peru, Bolivia, Chile, Argentina and Uruguay, including Machu Picchu, La Paz, Santiago, Mendoza, Iguazú Falls and Buenos Aires.";
+const description = "A first-hand 24-day South America itinerary through Peru, Bolivia, Chile, Argentina, Brazil and Uruguay, including Machu Picchu, Iguazú Falls and Buenos Aires.";
 const canonical = "https://travel.mitchchadban.com/24-days-in-south-america-itinerary/";
-const image = "/images/2-days-in-machu-picchu-itinerary/machu-picchu-terraces-1200w.jpg";
+const image = "/images/24-days-in-south-america-itinerary/machu-picchu-mountain-panorama-1200w.jpg";
 const PROVENANCE = { photography: true };
+const faqItems = [
+  {
+    question: "Is 24 days enough for this South America itinerary?",
+    answer: "Yes, but it is a broad itinerary rather than a slow one. The route works because each major stop gets several nights: three in Lima, two around Machu Picchu, three in La Paz, four in Santiago, three in Mendoza, three at Iguazú and five in Buenos Aires. Transfer days need to be treated as part of the journey rather than spare sightseeing time.",
+  },
+  {
+    question: "What is the best order for this South America route?",
+    answer: "This trip moved Lima → Aguas Calientes / Machu Picchu → La Paz → Santiago → Mendoza → Iguazú → Buenos Aires, with Colonia del Sacramento as a day trip. The route works because it progresses geographically across the continent rather than repeatedly backtracking, although it is not the only workable order.",
+  },
+  {
+    question: "Do you need to visit both sides of Iguazú Falls?",
+    answer: "Yes, if the itinerary allows two full sightseeing days. The Argentine side is stronger for moving through the falls via its circuits and different elevations; the Brazilian side gives the broader panorama and combines naturally with Parque das Aves and Macuco Safari. If only one day is available, prioritise the Argentine side when the falls themselves are the main objective.",
+  },
+  {
+    question: "Is the Cusco to La Paz overnight bus worth taking?",
+    answer: "Yes. The Transzela service was comfortable, allowed substantial sleep, handled luggage underneath the bus and turned the border crossing into part of the route. For this traveller, it was preferable to flying. Check current operator, border and ticketing details before travel.",
+  },
+  {
+    question: "How much did this 24-day South America trip cost?",
+    answer: "The recorded trip budget was ~A$7,118.77. This is the recorded trip budget from the original costing sheet and includes travel, accommodation and tours.",
+  },
+];
 
 const schema = withProvenance({
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
-      headline: "24 Days in South America: Peru, Bolivia, Chile, Argentina and Uruguay",
+      headline: "24 Days in South America: Peru, Bolivia, Chile, Argentina, Brazil and Uruguay",
       description,
       author: { "@type": "Person", name: "Mitch Chadban" },
       publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
@@ -31,6 +57,14 @@ const schema = withProvenance({
         { "@type": "ListItem", position: 3, name: "24 Days in South America: Complete Itinerary", item: canonical },
       ],
     },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqItems.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
   ],
 }, PROVENANCE);
 
@@ -41,50 +75,214 @@ const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/s
   <Fragment slot="head" set:html={jsonLd} />
 
   <section class="post-hero" aria-labelledby="south-america-title">
-    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru · Bolivia · Chile · Argentina · Uruguay ·&nbsp;<span>September–October 2026</span></div>
-    <h1 id="south-america-title" class="post-hero-title"><em>24 Days in South America:</em><br />Peru, Bolivia, Chile, Argentina and Uruguay</h1>
+    <div class="post-route-strip"><span>South America</span>&nbsp;· Peru · Bolivia · Chile · Argentina · Brazil · Uruguay ·&nbsp;<span>September–October 2026</span></div>
+    <h1 id="south-america-title" class="post-hero-title"><em>24 Days in South America:</em><br />Peru, Bolivia, Chile, Argentina, Brazil and Uruguay</h1>
     <p class="post-hero-sub">One route from Lima to Buenos Aires, through ruins, high cities, wine country, two sides of a waterfall and a day beyond the Río de la Plata.</p>
     <div class="post-stats">
       <div class="stat"><span class="stat-num">24</span><span class="stat-label">Days</span></div>
-      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Countries</span></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Countries</span></div>
       <div class="stat"><span class="stat-num">9</span><span class="stat-label">Stops</span></div>
       <div class="stat"><span class="stat-num">8</span><span class="stat-label">Route images</span></div>
     </div>
-    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: true })} />
   </section>
 
   <article class="post-body south-america-post-body">
     <ArticleContent />
   </article>
 
-  <style is:global>
-    .south-america-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
-    .south-america-post-body .article-photo picture,
-    .south-america-post-body .article-photo img { display: block; width: 100%; }
-    .south-america-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
-    .south-america-post-body .article-photo figcaption { margin-top: 0.65rem; color: rgba(221, 232, 208, 0.62); font-size: 0.95rem; font-style: italic; text-align: center; }
-    .south-america-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.08; }
-    .south-america-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 400; }
-    .south-america-post-body p,
-    .south-america-post-body ul,
-    .south-america-post-body ol,
-    .south-america-post-body table { max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .south-america-post-body ul,
-    .south-america-post-body ol { padding-left: 2rem; color: rgba(221, 232, 208, 0.86); font-size: 1.18rem; line-height: 1.7; }
-    .south-america-post-body table { width: 100%; border-collapse: collapse; color: rgba(221, 232, 208, 0.86); font-size: 1rem; line-height: 1.5; }
-    .south-america-post-body th,
-    .south-america-post-body td { padding: 0.85rem 0.65rem; border-bottom: 1px solid rgba(158, 207, 114, 0.2); text-align: left; vertical-align: top; }
-    .south-america-post-body th { color: #e7f2da; font-family: 'IM Fell English', Georgia, serif; font-size: 1.15rem; font-weight: 400; }
-    .south-america-post-body strong { color: #e7f2da; }
-    @media (max-width: 820px) {
-      .south-america-post-body .article-photo { margin: 2.5rem 0; }
-      .south-america-post-body h2,
-      .south-america-post-body h3,
-      .south-america-post-body p,
-      .south-america-post-body ul,
-      .south-america-post-body ol,
-      .south-america-post-body table { max-width: none; }
-      .south-america-post-body table { display: block; overflow-x: auto; }
-    }
-  </style>
+  <AtAGlance
+    id="full-itinerary"
+    title="The Full Itinerary at a Glance"
+    meta={[
+      { label: "Trip", value: "Lima → Aguas Calientes / Machu Picchu → La Paz → Santiago → Mendoza → Iguazú → Buenos Aires, with Colonia del Sacramento as the Uruguay day trip." },
+      { label: "Duration", value: "24 days · 10 September–4 October 2026." },
+      { label: "Countries", value: "Peru → Bolivia → Chile → Argentina → Brazil → Uruguay." },
+      { label: "Travelled", value: "The recorded route began in Lima and ended in Buenos Aires in September–October 2026." },
+    ]}
+    days={[
+      { num: "Days 1–3", text: "Lima — historic centre, Barranco, Miraflores, archaeology and museums." },
+      { num: "Days 4–5", text: "Aguas Calientes / Machu Picchu — rail approach, Huayna Picchu and the archaeological park." },
+      { num: "Night 6 / transfer", text: "Cusco → La Paz — overnight Transzela bus." },
+      { num: "Days 7–9", text: "La Paz — civic centre, markets, Mi Teleférico and Valle de la Luna." },
+      { num: "Days 10–13", text: "Santiago — civic core, museums and viewpoints." },
+      { num: "Days 14–16", text: "Mendoza — city, parks and wine country." },
+      { num: "Days 17–19", text: "Iguazú — Argentine and Brazilian sides." },
+      { num: "Days 20–24", text: "Buenos Aires — historic centre, Recoleta, San Telmo, Puerto Madero, La Boca and Palermo." },
+      { num: "Day trip", text: "Colonia del Sacramento — Uruguay, within the Buenos Aires stay." },
+    ]}
+  >
+    <div class="itin-section-head">Total Budget Estimate</div>
+    <div class="grand-total-block">
+      <div class="grand-total-grid">
+        <div class="grand-line"><strong>Travel</strong>A$4,638</div>
+        <div class="grand-line"><strong>Accommodation</strong>A$1,724.97</div>
+        <div class="grand-line"><strong>Tours</strong>A$676.80</div>
+        <div class="grand-line"><strong>Recorded total</strong>A$7,118.77</div>
+      </div>
+      <div class="grand-total-num">Recorded trip budget: ~A$7,118.77</div>
+    </div>
+
+    <div class="itin-section-head">Quick Reference — Best Eats</div>
+    <div class="eats-row"><span class="eats-city">Lima</span><span><strong>Cevichería Barra Maretazo</strong> — first historic-centre afternoon.</span></div>
+    <div class="eats-row"><span class="eats-city">Lima</span><span><strong>Restaurant Huaca Pucllana</strong> — following the archaeology and museum day.</span></div>
+    <div class="eats-row"><span class="eats-city">Aguas Calientes</span><span><strong>Mapacho Craft Beer Restaurant</strong> — arrival-night dinner.</span></div>
+    <div class="eats-row"><span class="eats-city">Aguas Calientes</span><span><strong>La Boulangerie de París Machupicchu</strong> — final-morning coffee and food stop.</span></div>
+    <div class="eats-row"><span class="eats-city">La Paz</span><span><strong>La Rufina Restaurant</strong> — before the Hernando Siles Stadium stop.</span></div>
+    <div class="eats-row"><span class="eats-city">Santiago</span><span><strong>Bocanáriz</strong> — recorded evening stop.</span></div>
+    <div class="eats-row"><span class="eats-city">Mendoza</span><span><strong>Chachingo Arístides</strong> — arrival-night dinner.</span></div>
+    <div class="eats-row"><span class="eats-city">Iguazú</span><span><strong>Antigal Parrilla Restaurant</strong> — after the Argentine park day.</span></div>
+    <div class="eats-row"><span class="eats-city">Buenos Aires</span><span><strong>Parrilla Peña</strong> — after the arrival circuit.</span></div>
+
+    <div class="itin-section-head">Getting Around</div>
+    <div class="transport-note"><strong>Peru:</strong> Flight from Lima to Cusco, then PeruRail to Aguas Calientes.</div>
+    <div class="transport-note"><strong>Peru → Bolivia:</strong> Transzela overnight bus from Cusco to La Paz.</div>
+    <div class="transport-note"><strong>Bolivia → Chile:</strong> Flight from La Paz to Santiago.</div>
+    <div class="transport-note"><strong>Chile → Argentina:</strong> Bus from Santiago to Mendoza.</div>
+    <div class="transport-note"><strong>Argentina → Iguazú:</strong> Onward flight; confirm the complete itinerary before booking.</div>
+    <div class="transport-note"><strong>Iguazú → Buenos Aires:</strong> Onward flight on 29 September; confirm current departure details.</div>
+    <div class="transport-note"><strong>Buenos Aires → Uruguay:</strong> Colonia del Sacramento day trip; confirm the current ferry operator and crossing requirements.</div>
+  </AtAGlance>
+
+  <section class="faq-block" aria-labelledby="south-america-faq-title">
+    <div class="faq-inner">
+      <div class="faq-title" id="south-america-faq-title">Frequently Asked Questions</div>
+      {faqItems.map((item) => (
+        <div class="faq-item">
+          <div class="faq-q">{item.question}</div>
+          <div class="faq-a">{item.answer}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="next-chronicles">
+    <div class="section-label">Next Chronicles</div>
+    <div class="posts-grid">
+      <a class="post-card chronicle-card" href="/2-days-in-machu-picchu-itinerary/">
+        <div class="post-region">Peru · Machu Picchu</div>
+        <div class="post-title">Machu Picchu in 2 Days</div>
+        <div class="post-excerpt">A two-night mountain stage through Aguas Calientes, Machu Picchu and Huayna Picchu, with enough time to let the place unfold beyond a single viewpoint.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+      <a class="post-card chronicle-card" href="/3-days-in-la-paz-itinerary/">
+        <div class="post-region">Bolivia · La Paz</div>
+        <div class="post-title">3 Days in La Paz</div>
+        <div class="post-excerpt">Three days through markets, museums, Mi Teleférico and Valle de la Luna in a city whose geography only becomes clear once the traveller rises above the streets.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+      <a class="post-card chronicle-card" href="/5-days-in-buenos-aires-itinerary/">
+        <div class="post-region">Argentina · Buenos Aires</div>
+        <div class="post-title">5 Days in Buenos Aires</div>
+        <div class="post-excerpt">Five nights across Plaza de Mayo, Recoleta, San Telmo, Puerto Madero, La Boca and Palermo, with the city unfolding barrio by barrio.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="pillar-tour-slots" aria-label="Guided experiences">
+    <div class="pillar-tour-slot" data-tour-destination="lima">
+      <TourRecommendations
+        label="Book it — Lima experiences"
+        tours={[
+          { category: "Historic Centre", title: "Lima Historic Center Walking Tour with Catacombs", description: "A guided walk through Lima’s colonial centre with Plaza de Armas, historic streets and the San Francisco catacombs.", href: "https://www.viator.com/tours/Lima/City-of-the-Kings-and-Catacombs-Tour/d928-159308P33?pid=P00295455&mcid=42383&medium=link", featured: true },
+          { category: "Barranco & Miraflores", title: "Small-Group Tour: Lima and Barranco City Tour", description: "A compact city introduction linking historic Lima with Barranco and the city’s coastal districts.", href: "https://www.viator.com/tours/Lima/Half-Day-City-Tour-of-Lima-and-Barranco/d928-18917P7?pid=P00295455&mcid=42383&medium=link" },
+          { category: "Larco & History", title: "The Larco Museum, Lima City Tour and Catacombs", description: "A longer cultural day combining the historic centre, San Francisco and the Larco Museum.", href: "https://www.viator.com/tours/Lima/City-tour-Catacombs-and-Larco-Museum-8-hours-Lunch-included/d928-178763P27?pid=P00295455&mcid=42383&medium=link" },
+        ]}
+      />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="pillar-tour-slot" data-tour-destination="machu-picchu">
+      <TourRecommendations
+        label="Book it — Machu Picchu experiences"
+        tours={[
+          { category: "Machu Picchu", title: "Machu Picchu Private Guided Tour from Aguas Calientes", description: "A private citadel visit from Aguas Calientes with guide, admission and return bus transfers.", href: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Guided-Tour/d937-5243P102?pid=P00295455&mcid=42383&medium=link", featured: true },
+          { category: "Machu Picchu", title: "Machu Picchu Private Tour", description: "A shorter guided visit beginning in Aguas Calientes, useful when the town is already the base for the mountain stage.", href: "https://www.viator.com/tours/Cusco/Machu-Picchu-Ticket-and-Machu-Picchu-Tour/d937-340705P6?pid=P00295455&mcid=42383&medium=link" },
+          { category: "Two-Day Stage", title: "2-Day Private Tour to Machu Picchu from Cusco", description: "A two-day format that includes time in Aguas Calientes before the Machu Picchu visit, subject to current ticket availability.", href: "https://www.viator.com/tours/Cusco/2-Day-Tour-to-Machu-Picchu-from-Cusco/d937-13854P10?pid=P00295455&mcid=42383&medium=link" },
+        ]}
+      />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="pillar-tour-slot" data-tour-destination="la-paz">
+      <TourRecommendations
+        label="Book it — La Paz experiences"
+        tours={[
+          { category: "City & Cable Cars", title: "City Tour plus Cable Car La Paz", description: "A compact introduction to La Paz combining a guided city route, the Witches’ Market and Mi Teleférico.", href: "https://www.viator.com/tours/La-Paz/Cable-Car-Tour-of-La-Paz/d5027-20316P3?pid=P00295455&mcid=42383&medium=link", featured: true },
+          { category: "City & Valle de la Luna", title: "Private La Paz City Tour, Cable Cars and Moon Valley", description: "A private city experience linking the historic centre, cable cars, markets and Valle de la Luna.", href: "https://www.viator.com/tours/La-Paz/CITY-TOUR-IN-LA-PAZ-FULLDAY/d5027-191741P1?pid=P00295455&mcid=42383&medium=link" },
+          { category: "Archaeology", title: "Tiwanaku Archaeological Ruins Tour", description: "A full-day archaeological excursion from La Paz for extending the city stay beyond its central museums and cable-car routes.", href: "https://www.viator.com/tours/La-Paz/Tiwanaku/d5027-171598P1?pid=P00295455&mcid=42383&medium=link" },
+        ]}
+      />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="pillar-tour-slot" data-tour-destination="santiago">
+      <TourRecommendations
+        label="Book it — Santiago experiences"
+        tours={[
+          { category: "City & Cable Car", title: "Private Santiago City Tour with Cable Car", description: "A private orientation through the civic centre, central neighbourhoods and Cerro San Cristóbal by cable car.", href: "https://www.viator.com/tours/Santiago/Santiago-City-Tour/d713-69875P4?pid=P00295455&mcid=42383&medium=link", featured: true },
+          { category: "Andes Day Trip", title: "Cajón del Maipo and Embalse el Yeso", description: "A full-day excursion from Santiago into the Andes, with the Cajón del Maipo valley and Embalse el Yeso.", href: "https://www.viator.com/tours/Santiago/Cajon-del-Maipo-Embalse-el-Yeso/d713-182663P16?pid=P00295455&mcid=42383&medium=link" },
+          { category: "Pacific Coast", title: "Valparaíso and Viña del Mar from Santiago", description: "A full-day coastal excursion for extending a Santiago stay towards Valparaíso and Viña del Mar.", href: "https://www.viator.com/tours/Santiago/Valparaiso-and-Vina-del-Mar-Tour/d713-12646P10?pid=P00295455&mcid=42383&medium=link" },
+        ]}
+      />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="pillar-tour-slot" data-tour-destination="mendoza">
+      <TourRecommendations
+        label="Book it — Mendoza wine experiences"
+        tours={[
+          { category: "Wine Country", title: "Mendoza Hop-On Hop-Off Wine Tour", description: "A flexible full- or half-day option through Mendoza’s wine regions, without needing to drive between wineries.", href: "https://www.viator.com/tours/Mendoza/Wine-Hop-On-Hop-Off-Tour-from-Mendoza/d931-40988P2?pid=P00295455&mcid=42383&medium=link", featured: true },
+          { category: "Uco Valley", title: "Uco Valley Vineyard Tour", description: "A full-day Uco Valley experience with winery visits, tastings, lunch and private transport.", href: "https://www.viator.com/tours/Mendoza/UCO-VALLEY-DAY-hop-on-hop-off-tour/d931-199477P2?pid=P00295455&mcid=42383&medium=link" },
+          { category: "Bike & Wine", title: "Bike Tour in Mendoza Wine Country", description: "A guided cycling option through the wine country with winery visits, tastings and lunch.", href: "https://www.viator.com/tours/Mendoza/Bike-Tour-in-Mendoza-Wine-Country/d931-5693BIKE?pid=P00295455&mcid=42383&medium=link" },
+        ]}
+      />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="pillar-tour-slot" data-tour-destination="iguazu">
+      <TourRecommendations
+        label="Book it — Iguazú experiences"
+        tours={[
+          { category: "Argentina Side", title: "Tour to Iguassu Falls Argentinean Side", description: "A full-day guided visit to the Argentine side, with pickup from the Puerto Iguazú or Foz area and the park’s main circuits.", href: "https://www.viator.com/tours/Foz-do-Iguacu/Tour-to-Iguassu-Falls-Argentinean-Side/d970-7558P4?pid=P00295455&mcid=42383&medium=link", featured: true },
+          { category: "Brazil Side", title: "Brazilian Falls, Bird Park and Itaipu Dam", description: "A Brazilian-side day combining the falls, Parque das Aves and Itaipu Dam with transport from Foz do Iguaçu.", href: "https://www.viator.com/tours/Foz-do-Iguacu/Brazilian-Falls-Bird-Park-and-Itaipu-Dam-from-Foz-do-Iguacu/d970-7558P5?pid=P00295455&mcid=42383&medium=link" },
+          { category: "Macuco Safari", title: "Macuco Safari — Boat Ride and Jungle", description: "A focused Macuco Safari experience inside the Brazilian Iguazú stage, with escort, life jacket and park transport.", href: "https://www.viator.com/tours/Foz-do-Iguacu/Macuco-Safari-Boat-ride-and-Jungle-Iguassu-Falls/d970-31682P3?pid=P00295455&mcid=42383&medium=link" },
+        ]}
+      />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="pillar-tour-slot" data-tour-destination="buenos-aires">
+      <TourRecommendations
+        label="Book it — Buenos Aires experiences"
+        tours={[
+          { category: "City Orientation", title: "Private City Tour in Buenos Aires", description: "A private half-day introduction to Plaza de Mayo, San Telmo, La Boca, Puerto Madero, Palermo and Recoleta.", href: "https://www.viator.com/tours/Buenos-Aires/PRIVATE-CITY-TOUR-IN-BUENOS-AIRES/d901-109228P4?pid=P00295455&mcid=42383&medium=link", featured: true },
+          { category: "Tango", title: "El Querandi Tango Show with Optional Dinner", description: "An evening tango show in San Telmo with optional dinner, drinks and transfers.", href: "https://www.viator.com/tours/Buenos-Aires/Buenos-Aires-Dinner-and-Tango-Show/d901-5674TANGO?pid=P00295455&mcid=42383&medium=link" },
+          { category: "Colonia del Sacramento", title: "Premium Day Trip to Colonia del Sacramento", description: "A full-day ferry excursion from Buenos Aires with guided time in Colonia’s historic quarter.", href: "https://www.viator.com/tours/Buenos-Aires/Premium-day-trip-to-Colonia-from-Buenos-Aires/d901-14659P5?pid=P00295455&mcid=42383&medium=link" },
+        ]}
+      />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const placements = [
+        ['lima', 'Lima — Three-Night Stay'],
+        ['machu-picchu', 'Aguas Calientes & Machu Picchu — Two Nights'],
+        ['la-paz', 'La Paz — Three-Night Stay'],
+        ['santiago', 'Santiago — Four-Night Stay'],
+        ['mendoza', 'Mendoza — Three-Night Stay'],
+        ['iguazu', 'Iguazú — Three-Night Stay'],
+        ['buenos-aires', 'Buenos Aires — Five-Night Stay'],
+      ];
+      const practicalCards = [...document.querySelectorAll('.south-america-post-body .practical')];
+      for (const [slotName, cityName] of placements) {
+        const card = practicalCards.find((item) => item.querySelector('.prac-city')?.textContent?.includes(cityName));
+        const slot = document.querySelector(`[data-tour-destination="${slotName}"]`);
+        if (card && slot) card.insertAdjacentElement('afterend', slot);
+      }
+    })();
+  </script>
 </BaseLayout>

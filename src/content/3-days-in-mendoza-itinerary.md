@@ -1,80 +1,47 @@
-Mendoza is often reduced to wine country. The recorded visit was more divided than that: a city of parks and formal streets, foothill landmarks, and a separate set of wine-country stops beyond the urban centre.
+Mendoza works best when the city and wine country are given separate time. Three nights allow the journey to arrive from Santiago, settle into the streets and parks, move towards the foothill edge, and then give a full day to the vineyards before the road turns east again.
 
-For the experience shortlist above this chronology, see the [best things to do in Mendoza guide](/best-things-to-do-in-mendoza/). This itinerary keeps the three-day route; the hub helps decide what deserves priority.
+The stay ran from **23 to 26 September 2026**. The bus from Santiago left Terminal Sur at around **10:00 am** and reached Mendoza at approximately **4:00 pm**, making the first afternoon a partial beginning rather than a full sightseeing day.
 
-The stay ran from **23 to 26 September 2026**, for three nights, after the bus from Santiago and before onward travel towards Iguazú. The evidence supports the broad shape of the visit and the names of the places recorded. It does not preserve a full hour-by-hour chronology, tasting notes, transport operator, prices or a reliable account of the Mendoza–Iguazú connection. This itinerary keeps those limits visible.
+## Day 1 — 23 September — Arrival and Mendoza as a City
 
-## Mendoza in three days at a glance
+The bus from Santiago carried the journey into Argentina on **23 September**. Mendoza began in the afternoon, with the city still ahead and the larger journey temporarily held at the edge of the map.
 
-**Day 1 — Arrival and the city’s green structure**  
-Arrival from Santiago · Parque General San Martín · Mendoza University · central streets
+The useful choice was not to force a wine-country excursion into the arrival window. Mendoza’s first impression belonged to its own streets and greenery: the formal city, Parque General San Martín and Mendoza University, whose surrounding area would shape the city day.
 
-**Day 2 — Parks, monuments and the foothill edge**  
-Cerro de la Gloria · San Vicente Park · city-to-foothill geography
+That division also gives the visit a better beginning. The transfer from Santiago is a substantial piece of the journey in its own right, while the afternoon arrival leaves enough time to settle in and see how Mendoza is arranged. The city does not need to be treated as a waiting room for the bodegas. It has its own sequence of streets, trees and public spaces, and the first evening is better used to enter that sequence gradually.
 
-**Day 3 — The recorded wine-country route**  
-Carmelo Patti · Bodega Viamonte · Cecchin · Pasrai · Vistandes · Bodega Esencia 1870
+<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1200w.jpg 1200w"><img src="/images/3-days-in-mendoza-itinerary/mendoza-tiled-park.jpg" srcset="/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1200w.jpg 1200w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="A tiled public park in Mendoza with a central monument and mature trees." loading="eager" decoding="async" width="2048" height="1365" /></picture><figcaption>Mendoza’s formal greenery at the beginning of the city stay.</figcaption></figure>
 
-The exact order of some stops is not preserved, so the days are a practical arrangement of the recorded material rather than a claim that every stop occurred in precisely this sequence.
+The first day therefore combines arrival with a first reading of Mendoza itself. Central streets, formal buildings and mature trees make the city legible before the vineyards enter the story. Mendoza University adds another part of that civic geography, while Parque General San Martín gives the city room beyond its blocks and avenues.
 
-## Arrival from Santiago
+That relationship between institution, street and park is the useful city context for a short stay: Mendoza is not a single centre to cross off, but an urban pattern that opens into public space.
 
-The route left Santiago for Mendoza on **23 September**. The bus record gives a **10:00 am departure from Terminal Sur** and an arrival around **4:00 pm**. That makes the first Mendoza day a partial one: enough time to arrive, settle into the listed accommodation at **Avenida España 1591**, and begin with the city rather than trying to force a full excursion into the afternoon.
+Parque General San Martín is the natural centre of the day. Its trees, routes and monuments make Mendoza’s green character visible as part of the city’s structure rather than as decoration around it. Architecture gives way to landscape, then returns; the change is part of the place.
 
-The Santiago-to-Mendoza transfer is one of the useful connections in this South America route. The journey changes the country and the landscape, but the evidence here does not preserve a first-hand account of the road itself, so this article stops at the confirmed departure and arrival record.
+The park is important here because it changes the way the city is read. Mendoza’s centre can feel ordered and deliberate, but the park prevents that order from becoming hard or enclosed. It provides a longer line through the day, linking the university area and the formal streets to a larger public landscape. The broad streets, mature trees, university grounds and park do not sit as unrelated stops; together they explain why Mendoza feels unusually green and spacious for a city itinerary.
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1200w.jpg 1200w"><img src="/images/3-days-in-mendoza-itinerary/mendoza-tiled-park.jpg" srcset="/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1200w.jpg 1200w, /images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="A tiled public park in Mendoza with a central monument and mature trees." loading="eager" decoding="async" width="2048" height="1365" /></picture><figcaption>A tiled public park in Mendoza, where the city’s formal greenery becomes part of the route.</figcaption></figure>
+The practical mistake would be to treat every stop as a separate appointment. The city works better as a connected first day, with the streets, university area and park allowed to explain one another. Mendoza deserves that time before the vineyards enter the itinerary. For a more focused account of the city side, continue to [Mendoza Beyond Wine](/mendoza-beyond-wine/).
 
-## Day 1 — Mendoza as a city of parks
+<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-street-corner-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-street-corner-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-street-corner-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-street-corner-1200w.jpg 1200w"><img src="/images/3-days-in-mendoza-itinerary/mendoza-street-corner.jpg" srcset="/images/3-days-in-mendoza-itinerary/mendoza-street-corner-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-street-corner-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-street-corner-1200w.jpg 1200w, /images/3-days-in-mendoza-itinerary/mendoza-street-corner-1600w.jpg 1600w" sizes="(max-width: 820px) 100vw, 1100px" alt="A broad Mendoza street corner shaded by mature trees." loading="lazy" decoding="async" width="2048" height="1152" /></picture><figcaption>Central Mendoza between trees, buildings and public space.</figcaption></figure>
 
-The most useful first reading of Mendoza is not the vineyard. It is the city’s green structure. The recorded route includes **Parque General San Martín**, **Mendoza University** and central streets, giving the arrival day a civic and urban shape before the wine-country material begins.
+## Day 2 — 24 September — Cerro de la Gloria and the Foothill Edge
 
-For a focused look at Mendoza’s parks, monuments and city experience beyond wine, continue to the [Mendoza beyond wine guide](/mendoza-beyond-wine/). This page remains the complete three-day route.
+The second day widens the geography. Cerro de la Gloria is the anchor: a monument in a foothill setting where Mendoza’s ordered streets meet the land beyond the city. The monument honours the Army of the Andes and the liberating campaign led by General José de San Martín, giving the foothill stop a direct place in Argentine history rather than making it only a viewpoint or city-edge landmark. The Andes are no longer only a distant edge behind the urban plan; the surrounding terrain enters the day.
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-park-monument-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-park-monument-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-park-monument-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-park-monument-1200w.jpg 1200w"><img src="/images/3-days-in-mendoza-itinerary/mendoza-park-monument.jpg" srcset="/images/3-days-in-mendoza-itinerary/mendoza-park-monument-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-park-monument-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-park-monument-1200w.jpg 1200w" sizes="(max-width: 820px) 100vw, 1100px" alt="An equestrian monument on a tree-lined Mendoza park walkway." loading="lazy" decoding="async" width="1365" height="2048" /></picture><figcaption>An equestrian monument on a tree-lined Mendoza walkway.</figcaption></figure>
+San Vicente Park supports that movement towards the edge. It belongs to the same wider geography as Cerro de la Gloria, helping the day move from central streets through green public space and towards the foothills. It is not a competing headline attraction. Its value is in the transition.
 
-That distinction matters for a short stay. If every available hour is assigned to a winery, the city disappears from the itinerary. The source material supports a Mendoza visit with both registers: urban parks and a separate wine-country day.
+Together, the monument and park show a Mendoza larger than its centre. Keep the day geographically coherent: move from the city’s planned greenery to the San Martín monument and then through the supporting parkland at the edge. San Vicente Park broadens the setting again, so the day connects public history, foothill geography and the city’s green structure without turning into a collection of disconnected stops.
 
-## Day 2 — Cerro de la Gloria and San Vicente Park
+## Day 3 — 25 September — Wine Country
 
-The second day moves towards the city’s larger geographical frame. **Cerro de la Gloria** and **San Vicente Park** are both recorded, alongside the continued city route. The available evidence does not preserve the transport method, walking time, weather or exact order, so the practical advice is to treat this as a day of linked areas rather than a timed circuit.
+Wine country gets the whole day. After the city and foothill edge have had their time, the vineyards become the destination rather than an excursion squeezed around everything else.
 
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-modernist-tower-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-modernist-tower-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-modernist-tower-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-modernist-tower-1200w.jpg 1200w"><img src="/images/3-days-in-mendoza-itinerary/mendoza-modernist-tower.jpg" srcset="/images/3-days-in-mendoza-itinerary/mendoza-modernist-tower-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-modernist-tower-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-modernist-tower-1200w.jpg 1200w" sizes="(max-width: 820px) 100vw, 1100px" alt="A modernist tower and curved building in Mendoza." loading="lazy" decoding="async" width="1365" height="2048" /></picture><figcaption>A modernist Mendoza building from the city route; the caption does not assign it to a named attraction.</figcaption></figure>
+The day’s named producers were **Carmelo Patti**, **Bodega Viamonte**, **Cecchin**, **Pasrai**, **Vistandes** and **Bodega Esencia 1870**. Together they give the wine-country day its shape. They are not presented as a ranking: Mendoza’s wine identity is broad enough to deserve a day without turning every stop into a verdict.
 
-The city and the foothill edge should be read together. Mendoza is not only a launch point for excursions, and the route is stronger when the parks and monuments are allowed to establish the city before the final day leaves it.
+The balance matters. The city is not scenery on the way to the wine-country stops, and those stops do not need to compete with the city. Mendoza’s wine identity is tied particularly closely to Malbec, but the region is not one uniform vineyard or one single kind of producer. Luján de Cuyo, Maipú and the Uco Valley are distinct parts of the wider wine map, which is why a full day and sensible arrangements matter more than trying to improvise every visit around the city schedule.
 
-## Day 3 — The recorded wine-country route
+That is the reason to resist overloading the itinerary. The vineyards are not an add-on after the city has been exhausted. They are the second half of the Mendoza visit, and they need enough time to stand apart from the streets and parks that came before them. The two sides belong to the same destination, but they should not be flattened into one continuous list.
 
-The third day is where the route becomes explicitly wine-focused. The source records visits or planned stops at **Carmelo Patti**, **Bodega Viamonte**, **Cecchin**, **Pasrai**, **Vistandes** and **Bodega Esencia 1870**.
+## 26 September — Departure towards Iguazú
 
-That is enough to describe the shape of the day, not enough to invent a tasting narrative. The supplied evidence does not establish which wines were tasted, what was eaten, which venues were tours rather than external stops, how the traveller moved between them, or what any visit cost. This article therefore treats the names as recorded wine-country stops and leaves the experience at that level.
-
-<figure class="article-photo"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-historic-facade-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-historic-facade-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-mendoza-itinerary/mendoza-historic-facade-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-historic-facade-1200w.jpg 1200w"><img src="/images/3-days-in-mendoza-itinerary/mendoza-historic-facade.jpg" srcset="/images/3-days-in-mendoza-itinerary/mendoza-historic-facade-480w.jpg 480w, /images/3-days-in-mendoza-itinerary/mendoza-historic-facade-768w.jpg 768w, /images/3-days-in-mendoza-itinerary/mendoza-historic-facade-1200w.jpg 1200w" sizes="(max-width: 820px) 100vw, 1100px" alt="An ornate historic facade in Mendoza with the words Banco Hipotecario Nacional." loading="lazy" decoding="async" width="2048" height="1365" /></picture><figcaption>An identifiable historic facade in Mendoza, separate from the unillustrated wine-country stops.</figcaption></figure>
-
-The photographs do not contain a reliably identified vineyard or winery, so the article does not pretend they do. That is a useful distinction for a first-time visitor: the city archive is strongest around streets, parks and architecture, while the wine itinerary is supported primarily by the route record.
-
-## Departure towards Iguazú
-
-Mendoza ended on **26 September**. The source records onward travel towards Iguazú, with a sortie window of approximately **10:02 am to 5:34 pm** and a planning note describing the flight as roughly two hours. Those records conflict about the structure of the journey, so this article does not name an airport connection, airline, arrival time or exact transport sequence.
-
-The practical conclusion is simply to leave departure day to the onward transfer. The three-day Mendoza structure belongs to the 23–25 September stay; 26 September is a travel day whose aviation details still require confirmation.
-
-## Practical notes
-
-### City or wine country?
-
-For three nights, the strongest balance is one arrival-and-city day, one day for parks and the foothill edge, and one day for the recorded wine-country route. That is not a universal Mendoza rule; it is the shape that best fits this evidence. The city material is personally and photographically stronger, while the wine stops are supported by itinerary records without detailed tasting notes.
-
-### What still needs checking
-
-The route does not preserve reliable prices, ticketing, opening hours, queues, weather, restaurant meals, winery booking methods, tour operators or transport fares. The accommodation entry is specific enough to record as Avenida España 1591, but not enough to identify a canonical property name. Running appears in the wider planning material but is not proof of a completed Mendoza run.
-
-For the wider route, continue back to the preceding <a href="/4-days-in-santiago-itinerary/">Santiago itinerary</a>, or forward to the documented <a href="/iguazu-falls-in-2-days/">Iguazú Falls route</a>. The <a href="/3-days-in-lima-itinerary/">Lima</a>, <a href="/3-days-in-la-paz-itinerary/">La Paz</a> and <a href="/5-days-in-buenos-aires-itinerary/">Buenos Aires</a> articles continue the same South America sequence.
-
-## Closing assessment
-
-Three days in Mendoza are enough to see the city and reach the wine-country material, but not enough to turn either into a complete subject. That is the useful answer. The city deserves its parks, monuments and streets; the wine route deserves a day of its own; and the transfer onward to Iguazú should be treated as logistics rather than as a final sightseeing block.
-
-Mendoza works in the middle of a larger journey because it changes the scale again: from Santiago’s civic city route to parks, foothills and named wine-country stops, then onward once more.
-
-Mendoza is the hinge between Chile and Iguazú in the [24 Days in South America itinerary](/24-days-in-south-america-itinerary/). The next destination is the two-country [Iguazú Falls route](/iguazu-falls-in-2-days/), although the exact Mendoza–Iguazú connection remains unresolved.
+The Mendoza stay ended on **26 September**. The next movement continued towards Iguazú, and the morning belonged primarily to transit rather than another full sightseeing plan. The exact onward connection is not needed to understand the shape of the visit: three nights in Mendoza, then east again.

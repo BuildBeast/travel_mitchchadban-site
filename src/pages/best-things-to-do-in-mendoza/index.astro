@@ -1,12 +1,14 @@
 ---
 import ChronicleLayout from '../../layouts/ChronicleLayout.astro';
 import ArticleHeader from '../../components/chronicle/ArticleHeader.astro';
-import AnchorNav from '../../components/chronicle/AnchorNav.astro';
 import Chapter from '../../components/chronicle/Chapter.astro';
 import Figure from '../../components/chronicle/Figure.astro';
 import SectionHeading from '../../components/chronicle/SectionHeading.astro';
 import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
 import FurtherReading from '../../components/chronicle/FurtherReading.astro';
+import ArticleFAQ from '../../components/chronicle/ArticleFAQ.astro';
 import type { ChronicleMeta } from '../../components/chronicle/types';
 import { SIZES_MODERN_WIDE } from '../../lib/responsive-image-config.mjs';
 
@@ -14,7 +16,7 @@ const meta: ChronicleMeta = {
   title: 'Best Things to Do in Mendoza: A First-Hand Guide',
   headline: 'Best Things to Do in Mendoza',
   description:
-    'A first-hand guide to the best things to do in Mendoza, from Parque General San Martín and Cerro de la Gloria to the city itself and a day in wine country.',
+    'A first-hand guide to the best things to do in Mendoza, from its formal streets and parks to Cerro de la Gloria and a separate day in wine country.',
   path: '/best-things-to-do-in-mendoza/',
   ogImage: '/images/3-days-in-mendoza-itinerary/mendoza-tiled-park-1200w.jpg',
   photography: true,
@@ -27,11 +29,11 @@ const IMG = '/images/3-days-in-mendoza-itinerary';
   <ArticleHeader
     provenance={meta}
     route={['Argentina', 'Mendoza', 'South America']}
-    label="Guide · Five Experiences"
+    label="Guide · City and wine country"
     title="Best Things to Do in Mendoza"
-    standfirst="Mendoza is internationally associated with wine, but the recorded visit had another structure too: a city of parks and formal streets, a monument at the foothill edge, and a separate day assigned to wine country. These are the five experiences I would prioritise on a first visit."
+    standfirst="Mendoza is known for Malbec, bodegas and vineyards against the Andes. But the city earns attention before the wine day begins: through formal streets, mature greenery, monuments and the foothill edge beyond them."
     stats={[
-      { num: '5', label: 'Experiences' },
+      { num: '4', label: 'Experiences' },
       { num: '3', label: 'Nights' },
       { num: '2', label: 'Registers' },
       { num: '1', label: 'City' },
@@ -42,24 +44,20 @@ const IMG = '/images/3-days-in-mendoza-itinerary';
     <div class="opening-prose">
       <div class="prose">
         <p class="drop-cap">
-          Mendoza arrived between two long transfers: after the bus from Santiago and
-          before the unresolved onward journey towards Iguazú. It would have been easy
-          to treat the city as a base for vineyards. The route did something more
-          useful. It moved through parks, formal streets, architecture and monuments
-          before giving a separate day to the wine-country names.
+          Mendoza arrives in the imagination as wine country: Malbec, long rows of vines,
+          bodegas and the Andes waiting beyond them. The city deserves a different first
+          reading. Its formal streets, mature trees, parks and monuments give the visit a
+          shape before any vineyard appears.
         </p>
         <p>
-          This is the broad discovery guide above the <a href="/3-days-in-mendoza-itinerary/">three-day Mendoza itinerary</a>.
-          It answers what deserves time rather than how the days were arranged. The
-          recommendations come from the recorded stay from 23 to 26 September 2026,
-          with the city and wine-country material kept distinct.
+          The traveller spent three nights in Mendoza between 23 and 26 September 2026,
+          arriving from Santiago before continuing east towards Iguazú. That position on
+          the journey makes the city easy to underestimate. It is a base for wine country,
+          certainly, but it is also a planned urban landscape with its own scale and edge.
         </p>
         <p>
-          The wine section is deliberately restrained. Carmelo Patti, Bodega Viamonte,
-          Cecchin, Pasrai, Vistandes and Bodega Esencia 1870 appear in the route record,
-          but the archive does not preserve tasting notes, favourite producers, prices,
-          operators or reliably matched vineyard photographs. This is not a winery
-          ranking.
+          The strongest visit gives the two registers separate time: the city first, the
+          vineyards afterwards. For the full dated sequence, continue to the <a href="/3-days-in-mendoza-itinerary/">three-day Mendoza itinerary</a>.
         </p>
       </div>
     </div>
@@ -71,253 +69,215 @@ const IMG = '/images/3-days-in-mendoza-itinerary';
       alt="A tiled public park in Mendoza with a central monument and mature trees."
       width={2048}
       height={1365}
-      caption="Mendoza begins here as a city of formal greenery, not only as a route to the vineyards."
+      caption="Mendoza’s formal greenery establishes the city before the vineyards begin."
       priority
-    />
-
-    <div class="narrative prose">
-      <SectionHeading id="how-to-use" rule={false}>How to use this list</SectionHeading>
-      <p>
-        The order moves from the city towards the foothill edge, then out to the
-        recorded wine-country day. It is not a universal ranking. The city material is
-        photographically and personally stronger; the wine material is important to
-        the shape of the stay but remains a bounded route record.
-      </p>
-      <p>
-        Route details below are not current opening hours, ticket prices, transport
-        fares or winery advice. The evidence does not preserve those things, so they
-        belong to separate pre-trip checking rather than to this first-hand guide.
-      </p>
-    </div>
-
-    <AnchorNav
-      links={[
-        { id: 'central', label: 'Central Mendoza' },
-        { id: 'san-martin', label: 'Parque San Martín' },
-        { id: 'gloria', label: 'Cerro de la Gloria' },
-        { id: 'san-vicente', label: 'San Vicente' },
-        { id: 'wine-country', label: 'Wine country' },
-        { id: 'priorities', label: 'Priorities' },
-      ]}
     />
   </div>
 
   <AtAGlance
     id="glance"
-    title="The Five Experiences at a Glance"
+    title="Choose your Mendoza"
     meta={[
       {
-        label: 'Start in the city',
-        value: 'Central Mendoza and Parque General San Martín establish the urban side of the visit before the route moves outwards.',
+        label: 'City',
+        value: 'Central Mendoza and Parque General San Martín.',
       },
       {
-        label: 'Add the foothill edge',
-        value: 'Cerro de la Gloria and San Vicente Park widen the city route without turning it into an unsupported hiking guide.',
+        label: 'City edge',
+        value: 'Cerro de la Gloria, San Vicente Park and the foothill geography beyond the centre.',
       },
       {
-        label: 'Keep wine separate',
-        value: 'The recorded wine-country day belongs in the overview, but only as a route-level experience rather than a tasting review.',
+        label: 'Wine day',
+        value: 'A separate day among Mendoza’s named wine-country stops.',
       },
     ]}
-    daysHeading="Choose by interest"
+  />
+
+  <AtAGlance
+    id="mendoza-glance"
+    title="Mendoza at a Glance"
+    meta={[
+      { label: 'Best first stop', value: 'Central Mendoza for the formal streets, mature trees and the city before the vineyards.' },
+      { label: 'Best green space', value: 'Parque General San Martín, where Mendoza’s planned landscape becomes visible at scale.' },
+      { label: 'Best for geography', value: 'Cerro de la Gloria and the city edge, where the foothills begin to enter the urban experience.' },
+      { label: 'Best full-day experience', value: 'Wine country, kept separate from the city so neither half of Mendoza has to compete with the other.' },
+    ]}
+    daysHeading="Four Ways into Mendoza"
     days={[
-      { num: 'City', text: 'Central streets · architecture · Mendoza University · urban movement' },
-      { num: 'Green', text: 'Parque General San Martín · formal landscaping · monuments' },
-      { num: 'Edge', text: 'Cerro de la Gloria · San Vicente Park · city-to-foothill geography' },
-      { num: 'Wine', text: 'A separate recorded day among named wine-country stops' },
+      { num: 'Central Mendoza', detail: 'Streets · Civic life · Urban form', text: 'The city before the bodegas. Broad streets, mature trees and public space make the centre worth walking rather than simply passing through.' },
+      { num: 'Parque General San Martín', detail: 'Green space · Monuments · City scale', text: 'Mendoza’s strongest urban landscape. The park gives the city room and makes its relationship with trees and formal planning easier to read.' },
+      { num: 'Cerro de la Gloria', detail: 'Monument · Foothills · Geography', text: 'The point where Mendoza begins to meet the land beyond it. Best for understanding the city in relation to the foothills and Andes.' },
+      { num: 'Wine Country', detail: 'Bodegas · Vineyards · Full-day excursion', text: 'A second register of Mendoza rather than the whole story. Give it its own day instead of squeezing vineyards into the city route.' },
     ]}
   />
 
   <div class="post-body">
-    <Chapter id="central" number="I." name="Explore central Mendoza" epithet="Tree-lined streets, architecture and the city between the larger stops" />
+    <Chapter id="central" number="I." name="Walk Central Mendoza" epithet="Formal streets, public space and the city before the vineyards" />
     <div class="narrative prose">
       <p>
-        Central Mendoza is the first thing I would retain from the visit. The route
-        moved through tree-lined streets, formal buildings, monuments and ordinary city
-        movement before the parks and foothill material took over. Mendoza University
-        also appears in this city sequence, but only as a recorded area stop: there is
-        no campus tour or institutional visit to describe.
+        Central Mendoza is where the city makes its own case. Broad streets, mature trees,
+        formal buildings and the movement between them produce a place that feels planned
+        around public space rather than arranged only for passing through. The university
+        area belongs to this wider reading of the centre: another part of the city’s civic
+        life, not a separate attraction to be collected.
       </p>
       <p>
-        This is the part of Mendoza that disappears when the city is treated only as a
-        transfer point for wineries. The evidence does not support a measured walking
-        circuit, architecture history or current café guide. It does support spending
-        time with the city itself, allowing the parks and monuments to be connected by
-        the streets between them.
+        This is the Mendoza that disappears when the city is treated as a transfer point
+        for wineries. The streets connect the architecture, parks and monuments into one
+        urban experience. Leave room for that connective tissue. The city is not merely
+        what happens between the bodegas.
       </p>
     </div>
     <Figure
       src={`${IMG}/mendoza-street-corner.jpg`}
       srcset={`${IMG}/mendoza-street-corner-480w.jpg 480w, ${IMG}/mendoza-street-corner-768w.jpg 768w, ${IMG}/mendoza-street-corner-1200w.jpg 1200w, ${IMG}/mendoza-street-corner-1600w.jpg 1600w, ${IMG}/mendoza-street-corner.jpg 2048w`}
       sizes={SIZES_MODERN_WIDE}
-      alt="A Mendoza street corner from the recorded city route."
+      alt="A broad Mendoza street corner shaded by mature trees."
       width={2048}
-      height={1365}
-      caption="A Mendoza street corner from the city route, between parks, buildings and monuments."
-    />
-    <Figure
-      src={`${IMG}/mendoza-historic-facade.jpg`}
-      srcset={`${IMG}/mendoza-historic-facade-480w.jpg 480w, ${IMG}/mendoza-historic-facade-768w.jpg 768w, ${IMG}/mendoza-historic-facade-1200w.jpg 1200w, ${IMG}/mendoza-historic-facade-1600w.jpg 1600w, ${IMG}/mendoza-historic-facade.jpg 2048w`}
-      sizes={SIZES_MODERN_WIDE}
-      alt="An ornate historic facade in Mendoza with the words Banco Hipotecario Nacional."
-      width={2048}
-      height={1365}
-      caption="An identifiable historic facade in Mendoza, separate from the unillustrated wine-country stops."
+      height={1152}
+      caption="Mendoza’s streets make the city feel planned around shade, distance and public movement."
     />
 
-    <Chapter id="san-martin" number="II." name="Spend time in Parque General San Martín" epithet="The clearest expression of Mendoza as a city of parks" />
+    <Chapter id="san-martin" number="II." name="Spend Time in Parque General San Martín" epithet="The green structure that gives Mendoza room" />
     <div class="narrative prose">
       <p>
-        Parque General San Martín is the strongest city recommendation. The recorded
-        material supports greenery, formal landscaping, tree-lined routes and monument
-        imagery. More importantly, the park gives Mendoza room: it changes the city
-        from a sequence of streets into a wider public landscape.
+        Parque General San Martín is the strongest city recommendation because it makes
+        Mendoza’s green character visible at scale. The park is not a brief interruption
+        in the urban fabric; it gives the city a wider public landscape of trees, formal
+        routes and monuments. The streets of central Mendoza begin to make more sense
+        once the park is understood as part of the same design rather than as an optional
+        patch of greenery.
       </p>
       <p>
-        I have kept the description at that level. The archive does not establish a
-        complete walking loop, bike rental, a particular lake or garden, café stops,
-        opening arrangements or a measured amount of time. The park earns its place
-        because of its scale and its relationship to the rest of the city route, not
-        because a generic park checklist can be imported into the article.
-      </p>
-    </div>
-    <Figure
-      src={`${IMG}/mendoza-park-monument.jpg`}
-      srcset={`${IMG}/mendoza-park-monument-480w.jpg 480w, ${IMG}/mendoza-park-monument-768w.jpg 768w, ${IMG}/mendoza-park-monument-1200w.jpg 1200w, ${IMG}/mendoza-park-monument.jpg 1365w`}
-      sizes={SIZES_MODERN_WIDE}
-      alt="An equestrian monument on a tree-lined Mendoza park walkway."
-      width={1365}
-      height={2048}
-      caption="An equestrian monument on a tree-lined Mendoza walkway."
-      variant="portrait"
-    />
-
-    <Chapter id="gloria" number="III." name="Visit Cerro de la Gloria" epithet="A monument and foothill setting at the edge of the city route" />
-    <div class="narrative prose">
-      <p>
-        Cerro de la Gloria is where the Mendoza route changes geographical scale. The
-        visit is supported as a confirmed foothill landmark and monument stop, alongside
-        San Vicente Park. It gives the city a relationship with the land beyond its
-        formal streets without requiring a high-country excursion.
-      </p>
-      <p>
-        The evidence does not preserve the transport method, walking distance, climb
-        difficulty, elevation, ticketing, opening hours or a reliable personal account
-        of the view. I therefore describe Cerro de la Gloria as a monument in a
-        foothill setting, not as a hike or viewpoint guide. Aconcagua, Potrerillos and
-        the High Andes do not belong here: they were not completed Mendoza experiences
-        in the supplied record.
-      </p>
-    </div>
-    <Figure
-      src={`${IMG}/mendoza-modernist-tower.jpg`}
-      srcset={`${IMG}/mendoza-modernist-tower-480w.jpg 480w, ${IMG}/mendoza-modernist-tower-768w.jpg 768w, ${IMG}/mendoza-modernist-tower-1200w.jpg 1200w, ${IMG}/mendoza-modernist-tower.jpg 2048w`}
-      sizes={SIZES_MODERN_WIDE}
-      alt="A modernist Mendoza building from the city route; exact attraction is not claimed."
-      width={2048}
-      height={1365}
-      caption="Modern Mendoza architecture from the wider city-and-foothill route; exact attraction not claimed."
-    />
-
-    <Chapter id="san-vicente" number="IV." name="Follow the San Vicente and city-to-foothill route" epithet="A supporting park stop that makes the city’s edge visible" />
-    <div class="narrative prose">
-      <p>
-        San Vicente Park is recorded in the same broad city-and-foothill material as
-        Cerro de la Gloria. I would not force it into a standalone attraction article:
-        the evidence supports the stop and its place in the route, but not a detailed
-        park guide, facility list, event account or route through the grounds.
-      </p>
-      <p>
-        It works here because the combination matters. Mendoza was not only central
-        streets followed by vineyards; the route also moved through parks, monuments
-        and the edge of the built city. San Vicente is a supporting part of that
-        experience, best chosen when the purpose is to understand the wider shape of
-        Mendoza rather than to collect another named attraction.
+        The park changes the rhythm of the visit without requiring the city to disappear.
+        Architecture gives way to landscape, then returns. That movement is one of
+        Mendoza’s defining pleasures: the city keeps its formal shape while making room
+        for trees, open ground and the monuments that lead the eye towards the edge beyond.
       </p>
     </div>
 
-    <Chapter id="wine-country" number="V." name="Spend a day in Mendoza wine country" epithet="A central part of the stay, described as a route rather than a tasting review" />
+    <Chapter id="gloria" number="III." name="Cerro de la Gloria and the City Edge" epithet="A monument, a supporting park and the city meeting the foothills" />
     <div class="narrative prose">
       <p>
-        Wine country belongs in a first-visit overview because it occupied a separate
-        recorded day. The route names Carmelo Patti, Bodega Viamonte, Cecchin, Pasrai,
-        Vistandes and Bodega Esencia 1870. Those names establish the day’s wine-country
-        shape and its importance within the three-night stay.
+        Cerro de la Gloria changes the geographical scale of Mendoza. The monument and
+        its foothill setting pull the visit away from the level streets and towards the
+        land that surrounds the city. The Andes are no longer a distant idea behind the
+        urban plan; the edge of that landscape enters the day directly.
       </p>
       <p>
-        They do not establish which wines were tasted, what was eaten, which stop was a
-        tour rather than an exterior visit, how the route was operated, what anything
-        cost or which producer was a personal favourite. The processed Mendoza images
-        are city, park and architecture families; none is used as a winery or vineyard
-        photograph. This section is therefore text-led and deliberately modest.
+        Its importance is therefore both civic and geographical. Cerro de la Gloria is
+        not simply another high point to add to a list of views. It is where Mendoza’s
+        built order meets the larger terrain beyond it, and where the city’s parks,
+        monuments and foothills begin to read as one continuous setting.
       </p>
       <p>
-        The useful first-hand conclusion is about balance. Mendoza can be planned as a
-        city-and-wine stay: the parks and central route deserve their own time, while
-        wine country remains a separate day rather than swallowing the whole visit.
-        For the dated arrangement of those stops, continue to the <a href="/3-days-in-mendoza-itinerary/">three-day itinerary</a>.
+        San Vicente Park belongs to the same wider movement as Cerro de la Gloria: away
+        from the formal centre and towards the city’s outer geography. It earns a place
+        here not as a standalone attraction with a separate checklist, but as part of the
+        way Mendoza opens beyond its central streets.
+      </p>
+      <p>
+        Together, the monument and park show Mendoza opening beyond its central streets,
+        with green public space and the land beyond the city forming part of the destination.
       </p>
     </div>
 
-    <SectionHeading id="priorities">What I Would Prioritise</SectionHeading>
+    <Chapter id="wine-country" number="IV." name="Give Wine Country Its Own Day" epithet="The vineyards as a second register of Mendoza" />
     <div class="narrative prose">
       <p>
-        <strong>With one day:</strong> I would choose central Mendoza and Parque
-        General San Martín, then add Cerro de la Gloria only if the route and confirmed
-        access allow. That combination explains the city before the wine-country day
-        enters the picture.
+        Wine country deserves its own day because it is a different register of Mendoza,
+        not because it makes the city incidental. The day included Carmelo Patti, Bodega
+        Viamonte, Cecchin, Pasrai, Vistandes and Bodega Esencia 1870. These producers give
+        the wine-country side of the stay a clear shape without needing to be turned into
+        a ranking.
       </p>
       <p>
-        <strong>With two days:</strong> keep one day for the city, parks and foothill
-        edge, then use the second for the recorded wine-country route. San Vicente Park
-        fits as supporting geography rather than a separate full-day attraction.
-      </p>
-      <p>
-        <strong>With three days:</strong> use the <a href="/3-days-in-mendoza-itinerary/">complete Mendoza itinerary</a>
-        for the route chronology. This guide is the prioritisation layer above it, not
-        a version with the dates removed.
+        The useful distinction is simple. Give the vineyards time to be vineyards, and
+        give the city time to be a city. Mendoza works best when the two experiences are
+        allowed to stand beside one another rather than compete for the whole visit.
       </p>
     </div>
 
-    <SectionHeading id="surprised">What changed the way I saw Mendoza</SectionHeading>
-    <div class="narrative prose">
-      <p>
-        The city became more than a gateway once the parks and monuments were allowed
-        to stand on their own. Mendoza’s wine reputation is accurate as a description
-        of one part of the stay, but incomplete as a description of the city I
-        recorded: formal greenery, central streets, architecture and a foothill edge
-        came first, with the named wine-country day held apart.
-      </p>
-      <p>
-        That is the reason to choose Mendoza carefully. The strongest visit is not a
-        competition between the city and the vineyards. It is a recognition that they
-        are different experiences, and that three nights can give each of them a place
-        without pretending the archive contains a complete review of either one.
-      </p>
+    <Practical place="Mendoza — Things to Do" detail="City + wine country" detailIcon="🧭">
+      <PracticalSection label="Shortest route to a great first visit" level={3}>
+        <div class="prac-item"><strong>One day</strong> — Walk central Mendoza, spend time in Parque General San Martín and add Cerro de la Gloria if the day still has room.</div>
+        <div class="prac-item"><strong>Two days</strong> — Keep one day for the city, park and foothill edge, then give the second entirely to wine country.</div>
+        <div class="prac-item"><strong>Three days</strong> — Follow the <a href="/3-days-in-mendoza-itinerary/">complete Mendoza itinerary</a>, with enough time for both registers to breathe rather than compressing them together.</div>
+        <div class="prac-item"><strong>If you only choose three things</strong> — Central Mendoza, Parque General San Martín and one full wine-country day.</div>
+      </PracticalSection>
+
+      <PracticalSection label="What each part of Mendoza does best" level={3}>
+        <div class="prac-item"><strong>City character:</strong> Central Mendoza.</div>
+        <div class="prac-item"><strong>Green space:</strong> Parque General San Martín.</div>
+        <div class="prac-item"><strong>Landscape and geography:</strong> Cerro de la Gloria.</div>
+        <div class="prac-item"><strong>Wine:</strong> Mendoza’s vineyard country.</div>
+      </PracticalSection>
+
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not reduce Mendoza to wine.</strong> The city itself deserves time before the vineyard day begins.</div>
+        <div class="tip-row"><strong>Keep the wine day separate.</strong> Bodegas and vineyards work better as a full excursion than as fragments attached to a city route.</div>
+        <div class="tip-row"><strong>The city edge needs transport planning.</strong> Cerro de la Gloria and San Vicente Park sit outside the easiest central walking pattern.</div>
+        <div class="tip-row"><strong>Leave room between stops.</strong> Mendoza works better when the city, parks and wine country are allowed to feel distinct rather than stacked into one oversized day.</div>
+      </PracticalSection>
+    </Practical>
+
+    <div class="narrative">
+      <SectionHeading id="priorities">What Deserves Priority</SectionHeading>
+      <div class="narrative prose">
+        <p>
+          <strong>With one day:</strong> begin in central Mendoza, spend time in Parque
+          General San Martín and add Cerro de la Gloria if the practical arrangements suit
+          the day.
+        </p>
+        <p>
+          <strong>With two days:</strong> keep one day for the city, parks and foothill edge,
+          then give the second to wine country. San Vicente Park fits into the wider
+          city-edge day rather than needing a separate full-day plan.
+        </p>
+        <p>
+          <strong>With three days:</strong> follow the <a href="/3-days-in-mendoza-itinerary/">complete Mendoza itinerary</a> for the dated sequence, then use the extra time to let the city and wine country breathe at their own pace.
+        </p>
+      </div>
     </div>
 
-    <SectionHeading id="omitted">What I Have Left Out</SectionHeading>
-    <div class="narrative prose">
-      <p>
-        I have not added Aconcagua, Potrerillos, Cacheuta, Uspallata, rafting, horse
-        riding, cycling tours, olive-oil tours or cooking classes. They may be familiar
-        Mendoza search topics, but they are not completed experiences in this record.
-      </p>
-      <p>
-        I have also left out wine rankings, tasting notes, restaurant reviews, tour
-        operators, transport fares, current prices, opening hours, weather and a
-        completed running account. The article is strongest when it helps choose what
-        deserves time without pretending the route contains more detail than it does.
-      </p>
+    <div class="narrative">
+      <SectionHeading id="practical">Practical guidance</SectionHeading>
+      <div class="narrative prose">
+        <p>
+          Check current access, transport and opening arrangements before travelling,
+          particularly when building the city-and-edge day around Cerro de la Gloria and
+          San Vicente Park.
+        </p>
+        <p>
+          For the wider journey, Mendoza sits between Santiago and the onward route towards
+          Iguazú. The <a href="/24-days-in-south-america-itinerary/">24 Days in South America itinerary</a> places the city within that larger crossing, while <a href="/mendoza-beyond-wine/">Mendoza Beyond Wine</a> stays with the parks, streets and monuments that make the city worth the pause.
+        </p>
+      </div>
+    </div>
+
+    <div class="narrative">
+      <SectionHeading id="closing">A City and a Wine Country</SectionHeading>
+      <div class="narrative prose">
+        <p>
+          Mendoza works because the city and the vineyards do not need to compete. The
+          trees, parks, formal streets, monument and foothill edge earn their own day; the
+          bodegas then become a second register rather than the only reason to arrive.
+        </p>
+        <p>
+          The city deserves the pause before the road continues east.
+        </p>
+        <p class="beat">But the road is ever onward.</p>
+      </div>
     </div>
 
     <FurtherReading
       label="Continue through Mendoza"
       cards={[
-        { href: '/3-days-in-mendoza-itinerary/', region: 'Argentina · Mendoza', title: '3 Days in Mendoza: Complete Itinerary', excerpt: 'The full route through the city, parks, foothill landmarks and the recorded wine-country day.', meta: ['Itinerary', 'September 2026'] },
+        { href: '/3-days-in-mendoza-itinerary/', region: 'Argentina · Mendoza', title: '3 Days in Mendoza: Complete Itinerary', excerpt: 'The full route through the city, parks, foothill landmarks and wine country.', meta: ['Itinerary', 'September 2026'] },
         { href: '/mendoza-beyond-wine/', region: 'Argentina · Mendoza', title: 'Mendoza Beyond Wine: Exploring the City Beyond the Wineries', excerpt: 'A focused account of the parks, streets, monuments and foothill edge that make Mendoza more than a wine base.', meta: ['City guide', 'September 2026'] },
-        { href: '/24-days-in-south-america-itinerary/', region: 'South America · Argentina', title: '24 Days in South America', excerpt: 'The wider route from Santiago through Mendoza and onward towards Iguazú.', meta: ['Pillar itinerary', '2026'] },
+        { href: '/24-days-in-south-america-itinerary/', region: 'South America · Argentina', title: '24 Days in South America', excerpt: 'The wider journey from Santiago through Mendoza and onward towards Iguazú.', meta: ['Pillar itinerary', '2026'] },
       ]}
     />
   </div>
+  <ArticleFAQ page="best-things-to-do-in-mendoza" />
 </ChronicleLayout>

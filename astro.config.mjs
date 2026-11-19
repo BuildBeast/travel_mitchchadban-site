@@ -15,7 +15,7 @@ const SITEMAP_EXCLUDE = [
 // pages, so the generated output and sitemap contain only clean canonical URLs.
 export default defineConfig({
   site: SITE,
-  trailingSlash: 'always',
+  trailingSlash: process.env.NODE_ENV === 'development' ? 'ignore' : 'always',
   integrations: [
     sitemap({
       filter: (page) => !SITEMAP_EXCLUDE.includes(page),

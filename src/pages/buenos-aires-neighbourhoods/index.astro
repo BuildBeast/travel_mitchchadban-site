@@ -1,88 +1,102 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleContent from "../../content/buenos-aires-neighbourhoods.md";
-import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
 
-const title = "Buenos Aires Neighbourhoods: Palermo, Recoleta, San Telmo & More | There & Back Again";
-const description = "A first-hand comparison of the Buenos Aires neighbourhoods recorded on a September–October 2026 visit: Palermo, Recoleta, San Telmo, Puerto Madero, La Boca and the historic centre.";
+const title = "Buenos Aires Neighbourhoods: A Barrio Guide — There & Back Again";
+const description = "A barrio-by-barrio guide to Buenos Aires, from the civic centre and Recoleta to San Telmo, Puerto Madero, La Boca and Palermo.";
 const canonical = "https://travel.mitchchadban.com/buenos-aires-neighbourhoods/";
 const image = "/images/5-days-in-buenos-aires-itinerary/buenos-aires-city-centre-1200w.jpg";
-const PROVENANCE = { photography: true };
-
-const schema = withProvenance({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      headline: "Buenos Aires Neighbourhoods: Exploring the City Barrio by Barrio",
-      description,
-      author: { "@type": "Person", name: "Mitch Chadban" },
-      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
-      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
-      url: canonical,
-      inLanguage: "en-AU",
-      image: `https://travel.mitchchadban.com${image}`,
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
-        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
-        { "@type": "ListItem", position: 3, name: "Buenos Aires Neighbourhoods", item: canonical },
-      ],
-    },
-  ],
-}, PROVENANCE);
-
-const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
-  <Fragment slot="head" set:html={jsonLd} />
-
   <section class="post-hero" aria-labelledby="buenos-aires-neighbourhoods-title">
     <div class="post-route-strip"><span>South America</span>&nbsp;· Argentina · Buenos Aires ·&nbsp;<span>September–October 2026</span></div>
     <h1 id="buenos-aires-neighbourhoods-title" class="post-hero-title"><em>Buenos Aires Neighbourhoods:</em><br />Exploring the City Barrio by Barrio</h1>
-    <p class="post-hero-sub">A first-hand comparison of the districts that shaped one recorded Buenos Aires route.</p>
+    <p class="post-hero-sub">A first-hand comparison of Buenos Aires through its civic centre, cultural north, market streets, waterfront, port district and parks.</p>
     <div class="post-stats">
       <div class="stat"><span class="stat-num">6</span><span class="stat-label">Areas</span></div>
       <div class="stat"><span class="stat-num">5</span><span class="stat-label">Nights</span></div>
       <div class="stat"><span class="stat-num">Sep–Oct</span><span class="stat-label">Visited</span></div>
       <div class="stat"><span class="stat-num">1</span><span class="stat-label">City</span></div>
     </div>
-    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
   </section>
 
-  <article class="post-body buenos-aires-neighbourhoods-post-body">
+  <article class="post-body south-america-post-body buenos-aires-neighbourhoods-post-body">
     <ArticleContent />
+    <FurtherReading
+      label="Further Reading"
+      cards={[
+        { href: "/best-things-to-do-in-buenos-aires/", region: "Argentina · Buenos Aires", title: "Best Things to Do in Buenos Aires", excerpt: "A first-visit guide through Buenos Aires’ civic centre, cultural institutions, neighbourhoods and parks.", cta: "READ CHRONICLE" },
+        { href: "/5-days-in-buenos-aires-itinerary/", region: "Argentina · Buenos Aires", title: "5 Days in Buenos Aires: Complete Itinerary", excerpt: "The city arranged in travel order, from Plaza de Mayo and Recoleta through the southern districts and Palermo.", cta: "READ CHRONICLE" },
+        { href: "/plaza-de-mayo-buenos-aires/", region: "Argentina · Buenos Aires", title: "Plaza de Mayo & Historic Buenos Aires", excerpt: "A focused account of the square, Casa Rosada, the Cathedral, Manzana de las Luces and Congress.", cta: "READ CHRONICLE" },
+      ]}
+    />
   </article>
 
-  <style is:global>
-    .buenos-aires-neighbourhoods-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
-    .buenos-aires-neighbourhoods-post-body .article-photo picture,
-    .buenos-aires-neighbourhoods-post-body .article-photo img { display: block; width: 100%; }
-    .buenos-aires-neighbourhoods-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
-    .buenos-aires-neighbourhoods-post-body .article-photo figcaption { margin-top: 0.65rem; color: rgba(221, 232, 208, 0.62); font-size: 0.95rem; font-style: italic; text-align: center; }
-    .buenos-aires-neighbourhoods-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.08; }
-    .buenos-aires-neighbourhoods-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 400; }
-    .buenos-aires-neighbourhoods-post-body p,
-    .buenos-aires-neighbourhoods-post-body ul,
-    .buenos-aires-neighbourhoods-post-body table { max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .buenos-aires-neighbourhoods-post-body ul { padding-left: 2rem; color: rgba(221, 232, 208, 0.86); font-size: 1.18rem; line-height: 1.7; }
-    .buenos-aires-neighbourhoods-post-body strong { color: #e7f2da; }
-    .buenos-aires-neighbourhoods-post-body table { border-collapse: collapse; color: rgba(221, 232, 208, 0.86); font-size: 1.05rem; line-height: 1.5; width: 100%; }
-    .buenos-aires-neighbourhoods-post-body th,
-    .buenos-aires-neighbourhoods-post-body td { border-bottom: 1px solid rgba(158, 207, 114, 0.2); padding: 0.9rem 0.75rem; text-align: left; vertical-align: top; }
-    .buenos-aires-neighbourhoods-post-body th { color: #e7f2da; font-family: 'IM Fell English', Georgia, serif; font-size: 1.25rem; font-weight: 400; }
-    .buenos-aires-neighbourhoods-post-body .practical-note { max-width: 1100px; margin: 1.5rem auto; border-left: 2px solid rgba(158, 207, 114, 0.55); padding: 0.2rem 1rem; color: rgba(221, 232, 208, 0.72); font-size: 1rem; }
-    @media (max-width: 820px) {
-      .buenos-aires-neighbourhoods-post-body .article-photo { margin: 2.5rem 0; }
-      .buenos-aires-neighbourhoods-post-body h2,
-      .buenos-aires-neighbourhoods-post-body h3,
-      .buenos-aires-neighbourhoods-post-body p,
-      .buenos-aires-neighbourhoods-post-body ul,
-      .buenos-aires-neighbourhoods-post-body table { max-width: none; }
-      .buenos-aires-neighbourhoods-post-body table { display: block; overflow-x: auto; }
-    }
-  </style>
+  <div class="buenos-aires-neighbourhoods-overview-slot">
+    <AtAGlance
+      id="buenos-aires-neighbourhoods-glance"
+      title="Buenos Aires Neighbourhoods at a Glance"
+      meta={[
+        { label: "Best for first orientation", value: "Historic Centre / Monserrat." },
+        { label: "Best for museums and monumental architecture", value: "Recoleta." },
+        { label: "Best for older streets and markets", value: "San Telmo." },
+        { label: "Best all-round base", value: "Palermo." },
+      ]}
+      daysHeading="Six Areas, Six Different Buenos Aires"
+      days={[
+        { num: "Historic Centre / Monserrat", detail: "Civic history · Architecture · First orientation", text: "Best for Plaza de Mayo, Congress, major avenues and understanding the city’s political core." },
+        { num: "Recoleta", detail: "Museums · Cemetery · Monumental north", text: "Best for a slower cultural day built around formal avenues, museums, sculpture and memorial architecture." },
+        { num: "San Telmo", detail: "Markets · Older streets · Tango history", text: "Best for market life, historic urban fabric and a southern district that rewards walking." },
+        { num: "Puerto Madero", detail: "Waterfront · Galleries · Redevelopment", text: "Best for seeing how Buenos Aires rebuilt its river edge around converted docks and contemporary architecture." },
+        { num: "La Boca", detail: "Port · Art · Football", text: "Best for the city’s port identity, immigrant history, Caminito, Fundación Proa and La Bombonera." },
+        { num: "Palermo", detail: "Parks · Cafés · Longer stays", text: "Best all-round base for several nights, with parks, restaurants and space for a slower city rhythm." },
+      ]}
+    />
+  </div>
+
+  <div class="buenos-aires-neighbourhoods-decision-slot">
+    <Practical place="Buenos Aires — Neighbourhoods" detail="Six areas · one city" detailIcon="🧭">
+      <PracticalSection label="Shortest route to a decision" level={3}>
+        <div class="prac-item"><strong>First visit</strong> — Start with the Historic Centre, then add Recoleta.</div>
+        <div class="prac-item"><strong>Best base</strong> — Palermo for flexibility, parks, restaurants and easy access to the rest of the city.</div>
+        <div class="prac-item"><strong>Best southern pairing</strong> — San Telmo with La Boca or Puerto Madero.</div>
+        <div class="prac-item"><strong>Best cultural pairing</strong> — Recoleta with Palermo or the Historic Centre.</div>
+      </PracticalSection>
+      <PracticalSection label="Which areas pair well" level={3}>
+        <div class="prac-item"><strong>Historic Centre + Recoleta</strong> — Civic history, cemetery, Floralis Genérica and museums.</div>
+        <div class="prac-item"><strong>San Telmo + Puerto Madero</strong> — Older market streets flowing into the redeveloped waterfront.</div>
+        <div class="prac-item"><strong>La Boca + San Telmo</strong> — Port history, football, art, market streets and the southern city.</div>
+        <div class="prac-item"><strong>Palermo + Recoleta</strong> — Parks, sculpture, museums and a quieter northern cultural day.</div>
+        <div class="prac-item"><strong>Daily limit</strong> — Two substantial neighbourhoods are usually enough. Three can work only when the stops are close and transfers are simple.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not collect neighbourhood names.</strong> Give each area enough time to feel distinct.</div>
+        <div class="tip-row"><strong>Do not default to La Boca as a base.</strong> It works better as a planned daytime visit.</div>
+        <div class="tip-row"><strong>Do not overbuild museum days.</strong> Choose museums that fit the district already underfoot.</div>
+        <div class="tip-row"><strong>Use transport strategically.</strong> Walk within neighbourhoods, then use Subte, buses, taxi or ride-hailing between distant areas when that protects the day.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.buenos-aires-neighbourhoods-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.buenos-aires-neighbourhoods-overview-slot');
+      const decision = document.querySelector('.buenos-aires-neighbourhoods-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('Historic Centre'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'Which neighbourhood is best for a first visit?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="buenos-aires-neighbourhoods" />
 </BaseLayout>

@@ -1,103 +1,86 @@
-Lima’s Historic Centre is the city’s most concentrated first chapter: plazas, churches, civic buildings and ordinary streets gathered into one afternoon. I arrived there on 10 September 2026 after the airport transfer and began at the Basilica and Convent of San Francisco.
+Lima begins in public space. The Historic Centre gathers churches, convents, government buildings and plazas into a compact colonial core, so a first afternoon can move from enclosed religious architecture into the open civic space of Plaza Mayor and back again. The city’s history is not arranged behind one museum door. It is built into the walk.
 
-The name of this article needs one important qualification. The records confirm a visit to the Basilica and Convent of San Francisco from 1:58pm to 2:28pm. They do not confirm whether I entered the catacombs, joined a guided tour, saw the library or cloisters, or photographed any underground chamber. I will not turn a confirmed complex visit into an invented catacomb experience.
+San Francisco is the right opening. Its church and convent introduce the religious institutions that shaped colonial Lima, while the streets beyond lead towards the Cathedral, the Government Palace and the municipal buildings around the main square. Santo Domingo and Las Nazarenas extend the same story beyond Plaza Mayor, giving the afternoon a shape rather than a list of façades.
 
-What the evidence does support is still enough for a useful guide: San Francisco as the opening stop, a compact walk through Lima’s civic and religious centre, and the way the route moved from enclosed church space into Plaza Mayor and its surrounding buildings.
+The catacombs add another level beneath the visible city. They are a major visitor feature of the San Francisco complex and belong to the history of burial in colonial Lima, but they should be treated as part of the visit’s current access arrangements rather than assumed from the title alone. San Francisco belongs in the route regardless. The catacombs deepen it when access is available.
 
-For the complete three-day route—including Barranco, Miraflores, archaeological Lima and the later museum day—continue to the [three-day Lima itinerary](/3-days-in-lima-itinerary/). This page stays with central Lima.
+For the wider city, continue to the [best things to do in Lima guide](/best-things-to-do-in-lima/). For the complete sequence through Barranco, Miraflores, archaeology and museums, use the [three-day Lima itinerary](/3-days-in-lima-itinerary/).
 
-For the wider discovery view, see the [best things to do in Lima guide](/best-things-to-do-in-lima/), which places the Historic Centre alongside Barranco, the Pacific coast, archaeology and museums.
+<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-plaza-mayor.jpg" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Plaza Mayor at the civic heart of historic Lima." loading="lazy" decoding="async"></picture><figcaption>Plaza Mayor gathers Lima’s civic and religious history into one formal urban room.</figcaption></figure>
 
-<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-plaza-mayor.jpg" srcset="/images/3-days-in-lima-itinerary/lima-plaza-mayor-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-plaza-mayor-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Plaza Mayor in Lima’s historic centre during the recorded arrival afternoon." loading="lazy" decoding="async"></picture><figcaption>Plaza Mayor became the centre of gravity for the first afternoon in Lima’s Historic Centre.</figcaption></figure>
+## I. The first afternoon in old Lima
 
-## Why I started Lima in the Historic Centre
+The Historic Centre was founded by Francisco Pizarro in 1535 and became the political, administrative, religious and economic capital of the Viceroyalty of Peru. That history explains the concentration visible today. The centre was not simply a settlement with a few important buildings. It was the organising capital of Spanish power in South America, and its churches, convents, plazas and government institutions were built to make that power legible.
 
-The timing made the decision for me. The flight reached Jorge Chávez International Airport at 12:25pm, the accommodation handoff was recorded at 1:16pm, and the first central-Lima stop began at 1:58pm. This was not a separate full day reserved for old Lima. It was the first afternoon after arrival.
+The city has changed, rebuilt and suffered earthquakes, but the central pattern remains clear. Plaza Mayor forms the principal public room. Religious orders established large complexes around it. Government and municipal buildings face the same civic space. A short walk can therefore move between different versions of authority without leaving the old centre.
 
-That made the Historic Centre a strong introduction. The route did not ask the city to explain itself through one monument. It moved through a sequence of churches, civic buildings and public space, with the names changing every few minutes while the surrounding centre remained compact enough to hold together.
+The afternoon works best as a sequence. Begin at San Francisco, cross into the streets around Plaza Mayor, look across the Cathedral and Government Palace area, continue to Santo Domingo, then finish at Las Nazarenas. The order can flex with opening arrangements, but the movement from religious space to civic space and back is the point.
 
-The day’s recorded order was:
+## II. San Francisco and the city beneath the city
 
-- **1:58–2:28pm:** Basilica and Convent of San Francisco
-- **2:35–3:05pm:** Palacio Municipal
-- **3:08–3:28pm:** Lima Cathedral
-- **3:31–3:46pm:** Government Palace area
-- **3:50–4:20pm:** Santo Domingo
-- **4:24–5:09pm:** Lima Main Square, also referred to in the source as Plaza Mayor
-- **5:20–5:50pm:** Iglesia Las Nazarenas
+The Basilica and Convent of San Francisco opens the route with one of Lima’s great colonial religious complexes. Construction of the monumental convent began in the sixteenth century, and the complex became one of the major Franciscan centres of the Viceroyalty. Its presence is architectural, institutional and urban at once: the church faces the square, the convent extends behind it, and the surrounding streets retain the pressure of a city that grew around its religious foundations.
 
-The route is a reconstruction of the recorded itinerary. It is not a claim that every visit produced a full tour or that every listed minute should be treated as a measured walking time.
+San Francisco should be approached as more than a church façade. The complex brings together worship, monastic life, scholarship and burial. Its library, cloisters and other interior spaces belong to the wider history of the convent, while the catacombs connect the building to the burial practices of colonial Lima before modern cemeteries took over that role.
 
-## San Francisco: the beginning of the route
+The catacombs are worth including if underground history is the reason for the visit and current access allows it. They add a literal lower level to the Historic Centre: plazas and churches above, burial spaces below. The important practical distinction is simple—San Francisco is an essential part of the walk, while the catacombs depend on the visit available on the day. Check the current complex arrangements rather than assuming every entry includes the same route.
 
-San Francisco was the first confirmed Historic Centre stop. The source names the Basilica and Convent of San Francisco, and the matching photo sequence supports the broader historic-centre visit. It does not identify every room or feature inside the complex.
+That balance keeps the article honest without making the catacombs seem secondary. They deepen the meaning of San Francisco, but they do not need to carry the entire Historic Centre.
 
-That distinction is especially important because “San Francisco” and “the catacombs” are not interchangeable evidence claims. The archive confirms the former. It does not separately confirm entry below ground, a guided catacomb tour, the library, the cloisters or a particular underground chamber.
+<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-historic-centre-church-facade.jpg" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Colonial religious architecture in Lima’s Historic Centre." loading="lazy" decoding="async"></picture><figcaption>Colonial religious architecture opens the walk through Lima’s Historic Centre.</figcaption></figure>
 
-<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-historic-centre-church-facade.jpg" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-facade-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Historic church façade from Lima’s confirmed historic-centre photo sequence; exact church identity is not claimed." loading="lazy" decoding="async"></picture><figcaption>A historic church façade from the recorded central-Lima sequence; the exact church identity is not assigned.</figcaption></figure>
+## III. Plaza Mayor and civic Lima
 
-The safe first-hand conclusion is therefore about the role of San Francisco in the route: it opened the afternoon with an enclosed religious space before the itinerary moved into the civic centre. It is not a description of a catacomb tour.
+From San Francisco, the walk opens into the civic geometry of Plaza Mayor. The square gathers the Cathedral, the Archbishop’s Palace, the Government Palace and the Municipal Palace around one formal space. These buildings do not represent one institution. Together they show how religious authority, executive power and local government were placed side by side in the colonial capital and its successor city.
 
-## Going beneath the city: what is actually confirmed
+The Cathedral occupies the site’s foundation-era centre and has been rebuilt and altered over centuries, as Lima’s buildings have had to respond to earthquakes and changing political circumstances. Its importance is not only architectural. It is the principal cathedral of the capital, facing the square where the city’s public life is most concentrated.
 
-The title asks about the San Francisco catacombs because they are central to the search intent. The honest answer from this archive is narrower than the usual visitor guide.
+The square is the visual anchor because it makes the whole centre readable. San Francisco begins with enclosure and depth; Plaza Mayor opens the view. The Government Palace and municipal buildings turn the walk towards the state, while the Cathedral and Archbishop’s Palace keep the religious structure in the frame. Walk slowly enough to see the relationship rather than treating the square as a place to photograph once and leave.
 
-**Confirmed:** a San Francisco visit appears in the 10 September chronology, with a matching photograph sequence connected to the Historic Centre.
+The Historic Centre is listed by UNESCO because of this concentration of architecture, urban form and historical importance. The designation matters less as a label than as a description of what the visitor can see: a capital planned around institutions whose buildings still face one another across the same public space. [UNESCO’s Historic Centre summary](https://whc.unesco.org/en/list/500/) places Lima’s political, administrative and religious role at the centre of that history.
 
-**Not confirmed:** separate catacomb entry, a guided tour, a ticket or tour procedure, the library, cloisters, underground chambers, photography restrictions or any personal reaction to the spaces below the church.
+## IV. Santo Domingo and Las Nazarenas
 
-There are no verified catacomb photographs in the supplied shortlist. The images used in this article are Plaza Mayor, a broad historic church façade, a broad church interior and a street scene. None is presented as an underground view.
+Santo Domingo continues the religious geography beyond Plaza Mayor. Its church and convent belong to the long history of religious orders in Lima, and the complex is associated with figures including Santa Rosa de Lima and San Martín de Porres. That connection gives the stop a different emphasis from San Francisco: the walk moves from one large colonial foundation to another while the city’s devotional history becomes more local and personal.
 
-This is not a reason to remove San Francisco from the article. It is the reason to keep the catacomb judgement conditional: if the catacombs are the main reason for visiting, confirm that the recorded visit included them before treating this page as a first-hand catacomb account.
+Las Nazarenas closes the central sequence with a different kind of religious importance. The sanctuary is associated with the Señor de los Milagros, one of Peru’s major devotional traditions. Each October, the image is carried through Lima in processions that fill the city’s streets with purple, devotion and public movement. The afternoon route does not need to witness that procession for the church to matter. Its significance is already present in the place and in the scale of the devotion attached to it.
 
-<figure class="article-photo chronicle-figure chronicle-figure--portrait"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-interior-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-interior-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-interior-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-interior-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-historic-centre-church-interior.jpg" srcset="/images/3-days-in-lima-itinerary/lima-historic-centre-church-interior-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-interior-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-interior-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-historic-centre-church-interior-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 688px) calc(100vw - 128px), 560px" width="1365" height="2048" alt="Church interior from Lima’s historic-centre photo sequence; not identified as San Francisco or the catacombs." loading="lazy" decoding="async"></picture><figcaption>A church interior from the Historic Centre sequence; this is not presented as a catacomb photograph.</figcaption></figure>
+Ending at Las Nazarenas gives the walk a strong final note. The sequence begins with the monumental complex of San Francisco, expands into the formal public space of Plaza Mayor and then returns to a church whose importance is tied to the living religious life of Peru. The city’s colonial architecture is not frozen history; it still provides the setting for belief.
 
-## From San Francisco to Plaza Mayor
+## How much time does the Historic Centre need?
 
-After San Francisco, the recorded route moved to Palacio Municipal, Lima Cathedral and the Government Palace area before reaching Santo Domingo and the Lima Main Square. The sequence puts official buildings, religious interiors and open public space into one compact afternoon.
+Around three to four hours works well for a focused first visit. That allows time to move between San Francisco, Plaza Mayor, Santo Domingo and Las Nazarenas, with enough space to stop rather than rush through the centre. It is a useful half-day shape, not a universal schedule.
 
-The important feature is the transition between spaces. The route moves from the enclosed scale of a church to the broad civic field of Plaza Mayor, then back through another religious stop. Lima’s Historic Centre is most useful when read as an ensemble rather than as seven isolated pins.
+Allow longer if the day includes a full San Francisco visit, the catacombs, several interiors or a museum. Allow less if the plan is mainly to walk the squares and read the façades from outside. Opening arrangements and access can change, so check the current information for San Francisco, the Cathedral and the churches close to travel.
 
-Plaza Mayor is the clearest visual anchor in the archive. It gives the afternoon an open centre after the first church stop and provides the surrounding context for the Cathedral, Palace area and municipal buildings. I have not added architectural claims about individual façades beyond the names supported by the route record.
+The main cluster is compact enough to walk, but Lima’s heat, traffic and the density of the streets can make a short map distance feel slower than expected. Start at San Francisco or Plaza Mayor according to the openings that matter most, then keep the rest of the route flexible.
 
-## Cathedral, Santo Domingo and Las Nazarenas
+## Are the San Francisco catacombs worth visiting?
 
-The route confirms Lima Cathedral, Santo Domingo and Iglesia Las Nazarenas as separate stops. The source supports their place in the chronology, but not a room-by-room account of each interior or a detailed architectural history.
+Yes, if the underground history interests you and current access is available. The catacombs add depth to a complex that already matters for its church, convent and role in colonial Lima. They make visible the relationship between the city above and the burial practices beneath it.
 
-That is enough for practical planning. A visitor can treat the Historic Centre as a linked walk through civic and religious Lima, beginning at San Francisco and continuing through the Plaza Mayor area before ending at Las Nazarenas. The value is in the sequence as much as in any single building.
-
-<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-lima-itinerary/lima-street-scene-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-street-scene-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-lima-itinerary/lima-street-scene-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-street-scene-1200w.jpg 1200w"><img src="/images/3-days-in-lima-itinerary/lima-street-scene.jpg" srcset="/images/3-days-in-lima-itinerary/lima-street-scene-480w.jpg 480w, /images/3-days-in-lima-itinerary/lima-street-scene-768w.jpg 768w, /images/3-days-in-lima-itinerary/lima-street-scene-1200w.jpg 1200w, /images/3-days-in-lima-itinerary/lima-street-scene-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Street scene from the confirmed Lima Historic Centre sequence; exact location is not claimed." loading="lazy" decoding="async"></picture><figcaption>The historic-centre route continued through streets between its named civic and religious stops.</figcaption></figure>
-
-The final recorded Historic Centre stop was Las Nazarenas from 5:20pm to 5:50pm, followed by dinner at Cevichería Barra Maretazo. The source confirms the food stop as part of the evening but does not support a dish description, price or restaurant review, so the article ends its judgement with the route rather than the meal.
-
-## How much time does Lima’s Historic Centre need?
-
-The recorded first afternoon allocated just over three hours from the San Francisco stop to the end of Las Nazarenas, with the civic and religious stops between them. That is the most useful time reference available, but it is a reconstruction of the itinerary rather than a universal schedule.
-
-It was enough to establish the centre as a coherent part of the trip. It was not enough to claim that every interior was explored in depth, that every building was entered, or that the route should be copied minute by minute. Use the sequence as a shape: San Francisco, the Plaza Mayor cluster, Santo Domingo and Las Nazarenas.
-
-<p class="practical-note"><strong>What remains unresolved:</strong> catacomb entry, tour format, library or cloister access, underground photography, ticketing, opening hours, queues, photography rules and exact walking distances.</p>
+They should not, however, be treated as the only reason to visit San Francisco. If access is unavailable, the complex still belongs at the beginning of the Historic Centre walk. Plaza Mayor, Santo Domingo and Las Nazarenas continue the same civic and religious history above ground.
 
 ## Is Lima’s Historic Centre worth visiting?
 
-Yes, within the shape of this trip. The Historic Centre gave Lima its civic and religious opening, and it did so without needing to be isolated from the rest of the city. San Francisco began the route; Plaza Mayor and the surrounding buildings gave it an open centre; Santo Domingo and Las Nazarenas extended the sequence into the afternoon.
+Yes. It is the city’s most concentrated introduction to colonial and viceregal Lima, compact enough for a half-day and distinct from the coastal neighbourhoods that follow. San Francisco gives the route a threshold, Plaza Mayor gives it civic scale, and Santo Domingo and Las Nazarenas carry the religious story beyond the main square.
 
-The judgement is not that this is the only Lima worth seeing. Barranco and Miraflores supplied a different urban and coastal register on the following day, while archaeological sites and museums changed the subject again. The Historic Centre is worth prioritising because it gives a first visit a concentrated introduction to the city’s official, religious and public layers.
+The centre should not be mistaken for the whole of Lima. Barranco and Miraflores show the city through neighbourhoods and the Pacific edge. Huaca Pucllana and Huaca Huallamarca show that modern districts contain much older ground. The Historic Centre earns the first afternoon because it gives all those later contrasts a historical starting point.
 
-## Are the San Francisco catacombs worth it?
+## Practical planning
 
-I cannot give a first-hand verdict on the catacombs from the supplied record because separate entry is not confirmed. The evidence supports a San Francisco visit, not the underground details a catacomb guide would require.
+- Give the Historic Centre at least half a day rather than reducing it to a quick Plaza Mayor stop.
+- Start with San Francisco if the complex and catacombs matter most; otherwise begin at Plaza Mayor and build outward.
+- Treat the catacombs as an additional part of the San Francisco visit, subject to current access arrangements.
+- Dress respectfully for churches and follow the photography rules at each interior.
+- Walk the main cluster, leaving time for the streets and small transitions between named buildings.
+- Check current opening hours, tickets, tours and access close to travel.
 
-That makes the practical answer conditional. If the catacombs are the main reason you are going, verify that the visit you book or join actually includes them. If you are deciding whether San Francisco belongs in a Historic Centre walk, the confirmed first stop and its position in the route are enough to keep it in the plan without pretending the archive proves more.
+## The city beneath the city
 
-## How this fits into a wider Lima itinerary
+Lima’s Historic Centre works because the visible city and the buried city occupy the same few streets: plazas above, catacombs below, civic authority beside religious memory. The afternoon begins with San Francisco and opens outward until Plaza Mayor gathers the centre into one view.
 
-The Historic Centre works best as the first afternoon rather than as a summary of all of Lima. The recorded trip then moved to Barranco, Miraflores, archaeological Lima and Larco on 11 September, followed by central Lima museums and Kennedy Park on 12 September.
+Barranco, Miraflores and the huacas show other versions of Lima, but the Historic Centre is where the city’s colonial institutions remain most concentrated. The walk is short enough to make that history physical: one church, one square, another convent, another sanctuary, and the streets that hold them together.
 
-That separation keeps the city legible. The new article is about the centre’s civic and religious sequence. The [complete three-day Lima itinerary](/3-days-in-lima-itinerary/) remains the place for the broader chronology, including the future Barranco-to-Miraflores walking story and the archaeological day.
+For the wider route through Lima’s neighbourhoods, Pacific edge, archaeology and museums, continue to the [three-day Lima itinerary](/3-days-in-lima-itinerary/).
 
-## Closing the first afternoon
-
-The city beneath the city is a useful phrase for Lima, but it should not be used to manufacture an underground experience. On this record, the phrase belongs to the tension between what the Historic Centre visibly gives you—plazas, churches, civic buildings and streets—and what the San Francisco catacomb question leaves unresolved.
-
-The confirmed route is still substantial: arrive, enter the Historic Centre through San Francisco, move through the Plaza Mayor cluster, continue to Santo Domingo and finish at Las Nazarenas. That is enough to make central Lima worth the first afternoon, even while the catacombs remain a question for traveller confirmation rather than a fact this article can claim.
+But the road is ever onward.

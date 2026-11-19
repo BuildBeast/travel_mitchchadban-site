@@ -1,39 +1,36 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleContent from "../../content/5-days-in-buenos-aires-itinerary.md";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Beat from "../../components/chronicle/Beat.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import TourRecommendations from "../../components/chronicle/TourRecommendations.astro";
 import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import "../../styles/south-america-article.css";
 
 const title = "5 Days in Buenos Aires: Complete Itinerary — There & Back Again";
-const description = "A first-hand five-day Buenos Aires itinerary through the city’s neighbourhoods, markets, cultural stops and a Colonia del Sacramento day trip, based on a September–October 2026 visit.";
+const description = "A five-night Buenos Aires itinerary through the historic centre, Recoleta, Palermo, San Telmo, Puerto Madero, La Boca and an optional Colonia day trip.";
 const canonical = "https://travel.mitchchadban.com/5-days-in-buenos-aires-itinerary/";
 const image = "/images/5-days-in-buenos-aires-itinerary/buenos-aires-city-centre-1200w.jpg";
 const PROVENANCE = { photography: true };
 
+const faqItems = [
+  { question: "Is five days enough for Buenos Aires?", answer: "Yes, for a first visit. Five nights allow the historic centre, Teatro Colón and El Ateneo, Recoleta, selected museums, San Telmo, Puerto Madero, La Boca and Palermo, with Colonia del Sacramento as an optional day trip. If Buenos Aires itself is the priority, keep the Colonia day in the city for deeper museums, Palermo or Recoleta." },
+  { question: "What is the best area to stay in Buenos Aires for this itinerary?", answer: "Palermo worked well as the base for this route. It made the northern city days easy to begin, kept the parks within the wider district and provided a useful return point after long days in the centre, Recoleta, San Telmo, Puerto Madero and La Boca." },
+  { question: "Which Buenos Aires neighbourhoods should you prioritise?", answer: "Start with the historic centre, then combine Recoleta and Palermo, San Telmo and Puerto Madero, and La Boca with a return north through San Telmo. The neighbourhoods are easier to understand as day-sized contrasts than as one continuous walking route." },
+  { question: "Is Colonia del Sacramento worth a day trip from Buenos Aires?", answer: "It is worthwhile if the Río de la Plata and Uruguay appeal, and it gives a five-night stay a deliberate change of scale. It is optional rather than essential: if Buenos Aires is the priority, use the day for a slower museum route, a longer Palermo walk, more Recoleta or tango." },
+  { question: "What is the best way to get around Buenos Aires?", answer: "Walk within each neighbourhood and use the Subte, buses, taxis or ride-hailing between the major districts. Start the La Boca day in the south before moving north, and allow separate terminal and ferry time for Colonia. Check current fares, service hours and airport traffic close to travel." },
+];
+
 const schema = withProvenance({
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
-      headline: "5 Days in Buenos Aires: Complete Itinerary",
-      description,
-      author: { "@type": "Person", name: "Mitch Chadban" },
-      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
-      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
-      url: canonical,
-      inLanguage: "en-AU",
-      image: `https://travel.mitchchadban.com${image}`,
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
-        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
-        { "@type": "ListItem", position: 3, name: "5 Days in Buenos Aires: Complete Itinerary", item: canonical },
-      ],
-    },
+    { "@type": "Article", headline: "5 Days in Buenos Aires: Complete Itinerary", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
+    { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "5 Days in Buenos Aires: Complete Itinerary", item: canonical } ] },
+    { "@type": "FAQPage", mainEntity: faqItems.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
   ],
 }, PROVENANCE);
-
 const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
 ---
 
@@ -43,41 +40,153 @@ const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/s
   <section class="post-hero" aria-labelledby="buenos-aires-title">
     <div class="post-route-strip"><span>South America</span>&nbsp;· Argentina · Buenos Aires ·&nbsp;<span>September–October 2026</span></div>
     <h1 id="buenos-aires-title" class="post-hero-title"><em>5 Days in Buenos Aires:</em><br />Complete Itinerary</h1>
-    <p class="post-hero-sub">A first-hand route through the historic centre, Recoleta, Palermo, San Telmo, Puerto Madero, La Boca and a recorded Colonia day trip.</p>
+    <p class="post-hero-sub">Five nights through Buenos Aires by urban character: civic centre, cultural north, market streets, waterfront, Colonia, La Boca and Palermo.</p>
     <div class="post-stats">
       <div class="stat"><span class="stat-num">5</span><span class="stat-label">Nights</span></div>
       <div class="stat"><span class="stat-num">6</span><span class="stat-label">Dates</span></div>
       <div class="stat"><span class="stat-num">Sep–Oct</span><span class="stat-label">Visited</span></div>
       <div class="stat"><span class="stat-num">Palermo</span><span class="stat-label">Base</span></div>
     </div>
-    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: true })} />
   </section>
 
-  <article class="post-body buenos-aires-post-body">
-    <ArticleContent />
-  </article>
+  <article class="post-body south-america-post-body buenos-aires-post-body"><ArticleContent /></article>
 
-  <style is:global>
-    .buenos-aires-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
-    .buenos-aires-post-body .article-photo picture,
-    .buenos-aires-post-body .article-photo img { display: block; width: 100%; }
-    .buenos-aires-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
-    .buenos-aires-post-body .article-photo figcaption { margin-top: 0.65rem; color: rgba(221, 232, 208, 0.62); font-size: 0.95rem; font-style: italic; text-align: center; }
-    .buenos-aires-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.08; }
-    .buenos-aires-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 400; }
-    .buenos-aires-post-body p,
-    .buenos-aires-post-body ul,
-    .buenos-aires-post-body ol { max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .buenos-aires-post-body ul,
-    .buenos-aires-post-body ol { padding-left: 2rem; color: rgba(221, 232, 208, 0.86); font-size: 1.18rem; line-height: 1.7; }
-    .buenos-aires-post-body strong { color: #e7f2da; }
-    @media (max-width: 820px) {
-      .buenos-aires-post-body .article-photo { margin: 2.5rem 0; }
-      .buenos-aires-post-body h2,
-      .buenos-aires-post-body h3,
-      .buenos-aires-post-body p,
-      .buenos-aires-post-body ul,
-      .buenos-aires-post-body ol { max-width: none; }
-    }
-  </style>
+  <div class="buenos-aires-day-support-slots" aria-label="Buenos Aires practical planning">
+    <div class="buenos-aires-day-support-slot" data-before="30 September">
+      <Practical place="Buenos Aires — Arrival afternoon" detail="Palermo base · Plaza de Mayo · historic centre" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat"><div class="prac-item"><strong>Parrilla Peña</strong> — dinner after the arrival walk through Plaza de Mayo and the civic centre.</div></PracticalSection>
+        <PracticalSection label="Getting There"><div class="prac-item"><strong>Arrival from Iguazú</strong> — reach Buenos Aires, drop bags in Palermo and transfer into the central city for the afternoon.</div></PracticalSection>
+        <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Metropolitan Cathedral</strong> — the religious centre of the square.</div><div class="prac-item"><strong>Casa Rosada</strong> — the national government building on Plaza de Mayo.</div><div class="prac-item"><strong>Plaza de Mayo</strong> — the civic centre of the first afternoon.</div><div class="prac-item"><strong>Cabildo and Manzana de las Luces</strong> — colonial civic history within the same central cluster.</div><div class="prac-item"><strong>Avenida de Mayo and Congress</strong> — extend the walk towards the modern capital.</div></PracticalSection>
+        <section class="practical" aria-label="Buenos Aires arrival budget snapshot"><div class="prac-header"><div class="prac-city">Buenos Aires — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$55–60/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10–15</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$3–5/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div></div></section>
+        <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Keep the arrival day central.</strong> Plaza de Mayo and the surrounding institutions form one walkable first cluster.</div><div class="tip-row"><strong>Do not overload the first afternoon.</strong> The city’s civic core is substantial before dinner.</div></PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Buenos Aires arrival experiences" tours={[
+        { category: "Historic Centre", title: "Buenos Aires Private Historical Downtown, San Telmo and La Boca Walking Tour", description: "A guided introduction through Plaza de Mayo, the historic centre, San Telmo and La Boca for a first city orientation.", href: "https://www.viator.com/tours/Buenos-Aires/Buenos-Aires-Historical-Walking-Tour/d901-5030HIST?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "City & Teatro Colón", title: "Small-Group City Tour with Visit to Teatro Colón", description: "A compact city tour connecting Plaza de Mayo, central Buenos Aires and a guided Teatro Colón visit.", href: "https://www.viator.com/tours/Buenos-Aires/Small-Group-City-Tour-with-visit-to-Teatro-Colon/d901-11143P53?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="buenos-aires-day-support-slot" data-before="1 October">
+      <Practical place="Buenos Aires — 30 September" detail="Central city · Recoleta · Palermo" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat"><div class="prac-item"><strong>El Preferido de Palermo</strong> — dinner after the central, Recoleta and museum day.</div></PracticalSection>
+        <PracticalSection label="Getting There"><div class="prac-item"><strong>Central city to the north</strong> — move from the Obelisk, Teatro Colón and El Ateneo through Recoleta and into Palermo.</div></PracticalSection>
+        <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Obelisk and Teatro Colón</strong> — the central cultural anchors.</div><div class="prac-item"><strong>El Ateneo and Palacio Barolo</strong> — two distinct architectural interiors.</div><div class="prac-item"><strong>Recoleta Cemetery</strong> — the second-half centre of the northern day.</div><div class="prac-item"><strong>Floralis Genérica</strong> — open the cemetery and museums into parkland.</div><div class="prac-item"><strong>Museums</strong> — choose one or two collections, including Fine Arts, Arte Decorativo or MALBA.</div></PracticalSection>
+        <section class="practical" aria-label="Buenos Aires 30 September budget snapshot"><div class="prac-header"><div class="prac-city">Buenos Aires — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$55–60/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10–15</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$3–5/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div></div></section>
+        <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Choose one or two museums.</strong> Trying to visit every collection deeply turns the day into a race.</div><div class="tip-row"><strong>Keep Teatro Colón and El Ateneo as anchors.</strong> Recoleta works best as the second half of the day.</div></PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Buenos Aires cultural experiences" tours={[
+        { category: "Teatro Colón", title: "Small-Group City Tour with Visit to Teatro Colón", description: "A guided central-city route with a dedicated Teatro Colón visit and wider Buenos Aires orientation.", href: "https://www.viator.com/tours/Buenos-Aires/Small-Group-City-Tour-with-visit-to-Teatro-Colon/d901-11143P53?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Recoleta", title: "Buenos Aires: La Recoleta Cemetery Walking Tour", description: "A focused guided visit through the cemetery’s architecture, history and major mausoleums.", href: "https://www.viator.com/tours/Buenos-Aires/Recoleta-Cemetery-Tour/d901-243339P2?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Architecture", title: "Palacio Barolo Guided Tour Admission Ticket", description: "A guided visit to Palacio Barolo, including its symbolic architecture and upper viewpoints; check current language and access details.", href: "https://www.viator.com/tours/Buenos-Aires/Entrance-and-day-guided-tour-thorugh-the-Barolo-Palace/d901-5674P539?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="buenos-aires-day-support-slot" data-before="2 October">
+      <Practical place="Buenos Aires — 1 October" detail="San Telmo · Puerto Madero" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat"><div class="prac-item"><strong>Fogón Asado</strong> — dinner after the San Telmo and Puerto Madero day.</div></PracticalSection>
+        <PracticalSection label="Getting There"><div class="prac-item"><strong>San Telmo to Puerto Madero</strong> — walk within each cluster and use transport between the southern market streets and the waterfront edges.</div></PracticalSection>
+        <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Mercado de San Telmo</strong> — begin with the market and older southern streets.</div><div class="prac-item"><strong>Museo Moderno, Defensa and Plaza Dorrego</strong> — the cultural and historic core of San Telmo.</div><div class="prac-item"><strong>Puerto Madero and Puente de la Mujer</strong> — the redeveloped docklands and waterfront contrast.</div><div class="prac-item"><strong>Fortabat</strong> — the day’s more deliberate art collection.</div></PracticalSection>
+        <section class="practical" aria-label="Buenos Aires 1 October budget snapshot"><div class="prac-header"><div class="prac-city">Buenos Aires — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$55–60/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10–15</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$3–5/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div></div></section>
+        <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Start with the market.</strong> San Telmo gives the day its older street-level register.</div><div class="tip-row"><strong>Treat Puerto Madero as contrast.</strong> The docks and towers are a change of city rather than a continuation of the market.</div></PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — San Telmo and Puerto Madero experiences" tours={[
+        { category: "San Telmo & La Boca", title: "BA Flavors Food Tour in San Telmo and Boca", description: "A small-group food and walking experience through Mercado San Telmo, Plaza Dorrego and the southern neighbourhoods.", href: "https://www.viator.com/tours/Buenos-Aires/BA-Flavors-Food-Tour-in-San-Telmo/d901-478474P2?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Food & Culture", title: "Small-Group Buenos Aires Food and Culture Tour", description: "An evening San Telmo market and food experience combining local history, tastings and dinner.", href: "https://www.viator.com/tours/Buenos-Aires/Small-Group-Buenos-Aires-Food-and-Culture-Tour/d901-5674P216?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Puerto Madero", title: "Buenos Aires Small-Group Tour and Lunch in Puerto Madero", description: "A guided city route that connects the historic centre, San Telmo, La Boca and Puerto Madero with a waterfront lunch.", href: "https://www.viator.com/tours/Buenos-Aires/Small-Group-City-Tour-of-Buenos-Aires-and-Lunch-in-Puerto-Madero/d901-109228P75?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="buenos-aires-day-support-slot" data-before="3 October">
+      <Practical place="Buenos Aires — 2 October" detail="Colonia del Sacramento · Uruguay day trip" placeIcon="" detailIcon="">
+        <PracticalSection label="Getting There"><div class="prac-item"><strong>Buenos Aires ferry terminal</strong> — reach the terminal, cross to Colonia del Sacramento and return the same day after border formalities.</div></PracticalSection>
+        <PracticalSection label="Day Trip / Excursion"><div class="prac-item"><strong>Colonia del Sacramento</strong> — the old quarter, waterfront and smaller scale across the Río de la Plata.</div><div class="prac-item"><strong>Return to Buenos Aires</strong> — the evening continued back in Palermo after the ferry crossing.</div></PracticalSection>
+        <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Book the ferry ahead.</strong> Check the current operator, schedule and check-in requirements close to travel.</div><div class="tip-row"><strong>Allow border time.</strong> Carry the documents required for entry to Uruguay and return to Argentina.</div><div class="tip-row"><strong>Keep the day optional.</strong> If Buenos Aires is the priority, use the time for a slower city itinerary instead.</div></PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Colonia del Sacramento experiences" tours={[
+        { category: "Ferry & Walking Tour", title: "Colonia Day Trip and Private Transfers from Buenos Aires", description: "A ferry-based day trip with a guided orientation in Colonia and free time before returning to Buenos Aires.", href: "https://www.viator.com/tours/Buenos-Aires/Day-Trip-to-Colonia-from-Buenos-Aires/d901-5674COLONIA?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Premium Day Trip", title: "Colonia Premium Day Tour from Buenos Aires", description: "A structured Colonia day with return express ferry tickets, port transfers and a guided historic-centre walk.", href: "https://www.viator.com/tours/Buenos-Aires/Premium-Day-Tour-To-Colonia-From-Buenos-Aires/d901-109228P57?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Small Group", title: "Colonia del Sacramento Small-Group Day Trip", description: "A small-group ferry and walking format for travellers who want the border logistics and historic centre organised together.", href: "https://www.viator.com/tours/Buenos-Aires/Small-Group-Day-Trip-to-Colonia-from-Buenos-Aires/d901-11143P4?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="buenos-aires-day-support-slot" data-before="4 October">
+      <Practical place="Buenos Aires — 3 October" detail="La Boca · San Telmo · Palermo" placeIcon="" detailIcon="">
+        <PracticalSection label="Getting There"><div class="prac-item"><strong>La Boca to San Telmo to Palermo</strong> — start in the south, then move north through San Telmo and finish among Palermo’s parks.</div></PracticalSection>
+        <PracticalSection label="Day Focus / Excursion"><div class="prac-item"><strong>Caminito and Pasaje Garibaldi</strong> — the painted port district and its immigrant architecture.</div><div class="prac-item"><strong>Puente Transbordador, Fundación Proa and La Bombonera</strong> — industrial, contemporary and football context in La Boca.</div><div class="prac-item"><strong>San Telmo Fair</strong> — the middle section between the southern start and Palermo.</div><div class="prac-item"><strong>Plaza Serrano, El Rosedal and the Planetarium</strong> — finish in Palermo’s neighbourhood and parkland.</div><div class="prac-item"><strong>Paseo de la Infanta</strong> — the recorded evening stop.</div></PracticalSection>
+        <section class="practical" aria-label="Buenos Aires 3 October budget snapshot"><div class="prac-header"><div class="prac-city">Buenos Aires — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div><div class="budget-grid"><div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$55–60/night</div></div><div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$10–15</div></div><div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$3–5/day</div></div><div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$80</div></div></div></section>
+        <PracticalSection label="Tips & Watch-outs"><div class="tip-row"><strong>Start south.</strong> La Boca needs its own opening block before the day moves north.</div><div class="tip-row"><strong>Keep the stadium in context.</strong> La Bombonera is a football-context stop, not a match claim.</div><div class="tip-row"><strong>Finish in Palermo.</strong> The parks provide a quieter final register after the port, stadium and fair.</div></PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — La Boca and Palermo experiences" tours={[
+        { category: "La Boca", title: "Buenos Aires La Boca Walking Tour", description: "A focused walk through Caminito, the old port district, immigrant housing and La Bombonera’s football context.", href: "https://www.viator.com/tours/Buenos-Aires/La-Boca-Walking-Tour/d901-243339P4?pid=P00295455&mcid=42383&medium=link", featured: true },
+        { category: "Palermo Food", title: "Local Foodie Adventure in Buenos Aires with Sherpa Food Tours", description: "A small-group Palermo walking and food experience connecting local restaurants with neighbourhood context.", href: "https://www.viator.com/tours/Buenos-Aires/Palermo-Food-Tour/d901-208148P1?pid=P00295455&mcid=42383&medium=link" },
+        { category: "Palermo Parks", title: "Discover Nature at Buenos Aires City — The Palermo Woods", description: "A guided Palermo parks experience through the Rosedal, Bosques de Palermo and the lakes around the Planetarium.", href: "https://www.viator.com/tours/Buenos-Aires/Palermo-Woods-and-the-natural-history-of-the-City/d901-11143P280?pid=P00295455&mcid=42383&medium=link" },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+  </div>
+
+  <AtAGlance id="full-itinerary" title="The Full Itinerary at a Glance" meta={[
+    { label: "Trip", value: "Five nights based in Palermo, moving through central Buenos Aires, Recoleta, San Telmo, Puerto Madero, La Boca and one optional Colonia day trip." },
+    { label: "Duration", value: "5 nights / 6 calendar dates" },
+    { label: "Country", value: "Argentina" },
+    { label: "Travelled", value: "September–October 2026" },
+  ]} days={[
+    { num: "29 September", text: "Arrival + Plaza de Mayo / historic centre" },
+    { num: "30 September", text: "Central Buenos Aires + Recoleta + Palermo" },
+    { num: "1 October", text: "San Telmo + Puerto Madero" },
+    { num: "2 October", text: "Optional Colonia del Sacramento day trip" },
+    { num: "3 October", text: "La Boca + San Telmo + Palermo" },
+    { num: "4 October", text: "Departure morning" },
+  ]}>
+    <div class="itin-section-head">Budget Snapshot — Planning Estimate</div>
+    <p class="itin-meta">Budget figures are indicative planning averages for Buenos Aires based on current traveller costs and vary with accommodation, food, transport and sightseeing choices. The base estimate excludes any additional Colonia ferry or guided-day costs.</p>
+    <div class="grand-total-block">
+      <div class="grand-total-grid"><div class="grand-line"><strong>Accommodation</strong>~A$55–60/night</div><div class="grand-line"><strong>Food daily</strong>~A$10–15</div><div class="grand-line"><strong>Transport</strong>~A$3–5/day</div><div class="grand-line"><strong>Daily total</strong>~A$80</div></div>
+      <div class="grand-total-num">Estimated Buenos Aires base budget: ~A$400</div>
+    </div>
+    <div class="itin-section-head">Quick Reference — Best Eats</div>
+    <div class="eats-row"><span class="eats-city">Buenos Aires</span><span><strong>Parrilla Peña</strong> — arrival evening after Plaza de Mayo.</span></div>
+    <div class="eats-row"><span class="eats-city">Palermo</span><span><strong>El Preferido de Palermo</strong> — after the Recoleta and museum day.</span></div>
+    <div class="eats-row"><span class="eats-city">Buenos Aires</span><span><strong>Fogón Asado</strong> — after San Telmo and Puerto Madero.</span></div>
+    <div class="eats-row"><span class="eats-city">Buenos Aires</span><span><strong>Niño Gordo</strong> — evening after the Colonia day trip.</span></div>
+    <div class="itin-section-head">Getting Around</div>
+    <div class="transport-note"><strong>Neighbourhood clusters:</strong> Walk within the centre, Recoleta, San Telmo, Puerto Madero and Palermo.</div>
+    <div class="transport-note"><strong>Between districts:</strong> Use the Subte, buses, taxis or ride-hailing according to the day’s distance and timing.</div>
+    <div class="transport-note"><strong>La Boca:</strong> Start south, then move north through San Telmo and Palermo.</div>
+    <div class="transport-note"><strong>Colonia:</strong> Allow separate ferry-terminal, crossing and check-in time.</div>
+    <div class="transport-note"><strong>Airport:</strong> Check the current airport and terminal, then allow live traffic margin.</div>
+  </AtAGlance>
+
+  <section class="faq-block" aria-labelledby="buenos-aires-faq-title">
+    <div class="faq-inner">
+      <div class="faq-title" id="buenos-aires-faq-title">Frequently Asked Questions</div>
+      {faqItems.map((item) => (<div class="faq-item"><div class="faq-q">{item.question}</div><div class="faq-a">{item.answer}</div></div>))}
+    </div>
+  </section>
+
+  <div class="next-chronicles">
+    <div class="section-label">Next Chronicles</div>
+    <div class="posts-grid">
+      <a class="post-card chronicle-card" href="/best-things-to-do-in-buenos-aires/"><div class="post-region">Argentina · Buenos Aires</div><div class="post-title">Best Things to Do in Buenos Aires</div><div class="post-excerpt">The major experiences that deserve priority across the historic centre, neighbourhoods, markets, parks and waterfront.</div><div class="post-meta">READ CHRONICLE</div></a>
+      <a class="post-card chronicle-card" href="/buenos-aires-neighbourhoods/"><div class="post-region">Argentina · Buenos Aires</div><div class="post-title">Buenos Aires Neighbourhoods</div><div class="post-excerpt">A slower comparison of the city’s districts, from the civic centre and San Telmo to Recoleta, Palermo and La Boca.</div><div class="post-meta">READ CHRONICLE</div></a>
+      <a class="post-card chronicle-card" href="/plaza-de-mayo-buenos-aires/"><div class="post-region">Argentina · Buenos Aires</div><div class="post-title">Plaza de Mayo</div><div class="post-excerpt">The square, institutions and historic streets that form Buenos Aires’ political and colonial centre.</div><div class="post-meta">READ CHRONICLE</div></a>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const slots = [...document.querySelectorAll('.buenos-aires-day-support-slot')];
+      const article = document.querySelector('.buenos-aires-post-body');
+      if (!article) return;
+      for (const slot of slots) {
+        const target = [...article.querySelectorAll('h2')].find((heading) => heading.textContent?.trim().startsWith(slot.dataset.before || ''));
+        if (target) target.insertAdjacentElement('beforebegin', slot);
+      }
+    })();
+  </script>
 </BaseLayout>

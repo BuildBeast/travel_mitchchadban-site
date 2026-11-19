@@ -1,0 +1,35 @@
+---
+interface TourItem {
+  category: string;
+  title: string;
+  description: string;
+  href: string;
+  featured?: boolean;
+}
+
+interface Props {
+  label: string;
+  tours: TourItem[];
+}
+
+const { label, tours } = Astro.props;
+---
+
+{tours.length > 0 && (
+  <div class="tours narrative">
+    <div class="tours-label">{label}</div>
+    <div class="tours-grid">
+      {tours.map((tour) => (
+        <a class:list={["tour-card", { "tour-card--featured": tour.featured }]} href={tour.href} rel="sponsored noopener" target="_blank">
+          <div class="tour-type">{tour.category}</div>
+          <div class="tour-name">{tour.title}</div>
+          <div class="tour-meta">{tour.description}</div>
+          <div class="tour-footer">
+            <span class="tour-price">Check current price and availability</span>
+            <span class="tour-link-label">Book via Viator →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+)}

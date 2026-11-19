@@ -1,20 +1,24 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleContent from "../../content/huayna-picchu-hike.md";
-import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
 
 const title = "Huayna Picchu Hike: What the Climb Is Really Like — There & Back Again";
-const description = "A first-hand, evidence-led account of the Huayna Picchu climb on 14 September 2026, including the recorded timing, stone trail, views and the limits of what the trip record can prove.";
+const description = "A literary and practical account of the Huayna Picchu climb, covering the steep stone trail, mountain views, access planning and the relationship with Machu Picchu below.";
 const canonical = "https://travel.mitchchadban.com/huayna-picchu-hike/";
-const image = "/images/huayna-picchu-hike/huayna-picchu-view-over-valley.jpg";
-const PROVENANCE = { photography: true };
-const schema = withProvenance({
+const image = "/images/huayna-picchu-hike/huayna-picchu-view-over-valley-1200w.jpg";
+const schema = {
   "@context": "https://schema.org",
   "@graph": [
     { "@type": "Article", headline: "Huayna Picchu Hike: What the Climb Is Really Like", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
     { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "Huayna Picchu Hike: What the Climb Is Really Like", item: canonical } ] },
   ],
-}, PROVENANCE);
+};
 const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
 ---
 
@@ -23,21 +27,77 @@ const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/s
   <section class="post-hero" aria-labelledby="huayna-title">
     <div class="post-route-strip"><span>South America</span>&nbsp;· Peru ·&nbsp;<span>Huayna Picchu</span>&nbsp;· September 2026</div>
     <h1 id="huayna-title" class="post-hero-title"><em>Huayna Picchu Hike:</em><br />What the Climb Is Really Like</h1>
-    <p class="post-hero-sub">A dated visual and route record of the climb above Machu Picchu, with the evidence kept separate from the assumptions.</p>
-    <div class="post-stats"><div class="stat"><span class="stat-num">3h30</span><span class="stat-label">Recorded block</span></div><div class="stat"><span class="stat-num">14</span><span class="stat-label">September 2026</span></div><div class="stat"><span class="stat-num">1</span><span class="stat-label">Climb</span></div><div class="stat"><span class="stat-num">Peru</span><span class="stat-label">Country</span></div></div>
-    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+    <p class="post-hero-sub">A mountain climb above Machu Picchu, from the first steps before dawn to the valley views.</p>
+    <div class="post-stats"><div class="stat"><span class="stat-num">3h30</span><span class="stat-label">Visit window</span></div><div class="stat"><span class="stat-num">14</span><span class="stat-label">September 2026</span></div><div class="stat"><span class="stat-num">1</span><span class="stat-label">Climb</span></div><div class="stat"><span class="stat-num">Peru</span><span class="stat-label">Country</span></div></div>
   </section>
-  <article class="post-body huayna-post-body"><ArticleContent /></article>
-  <style is:global>
-    .huayna-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
-    .huayna-post-body .article-photo picture, .huayna-post-body .article-photo img { display: block; width: 100%; }
-    .huayna-post-body .article-photo img { height: auto; border: 1px solid rgba(158,207,114,.12); }
-    .huayna-post-body .article-photo figcaption { margin-top: .65rem; color: rgba(221,232,208,.62); font-size: .95rem; font-style: italic; text-align: center; }
-    .huayna-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 400; line-height: 1.08; }
-    .huayna-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem,3vw,2.2rem); font-weight: 400; }
-    .huayna-post-body p, .huayna-post-body ul { max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .huayna-post-body ul { padding-left: 2rem; color: rgba(221,232,208,.86); font-size: 1.18rem; line-height: 1.7; }
-    .huayna-post-body strong { color: #e7f2da; }
-    @media (max-width: 820px) { .huayna-post-body .article-photo { margin: 2.5rem 0; } .huayna-post-body h2, .huayna-post-body h3, .huayna-post-body p { max-width: none; } }
-  </style>
+  <article class="post-body south-america-post-body huayna-post-body">
+    <ArticleContent />
+    <FurtherReading
+      label="Continue through Machu Picchu"
+      cards={[
+        { href: "/2-days-in-machu-picchu-itinerary/", region: "Peru · Machu Picchu", title: "2 Days in Machu Picchu and Aguas Calientes", excerpt: "The two-night mountain stage through Aguas Calientes, Machu Picchu and Huayna Picchu.", cta: "READ CHRONICLE" },
+        { href: "/aguas-calientes-beyond-machu-picchu/", region: "Peru · Machu Picchu", title: "Aguas Calientes Beyond Machu Picchu", excerpt: "A closer look at the railway town, market, Butterfly House and hot springs below the ruins.", cta: "READ CHRONICLE" },
+        { href: "/24-days-in-south-america-itinerary/", region: "South America · Peru", title: "24 Days in South America", excerpt: "The wider journey through Peru, Bolivia, Chile, Argentina and Uruguay.", cta: "READ CHRONICLE" },
+      ]}
+    />
+  </article>
+
+  <div class="huayna-overview-slot">
+    <AtAGlance
+      id="huayna-glance"
+      title="Huayna Picchu at a Glance"
+      meta={[
+        { label: "Best for", value: "Travellers who want Machu Picchu to become a physical mountain experience rather than only a viewpoint." },
+        { label: "Main challenge", value: "Steep stone stairs, sustained climbing, narrow sections and exposure to height." },
+        { label: "Time commitment", value: "Roughly three and a half hours for this visit, with the mountain kept as the physical centre of the morning." },
+        { label: "Best approach", value: "Book the mountain first, start early and keep the rest of the day deliberately lighter." },
+      ]}
+      daysHeading="Four Parts of the Climb"
+      days={[
+        { num: "The Approach", detail: "Early start · Puente Ruinas · Mountain entry", text: "The day begins below the archaeological park before the route turns away from the familiar postcard and into the mountain itself." },
+        { num: "The Stairs", detail: "Stone · Gradient · Narrow terrain", text: "The physical heart of Huayna Picchu. Irregular stairs and sustained ascent make this a serious climb rather than a gentle viewpoint walk." },
+        { num: "The Height", detail: "Ridges · Exposure · Valley", text: "As elevation builds, the route opens over the Urubamba valley and the surrounding mountain system. Comfort with height matters alongside fitness." },
+        { num: "The Return", detail: "Descent · Aguas Calientes · Recovery", text: "The climb should remain the demanding part of the day. The return to town works best with lighter activities rather than another major excursion." },
+      ]}
+    />
+  </div>
+
+  <div class="huayna-decision-slot">
+    <Practical place="Huayna Picchu — The Climb" detail="Stairs · height · mountain" detailIcon="🥾">
+      <PracticalSection label="Shortest route to a decision" level={3}>
+        <div class="prac-item"><strong>Choose Huayna Picchu if</strong> — You want a steep, physical mountain route that changes how Machu Picchu and the surrounding valley are understood.</div>
+        <div class="prac-item"><strong>Think carefully if</strong> — Narrow terrain, steep drops or exposed-looking sections make you uncomfortable.</div>
+        <div class="prac-item"><strong>Fitness matters because</strong> — The climb combines sustained ascent with irregular stone stairs rather than one short steep section.</div>
+        <div class="prac-item"><strong>Plan the day around it</strong> — Keep Huayna Picchu as the main physical effort, then return to Aguas Calientes for a lighter afternoon.</div>
+      </PracticalSection>
+      <PracticalSection label="What matters most" level={3}>
+        <div class="prac-item"><strong>Difficulty:</strong> Steep rather than technical.</div>
+        <div class="prac-item"><strong>Terrain:</strong> Stone stairs and uneven mountain path.</div>
+        <div class="prac-item"><strong>Exposure:</strong> Height and narrow sections.</div>
+        <div class="prac-item"><strong>Reward:</strong> A wider geographical reading of Machu Picchu and the Urubamba valley.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Book the correct access.</strong> Huayna Picchu uses separate timed access, so current official ticket and circuit rules should be checked before fixing the rest of the itinerary.</div>
+        <div class="tip-row"><strong>Weather changes the route.</strong> Wet stone, cloud and changing visibility can alter both footing and the views.</div>
+        <div class="tip-row"><strong>Do not judge it only by distance.</strong> The combination of gradient, stairs and elevation matters more than the route length alone.</div>
+        <div class="tip-row"><strong>Leave the afternoon lighter.</strong> The mountain should be the demanding part of the day, not the first item in a chain of strenuous activities.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.huayna-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.huayna-overview-slot');
+      const decision = document.querySelector('.huayna-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('I.'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'How hard is Huayna Picchu?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+
+  <ArticleFAQ page="huayna-picchu-hike" />
 </BaseLayout>

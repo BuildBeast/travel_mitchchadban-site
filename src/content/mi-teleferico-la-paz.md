@@ -1,88 +1,83 @@
-La Paz is difficult to understand from street level. The centre is dense with plazas, museums and markets, while brick neighbourhoods climb the surrounding slopes. Roads disappear around hillsides and reappear somewhere above you. Then a cable car crosses the valley, and the separate pieces begin to occupy the same view.
+La Paz is a city whose parts rarely share the same level. Plazas and markets occupy the centre, brick neighbourhoods climb the slopes, and roads fold around the basin. Above them, Mi Teleférico crosses the city in long, quiet lines. From the cabin, the separate pieces finally sit in one geography.
 
-I used Mi Teleférico on 16 and 17 September 2026, during a three-night stay in La Paz. It was not a sightseeing ride added to the itinerary after the important things were finished. The route records it as movement between parts of the city, alongside walking, museums, markets and viewpoints.
+That is why Mi Teleférico matters beyond the view. It is public transport, a practical way to connect parts of La Paz and El Alto, and one of the clearest introductions to the city’s physical shape. The street gives La Paz texture. The cable car gives it form.
 
-That is the useful answer to the question of whether Mi Teleférico is worth using: on this trip, yes, because it was both transport and a way of reading the geography. This is not a current network guide. I am not adding fares, opening hours, payment instructions or line-by-line directions that the September records do not preserve.
+The network belongs inside a day rather than beside it. During two days in La Paz, the traveller used the cabins between central streets, markets, museums and viewpoints. The rides were not a separate sightseeing excursion added after the city had been visited. They became part of how the city was visited.
 
-If you want the complete city chronology, continue to the [three-day La Paz itinerary](/3-days-in-la-paz-itinerary/). This page stays with the cable cars.
+For the wider sequence, continue to the [three-day La Paz itinerary](/3-days-in-la-paz-itinerary/). For the broader set of places that make the city legible, see the [best things to do in La Paz guide](/best-things-to-do-in-la-paz/).
 
-For the wider discovery view, see the [best things to do in La Paz guide](/best-things-to-do-in-la-paz/), which places Mi Teleférico alongside markets, museums, civic spaces and Valle de la Luna.
+<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Mi Teleférico cabin crossing above the steep urban basin of La Paz." loading="lazy" decoding="async"></picture><figcaption>Mi Teleférico crosses above the steep urban basin of La Paz.</figcaption></figure>
 
-<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="A Mi Teleférico cabin above La Paz; exact line and station are unresolved." loading="lazy" decoding="async"></picture><figcaption>A Mi Teleférico cabin crossing above La Paz; the exact line is not assigned here.</figcaption></figure>
+## I. The city above the streets
 
-## Why Mi Teleférico became part of the itinerary
+La Paz occupies a steep basin, with the high plateau of El Alto rising above it. Between the plateau and the lower city, neighbourhoods spread across slopes that make a short distance on a map feel much less simple on the ground. Roads have to follow the folds of the terrain, climb around the valley or funnel through the same busy corridors.
 
-The first recorded La Paz afternoon began after the overnight bus from Cusco. The route moved from the accommodation handoff to Plaza Murillo, then the Witches’ Market, then into the cable-car network before Mirador Killi Killi.
+The cable car is an unusually direct answer to that shape. Its lines do not flatten the city; they expose the changes in elevation while moving across them. A cabin can leave the dense centre and pass above roofs, walls and roads before the next station appears on another slope. The journey is short enough to be useful and open enough to make the terrain impossible to ignore.
 
-That sequence is more revealing than a separate “things to do” list. The day moved from civic space to market street to infrastructure above the city. Mi Teleférico was not a detour from La Paz; it was one of the ways the route connected the city’s layers.
+Mi Teleférico began operating in 2014 with the Red, Yellow and Green lines, then expanded into a wider urban network. Its purpose was never only to provide a high viewpoint. The system connects La Paz and El Alto and reaches across districts where the topography makes surface transport more complicated. New lines and interchange points have made the network part of the city’s wider public transport system rather than a single scenic route.
 
-The following day returned to the network after a run of museums in the centre. The cable cars were therefore used on two consecutive days, in different parts of a wider route. That repetition matters. The experience was not only the novelty of seeing a cabin overhead once. It became a recurring way of moving through the itinerary.
+That context changes the way a visitor should use it. The cabins are not a novelty imposed on La Paz from outside. They are one of the city’s own answers to its steepness.
 
-<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-cable-cars-over-city-1200w.jpg 1200w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Mi Teleférico cable cars above dense central La Paz; exact line is unresolved." loading="lazy" decoding="async"></picture><figcaption>The cable cars appear as part of the city’s connective tissue, not only as an attraction.</figcaption></figure>
+## II. Why it works as public transport
 
-## What riding above La Paz changed
+The strongest ride is usually the one that takes the traveller somewhere useful. Mi Teleférico can connect a central walking day to a different district, reduce some of the road crossings between high and low parts of the city and turn a transfer into a chance to understand the terrain.
 
-From street level, the city is encountered in pieces: a plaza, a steep road, a market entrance, a museum doorway. From a cabin, those pieces sit in relation to one another. Dense neighbourhoods, roofs, streets and hillsides become part of one urban field.
+This is especially clear when the network is placed between ordinary stops. Plaza Murillo and the Witches’ Market belong to the street-level centre. Museums and San Francisco extend that central walk. Mercado Rodríguez brings the city back to everyday buying and selling. Mirador Killi Killi turns the basin into a single view. The cable cars sit between these experiences, joining them without becoming a separate loop that has to be completed for its own sake.
 
-The photographs support the broad subject—cable cars above the city and elevated views across La Paz—but not an exact station, line or viewpoint for every frame. I have kept the captions at that level because the visual truth is still useful without pretending to know more than the archive does.
+By the second day, the cabins had stopped feeling like an attraction and become part of how the traveller moved through La Paz. That is the practical argument for using them. One or two well-chosen journeys can show more of the city than a determined attempt to ride every line.
 
-<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="An elevated view across La Paz; exact viewpoint is unresolved." loading="lazy" decoding="async"></picture><figcaption>An elevated La Paz panorama; the exact viewpoint is not identified.</figcaption></figure>
+There is no need to build a first visit around a line-by-line inventory. The network is easier to appreciate when it remains connected to the city outside the stations: the short walk after getting off, the next market or museum, the streets that begin again below the cable.
 
-This was the strongest change in perspective. The cable cars did not make La Paz simple. They made its vertical arrangement visible: the central streets below, the built-up slopes beyond, and the valley holding both together.
+## III. What the traveller sees from above
 
-## The journeys actually recorded
+At street level, La Paz arrives in fragments. A plaza gives way to a steep road. A market entrance opens into a compressed street. A museum doorway holds one part of the city’s history. Beyond a wall of houses, another slope rises and seems to close the view.
 
-The records support a route outline, not a complete reconstruction of every ride. These are the movements and stations named in the September itinerary:
+From a cabin, those fragments take their place in relation to one another. Roofs become a continuous surface. Roads reveal the contours they were following. Neighbourhoods that seemed separate at street level show how closely they occupy the same basin. Above the city, the distinction between centre, slope and plateau becomes easier to read.
 
-- **16 September:** Mi Teleférico at Taypi Uta, then Teleférico 16 de Julio, followed by Línea Morada at Estación Obelisco before Mirador Killi Killi.
-- **17 September:** Línea Morada at Estación Obelisco after the museum sequence, then Línea Plateada at Faro Murillo and the Yellow Line at Mirador Station later in the afternoon.
+The view is not a postcard version of La Paz. It is an urban section drawn in real time. The cabin passes over buildings and traffic; the valley opens, narrows and opens again. The mountains remain beyond the city, but the built slopes are the more immediate fact. La Paz is not simply set against a dramatic landscape. It has been built into difficult ground.
 
-The repeated reference to Estación Obelisco is useful, as are the recorded line colours and station names. But this is not enough evidence to publish a complete point-to-point route, transfer map or current network guide. I have not inferred missing intermediate stations from a modern map.
+The traveller does not need to memorise every station for this to work. The useful knowledge is spatial: which direction the city rises, how El Alto sits above the basin, where the roads are forced to bend and why the cable network can cross territory that would otherwise take longer to negotiate.
 
-<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-teleferico-over-city-1200w.jpg 1200w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Mi Teleférico cabin above La Paz; exact station and line are unresolved." loading="lazy" decoding="async"></picture><figcaption>The archive confirms the cable-car subject; it does not identify this frame’s station.</figcaption></figure>
+<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-city-panorama-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1200w.jpg 1200w, /images/3-days-in-la-paz-itinerary/la-paz-city-panorama-1600w.jpg 1600w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="La Paz spread across its basin and surrounding slopes from an elevated position." loading="lazy" decoding="async"></picture><figcaption>From above, roads and neighbourhoods reveal how sharply La Paz changes elevation.</figcaption></figure>
+
+## IV. Using it across two days
+
+Mi Teleférico fitted naturally into two different days. On the first, the traveller moved through Plaza Murillo and the Witches’ Market before taking the network above the centre and continuing towards Mirador Killi Killi. The order mattered because it moved from civic space to market street to infrastructure. The city changed register without the day having to change subject.
+
+The following day returned to the cabins after the museums. By then, the view was no longer an introduction but a way to connect another part of the central route. The repetition made the system more useful. It showed that Mi Teleférico was not a single scenic ride but a form of movement that could sit naturally inside a longer day.
+
+The best way to plan it is therefore to start with the places that matter at ground level and use the cable cars to join them. Pair a ride with Plaza Murillo, the markets, museums or a viewpoint. Leave time to walk after getting off. A station is a threshold, not the whole experience.
+
+The [La Paz markets guide](/la-paz-markets/) is useful when the day is built around the Witches’ Market and Mercado Rodríguez. For a wider landscape excursion, the [Valle de la Luna guide](/valle-de-la-luna-la-paz/) explains why that visit deserves its own block rather than being squeezed between central stops.
 
 ## Transport or sightseeing?
 
-Both. The route records cable-car movements between walking sections, so it would be misleading to call the rides only a scenic excursion. At the same time, the elevated views are not incidental. They change the scale of the city in a way that a street-level transfer does not.
+Both, and that is what makes Mi Teleférico unusually valuable for a visitor. As transport, it joins districts across a city where elevation and road layout matter. As sightseeing, it makes the relationship between those districts visible. The two uses improve one another.
 
-That dual role is why Mi Teleférico fitted the itinerary so well. The first day used it after the Witches’ Market and before Killi Killi. The second used it after the museum cluster and before the later route toward Mercado Rodríguez and the stadium stop. The cable cars joined sections of the day while also becoming one of the clearest ways to see La Paz as a city built vertically.
+Treating it only as a viewpoint would make the experience feel staged. Treating it only as a transfer would miss the reason the network is so effective at explaining La Paz. The view is not an extra placed on top of the journey. It is a direct consequence of how the transport system has been built.
 
-The route planner contains estimated walk durations and distances, but those are not a personal walking log. The article therefore does not claim that a ride took a particular number of minutes, saved a measured distance or replaced a specific walk. The supported point is simpler: walking and cable cars were both part of the recorded movement through the city.
+That dual role also keeps the day practical. A traveller can move between real destinations, then step out into another part of the city without having spent half a day circling the network. The ride earns its place because it does two jobs at once.
 
-## What the photographs can—and cannot—tell you
+## Is Mi Teleférico worth it?
 
-The strongest cable-car photographs show cabins crossing above dense urban fabric. They establish Mi Teleférico as a subject and support the broad relationship between the network and the city below. They do not safely identify every line or station.
+Yes. Mi Teleférico is one of the essential La Paz experiences, not simply because the views are good but because the system makes the city’s physical structure understandable while participating in infrastructure La Paz actually uses.
 
-The broad city panorama has the same limitation. It is useful evidence of La Paz seen from an elevated position, not proof of a particular viewpoint. Capture times help place the photographs in the 17 September sequence, but there is no GPS metadata to turn them into exact location labels.
-
-<figure class="article-photo chronicle-figure"><picture><source media="(max-width: 600px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-768w.jpg 768w"><source media="(max-width: 1200px)" srcset="/images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-1200w.jpg 1200w"><img src="/images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo.jpg" srcset="/images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-480w.jpg 480w, /images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-768w.jpg 768w, /images/3-days-in-la-paz-itinerary/la-paz-plaza-murillo-1200w.jpg 1200w" sizes="(max-width: 420px) calc(100vw - 30.4px), (max-width: 600px) calc(100vw - 48px), (max-width: 1108px) calc(100vw - 128px), 980px" width="2048" height="1365" alt="Plaza Murillo area in central La Paz before the route moved above the city." loading="lazy" decoding="async"></picture><figcaption>Plaza Murillo was the first recorded La Paz stop before the route moved into the cable-car network.</figcaption></figure>
-
-The contrast between the plaza and the cabins is the point. One is not a substitute for the other. The street gives La Paz texture; the cable car gives it shape.
-
-## Is Mi Teleférico worth it for visitors?
-
-On the evidence of this visit, yes—especially if you treat it as part of moving through La Paz rather than as a ride to collect. The network appeared on two days, alongside a central walking route, and the experience contributed something the museums and markets could not: a visible relationship between the city’s streets, slopes and built-up valley.
-
-That is a first-hand judgement about this itinerary, not a promise about every future journey. The current records do not establish fares, queues, operating hours, ticket rules, accessibility or service conditions. Those details should be checked separately before travel rather than frozen into an article about one September visit.
+It is worth using even when a particular line is not the day’s main objective. One or two journeys can be enough. The point is not to complete the map. It is to let the street-level city and the city above the roofs meet in the same visit.
 
 ## How much time should you allow?
 
-The route records cable-car movements inside two larger days, not a standalone half-day cable-car tour. On 16 September, the network sat between the Witches’ Market and Killi Killi. On 17 September, it appeared after the museums and before the later central-city stops.
+Build the rides into a central-city day rather than reserving a separate cable-car tour. Allow time to reach a station, travel, orient yourself after getting off and continue on foot. A first visit does not require every line or interchange.
 
-That suggests a practical approach: allow Mi Teleférico to connect parts of a La Paz day, and leave room for the surrounding walking and city stops. Do not use this article as a timetable. The underlying station entries include route-planner estimates, not measured personal journey times.
+Current fares, payment arrangements, operating hours and service conditions can change, so check the official Mi Teleférico information close to travel. The useful planning principle is stable: choose the journey that connects two places you genuinely want to see, then leave room for the city at either end.
 
-<p class="practical-note"><strong>What remains unverified:</strong> current fares, operating hours, payment method, queues, service frequency, accessibility and any complete transfer sequence. None is necessary to understand the role the cable cars played in this recorded visit.</p>
+Altitude still matters. The cable cars remove some steep road movement, but they do not remove the elevation. The traveller had already spent time at altitude before La Paz, and the plan favoured walking and cable cars over harder training. Keep the first climbs manageable and allow more time than the map alone suggests.
 
-## Altitude without inventing a physical story
+## The city made legible
 
-The La Paz plan was shaped around walking and cable cars, and the evidence records the city as an altitude-related stop. It does not record breathlessness, headaches, nausea, sleep disruption, appetite changes, recovery or any other personal symptom.
+La Paz is still a street-level city. Its plazas, markets, museums and steep roads provide the detail that gives the place character. Mi Teleférico does not replace any of them. It places them in relation to one another.
 
-The cable cars are therefore useful here as a practical and spatial part of the plan, not as evidence of how 3,600 metres felt. That deeper physical account belongs to a different article only if it can be supported by traveller confirmation.
+Once the traveller has crossed above the roofs, the slopes stop feeling like a backdrop and become the organising fact of the place. El Alto, the basin, the climbing neighbourhoods and the roads below belong to one connected geography. The cable cars make that geography visible while carrying people through it.
 
-## Mi Teleférico in the wider La Paz route
+The markets and plazas give La Paz texture. The cable cars give it shape. For the complete three-day route through the city, continue to the [La Paz itinerary](/3-days-in-la-paz-itinerary/).
 
-The cable cars made most sense because they were surrounded by ordinary city movement: Plaza Murillo, the Witches’ Market, museums, Mercado Rodríguez and streets between them. The route did not replace La Paz at ground level. It connected the ground-level route to another way of seeing it.
-
-That is why I would use Mi Teleférico again on a return visit. Not because the cable cars turn the city into a sightseeing loop, and not because this record supports every practical answer a visitor might want, but because they made the city’s vertical geography legible.
-
-For the complete chronology—from the Cusco bus arrival through the civic centre, museums, markets and Valle de la Luna—continue to the [three-day La Paz itinerary](/3-days-in-la-paz-itinerary/).
+But the road is ever onward.

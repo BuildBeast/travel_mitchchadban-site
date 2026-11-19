@@ -1,7 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleContent from "../../content/3-days-in-granada-itinerary.md";
-import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import AtAGlance from '../../components/chronicle/AtAGlance.astro';
+import Beat from '../../components/chronicle/Beat.astro';
+import Practical from '../../components/chronicle/Practical.astro';
+import PracticalSection from '../../components/chronicle/PracticalSection.astro';
+import TourRecommendations from '../../components/chronicle/TourRecommendations.astro';
+import { provenanceHtml, withProvenance } from '../../lib/provenance';
+import "../../styles/south-america-article.css";
 
 const title = "3 Days in Granada: Complete Itinerary — There & Back Again";
 const description = "A first-hand Granada itinerary centred on the Alhambra, Generalife, Albaicín, historic streets and the city’s layered architecture.";
@@ -9,11 +15,35 @@ const canonical = "https://travel.mitchchadban.com/3-days-in-granada-itinerary/"
 const image = "/images/3-days-in-granada-itinerary/granada-alhambra-city-view-1200w.jpg";
 const PROVENANCE = { photography: true };
 
+const faqItems = [
+  {
+    question: 'Is three days enough for Granada?',
+    answer: 'Yes. Three days let the Alhambra, Albaicín and historic centre remain distinct rather than compressing the palace and the city below into one long excursion. The traveller originally visited Granada on a long day from Seville; the three-day version is an expanded itinerary, not a claim of three nights spent there.',
+  },
+  {
+    question: 'How far in advance should you book the Alhambra?',
+    answer: 'Book through the official Alhambra system as early as practical. The Nasrid Palaces entry time is fixed on the ticket, and availability can shape the rest of the day. Check current opening hours, prices and entry requirements before travel.',
+  },
+  {
+    question: 'How much time do you need at the Alhambra?',
+    answer: 'Give the Alhambra a full day. The Alcazaba, Nasrid Palaces, Generalife, gardens and wider complex are separate parts of one hilltop city, and the day works better without another major Granada attraction immediately afterwards.',
+  },
+  {
+    question: 'Is the Albaicín worth a full day?',
+    answer: 'Yes, especially when the day includes Mirador de San Nicolás, the hillside streets and time to move between viewpoints rather than treating the neighbourhood as a single photograph. The steep geography is part of the reason to keep it separate from the Alhambra.',
+  },
+  {
+    question: 'Can you visit Granada as a day trip from Seville?',
+    answer: 'Yes. The traveller originally did so from Sevilla-Santa Justa, but the day is compressed. Staying longer gives the Alhambra, Albaicín and historic centre enough room to be read as three parts of the same city.',
+  },
+];
+
 const schema = withProvenance({
   "@context": "https://schema.org",
   "@graph": [
     { "@type": "Article", headline: "3 Days in Granada: Complete Itinerary", description, author: { "@type": "Person", name: "Mitch Chadban" }, publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" }, mainEntityOfPage: { "@type": "WebPage", "@id": canonical }, url: canonical, inLanguage: "en-AU", image: `https://travel.mitchchadban.com${image}` },
     { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" }, { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" }, { "@type": "ListItem", position: 3, name: "3 Days in Granada: Complete Itinerary", item: canonical } ] },
+    { "@type": "FAQPage", mainEntity: faqItems.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
   ],
 }, PROVENANCE);
 const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
@@ -24,21 +54,228 @@ const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/s
   <section class="post-hero" aria-labelledby="granada-title">
     <div class="post-route-strip"><span>Europe</span>&nbsp;· Spain · Andalucía ·&nbsp;<span>Granada</span></div>
     <h1 id="granada-title" class="post-hero-title"><em>3 Days in Granada:</em><br />The Alhambra and the City Below</h1>
-    <p class="post-hero-sub">A first-hand route through the Alhambra, the Generalife, the Albaicín and Granada’s historic centre.</p>
+    <p class="post-hero-sub">A first-hand journey through the Alhambra, the Generalife, the Albaicín and Granada’s historic centre.</p>
     <div class="post-stats"><div class="stat"><span class="stat-num">3</span><span class="stat-label">Days</span></div><div class="stat"><span class="stat-num">1</span><span class="stat-label">Palace city</span></div><div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div><div class="stat"><span class="stat-num">Granada</span><span class="stat-label">Base</span></div></div>
-    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
+    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: true })} />
   </section>
-  <article class="post-body granada-post-body"><ArticleContent /></article>
-  <style is:global>
-    .granada-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
-    .granada-post-body .article-photo picture, .granada-post-body .article-photo img { display: block; width: 100%; }
-    .granada-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
-    .granada-post-body .article-photo figcaption { margin-top: .65rem; color: rgba(221,232,208,.62); font-size: .95rem; font-style: italic; text-align: center; }
-    .granada-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 400; line-height: 1.08; }
-    .granada-post-body h3 { max-width: 1100px; margin: 2.8rem auto 1rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(1.45rem,3vw,2.2rem); font-weight: 400; }
-    .granada-post-body p, .granada-post-body ul { max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .granada-post-body ul { padding-left: 2rem; color: rgba(221,232,208,.86); font-size: 1.18rem; line-height: 1.7; }
-    .granada-post-body strong { color: #e7f2da; }
-    @media (max-width: 820px) { .granada-post-body .article-photo { margin: 2.5rem 0; } .granada-post-body h2, .granada-post-body h3, .granada-post-body p { max-width: none; } }
-  </style>
+  <article class="post-body south-america-post-body granada-post-body"><ArticleContent /></article>
+
+  <div class="granada-day-support-slots" aria-label="Day-by-day practical planning">
+    <div class="granada-day-support-slot" data-day="1">
+      <Practical place="Granada — Day 1" detail="The Alhambra · full day" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>Taberna La Tana</strong> — a recorded Granada dinner following the Alhambra sequence.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Alhambra access</strong> — use the current C30 or C32 city bus, walk uphill, or take a taxi from central Granada; check the current route before travel.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Alcazaba</strong> — the defensive hilltop beginning.</div>
+          <div class="prac-item"><strong>Nasrid Palaces</strong> — timed entry is printed on the ticket.</div>
+          <div class="prac-item"><strong>Generalife and gardens</strong> — allow time for the wider complex beyond the palaces.</div>
+        </PracticalSection>
+        <PracticalSection label="Booking Ahead">
+          <div class="prac-item"><strong>Official Alhambra ticketing</strong> — reserve through the official system and build the day around the Nasrid Palaces entry time.</div>
+          <div class="prac-item"><strong>Current rules</strong> — check opening hours, prices, identification requirements and access conditions close to travel.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Granada Day 1 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Granada — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$75–110/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$45–60</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$8–12/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$130–180</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Book the Alhambra first.</strong> The Nasrid Palaces time controls the shape of the day.</div>
+          <div class="tip-row"><strong>Keep the rest of the day light.</strong> Do not schedule another major attraction immediately afterwards.</div>
+          <div class="tip-row"><strong>Arrive prepared.</strong> Follow the ticket’s timed-entry instructions and current access rules.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Alhambra experiences" tours={[
+        { category: 'Alhambra & Generalife', title: 'Alhambra and Generalife Guided Tour', description: 'A guided visit covering the Alhambra, Nasrid Palaces and Generalife with admission included.', href: 'https://www.viator.com/tours/Granada/Alhambra-and-Generalife-Guided-Tour/d554-5571268P3?pid=P00295455&mcid=42383&medium=link', featured: true },
+        { category: 'Small Group', title: 'Alhambra Tour: Nasrid Palaces, Alcazaba and Generalife', description: 'A small-group Alhambra visit focused on the three principal parts of the complex, with tickets and guide included.', href: 'https://www.viator.com/tours/Granada/Alhambra-Tour-with-Nasrid-Palaces-Alcazaba-and-Generalife/d554-208953P1?pid=P00295455&mcid=42383&medium=link' },
+        { category: 'Private Tour', title: 'Alhambra Private Tour: Nasrid Palaces, Alcazaba and Generalife', description: 'A private three-hour route through the Nasrid Palaces, Alcazaba and Generalife with an official local guide.', href: 'https://www.viator.com/tours/Granada/Alhambra-Nasrid-Palaces-and-Generalife-Guided-Tour-Ticket-included/d554-30856P5?pid=P00295455&mcid=42383&medium=link' },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="granada-day-support-slot" data-day="2">
+      <Practical place="Granada — Day 2" detail="Albaicín and Mirador de San Nicolás" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>Apo Restaurante</strong> — a recorded Granada dinner in the wider Albaicín sequence.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Albaicín access</strong> — walk up from the lower city or use a current local bus where the hill makes that more practical.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Albaicín</strong> — the historic hillside quarter opposite the Alhambra.</div>
+          <div class="prac-item"><strong>Mirador de San Nicolás</strong> — the principal Alhambra-facing viewpoint.</div>
+          <div class="prac-item"><strong>Hillside streets</strong> — leave room for the climb, descent and changing views.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Granada Day 2 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Granada — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$75–110/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$45–60</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$8–12/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$130–180</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Expect steep streets.</strong> Wear shoes suitable for uneven climbs and descents.</div>
+          <div class="tip-row"><strong>Keep the day broad.</strong> The quarter works better as a hillside walk than as a chain of fixed appointments.</div>
+          <div class="tip-row"><strong>Plan the viewpoint deliberately.</strong> Check the current conditions if a sunset visit matters.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — Albaicín experiences" tours={[
+        { category: 'Historic Quarters', title: 'Granada’s Hidden Treasures: Albaicín and Sacromonte Walking Tour', description: 'A small-group walk through Albaicín and Sacromonte with Alhambra-facing viewpoints and local historical context.', href: 'https://www.viator.com/tours/Granada/Granada-Walking-Tour-of-Albaicin-and-Sacromonte/d554-19234P15?pid=P00295455&mcid=42383&medium=link', featured: true },
+        { category: 'Sunset Walk', title: 'Sunset Walking Tour in Albaicín and Sacromonte', description: 'A two-hour evening route linking Mirador de San Nicolás, Sacromonte and the historic hillside above Granada.', href: 'https://www.viator.com/tours/Granada/Sunset-Walking-Tour-in-Albaicin-and-Sacromonte/d554-208953P6?pid=P00295455&mcid=42383&medium=link' },
+        { category: 'Walking Tour', title: 'Albaicín and Sacromonte Guided Tour', description: 'A focused guided walk through the two historic quarters, with the Alhambra as the geographical reference point.', href: 'https://www.viator.com/tours/Granada/Albaicin-and-Sacromonte-Guided-Tour-in-Granada/d554-11131P8?pid=P00295455&mcid=42383&medium=link' },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+
+    <div class="granada-day-support-slot" data-day="3">
+      <Practical place="Granada — Day 3" detail="Historic centre · Cathedral and Royal Chapel" placeIcon="" detailIcon="">
+        <PracticalSection label="Where to Eat">
+          <div class="prac-item"><strong>Recorded meal options</strong> — the source material securely names Apo Restaurante and Taberna La Tana; place either within the wider centre-to-hills itinerary according to the day’s opening hours.</div>
+        </PracticalSection>
+        <PracticalSection label="Getting There">
+          <div class="prac-item"><strong>Historic centre</strong> — keep this day largely on foot between the Cathedral, Capilla Real, plazas and lower-city streets.</div>
+        </PracticalSection>
+        <PracticalSection label="Day Focus / Excursion">
+          <div class="prac-item"><strong>Granada Cathedral</strong> — the central Renaissance monument of the post-1492 city.</div>
+          <div class="prac-item"><strong>Capilla Real</strong> — pair the Royal Chapel with the Cathedral where opening hours allow.</div>
+          <div class="prac-item"><strong>Historic plazas</strong> — leave time for Plaza Nueva, Alcaicería and the streets below the hills.</div>
+        </PracticalSection>
+        <section class="practical" aria-label="Granada Day 3 budget snapshot">
+          <div class="prac-header"><div class="prac-city">Granada — Budget snapshot</div><div class="prac-dates">Planning estimate</div></div>
+          <div class="budget-grid">
+            <div class="budget-cell"><div class="budget-cat">Accommodation</div><div class="budget-val">~A$75–110/night</div></div>
+            <div class="budget-cell"><div class="budget-cat">Food daily</div><div class="budget-val">~A$45–60</div></div>
+            <div class="budget-cell"><div class="budget-cat">Transport</div><div class="budget-val">~A$8–12/day</div></div>
+            <div class="budget-cell"><div class="budget-cat">Daily total</div><div class="budget-val">~A$130–180</div></div>
+          </div>
+        </section>
+        <PracticalSection label="Tips & Watch-outs">
+          <div class="tip-row"><strong>Check hours.</strong> Verify Cathedral and Royal Chapel opening times before fixing the sequence.</div>
+          <div class="tip-row"><strong>Keep this day street-level.</strong> Let the plazas and lower city provide the change after two days on the hills.</div>
+          <div class="tip-row"><strong>Do not stack interiors.</strong> Leave room to move between the monuments and the surrounding streets.</div>
+        </PracticalSection>
+      </Practical>
+      <TourRecommendations label="Book it — historic Granada experiences" tours={[
+        { category: 'Cathedral & Royal Chapel', title: 'Granada: Royal Chapel and Granada Cathedral Guided Tour', description: 'A focused guided visit to the Cathedral and Royal Chapel with admission and an art-history context.', href: 'https://www.viator.com/tours/Granada/Granada-Royal-Chapel-and-Cathedral-Guided-Tour/d554-11131P6?pid=P00295455&mcid=42383&medium=link', featured: true },
+        { category: 'Historic Centre', title: 'Granada Combo: Walking Tour Including Cathedral and Royal Chapel', description: 'A central walking route through Plaza Nueva, Corral del Carbón, Alcaicería, Cathedral and Royal Chapel.', href: 'https://www.viator.com/tours/Granada/Granada-Combo-Granada-Walking-Tour-Including-Cathedral-Royal-Chapel-and-Hop-On-Hop-Off-Train/d554-2140CHAPELTRAIN?pid=P00295455&mcid=42383&medium=link' },
+        { category: 'Private City Tour', title: 'Private 4-Hour Walking Tour of Granada', description: 'A private route through Granada’s historic centre with Cathedral and Royal Chapel tickets, plus the city’s wider landmarks.', href: 'https://www.viator.com/tours/Granada/Private-city-tour-of-Granada/d554-8647P52?pid=P00295455&mcid=42383&medium=link' },
+      ]} />
+      <Beat>But the road is ever onward.</Beat>
+    </div>
+  </div>
+
+  <section class="post-closing">
+    <div class="narrative">
+      <div class="prose">
+        <p>Granada is a city read from above and below. The Alhambra holds the Nasrid hill, its fortress, palaces, water and gardens arranged as a city of power. The Albaicín reverses the view, placing that hill across the valley and making the relationship between the two elevations visible. The third day returns to the cathedral quarter and the streets beneath them, where Christian Granada occupies the ground below the former sultanate.</p>
+        <p>That is why three days work. Not because Granada can be reduced to three headings, but because the city changes when the traveller changes position. Palace-city, facing hill, Christian centre: three elevations of the same history.</p>
+      </div>
+    </div>
+  </section>
+
+  <AtAGlance
+    id="full-itinerary"
+    title="The Full Itinerary at a Glance"
+    meta={[
+      { label: 'Trip', value: 'Three days in Granada built around the Alhambra, Albaicín and historic centre.' },
+      { label: 'Duration', value: '3 days.' },
+      { label: 'Country', value: 'Spain.' },
+      { label: 'Region', value: 'Andalucía.' },
+      { label: 'Travelled', value: 'Based on the traveller’s 2025 Granada visit, expanded into a three-day itinerary.' },
+    ]}
+    days={[
+      { num: 'Day 1', text: 'Alhambra — Alcazaba, Nasrid Palaces, Generalife and gardens.' },
+      { num: 'Day 2', text: 'Albaicín — Mirador de San Nicolás and the hillside streets.' },
+      { num: 'Day 3', text: 'Granada historic centre — Cathedral, Capilla Real and plazas.' },
+    ]}
+  >
+    <div class="itin-section-head">Budget Snapshot — Planning Estimate</div>
+    <p class="itin-meta">Budget figures are indicative planning averages based on current Granada traveller costs and vary with accommodation, food and sightseeing choices.</p>
+    <div class="grand-total-block">
+      <div class="grand-total-grid">
+        <div class="grand-line"><strong>Accommodation</strong>~A$75–110/night</div>
+        <div class="grand-line"><strong>Food daily</strong>~A$45–60</div>
+        <div class="grand-line"><strong>Transport</strong>~A$8–12/day</div>
+        <div class="grand-line"><strong>Daily total</strong>~A$130–180</div>
+      </div>
+      <div class="grand-total-num">Estimated Granada budget: ~A$390–540</div>
+    </div>
+
+    <div class="itin-section-head">Quick Reference — Best Eats</div>
+    <div class="eats-row"><span class="eats-city">Granada</span><span><strong>Apo Restaurante</strong> — recorded dinner in the Granada source itinerary.</span></div>
+    <div class="eats-row"><span class="eats-city">Granada</span><span><strong>Taberna La Tana</strong> — recorded dinner in the Granada source itinerary.</span></div>
+
+    <div class="itin-section-head">Getting Around</div>
+    <div class="transport-note"><strong>Alhambra:</strong> Walk uphill, use the current C30 or C32 bus, or take a taxi from central Granada.</div>
+    <div class="transport-note"><strong>Albaicín:</strong> Walk the hills and use local buses where the climb makes that useful.</div>
+    <div class="transport-note"><strong>Historic centre:</strong> Keep the Cathedral, Capilla Real, plazas and surrounding streets as a walking day.</div>
+    <div class="transport-note"><strong>Seville to Granada:</strong> Compare current Renfe and ALSA options close to travel rather than relying on the old 2023 timing.</div>
+  </AtAGlance>
+
+  <section class="faq-block" aria-labelledby="granada-faq-title">
+    <div class="faq-inner">
+      <div class="faq-title" id="granada-faq-title">Frequently Asked Questions</div>
+      {faqItems.map((item) => (
+        <div class="faq-item">
+          <div class="faq-q">{item.question}</div>
+          <div class="faq-a">{item.answer}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="next-chronicles">
+    <div class="section-label">Next Chronicles</div>
+    <div class="posts-grid">
+      <a class="post-card chronicle-card" href="/10-days-in-sevilla/">
+        <div class="post-region">Spain · Andalucía</div>
+        <div class="post-title">10 Days in Seville</div>
+        <div class="post-excerpt">A longer Andalusian base through Seville’s monuments, neighbourhoods, food and day trips.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+      <a class="post-card chronicle-card" href="/best-day-trips-from-seville/">
+        <div class="post-region">Spain · Andalucía</div>
+        <div class="post-title">Best Day Trips from Seville</div>
+        <div class="post-excerpt">Córdoba, Cádiz and the other outward journeys that give Seville a wider horizon.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+      <a class="post-card chronicle-card" href="/2-days-in-machu-picchu-itinerary/">
+        <div class="post-region">South America · Peru</div>
+        <div class="post-title">2 Days in Machu Picchu</div>
+        <div class="post-excerpt">Another mountain and archaeological stage, approached through Aguas Calientes and the high valley.</div>
+        <div class="post-meta">READ CHRONICLE</div>
+      </a>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const slots = [...document.querySelectorAll('.granada-day-support-slot')];
+      const article = document.querySelector('.granada-post-body');
+      if (!article) return;
+      for (const slot of slots) {
+        const heading = [...article.querySelectorAll('h2')].find((item) => item.textContent?.trim().startsWith(`Day ${slot.dataset.day} `));
+        if (!heading) continue;
+        let node = heading.nextElementSibling;
+        let nextHeading = null;
+        while (node && !node.matches('h2')) {
+          node = node.nextElementSibling;
+        }
+        nextHeading = node;
+        if (nextHeading) nextHeading.insertAdjacentElement('beforebegin', slot);
+        else article.append(slot);
+      }
+    })();
+  </script>
+
 </BaseLayout>

@@ -1,82 +1,99 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleContent from "../../content/plaza-de-mayo-buenos-aires.md";
-import { provenanceHtml, withProvenance } from "../../lib/provenance";
+import AtAGlance from "../../components/chronicle/AtAGlance.astro";
+import Practical from "../../components/chronicle/Practical.astro";
+import PracticalSection from "../../components/chronicle/PracticalSection.astro";
+import FurtherReading from "../../components/chronicle/FurtherReading.astro";
+import ArticleFAQ from "../../components/chronicle/ArticleFAQ.astro";
+import "../../styles/south-america-article.css";
 
-const title = "Plaza de Mayo & Historic Buenos Aires: A First-Hand Route | There & Back Again";
-const description = "A first-hand route through Plaza de Mayo and historic Buenos Aires, including the Metropolitan Cathedral, Casa Rosada area and the city’s civic centre.";
+const title = "Plaza de Mayo, Buenos Aires: A First Visit — There & Back Again";
+const description = "Why Plaza de Mayo matters, what to see around Buenos Aires's civic heart, and how to combine the square with the Cathedral, Cabildo, Manzana de las Luces and Congress.";
 const canonical = "https://travel.mitchchadban.com/plaza-de-mayo-buenos-aires/";
 const image = "/images/5-days-in-buenos-aires-itinerary/buenos-aires-city-centre-1200w.jpg";
-const PROVENANCE = { photography: true };
-
-const schema = withProvenance({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      headline: "Plaza de Mayo and Historic Buenos Aires",
-      description,
-      author: { "@type": "Person", name: "Mitch Chadban" },
-      publisher: { "@type": "Organization", name: "There & Back Again", url: "https://travel.mitchchadban.com/" },
-      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
-      url: canonical,
-      inLanguage: "en-AU",
-      image: `https://travel.mitchchadban.com${image}`,
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://travel.mitchchadban.com/" },
-        { "@type": "ListItem", position: 2, name: "Chronicles", item: "https://travel.mitchchadban.com/chronicles/" },
-        { "@type": "ListItem", position: 3, name: "Plaza de Mayo & Historic Buenos Aires", item: canonical },
-      ],
-    },
-  ],
-}, PROVENANCE);
-
-const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} ogType="article" image={image}>
-  <Fragment slot="head" set:html={jsonLd} />
-
   <section class="post-hero" aria-labelledby="plaza-de-mayo-title">
     <div class="post-route-strip"><span>South America</span>&nbsp;· Argentina · Buenos Aires ·&nbsp;<span>September 2026</span></div>
     <h1 id="plaza-de-mayo-title" class="post-hero-title"><em>Plaza de Mayo</em><br />and Historic Buenos Aires</h1>
-    <p class="post-hero-sub">A civic route through the centre on arrival day.</p>
+    <p class="post-hero-sub">The civic heart of Buenos Aires, from the May Revolution to the avenue that leads towards Congress.</p>
     <div class="post-stats">
-      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Arrival route</span></div>
-      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Civic stops</span></div>
+      <div class="stat"><span class="stat-num">2–3</span><span class="stat-label">Hours</span></div>
+      <div class="stat"><span class="stat-num">1810</span><span class="stat-label">Revolution</span></div>
       <div class="stat"><span class="stat-num">Sep</span><span class="stat-label">Visited</span></div>
       <div class="stat"><span class="stat-num">1</span><span class="stat-label">City</span></div>
     </div>
-    <Fragment set:html={provenanceHtml(PROVENANCE, { affiliate: false })} />
   </section>
 
-  <article class="post-body plaza-de-mayo-post-body">
+  <article class="post-body south-america-post-body plaza-de-mayo-post-body">
     <ArticleContent />
+    <FurtherReading
+      label="Further Reading"
+      cards={[
+        { href: "/best-things-to-do-in-buenos-aires/", region: "Argentina · Buenos Aires", title: "Best Things to Do in Buenos Aires", excerpt: "A first-visit guide through Buenos Aires’ civic centre, cultural institutions, neighbourhoods and parks.", cta: "READ CHRONICLE" },
+        { href: "/buenos-aires-neighbourhoods/", region: "Argentina · Buenos Aires", title: "Buenos Aires Neighbourhoods", excerpt: "A barrio-by-barrio comparison of the civic centre, Recoleta, San Telmo, Puerto Madero, La Boca and Palermo.", cta: "READ CHRONICLE" },
+        { href: "/5-days-in-buenos-aires-itinerary/", region: "Argentina · Buenos Aires", title: "5 Days in Buenos Aires: Complete Itinerary", excerpt: "The wider five-day sequence through the historic centre, cultural north, southern districts and Palermo.", cta: "READ CHRONICLE" },
+      ]}
+    />
   </article>
 
-  <style is:global>
-    .plaza-de-mayo-post-body .article-photo { max-width: 1100px; margin: 3.5rem auto; }
-    .plaza-de-mayo-post-body .article-photo picture,
-    .plaza-de-mayo-post-body .article-photo img { display: block; width: 100%; }
-    .plaza-de-mayo-post-body .article-photo img { height: auto; border: 1px solid rgba(158, 207, 114, 0.12); }
-    .plaza-de-mayo-post-body .article-photo figcaption { margin-top: 0.65rem; color: rgba(221, 232, 208, 0.62); font-size: 0.95rem; font-style: italic; text-align: center; }
-    .plaza-de-mayo-post-body h2 { max-width: 1100px; margin: 4.5rem auto 1.4rem; color: #9ecf72; font-family: 'IM Fell English', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.08; }
-    .plaza-de-mayo-post-body p,
-    .plaza-de-mayo-post-body table { max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .plaza-de-mayo-post-body strong { color: #e7f2da; }
-    .plaza-de-mayo-post-body table { border-collapse: collapse; color: rgba(221, 232, 208, 0.86); font-size: 1.05rem; line-height: 1.5; width: 100%; }
-    .plaza-de-mayo-post-body th,
-    .plaza-de-mayo-post-body td { border-bottom: 1px solid rgba(158, 207, 114, 0.2); padding: 0.9rem 0.75rem; text-align: left; vertical-align: top; }
-    .plaza-de-mayo-post-body th { color: #e7f2da; font-family: 'IM Fell English', Georgia, serif; font-size: 1.25rem; font-weight: 400; }
-    @media (max-width: 820px) {
-      .plaza-de-mayo-post-body .article-photo { margin: 2.5rem 0; }
-      .plaza-de-mayo-post-body h2,
-      .plaza-de-mayo-post-body p,
-      .plaza-de-mayo-post-body table { max-width: none; }
-      .plaza-de-mayo-post-body table { display: block; overflow-x: auto; }
-    }
-  </style>
+  <div class="plaza-de-mayo-overview-slot">
+    <AtAGlance
+      id="plaza-de-mayo-glance"
+      title="Plaza de Mayo at a Glance"
+      meta={[
+        { label: "Best for", value: "Understanding Buenos Aires through politics, revolution, religion and public space in one compact area." },
+        { label: "Time needed", value: "Around two to three hours for the square and immediate historic centre." },
+        { label: "Best extension", value: "Continue west along Avenida de Mayo towards Congress." },
+        { label: "Best overall approach", value: "Read Casa Rosada, the Cathedral, Cabildo and Pirámide de Mayo together rather than treating them as separate photo stops." },
+      ]}
+      daysHeading="Four Parts of the Civic Centre"
+      days={[
+        { num: "Plaza de Mayo", detail: "Revolution · Protest · Public life", text: "The square itself is the central experience, from the May Revolution to later demonstrations and the Mothers of Plaza de Mayo." },
+        { num: "Casa Rosada", detail: "Executive power · Balcony · Presidency", text: "The modern state faces directly onto the square, turning the façade and balcony into part of Argentina’s political theatre." },
+        { num: "Cathedral + Cabildo", detail: "Religion · Colonial government · Independence", text: "Together they show the religious and civic institutions that framed Buenos Aires before and during the break with Spanish rule." },
+        { num: "Avenida de Mayo", detail: "Palacio Barolo · Congress · Civic axis", text: "The avenue extends the story west, linking the historic executive centre to the monumental legislative city." },
+      ]}
+    />
+  </div>
+
+  <div class="plaza-de-mayo-decision-slot">
+    <Practical place="Buenos Aires — Plaza de Mayo" detail="Civic history · revolution · 2–3 hours" detailIcon="🏛">
+      <PracticalSection label="Shortest route to a strong first visit" level={3}>
+        <div class="prac-item"><strong>Two hours</strong> — Plaza de Mayo, Cathedral, Cabildo and Casa Rosada from the square.</div>
+        <div class="prac-item"><strong>Three hours</strong> — Add Manzana de las Luces and take more time around the historic centre.</div>
+        <div class="prac-item"><strong>Half day</strong> — Continue along Avenida de Mayo to Palacio Barolo and Congress.</div>
+        <div class="prac-item"><strong>If time is tight</strong> — Stay around the square and read the major institutions together rather than rushing west.</div>
+      </PracticalSection>
+      <PracticalSection label="What each stop does best" level={3}>
+        <div class="prac-item"><strong>Public and revolutionary history:</strong> Plaza de Mayo.</div>
+        <div class="prac-item"><strong>Executive power:</strong> Casa Rosada.</div>
+        <div class="prac-item"><strong>Colonial and religious history:</strong> Cabildo and Metropolitan Cathedral.</div>
+        <div class="prac-item"><strong>Civic urbanism:</strong> Avenida de Mayo and Congress.</div>
+      </PracticalSection>
+      <PracticalSection label="Watch-outs" level={3}>
+        <div class="tip-row"><strong>Do not treat the square as a single photo stop.</strong> Its value comes from the relationship between the buildings and the open public space; walk the immediate centre before using public transport for wider movement.</div>
+        <div class="tip-row"><strong>Check access arrangements individually.</strong> Casa Rosada, Cabildo, Cathedral and Manzana de las Luces can follow different schedules.</div>
+        <div class="tip-row"><strong>Expect political activity.</strong> Demonstrations, ceremonies or closures can alter access to the square and nearby streets.</div>
+        <div class="tip-row"><strong>Do not overextend the route.</strong> Plaza de Mayo to Congress already makes a substantial civic half-day; keep normal precautions in crowded central areas and avoid moving through demonstrations.</div>
+      </PracticalSection>
+    </Practical>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const article = document.querySelector('.plaza-de-mayo-post-body');
+      if (!article) return;
+      const overview = document.querySelector('.plaza-de-mayo-overview-slot');
+      const decision = document.querySelector('.plaza-de-mayo-decision-slot');
+      const headings = [...article.querySelectorAll('h2')];
+      const firstChapter = headings.find((heading) => heading.textContent?.trim().startsWith('The Square'));
+      const decisionHeading = headings.find((heading) => heading.textContent?.trim() === 'How much time do you need?');
+      if (overview && firstChapter) firstChapter.insertAdjacentElement('beforebegin', overview);
+      if (decision && decisionHeading) decisionHeading.insertAdjacentElement('beforebegin', decision);
+    })();
+  </script>
+  <ArticleFAQ page="plaza-de-mayo-buenos-aires" />
 </BaseLayout>
